@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy lock: this page cannot load or send anything over the network. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Name the Need · Middle School</title>
+
+<!--
+  ==========================================================
+  SCHOOL FRAME: edit only the SCHOOL settings in the script
+  block at the bottom of this file (search for "SCHOOL").
+  Everything else on this page is fixed content.
+  ==========================================================
+-->
+
+<style>
+  :root {
+    --school: #0b2d5b;          /* replaced by SCHOOL.colors.primary */
+    --school-accent: #f47b20;   /* replaced by SCHOOL.colors.accent */
+    --ink: #1d2330;
+    --ink-soft: #4a5263;
+    --paper: #fbfaf7;
+    --card: #ffffff;
+    --line: #e4e1da;
+    --tint: #f3f1ec;
+    --good: #2f7a4f;
+    --good-bg: #eaf5ee;
+    --warn: #8a5a00;
+    --warn-bg: #fdf3df;
+    --alert: #a3242a;
+    --alert-bg: #fdecec;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--school); }
+  h1, h2, h3 { line-height: 1.25; margin: 0 0 .5em; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 1em; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  /* ---------- School header ---------- */
+  .school-bar {
+    background: var(--school);
+    color: #fff;
+    padding: 14px 0;
+  }
+  .school-bar .wrap { display: flex; align-items: center; gap: 14px; }
+  .school-logo { width: 48px; height: 48px; border-radius: 10px; flex: none; background: transparent; object-fit: contain; }
+  .school-initials {
+    width: 48px; height: 48px; border-radius: 10px; flex: none;
+    background: var(--school-accent); color: var(--school);
+    display: grid; place-items: center; font-weight: 800; font-size: .85rem; letter-spacing: 0;
+  }
+  .school-name { font-weight: 700; font-size: 1.05rem; }
+  .school-motto { font-size: .85rem; opacity: .85; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 40px 16px 24px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: var(--ink-soft); }
+  .hero h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: .15em 0 .2em; color: var(--school); }
+  .hero .sub { font-size: 1.2rem; color: var(--ink-soft); margin-bottom: 1.2em; }
+  .welcome {
+    border-left: 4px solid var(--school-accent);
+    background: var(--card);
+    padding: 12px 16px; border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 16px;
+  }
+  .welcome small { display: block; color: var(--ink-soft); }
+  .privacy {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--tint); border-radius: var(--radius); padding: 12px 16px; font-size: .95rem;
+  }
+  .privacy svg { flex: none; margin-top: 3px; }
+
+  /* ---------- Grade toggle ---------- */
+  .band-toggle { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 18px 0 0; font-size: .95rem; }
+  .band-toggle button {
+    border: 2px solid var(--school); background: transparent; color: var(--school);
+    padding: 6px 14px; border-radius: 999px; font: inherit; font-weight: 600; cursor: pointer;
+  }
+  .band-toggle button[aria-pressed="true"] { background: var(--school); color: #fff; }
+  body.band-ms [data-band="us"], body.band-us [] { display: none !important; }
+
+  /* ---------- Section nav ---------- */
+  nav.steps {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(251,250,247,.95); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.steps ol { list-style: none; display: flex; gap: 4px; margin: 0; padding: 8px 0; overflow-x: auto; }
+  nav.steps a {
+    display: block; white-space: nowrap; text-decoration: none; color: var(--ink-soft);
+    padding: 6px 12px; border-radius: 999px; font-size: .9rem; font-weight: 600;
+  }
+  nav.steps a:hover, nav.steps a:focus-visible { background: var(--tint); color: var(--ink); }
+  nav.steps .help-link { color: var(--alert); }
+
+  /* ---------- Sections and cards ---------- */
+  section.part { padding: 40px 0 8px; scroll-margin-top: 56px; }
+  .part-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+  .part-num {
+    flex: none; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--school); color: #fff; display: grid; place-items: center; font-weight: 800;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px; margin: 16px 0;
+  }
+  .card.tinted { background: var(--tint); border-color: transparent; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .grid-2 .card { margin: 0; }
+  .big-idea { font-size: 1.15rem; font-weight: 600; color: var(--school); }
+  ul.tight { margin: 0 0 1em; padding-left: 1.2em; }
+  ul.tight li { margin-bottom: .35em; }
+
+  /* ---------- Chat bubbles ---------- */
+  .phone { background: var(--tint); border-radius: 18px; padding: 14px; margin: 12px 0; }
+  .chat-name { font-size: .75rem; color: var(--ink-soft); margin: 6px 0 2px 6px; }
+  .bubble {
+    display: inline-block; max-width: 85%; padding: 8px 14px; border-radius: 18px;
+    background: #fff; border: 1px solid var(--line);
+  }
+  .bubble.me { background: var(--school); color: #fff; border-color: var(--school); }
+  .row-me { text-align: right; }
+  .chat-meta { font-size: .75rem; color: var(--ink-soft); text-align: center; margin: 8px 0; font-style: italic; }
+
+  /* ---------- Buttons and inputs ---------- */
+  .btn {
+    display: inline-block; border: 0; border-radius: 10px; cursor: pointer;
+    background: var(--school); color: #fff; font: inherit; font-weight: 600; padding: 10px 16px;
+  }
+  .btn.ghost { background: transparent; color: var(--school); border: 2px solid var(--school); }
+  .btn:focus-visible, .choice:focus-visible, textarea:focus-visible, input:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  label.prompt { display: block; font-weight: 600; margin: 14px 0 6px; }
+  textarea {
+    width: 100%; min-height: 84px; resize: vertical; padding: 10px 12px;
+    border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; color: var(--ink);
+  }
+  .write-lines { display: none; }
+
+  .choices { display: grid; gap: 8px; margin: 12px 0; }
+  .choice {
+    text-align: left; border: 2px solid var(--line); background: #fff; border-radius: 12px;
+    padding: 10px 14px; font: inherit; cursor: pointer; color: var(--ink);
+  }
+  .choice:hover { border-color: var(--school); }
+  .choice[aria-pressed="true"] { border-color: var(--school); background: var(--tint); }
+  .feedback { border-radius: 12px; padding: 12px 16px; margin-top: 8px; }
+  .feedback:empty { display: none; }
+  .feedback.good { background: var(--good-bg); border-left: 4px solid var(--good); }
+  .feedback.okay { background: var(--warn-bg); border-left: 4px solid var(--warn); }
+  .feedback.nope { background: var(--alert-bg); border-left: 4px solid var(--alert); }
+
+  .reveal { margin-top: 10px; }
+  .reveal[hidden] { display: none; }
+
+  .checklist label { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; cursor: pointer; }
+  .checklist input { margin-top: 6px; width: 18px; height: 18px; flex: none; }
+
+  .steps-list { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps-list li { counter-increment: step; position: relative; padding: 0 0 14px 48px; }
+  .steps-list li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--school-accent); color: var(--school); font-weight: 800; display: grid; place-items: center;
+  }
+  .script { background: var(--tint); border-radius: 10px; padding: 8px 12px; margin: 6px 0; font-style: italic; }
+
+  /* ---------- Check-in ---------- */
+  .ci-item { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .ci-item:last-of-type { border-bottom: 0; }
+  .ci-q { font-weight: 600; margin-bottom: 8px; }
+  .scale { display: flex; flex-wrap: wrap; gap: 6px; }
+  .scale label {
+    border: 2px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer; font-size: .92rem; background: #fff;
+  }
+  .scale input { position: absolute; opacity: 0; pointer-events: none; }
+  .scale input:checked + span { font-weight: 700; }
+  .scale label:has(input:checked) { border-color: var(--school); background: var(--tint); }
+  .scale label:has(input:focus-visible) { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  .result { border-radius: var(--radius); padding: 16px 18px; margin-top: 16px; }
+  .result[hidden] { display: none; }
+  .result.green { background: var(--good-bg); border-left: 5px solid var(--good); }
+  .result.yellow { background: var(--warn-bg); border-left: 5px solid var(--warn); }
+  .result.red { background: var(--alert-bg); border-left: 5px solid var(--alert); }
+
+  /* ---------- Help panel ---------- */
+  .help { background: var(--card); border: 2px solid var(--school); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+  .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .help-box { border-radius: 12px; padding: 16px; }
+  .help-box.crisis { background: var(--alert-bg); }
+  .help-box.local { background: var(--tint); }
+  .help-box h3 { margin-bottom: .4em; }
+  .help-box dl { margin: 0; }
+  .help-box dt { font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); margin-top: 10px; }
+  .help-box dd { margin: 0; }
+  .crisis-line { font-size: 1.05rem; margin: 0 0 12px; }
+  .crisis-line strong { display: block; font-size: 1.25rem; }
+  .crisis-line a { font-weight: 700; }
+
+  footer { padding: 28px 0 48px; color: var(--ink-soft); font-size: .88rem; }
+  footer .disclaimer { background: var(--tint); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 14px; }
+  .tool-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ---------- Print: a clean worksheet with blank lines ---------- */
+  @media print {
+    body { background: #fff; font-size: 12pt; }
+    nav.steps, .band-toggle, .tool-row, .btn, .no-print, #checkin-result { display: none !important; }
+    .reveal[hidden] { display: block !important; }
+    textarea { display: none; }
+    .write-lines { display: block; border-bottom: 1px solid #999; height: 1.6em; }
+    .card, .help, section.part { break-inside: avoid; }
+    .school-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* ---------- Clinical-library handout pieces ---------- */
+  .tagline { font-size: 1.2rem; color: var(--ink-soft); font-style: italic; margin-bottom: 1.2em; }
+  .emoji-h { display: flex; gap: 10px; align-items: baseline; }
+  .emoji-h .e { font-size: 1.3em; line-height: 1; }
+  .ways { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .ways .card { margin: 0; }
+  .ways .e { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+  .callout { background: var(--warn-bg); border-left: 5px solid var(--school-accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 18px; margin: 16px 0; }
+  .worst { font-style: italic; color: var(--ink-soft); margin: 10px 0 0; }
+  .helps dt { font-weight: 700; margin-top: 14px; }
+  .helps dd { margin: 4px 0 0; }
+  .nope-list .item { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nope-list .item:last-child { border-bottom: 0; }
+  .reminder { background: var(--school); color: #fff; border-radius: var(--radius); padding: 22px; font-size: 1.15rem; margin: 24px 0; }
+  .reminder h3 { color: #fff; font-size: .85rem; text-transform: uppercase; letter-spacing: .12em; opacity: .85; }
+  .reminder p { margin: 0; }
+
+  /* ---------- Fold layout: bumper-sticker headline, tap to open ---------- */
+  details.fold { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); margin: 14px 0; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  details.fold > summary { list-style: none; cursor: pointer; display: block; position: relative; padding: 18px 120px 18px 20px; border-radius: var(--radius); }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary { list-style: none; }
+  details.fold > summary:hover { background: var(--tint); }
+  details > summary:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  .fold-label { display: block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin-bottom: 4px; }
+  .sticker { display: block; font-size: clamp(1.2rem, 4.2vw, 1.45rem); font-weight: 800; line-height: 1.25; color: var(--school); margin: 0; }
+  .fold-cue { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: var(--school); color: #fff; font-weight: 700; font-size: .85rem; border-radius: 999px; padding: 6px 12px; white-space: nowrap; }
+  .fold-cue::before { content: "Open \25BE"; }
+  details[open] > summary .fold-cue { background: var(--tint); color: var(--ink); }
+  details[open] > summary .fold-cue::before { content: "Close \25B4"; }
+  .fold-body { padding: 0 20px 20px; }
+  details.fold-callout { background: var(--warn-bg); border: 0; border-left: 5px solid var(--school-accent); }
+  details.fold-callout > summary:hover { background: transparent; }
+  details.fold-try { background: var(--tint); border-color: transparent; }
+  .tap-hint { font-size: .9rem; color: var(--ink-soft); margin: 2px 0 10px; }
+  details.row, details.tile, details.more-prompts { border-top: 1px solid var(--line); }
+  details.row > summary, details.more-prompts > summary { cursor: pointer; position: relative; padding: 14px 44px 14px 0; font-weight: 700; font-size: 1.05rem; }
+  details.row > p, details.row > span > p { margin: 0 0 14px; }
+  details.row p { margin: 0 0 14px; }
+  .row-cue { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: var(--school-accent); color: #1d2330; display: grid; place-items: center; font-weight: 800; }
+  .row-cue::before { content: "+"; }
+  details[open] > summary .row-cue::before { content: "\2212"; }
+  .ways details.tile { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 0 16px; }
+  details.tile > summary { cursor: pointer; position: relative; padding: 16px 40px 16px 0; display: flex; align-items: center; gap: 10px; font-size: 1.05rem; }
+  details.tile > summary .e { font-size: 1.8rem; margin: 0; }
+  details.tile > p { padding-bottom: 16px; }
+  details.more-prompts { margin-top: 16px; }
+  @media print { details > .fold-body, details > p { display: block !important; } .fold-cue, .row-cue { display: none; } }
+
+  /* ---------- Slides mode (beta): one idea per screen, Back / Next ---------- */
+  body.slides nav.steps, body.slides section.part > .wrap > .eyebrow, body.slides section.part > .wrap > h2, body.slides .part-head,
+  body.slides .fold-label, body.slides .fold-cue, body.slides main .privacy { display: none !important; }
+  .slide-lock { font-size: .85rem; color: var(--ink-soft); margin: 10px 0 0; }
+  body.slides .slide-x:not(.slide-on) { display: none !important; }
+  body.slides main, body.slides footer { padding-bottom: 110px; }
+  body.slides section.part { padding: 8px 0 0; }
+  body.slides .hero { padding-top: 28px; }
+  body.slides details.fold, body.slides details.fold-callout, body.slides details.fold-try { background: transparent; border: 0; box-shadow: none; margin: 0; }
+  body.slides details.fold > summary { padding: 8px 0 14px; cursor: default; pointer-events: none; }
+  body.slides details.fold > summary:hover { background: transparent; }
+  body.slides .sticker { font-size: clamp(1.6rem, 6vw, 2.1rem); line-height: 1.2; }
+  body.slides .fold-body { padding: 0; font-size: 1.05rem; }
+  body.slides .unit-one > h3 { font-size: clamp(1.6rem, 6vw, 2.1rem); color: var(--school); margin-top: 8px !important; }
+  body.slides .card:not([style*="--alert"]) { box-shadow: none; border-color: transparent; background: transparent; padding-left: 0; padding-right: 0; }
+  body.slides .slide-x:focus { outline: none; }
+  body.slides details.row > summary, body.slides details.tile > summary { padding-top: 16px; padding-bottom: 16px; }
+  body.slides details.row, body.slides details.tile, body.slides details.more-prompts { border: 2px solid var(--line); background: var(--card); border-radius: 14px; margin: 10px 0; padding: 0 16px; }
+  body.slides details.row:hover, body.slides details.tile:hover, body.slides details.more-prompts:hover { border-color: var(--school); }
+  body.slides details.row[open], body.slides details.tile[open] { border-color: var(--school); }
+  body.slides details.row > summary, body.slides details.tile > summary, body.slides details.more-prompts > summary { padding-right: 96px; }
+  body.slides .row-cue { width: auto; height: auto; border-radius: 999px; padding: 5px 12px; background: var(--school); color: #fff; font-size: .85rem; font-weight: 700; }
+  body.slides .row-cue::before { content: "More \25BE"; }
+  body.slides details[open] > summary .row-cue { background: var(--tint); color: var(--ink); }
+  body.slides details[open] > summary .row-cue::before { content: "Less \25B4"; }
+  body.slides .tap-hint { font-size: 1rem; margin: 0 0 6px; }
+  body.slides .reminder { font-size: 1.35rem; padding: 32px 26px; }
+  .chapters { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; padding-top: 12px; }
+  .chap { font: inherit; background: none; border: 0; padding: 4px 0; cursor: pointer; text-align: left; color: var(--ink-soft); }
+  .chap-name { display: block; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+  .chap-track { display: block; height: 5px; background: var(--line); border-radius: 5px; overflow: hidden; }
+  .chap-fill { display: block; height: 100%; width: 0; background: var(--school-accent); transition: width .25s; }
+  .chap[aria-current="step"] { color: var(--school); }
+  .chap[aria-current="step"] .chap-name { font-weight: 800; }
+  .chap:hover .chap-name { color: var(--school); text-decoration: underline; }
+  .chap:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; border-radius: 4px; }
+  @media (max-width: 480px) { .chap-name { font-size: .68rem; letter-spacing: .02em; } .chapters { gap: 6px; } }
+  .slide-top { display: flex; align-items: center; gap: 12px; font-size: .85rem; font-weight: 700; color: var(--ink-soft); padding: 12px 0 0; }
+  .slide-top .slide-name { text-transform: uppercase; letter-spacing: .08em; }
+  .slide-bar .s-help { margin-left: auto; color: var(--alert); border: 2px solid var(--alert); border-radius: 999px; padding: 10px 18px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+  .slide-bar .s-help:hover, .slide-bar .s-help[aria-current="page"] { background: var(--alert); color: #fff; }
+  .slide-bar .s-help:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  @media (max-width: 480px) { .slide-bar .s-count { display: none; } .slide-bar button { padding: 12px 16px; } .slide-bar .s-next { min-width: 0; } .slide-bar .wrap { gap: 8px; } }
+  .slide-track { height: 4px; background: var(--line); border-radius: 4px; margin-top: 8px; overflow: hidden; }
+  .slide-fill { height: 100%; width: 0; background: var(--school-accent); transition: width .25s; }
+  .slide-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: rgba(251,250,247,.97); border-top: 1px solid var(--line); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  .slide-bar .wrap { display: flex; align-items: center; gap: 12px; padding: 0; }
+  .slide-bar button { font: inherit; font-weight: 800; font-size: 1.05rem; border-radius: 999px; padding: 12px 22px; cursor: pointer; border: 2px solid var(--school); }
+  .slide-bar .s-back { background: transparent; color: var(--school); }
+  .slide-bar .s-next { background: var(--school); color: #fff; min-width: 140px; }
+  .slide-bar button:disabled { opacity: .3; cursor: default; }
+  .slide-bar .s-count { font-size: .9rem; color: var(--ink-soft); font-weight: 700; }
+  .slide-bar button:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  @media print { body.slides .slide-x { display: block !important; } .slide-bar, .slide-top-wrap { display: none !important; } }
+
+  /* ---------- Check-in tool ---------- */
+  .ci-step { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .ci-step:last-of-type { border-bottom: 0; }
+  .ci-step h3 { margin-bottom: .2em; }
+  .ci-hint { color: var(--ink-soft); margin-bottom: 10px; }
+  .slider-wrap { margin-top: 8px; }
+  .slider-wrap input[type=range] { width: 100%; accent-color: var(--school); height: 28px; }
+  .slider-ends { display: flex; justify-content: space-between; font-size: .88rem; color: var(--ink-soft); }
+  .slider-read { font-weight: 700; color: var(--school); margin-top: 6px; min-height: 1.5em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 2px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px;
+    padding: 7px 14px; font: inherit; font-size: .95rem; cursor: pointer; text-align: left;
+  }
+  .chip[aria-pressed="true"] { border-color: var(--school); background: var(--tint); font-weight: 600; }
+  .chip:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  .validate { margin-top: 10px; font-style: italic; color: var(--good); }
+  .validate[hidden] { display: none; }
+  .paths { display: grid; gap: 8px; }
+  .path-panel { margin-top: 12px; background: var(--tint); border-radius: 12px; padding: 16px; }
+  .path-panel[hidden] { display: none; }
+  .path-panel h4 { margin: 0 0 6px; font-size: 1rem; }
+  .path-panel ul { list-style: none; padding: 0; margin: 0 0 12px; }
+  .path-panel li { padding: 4px 0 4px 30px; position: relative; }
+  .path-panel li .e { position: absolute; left: 0; top: 3px; }
+  .closing { margin-top: 16px; font-size: 1.05rem; color: var(--school); font-weight: 600; }
+  .safety-panel { margin-top: 12px; background: var(--alert-bg); border-left: 5px solid var(--alert); border-radius: 0 12px 12px 0; padding: 14px 16px; }
+  .safety-panel[hidden] { display: none; }
+  .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .more-list li { display: flex; gap: 12px; align-items: flex-start; }
+  .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+</style>
+</head>
+
+<body class="band-ms">
+
+<!-- ================= SCHOOL HEADER (frame) ================= -->
+<header class="school-bar">
+  <div class="wrap">
+    <span id="school-mark" class="school-initials" aria-hidden="true">SC</span>
+    <div>
+      <div class="school-name" id="school-name">Beaver Country Day School</div>
+      <div class="school-motto" id="school-motto">Counseling Office</div>
+    </div>
+    <a class="home-link" href="index.html" style="margin-left:auto;color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:6px 14px;white-space:nowrap">&larr; All topics</a>
+  </div>
+</header>
+
+<style>
+  .nn-pick { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 14px; }
+  .nn-pick button, .nn-fw { font: inherit; border: 2px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+  .nn-pick button[aria-pressed="true"] { border-color: var(--school); background: var(--school); color: #fff; font-weight: 700; }
+  .nn-what { font-size: 1.05rem; color: var(--ink-soft); }
+  .nn-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 560px) { .nn-cols { grid-template-columns: 1fr; } }
+  .nn-met, .nn-unmet { border-radius: 12px; padding: 14px 16px; }
+  .nn-met { background: var(--good-bg); border-left: 5px solid var(--good); }
+  .nn-unmet { background: var(--alert-bg); border-left: 5px solid var(--alert); }
+  .nn-met h4, .nn-unmet h4 { margin: 0 0 6px; }
+  .nn-words { font-size: 1.2rem; margin: 0; }
+  .nn-fws { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
+  .nn-fw { padding: 5px 12px; }
+  .nn-fw.red { border-color: var(--alert); }
+  .nn-fw.green { border-color: var(--good); }
+  .nn-fw[aria-pressed="true"] { background: var(--tint); font-weight: 700; border-width: 3px; }
+  .nn-out { border-radius: 12px; padding: 14px 16px; background: var(--tint); min-height: 3em; font-size: 1.1rem; }
+  .nn-out.red { background: var(--alert-bg); border-left: 5px solid var(--alert); }
+  .nn-out.green { background: var(--good-bg); border-left: 5px solid var(--good); }
+  .nn-bank { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+  .nn-bank div { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--card); }
+  .nn-bank strong { display: block; margin-bottom: 2px; }
+  .nn-bank.green div { border-top: 4px solid var(--good); }
+  .nn-bank.red div { border-top: 4px solid var(--alert); }
+  .nn-credit { font-size: .8rem; color: var(--ink-soft); margin-top: 14px; }
+</style>
+<main>
+<div class="wrap hero">
+  <div class="eyebrow">🔔 Middle School · Stress, sleep, and big feelings</div>
+  <h1>Name the Need</h1>
+  <p class="tagline">Because every feeling is trying to tell you something.</p>
+
+  <div class="welcome" id="welcome-box">
+    <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
+    <small id="welcome-sign">Your Counseling Team</small>
+  </div>
+
+  <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
+  <div id="slides-mode" hidden></div>
+</div>
+
+<nav class="steps" aria-label="Sections">
+  <div class="wrap">
+    <ol>
+      <li><a href="#understand">Understand it</a></li>
+      <li><a href="#practice">Practice the skills</a></li>
+      <li><a href="#reflect">Reflect</a></li>
+      <li><a href="#checkin">Check in</a></li>
+      <li><a href="#help" class="help-link">Get help</a></li>
+    </ol>
+  </div>
+</nav>
+
+<section class="part" id="understand" aria-labelledby="h-understand">
+  <div class="wrap">
+    <div class="eyebrow">Part 1 · Understand it</div>
+    <h2 id="h-understand">Feelings and needs</h2>
+    <details class="fold ">
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"Fine" isn't a feeling.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>Someone asks how you're doing and all you've got is "fine," "good," or "tired."</li>
+        <li >You snapped at your little brother and couldn't explain why.</li>
+        
+        <li>You felt off all day, but couldn't put a name on it.</li>
+        <li>Someone asked "what do you need?" and your mind went blank.</li>
+        <li>Some days just feel great, and you're not sure what made them different.</li>
+      </ul>
+      <p style="margin:0">Most people only have a handful of feeling words. Nobody hands you the rest. This lesson does.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">🔔 Feelings are notifications</span><span class="sticker">Every feeling is a notification from a need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Every feeling is a notification. It pops up because one of your <strong>needs</strong> wants your attention.</p>
+      <p style="margin:0">Lonely is a notification from your need for connection. Cranky is often a notification from your need for sleep or food. Proud is a notification that a need to grow, or to matter, just got met.</p>
+      <p class="worst">A feeling isn't the problem. It's the message.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Your lock screen</span><span class="sticker">Red means something's missing. Green means more of this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <figure style="margin:0">
+      <svg viewBox="0 0 380 470" role="img" aria-label="A phone lock screen with four notifications. Two red ones from Rest and Belonging, two green ones from Fun and To matter." style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto"><rect x="10" y="5" width="360" height="460" rx="40" fill="var(--school)"/><rect x="24" y="20" width="332" height="430" rx="30" fill="var(--tint)"/><text x="190" y="88" text-anchor="middle" font-size="46" font-weight="300" fill="var(--ink)">3:12</text><rect x="40" y="120" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="146" r="12" fill="var(--alert)"/><text x="88" y="148" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">REST</text><text x="88" y="172" font-size="16" fill="var(--ink)">Exhausted. Also kind of cranky.</text><rect x="40" y="204" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="230" r="12" fill="var(--alert)"/><text x="88" y="232" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">BELONGING</text><text x="88" y="256" font-size="16" fill="var(--ink)">Lonely. They're all hanging out.</text><rect x="40" y="288" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="314" r="12" fill="var(--good)"/><text x="88" y="316" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">FUN</text><text x="88" y="340" font-size="16" fill="var(--ink)">Giddy. Best lunch all week.</text><rect x="40" y="372" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="398" r="12" fill="var(--good)"/><text x="88" y="400" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">TO MATTER</text><text x="88" y="424" font-size="16" fill="var(--ink)">Proud. Coach noticed.</text></svg>
+      <figcaption style="margin-top:10px;color:var(--ink-soft)">Same phone, two kinds of notifications. Red ones say "something's missing." Green ones say "more of this, please."</figcaption>
+      </figure>
+      </div>
+    </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Two kinds of notifications</h3>
+    <p class="tap-hint">Tap each one.</p>
+    <div class="ways">
+      <details class="tile"><summary><span class="e" aria-hidden="true">🔴</span><strong>Need not met</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Lonely, worried, frustrated, tired. These say something's missing. Read them before you swipe them away.</p></details>
+      <details class="tile"><summary><span class="e" aria-hidden="true">🟢</span><strong>Need met</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Calm, proud, grateful, curious. These say something's working. They tell you what to do more of.</p></details>
+      <details class="tile"><summary><span class="e" aria-hidden="true">🔁</span><strong>Same need, both sides</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Connection met feels warm and safe. Connection not met feels lonely and hurt. One need, two very different notifications.</p></details>
+    </div>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Needs everyone has</span><span class="sticker">Seven kinds of needs. Everyone has all of them.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt>🫂 Connection.</dt>
+        <dd >Having friends, belonging, being liked for who you are, people you can trust.</dd>
+        <dt>🔋 Body.</dt>
+        <dd >Sleep, food, water, moving around, feeling safe in your body.</dd>
+        <dt>🎭 Honesty.</dt>
+        <dd >Being real, telling the truth, acting like yourself.</dd>
+        <dt>🎮 Play.</dt>
+        <dd >Fun, laughing, being goofy, doing things just because you like them.</dd>
+        <dt>🌊 Peace.</dt>
+        <dd >Calm, things feeling fair, some order in the chaos.</dd>
+        <dt>🗝 Freedom.</dt>
+        <dd >Having a say, making your own choices, a little space.</dd>
+        <dt>🌱 Meaning.</dt>
+        <dd >Learning, getting better at things, mattering to someone, helping out.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Same need, two sides</span><span class="sticker">Same need. Two very different feelings.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint">Tap a need to see both sides.</p>
+      <div class="nn-pick" role="group" aria-label="Pick a need"><button type="button" data-nn="conn" aria-pressed="true">🫂 Connection</button><button type="button" data-nn="body" aria-pressed="false">🔋 Body</button><button type="button" data-nn="honest" aria-pressed="false">🎭 Honesty</button><button type="button" data-nn="play" aria-pressed="false">🎮 Play</button><button type="button" data-nn="peace" aria-pressed="false">🌊 Peace</button><button type="button" data-nn="free" aria-pressed="false">🗝 Freedom</button><button type="button" data-nn="meaning" aria-pressed="false">🌱 Meaning</button></div>
+      <div class="nn-panel" id="nn-conn">
+        <p class="nn-what"><strong>🫂 Connection:</strong> <span >Having friends, belonging, being liked for who you are, people you can trust.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >warm · safe · loving · grateful · trusting</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >lonely · hurt · jealous · sad · insecure</p></div>
+        </div>
+      </div>
+      <div class="nn-panel" id="nn-body" hidden>
+        <p class="nn-what"><strong>🔋 Body:</strong> <span >Sleep, food, water, moving around, feeling safe in your body.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >rested · energetic · comfortable · relaxed</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >tired · cranky · shaky · sleepy · worn out</p></div>
+        </div>
+      </div>
+      <div class="nn-panel" id="nn-honest" hidden>
+        <p class="nn-what"><strong>🎭 Honesty:</strong> <span >Being real, telling the truth, acting like yourself.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >proud · confident · relieved · clear headed</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >guilty · uneasy · torn · ashamed</p></div>
+        </div>
+      </div>
+      <div class="nn-panel" id="nn-play" hidden>
+        <p class="nn-what"><strong>🎮 Play:</strong> <span >Fun, laughing, being goofy, doing things just because you like them.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >giddy · amused · delighted · lively</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >bored · restless · gloomy · blah</p></div>
+        </div>
+      </div>
+      <div class="nn-panel" id="nn-peace" hidden>
+        <p class="nn-what"><strong>🌊 Peace:</strong> <span >Calm, things feeling fair, some order in the chaos.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >calm · content · relaxed · relieved</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >overwhelmed · stressed out · nervous · rattled</p></div>
+        </div>
+      </div>
+      <div class="nn-panel" id="nn-free" hidden>
+        <p class="nn-what"><strong>🗝 Freedom:</strong> <span >Having a say, making your own choices, a little space.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >confident · eager · proud · relaxed</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >frustrated · annoyed · impatient · resentful</p></div>
+        </div>
+      </div>
+      <div class="nn-panel" id="nn-meaning" hidden>
+        <p class="nn-what"><strong>🌱 Meaning:</strong> <span >Learning, getting better at things, mattering to someone, helping out.</span></p>
+        <div class="nn-cols">
+          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >inspired · curious · hopeful · proud</p></div>
+          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >discouraged · lost · uninterested · down</p></div>
+        </div>
+      </div>
+      <p class="nn-credit">Feeling and need words adapted from the Feelings Inventory and Needs Inventory, &copy; 2005 by Center for Nonviolent Communication. Website: www.cnvc.org. Email: cnvc@cnvc.org. Phone: +1.505.244.4041.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">🧠 Why bother naming it?</span><span class="sticker">Name it to tame it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>In a brain scan study at UCLA, putting a feeling into words calmed the brain's alarm system, the amygdala. Psychiatrist Dan Siegel calls this "name it to tame it."</p>
+      <p style="margin:0">People who can tell "annoyed" from "hurt" from "embarrassed" also tend to handle stress better. The more specific the word, the easier it is to figure out what would help.</p>
+      <p class="worst">"Bad" tells you almost nothing. "Left out and kind of jealous" tells you exactly where to look.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Word bank: needs met</span><span class="sticker">Green words: a need is getting met.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="nn-bank green"><div><strong>Close</strong><span >warm · friendly · loving · safe</span></div><div><strong>Into it</strong><span >curious · interested · focused</span></div><div><strong>Pumped</strong><span >excited · energetic · eager · surprised</span></div><div><strong>Happy</strong><span >happy · glad · amused · delighted</span></div><div><strong>Thankful</strong><span >grateful · thankful · touched</span></div><div><strong>Strong</strong><span >proud · confident · brave</span></div><div><strong>Hopeful</strong><span >hopeful · encouraged</span></div><div><strong>Calm</strong><span >calm · relaxed · relieved · comfortable</span></div><div><strong>Recharged</strong><span >rested · refreshed</span></div></div>
+      <p class="nn-credit">Feeling and need words adapted from the Feelings Inventory and Needs Inventory, &copy; 2005 by Center for Nonviolent Communication. Website: www.cnvc.org. Email: cnvc@cnvc.org. Phone: +1.505.244.4041.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Word bank: needs not met</span><span class="sticker">Red words: something's missing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="nn-bank red"><div><strong>Scared</strong><span >scared · worried · nervous · afraid</span></div><div><strong>Mad</strong><span >mad · annoyed · frustrated · irritated</span></div><div><strong>Mixed up</strong><span >confused · torn · lost · unsure</span></div><div><strong>Shut down</strong><span >bored · distant · numb · checked out</span></div><div><strong>Exposed</strong><span >embarrassed · ashamed · guilty</span></div><div><strong>Worn out</strong><span >tired · exhausted · sleepy · worn out</span></div><div><strong>Hurting</strong><span >hurt · lonely · heartbroken · miserable</span></div><div><strong>Sad</strong><span >sad · disappointed · discouraged · down</span></div><div><strong>On edge</strong><span >stressed · jittery · cranky · overwhelmed</span></div><div><strong>Unsteady</strong><span >shaky · unsure of myself · sensitive</span></div><div><strong>Wanting</strong><span >jealous · homesick · wishing</span></div></div>
+      <p class="nn-credit">Feeling and need words adapted from the Feelings Inventory and Needs Inventory, &copy; 2005 by Center for Nonviolent Communication. Website: www.cnvc.org. Email: cnvc@cnvc.org. Phone: +1.505.244.4041.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="part" id="practice" aria-labelledby="h-practice">
+  <div class="wrap">
+    <div class="eyebrow">Part 2 · Practice the skills</div>
+    <h2 id="h-practice">Reading the notification</h2>
+    <div class="card">
+      <div class="fold-label">What actually helps</div>
+      <h3 class="sticker">Read it before you swipe it away.</h3>
+      <p class="tap-hint">Tap one to see how.</p>
+        <details class="row"><summary>🔍 Get specific.<span class="row-cue" aria-hidden="true"></span></summary><p>Go one word past "fine" or "stressed." Check the word bank if you're stuck.</p></details>
+        <details class="row"><summary>🔔 Read the notification.<span class="row-cue" aria-hidden="true"></span></summary><p>Before you scroll it away, ask: what is this feeling trying to tell me?</p></details>
+        <details class="row"><summary>🧭 Look under it.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask: what am I missing right now? Sleep? People? A say in this? Some fun?</p></details>
+        <details class="row"><summary>🗣 Put it together.<span class="row-cue" aria-hidden="true"></span></summary><p>"I feel ___ because I need ___." Saying it, even just in your head, makes the next step clearer.</p></details>
+        <details class="row"><summary>🟢 Notice the good ones too.<span class="row-cue" aria-hidden="true"></span></summary><p>When you feel calm or proud, ask what need just got met. That's your recipe.</p></details>
+        <details class="row"><summary>🧩 Find more than one way.<span class="row-cue" aria-hidden="true"></span></summary><p>A need can usually be met lots of ways. If one door is closed, look for another.</p></details>
+    </div>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">Tap a feeling. Find the need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <h4 style="margin:0">🔴 Feels hard</h4>
+      <div class="nn-fws" role="group" aria-label="Feelings when needs are not met"><button type="button" class="nn-fw red" aria-pressed="false" data-f="lonely">lonely</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="hurt">hurt</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="jealous">jealous</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="embarrassed">embarrassed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="insecure">insecure</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="worried">worried</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="nervous">nervous</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="overwhelmed">overwhelmed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="stressed out">stressed out</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="annoyed">annoyed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="frustrated">frustrated</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="angry">angry</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="resentful">resentful</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="bored">bored</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="restless">restless</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="tired">tired</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="cranky">cranky</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="sad">sad</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="disappointed">disappointed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="discouraged">discouraged</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="guilty">guilty</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="confused">confused</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="numb">numb</button></div>
+      <h4 style="margin:0">🟢 Feels good</h4>
+      <div class="nn-fws" role="group" aria-label="Feelings when needs are met"><button type="button" class="nn-fw green" aria-pressed="false" data-f="calm">calm</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="happy">happy</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="proud">proud</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="grateful">grateful</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="excited">excited</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="curious">curious</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="relieved">relieved</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="confident">confident</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="content">content</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="giddy">giddy</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="hopeful">hopeful</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="rested">rested</button></div>
+      <div class="nn-out" id="nn-out" aria-live="polite">Tap a feeling to decode it.</div>
+      <p style="font-size:.95rem;margin-top:10px">These are good guesses, not rules. You're the expert on what's under your own feelings.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">"I feel ignored" is a thought in disguise.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Some "feelings" are really thoughts about what someone else did. If you can add "like" or "that" after "I feel," it's usually a thought. Pick one.</p>
+      <div class="scenario">
+        <p>"I feel ignored."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Sneaky one. &quot;Ignored&quot; is about what someone else did. The feeling underneath might be hurt or lonely, and the need is to matter.">A feeling</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath, maybe hurt or lonely. The need: to matter, to be noticed.">A thought in disguise</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>"I feel nervous."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Nervous is a real feeling. The need underneath is often safety or confidence.">A feeling</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This one's a real feeling. Nervous usually points to a need for safety or support.">A thought in disguise</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" >
+        <p>"I feel like everyone hates me."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="That's a thought, and a painful one. Underneath might be lonely or insecure. The need: acceptance.">A feeling</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. &quot;I feel like&quot; is the giveaway. Underneath: lonely or insecure. The need: acceptance.">A thought in disguise</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      
+      <div class="scenario">
+        <p>"I feel disappointed."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Disappointed often points to a need for hope, or for things to work out.">A feeling</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This one's a real feeling. It often points to a need for hope.">A thought in disguise</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      
+      <p style="margin-top:14px;font-size:.95rem">Thoughts in disguise aren't wrong. They're just one step away from the real feeling, and the real feeling points to the need.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">A need can be met more than one way</span><span class="sticker">Most needs have more than one door.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt><span >"I need you to text me back."</span></dt>
+        <dd>The need is reassurance and connection. A text is one way. Talking tomorrow, or reaching out to someone else, are others.</dd>
+        <dt><span >"I need to sit at that lunch table."</span></dt>
+        <dd >The need is belonging. That table is one way to get it. A club, a team, or one good friend are others.</dd>
+        <dt>"I need everyone to stop bugging me."</dt>
+        <dd>The need is space, or peace. Headphones, a walk, or asking for ten minutes can all get you there.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">I feel ___ because I need ___.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Think of something small from this week, nothing huge. Fill in the blanks.</p>
+      <label class="prompt" for="tx-1">I felt...</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="annoyed"></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">because I needed...</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="some space"></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">Something I could ask for, or do for myself:</label>
+      <textarea id="tx-3" autocomplete="off" spellcheck="false" placeholder="Ask for ten minutes before talking about it"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Same story, different feelings, one need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 10 minutes · no materials needed</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>Read the story on each screen out loud.</li>
+        <li>Everyone silently picks a feeling word the character might have. Use the word bank if it helps.</li>
+        <li>A few people share their word. Different words are fine. That's the point.</li>
+        <li>Vote on the need underneath. Then tap to see one answer.</li>
+        <li>Flip it: what would the character feel if that need were met?</li>
+      </ol>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Name that need · 1 of 4</span><span class="sticker">Left out at lunch</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem" >Everyone at lunch is talking about a sleepover from Saturday. Jordan wasn't invited, and finds out right there at the table.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Body</li><li>Connection</li><li>Freedom</li><li>Play</li></ol>
+      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>Connection: belonging, to matter. Feelings might be hurt, lonely, embarrassed. If the need were met: warm, included, safe.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Name that need · 2 of 4</span><span class="sticker">Every single grade</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem" >Maya's mom reads her teacher's emails and asks about every grade before Maya can tell her herself.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Freedom</li><li>Play</li><li>Honesty</li><li>Body</li></ol>
+      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>Freedom: choice, trust, a say in her own life. Feelings might be frustrated, annoyed, resentful. If met: confident, relaxed.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Name that need · 3 of 4</span><span class="sticker">The 1 a.m. project</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Leo stayed up until 1 a.m. finishing a project, then had a test and practice. At dinner, his sister asks one question and he snaps at her.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Connection</li><li>Meaning</li><li>Body</li><li>Honesty</li></ol>
+      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>Body: rest and food. Feelings might be cranky, exhausted, irritable. If met: rested, patient, calm.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Name that need · 4 of 4</span><span class="sticker">The coach noticed</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Priya's coach pulls her aside: "I saw how you helped the new kid at practice today." Priya grins the whole ride home.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Peace</li><li>Meaning</li><li>Freedom</li><li>Body</li></ol>
+      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>This one is a green notification. Meaning and connection: to matter, to contribute. Feelings: proud, touched, glad.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>Did people pick different feeling words for the same story? Why might that be?</li>
+        <li>Which was harder to spot, the feeling or the need?</li>
+        <li>Why do you think people often say "fine" instead of naming a real feeling?</li>
+        <li>What's one way a friend could help meet each of these needs?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep it on the characters. Nobody should have to share their own feelings out loud. If students disagree about the need, that's a good discussion: a feeling can come from more than one need.</p></details>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Notifications on your phone, notifications in you</span><span class="sticker">The feed can mute a feeling. It can't meet the need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt>📱 Scrolling can mute the notification.</dt>
+        <dd>When you're bored, lonely, or tired, the feed is an easy way to not feel it. The need is still there when you look up.</dd>
+        <dt>❤️ Likes are a quick hit of "I matter."</dt>
+        <dd>Real need, fast and small dose. Texting one friend usually meets it better.</dd>
+        <dt>👀 Envy is a notification too.</dt>
+        <dd>Jealous of someone's post? Ask what it shows you want. That's information about your needs.</dd>
+        <dt>🔕 Before you open the app, name it.</dt>
+        <dd>"I'm bored" or "I'm lonely." Then decide if the app is actually what you need.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">"Fine" on repeat keeps the need waiting.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="rows">
+        <details class="row"><summary>😐 "Fine" on repeat.<span class="row-cue" aria-hidden="true"></span></summary><p>Fine is a way to skip the notification. It doesn't make the need go away.</p></details>
+        <details class="row"><summary>🗑 Swiping it away.<span class="row-cue" aria-hidden="true"></span></summary><p>Ignoring, scrolling, or numbing a feeling means it usually comes back louder.</p></details>
+        <details class="row"><summary>🙅 Treating the feeling as the problem.<span class="row-cue" aria-hidden="true"></span></summary><p>Feelings aren't bad. Getting mad at yourself for feeling sad just adds a second notification.</p></details>
+        <details class="row"><summary>🎯 Only one way to meet a need.<span class="row-cue" aria-hidden="true"></span></summary><p>"It has to be this person, this way" is a trap. Most needs have lots of doors.</p></details>
+        <details class="row"><summary>📢 Making someone else guess.<span class="row-cue" aria-hidden="true"></span></summary><p>People can't read your notifications. Saying "I need ___" gives them a chance to help.</p></details>
+      </div>
+      </div>
+    </details>
+
+    <div class="card" style="border-left:5px solid var(--alert)">
+      <h3>If it gets heavy</h3>
+      <ul class="tight">
+        <li>A red notification won't go away for weeks, or keeps getting louder.</li>
+        <li>You feel numb or hopeless most of the time.</li>
+        <li>A need for safety isn't being met, at home, online, or anywhere else.</li>
+        <li>You have thoughts of not wanting to be here.</li>
+      </ul>
+      <p>Tell a counselor or a trusted adult right away. You can also call or text <strong>988</strong>, any time, day or night.</p>
+      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="reflect" aria-labelledby="h-reflect">
+  <div class="wrap">
+    <div class="eyebrow">Part 3 · Reflect</div>
+    <h2 id="h-reflect">Take a moment to write</h2>
+<div class="unit">
+    <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
+    <div class="card">
+      <label class="prompt" for="tx-4">A feeling I had this week, and the need that might have been underneath</label>
+      <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
+
+      <label class="prompt" for="tx-5">A time I felt really good lately, and which need was getting met</label>
+      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
+      <label class="prompt" for="tx-6">A need of mine that's been running low</label>
+      <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
+      <label class="prompt" for="tx-7">A feeling I usually just call "fine"</label>
+      <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
+      <label class="prompt" for="tx-8">Something I could ask for, or do for myself, to meet a need</label>
+      <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      </details>
+    </div>
+
+    <div class="reminder">
+      <h3>A reminder</h3>
+      <p>Every feeling is information, even the uncomfortable ones. You don't have to fix it right away. Naming it is already a step.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="checkin" aria-labelledby="h-checkin">
+  <div class="wrap">
+    <div class="eyebrow">Part 4 · Check in</div>
+    <h2 id="h-checkin">Check-in tool</h2>
+<div class="unit unit-checkin">
+    <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span><strong>Your privacy:</strong> Nothing you enter here is saved, stored, or sent anywhere. This tool works entirely in your browser.</span></p>
+
+    <div class="card" id="checkin-card">
+      <div class="ci-step">
+        <h3 id="ci-1">How loud are your notifications today?</h3>
+        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <div class="slider-wrap">
+          <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
+          <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
+          <div class="slider-read" id="ci-read" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="ci-step">
+        <h3>What's been most present today?</h3>
+        <p class="ci-hint">Tap anything that fits.</p>
+        <div class="chips" id="ci-chips">
+          <button type="button" class="chip" aria-pressed="false">tired</button>
+          <button type="button" class="chip" aria-pressed="false">lonely</button>
+          <button type="button" class="chip" aria-pressed="false">stressed out</button>
+          <button type="button" class="chip" aria-pressed="false">frustrated</button>
+          <button type="button" class="chip" aria-pressed="false">worried</button>
+          <button type="button" class="chip" aria-pressed="false">bored</button>
+          <button type="button" class="chip" aria-pressed="false">hurt</button>
+          <button type="button" class="chip" aria-pressed="false">numb</button>
+          <button type="button" class="chip" aria-pressed="false">calm</button>
+          <button type="button" class="chip" aria-pressed="false">grateful</button>
+          <button type="button" class="chip" aria-pressed="false">proud</button>
+          <button type="button" class="chip" aria-pressed="false">excited</button>
+          <button type="button" class="chip" aria-pressed="false">content</button>
+          <button type="button" class="chip" aria-pressed="false">honestly not sure</button>
+        </div>
+        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
+      </div>
+
+      <div class="ci-step">
+        <h3>What does it feel like right now?</h3>
+        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <div class="paths" role="group" aria-label="How it feels right now">
+          <button type="button" class="choice" data-path="p-conn" aria-pressed="false">💬 Missing people</button>
+          <button type="button" class="choice" data-path="p-body" aria-pressed="false">🔋 Running low</button>
+          <button type="button" class="choice" data-path="p-free" aria-pressed="false">🚧 Boxed in</button>
+          <button type="button" class="choice" data-path="p-peace" aria-pressed="false">🌪 Too much at once</button>
+          <button type="button" class="choice" data-path="p-numb" aria-pressed="false">🌫 Can't tell what I feel</button>
+          <button type="button" class="choice" data-path="p-met" aria-pressed="false">🟢 Pretty good, actually</button>
+        </div>
+
+        <div class="path-panel" id="p-conn" hidden>
+          <h4>What this might mean</h4>
+          <p>That's your need for connection. It's one of the loudest notifications there is, and one of the most common.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">📲</span>Text one person something small. It doesn't have to be about how you feel.</li>
+            <li><span class="e" aria-hidden="true">🪑</span>Sit near someone at lunch, practice, or in a club.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor if it's been lonely for a while.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-body" hidden>
+          <h4>What this might mean</h4>
+          <p>Your body's needs come first. When sleep or food is off, every other notification gets louder.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🍎</span>Eat something and drink some water.</li>
+            <li><span class="e" aria-hidden="true">😴</span>Plan an earlier night tonight, even by 30 minutes.</li>
+            <li><span class="e" aria-hidden="true">🚶</span>Move for five minutes. A walk counts.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-free" hidden>
+          <h4>What this might mean</h4>
+          <p>That's often your need for freedom, a say in your own life.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🗝</span>Find one small choice that's yours today.</li>
+            <li><span class="e" aria-hidden="true">🗣</span>Try: "I'd like a say in this. Can we talk about it?"</li>
+            <li><span class="e" aria-hidden="true">🌬</span>Take some space first if you're heated.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-peace" hidden>
+          <h4>What this might mean</h4>
+          <p>That's your need for peace, ease, and some order.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">📝</span>Write down everything on your mind. Pick one thing.</li>
+            <li><span class="e" aria-hidden="true">🌬</span>Slow breath out, longer than the breath in. Three times.</li>
+            <li><span class="e" aria-hidden="true">🙋</span>Ask for help with one piece of it.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-numb" hidden>
+          <h4>What this might mean</h4>
+          <p>Sometimes the notifications go quiet. That can mean you're tired, or that there's been too much for too long.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🎨</span>Look at the word bank and notice which word pulls at you, even a little.</li>
+            <li><span class="e" aria-hidden="true">🛋</span>Rest. Feelings often come back when your body has a break.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If you've felt numb for a while, talk to a counselor.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-met" hidden>
+          <h4>What this might mean</h4>
+          <p>Green notifications. A need is getting met. Notice which one.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🔍</span>What made today good? Who was there? What did you do?</li>
+            <li><span class="e" aria-hidden="true">🔁</span>Do one piece of it again tomorrow, on purpose.</li>
+            <li><span class="e" aria-hidden="true">💛</span>Enjoy it.</li>
+          </ul>
+        </div>
+        <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
+      </div>
+
+      <div class="ci-step">
+        <h3 id="ci-safe">Is any of this making you feel hopeless, unsafe, or like you might hurt yourself?</h3>
+        <div class="chips" role="radiogroup" aria-labelledby="ci-safe" id="ci-safety">
+          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="no">No</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="unsure">Not sure</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="yes">Yes</button>
+        </div>
+        <div class="safety-panel" id="safety-panel" hidden aria-live="polite">
+          <p><strong>Thank you for being honest. Please don't carry this alone.</strong> Feeling hopeless or unsafe is a reason to talk to someone today.</p>
+          <ul class="tight">
+            <li><strong>Call or text <a href="tel:988">988</a></strong>, the Suicide and Crisis Lifeline, any time.</li>
+            <li><strong>Text HOME to <a href="sms:741741">741741</a></strong>, the Crisis Text Line.</li>
+            <li>Tell a counselor, teacher, coach, or parent today. You can show them this screen.</li>
+            <li>If you might act on thoughts of hurting yourself, call <a href="tel:911">911</a> or go to an emergency room.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ci-step">
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
+        <p class="ci-hint">The smallest version counts.</p>
+        <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
+        <p class="closing">Naming a feeling takes practice. The more words you have, the easier it gets to find what you need.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GET HELP (fixed crisis lines + school frame) ================= -->
+<section class="part" id="help" aria-labelledby="h-help">
+  <div class="wrap">
+    <div class="part-head"><span class="part-num" style="background:var(--alert)">!</span><h2 id="h-help">Get help</h2></div>
+    <div class="help">
+      <div class="help-grid">
+        <div class="help-box local">
+          <h3 id="local-title">BCDS Middle School Support</h3>
+          <dl>
+            <dt>Counselor</dt><dd>Ms. Graham<br><a href="mailto:tgraham@bcdschool.org">tgraham@bcdschool.org</a></dd>
+            <dt>Learning support</dt><dd>Ms. Flannery<br><a href="mailto:tflannery@bcdschool.org">tflannery@bcdschool.org</a></dd>
+            <dt>Health office</dt><dd>Ms. Ossowski, LPN<br><a href="mailto:tossowski@bcdschool.org">tossowski@bcdschool.org</a></dd>
+            <dt>Hours</dt><dd id="local-hours">Monday to Friday, 8:00 to 3:30</dd>
+            <dt>How to book</dt><dd id="local-book">Stop by, or email counseling@yourschool.org</dd>
+            <dt>After hours</dt><dd id="local-after">Call or text 988 any time</dd>
+          </dl>
+          <p style="margin:12px 0 0">You can also reach out to any trusted adult on campus, or to your parents or caregivers.</p>
+        </div>
+        <div class="help-box crisis">
+          <h3>Any time, day or night</h3>
+          <p class="crisis-line"><strong>988 Suicide and Crisis Lifeline</strong>Call or text <a href="tel:988">988</a></p>
+          <p class="crisis-line"><strong>Crisis Text Line</strong>Text <b>HOME</b> to <a href="sms:741741">741741</a></p>
+          <p class="crisis-line"><strong>ANAD Eating Disorders Helpline</strong>Call <a href="tel:18883757767">1-888-375-7767</a>, weekdays 9am to 9pm Central.</p>
+          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <h3>If you want to understand more</h3>
+      <p>Other Student Toolkit modules that go with this one:</p>
+      <ul class="more-list">
+        <li><span class="e" aria-hidden="true">😤</span><div><strong>Anger Is Information</strong><br>What anger is telling you.</div></li>
+        <li><span class="e" aria-hidden="true">🗯</span><div><strong>The Inner Critic</strong><br>Quieting the voice that says you're not enough.</div></li>
+        <li><span class="e" aria-hidden="true">🗣</span><div><strong>Talking to Your Parents</strong><br>So they actually listen.</div></li>
+        <li><span class="e" aria-hidden="true">🧭</span><div><strong>What Does Healthy Look Like?</strong><br>A picture of healthy you can steer toward.</div></li>
+      </ul>
+    </div>
+
+    <div class="tool-row no-print">
+      <button class="btn ghost" type="button" id="clear-all">Clear everything I typed</button>
+      <button class="btn ghost" type="button" onclick="window.print()">Print a blank worksheet</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer">
+      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or call 911 in an emergency.
+    </div>
+    <div>Student Toolkit · Middle School · Stress, sleep, and big feelings · Name the Need</div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   SCHOOL: customize the frame here. Do not edit content above.
+   ========================================================== */
+const SCHOOL = {
+  name: "Beaver Country Day School",
+  motto: "Mente et Manu",                 // school motto or values; "" to hide
+  initials: "BCDS",                             // shown if no logo is set
+  logo: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgeG1sbnM6YzJwYT0iaHR0cDovL2MycGEub3JnL21hbmlmZXN0Ij48bWV0YWRhdGE+PGMycGE6bWFuaWZlc3Q+QUFBV2dtcDFiV0lBQUFBZWFuVnRaR015Y0dFQUVRQVFnQUFBcWdBNG0zRURZekp3WVFBQUFCWmNhblZ0WWdBQUFFZHFkVzFrWXpKdFlRQVJBQkNBQUFDcUFEaWJjUU4xY200Nll6SndZVG95TmpSbVlqZ3daUzFqTURSakxUUXlaakV0T1dVeE15MWxNRGM0TjJSak1HVmpORElBQUFBRGwycDFiV0lBQUFBcGFuVnRaR015WVhNQUVRQVFnQUFBcWdBNG0zRURZekp3WVM1aGMzTmxjblJwYjI1ekFBQUFBTHhxZFcxaUFBQUFSR3AxYldSalltOXlBQkVBRUlBQUFLb0FPSnR4RTJNeWNHRXVhVzVuY21Wa2FXVnVkQzUyTXdBQUFBQVlZekp6YUxWMFFPN08yLy9Gd01uQW03cnBUdHNBQUFCd1kySnZjcU5wWkdNNlptOXliV0YwYldsdFlXZGxMM04yWnl0NGJXeHFhVzV6ZEdGdVkyVkpSSGdzZUcxd09tbHBaRHBpTVRFM05UTTROUzFtT0dZNExUUmtZak10T0dJMlpTMWlaR1F5TkROaU1qRTFNRFZzY21Wc1lYUnBiMjV6YUdsd2FIQmhjbVZ1ZEU5bUFBQUI0bXAxYldJQUFBQkJhblZ0WkdOaWIzSUFFUUFRZ0FBQXFnQTRtM0VUWXpKd1lTNWhZM1JwYjI1ekxuWXlBQUFBQUJoak1uTm9lVXZESWVOV051ZWRyZ243amNNbjR3QUFBWmxqWW05eW9tZGhZM1JwYjI1emdxSm1ZV04wYVc5dWEyTXljR0V1YjNCbGJtVmthbkJoY21GdFpYUmxjbk9oYTJsdVozSmxaR2xsYm5SemdhSmpkWEpzZUMxelpXeG1JMnAxYldKbVBXTXljR0V1WVhOelpYSjBhVzl1Y3k5ak1uQmhMbWx1WjNKbFpHbGxiblF1ZGpOa2FHRnphRmdnaGR3bklnaEV3KzdRK3BmM1VSd2lDNVp1NHNvNGdUcmdxTUNtN0Q0TS9uaWtabUZqZEdsdmJuZ2RZMjl0TG1GdWRHaHliM0JwWXk1amJHRjFaR1V1Y0hKdmRtbGtaV1JxY0dGeVlXMWxkR1Z5YzZGNEgyTnZiUzVoYm5Sb2NtOXdhV011YjNKcFoybHVMV052Ym1acFpHVnVZMlZuZFc1cmJtOTNibXRrWlhOamNtbHdkR2x2Ym5obVEyeGhkV1JsSUhCeWIzWnBaR1ZrSUhSb2FYTWdabWxzWlNCaGRDQjBhR1VnY21WeGRXVnpkQ0J2WmlCaElIVnpaWElnWVc1a0lHMWhlU0JvWVhabElHTnlaV0YwWldRZ2IzSWdiVzlrYVdacFpXUWdkR2hsSUdacGJHVWdZMjl1ZEdWdWRITXViWE52Wm5SM1lYSmxRV2RsYm5TaFpHNWhiV1ZtUTJ4aGRXUmxjbUZzYkVGamRHbHZibk5KYm1Oc2RXUmxaUFVBQUFESWFuVnRZZ0FBQUVCcWRXMWtZMkp2Y2dBUkFCQ0FBQUNxQURpYmNSTmpNbkJoTG1oaGMyZ3VaR0YwWVFBQUFBQVlZekp6YUJVK3NMcEZJc0w0TXR3NE5rdVNJZ3dBQUFDQVkySnZjcVZqWVd4blpuTm9ZVEkxTm1Od1lXUk5BQUFBQUFBQUFBQUFBQUFBQUdSb1lYTm9XQ0RycjZUazFyOStZaEZyUlRmTFlwNnJndGMxb2g0TkVUVDRwWmNQVFhqK0pHUnVZVzFsYm1wMWJXSm1JRzFoYm1sbVpYTjBhbVY0WTJ4MWMybHZibk9Cb21WemRHRnlkQmg3Wm14bGJtZDBhQmtlQkFBQUFqNXFkVzFpQUFBQUoycDFiV1JqTW1Oc0FCRUFFSUFBQUtvQU9KdHhBMk15Y0dFdVkyeGhhVzB1ZGpJQUFBQUNEMk5pYjNLbFkyRnNaMlp6YUdFeU5UWnBjMmxuYm1GMGRYSmxlRTF6Wld4bUkycDFiV0ptUFM5ak1uQmhMM1Z5Ympwak1uQmhPakkyTkdaaU9EQmxMV013TkdNdE5ESm1NUzA1WlRFekxXVXdOemczWkdNd1pXTTBNaTlqTW5CaExuTnBaMjVoZEhWeVpXcHBibk4wWVc1alpVbEVlQ3g0YlhBNmFXbGtPakkzWkRaa016QXlMVFUyTlRRdE5HSmlaaTA0TUdJekxUSTFOV1ZpT1RWaVpXVmtPWEpqY21WaGRHVmtYMkZ6YzJWeWRHbHZibk9Eb21OMWNteDRMWE5sYkdZamFuVnRZbVk5WXpKd1lTNWhjM05sY25ScGIyNXpMMk15Y0dFdWFXNW5jbVZrYVdWdWRDNTJNMlJvWVhOb1dDQ0YzQ2NpQ0VURDd0RDZsL2RSSENJTGxtN2l5amlCT3VDb3dLYnNQZ3orZUtKamRYSnNlQ3B6Wld4bUkycDFiV0ptUFdNeWNHRXVZWE56WlhKMGFXOXVjeTlqTW5CaExtRmpkR2x2Ym5NdWRqSmthR0Z6YUZnZ0d1NmxVMUFHZThxNzQ2YVkvL0oxOG5oYVpTVTY0R2pGOWN3YUxzV0xKY09pWTNWeWJIZ3BjMlZzWmlOcWRXMWlaajFqTW5CaExtRnpjMlZ5ZEdsdmJuTXZZekp3WVM1b1lYTm9MbVJoZEdGa2FHRnphRmdnNEYzdW1LdGVsLzJ3K3ZGT0ZvbzFkUVVsa2JGWkptRGUvRjJieTJ4TnVuVjBZMnhoYVcxZloyVnVaWEpoZEc5eVgybHVabStqWkc1aGJXVnZRVzUwYUhKdmNHbGpJRVpwYkdWelozWmxjbk5wYjI1bE1TNHdMakJyYzNCbFkxWmxjbk5wYjI1bE1pNDBMakFBQUJBNGFuVnRZZ0FBQUNocWRXMWtZekpqY3dBUkFCQ0FBQUNxQURpYmNRTmpNbkJoTG5OcFoyNWhkSFZ5WlFBQUFCQUlZMkp2Y3RLRVdRSVNvZ0VtR0NGWkFnb3dnZ0lHTUlJQmphQURBZ0VDQWhSQTVhQUs3c0k1MEw2NGcvb0dRZ1U5WjFVVEFEQUtCZ2dxaGtqT1BRUURBekJKTVJjd0ZRWURWUVFLRXc1QmJuUm9jbTl3YVdNc0lGQkNRekV1TUN3R0ExVUVBeE1sUVc1MGFISnZjR2xqSUVOdmJuUmxiblFnUTNKbFpHVnVkR2xoYkhNZ1VtOXZkQ0JEUVRBZUZ3MHlOakE0TURjeE9EUXpOVFphRncweU9EQTRNRFl4T1RRek5UWmFNRVF4RnpBVkJnTlZCQW9URGtGdWRHaHliM0JwWXl3Z1VFSkRNU2t3SndZRFZRUURFeUJCYm5Sb2NtOXdhV01nUTJ4aGRXUmxJRU52Ym5SbGJuUWdVMmxuYm1sdVp6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJKaDZDbXZMVUJnRkZOVTB2VUtsT1Z0RTZkamQxN0w1U3V3WDBMZW1GaXNCTTNka2QvM2N5anhGQTNRbzVTNDZmWDAvaWhZMFZaN21mYjlLRjcwM3Q1T2pXREJXTUE0R0ExVWREd0VCL3dRRUF3SUhnREFWQmdOVkhTVUVEakFNQmdvckJnRUVBWVBvWGdJQk1Bd0dBMVVkRXdFQi93UUNNQUF3SHdZRFZSMGpCQmd3Rm9BVXpsSGlCSUZPWkZzaitPUEV6NW8rbk1IWFhNSXdDZ1lJS29aSXpqMEVBd01EWndBd1pBSXdNWE1kRko0QmV0TExWWTdPUnVFOW5vcWJiQVpPWm4vYUFyWHlUd0ZBWmZLclB6eEYydlBvSk5mMStVQ2RnMVhHQWpCd1gxemQ5V0dxWWtxbUw1U0ZxdzFReVNqcjF6SmZwSk05KzFyZER3U1BMTU9QT2pLdWlYam9VL3BVVWVHOVJ3bWhZM0JoWkZrTm5nQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUFpZUUxaQ2hrNU9yWTU4UjdGbG5wZmNWMjJ3QUZOeU9yYzFvdkFRc09oTVVPMnp2Ymh6bWRtemh2WkJRQnZuYi9hc0luVWZSNlA3REpERkk4dTFmNWc5WHJnPTwvYzJwYTptYW5pZmVzdD48L21ldGFkYXRhPjxyZWN0IHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0iIzBiMmQ1YiIvPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjM2IiBmaWxsPSIjZmZmZmZmIi8+PHRleHQgeD0iNDgiIHk9IjQ5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSIjMGIyZDViIj5CPC90ZXh0Pjwvc3ZnPgo=",                                   // optional: a data:image/... URI (must be embedded; web links are blocked)
+  colors: { primary: "#0b2d5b", accent: "#f47b20" },
+  welcome: "Welcome from the BCDS counseling team. We are glad you're here.",  // "" to hide
+  welcomeSignature: "BCDS Counseling Team",
+  gradeBand: "ms",
+  help: {
+    title: "BCDS Middle School Support",
+    where: "Counseling Office (location to be confirmed)",
+    hours: "School days, 8:00am to 4:00pm",
+    book: "Stop by, or email anyone listed above",
+    afterHours: "Call or text 988 any time"
+  }
+};
+/* ========================================================== */
+
+(function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+  const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+
+  /* ---- Apply school frame ---- */
+  document.documentElement.style.setProperty("--school", SCHOOL.colors.primary);
+  document.documentElement.style.setProperty("--school-accent", SCHOOL.colors.accent);
+  setText("school-name", SCHOOL.name);
+  if (SCHOOL.motto) setText("school-motto", SCHOOL.motto); else $("#school-motto").remove();
+  if (SCHOOL.welcome) { setText("welcome-line", SCHOOL.welcome); setText("welcome-sign", SCHOOL.welcomeSignature || ""); }
+  else $("#welcome-box").remove();
+  const mark = $("#school-mark");
+  if (SCHOOL.logo && SCHOOL.logo.startsWith("data:image/")) {
+    const img = document.createElement("img");
+    img.src = SCHOOL.logo; img.alt = SCHOOL.name + " logo"; img.className = "school-logo";
+    mark.replaceWith(img);
+  } else {
+    mark.textContent = SCHOOL.initials;
+  }
+  setText("local-title", SCHOOL.help.title);
+  setText("local-where", SCHOOL.help.where);
+  setText("local-hours", SCHOOL.help.hours);
+  setText("local-book", SCHOOL.help.book);
+  setText("local-after", SCHOOL.help.afterHours);
+
+  /* ---- Grade band ---- */
+  function setBand(b) {
+    document.body.classList.remove("band-ms", "band-us");
+    document.body.classList.add("band-" + b);
+    $$("[data-set-band]").forEach(btn => btn.setAttribute("aria-pressed", String(btn.dataset.setBand === b)));
+  }
+  if (SCHOOL.gradeBand === "ms" || SCHOOL.gradeBand === "us") {
+    const bt = $("#band-toggle"); if (bt) bt.remove();
+    setBand(SCHOOL.gradeBand);
+  } else {
+    setBand(SCHOOL.defaultBand === "ms" ? "ms" : "us");
+    $$("[data-set-band]").forEach(btn => btn.addEventListener("click", () => setBand(btn.dataset.setBand)));
+  }
+
+  /* ---- Reveal buttons ---- */
+  $$("[data-reveal]").forEach(btn => btn.addEventListener("click", () => {
+    const panel = document.getElementById(btn.dataset.reveal);
+    const open = panel.hidden;
+    panel.hidden = !open;
+    btn.textContent = open ? "Hide other possibilities" : "Show other possibilities";
+    btn.setAttribute("aria-expanded", String(open));
+  }));
+
+  /* ---- Screenshot test tally ---- */
+  const checks = $$(".checklist input");
+  const tally = $("#test-tally");
+  if (tally) checks.forEach(c => c.addEventListener("change", () => {
+    const n = checks.filter(x => x.checked).length;
+    if (n === 0) { tally.textContent = ""; tally.className = "feedback"; return; }
+    if (n === checks.length) {
+      tally.className = "feedback good";
+      tally.textContent = tally.dataset.done || "Passes the test. If it still feels right, it's probably okay to send.";
+    } else {
+      tally.className = "feedback " + (tally.dataset.partial ? "good" : "okay");
+      tally.textContent = tally.dataset.partial ? tally.dataset.partial.replace("{n}", n).replace("{total}", checks.length)
+        : n + " of " + checks.length + " so far. Any box you can't check is a reason to pause or rewrite.";
+    }
+  }));
+
+  /* ---- Scenario choices ---- */
+  $$(".scenario").forEach(sc => {
+    const fb = $(".feedback", sc);
+    $$(".choice", sc).forEach(ch => ch.addEventListener("click", () => {
+      $$(".choice", sc).forEach(x => x.setAttribute("aria-pressed", "false"));
+      ch.setAttribute("aria-pressed", "true");
+      fb.className = "feedback " + ch.dataset.fb;
+      fb.textContent = ch.dataset.msg;
+    }));
+  });
+
+
+  /* ---- Name the Need: two sides + decoder ---- */
+  const NN = {"lonely": ["red", "Connection", "company \u00b7 belonging \u00b7 someone who gets it"], "hurt": ["red", "Connection", "respect \u00b7 care \u00b7 to matter"], "jealous": ["red", "Connection", "closeness \u00b7 to matter \u00b7 feeling secure in a friendship"], "embarrassed": ["red", "Connection", "acceptance \u00b7 respect \u00b7 belonging"], "insecure": ["red", "Connection", "acceptance \u00b7 self-respect \u00b7 to be seen"], "worried": ["red", "Peace", "safety \u00b7 clarity \u00b7 support"], "nervous": ["red", "Peace", "safety \u00b7 support \u00b7 confidence I can do it"], "overwhelmed": ["red", "Peace", "ease \u00b7 space \u00b7 help \u00b7 rest"], "stressed out": ["red", "Peace", "ease \u00b7 order \u00b7 rest \u00b7 support"], "annoyed": ["red", "Freedom", "space \u00b7 consideration \u00b7 respect"], "frustrated": ["red", "Freedom", "things to work \u00b7 choice \u00b7 being understood"], "angry": ["red", "Freedom", "respect \u00b7 fairness \u00b7 being heard"], "resentful": ["red", "Freedom", "fairness \u00b7 appreciation \u00b7 choice"], "bored": ["red", "Play", "fun \u00b7 challenge \u00b7 something new"], "restless": ["red", "Play", "movement \u00b7 stimulation \u00b7 fun"], "tired": ["red", "Body", "sleep \u00b7 rest \u00b7 food"], "cranky": ["red", "Body", "rest \u00b7 food \u00b7 space"], "sad": ["red", "Connection", "comfort \u00b7 company \u00b7 time to grieve"], "disappointed": ["red", "Meaning", "hope \u00b7 to matter \u00b7 things to work out"], "discouraged": ["red", "Meaning", "competence \u00b7 encouragement \u00b7 growth"], "guilty": ["red", "Honesty", "integrity \u00b7 making it right"], "confused": ["red", "Meaning", "clarity \u00b7 understanding \u00b7 learning"], "numb": ["red", "Body", "rest \u00b7 safety \u00b7 connection (numb often means too much, for too long)"], "calm": ["green", "Peace", "ease \u00b7 calm"], "happy": ["green", "Connection or Play", "belonging \u00b7 fun"], "proud": ["green", "Meaning", "competence \u00b7 growth \u00b7 to matter"], "grateful": ["green", "Connection", "support \u00b7 appreciation"], "excited": ["green", "Play", "fun \u00b7 challenge \u00b7 something new"], "curious": ["green", "Meaning", "learning \u00b7 discovery"], "relieved": ["green", "Peace", "safety \u00b7 ease"], "confident": ["green", "Freedom", "choice \u00b7 competence \u00b7 self-respect"], "content": ["green", "Peace", "ease \u00b7 rest \u00b7 belonging"], "giddy": ["green", "Play", "fun \u00b7 humor \u00b7 joy"], "hopeful": ["green", "Meaning", "hope \u00b7 purpose \u00b7 growth"], "rested": ["green", "Body", "rest \u00b7 sleep"]};
+  const nnBtns = $$("[data-nn]");
+  nnBtns.forEach(bt => bt.addEventListener("click", () => nnBtns.forEach(x => {
+    x.setAttribute("aria-pressed", String(x === bt));
+    document.getElementById("nn-" + x.dataset.nn).hidden = x !== bt;
+  })));
+  const nnOut = $("#nn-out"), fws = $$(".nn-fw");
+  function nnReset() { fws.forEach(x => x.setAttribute("aria-pressed", "false")); if (nnOut) { nnOut.className = "nn-out"; nnOut.textContent = "Tap a feeling to decode it."; } }
+  fws.forEach(bt => bt.addEventListener("click", () => {
+    const w = bt.dataset.f, d = NN[w];
+    fws.forEach(x => x.setAttribute("aria-pressed", String(x === bt)));
+    nnOut.className = "nn-out " + d[0];
+    nnOut.innerHTML = d[0] === "red"
+      ? "<strong>" + w + "</strong> is usually a \ud83d\udd34 notification from <strong>" + d[1] + "</strong>. Underneath, you might need: " + d[2] + ".<br><em>Try it: \u201cI feel " + w + ", and I think I need ___.\u201d</em>"
+      : "<strong>" + w + "</strong> is a \ud83d\udfe2 notification. A need is getting met, maybe <strong>" + d[1] + "</strong>: " + d[2] + ".<br><em>What made it happen? That's worth doing again.</em>";
+  }));
+  $("#clear-all").addEventListener("click", nnReset);
+  window.addEventListener("pageshow", nnReset);
+
+  /* ---- Check-in tool ---- */
+  const slider = $("#ci-slider"), sliderRead = $("#ci-read"), high = $("#ci-high");
+  const READS = ["Barely on my mind", "Barely on my mind", "A little", "A little", "Some", "Some",
+                 "A lot", "A lot", "Most of my day", "Most of my day", "All I can think about"];
+  let sliderTouched = false;
+  function updateSlider() {
+    sliderTouched = true;
+    sliderRead.textContent = READS[Number(slider.value)];
+    high.hidden = Number(slider.value) < 8;
+  }
+  slider.addEventListener("input", updateSlider);
+
+  const chips = $$("#ci-chips .chip"), validate = $("#ci-validate");
+  chips.forEach(c => c.addEventListener("click", () => {
+    c.setAttribute("aria-pressed", String(c.getAttribute("aria-pressed") !== "true"));
+    validate.hidden = !chips.some(x => x.getAttribute("aria-pressed") === "true");
+  }));
+
+  const pathBtns = $$("[data-path]");
+  pathBtns.forEach(b => b.addEventListener("click", () => {
+    pathBtns.forEach(x => {
+      const on = x === b;
+      x.setAttribute("aria-pressed", String(on));
+      document.getElementById(x.dataset.path).hidden = !on;
+    });
+  }));
+
+  const safeBtns = $$("#ci-safety .chip"), safetyPanel = $("#safety-panel");
+  safeBtns.forEach(b => b.addEventListener("click", () => {
+    safeBtns.forEach(x => { const on = x === b; x.setAttribute("aria-pressed", String(on)); x.setAttribute("aria-checked", String(on)); });
+    safetyPanel.hidden = b.dataset.safe === "no";
+  }));
+
+  /* ---- Clear everything ---- */
+  function clearAll() {
+    $$("textarea").forEach(t => t.value = "");
+    $$("input[type=checkbox]").forEach(i => i.checked = false);
+    slider.value = 0; sliderRead.textContent = ""; high.hidden = true; sliderTouched = false;
+    $$(".choice, .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
+    safeBtns.forEach(x => x.setAttribute("aria-checked", "false"));
+    $$(".path-panel").forEach(p => p.hidden = true);
+    validate.hidden = true; safetyPanel.hidden = true;
+    $$(".feedback").forEach(f => { f.textContent = ""; f.className = "feedback"; });
+    $$(".reveal").forEach(r => r.hidden = true);
+    if (typeof extraReset === "function") extraReset();
+    $$("[data-reveal]").forEach(b => { b.textContent = "Show other possibilities"; b.setAttribute("aria-expanded", "false"); });
+  }
+  $("#clear-all").addEventListener("click", clearAll);
+  /* Browsers sometimes restore typed text on back/refresh; wipe it so nothing lingers. */
+  window.addEventListener("pageshow", clearAll);
+  window.addEventListener("beforeprint", () => $$("details").forEach(d => d.open = true));
+
+  /* ---- Slides mode (beta): one idea per screen with Back / Next ---- */
+  if ($("#slides-mode")) {
+    document.body.classList.add("slides");
+    const groups = [], names = [];
+    const add = (els, name) => { groups.push(els); names.push(name); };
+    add([$(".wrap.hero")], "Start");
+    $$("section.part").forEach(sec => {
+      const wrap = $(".wrap", sec);
+      const name = sec.id === "help" ? "Get help" : ((($(".eyebrow", wrap) || {}).textContent || "").split("\u00b7").pop().trim());
+      let carry = [];
+      const place = ch => {
+        if (sec.id !== "help" && ch.matches("p, .privacy")) { carry.push(ch); return; }
+        if (ch.id === "checkin-card" && $(".ci-step", ch)) {
+          $$(".ci-step", ch).forEach(st => { add(carry.concat([st]), name); carry = []; });
+          return;
+        }
+        add(carry.concat([ch]), name); carry = [];
+      };
+      Array.from(wrap.children).forEach(el => {
+        if (el.matches(".eyebrow, h2, .part-head")) return;
+        if (el.matches(".tool-row")) { groups[groups.length - 1].push(el); return; }
+        if (sec.id === "help" && el.matches(".card")) { add([el], "Keep going"); return; }
+        if (el.matches(".unit:not(.unit-one)")) { Array.from(el.children).forEach(place); return; }
+        place(el);
+      });
+      if (carry.length) { groups[groups.length - 1].push(...carry); carry = []; }
+    });
+    const foot = $("footer"); if (foot) groups[groups.length - 1].push(foot);
+    groups.forEach(g => g.forEach(el => el.classList.add("slide-x")));
+    $$("section.part").forEach(sec => sec.classList.add("slide-x"));
+    $$("details.fold").forEach(d => { d.open = true; $("summary", d).addEventListener("click", e => e.preventDefault()); });
+    const helpAt = names.indexOf("Get help");
+
+    const top = document.createElement("div");
+    top.className = "wrap slide-top-wrap no-print";
+    const chapters = names.filter((n, k) => n && names.indexOf(n) === k && !["Start", "Get help", "Keep going"].includes(n));
+    const short = { "Understand it": "Understand", "Practice the skills": "Practice" };
+    top.innerHTML = '<nav class="chapters" aria-label="Chapters">' + chapters.map(c => '<button type="button" class="chap" data-chap="' + c + '"><span class="chap-name">' + (short[c] || c) + '</span><span class="chap-track"><span class="chap-fill"></span></span></button>').join("") + '</nav><p class="slide-lock" hidden><span aria-hidden="true">\ud83d\udd12</span> Private. Nothing you type or tap here is saved or sent.</p>';
+    $("main").prepend(top);
+    const bar = document.createElement("div");
+    bar.className = "slide-bar no-print";
+    bar.innerHTML = '<div class="wrap"><button type="button" class="s-back">Back</button><span class="s-count" aria-live="polite"></span><a class="s-help" href="#help">Get help</a><button type="button" class="s-next">Next</button></div>';
+    document.body.appendChild(bar);
+    const back = $(".s-back", bar), next = $(".s-next", bar), count = $(".s-count", bar);
+    let cur = 0, returnTo = null;
+    function show(i) {
+      cur = Math.max(0, Math.min(groups.length - 1, i));
+      $$(".slide-x").forEach(el => el.classList.remove("slide-on"));
+      groups[cur].forEach(el => el.classList.add("slide-on"));
+      $$("section.part").forEach(sec => { if (groups[cur].some(el => sec.contains(el))) sec.classList.add("slide-on"); });
+      $$(".chap", top).forEach(btn => {
+        const c = btn.dataset.chap, idx = names.map((n, k) => n === c ? k : -1).filter(k => k > -1);
+        const first = idx[0], last = idx[idx.length - 1];
+        const pct = cur > last ? 100 : cur < first ? 0 : Math.round((cur - first + 1) / idx.length * 100);
+        $(".chap-fill", btn).style.width = pct + "%";
+        btn.setAttribute("aria-current", names[cur] === c ? "step" : "false");
+      });
+      $(".slide-lock", top).hidden = !groups[cur].some(el => el.querySelector && el.querySelector("textarea, input[type=checkbox], input[type=range], .chip"));
+      $(".s-help", bar).setAttribute("aria-current", cur === helpAt ? "page" : "false");
+      count.textContent = (cur + 1) + " of " + groups.length;
+      back.disabled = cur === 0;
+      next.textContent = cur === 0 ? "Start" : "Next";
+      next.disabled = cur === groups.length - 1;
+      if (cur === helpAt && returnTo !== null) next.textContent = "Back to lesson";
+      else if (cur === helpAt) next.textContent = "Keep going";
+      window.scrollTo(0, 0);
+      const first = groups[cur][0]; first.setAttribute("tabindex", "-1"); first.focus({ preventScroll: true });
+    }
+    back.addEventListener("click", () => show(cur - 1));
+    $$(".chap", top).forEach(btn => btn.addEventListener("click", () => { returnTo = null; show(names.indexOf(btn.dataset.chap)); }));
+    next.addEventListener("click", () => {
+      if (cur === helpAt && returnTo !== null) { const r = returnTo; returnTo = null; show(r); }
+      else show(cur + 1);
+    });
+    document.addEventListener("click", e => {
+      const a = e.target.closest('a[href="#help"]');
+      if (a && helpAt > -1) { e.preventDefault(); if (cur !== helpAt) returnTo = cur; show(helpAt); }
+    });
+    document.addEventListener("keydown", e => {
+      if (e.target.matches("input, textarea, select, button")) return;
+      if (e.key === "ArrowRight") show(cur + 1);
+      if (e.key === "ArrowLeft") show(cur - 1);
+    });
+    window.addEventListener("pageshow", () => { returnTo = null; show(0); });
+    show(0);
+  }
+})();
+</script>
+</body>
+</html>

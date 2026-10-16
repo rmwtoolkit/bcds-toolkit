@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy lock: this page cannot load or send anything over the network. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Weed and Your Brain · High School</title>
+
+<!--
+  ==========================================================
+  SCHOOL FRAME: edit only the SCHOOL settings in the script
+  block at the bottom of this file (search for "SCHOOL").
+  Everything else on this page is fixed content.
+  ==========================================================
+-->
+
+<style>
+  :root {
+    --school: #0b2d5b;          /* replaced by SCHOOL.colors.primary */
+    --school-accent: #f47b20;   /* replaced by SCHOOL.colors.accent */
+    --ink: #1d2330;
+    --ink-soft: #4a5263;
+    --paper: #fbfaf7;
+    --card: #ffffff;
+    --line: #e4e1da;
+    --tint: #f3f1ec;
+    --good: #2f7a4f;
+    --good-bg: #eaf5ee;
+    --warn: #8a5a00;
+    --warn-bg: #fdf3df;
+    --alert: #a3242a;
+    --alert-bg: #fdecec;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--school); }
+  h1, h2, h3 { line-height: 1.25; margin: 0 0 .5em; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 1em; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  /* ---------- School header ---------- */
+  .school-bar {
+    background: var(--school);
+    color: #fff;
+    padding: 14px 0;
+  }
+  .school-bar .wrap { display: flex; align-items: center; gap: 14px; }
+  .school-logo { width: 48px; height: 48px; border-radius: 10px; flex: none; background: transparent; object-fit: contain; }
+  .school-initials {
+    width: 48px; height: 48px; border-radius: 10px; flex: none;
+    background: var(--school-accent); color: var(--school);
+    display: grid; place-items: center; font-weight: 800; font-size: .85rem; letter-spacing: 0;
+  }
+  .school-name { font-weight: 700; font-size: 1.05rem; }
+  .school-motto { font-size: .85rem; opacity: .85; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 40px 16px 24px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: var(--ink-soft); }
+  .hero h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); margin: .15em 0 .2em; color: var(--school); }
+  .hero .sub { font-size: 1.2rem; color: var(--ink-soft); margin-bottom: 1.2em; }
+  .welcome {
+    border-left: 4px solid var(--school-accent);
+    background: var(--card);
+    padding: 12px 16px; border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 16px;
+  }
+  .welcome small { display: block; color: var(--ink-soft); }
+  .privacy {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--tint); border-radius: var(--radius); padding: 12px 16px; font-size: .95rem;
+  }
+  .privacy svg { flex: none; margin-top: 3px; }
+
+  /* ---------- Grade toggle ---------- */
+  .band-toggle { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 18px 0 0; font-size: .95rem; }
+  .band-toggle button {
+    border: 2px solid var(--school); background: transparent; color: var(--school);
+    padding: 6px 14px; border-radius: 999px; font: inherit; font-weight: 600; cursor: pointer;
+  }
+  .band-toggle button[aria-pressed="true"] { background: var(--school); color: #fff; }
+  body.band-ms [], body.band-us [data-band="ms"] { display: none !important; }
+
+  /* ---------- Section nav ---------- */
+  nav.steps {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(251,250,247,.95); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.steps ol { list-style: none; display: flex; gap: 4px; margin: 0; padding: 8px 0; overflow-x: auto; }
+  nav.steps a {
+    display: block; white-space: nowrap; text-decoration: none; color: var(--ink-soft);
+    padding: 6px 12px; border-radius: 999px; font-size: .9rem; font-weight: 600;
+  }
+  nav.steps a:hover, nav.steps a:focus-visible { background: var(--tint); color: var(--ink); }
+  nav.steps .help-link { color: var(--alert); }
+
+  /* ---------- Sections and cards ---------- */
+  section.part { padding: 40px 0 8px; scroll-margin-top: 56px; }
+  .part-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+  .part-num {
+    flex: none; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--school); color: #fff; display: grid; place-items: center; font-weight: 800;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px; margin: 16px 0;
+  }
+  .card.tinted { background: var(--tint); border-color: transparent; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .grid-2 .card { margin: 0; }
+  .big-idea { font-size: 1.15rem; font-weight: 600; color: var(--school); }
+  ul.tight { margin: 0 0 1em; padding-left: 1.2em; }
+  ul.tight li { margin-bottom: .35em; }
+
+  /* ---------- Chat bubbles ---------- */
+  .phone { background: var(--tint); border-radius: 18px; padding: 14px; margin: 12px 0; }
+  .chat-name { font-size: .75rem; color: var(--ink-soft); margin: 6px 0 2px 6px; }
+  .bubble {
+    display: inline-block; max-width: 85%; padding: 8px 14px; border-radius: 18px;
+    background: #fff; border: 1px solid var(--line);
+  }
+  .bubble.me { background: var(--school); color: #fff; border-color: var(--school); }
+  .row-me { text-align: right; }
+  .chat-meta { font-size: .75rem; color: var(--ink-soft); text-align: center; margin: 8px 0; font-style: italic; }
+
+  /* ---------- Buttons and inputs ---------- */
+  .btn {
+    display: inline-block; border: 0; border-radius: 10px; cursor: pointer;
+    background: var(--school); color: #fff; font: inherit; font-weight: 600; padding: 10px 16px;
+  }
+  .btn.ghost { background: transparent; color: var(--school); border: 2px solid var(--school); }
+  .btn:focus-visible, .choice:focus-visible, textarea:focus-visible, input:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  label.prompt { display: block; font-weight: 600; margin: 14px 0 6px; }
+  textarea {
+    width: 100%; min-height: 84px; resize: vertical; padding: 10px 12px;
+    border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; color: var(--ink);
+  }
+  .write-lines { display: none; }
+
+  .choices { display: grid; gap: 8px; margin: 12px 0; }
+  .choice {
+    text-align: left; border: 2px solid var(--line); background: #fff; border-radius: 12px;
+    padding: 10px 14px; font: inherit; cursor: pointer; color: var(--ink);
+  }
+  .choice:hover { border-color: var(--school); }
+  .choice[aria-pressed="true"] { border-color: var(--school); background: var(--tint); }
+  .feedback { border-radius: 12px; padding: 12px 16px; margin-top: 8px; }
+  .feedback:empty { display: none; }
+  .feedback.good { background: var(--good-bg); border-left: 4px solid var(--good); }
+  .feedback.okay { background: var(--warn-bg); border-left: 4px solid var(--warn); }
+  .feedback.nope { background: var(--alert-bg); border-left: 4px solid var(--alert); }
+
+  .reveal { margin-top: 10px; }
+  .reveal[hidden] { display: none; }
+
+  .checklist label { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; cursor: pointer; }
+  .checklist input { margin-top: 6px; width: 18px; height: 18px; flex: none; }
+
+  .steps-list { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps-list li { counter-increment: step; position: relative; padding: 0 0 14px 48px; }
+  .steps-list li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--school-accent); color: var(--school); font-weight: 800; display: grid; place-items: center;
+  }
+  .script { background: var(--tint); border-radius: 10px; padding: 8px 12px; margin: 6px 0; font-style: italic; }
+
+  /* ---------- Check-in ---------- */
+  .ci-item { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .ci-item:last-of-type { border-bottom: 0; }
+  .ci-q { font-weight: 600; margin-bottom: 8px; }
+  .scale { display: flex; flex-wrap: wrap; gap: 6px; }
+  .scale label {
+    border: 2px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer; font-size: .92rem; background: #fff;
+  }
+  .scale input { position: absolute; opacity: 0; pointer-events: none; }
+  .scale input:checked + span { font-weight: 700; }
+  .scale label:has(input:checked) { border-color: var(--school); background: var(--tint); }
+  .scale label:has(input:focus-visible) { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  .result { border-radius: var(--radius); padding: 16px 18px; margin-top: 16px; }
+  .result[hidden] { display: none; }
+  .result.green { background: var(--good-bg); border-left: 5px solid var(--good); }
+  .result.yellow { background: var(--warn-bg); border-left: 5px solid var(--warn); }
+  .result.red { background: var(--alert-bg); border-left: 5px solid var(--alert); }
+
+  /* ---------- Help panel ---------- */
+  .help { background: var(--card); border: 2px solid var(--school); border-radius: var(--radius); padding: 20px; margin: 16px 0; }
+  .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .help-box { border-radius: 12px; padding: 16px; }
+  .help-box.crisis { background: var(--alert-bg); }
+  .help-box.local { background: var(--tint); }
+  .help-box h3 { margin-bottom: .4em; }
+  .help-box dl { margin: 0; }
+  .help-box dt { font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); margin-top: 10px; }
+  .help-box dd { margin: 0; }
+  .crisis-line { font-size: 1.05rem; margin: 0 0 12px; }
+  .crisis-line strong { display: block; font-size: 1.25rem; }
+  .crisis-line a { font-weight: 700; }
+
+  footer { padding: 28px 0 48px; color: var(--ink-soft); font-size: .88rem; }
+  footer .disclaimer { background: var(--tint); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 14px; }
+  .tool-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ---------- Print: a clean worksheet with blank lines ---------- */
+  @media print {
+    body { background: #fff; font-size: 12pt; }
+    nav.steps, .band-toggle, .tool-row, .btn, .no-print, #checkin-result { display: none !important; }
+    .reveal[hidden] { display: block !important; }
+    textarea { display: none; }
+    .write-lines { display: block; border-bottom: 1px solid #999; height: 1.6em; }
+    .card, .help, section.part { break-inside: avoid; }
+    .school-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* ---------- Clinical-library handout pieces ---------- */
+  .tagline { font-size: 1.2rem; color: var(--ink-soft); font-style: italic; margin-bottom: 1.2em; }
+  .emoji-h { display: flex; gap: 10px; align-items: baseline; }
+  .emoji-h .e { font-size: 1.3em; line-height: 1; }
+  .ways { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .ways .card { margin: 0; }
+  .ways .e { font-size: 1.8rem; display: block; margin-bottom: 4px; }
+  .callout { background: var(--warn-bg); border-left: 5px solid var(--school-accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px 18px; margin: 16px 0; }
+  .worst { font-style: italic; color: var(--ink-soft); margin: 10px 0 0; }
+  .helps dt { font-weight: 700; margin-top: 14px; }
+  .helps dd { margin: 4px 0 0; }
+  .nope-list .item { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nope-list .item:last-child { border-bottom: 0; }
+  .reminder { background: var(--school); color: #fff; border-radius: var(--radius); padding: 22px; font-size: 1.15rem; margin: 24px 0; }
+  .reminder h3 { color: #fff; font-size: .85rem; text-transform: uppercase; letter-spacing: .12em; opacity: .85; }
+  .reminder p { margin: 0; }
+
+  /* ---------- Fold layout: bumper-sticker headline, tap to open ---------- */
+  details.fold { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); margin: 14px 0; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  details.fold > summary { list-style: none; cursor: pointer; display: block; position: relative; padding: 18px 120px 18px 20px; border-radius: var(--radius); }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary { list-style: none; }
+  details.fold > summary:hover { background: var(--tint); }
+  details > summary:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  .fold-label { display: block; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin-bottom: 4px; }
+  .sticker { display: block; font-size: clamp(1.2rem, 4.2vw, 1.45rem); font-weight: 800; line-height: 1.25; color: var(--school); margin: 0; }
+  .fold-cue { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: var(--school); color: #fff; font-weight: 700; font-size: .85rem; border-radius: 999px; padding: 6px 12px; white-space: nowrap; }
+  .fold-cue::before { content: "Open \25BE"; }
+  details[open] > summary .fold-cue { background: var(--tint); color: var(--ink); }
+  details[open] > summary .fold-cue::before { content: "Close \25B4"; }
+  .fold-body { padding: 0 20px 20px; }
+  details.fold-callout { background: var(--warn-bg); border: 0; border-left: 5px solid var(--school-accent); }
+  details.fold-callout > summary:hover { background: transparent; }
+  details.fold-try { background: var(--tint); border-color: transparent; }
+  .tap-hint { font-size: .9rem; color: var(--ink-soft); margin: 2px 0 10px; }
+  details.row, details.tile, details.more-prompts { border-top: 1px solid var(--line); }
+  details.row > summary, details.more-prompts > summary { cursor: pointer; position: relative; padding: 14px 44px 14px 0; font-weight: 700; font-size: 1.05rem; }
+  details.row > p, details.row > span > p { margin: 0 0 14px; }
+  details.row p { margin: 0 0 14px; }
+  .row-cue { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: var(--school-accent); color: #1d2330; display: grid; place-items: center; font-weight: 800; }
+  .row-cue::before { content: "+"; }
+  details[open] > summary .row-cue::before { content: "\2212"; }
+  .ways details.tile { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 0 16px; }
+  details.tile > summary { cursor: pointer; position: relative; padding: 16px 40px 16px 0; display: flex; align-items: center; gap: 10px; font-size: 1.05rem; }
+  details.tile > summary .e { font-size: 1.8rem; margin: 0; }
+  details.tile > p { padding-bottom: 16px; }
+  details.more-prompts { margin-top: 16px; }
+  @media print { details > .fold-body, details > p { display: block !important; } .fold-cue, .row-cue { display: none; } }
+
+  /* ---------- Slides mode (beta): one idea per screen, Back / Next ---------- */
+  body.slides nav.steps, body.slides section.part > .wrap > .eyebrow, body.slides section.part > .wrap > h2, body.slides .part-head,
+  body.slides .fold-label, body.slides .fold-cue, body.slides main .privacy { display: none !important; }
+  .slide-lock { font-size: .85rem; color: var(--ink-soft); margin: 10px 0 0; }
+  body.slides .slide-x:not(.slide-on) { display: none !important; }
+  body.slides main, body.slides footer { padding-bottom: 110px; }
+  body.slides section.part { padding: 8px 0 0; }
+  body.slides .hero { padding-top: 28px; }
+  body.slides details.fold, body.slides details.fold-callout, body.slides details.fold-try { background: transparent; border: 0; box-shadow: none; margin: 0; }
+  body.slides details.fold > summary { padding: 8px 0 14px; cursor: default; pointer-events: none; }
+  body.slides details.fold > summary:hover { background: transparent; }
+  body.slides .sticker { font-size: clamp(1.6rem, 6vw, 2.1rem); line-height: 1.2; }
+  body.slides .fold-body { padding: 0; font-size: 1.05rem; }
+  body.slides .unit-one > h3 { font-size: clamp(1.6rem, 6vw, 2.1rem); color: var(--school); margin-top: 8px !important; }
+  body.slides .card:not([style*="--alert"]) { box-shadow: none; border-color: transparent; background: transparent; padding-left: 0; padding-right: 0; }
+  body.slides .slide-x:focus { outline: none; }
+  body.slides details.row > summary, body.slides details.tile > summary { padding-top: 16px; padding-bottom: 16px; }
+  body.slides details.row, body.slides details.tile, body.slides details.more-prompts { border: 2px solid var(--line); background: var(--card); border-radius: 14px; margin: 10px 0; padding: 0 16px; }
+  body.slides details.row:hover, body.slides details.tile:hover, body.slides details.more-prompts:hover { border-color: var(--school); }
+  body.slides details.row[open], body.slides details.tile[open] { border-color: var(--school); }
+  body.slides details.row > summary, body.slides details.tile > summary, body.slides details.more-prompts > summary { padding-right: 96px; }
+  body.slides .row-cue { width: auto; height: auto; border-radius: 999px; padding: 5px 12px; background: var(--school); color: #fff; font-size: .85rem; font-weight: 700; }
+  body.slides .row-cue::before { content: "More \25BE"; }
+  body.slides details[open] > summary .row-cue { background: var(--tint); color: var(--ink); }
+  body.slides details[open] > summary .row-cue::before { content: "Less \25B4"; }
+  body.slides .tap-hint { font-size: 1rem; margin: 0 0 6px; }
+  body.slides .reminder { font-size: 1.35rem; padding: 32px 26px; }
+  .chapters { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; padding-top: 12px; }
+  .chap { font: inherit; background: none; border: 0; padding: 4px 0; cursor: pointer; text-align: left; color: var(--ink-soft); }
+  .chap-name { display: block; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+  .chap-track { display: block; height: 5px; background: var(--line); border-radius: 5px; overflow: hidden; }
+  .chap-fill { display: block; height: 100%; width: 0; background: var(--school-accent); transition: width .25s; }
+  .chap[aria-current="step"] { color: var(--school); }
+  .chap[aria-current="step"] .chap-name { font-weight: 800; }
+  .chap:hover .chap-name { color: var(--school); text-decoration: underline; }
+  .chap:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; border-radius: 4px; }
+  @media (max-width: 480px) { .chap-name { font-size: .68rem; letter-spacing: .02em; } .chapters { gap: 6px; } }
+  .slide-top { display: flex; align-items: center; gap: 12px; font-size: .85rem; font-weight: 700; color: var(--ink-soft); padding: 12px 0 0; }
+  .slide-top .slide-name { text-transform: uppercase; letter-spacing: .08em; }
+  .slide-bar .s-help { margin-left: auto; color: var(--alert); border: 2px solid var(--alert); border-radius: 999px; padding: 10px 18px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+  .slide-bar .s-help:hover, .slide-bar .s-help[aria-current="page"] { background: var(--alert); color: #fff; }
+  .slide-bar .s-help:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  @media (max-width: 480px) { .slide-bar .s-count { display: none; } .slide-bar button { padding: 12px 16px; } .slide-bar .s-next { min-width: 0; } .slide-bar .wrap { gap: 8px; } }
+  .slide-track { height: 4px; background: var(--line); border-radius: 4px; margin-top: 8px; overflow: hidden; }
+  .slide-fill { height: 100%; width: 0; background: var(--school-accent); transition: width .25s; }
+  .slide-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: rgba(251,250,247,.97); border-top: 1px solid var(--line); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  .slide-bar .wrap { display: flex; align-items: center; gap: 12px; padding: 0; }
+  .slide-bar button { font: inherit; font-weight: 800; font-size: 1.05rem; border-radius: 999px; padding: 12px 22px; cursor: pointer; border: 2px solid var(--school); }
+  .slide-bar .s-back { background: transparent; color: var(--school); }
+  .slide-bar .s-next { background: var(--school); color: #fff; min-width: 140px; }
+  .slide-bar button:disabled { opacity: .3; cursor: default; }
+  .slide-bar .s-count { font-size: .9rem; color: var(--ink-soft); font-weight: 700; }
+  .slide-bar button:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  @media print { body.slides .slide-x { display: block !important; } .slide-bar, .slide-top-wrap { display: none !important; } }
+
+  /* ---------- Check-in tool ---------- */
+  .ci-step { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .ci-step:last-of-type { border-bottom: 0; }
+  .ci-step h3 { margin-bottom: .2em; }
+  .ci-hint { color: var(--ink-soft); margin-bottom: 10px; }
+  .slider-wrap { margin-top: 8px; }
+  .slider-wrap input[type=range] { width: 100%; accent-color: var(--school); height: 28px; }
+  .slider-ends { display: flex; justify-content: space-between; font-size: .88rem; color: var(--ink-soft); }
+  .slider-read { font-weight: 700; color: var(--school); margin-top: 6px; min-height: 1.5em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    border: 2px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px;
+    padding: 7px 14px; font: inherit; font-size: .95rem; cursor: pointer; text-align: left;
+  }
+  .chip[aria-pressed="true"] { border-color: var(--school); background: var(--tint); font-weight: 600; }
+  .chip:focus-visible { outline: 3px solid var(--school-accent); outline-offset: 2px; }
+  .validate { margin-top: 10px; font-style: italic; color: var(--good); }
+  .validate[hidden] { display: none; }
+  .paths { display: grid; gap: 8px; }
+  .path-panel { margin-top: 12px; background: var(--tint); border-radius: 12px; padding: 16px; }
+  .path-panel[hidden] { display: none; }
+  .path-panel h4 { margin: 0 0 6px; font-size: 1rem; }
+  .path-panel ul { list-style: none; padding: 0; margin: 0 0 12px; }
+  .path-panel li { padding: 4px 0 4px 30px; position: relative; }
+  .path-panel li .e { position: absolute; left: 0; top: 3px; }
+  .closing { margin-top: 16px; font-size: 1.05rem; color: var(--school); font-weight: 600; }
+  .safety-panel { margin-top: 12px; background: var(--alert-bg); border-left: 5px solid var(--alert); border-radius: 0 12px 12px 0; padding: 14px 16px; }
+  .safety-panel[hidden] { display: none; }
+  .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .more-list li { display: flex; gap: 12px; align-items: flex-start; }
+  .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+</style>
+</head>
+
+<body class="band-us">
+
+<!-- ================= SCHOOL HEADER (frame) ================= -->
+<header class="school-bar">
+  <div class="wrap">
+    <span id="school-mark" class="school-initials" aria-hidden="true">SC</span>
+    <div>
+      <div class="school-name" id="school-name">Beaver Country Day School</div>
+      <div class="school-motto" id="school-motto">Counseling Office</div>
+    </div>
+    <a class="home-link" href="index.html" style="margin-left:auto;color:#fff;text-decoration:none;font-weight:600;font-size:.9rem;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:6px 14px;white-space:nowrap">&larr; All topics</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div class="eyebrow">🌿 High School · Substance use</div>
+  <h1>Weed and Your Brain</h1>
+  <p class="tagline">Because you deserve the real science, and you can handle it.</p>
+
+  <div class="welcome" id="welcome-box">
+    <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
+    <small id="welcome-sign">Your Counseling Team</small>
+  </div>
+
+  <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
+  <div id="slides-mode" hidden></div>
+</div>
+
+<nav class="steps" aria-label="Sections">
+  <div class="wrap">
+    <ol>
+      <li><a href="#understand">Understand it</a></li>
+      <li><a href="#practice">Practice the skills</a></li>
+      <li><a href="#reflect">Reflect</a></li>
+      <li><a href="#checkin">Check in</a></li>
+      <li><a href="#help" class="help-link">Get help</a></li>
+    </ol>
+  </div>
+</nav>
+
+<section class="part" id="understand" aria-labelledby="h-understand">
+  <div class="wrap">
+    <div class="eyebrow">Part 1 · Understand it</div>
+    <h2 id="h-understand">What THC does to a growing brain</h2>
+    <details class="fold ">
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Forget both extremes. Here's the science.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        
+        <li >People talk about weed like it's either totally harmless or totally ruins your life.</li>
+        <li>Someone said it's natural, so it must be safe.</li>
+        
+        <li >You've seen pens, carts, dabs, and gummies in people's stories and at parties.</li>
+        <li>It's legal for adults where you live, and someone in your family uses it.</li>
+        
+        <li >You've tried it, or you use it, and you're wondering what it's actually doing.</li>
+        <li>You're worried about a friend who seems high a lot.</li>
+      </ul>
+      <p style="margin:0">You've probably heard both extremes. The real science is more interesting than either one, and you can handle it.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">How many students actually use it</span><span class="sticker">Most of your grade isn't using.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <figure style="margin:0">
+      <div ><svg viewBox="0 0 570 290" role="img" aria-label="74 out of 100 twelfth graders did not use weed in the past year." style="width:100%;max-width:560px;height:auto;display:block"><circle cx="20" cy="20" r="11" fill="var(--school)"/><circle cx="48" cy="20" r="11" fill="var(--school)"/><circle cx="76" cy="20" r="11" fill="var(--school)"/><circle cx="104" cy="20" r="11" fill="var(--school)"/><circle cx="132" cy="20" r="11" fill="var(--school)"/><circle cx="160" cy="20" r="11" fill="var(--school)"/><circle cx="188" cy="20" r="11" fill="var(--school)"/><circle cx="216" cy="20" r="11" fill="var(--school)"/><circle cx="244" cy="20" r="11" fill="var(--school)"/><circle cx="272" cy="20" r="11" fill="var(--school)"/><circle cx="20" cy="48" r="11" fill="var(--school)"/><circle cx="48" cy="48" r="11" fill="var(--school)"/><circle cx="76" cy="48" r="11" fill="var(--school)"/><circle cx="104" cy="48" r="11" fill="var(--school)"/><circle cx="132" cy="48" r="11" fill="var(--school)"/><circle cx="160" cy="48" r="11" fill="var(--school)"/><circle cx="188" cy="48" r="11" fill="var(--school)"/><circle cx="216" cy="48" r="11" fill="var(--school)"/><circle cx="244" cy="48" r="11" fill="var(--school)"/><circle cx="272" cy="48" r="11" fill="var(--school)"/><circle cx="20" cy="76" r="11" fill="var(--school)"/><circle cx="48" cy="76" r="11" fill="var(--school)"/><circle cx="76" cy="76" r="11" fill="var(--school)"/><circle cx="104" cy="76" r="11" fill="var(--school)"/><circle cx="132" cy="76" r="11" fill="var(--school)"/><circle cx="160" cy="76" r="11" fill="var(--school)"/><circle cx="188" cy="76" r="11" fill="var(--school)"/><circle cx="216" cy="76" r="11" fill="var(--school)"/><circle cx="244" cy="76" r="11" fill="var(--school)"/><circle cx="272" cy="76" r="11" fill="var(--school)"/><circle cx="20" cy="104" r="11" fill="var(--school)"/><circle cx="48" cy="104" r="11" fill="var(--school)"/><circle cx="76" cy="104" r="11" fill="var(--school)"/><circle cx="104" cy="104" r="11" fill="var(--school)"/><circle cx="132" cy="104" r="11" fill="var(--school)"/><circle cx="160" cy="104" r="11" fill="var(--school)"/><circle cx="188" cy="104" r="11" fill="var(--school)"/><circle cx="216" cy="104" r="11" fill="var(--school)"/><circle cx="244" cy="104" r="11" fill="var(--school)"/><circle cx="272" cy="104" r="11" fill="var(--school)"/><circle cx="20" cy="132" r="11" fill="var(--school)"/><circle cx="48" cy="132" r="11" fill="var(--school)"/><circle cx="76" cy="132" r="11" fill="var(--school)"/><circle cx="104" cy="132" r="11" fill="var(--school)"/><circle cx="132" cy="132" r="11" fill="var(--school)"/><circle cx="160" cy="132" r="11" fill="var(--school)"/><circle cx="188" cy="132" r="11" fill="var(--school)"/><circle cx="216" cy="132" r="11" fill="var(--school)"/><circle cx="244" cy="132" r="11" fill="var(--school)"/><circle cx="272" cy="132" r="11" fill="var(--school)"/><circle cx="20" cy="160" r="11" fill="var(--school)"/><circle cx="48" cy="160" r="11" fill="var(--school)"/><circle cx="76" cy="160" r="11" fill="var(--school)"/><circle cx="104" cy="160" r="11" fill="var(--school)"/><circle cx="132" cy="160" r="11" fill="var(--school)"/><circle cx="160" cy="160" r="11" fill="var(--school)"/><circle cx="188" cy="160" r="11" fill="var(--school)"/><circle cx="216" cy="160" r="11" fill="var(--school)"/><circle cx="244" cy="160" r="11" fill="var(--school)"/><circle cx="272" cy="160" r="11" fill="var(--school)"/><circle cx="20" cy="188" r="11" fill="var(--school)"/><circle cx="48" cy="188" r="11" fill="var(--school)"/><circle cx="76" cy="188" r="11" fill="var(--school)"/><circle cx="104" cy="188" r="11" fill="var(--school)"/><circle cx="132" cy="188" r="11" fill="var(--school)"/><circle cx="160" cy="188" r="11" fill="var(--school)"/><circle cx="188" cy="188" r="11" fill="var(--school)"/><circle cx="216" cy="188" r="11" fill="var(--school)"/><circle cx="244" cy="188" r="11" fill="var(--school)"/><circle cx="272" cy="188" r="11" fill="var(--school)"/><circle cx="20" cy="216" r="11" fill="var(--school)"/><circle cx="48" cy="216" r="11" fill="var(--school)"/><circle cx="76" cy="216" r="11" fill="var(--school)"/><circle cx="104" cy="216" r="11" fill="var(--school)"/><circle cx="132" cy="216" r="11" fill="var(--line)"/><circle cx="160" cy="216" r="11" fill="var(--line)"/><circle cx="188" cy="216" r="11" fill="var(--line)"/><circle cx="216" cy="216" r="11" fill="var(--line)"/><circle cx="244" cy="216" r="11" fill="var(--line)"/><circle cx="272" cy="216" r="11" fill="var(--line)"/><circle cx="20" cy="244" r="11" fill="var(--line)"/><circle cx="48" cy="244" r="11" fill="var(--line)"/><circle cx="76" cy="244" r="11" fill="var(--line)"/><circle cx="104" cy="244" r="11" fill="var(--line)"/><circle cx="132" cy="244" r="11" fill="var(--line)"/><circle cx="160" cy="244" r="11" fill="var(--line)"/><circle cx="188" cy="244" r="11" fill="var(--line)"/><circle cx="216" cy="244" r="11" fill="var(--line)"/><circle cx="244" cy="244" r="11" fill="var(--line)"/><circle cx="272" cy="244" r="11" fill="var(--line)"/><circle cx="20" cy="272" r="11" fill="var(--line)"/><circle cx="48" cy="272" r="11" fill="var(--line)"/><circle cx="76" cy="272" r="11" fill="var(--line)"/><circle cx="104" cy="272" r="11" fill="var(--line)"/><circle cx="132" cy="272" r="11" fill="var(--line)"/><circle cx="160" cy="272" r="11" fill="var(--line)"/><circle cx="188" cy="272" r="11" fill="var(--line)"/><circle cx="216" cy="272" r="11" fill="var(--line)"/><circle cx="244" cy="272" r="11" fill="var(--line)"/><circle cx="272" cy="272" r="11" fill="var(--line)"/><text x="300" y="110" font-size="64" font-weight="800" fill="var(--school)">74</text><text x="302" y="140" font-size="20" font-weight="700" font-family="inherit" fill="var(--ink)">out of 100</text><text x="302" y="176" font-size="18" fill="var(--ink-soft)"><tspan x="302" dy="0">12th graders who did NOT</tspan><tspan x="302" dy="23">use weed in the past year.</tspan><tspan x="302" dy="23">For 10th graders: 84.</tspan></text></svg></div>
+      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >From the 2025 Monitoring the Future survey of students across the U.S. Most people overestimate how many of their classmates use. Most of your grade isn't.</span></figcaption>
+      </figure>
+      </div>
+    </details>
+
+    <details  class="fold ">
+      <summary><span class="fold-label">This isn't the weed of the 1990s</span><span class="sticker">Same name. Way stronger.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <figure style="margin:0">
+      <svg viewBox="0 0 560 230" role="img" aria-label="THC strength: about 4 percent in 1995, 15 to 25 percent in today's flower, 60 to 90 percent in concentrates." style="width:100%;max-width:600px;height:auto;display:block"><text x="0" y="24" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">1995, average weed</text><rect x="0" y="34" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="34" width="22" height="22" rx="11" fill="var(--school)"/><text x="32" y="51" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">about 4% THC</text><text x="0" y="94" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">Today's flower</text><rect x="0" y="104" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="104" width="78" height="22" rx="11" fill="var(--school)"/><rect x="67" y="104" width="63" height="22" rx="11" fill="var(--school-accent)" opacity=".85"/><text x="140" y="121" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">15 to 25%</text><text x="0" y="164" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">Vapes, wax, dabs</text><rect x="0" y="174" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="174" width="312" height="22" rx="11" fill="var(--school)"/><rect x="301" y="174" width="167" height="22" rx="11" fill="var(--school-accent)" opacity=".85"/><text x="520" y="164" font-size="15" font-weight="700" text-anchor="end" font-family="inherit" fill="var(--ink)">60 to 90%</text></svg>
+      <figcaption style="margin-top:10px;color:var(--ink-soft)">THC is the part of cannabis that gets you high. A lot of what people "know" about weed being mild comes from a time when it was a fraction as strong. Concentrates in vape carts and dabs are the strongest of all.</figcaption>
+      </figure>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Where THC lands in your brain</span><span class="sticker">THC borrows your brain's own system.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <figure style="margin:0">
+      <svg viewBox="0 0 640 285" role="img" aria-label="Brain diagram showing areas THC affects: prefrontal cortex, reward system, amygdala, hippocampus, cerebellum." style="width:100%;max-width:720px;height:auto;display:block"><path d="M60 150 C40 80 120 25 210 30 C300 32 365 80 360 145 C357 190 320 205 280 200 L140 205 C95 205 68 185 60 150Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M120 70 C150 90 140 120 170 130 M210 45 C200 80 230 95 220 125 M285 60 C270 90 300 110 290 140 M330 110 C310 120 320 150 300 165 M95 160 C120 150 140 170 170 165" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><ellipse cx="296" cy="222" rx="46" ry="26" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M290 214 C300 210 312 214 322 222 M275 228 C290 222 305 226 318 234" fill="none" stroke="var(--line)" stroke-width="3"/><path d="M222 200 L252 200 L246 272 L230 272Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><text x="40" y="30" font-size="13" fill="var(--ink-soft)">front</text><circle cx="100" cy="115" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="100" y="120" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><circle cx="420" cy="47" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="52" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><text x="442" y="53" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">focus, decisions</text><circle cx="170" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="170" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><circle cx="420" cy="85" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="90" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><text x="442" y="91" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">motivation</text><circle cx="198" cy="178" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="198" y="183" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><circle cx="420" cy="123" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="128" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><text x="442" y="129" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">fear, anxiety</text><circle cx="232" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="232" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">4</text><circle cx="420" cy="161" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="166" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">4</text><text x="442" y="167" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">new memories</text><circle cx="300" cy="222" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="300" y="227" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">5</text><circle cx="420" cy="199" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="204" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">5</text><text x="442" y="205" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">coordination</text></svg>
+      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Your brain has its own cannabinoid system: chemicals that tune memory, mood, appetite, sleep, and how brain cells wire together during the teen years. THC plugs into those same receptors, much more strongly than your own chemicals do.</span></figcaption>
+      </figure>
+      </div>
+    </details>
+
+    <details  class="fold ">
+      <summary><span class="fold-label">The biggest U.S. study yet</span><span class="sticker">Your brain keeps leveling up. Weed can stall it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <figure style="margin:0">
+      <svg viewBox="0 0 520 280" role="img" aria-label="Illustration: thinking skills keep climbing from age 10 to 17 for teens who did not use cannabis, and level off after use starts for teens who did." style="width:100%;max-width:600px;height:auto;display:block"><line x1="50" y1="230" x2="490" y2="230" stroke="var(--ink-soft)" stroke-width="2"/><line x1="50" y1="230" x2="50" y2="30" stroke="var(--ink-soft)" stroke-width="2"/><text x="56" y="26" font-size="13" fill="var(--ink-soft)">memory, attention, processing speed</text><text x="50" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">10</text><text x="112" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">11</text><text x="174" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">12</text><text x="236" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">13</text><text x="298" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">14</text><text x="360" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">15</text><text x="422" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">16</text><text x="484" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">17</text><text x="270" y="272" font-size="12" text-anchor="middle" fill="var(--ink-soft)">age</text><path d="M50 200 C174 175 360 120 484 62" fill="none" stroke="var(--school)" stroke-width="5" stroke-linecap="round"/><path d="M50 202 C174 178 236 150 298 140 C360 132 422 128 484 126" fill="none" stroke="var(--school-accent)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 0"/><line x1="273" y1="40" x2="273" y2="230" stroke="var(--ink-soft)" stroke-dasharray="5 5"/><text x="279" y="200" font-size="13" font-weight="700" fill="var(--ink-soft)">started using</text><text x="476" y="58" font-size="14" font-weight="700" text-anchor="end" fill="var(--school)">didn't use</text><text x="476" y="118" font-size="14" font-weight="700" text-anchor="end" fill="var(--school-accent)">used cannabis</text></svg>
+      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >The ABCD Study followed 11,036 kids from age 9 or 10 to 16 or 17, testing their thinking skills and checking hair, urine, and saliva for THC. Teens who used cannabis kept pace with, or even beat, their peers before they started. After they started, gains in memory, attention, language, and processing speed leveled off while non-users kept climbing. Most differences were modest, with the biggest in memory, and the study shows a link, not proof of cause (Neuropsychopharmacology, 2026).</span></figcaption>
+      </figure>
+      </div>
+    </details>
+
+    <details  class="fold ">
+      <summary><span class="fold-label">What the research shows</span><span class="sticker">Memory, focus, mood, sleep.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt>🧠 Memory takes a hit.</dt>
+        <dd >While you're high, the hippocampus has trouble saving new memories. In regular users, memory and attention problems can hang around for days after the last use, and they usually get better after weeks without it.</dd>
+        <dt>🎯 Focus and follow-through.</dt>
+        <dd>THC makes it harder to plan, stay on task, and switch between things. Those skills live in the front of the brain, the last part to finish growing, around age 25.</dd>
+        <dt>🪝 Starting young makes it stickier.</dt>
+        <dd >Cannabis use disorder is real: wanting to cut back and not being able to. People who start before 18 are several times more likely to develop it than people who start as adults (CDC).</dd>
+        <dt>😰 It can make anxiety worse.</dt>
+        <dd>Lots of people use weed to chill. Strong weed often does the opposite: racing heart, paranoia, panic. Regular use is linked to more anxiety and depression over time.</dd>
+        <dt>😴 Sleep gets weird.</dt>
+        <dd >THC can help you fall asleep but cuts down REM sleep, the dreaming stage your brain uses to process and remember. Stop after regular use and sleep gets rough for a while, which is a big reason people find it hard to quit.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details  class="fold fold-callout">
+      <summary><span class="fold-label">⚠️ Strong weed and psychosis</span><span class="sticker">Stronger THC, bigger risk.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div ><p>Psychosis means losing touch with what's real: hearing or seeing things that aren't there, or paranoid beliefs that won't let go. In a 2024 Ontario study, teens who used cannabis had about 11 times the odds of a psychotic disorder compared with teens who didn't. Risk climbs with higher potency, daily use, a younger start, and a family history of psychosis or bipolar disorder.</p>
+      <p style="margin:0">Most teens who use won't develop psychosis. But it's one of the clearest risks in the research, and it's tied to exactly what's changed: strength.</p></div>
+      <p class="worst">The honest part: nobody can tell in advance whose brain will react this way.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">🍬 Edibles: the slow trap</span><span class="sticker">Edibles: slow to start, hard to stop.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <svg viewBox="0 0 520 225" role="img" aria-label="Smoking or vaping hits within minutes and fades in a few hours. An edible can take up to two hours to start and last six hours or more." style="width:100%;max-width:600px;height:auto;display:block"><line x1="110" y1="30" x2="110" y2="190" stroke="var(--line)"/><text x="110" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">0h</text><line x1="160" y1="30" x2="160" y2="190" stroke="var(--line)"/><text x="160" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">1h</text><line x1="210" y1="30" x2="210" y2="190" stroke="var(--line)"/><text x="210" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">2h</text><line x1="260" y1="30" x2="260" y2="190" stroke="var(--line)"/><text x="260" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">3h</text><line x1="310" y1="30" x2="310" y2="190" stroke="var(--line)"/><text x="310" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">4h</text><line x1="360" y1="30" x2="360" y2="190" stroke="var(--line)"/><text x="360" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">5h</text><line x1="410" y1="30" x2="410" y2="190" stroke="var(--line)"/><text x="410" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">6h</text><line x1="460" y1="30" x2="460" y2="190" stroke="var(--line)"/><text x="460" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">7h</text><line x1="510" y1="30" x2="510" y2="190" stroke="var(--line)"/><text x="510" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">8h</text><text x="0" y="62" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">Vape / smoke</text><rect x="110" y="45" width="150" height="24" rx="12" fill="var(--school)" opacity=".3"/><rect x="115" y="45" width="45" height="24" rx="12" fill="var(--school)"/><text x="110" y="89" font-size="13" fill="var(--ink-soft)">hits in minutes, mostly gone in a few hours</text><text x="0" y="147" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">Edible</text><rect x="135" y="130" width="375" height="24" rx="12" fill="var(--school)" opacity=".3"/><rect x="210" y="130" width="100" height="24" rx="12" fill="var(--school)"/><text x="135" y="174" font-size="13" fill="var(--ink-soft)">30 min to 2 hours to start, lasts 6+ hours</text><path d="M135 122 L210 122" stroke="var(--school-accent)" stroke-width="3"/><text x="135" y="117" font-size="13" font-weight="700" fill="var(--school-accent)">"nothing's happening"</text><rect x="110" y="205" width="14" height="14" rx="7" fill="var(--school)"/><text x="130" y="217" font-size="12" fill="var(--ink-soft)">darker = strongest effects</text></svg>
+      <p style="margin:12px 0 0">The most common edible mistake: "It's not working," so they eat another one. Then both kick in.</p>
+      <p class="worst">The worst part: once it's eaten, there's no way to speed it up or stop it. You wait it out.</p>
+      </div>
+    </details>
+
+    <details  class="fold ">
+      <summary><span class="fold-label">Two more things people don't know</span><span class="sticker">The stuff nobody mentions.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt>🤮 Throwing up for days (CHS).</dt>
+        <dd>Heavy, frequent use can cause cannabinoid hyperemesis syndrome: waves of vomiting and stomach pain that keep coming back. The CDC reports ER visits for it rising fastest among people 15 to 24. The only real fix is stopping.</dd>
+        <dt>⛽ Delta-8 and "hemp" gummies are still THC.</dt>
+        <dd >Delta-8, THC-O, and "hemp-derived" gummies and vapes sold in gas stations and online still get you high. They're loosely regulated, and lab tests often find the label is wrong. About 9 in 100 seniors used them last year.</dd>
+      </dl>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="part" id="practice" aria-labelledby="h-practice">
+  <div class="wrap">
+    <div class="eyebrow">Part 2 · Practice the skills</div>
+    <h2 id="h-practice">Making your own call</h2>
+    <div class="card">
+      <div class="fold-label">What actually helps</div>
+      <h3 class="sticker">Know your why. Have your line.</h3>
+      <p class="tap-hint">Tap one to see how.</p>
+        <details class="row"><summary>🧭 Know your why.<span class="row-cue" aria-hidden="true"></span></summary><p>If you're deciding about weed, notice what you're hoping it'll do: relax, sleep, fit in, try something new. Then ask what else gets you that.</p></details>
+        <details class="row"><summary>💬 Have your line ready.<span class="row-cue" aria-hidden="true"></span></summary><p >"I'm good." "It makes me paranoid." "I've got a game." "Not tonight." Nobody needs a speech.</p></details>
+        <details class="row"><summary>🚗 Never drive or ride high.<span class="row-cue" aria-hidden="true"></span></summary><p>THC slows reaction time and messes with judging distance. Call a parent, a friend who's sober, or a ride. Lots of families have a "pick me up, no questions tonight" deal. Ask for one.</p></details>
+        <details class="row"><summary>🫂 Look after a friend who's too high.<span class="row-cue" aria-hidden="true"></span></summary><p>Find a calm, quiet spot. Water, a snack, slow breathing. Remind them it will pass. Stay with them. If they have chest pain, can't stay awake, or something feels like an emergency, call 911.</p></details>
+        <details class="row"><summary>📉 Cutting back? Expect a rough week.<span class="row-cue" aria-hidden="true"></span></summary><p >Irritability, bad sleep, vivid dreams, and low appetite usually peak in the first week and fade over a couple of weeks. A counselor can help you plan for it.</p></details>
+        <details class="row"><summary>🧑‍🏫 Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors and nurses help students with this all the time. If you're worried about what stays private, ask that first.</p></details>
+    </div>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">Natural means safe? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Tap an answer for each one.</p>
+      <div class="scenario"><p>Weed is natural, so it's harmless.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. Plenty of natural things are harmful. And today's THC levels are anything but natural.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Plenty of natural things are harmful. And today's THC levels are anything but natural.">Fact</button>
+      </div><div class="feedback" aria-live="polite"></div></div>
+      <div class="scenario"><p>Today's weed is several times stronger than it was in the 1990s.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. Average THC went from about 4% to 15 to 25% in flower, and much higher in vapes and dabs.">Myth</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Fact. Average THC went from about 4% to 15 to 25% in flower, and much higher in vapes and dabs.">Fact</button>
+      </div><div class="feedback" aria-live="polite"></div></div>
+      <div class="scenario"><p>You can't get addicted to weed.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. Cannabis use disorder is real, and it's more likely when you start young.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Cannabis use disorder is real, and it's more likely when you start young.">Fact</button>
+      </div><div class="feedback" aria-live="polite"></div></div>
+      <div class="scenario"><p>If an edible isn't working after 30 minutes, take more.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. Edibles can take up to 2 hours to kick in. Wait.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Edibles can take up to 2 hours to kick in. Wait.">Fact</button>
+      </div><div class="feedback" aria-live="polite"></div></div>
+      <div class="scenario"><p>Being high makes you a safer driver because you drive slower.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. THC slows reaction time and coordination. Crashes go up, not down.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. THC slows reaction time and coordination. Crashes go up, not down.">Fact</button>
+      </div><div class="feedback" aria-live="polite"></div></div>
+      </div>
+    </details>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <details  class="fold fold-try">
+      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a side. Then check the science.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>Label three spots in the room: Agree, Disagree, Not sure. (Or hold up 1, 2, or 3 fingers.)</li>
+        <li>Read a statement below. Everyone moves to a spot, no talking yet.</li>
+        <li>Ask one person from each spot why they're there.</li>
+        <li>Tap to show what the research says. Talk about what surprised people. Then the next statement.</li>
+      </ol>
+      </div>
+    </details>
+
+    <details  class="fold fold-try">
+      <summary><span class="fold-label">👥 Stand where you stand · 1 of 4</span><span class="sticker"><span >Most seniors used weed in the past year.</span></span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p >Nope. About 74 out of 100 seniors didn't use it in the past year (Monitoring the Future, 2025).</p></details>
+      </div>
+    </details>
+
+    <details  class="fold fold-try">
+      <summary><span class="fold-label">👥 Stand where you stand · 2 of 4</span><span class="sticker">Weed helps you focus.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>While high, focus, planning, and memory get worse. Some people feel more focused, but tests show otherwise.</p></details>
+      </div>
+    </details>
+
+    <details  class="fold fold-try">
+      <summary><span class="fold-label">👥 Stand where you stand · 3 of 4</span><span class="sticker">Weed is less risky than it used to be.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>It's much stronger than it used to be, and stronger THC is tied to more anxiety, psychosis, and addiction.</p></details>
+      </div>
+    </details>
+
+    <details  class="fold fold-try">
+      <summary><span class="fold-label">👥 Stand where you stand · 4 of 4</span><span class="sticker">A vape pen and a joint are about the same.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Vape carts and dabs can be 60 to 90% THC, several times stronger than flower.</p></details>
+      </div>
+    </details>
+
+    <details  class="fold fold-try">
+      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>Which answer surprised you most? Why do you think so many people believe the opposite?</li>
+        <li>Where do most people our age get their information about weed?</li>
+        <li>If a younger sibling asked you about weed, what would you want them to know?</li>
+        <li><span >What makes it hard to say something to a friend who's using a lot?</span></li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep questions about "people our age," never about "you." Nobody should have to share whether they use. If someone does share, thank them and move on without follow-up questions in the group.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Pick a move. There may be more than one good one.</p>
+      
+      <div class="scenario" >
+        <p>Saturday night. Your friend ate an edible an hour ago, says nothing's happening, and reaches for a second one.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Then both kick in. That's how a lot of ER visits start.">"Go for it"</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That's real friendship. You might just save their night.">"Edibles can take two hours. Give it time."</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Stacking doses makes a bad night much more likely.">Hand them a vape to speed it up</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" >
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Your friend is high, panicking, and convinced their heart is about to explode.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="To them it feels terrifying. Being taken seriously helps them calm down.">Laugh it off, they'll be fine</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Remind them it will pass. If there's chest pain or they can't calm down, call for help.">Quiet spot, water, slow breathing, stay with them</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Rest can help, but don't leave them alone while they're panicking.">Let them sleep it off alone</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" >
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Your ride home has been smoking all night and says they're fine to drive.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="THC slows reaction time. Ten minutes is enough for a crash.">Get in, it's only ten minutes</button>
+          <button class="choice" type="button" data-fb="good" data-msg="A little awkward, very worth it.">Call a parent, a sober friend, or a rideshare with a parent's account</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      </div>
+    </details>
+
+    <details  class="fold ">
+      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="rows">
+        <details class="row"><summary>😱 Scare stories.<span class="row-cue" aria-hidden="true"></span></summary><p>"One hit and your life is over" isn't true, and when people find that out, they stop trusting the real risks.</p></details>
+        <details class="row"><summary>⚖️ "It's legal, so it's fine."<span class="row-cue" aria-hidden="true"></span></summary><p>Alcohol is legal for adults too. The age limits exist because developing brains react differently.</p></details>
+        <details class="row"><summary>🛌 Using it every night to sleep or calm down.<span class="row-cue" aria-hidden="true"></span></summary><p>It works less over time, and stopping makes sleep and anxiety worse for a while.</p></details>
+        <details class="row"><summary>👀 Comparing to friends who seem fine.<span class="row-cue" aria-hidden="true"></span></summary><p>Changes in memory, motivation, and mood are hard to spot from the outside, or in yourself.</p></details>
+      </div>
+      </div>
+    </details>
+
+    <div class="card" style="border-left:5px solid var(--alert)">
+      <h3>Get help right away if</h3>
+      <ul class="tight">
+        <li>Someone has chest pain, or their heart won't slow down.</li>
+        <li>Someone can't stay awake or can't be woken up.</li>
+        <li>Someone keeps vomiting and can't stop.</li>
+        <li>Someone is seeing or hearing things, or is so paranoid they could hurt themselves or someone else.</li>
+        <li>A little kid ate an edible.</li>
+      </ul>
+      <p style="margin:0">Call <strong>911</strong> for an emergency. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="reflect" aria-labelledby="h-reflect">
+  <div class="wrap">
+    <div class="eyebrow">Part 3 · Reflect</div>
+    <h2 id="h-reflect">Take a moment to write</h2>
+<div class="unit">
+    <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
+    <div class="card">
+      <label class="prompt" for="tx-1">What I'd heard about weed, and what surprised me here</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
+
+      <label class="prompt" for="tx-2">Where I see weed most, in person and online</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
+      <label class="prompt" for="tx-3">What I'd say if someone offered it to me</label>
+      <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
+      <label class="prompt" for="tx-4">What I'd do if a friend got way too high</label>
+      <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
+      <label class="prompt" for="tx-5">Ways I relax or have fun that don't cost my brain anything</label>
+      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      </details>
+    </div>
+
+    <div class="reminder">
+      <h3>A reminder</h3>
+      <p>Your brain is doing some of its most important building right now. You get to decide what goes into it, and you deserve to decide with real information.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="part" id="checkin" aria-labelledby="h-checkin">
+  <div class="wrap">
+    <div class="eyebrow">Part 4 · Check in</div>
+    <h2 id="h-checkin">Check-in tool</h2>
+<div class="unit unit-checkin">
+    <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span><strong>Your privacy:</strong> Nothing you enter here is saved, stored, or sent anywhere. This tool works entirely in your browser.</span></p>
+
+    <div class="card" id="checkin-card">
+      <div class="ci-step">
+        <h3 id="ci-1">How much has weed been on your mind today?</h3>
+        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <div class="slider-wrap">
+          <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
+          <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
+          <div class="slider-read" id="ci-read" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="ci-step">
+        <h3>What's been most present today?</h3>
+        <p class="ci-hint">Tap anything that fits.</p>
+        <div class="chips" id="ci-chips">
+          <button type="button" class="chip" aria-pressed="false">someone offered it</button>
+          <button type="button" class="chip" aria-pressed="false">felt pressure</button>
+          <button type="button" class="chip" aria-pressed="false">saw it online</button>
+          <button type="button" class="chip" aria-pressed="false">worried about a friend</button>
+          <button type="button" class="chip" aria-pressed="false">curious about it</button>
+          
+          <button type="button" class="chip" aria-pressed="false" >I use and want to cut back</button>
+          <button type="button" class="chip" aria-pressed="false">trouble sleeping</button>
+          <button type="button" class="chip" aria-pressed="false">said no</button>
+          <button type="button" class="chip" aria-pressed="false">talked to someone</button>
+          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+        </div>
+        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
+      </div>
+
+      <div class="ci-step">
+        <h3>What does it feel like right now?</h3>
+        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <div class="paths" role="group" aria-label="How it feels right now">
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😬 Felt pressure</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-cut" aria-pressed="false"><span >🛑 I want to cut back</span></button>
+          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">🤔 Just thinking it over</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about my choices</button>
+        </div>
+
+        <div class="path-panel" id="p-pressure" hidden>
+          <h4>What this might mean</h4>
+          <p>Pressure is real, and saying no can feel awkward. It gets easier each time.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">💬</span>Have a short line ready: "I'm good."</li>
+            <li><span class="e" aria-hidden="true">🙅</span>Saying No Without Losing Your Friends has more ideas.</li>
+            <li><span class="e" aria-hidden="true">👥</span>Stick near friends who don't push.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-friend" hidden>
+          <h4>What this might mean</h4>
+          <p>You can't make someone stop, but you can be honest that you care.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">💬</span>Tell them what you've noticed, without lecturing.</li>
+            <li><span class="e" aria-hidden="true">📚</span>Share one fact from this lesson that surprised you.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If you're worried about their safety, tell a trusted adult.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-cut" hidden>
+          <h4>What this might mean</h4>
+          <p><span >Wanting to cut back is a big step. Plenty of people do it, and it's easier with support.</span></p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🔍</span>Notice when and where you think about it most.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor or nurse about a plan.</li>
+            <li><span class="e" aria-hidden="true">😴</span>Expect sleep to be rough at first. It gets better.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-curious" hidden>
+          <h4>What this might mean</h4>
+          <p>Curiosity is normal. Good questions lead to better decisions.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">📖</span>Look back at the screen that surprised you most.</li>
+            <li><span class="e" aria-hidden="true">🗣</span>Talk it over with an adult you trust.</li>
+            <li><span class="e" aria-hidden="true">🧭</span>Ask yourself what you'd want it to do for you, and what else could.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-better" hidden>
+          <h4>What this might mean</h4>
+          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
+            <li><span class="e" aria-hidden="true">💪</span>Keep your go-to line ready.</li>
+            <li><span class="e" aria-hidden="true">🤲</span>Look out for a friend who might be struggling.</li>
+          </ul>
+        </div>
+        <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
+      </div>
+
+      <div class="ci-step">
+        <h3 id="ci-safe">Is any of this making you feel hopeless, unsafe, or like you might hurt yourself?</h3>
+        <div class="chips" role="radiogroup" aria-labelledby="ci-safe" id="ci-safety">
+          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="no">No</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="unsure">Not sure</button>
+          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="yes">Yes</button>
+        </div>
+        <div class="safety-panel" id="safety-panel" hidden aria-live="polite">
+          <p><strong>Thank you for being honest. Please don't carry this alone.</strong> Feeling hopeless or unsafe is a reason to talk to someone today.</p>
+          <ul class="tight">
+            <li><strong>Call or text <a href="tel:988">988</a></strong>, the Suicide and Crisis Lifeline, any time.</li>
+            <li><strong>Text HOME to <a href="sms:741741">741741</a></strong>, the Crisis Text Line.</li>
+            <li>Tell a counselor, teacher, coach, or parent today. You can show them this screen.</li>
+            <li>If you might act on thoughts of hurting yourself, call <a href="tel:911">911</a> or go to an emergency room.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ci-step">
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
+        <p class="ci-hint">The smallest version counts.</p>
+        <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
+        <p class="closing">Be as kind to yourself as you'd be to a friend figuring this out. You can choose what comes next, and you don't have to do it alone.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GET HELP (fixed crisis lines + school frame) ================= -->
+<section class="part" id="help" aria-labelledby="h-help">
+  <div class="wrap">
+    <div class="part-head"><span class="part-num" style="background:var(--alert)">!</span><h2 id="h-help">Get help</h2></div>
+    <div class="help">
+      <div class="help-grid">
+        <div class="help-box local">
+          <h3 id="local-title">BCDS Upper School Support</h3>
+          <dl>
+            <dt>Counselor</dt><dd>Ms. Garcia, Office 118<br><a href="mailto:agarcia@bcdschool.org">agarcia@bcdschool.org</a></dd>
+            <dt>Counselor</dt><dd>Dr. Wilson, Office 119<br><a href="mailto:rwilson@bcdschool.org">rwilson@bcdschool.org</a></dd>
+            <dt>Learning support</dt><dd>Ms. Moy<br><a href="mailto:lmoy@bcdschool.org">lmoy@bcdschool.org</a></dd>
+            <dt>Health office</dt><dd>Ms. Ossowski, LPN<br><a href="mailto:tossowski@bcdschool.org">tossowski@bcdschool.org</a></dd>
+            <dt>Hours</dt><dd id="local-hours">Monday to Friday, 8:00 to 3:30</dd>
+            <dt>How to book</dt><dd id="local-book">Stop by, or email counseling@yourschool.org</dd>
+            <dt>After hours</dt><dd id="local-after">Call or text 988 any time</dd>
+          </dl>
+          <p style="margin:12px 0 0">You can also reach out to any trusted adult on campus, or to your parents or caregivers.</p>
+        </div>
+        <div class="help-box crisis">
+          <h3>Any time, day or night</h3>
+          <p class="crisis-line"><strong>988 Suicide and Crisis Lifeline</strong>Call or text <a href="tel:988">988</a></p>
+          <p class="crisis-line"><strong>Crisis Text Line</strong>Text <b>HOME</b> to <a href="sms:741741">741741</a></p>
+          <p class="crisis-line"><strong>ANAD Eating Disorders Helpline</strong>Call <a href="tel:18883757767">1-888-375-7767</a>, weekdays 9am to 9pm Central.</p>
+          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <h3>If you want to understand more</h3>
+      <p>Other Student Toolkit modules that go with this one:</p>
+      <ul class="more-list">
+        <li><span class="e" aria-hidden="true">🍺</span><div><strong>Alcohol and Your Brain</strong><br>Blackouts, BAC, and helping a friend.</div></li>
+        <li><span class="e" aria-hidden="true">💊</span><div><strong>Pills Aren't Always What They Seem</strong><br>Fake pills, fentanyl, and Narcan.</div></li>
+        <li><span class="e" aria-hidden="true">💨</span><div><strong>Vaping and Your Brain</strong><br>Nicotine and the teen brain.</div></li>
+        <li><span class="e" aria-hidden="true">🙅</span><div><strong>Saying No Without Losing Your Friends</strong><br>Peer pressure.</div></li>
+      </ul>
+    </div>
+
+    <div class="tool-row no-print">
+      <button class="btn ghost" type="button" id="clear-all">Clear everything I typed</button>
+      <button class="btn ghost" type="button" onclick="window.print()">Print a blank worksheet</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer">
+      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or call 911 in an emergency.
+    </div>
+    <div>Student Toolkit · High School · Substance use · Weed and Your Brain</div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   SCHOOL: customize the frame here. Do not edit content above.
+   ========================================================== */
+const SCHOOL = {
+  name: "Beaver Country Day School",
+  motto: "Mente et Manu",                 // school motto or values; "" to hide
+  initials: "BCDS",                             // shown if no logo is set
+  logo: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgeG1sbnM6YzJwYT0iaHR0cDovL2MycGEub3JnL21hbmlmZXN0Ij48bWV0YWRhdGE+PGMycGE6bWFuaWZlc3Q+QUFBV2dtcDFiV0lBQUFBZWFuVnRaR015Y0dFQUVRQVFnQUFBcWdBNG0zRURZekp3WVFBQUFCWmNhblZ0WWdBQUFFZHFkVzFrWXpKdFlRQVJBQkNBQUFDcUFEaWJjUU4xY200Nll6SndZVG95TmpSbVlqZ3daUzFqTURSakxUUXlaakV0T1dVeE15MWxNRGM0TjJSak1HVmpORElBQUFBRGwycDFiV0lBQUFBcGFuVnRaR015WVhNQUVRQVFnQUFBcWdBNG0zRURZekp3WVM1aGMzTmxjblJwYjI1ekFBQUFBTHhxZFcxaUFBQUFSR3AxYldSalltOXlBQkVBRUlBQUFLb0FPSnR4RTJNeWNHRXVhVzVuY21Wa2FXVnVkQzUyTXdBQUFBQVlZekp6YUxWMFFPN08yLy9Gd01uQW03cnBUdHNBQUFCd1kySnZjcU5wWkdNNlptOXliV0YwYldsdFlXZGxMM04yWnl0NGJXeHFhVzV6ZEdGdVkyVkpSSGdzZUcxd09tbHBaRHBpTVRFM05UTTROUzFtT0dZNExUUmtZak10T0dJMlpTMWlaR1F5TkROaU1qRTFNRFZzY21Wc1lYUnBiMjV6YUdsd2FIQmhjbVZ1ZEU5bUFBQUI0bXAxYldJQUFBQkJhblZ0WkdOaWIzSUFFUUFRZ0FBQXFnQTRtM0VUWXpKd1lTNWhZM1JwYjI1ekxuWXlBQUFBQUJoak1uTm9lVXZESWVOV051ZWRyZ243amNNbjR3QUFBWmxqWW05eW9tZGhZM1JwYjI1emdxSm1ZV04wYVc5dWEyTXljR0V1YjNCbGJtVmthbkJoY21GdFpYUmxjbk9oYTJsdVozSmxaR2xsYm5SemdhSmpkWEpzZUMxelpXeG1JMnAxYldKbVBXTXljR0V1WVhOelpYSjBhVzl1Y3k5ak1uQmhMbWx1WjNKbFpHbGxiblF1ZGpOa2FHRnphRmdnaGR3bklnaEV3KzdRK3BmM1VSd2lDNVp1NHNvNGdUcmdxTUNtN0Q0TS9uaWtabUZqZEdsdmJuZ2RZMjl0TG1GdWRHaHliM0JwWXk1amJHRjFaR1V1Y0hKdmRtbGtaV1JxY0dGeVlXMWxkR1Z5YzZGNEgyTnZiUzVoYm5Sb2NtOXdhV011YjNKcFoybHVMV052Ym1acFpHVnVZMlZuZFc1cmJtOTNibXRrWlhOamNtbHdkR2x2Ym5obVEyeGhkV1JsSUhCeWIzWnBaR1ZrSUhSb2FYTWdabWxzWlNCaGRDQjBhR1VnY21WeGRXVnpkQ0J2WmlCaElIVnpaWElnWVc1a0lHMWhlU0JvWVhabElHTnlaV0YwWldRZ2IzSWdiVzlrYVdacFpXUWdkR2hsSUdacGJHVWdZMjl1ZEdWdWRITXViWE52Wm5SM1lYSmxRV2RsYm5TaFpHNWhiV1ZtUTJ4aGRXUmxjbUZzYkVGamRHbHZibk5KYm1Oc2RXUmxaUFVBQUFESWFuVnRZZ0FBQUVCcWRXMWtZMkp2Y2dBUkFCQ0FBQUNxQURpYmNSTmpNbkJoTG1oaGMyZ3VaR0YwWVFBQUFBQVlZekp6YUJVK3NMcEZJc0w0TXR3NE5rdVNJZ3dBQUFDQVkySnZjcVZqWVd4blpuTm9ZVEkxTm1Od1lXUk5BQUFBQUFBQUFBQUFBQUFBQUdSb1lYTm9XQ0RycjZUazFyOStZaEZyUlRmTFlwNnJndGMxb2g0TkVUVDRwWmNQVFhqK0pHUnVZVzFsYm1wMWJXSm1JRzFoYm1sbVpYTjBhbVY0WTJ4MWMybHZibk9Cb21WemRHRnlkQmg3Wm14bGJtZDBhQmtlQkFBQUFqNXFkVzFpQUFBQUoycDFiV1JqTW1Oc0FCRUFFSUFBQUtvQU9KdHhBMk15Y0dFdVkyeGhhVzB1ZGpJQUFBQUNEMk5pYjNLbFkyRnNaMlp6YUdFeU5UWnBjMmxuYm1GMGRYSmxlRTF6Wld4bUkycDFiV0ptUFM5ak1uQmhMM1Z5Ympwak1uQmhPakkyTkdaaU9EQmxMV013TkdNdE5ESm1NUzA1WlRFekxXVXdOemczWkdNd1pXTTBNaTlqTW5CaExuTnBaMjVoZEhWeVpXcHBibk4wWVc1alpVbEVlQ3g0YlhBNmFXbGtPakkzWkRaa016QXlMVFUyTlRRdE5HSmlaaTA0TUdJekxUSTFOV1ZpT1RWaVpXVmtPWEpqY21WaGRHVmtYMkZ6YzJWeWRHbHZibk9Eb21OMWNteDRMWE5sYkdZamFuVnRZbVk5WXpKd1lTNWhjM05sY25ScGIyNXpMMk15Y0dFdWFXNW5jbVZrYVdWdWRDNTJNMlJvWVhOb1dDQ0YzQ2NpQ0VURDd0RDZsL2RSSENJTGxtN2l5amlCT3VDb3dLYnNQZ3orZUtKamRYSnNlQ3B6Wld4bUkycDFiV0ptUFdNeWNHRXVZWE56WlhKMGFXOXVjeTlqTW5CaExtRmpkR2x2Ym5NdWRqSmthR0Z6YUZnZ0d1NmxVMUFHZThxNzQ2YVkvL0oxOG5oYVpTVTY0R2pGOWN3YUxzV0xKY09pWTNWeWJIZ3BjMlZzWmlOcWRXMWlaajFqTW5CaExtRnpjMlZ5ZEdsdmJuTXZZekp3WVM1b1lYTm9MbVJoZEdGa2FHRnphRmdnNEYzdW1LdGVsLzJ3K3ZGT0ZvbzFkUVVsa2JGWkptRGUvRjJieTJ4TnVuVjBZMnhoYVcxZloyVnVaWEpoZEc5eVgybHVabStqWkc1aGJXVnZRVzUwYUhKdmNHbGpJRVpwYkdWelozWmxjbk5wYjI1bE1TNHdMakJyYzNCbFkxWmxjbk5wYjI1bE1pNDBMakFBQUJBNGFuVnRZZ0FBQUNocWRXMWtZekpqY3dBUkFCQ0FBQUNxQURpYmNRTmpNbkJoTG5OcFoyNWhkSFZ5WlFBQUFCQUlZMkp2Y3RLRVdRSVNvZ0VtR0NGWkFnb3dnZ0lHTUlJQmphQURBZ0VDQWhSQTVhQUs3c0k1MEw2NGcvb0dRZ1U5WjFVVEFEQUtCZ2dxaGtqT1BRUURBekJKTVJjd0ZRWURWUVFLRXc1QmJuUm9jbTl3YVdNc0lGQkNRekV1TUN3R0ExVUVBeE1sUVc1MGFISnZjR2xqSUVOdmJuUmxiblFnUTNKbFpHVnVkR2xoYkhNZ1VtOXZkQ0JEUVRBZUZ3MHlOakE0TURjeE9EUXpOVFphRncweU9EQTRNRFl4T1RRek5UWmFNRVF4RnpBVkJnTlZCQW9URGtGdWRHaHliM0JwWXl3Z1VFSkRNU2t3SndZRFZRUURFeUJCYm5Sb2NtOXdhV01nUTJ4aGRXUmxJRU52Ym5SbGJuUWdVMmxuYm1sdVp6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJKaDZDbXZMVUJnRkZOVTB2VUtsT1Z0RTZkamQxN0w1U3V3WDBMZW1GaXNCTTNka2QvM2N5anhGQTNRbzVTNDZmWDAvaWhZMFZaN21mYjlLRjcwM3Q1T2pXREJXTUE0R0ExVWREd0VCL3dRRUF3SUhnREFWQmdOVkhTVUVEakFNQmdvckJnRUVBWVBvWGdJQk1Bd0dBMVVkRXdFQi93UUNNQUF3SHdZRFZSMGpCQmd3Rm9BVXpsSGlCSUZPWkZzaitPUEV6NW8rbk1IWFhNSXdDZ1lJS29aSXpqMEVBd01EWndBd1pBSXdNWE1kRko0QmV0TExWWTdPUnVFOW5vcWJiQVpPWm4vYUFyWHlUd0ZBWmZLclB6eEYydlBvSk5mMStVQ2RnMVhHQWpCd1gxemQ5V0dxWWtxbUw1U0ZxdzFReVNqcjF6SmZwSk05KzFyZER3U1BMTU9QT2pLdWlYam9VL3BVVWVHOVJ3bWhZM0JoWkZrTm5nQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUFpZUUxaQ2hrNU9yWTU4UjdGbG5wZmNWMjJ3QUZOeU9yYzFvdkFRc09oTVVPMnp2Ymh6bWRtemh2WkJRQnZuYi9hc0luVWZSNlA3REpERkk4dTFmNWc5WHJnPTwvYzJwYTptYW5pZmVzdD48L21ldGFkYXRhPjxyZWN0IHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0iIzBiMmQ1YiIvPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjM2IiBmaWxsPSIjZmZmZmZmIi8+PHRleHQgeD0iNDgiIHk9IjQ5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSIjMGIyZDViIj5CPC90ZXh0Pjwvc3ZnPgo=",                                   // optional: a data:image/... URI (must be embedded; web links are blocked)
+  colors: { primary: "#0b2d5b", accent: "#f47b20" },
+  welcome: "Welcome from the BCDS counseling team. We are glad you're here.",  // "" to hide
+  welcomeSignature: "BCDS Counseling Team",
+  gradeBand: "us",
+  help: {
+    title: "BCDS Upper School Support",
+    where: "Counseling Office (location to be confirmed)",
+    hours: "School days, 8:00am to 4:00pm",
+    book: "Stop by, or email anyone listed above",
+    afterHours: "Call or text 988 any time"
+  }
+};
+/* ========================================================== */
+
+(function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+  const setText = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+
+  /* ---- Apply school frame ---- */
+  document.documentElement.style.setProperty("--school", SCHOOL.colors.primary);
+  document.documentElement.style.setProperty("--school-accent", SCHOOL.colors.accent);
+  setText("school-name", SCHOOL.name);
+  if (SCHOOL.motto) setText("school-motto", SCHOOL.motto); else $("#school-motto").remove();
+  if (SCHOOL.welcome) { setText("welcome-line", SCHOOL.welcome); setText("welcome-sign", SCHOOL.welcomeSignature || ""); }
+  else $("#welcome-box").remove();
+  const mark = $("#school-mark");
+  if (SCHOOL.logo && SCHOOL.logo.startsWith("data:image/")) {
+    const img = document.createElement("img");
+    img.src = SCHOOL.logo; img.alt = SCHOOL.name + " logo"; img.className = "school-logo";
+    mark.replaceWith(img);
+  } else {
+    mark.textContent = SCHOOL.initials;
+  }
+  setText("local-title", SCHOOL.help.title);
+  setText("local-where", SCHOOL.help.where);
+  setText("local-hours", SCHOOL.help.hours);
+  setText("local-book", SCHOOL.help.book);
+  setText("local-after", SCHOOL.help.afterHours);
+
+  /* ---- Grade band ---- */
+  function setBand(b) {
+    document.body.classList.remove("band-ms", "band-us");
+    document.body.classList.add("band-" + b);
+    $$("[data-set-band]").forEach(btn => btn.setAttribute("aria-pressed", String(btn.dataset.setBand === b)));
+  }
+  if (SCHOOL.gradeBand === "ms" || SCHOOL.gradeBand === "us") {
+    const bt = $("#band-toggle"); if (bt) bt.remove();
+    setBand(SCHOOL.gradeBand);
+  } else {
+    setBand(SCHOOL.defaultBand === "ms" ? "ms" : "us");
+    $$("[data-set-band]").forEach(btn => btn.addEventListener("click", () => setBand(btn.dataset.setBand)));
+  }
+
+  /* ---- Reveal buttons ---- */
+  $$("[data-reveal]").forEach(btn => btn.addEventListener("click", () => {
+    const panel = document.getElementById(btn.dataset.reveal);
+    const open = panel.hidden;
+    panel.hidden = !open;
+    btn.textContent = open ? "Hide other possibilities" : "Show other possibilities";
+    btn.setAttribute("aria-expanded", String(open));
+  }));
+
+  /* ---- Screenshot test tally ---- */
+  const checks = $$(".checklist input");
+  const tally = $("#test-tally");
+  if (tally) checks.forEach(c => c.addEventListener("change", () => {
+    const n = checks.filter(x => x.checked).length;
+    if (n === 0) { tally.textContent = ""; tally.className = "feedback"; return; }
+    if (n === checks.length) {
+      tally.className = "feedback good";
+      tally.textContent = tally.dataset.done || "Passes the test. If it still feels right, it's probably okay to send.";
+    } else {
+      tally.className = "feedback " + (tally.dataset.partial ? "good" : "okay");
+      tally.textContent = tally.dataset.partial ? tally.dataset.partial.replace("{n}", n).replace("{total}", checks.length)
+        : n + " of " + checks.length + " so far. Any box you can't check is a reason to pause or rewrite.";
+    }
+  }));
+
+  /* ---- Scenario choices ---- */
+  $$(".scenario").forEach(sc => {
+    const fb = $(".feedback", sc);
+    $$(".choice", sc).forEach(ch => ch.addEventListener("click", () => {
+      $$(".choice", sc).forEach(x => x.setAttribute("aria-pressed", "false"));
+      ch.setAttribute("aria-pressed", "true");
+      fb.className = "feedback " + ch.dataset.fb;
+      fb.textContent = ch.dataset.msg;
+    }));
+  });
+
+
+  /* ---- Check-in tool ---- */
+  const slider = $("#ci-slider"), sliderRead = $("#ci-read"), high = $("#ci-high");
+  const READS = ["Barely on my mind", "Barely on my mind", "A little", "A little", "Some", "Some",
+                 "A lot", "A lot", "Most of my day", "Most of my day", "All I can think about"];
+  let sliderTouched = false;
+  function updateSlider() {
+    sliderTouched = true;
+    sliderRead.textContent = READS[Number(slider.value)];
+    high.hidden = Number(slider.value) < 8;
+  }
+  slider.addEventListener("input", updateSlider);
+
+  const chips = $$("#ci-chips .chip"), validate = $("#ci-validate");
+  chips.forEach(c => c.addEventListener("click", () => {
+    c.setAttribute("aria-pressed", String(c.getAttribute("aria-pressed") !== "true"));
+    validate.hidden = !chips.some(x => x.getAttribute("aria-pressed") === "true");
+  }));
+
+  const pathBtns = $$("[data-path]");
+  pathBtns.forEach(b => b.addEventListener("click", () => {
+    pathBtns.forEach(x => {
+      const on = x === b;
+      x.setAttribute("aria-pressed", String(on));
+      document.getElementById(x.dataset.path).hidden = !on;
+    });
+  }));
+
+  const safeBtns = $$("#ci-safety .chip"), safetyPanel = $("#safety-panel");
+  safeBtns.forEach(b => b.addEventListener("click", () => {
+    safeBtns.forEach(x => { const on = x === b; x.setAttribute("aria-pressed", String(on)); x.setAttribute("aria-checked", String(on)); });
+    safetyPanel.hidden = b.dataset.safe === "no";
+  }));
+
+  /* ---- Clear everything ---- */
+  function clearAll() {
+    $$("textarea").forEach(t => t.value = "");
+    $$("input[type=checkbox]").forEach(i => i.checked = false);
+    slider.value = 0; sliderRead.textContent = ""; high.hidden = true; sliderTouched = false;
+    $$(".choice, .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
+    safeBtns.forEach(x => x.setAttribute("aria-checked", "false"));
+    $$(".path-panel").forEach(p => p.hidden = true);
+    validate.hidden = true; safetyPanel.hidden = true;
+    $$(".feedback").forEach(f => { f.textContent = ""; f.className = "feedback"; });
+    $$(".reveal").forEach(r => r.hidden = true);
+    if (typeof extraReset === "function") extraReset();
+    $$("[data-reveal]").forEach(b => { b.textContent = "Show other possibilities"; b.setAttribute("aria-expanded", "false"); });
+  }
+  $("#clear-all").addEventListener("click", clearAll);
+  /* Browsers sometimes restore typed text on back/refresh; wipe it so nothing lingers. */
+  window.addEventListener("pageshow", clearAll);
+  window.addEventListener("beforeprint", () => $$("details").forEach(d => d.open = true));
+
+  /* ---- Slides mode (beta): one idea per screen with Back / Next ---- */
+  if ($("#slides-mode")) {
+    document.body.classList.add("slides");
+    const groups = [], names = [];
+    const add = (els, name) => { groups.push(els); names.push(name); };
+    add([$(".wrap.hero")], "Start");
+    $$("section.part").forEach(sec => {
+      const wrap = $(".wrap", sec);
+      const name = sec.id === "help" ? "Get help" : ((($(".eyebrow", wrap) || {}).textContent || "").split("\u00b7").pop().trim());
+      let carry = [];
+      const place = ch => {
+        if (sec.id !== "help" && ch.matches("p, .privacy")) { carry.push(ch); return; }
+        if (ch.id === "checkin-card" && $(".ci-step", ch)) {
+          $$(".ci-step", ch).forEach(st => { add(carry.concat([st]), name); carry = []; });
+          return;
+        }
+        add(carry.concat([ch]), name); carry = [];
+      };
+      Array.from(wrap.children).forEach(el => {
+        if (el.matches(".eyebrow, h2, .part-head")) return;
+        if (el.matches(".tool-row")) { groups[groups.length - 1].push(el); return; }
+        if (sec.id === "help" && el.matches(".card")) { add([el], "Keep going"); return; }
+        if (el.matches(".unit:not(.unit-one)")) { Array.from(el.children).forEach(place); return; }
+        place(el);
+      });
+      if (carry.length) { groups[groups.length - 1].push(...carry); carry = []; }
+    });
+    const foot = $("footer"); if (foot) groups[groups.length - 1].push(foot);
+    groups.forEach(g => g.forEach(el => el.classList.add("slide-x")));
+    $$("section.part").forEach(sec => sec.classList.add("slide-x"));
+    $$("details.fold").forEach(d => { d.open = true; $("summary", d).addEventListener("click", e => e.preventDefault()); });
+    const helpAt = names.indexOf("Get help");
+
+    const top = document.createElement("div");
+    top.className = "wrap slide-top-wrap no-print";
+    const chapters = names.filter((n, k) => n && names.indexOf(n) === k && !["Start", "Get help", "Keep going"].includes(n));
+    const short = { "Understand it": "Understand", "Practice the skills": "Practice" };
+    top.innerHTML = '<nav class="chapters" aria-label="Chapters">' + chapters.map(c => '<button type="button" class="chap" data-chap="' + c + '"><span class="chap-name">' + (short[c] || c) + '</span><span class="chap-track"><span class="chap-fill"></span></span></button>').join("") + '</nav><p class="slide-lock" hidden><span aria-hidden="true">\ud83d\udd12</span> Private. Nothing you type or tap here is saved or sent.</p>';
+    $("main").prepend(top);
+    const bar = document.createElement("div");
+    bar.className = "slide-bar no-print";
+    bar.innerHTML = '<div class="wrap"><button type="button" class="s-back">Back</button><span class="s-count" aria-live="polite"></span><a class="s-help" href="#help">Get help</a><button type="button" class="s-next">Next</button></div>';
+    document.body.appendChild(bar);
+    const back = $(".s-back", bar), next = $(".s-next", bar), count = $(".s-count", bar);
+    let cur = 0, returnTo = null;
+    function show(i) {
+      cur = Math.max(0, Math.min(groups.length - 1, i));
+      $$(".slide-x").forEach(el => el.classList.remove("slide-on"));
+      groups[cur].forEach(el => el.classList.add("slide-on"));
+      $$("section.part").forEach(sec => { if (groups[cur].some(el => sec.contains(el))) sec.classList.add("slide-on"); });
+      $$(".chap", top).forEach(btn => {
+        const c = btn.dataset.chap, idx = names.map((n, k) => n === c ? k : -1).filter(k => k > -1);
+        const first = idx[0], last = idx[idx.length - 1];
+        const pct = cur > last ? 100 : cur < first ? 0 : Math.round((cur - first + 1) / idx.length * 100);
+        $(".chap-fill", btn).style.width = pct + "%";
+        btn.setAttribute("aria-current", names[cur] === c ? "step" : "false");
+      });
+      $(".slide-lock", top).hidden = !groups[cur].some(el => el.querySelector && el.querySelector("textarea, input[type=checkbox], input[type=range], .chip"));
+      $(".s-help", bar).setAttribute("aria-current", cur === helpAt ? "page" : "false");
+      count.textContent = (cur + 1) + " of " + groups.length;
+      back.disabled = cur === 0;
+      next.textContent = cur === 0 ? "Start" : "Next";
+      next.disabled = cur === groups.length - 1;
+      if (cur === helpAt && returnTo !== null) next.textContent = "Back to lesson";
+      else if (cur === helpAt) next.textContent = "Keep going";
+      window.scrollTo(0, 0);
+      const first = groups[cur][0]; first.setAttribute("tabindex", "-1"); first.focus({ preventScroll: true });
+    }
+    back.addEventListener("click", () => show(cur - 1));
+    $$(".chap", top).forEach(btn => btn.addEventListener("click", () => { returnTo = null; show(names.indexOf(btn.dataset.chap)); }));
+    next.addEventListener("click", () => {
+      if (cur === helpAt && returnTo !== null) { const r = returnTo; returnTo = null; show(r); }
+      else show(cur + 1);
+    });
+    document.addEventListener("click", e => {
+      const a = e.target.closest('a[href="#help"]');
+      if (a && helpAt > -1) { e.preventDefault(); if (cur !== helpAt) returnTo = cur; show(helpAt); }
+    });
+    document.addEventListener("keydown", e => {
+      if (e.target.matches("input, textarea, select, button")) return;
+      if (e.key === "ArrowRight") show(cur + 1);
+      if (e.key === "ArrowLeft") show(cur - 1);
+    });
+    window.addEventListener("pageshow", () => { returnTo = null; show(0); });
+    show(0);
+  }
+})();
+</script>
+</body>
+</html>
