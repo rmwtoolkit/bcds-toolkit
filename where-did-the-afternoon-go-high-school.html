@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">⏰ High School · Getting things done</div>
+  <div class="eyebrow">High School · Getting things done</div>
   <h1>Where Did the Afternoon Go?</h1>
-  <p class="tagline">Because time can disappear, and it's not because you don't care.</p>
+  <p class="tagline">Why almost everyone underestimates how long things take, and how to plan with the time you actually have.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +458,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,51 +475,82 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why time gets away from you</h2>
+    <h2 id="h-understand">Why your estimates keep losing</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Sat down for a minute. Suddenly it's dinner.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"It'll take an hour." It did not take an hour.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You got home at 3:30, sat down for "a minute," and suddenly it was dinner.</li>
-        <li>You thought the assignment would take 20 minutes. It took two hours.</li>
-        
-        <li >You keep showing up late, even when you swear you left with enough time.</li>
-        <li>"I have plenty of time" turned into "it's due tomorrow" overnight.</li>
-        <li>You open your phone to check one thing and look up 45 minutes later.</li>
+        <li>You budgeted one evening for the essay and it took three.</li>
+        <li>You leave for your shift at the exact time it takes to get there if every light is green.</li>
+        <li>Sunday's plan had seven things on it. You did two.</li>
+        <li>You're sure the last project only took a weekend. Your browser history says otherwise.</li>
+        <li>"Five more minutes" on your phone is a unit of time with no fixed length.</li>
       </ul>
-      <p style="margin:0">If time seems to slip away from you, you're not careless. Lots of brains have trouble feeling time pass.</p>
+      <p style="margin:0">You may already know the trick "double your estimate." It helps. This lesson is about why the estimate is wrong in the first place, because once you see the mechanism you can fix it with better data instead of a guess times two.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">How time gets away from you</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🫥</span><strong>Time blindness</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Time doesn't feel real until it's almost gone. "Later" and "now" feel the same, until later suddenly is now.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧮</span><strong>The planning fallacy</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Almost everyone underestimates how long things take. Psychologists have studied this for decades. It's not just you.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌀</span><strong>The time sinks</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Phones, videos, and games make time disappear because they're designed to keep you there.</p></details>
-    </div>
+    <h3 style="margin-top:28px">The planning fallacy, in one chart</h3>
+    <p>In a classic 1994 study, psychologist Roger Buehler and colleagues asked college seniors how long their thesis would take. They gave a realistic guess, a best case, and a worst case, if everything went as badly as it could.</p>
+    <figure class="fig">
+<svg viewBox="0 0 400 250" role="img" aria-labelledby="pf-t pf-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="pf-t">The planning fallacy: predicted versus actual days to finish a senior thesis</title>
+  <desc id="pf-d">Students' best-case guess averaged 27.4 days, their realistic guess 33.9 days, and their worst-case guess 48.6 days. The thesis actually took 55.5 days on average, longer than even the worst case.</desc>
+  <g font-size="12" fill="#6E6E73">
+    <line x1="124" y1="24" x2="124" y2="206" stroke="#D2D2D7"/>
+    <line x1="210.7" y1="24" x2="210.7" y2="206" stroke="#E5E5EA"/>
+    <line x1="297.3" y1="24" x2="297.3" y2="206" stroke="#E5E5EA"/>
+    <line x1="384" y1="24" x2="384" y2="206" stroke="#E5E5EA"/>
+    <text x="124" y="222" text-anchor="middle">0</text>
+    <text x="210.7" y="222" text-anchor="middle">20</text>
+    <text x="297.3" y="222" text-anchor="middle">40</text>
+    <text x="384" y="222" text-anchor="end">60</text>
+    <text x="384" y="242" text-anchor="end">days to finish</text>
+  </g>
+  <g font-size="13" font-weight="600" fill="#1D1D1F">
+    <text x="116" y="49" text-anchor="end">Best-case guess</text>
+    <text x="116" y="93" text-anchor="end">Realistic guess</text>
+    <text x="116" y="137" text-anchor="end">Worst-case guess</text>
+    <text x="116" y="181" text-anchor="end" fill="#0060C0">Actual</text>
+  </g>
+  <rect x="124" y="32" width="118.7" height="26" rx="6" fill="#D2D2D7"/>
+  <rect x="124" y="76" width="146.9" height="26" rx="6" fill="#AEAEB2"/>
+  <rect x="124" y="120" width="210.6" height="26" rx="6" fill="#8E8E93"/>
+  <rect x="124" y="164" width="240.5" height="26" rx="6" fill="#0071E3"/>
+  <g font-size="13" font-weight="700">
+    <text x="250" y="50" fill="#1D1D1F" stroke="#fff" stroke-width="4" paint-order="stroke">27.4</text>
+    <text x="278" y="94" fill="#1D1D1F" stroke="#fff" stroke-width="4" paint-order="stroke">33.9</text>
+    <text x="342" y="138" fill="#1D1D1F" stroke="#fff" stroke-width="4" paint-order="stroke">48.6</text>
+    <text x="358" y="182" fill="#FFFFFF" text-anchor="end">55.5</text>
+  </g>
+</svg>
+      <figcaption>Average estimates and actual completion time for a senior thesis (Buehler, Griffin, &amp; Ross, 1994). Only about 30% finished within their own realistic estimate.</figcaption>
+    </figure>
+    <p>The actual time beat even the worst case. These weren't careless students. They were seniors who had written plenty of papers before. That's the point: experience alone doesn't fix this. The psychologists Daniel Kahneman and Amos Tversky named it the planning fallacy in 1979, and it shows up in students, engineers, and governments building bridges.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's so hard</span><span class="sticker">Everything takes longer than you think.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Why it happens</span><span class="sticker">Why your brain lowballs time.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain's clock is still developing.</dt>
-        <dd>Sensing time passing and planning around it are executive skills that keep growing through your teens. Some brains, including many with ADHD, find this especially hard.</dd>
-        <dt>Fun time and boring time feel different.</dt>
-        <dd>An hour of a game feels like 10 minutes. 10 minutes of a worksheet feels like an hour. Your sense of time bends depending on what you're doing.</dd>
-        <dt>You plan for the best case.</dt>
-        <dd>When you guess how long something will take, you picture everything going smoothly, with no interruptions, no confusion, no breaks.</dd>
+        <dt>You plan from the inside.</dt>
+        <dd>When you estimate, you picture the steps going smoothly. Buehler's students rarely thought about how long past projects had actually taken, even though that history was the best predictor they had. Kahneman called this the inside view, as opposed to the outside view, which asks how long this kind of thing usually takes.</dd>
+        <dt>You remember past tasks as shorter than they were.</dt>
+        <dd>Michael Roy and colleagues found that people tend to underestimate how long past tasks took, and then base future guesses on that memory. A bad memory feeds a bad plan.</dd>
+        <dt>Interruptions don't make it into the plan.</dt>
+        <dd>Nobody schedules the text, the snack, the sibling who needs help, or the 20 minutes finding the right file. Those breaks are where much of the missing time goes.</dd>
+        <dt>Some brains feel time less.</dt>
+        <dd>Sensing time passing is an executive skill. Many people with ADHD describe "now" and "not now" as the only two times that exist. If that's you, outside tools matter even more.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 The scroll that eats the afternoon</span><span class="sticker">Nobody decides to scroll for an hour.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The stakes go up</span><span class="sticker">Next year, fewer people will catch it for you.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Endless feeds and autoplay remove the natural stopping points that would tell you time has passed. There's no end of the chapter, no last page. That's on purpose.</p>
-      <p class="worst">The worst part: you don't decide to spend an hour. You decide to spend a minute, about sixty times.</p>
+      <p>In high school, teachers check in, and someone at home may notice you're up at midnight. In college or at a job, a professor posts a syllabus in September and the paper is due in December. A manager notices when you're late, more than why.</p>
+      <p class="worst">Learning to estimate time well is one of the most practical adult skills there is, and almost nobody is taught it on purpose.</p>
       </div>
     </details>
   </div>
@@ -462,24 +559,33 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Plan with real numbers</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">If you can see time, you can feel it.</h3>
+      <div class="fold-label">What the research supports</div>
+      <h3 class="sticker">Three fixes that work on the mechanism.</h3>
+      <div class="levers">
+        <div class="lever"><b>Use your own data</b><span>Time a type of task three or four times. "Lab reports take me about 2.5 hours" beats any guess. This is the outside view, about you.</span></div>
+        <div class="lever"><b>Unpack the task</b><span>List every piece before you estimate. In a 2004 study by Justin Kruger and Matt Evans, people who broke tasks into parts gave longer estimates, and in two of the four experiments those estimates were closer to the truth.</span></div>
+        <div class="lever"><b>Decide where and when</b><span>In a 2000 Dutch study, students who wrote down exactly when and where they'd do an assignment finished it more often and were interrupted less, which shrank the gap between plan and reality.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">Putting it on the calendar</div>
+      <h3 class="sticker">Blocks, buffers, and backward plans.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>⏲ Make time visible.<span class="row-cue" aria-hidden="true"></span></summary><p>Use a timer you can see, an analog clock, or a visual countdown. If you can see time moving, your brain can feel it.</p></details>
-        <details class="row"><summary>✖️ Double your estimate.<span class="row-cue" aria-hidden="true"></span></summary><p>However long you think it'll take, plan for about twice that. If you finish early, you get free time.</p></details>
-        <details class="row"><summary>🧱 Block your afternoon.<span class="row-cue" aria-hidden="true"></span></summary><p>Instead of a to-do list, put tasks into actual time slots: 4:00 to 4:30 math, 4:30 to 4:45 break.</p></details>
-        <details class="row"><summary>🛑 Set stopping points.<span class="row-cue" aria-hidden="true"></span></summary><p>Before you open an app or game, set an alarm for when you'll stop. Decide the end before you start.</p></details>
-        <details class="row"><summary>🔙 Plan backward.<span class="row-cue" aria-hidden="true"></span></summary><p>Start from the due date and work back. If the project is due Friday, when does each piece need to be done?</p></details>
+        <details class="row"><summary><span class="num">1</span> Plan backward from the due date.<span class="row-cue" aria-hidden="true"></span></summary><p>Write the due date, then the step before it, then the one before that. Put each step on a real day. If the first step should have started yesterday, you just learned something useful.</p></details>
+        <details class="row"><summary><span class="num">2</span> Add a buffer, on purpose.<span class="row-cue" aria-hidden="true"></span></summary><p>Leave open time before anything that matters: the day before the deadline, ten minutes before the shift. Buffers aren't wasted. They absorb the interruptions you didn't plan for.</p></details>
+        <details class="row"><summary><span class="num">3</span> Schedule the transitions.<span class="row-cue" aria-hidden="true"></span></summary><p>Getting from practice to dinner to the desk takes time. A calendar with no gaps between blocks is a plan that's already late.</p></details>
+        <details class="row"><summary><span class="num">4</span> Decide the end before you start.<span class="row-cue" aria-hidden="true"></span></summary><p>Feeds and autoplay are built without stopping points. Set the stop time before you open the app, with an alarm, not a promise.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Guess it. Time it. See how close you get.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Start building your own data.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Guess how long a task will take, do it, then check. Over time, you'll learn your real numbers. Nothing here is saved, so jot your results somewhere you'll see them.</p>
-      <label class="prompt" for="tx-1">The task:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="math worksheet"></textarea><div class="write-lines"></div>
+      <p>Pick a task you do often. Unpack it, guess, then time it. Do this for the same kind of task three times and you'll have a number you can trust. Nothing here is saved, so jot your results somewhere you'll see them.</p>
+      <label class="prompt" for="tx-1">The task, broken into its parts:</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="chem problem set: find the handout, review notes, 12 problems, check answers, upload"></textarea><div class="write-lines"></div>
       <div class="tool-row" style="align-items:center"><label for="est-min" style="font-weight:600">My guess (minutes):</label> <input id="est-min" type="number" min="1" max="300" inputmode="numeric" autocomplete="off" style="width:90px;padding:8px;border:1px solid var(--line);border-radius:10px;font:inherit"></div>
       <div class="tool-row" style="align-items:center"><button class="btn" type="button" id="sw-go">Start</button><button class="btn ghost" type="button" id="sw-stop">I'm done</button><span id="sw-time" style="font-size:1.6rem;font-weight:800;color:var(--school);margin-left:8px" aria-live="off">0:00</span></div>
       <p id="sw-msg" class="feedback" aria-live="polite"></p>
@@ -487,16 +593,34 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Same afternoon, different plans. Which one works?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three plans. Which fix would help most?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>What's the best plan?</p>
-      
-      <div class="scenario" >
-        <p>A lab report is due Friday. It's Monday. You think it'll take about two hours.</p>
+      <div class="scenario">
+        <p>Nia is a senior. She figures her research paper will take "about three hours" because that's how long it would take if she knew exactly what to say. It's due Friday. It's Tuesday.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="If it takes twice as long as you guessed, which is common, Thursday becomes a late night.">Do it Thursday night</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Planning backward with small chunks leaves Thursday as a safety net.">Split it: data Monday, draft Tuesday, finish Wednesday</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Better than Thursday. Leaves less room if something comes up.">Start Wednesday</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Listing the parts (find sources, read, outline, draft, cite, revise) shows the real size, and her own past papers are better evidence than the smooth version in her head.">Unpack it and check how long her last paper actually took</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than three hours, but it's still a guess. Unpacking and her own history give her a real number.">Double it to six hours</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That's the inside view, the exact estimate that misled Buehler's students.">Trust the three hours and start Thursday</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Jae's Saturday shift starts at 10. The drive takes 15 minutes, so he leaves at 9:45. He's been late three weeks in a row, and his manager has noticed.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. 15 minutes is the best case. Parking, clocking in, and one slow light aren't in it. Planning to arrive 10 minutes early turns the best case into a buffer.">Add a buffer: plan to arrive at 9:50, not 10:00</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Driving faster adds risk and doesn't fix the plan, which assumes everything goes perfectly.">Drive faster</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Honesty with a manager is good, but it doesn't change the math. The plan has no room for anything to go wrong.">Explain to his manager that traffic is unpredictable</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Sofia has four free hours on Sunday and a list of seven things. She starts with whatever's on top and ends up with the two biggest ones untouched.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Putting tasks into real time slots shows right away that seven won't fit in four hours, while she can still choose which ones matter most.">Estimate each one, put the important ones in time blocks, and move the rest on purpose</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Starting with the hardest is often smart, but she still won't know until 6pm that the list never fit.">Start with the hardest one</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="A list says what, not when. Without times, every list looks doable.">Make the list neater</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -505,13 +629,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make time disappear faster.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths about time</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🔮 "I'll have time later."<span class="row-cue" aria-hidden="true"></span></summary><p>Later is when other stuff shows up too. Put it on the calendar or it probably won't happen.</p></details>
-        <details class="row"><summary>🧾 To-do lists without times.<span class="row-cue" aria-hidden="true"></span></summary><p>A list tells you what, not when. Your brain needs both.</p></details>
-        <details class="row"><summary>📱 "Just checking one thing."<span class="row-cue" aria-hidden="true"></span></summary><p>Set a timer first, or the one thing becomes ten.</p></details>
-        <details class="row"><summary>😤 Getting mad at yourself for being late.<span class="row-cue" aria-hidden="true"></span></summary><p>Shame doesn't fix time blindness. Tools do.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'll be faster next time.</span><span class="row-cue" aria-hidden="true"></span></summary><p>People predict that about every time. Buehler's seniors had plenty of experience and were still off by weeks. Use the number from last time, not the hope for next time.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A to-do list is a plan.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A list has no clock in it. Until tasks have times, you can't see that they don't fit.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Buffers are wasted time.</span><span class="row-cue" aria-hidden="true"></span></summary><p>If nothing goes wrong, a buffer is free time. If something does, it's the reason you're on time.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Being late means I don't care.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Usually it means the plan assumed a perfect day. Fix the plan, and the caring shows up on time.</p></details>
       </div>
       </div>
     </details>
@@ -519,12 +643,25 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to ask for more help</h3>
       <ul class="tight">
-        <li>You're late or behind most days, even with tools.</li>
-        <li>Losing track of time is hurting your grades, sleep, or relationships.</li>
-        <li>You think something like ADHD might be part of it.</li>
+        <li>You're late or behind most days, even with timers, buffers, and a calendar.</li>
+        <li>Losing track of time is hurting your grades, your job, your sleep, or your relationships.</li>
+        <li>You've had trouble feeling time pass for as long as you can remember. That can be part of ADHD.</li>
       </ul>
-      <p style="margin:0">A counselor can help you sort it out. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can help you sort out what's going on and, if needed, talk with teachers about deadlines. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Buehler, R., Griffin, D., &amp; Ross, M. (1994). Exploring the "planning fallacy": Why people underestimate their task completion times. <i>Journal of Personality and Social Psychology</i>.</li>
+        <li>Kahneman, D., &amp; Tversky, A. (1979). Intuitive prediction: Biases and corrective procedures. <i>TIMS Studies in Management Science</i>.</li>
+        <li>Roy, M., Christenfeld, N., &amp; McKenzie, C. (2005). Underestimating the duration of future events: Memory incorrectly used or memory bias? <i>Psychological Bulletin</i>.</li>
+        <li>Kruger, J., &amp; Evans, M. (2004). If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. <i>Journal of Experimental Social Psychology</i>.</li>
+        <li>Koole, S., &amp; van 't Spijker, M. (2000). Overcoming the planning fallacy through willpower: Effects of implementation intentions on actual and predicted task-completion times. <i>European Journal of Social Psychology</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -535,26 +672,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-2">Where my time usually disappears</label>
+      <label class="prompt" for="tx-2">A task I always underestimate, and how long it really takes me</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-3">Something that always takes longer than I think</label>
+      <label class="prompt" for="tx-3">The interruptions that never make it into my plans</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-4">What my ideal afternoon would look like, in blocks</label>
+      <label class="prompt" for="tx-4">Tomorrow after school, in real time blocks, with transitions and one buffer</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">One tool I'm willing to try this week (timer, visible clock, calendar blocks, stopping alarms)</label>
+      <label class="prompt" for="tx-5">A big deadline coming up, planned backward to today</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">Something I'd do with the time I get back</label>
+      <label class="prompt" for="tx-6">How time works in my family or culture, and where that fits or clashes with school and work</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Losing track of time doesn't mean you don't care. It means your brain needs time to be visible. Make it visible, and you'll be amazed what fits.</p>
+      <p>Everyone underestimates time, including the adults telling you to manage yours. The difference is using real numbers. Collect yours, plan with them, and leave room for the day to be a normal day.</p>
     </div>
     </div>
   </div>
@@ -600,16 +737,16 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-lost" aria-pressed="false">🫥 Lost track again</button>
-          <button type="button" class="choice" data-path="p-full" aria-pressed="false">📅 Too much in one day</button>
-          <button type="button" class="choice" data-path="p-rushed" aria-pressed="false">🏃 Rushed and stressed</button>
-          <button type="button" class="choice" data-path="p-guilty" aria-pressed="false">😞 Frustrated with myself</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Time went okay today</button>
+          <button type="button" class="choice" data-path="p-lost" aria-pressed="false">Lost track again</button>
+          <button type="button" class="choice" data-path="p-full" aria-pressed="false">Too much in one day</button>
+          <button type="button" class="choice" data-path="p-rushed" aria-pressed="false">Rushed and stressed</button>
+          <button type="button" class="choice" data-path="p-guilty" aria-pressed="false">Frustrated with myself</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Time went okay today</button>
         </div>
 
         <div class="path-panel" id="p-lost" hidden>
           <h4>What this might mean</h4>
-          <p>Time blindness is real. The fix isn't trying harder, it's making time something you can see.</p>
+          <p>Time blindness is real, and so is the planning fallacy. The fix is not trying harder. It's making time visible and planning from real numbers.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">⏲</span>Set a visible timer for your next task.</li>
@@ -632,7 +769,7 @@
           <p>Rushing makes everything feel urgent. A little buffer time changes the whole day.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">✖️</span>Double your time estimate for the next thing.</li>
+            <li><span class="e" aria-hidden="true">✖️</span>For the next thing, use how long it took last time, not how long it should take.</li>
             <li><span class="e" aria-hidden="true">🌙</span>Set out what you need for tomorrow tonight.</li>
             <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, before you start the next task.</li>
           </ul>
@@ -643,7 +780,7 @@
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🫶</span>Talk to yourself like a friend would.</li>
-            <li><span class="e" aria-hidden="true">🧪</span>Try the "how long does it really take" timer above on one task.</li>
+            <li><span class="e" aria-hidden="true">🧪</span>Time one task with the stopwatch above and write the number down.</li>
             <li><span class="e" aria-hidden="true">🎯</span>Pick one tool, not five. Practice it for a week.</li>
           </ul>
         </div>

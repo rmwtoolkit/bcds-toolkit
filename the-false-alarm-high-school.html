@@ -362,6 +362,72 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .src { font-size:.82rem; color:var(--ink-soft); }
 </style>
 </head>
 
@@ -381,9 +447,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">😬 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>The False Alarm</h1>
-  <p class="tagline">Because your brain's alarm is trying to protect you. It's just a little too sensitive.</p>
+  <p class="tagline">How anxiety learns, why avoiding it backfires, and what the most effective treatment actually does.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,116 +475,120 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What anxiety is, and why it sticks</h2>
+    <h2 id="h-understand">How anxiety learns</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">If this sounds like you, you're in good company.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Your body treats it like an emergency. It usually isn't one.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Your stomach knots up on Sunday nights, or in the parking lot before school.</li>
-        
-        <li >You've skipped a class, a practice, or a party to get out of something that felt like too much.</li>
-        
-        <li >You reread a text ten times before sending it, then check for a reply every minute.</li>
-        <li>You know the answer but don't raise your hand.</li>
-        
-        <li >Your brain replays the day and rehearses tomorrow when you're trying to sleep.</li>
-        
-        <li >Making a phone call or ordering at a counter feels way harder than it should.</li>
+        <li>You rehearsed a call to the doctor's office for twenty minutes, then asked a parent to make it.</li>
+        <li>Your chest tightens in the parking lot before a game, an interview, or a party.</li>
+        <li>You left a store, a class, or a party because your heart was pounding and you weren't sure why.</li>
+        <li>You check the grade portal or the group chat again and again, and the relief lasts about a minute.</li>
+        <li>You're turning down things you want, like the job, the trip, or the audition, because of what anxiety predicts will happen.</li>
       </ul>
-      <p style="margin:0">Anxiety is one of the most common things teens deal with. It's also one of the most treatable.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">You're far from the only one</span><span class="sticker">About 1 in 3 teens. Seriously.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 570 290" role="img" aria-label="About 32 out of 100 teens have an anxiety disorder at some point before age 18." style="width:100%;max-width:560px;height:auto;display:block"><circle cx="20" cy="20" r="11" fill="var(--school)"/><circle cx="48" cy="20" r="11" fill="var(--school)"/><circle cx="76" cy="20" r="11" fill="var(--school)"/><circle cx="104" cy="20" r="11" fill="var(--school)"/><circle cx="132" cy="20" r="11" fill="var(--school)"/><circle cx="160" cy="20" r="11" fill="var(--school)"/><circle cx="188" cy="20" r="11" fill="var(--school)"/><circle cx="216" cy="20" r="11" fill="var(--school)"/><circle cx="244" cy="20" r="11" fill="var(--school)"/><circle cx="272" cy="20" r="11" fill="var(--school)"/><circle cx="20" cy="48" r="11" fill="var(--school)"/><circle cx="48" cy="48" r="11" fill="var(--school)"/><circle cx="76" cy="48" r="11" fill="var(--school)"/><circle cx="104" cy="48" r="11" fill="var(--school)"/><circle cx="132" cy="48" r="11" fill="var(--school)"/><circle cx="160" cy="48" r="11" fill="var(--school)"/><circle cx="188" cy="48" r="11" fill="var(--school)"/><circle cx="216" cy="48" r="11" fill="var(--school)"/><circle cx="244" cy="48" r="11" fill="var(--school)"/><circle cx="272" cy="48" r="11" fill="var(--school)"/><circle cx="20" cy="76" r="11" fill="var(--school)"/><circle cx="48" cy="76" r="11" fill="var(--school)"/><circle cx="76" cy="76" r="11" fill="var(--school)"/><circle cx="104" cy="76" r="11" fill="var(--school)"/><circle cx="132" cy="76" r="11" fill="var(--school)"/><circle cx="160" cy="76" r="11" fill="var(--school)"/><circle cx="188" cy="76" r="11" fill="var(--school)"/><circle cx="216" cy="76" r="11" fill="var(--school)"/><circle cx="244" cy="76" r="11" fill="var(--school)"/><circle cx="272" cy="76" r="11" fill="var(--school)"/><circle cx="20" cy="104" r="11" fill="var(--school)"/><circle cx="48" cy="104" r="11" fill="var(--school)"/><circle cx="76" cy="104" r="11" fill="var(--line)"/><circle cx="104" cy="104" r="11" fill="var(--line)"/><circle cx="132" cy="104" r="11" fill="var(--line)"/><circle cx="160" cy="104" r="11" fill="var(--line)"/><circle cx="188" cy="104" r="11" fill="var(--line)"/><circle cx="216" cy="104" r="11" fill="var(--line)"/><circle cx="244" cy="104" r="11" fill="var(--line)"/><circle cx="272" cy="104" r="11" fill="var(--line)"/><circle cx="20" cy="132" r="11" fill="var(--line)"/><circle cx="48" cy="132" r="11" fill="var(--line)"/><circle cx="76" cy="132" r="11" fill="var(--line)"/><circle cx="104" cy="132" r="11" fill="var(--line)"/><circle cx="132" cy="132" r="11" fill="var(--line)"/><circle cx="160" cy="132" r="11" fill="var(--line)"/><circle cx="188" cy="132" r="11" fill="var(--line)"/><circle cx="216" cy="132" r="11" fill="var(--line)"/><circle cx="244" cy="132" r="11" fill="var(--line)"/><circle cx="272" cy="132" r="11" fill="var(--line)"/><circle cx="20" cy="160" r="11" fill="var(--line)"/><circle cx="48" cy="160" r="11" fill="var(--line)"/><circle cx="76" cy="160" r="11" fill="var(--line)"/><circle cx="104" cy="160" r="11" fill="var(--line)"/><circle cx="132" cy="160" r="11" fill="var(--line)"/><circle cx="160" cy="160" r="11" fill="var(--line)"/><circle cx="188" cy="160" r="11" fill="var(--line)"/><circle cx="216" cy="160" r="11" fill="var(--line)"/><circle cx="244" cy="160" r="11" fill="var(--line)"/><circle cx="272" cy="160" r="11" fill="var(--line)"/><circle cx="20" cy="188" r="11" fill="var(--line)"/><circle cx="48" cy="188" r="11" fill="var(--line)"/><circle cx="76" cy="188" r="11" fill="var(--line)"/><circle cx="104" cy="188" r="11" fill="var(--line)"/><circle cx="132" cy="188" r="11" fill="var(--line)"/><circle cx="160" cy="188" r="11" fill="var(--line)"/><circle cx="188" cy="188" r="11" fill="var(--line)"/><circle cx="216" cy="188" r="11" fill="var(--line)"/><circle cx="244" cy="188" r="11" fill="var(--line)"/><circle cx="272" cy="188" r="11" fill="var(--line)"/><circle cx="20" cy="216" r="11" fill="var(--line)"/><circle cx="48" cy="216" r="11" fill="var(--line)"/><circle cx="76" cy="216" r="11" fill="var(--line)"/><circle cx="104" cy="216" r="11" fill="var(--line)"/><circle cx="132" cy="216" r="11" fill="var(--line)"/><circle cx="160" cy="216" r="11" fill="var(--line)"/><circle cx="188" cy="216" r="11" fill="var(--line)"/><circle cx="216" cy="216" r="11" fill="var(--line)"/><circle cx="244" cy="216" r="11" fill="var(--line)"/><circle cx="272" cy="216" r="11" fill="var(--line)"/><circle cx="20" cy="244" r="11" fill="var(--line)"/><circle cx="48" cy="244" r="11" fill="var(--line)"/><circle cx="76" cy="244" r="11" fill="var(--line)"/><circle cx="104" cy="244" r="11" fill="var(--line)"/><circle cx="132" cy="244" r="11" fill="var(--line)"/><circle cx="160" cy="244" r="11" fill="var(--line)"/><circle cx="188" cy="244" r="11" fill="var(--line)"/><circle cx="216" cy="244" r="11" fill="var(--line)"/><circle cx="244" cy="244" r="11" fill="var(--line)"/><circle cx="272" cy="244" r="11" fill="var(--line)"/><circle cx="20" cy="272" r="11" fill="var(--line)"/><circle cx="48" cy="272" r="11" fill="var(--line)"/><circle cx="76" cy="272" r="11" fill="var(--line)"/><circle cx="104" cy="272" r="11" fill="var(--line)"/><circle cx="132" cy="272" r="11" fill="var(--line)"/><circle cx="160" cy="272" r="11" fill="var(--line)"/><circle cx="188" cy="272" r="11" fill="var(--line)"/><circle cx="216" cy="272" r="11" fill="var(--line)"/><circle cx="244" cy="272" r="11" fill="var(--line)"/><circle cx="272" cy="272" r="11" fill="var(--line)"/><text x="300" y="110" font-size="64" font-weight="800" fill="var(--school)">32</text><text x="302" y="140" font-size="20" font-weight="700" font-family="inherit" fill="var(--ink)">out of 100</text><text x="302" y="176" font-size="18" fill="var(--ink-soft)"><tspan x="302" dy="0">teens have an anxiety</tspan><tspan x="302" dy="23">disorder at some point</tspan><tspan x="302" dy="23">before age 18</tspan></text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >A large national study (NIMH) found about 1 in 3 teens meets the criteria for an anxiety disorder at some point before 18, and newer surveys suggest anxiety in kids and teens has gone up since. Lots more have anxiety that's real but smaller. You're in a big, mostly quiet crowd.</span></figcaption>
-      </figure>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Your brain's smoke detector</span><span class="sticker">Your alarm can't tell toast from fire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🚨 It's built to protect you.</dt>
-        <dd>Deep in your brain, a small area called the amygdala works like a smoke detector. When it senses danger, it sets off fight, flight, or freeze, fast, before you've had time to think.</dd>
-        <dt>🍞 It can't tell toast from fire.</dt>
-        <dd >A smoke detector screams just as loud for burnt toast as for a real fire. Your alarm reacts to a presentation, a group chat, or an unanswered text with the same body response it would use for actual danger.</dd>
-        <dt>🎚 Some alarms are set more sensitive.</dt>
-        <dd>Genes, stress, and what you've been through all tune how easily yours goes off. A sensitive alarm says nothing about how brave or strong you are.</dd>
-      </dl>
+      <p style="margin:0">You're far from alone. In a national survey of more than 10,000 U.S. teens, about 1 in 3 met criteria for an anxiety disorder at some point by age 18 (Merikangas et al., 2010). This lesson goes past "it's common": how anxiety learns, and how to teach it something new.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What the alarm does to your body</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">❤️</span><strong>Heart pounds</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Your body is pumping blood to your muscles so you can run.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌬</span><strong>Breathing speeds up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Fast, shallow breathing can make you dizzy or tingly, which then feels scary too.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🤢</span><strong>Stomach flips</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Digestion pauses during an alarm. Hello, butterflies, nausea, and extra bathroom trips.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌫</span><strong>Thinking gets foggy</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The planning part of your brain steps back while the alarm runs things. That's why you go blank.</p></details>
+    <h3 style="margin-top:28px">The avoidance loop, in one picture</h3>
+    <figure class="fig">
+<svg viewBox="0 0 400 250" role="img" aria-labelledby="fa-t fa-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="fa-t">Anxiety over time: leaving versus staying</title>
+  <desc id="fa-d">Left panel: anxiety rises, the person leaves and it drops fast, but the next time it rises higher. Right panel: the person stays, anxiety peaks and falls on its own, and each later time the peak is lower.</desc>
+  <text x="34" y="20" font-size="14" font-weight="700" fill="#A3301F">If you leave</text>
+  <text x="219" y="20" font-size="14" font-weight="700" fill="#245A96">If you stay</text>
+  <text x="14" y="118" font-size="11" fill="#6E6E73" text-anchor="middle" transform="rotate(-90 14 118)">how anxious</text>
+  <g fill="none" stroke="#C7C7CC" stroke-width="1.5"><path d="M30 30 V200 H196"/><path d="M215 30 V200 H392"/></g>
+  <line x1="74" y1="76" x2="150" y2="76" stroke="#C7C7CC" stroke-width="1.2" stroke-dasharray="3 4"/>
+  <g fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M33 196 C46 192 58 120 74 76 C80 66 82 150 90 196"/>
+    <path d="M106 196 C120 192 134 92 150 42 C156 32 160 150 170 196"/>
+  </g>
+  <text x="92" y="150" font-size="11" fill="#A3301F">leave</text>
+  <g fill="none" stroke="#2E6DB4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M218 196 C228 192 236 112 246 78 C258 58 268 150 298 193"/>
+    <path d="M304 195 C311 190 316 132 324 114 C332 104 338 170 350 195"/>
+    <path d="M356 196 C361 192 364 162 369 152 C375 146 380 182 388 196"/>
+  </g>
+  <g font-size="12" fill="#6E6E73" text-anchor="middle">
+    <text x="62" y="216">1st time</text><text x="138" y="216">next time</text>
+    <text x="252" y="216">1st</text><text x="327" y="216">2nd</text><text x="370" y="216">3rd</text>
+  </g>
+  <text x="196" y="240" font-size="12" fill="#6E6E73" text-anchor="middle">time &#8594;</text>
+</svg>
+      <figcaption>An illustration of a common pattern, not data from one study. Real curves vary, and the feeling doesn't have to drop all the way for practice to work.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Leaving: fast relief, bigger alarm</strong><p>Escaping feels great for a minute. Your brain files it as proof: "That was dangerous. Good thing we left." Next time the alarm fires sooner and louder, and the list of things you avoid grows.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Staying: the alarm runs its course</strong><p>Your body can't stay at peak alarm for long. When you stay, the feeling crests and settles, and your brain collects new evidence: I handled that.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Repeating: the prediction updates</strong><p>Each time the disaster doesn't happen, the old fear has to compete with a new memory. That is how the alarm gets recalibrated.</p></div></div>
     </div>
     </div>
 
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">💡 These feelings are uncomfortable, not dangerous</span><span class="sticker">Uncomfortable. Not dangerous.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">The research</span><span class="sticker">Exposure works by proving the prediction wrong.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div ><p>Every one of those feelings is your body doing its job. Even a full panic attack, which can feel like a heart attack, usually peaks within about ten minutes and passes on its own. Uncomfortable is not the same as unsafe.</p></div>
+      <dl class="helps">
+        <dt>Anxiety is a forecast.</dt>
+        <dd>Your brain is predicting danger. Avoiding means the forecast never gets checked, so it sticks around.</dd>
+        <dt>You don't have to feel calm for it to work.</dt>
+        <dd>Michelle Craske's team at UCLA argues that exposure works mainly through expectation violation: you predicted something bad, it didn't happen, and your brain stores a new memory that competes with the fear (Craske et al., 2014). So the useful questions are "What exactly do I expect?" before, and "What actually happened?" after.</dd>
+        <dt>Reassurance is avoidance in disguise.</dt>
+        <dd>Asking "Are you sure it's fine?" or having someone else handle it brings relief and keeps the prediction untested. In one trial with kids ages 7 to 14, a program that coached parents to stop accommodating anxiety, while staying warm and supportive, worked as well as therapy with the child directly (Lebowitz et al., 2020).</dd>
+        <dt>Treatment works.</dt>
+        <dd>In a major U.S. trial with ages 7 to 17, about 60% improved with 12 weeks of cognitive behavioral therapy (CBT), 55% with the medication sertraline, and 81% with both, compared with 24% on placebo (Walkup et al., 2008).</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Panic</span><span class="sticker">It feels like an emergency. It isn't one.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>A panic attack is a surge of intense fear that peaks within minutes: pounding heart, short breath, dizziness, shaking, a sense that something terrible is happening. It is your alarm firing at full volume with no fire. It is frightening, and it passes.</p>
+      <p>If you've never had symptoms like chest pain checked by a doctor, get checked once. After that, the work is learning that the sensations themselves are safe.</p>
       <p class="worst">The alarm feels like it's telling the truth. It's just loud.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">The avoidance trap</span><span class="sticker">Running away makes it bigger.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Different words for it</span><span class="sticker">Not every family calls it anxiety.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 600 300" role="img" aria-label="A graph of anxiety over time. If you leave, anxiety drops fast, but the next time starts even higher. If you stay, anxiety peaks and then comes down on its own." style="width:100%;max-width:640px;height:auto;display:block"><line x1="50" y1="250" x2="580" y2="250" stroke="var(--ink-soft)" stroke-width="2"/><line x1="50" y1="250" x2="50" y2="20" stroke="var(--ink-soft)" stroke-width="2"/><text x="20" y="140" font-size="14" fill="var(--ink-soft)" transform="rotate(-90 20 140)" text-anchor="middle">how anxious</text><text x="575" y="275" font-size="14" fill="var(--ink-soft)" text-anchor="end">time</text><path d="M55 225 C120 215 150 70 200 60 C260 50 300 120 380 180 C440 220 500 228 570 230" fill="none" stroke="var(--school)" stroke-width="6" stroke-linecap="round"/><path d="M55 225 C120 215 150 70 200 60 C212 60 220 200 240 232" fill="none" stroke="var(--school-accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 12"/><path d="M330 150 C360 140 380 35 420 28" fill="none" stroke="var(--school-accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 12"/><circle cx="200" cy="60" r="8" fill="var(--alert)"/><text x="200" y="40" font-size="15" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">the peak</text><text x="250" y="222" font-size="15" font-weight="700" fill="var(--school-accent)">leave: quick relief</text><text x="430" y="40" font-size="15" font-weight="700" fill="var(--school-accent)">next time: worse</text><text x="400" y="160" font-size="15" font-weight="700" fill="var(--school)">stay: it comes down</text><text x="400" y="180" font-size="15" font-weight="700" fill="var(--school)">on its own</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Escaping feels amazing for about a minute. Then your brain files it as proof: "That was dangerous, good thing we left." The alarm gets more sensitive, and the list of things you avoid gets longer. When you stay, the feeling crests and falls on its own, and your brain gets new evidence: I survived that. Avoidance keeps anxiety going more than almost anything else.</span></figcaption>
-      </figure>
+      <p>Some families call it stress, nerves, or overthinking. In some, it shows up mostly as stomachaches, headaches, or trouble sleeping, and gets treated as a body problem. Some handle it through faith, family, or community, and some don't talk about it much at all. Any of those can sit alongside the tools here.</p>
+      <p class="worst">What words does your family use for this feeling? Who do people in your family go to when it's bad?</p>
       </div>
     </details>
-
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">Some shapes anxiety takes</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌀</span><strong>Worry that won't quit</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Worrying about lots of things, most days, for months: grades, family, the future, whether you said something weird. Doctors call this generalized anxiety.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">👀</span><strong>Social anxiety</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >An intense fear of being judged or embarrassed, enough that you avoid speaking up, eating in front of people, or going places.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">💥</span><strong>Panic attacks</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">A sudden rush of fear with a racing heart, shaky hands, and a feeling that something terrible is happening. Scary, and not dangerous.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>Big specific fears</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Fear of one thing, like needles, throwing up, driving, or flying, big enough that you plan your life around it.</p></details>
-    </div>
-    </div>
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Turning the alarm down</h2>
+    <h2 id="h-practice">Teach the alarm something new</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Walk toward it, one step at a time.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🪜 Face it in small steps.<span class="row-cue" aria-hidden="true"></span></summary><p >Avoidance grows anxiety, and approaching shrinks it. Make a ladder from "a little uncomfortable" to "really hard," start at the bottom, and stay on each step until it gets easier. This is the core of the therapy that works best for anxiety.</p></details>
-        <details class="row"><summary>🌊 Ride the wave.<span class="row-cue" aria-hidden="true"></span></summary><p>When the feeling hits, name it: "This is my alarm." Then stay. It rises, peaks, and falls, usually faster than you'd guess.</p></details>
-        <details class="row"><summary>🌬 Make your breath out longer.<span class="row-cue" aria-hidden="true"></span></summary><p>Breathe in for 4, out for 6. A long exhale tells your body the danger has passed. When Your Mind Goes Blank has more resets like this.</p></details>
-        <details class="row"><summary>🕵 Check the prediction.<span class="row-cue" aria-hidden="true"></span></summary><p >Anxiety is a prediction. Ask: What exactly do I think will happen? How often has that actually happened? What's most likely? If the worst came true, what would I do?</p></details>
-        <details class="row"><summary>🗓 Give worry an appointment.<span class="row-cue" aria-hidden="true"></span></summary><p>Pick 15 minutes a day for worrying. When a worry shows up at other times, jot it down and save it for then. Lots of worries look smaller by the time their appointment comes.</p></details>
-        <details class="row"><summary>🙋 Ask for coaching instead of rescuing.<span class="row-cue" aria-hidden="true"></span></summary><p >Asking for reassurance, or having parents call, email, or fix things for you, brings quick relief and keeps the loop going. Ask the adults in your life to back you while you do the hard thing, instead of doing it for you.</p></details>
-        <details class="row"><summary>⚡ Watch the fuel.<span class="row-cue" aria-hidden="true"></span></summary><p >Short sleep, skipped meals, energy drinks, and nicotine withdrawal from vaping all turn up the alarm. Exercise turns it down.</p></details>
+      <div class="fold-label">The core skill</div>
+      <h3 class="sticker">Run the experiment.</h3>
+      <p>Therapists call this exposure. Think of it as testing a prediction, one step at a time.</p>
+      <div class="levers">
+        <div class="lever"><b>Name the prediction</b><span>Be specific: "If I call, I'll freeze, and they'll think I'm an idiot."</span></div>
+        <div class="lever"><b>Rate it</b><span>How sure are you, from 0 to 100%? How bad would it be if it happened?</span></div>
+        <div class="lever"><b>Drop the safety moves</b><span>Skip the script, the excuse ready to go, the friend who talks for you. Safety moves keep the test from counting.</span></div>
+        <div class="lever"><b>Compare</b><span>What happened? How close was the prediction? What did you learn about what you can handle?</span></div>
+      </div>
+      <p class="tap-hint">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Call it excitement.<span class="row-cue" aria-hidden="true"></span></summary><p>In experiments with karaoke, public speaking, and math tests, people who said "I am excited" beforehand did better than people who tried to calm down (Brooks, 2014). Anxiety and excitement feel alike in your body. The label changes how you use the energy.</p></details>
+        <details class="row"><summary><span class="num">2</span> Breathe out longer.<span class="row-cue" aria-hidden="true"></span></summary><p>In for 4, out for 6. Use it to stay in the situation, not to get out of it.</p></details>
+        <details class="row"><summary><span class="num">3</span> Give worry an appointment.<span class="row-cue" aria-hidden="true"></span></summary><p>Pick 15 minutes a day for worrying. When a worry shows up at another time, write it down and save it. Many look smaller by then.</p></details>
+        <details class="row"><summary><span class="num">4</span> Ask for coaching, not rescue.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask the adults in your life to back you while you do the hard thing, instead of doing it for you.</p></details>
+        <details class="row"><summary><span class="num">5</span> Watch the fuel.<span class="row-cue" aria-hidden="true"></span></summary><p>Short sleep, energy drinks, and nicotine withdrawal from vaping all crank up the alarm. Regular exercise turns it down.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Start at the bottom rung.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Build a ladder, and test it one rung at a time.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick one thing anxiety makes you avoid. Then write four steps, from easiest at the bottom to hardest at the top.</p>
-      <div ><p class="tap-hint" style="margin-top:0">Example, phone calls: 1. Text a friend instead of avoiding them. 2. Email a teacher a question. 3. Call a store to ask their hours. 4. Call to book your own appointment.</p></div>
-      <label class="prompt" for="tx-1">The thing I avoid:</label>
+      <p>Pick one thing anxiety makes you avoid. Write four steps, from easiest at the bottom to hardest at the top. Before each step, jot your prediction. After, note what happened.</p>
+      <div><p class="tap-hint" style="margin-top:0">Example, phone calls: 1. Call a store to ask their hours. 2. Call to schedule a haircut. 3. Leave a voicemail for a coach or teacher. 4. Call to book your own doctor's appointment.</p></div>
+      <label class="prompt" for="tx-1">The thing I avoid, and what I predict will happen:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-2">Step 1 (a little uncomfortable):</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
@@ -528,55 +598,55 @@
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-5">Step 4 (the big one):</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <p style="margin:0">Stay on a step until it feels about half as scary, then climb. Going back down a step on a hard day is normal.</p>
+      <p style="margin:0">Repeat a step until the prediction stops holding up, then climb. Sliding back a step on a hard day is normal.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Real danger or burnt toast? Vote.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Real danger or burnt toast? Vote.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 15 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
         <li>Read each story out loud. These are made-up students, not anyone in the room.</li>
-        <li>Everyone votes: real danger, false alarm, or somewhere in between. Stand up, raise hands, or point to a corner.</li>
+        <li>Everyone votes: real danger, false alarm, or somewhere in between. Raise hands or point to a corner.</li>
         <li>Tap to see what usually helps, then talk about the brave next step.</li>
       </ol>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Toast or fire? · 1 of 3</span><span class="sticker">Ava and the cafeteria</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Toast or fire? · 1 of 3</span><span class="sticker">Jalen and the interview</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem" >Ava's heart races every time she walks into the dining hall because her friend group shifted and she's not sure where to sit. Lately she's been eating in her car or skipping lunch.</p>
+      <p style="font-size:1.1rem">Jalen has his first job interview at a grocery store on Saturday. His hands shake every time he thinks about it, and he's drafting a text to cancel.</p>
       <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Real danger</li><li>False alarm</li><li>Somewhere in between</li></ol>
-      <details class="row"><summary>What usually helps<span class="row-cue" aria-hidden="true"></span></summary><p>False alarm. It feels awful, and it isn't dangerous. Hiding in the library makes tomorrow harder. A brave next step: sit with someone she half knows, or ask to join a table, and stay long enough for the alarm to settle.</p></details>
+      <details class="row"><summary>What usually helps<span class="row-cue" aria-hidden="true"></span></summary><p>False alarm. Canceling would feel like relief and teach his brain that interviews are dangerous. A brave next step: write down his prediction, go, and compare. Interviewers expect nerves, especially for a first job.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Toast or fire? · 2 of 3</span><span class="sticker">Ava and the ride</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Toast or fire? · 2 of 3</span><span class="sticker">Sofia at the party</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.25rem" >After a party, a friend who's been drinking says he's fine to drive and tells Ava to get in. Her stomach drops.</p>
+      <p style="font-size:1.1rem">At a party, Sofia's friend is passed out on the couch and her breathing sounds strange. Someone says, "Just let her sleep it off." Sofia's heart is pounding.</p>
       <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Real danger</li><li>False alarm</li><li>Somewhere in between</li></ol>
-      <details class="row"><summary>What usually helps<span class="row-cue" aria-hidden="true"></span></summary><p>Real fire. The alarm is doing exactly its job here. Listen to it: don't get in, and call a parent or another adult for a ride. Anxiety work is about burnt toast, never about ignoring real danger.</p></details>
+      <details class="row"><summary>What usually helps<span class="row-cue" aria-hidden="true"></span></summary><p>Real fire. Her alarm is doing its job. Call 911, stay with her, and roll her onto her side. Anxiety work is about burnt toast. It never means ignoring real danger.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Toast or fire? · 3 of 3</span><span class="sticker">Marcus and the test</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Toast or fire? · 3 of 3</span><span class="sticker">Dev and the silent group chat</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.25rem" >Marcus has a chem test Friday. He's checked the grade portal 20 times today, made three study guides, and texted his friends "I'm going to fail" all night.</p>
+      <p style="font-size:1.1rem">Dev's friends haven't answered his message in three hours. He has reread it twenty times, he's sure he said something wrong, and he's writing an apology.</p>
       <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Real danger</li><li>False alarm</li><li>Somewhere in between</li></ol>
-      <details class="row"><summary>What usually helps<span class="row-cue" aria-hidden="true"></span></summary><p>In between. The test is real and worth preparing for. The checking and asking keep the alarm loud without helping him learn. A brave next step: a set study plan, then let worry time handle the rest. When Your Mind Goes Blank has more on test anxiety.</p></details>
+      <details class="row"><summary>What usually helps<span class="row-cue" aria-hidden="true"></span></summary><p>Mostly a false alarm. People get busy. Rereading and apologizing keep the prediction from being tested. A brave next step: phone away for an hour, then see. If something did land wrong, a calm check-in later works better than a panicked apology.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>What are some false alarms a lot of kids our age get? (Keep it general.)</li>
-        <li>Why does avoiding feel so good in the moment?</li>
+        <li>What are some common false alarms for people our age? Keep it general.</li>
+        <li>Why does avoiding feel so good in the moment, and when does it start to cost something?</li>
         <li>What could a friend say that helps someone approach instead of avoid?</li>
       </ul>
       <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Never ask students to name their own fears. If someone volunteers, keep it brief and thank them. Some students in the room may have panic attacks or an anxiety disorder, so let everyone know a counselor is available afterward.</p></details>
@@ -584,26 +654,23 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. Which way do you step?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Two moments. Which way do you step?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Pick a move. There may be more than one good one.</p>
-      
-      
-      <div class="scenario" >
-        <p>Your heart starts racing in the hallway and you feel like you can't breathe. You've had this happen before.</p>
+      <div class="scenario">
+        <p>You're about to present in history. Your heart is pounding and your mouth is dry.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Relief now, and school starts to feel like a dangerous place. Next time is harder.">Leave school and go home</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Exactly. Then go to the nurse or counselor if you need to, and head back to class when it passes.">Step aside, breathe out slowly, and tell yourself "This is panic. It peaks and passes."</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Panic attacks are very treatable, and you shouldn't have to figure them out alone.">Tell a counselor this keeps happening</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That is the reappraisal move from the research. Your body is already revved up. Put it to work.">Tell yourself, &quot;I'm excited,&quot; and start</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="A few slow breaths help. Waiting until you feel fully calm can turn into waiting forever. Start while nervous.">Try to get completely calm first</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Relief now, and the next presentation gets harder.">Ask to go to the nurse</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>You need to email a teacher about a grade, and you've written and deleted the draft six times.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>You need to call and book your own dentist appointment for the first time. You've put it off for two weeks.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Anxiety rarely says &quot;ready.&quot; Waiting usually makes it bigger.">Wait until you feel ready</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Good enough and sent beats perfect and stuck. Perfect Is a Trap has more on this.">Set a 5-minute timer, write a short version, and hit send</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="It works today, and next time feels just as hard. This is the kind of accommodation that keeps anxiety going.">Ask a parent to do it again</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Exactly. Afterward, compare the prediction to what happened.">Write the two sentences you need, note your prediction, then call</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -612,14 +679,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make the alarm louder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🚪 Avoiding or escaping.<span class="row-cue" aria-hidden="true"></span></summary><p>Quick relief, bigger fear next time.</p></details>
-        <details class="row"><summary>🔁 Asking "Are you sure?" again and again.<span class="row-cue" aria-hidden="true"></span></summary><p>Reassurance wears off fast, and you end up needing more of it.</p></details>
-        <details class="row"><summary>📱 Scrolling to escape the feeling.<span class="row-cue" aria-hidden="true"></span></summary><p >A quick distraction is fine. Using your phone every time the feeling shows up teaches your brain you can't sit with it.</p></details>
-        <details class="row"><summary>🙄 "Just calm down."<span class="row-cue" aria-hidden="true"></span></summary><p>Nobody has ever calmed down because someone told them to. Including yourself.</p></details>
-        <details class="row"><summary><span >💨 Vaping, weed, or drinking to take the edge off.</span><span class="row-cue" aria-hidden="true"></span></summary><p >Nicotine withdrawal feels like anxiety, and regular weed or alcohol use tends to make anxiety worse over time, even though it numbs it for a night.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Avoiding it is self-care.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Rest and boundaries are self-care. Skipping things because anxiety predicts disaster usually makes the next time harder.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I have to feel calm before I can do it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You can do hard things while anxious. Going in nervous and finding out it went fine is often what teaches your brain the most.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A vape or a hit takes the edge off.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It can numb things for a night. Nicotine withdrawal creates anxious feelings of its own, and none of it teaches your brain anything new about what you're avoiding.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Anxiety means something is wrong with me.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Anxiety is one of the most common conditions in teens, and one of the most treatable.</p></details>
       </div>
       </div>
     </details>
@@ -628,14 +694,27 @@
       <h3>When to get more help</h3>
       <ul class="tight">
         <li>Anxiety shows up most days, for weeks.</li>
-        <li>You're missing school, practices, or time with friends because of it.</li>
+        <li>You're missing school, practices, work, or time with friends because of it.</li>
         <li>You're having panic attacks.</li>
         <li>It's messing with your sleep or eating.</li>
         <li>You're using vapes, weed, alcohol, or pills to cope.</li>
         <li>You feel hopeless, or have thoughts of hurting yourself.</li>
       </ul>
-      <div ><p style="margin:0">Anxiety is very treatable. In a large study of kids and teens with anxiety, about 6 in 10 were much better after 12 weeks of CBT (therapy that includes climbing the ladder with a coach), and about 8 in 10 with CBT plus medicine. See <a href="#help">Get help</a> below.</p></div>
+      <p style="margin:0">Anxiety responds well to treatment, and a counselor can help you find the right kind. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Merikangas, K. R., et al. (2010). Lifetime prevalence of mental disorders in U.S. adolescents: Results from the National Comorbidity Survey Replication, Adolescent Supplement (NCS-A). <i>Journal of the American Academy of Child &amp; Adolescent Psychiatry</i>.</li>
+        <li>Craske, M. G., Treanor, M., Conway, C. C., Zbozinek, T., &amp; Vervliet, B. (2014). Maximizing exposure therapy: An inhibitory learning approach. <i>Behaviour Research and Therapy</i>.</li>
+        <li>Lebowitz, E. R., Marin, C., Martino, A., Shimshoni, Y., &amp; Silverman, W. K. (2020). Parent-based treatment as efficacious as cognitive-behavioral therapy for childhood anxiety: A randomized noninferiority study of Supportive Parenting for Anxious Childhood Emotions. <i>Journal of the American Academy of Child &amp; Adolescent Psychiatry</i>.</li>
+        <li>Walkup, J. T., et al. (2008). Cognitive behavioral therapy, sertraline, or a combination in childhood anxiety. <i>New England Journal of Medicine</i>.</li>
+        <li>Brooks, A. W. (2014). Get excited: Reappraising pre-performance anxiety as excitement. <i>Journal of Experimental Psychology: General</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -646,26 +725,28 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-6">Something my alarm goes off about that might be burnt toast</label>
+      <label class="prompt" for="tx-6">Something my alarm goes off about that is probably burnt toast, and what it predicts</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">What I usually do when anxiety shows up, and what it costs me</label>
+      <label class="prompt" for="tx-7">My safety moves: what I do to get through it, or get out of it</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-8">One small step I could try this week</label>
+      <label class="prompt" for="tx-8">One prediction I could test this week</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-9">An adult who could cheer me on while I try it</label>
+      <label class="prompt" for="tx-9">Someone who could coach me instead of rescuing me</label>
       <textarea id="tx-9" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-10">A time I did something scary anyway, and how it went</label>
+      <label class="prompt" for="tx-10">A time the thing I feared didn't happen, or I handled it</label>
       <textarea id="tx-10" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your alarm is trying to protect you. You can thank it, and still do the thing.</p>
+      <p>Your alarm is trying to protect you. You can thank it and still do the thing. That is how it learns.</p>
     </div>
     </div>
   </div>
@@ -693,17 +774,16 @@
         <h3>What's been most present today?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">a test or quiz</button>
+          <button type="button" class="chip" aria-pressed="false">a test or deadline</button>
           <button type="button" class="chip" aria-pressed="false">something social</button>
-          <button type="button" class="chip" aria-pressed="false">a presentation</button>
+          <button type="button" class="chip" aria-pressed="false">a presentation or performance</button>
+          <button type="button" class="chip" aria-pressed="false">a phone call or appointment</button>
           <button type="button" class="chip" aria-pressed="false">family stuff</button>
-          <button type="button" class="chip" aria-pressed="false">friends</button>
-          
-          <button type="button" class="chip" aria-pressed="false" >college or the future</button>
+          <button type="button" class="chip" aria-pressed="false">college, jobs, or the future</button>
           <button type="button" class="chip" aria-pressed="false">my body felt jumpy</button>
           <button type="button" class="chip" aria-pressed="false">couldn't sleep</button>
           <button type="button" class="chip" aria-pressed="false">avoided something</button>
-          <button type="button" class="chip" aria-pressed="false">did something scary anyway</button>
+          <button type="button" class="chip" aria-pressed="false">did something hard anyway</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
       </div>
@@ -712,41 +792,41 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-jittery" aria-pressed="false">😰 Wound up and jittery</button>
-          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">🌀 I can't stop worrying</button>
-          <button type="button" class="choice" data-path="p-avoid" aria-pressed="false">🙈 I'm avoiding something</button>
-          <button type="button" class="choice" data-path="p-panic" aria-pressed="false">💥 I felt panicky</button>
-          <button type="button" class="choice" data-path="p-calm" aria-pressed="false">🌤 Calmer today</button>
+          <button type="button" class="choice" data-path="p-jittery" aria-pressed="false">Wound up and jittery</button>
+          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">Can't stop worrying</button>
+          <button type="button" class="choice" data-path="p-avoid" aria-pressed="false">Avoiding something</button>
+          <button type="button" class="choice" data-path="p-panic" aria-pressed="false">Felt panicky</button>
+          <button type="button" class="choice" data-path="p-calm" aria-pressed="false">Calmer today</button>
         </div>
 
         <div class="path-panel" id="p-jittery" hidden>
           <h4>What this might mean</h4>
-          <p>Your alarm is running hot today. Your body is trying to protect you, and it's working too hard.</p>
+          <p>Your alarm is running hot today. Your body is trying to protect you, and it is working too hard.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times.</li>
-            <li><span class="e" aria-hidden="true">🚶</span>Move: a fast walk, stairs, a lap around the building.</li>
-            <li><span class="e" aria-hidden="true">🥤</span>Skip the energy drink today. Water and a snack help more.</li>
+            <li><span class="e" aria-hidden="true"></span>Breathe in for 4, out for 6, five times.</li>
+            <li><span class="e" aria-hidden="true"></span>Move: a fast walk, stairs, a lap around the building.</li>
+            <li><span class="e" aria-hidden="true"></span>Skip the energy drink today. Water and food help more.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-worry" hidden>
           <h4>What this might mean</h4>
-          <p>Worry loops are exhausting. They feel like problem solving, and they usually aren't.</p>
+          <p>Worry loops feel like problem solving. They usually aren't.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Write every worry down in one list. Out of your head, onto paper.</li>
-            <li><span class="e" aria-hidden="true">🗓</span>Pick a 15-minute worry time later today, and save the list for then.</li>
-            <li><span class="e" aria-hidden="true">🕵</span>Pick one worry and ask: How likely is it, really?</li>
+            <li><span class="e" aria-hidden="true"></span>Write every worry down in one list.</li>
+            <li><span class="e" aria-hidden="true"></span>Pick a 15-minute worry time later today and save the list for then.</li>
+            <li><span class="e" aria-hidden="true"></span>Pick one worry and ask: what exactly do I predict, and how likely is it?</li>
           </ul>
         </div>
         <div class="path-panel" id="p-avoid" hidden>
           <h4>What this might mean</h4>
-          <p>Avoiding makes total sense. It's also how the alarm gets louder.</p>
+          <p>Avoiding makes sense in the moment. It is also how the alarm gets louder.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🪜</span>What's the smallest step toward it? Do just that one.</li>
-            <li><span class="e" aria-hidden="true">⏳</span>Set a timer for 5 minutes and start. You can stop after.</li>
-            <li><span class="e" aria-hidden="true">🙋</span>Tell someone you're trying it, so they can cheer you on.</li>
+            <li><span class="e" aria-hidden="true"></span>What is the smallest step toward it? Do only that.</li>
+            <li><span class="e" aria-hidden="true"></span>Write your prediction first, so you can check it after.</li>
+            <li><span class="e" aria-hidden="true"></span>Tell someone you're trying it, so they can back you.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-panic" hidden>
@@ -754,9 +834,9 @@
           <p>Panic is one of the scariest feelings there is, and it isn't dangerous. It peaks and passes.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell yourself, "This is my alarm. It will pass."</li>
-            <li><span class="e" aria-hidden="true">🧊</span>Hold something cold, or splash water on your face.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If it keeps happening, tell a counselor this week.</li>
+            <li><span class="e" aria-hidden="true"></span>Tell yourself, "This is my alarm. It will pass."</li>
+            <li><span class="e" aria-hidden="true"></span>Hold something cold, or splash water on your face.</li>
+            <li><span class="e" aria-hidden="true"></span>If it keeps happening, tell a counselor this week.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-calm" hidden>
@@ -764,9 +844,9 @@
           <p>Good. Notice what helped, so you can do more of it.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>What was different about today?</li>
-            <li><span class="e" aria-hidden="true">🪜</span>Calm days are great days to climb one step on your ladder.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Give yourself some credit.</li>
+            <li><span class="e" aria-hidden="true"></span>What was different about today?</li>
+            <li><span class="e" aria-hidden="true"></span>Calm days are good days to climb one rung on your ladder.</li>
+            <li><span class="e" aria-hidden="true"></span>Give yourself some credit.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -794,7 +874,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Anxiety shrinks when you walk toward it, a step at a time. You don't have to do it all today.</p>
+        <p class="closing">Anxiety shrinks when you walk toward it, one tested prediction at a time. You don't have to do it all today.</p>
       </div>
     </div>
     </div>

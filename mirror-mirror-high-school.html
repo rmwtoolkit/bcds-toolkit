@@ -362,6 +362,69 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  .fig svg.growth { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +444,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🪞 High School · Growing up</div>
+  <div class="eyebrow">High School · Growing up</div>
   <h1>Mirror, Mirror</h1>
-  <p class="tagline">Because you're a whole person, not a score out of ten.</p>
+  <p class="tagline">Looksmaxing, gym culture, supplements and steroids: what the science says, and who profits from you feeling behind.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,100 +472,92 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What's really going on</h2>
+    <h2 id="h-understand">What the mirror, and the algorithm, leave out</h2>
     <details class="fold ">
       <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Your feed found your insecurities fast. That's its job.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Your feed is full of guys rating faces, explaining "canthal tilt," and telling you what you're doing wrong.</li>
-        <li>You've checked your side profile in a mirror or a photo more times than you'd admit.</li>
-        
-        <li >Someone said a person "mogged" you in a picture, and it stuck with you longer than it should have.</li>
-        
-        <li >Missing a lift, or eating something off plan, puts you in a bad mood for the whole day.</li>
-        
-        <li >A friend is talking about "running a cycle" or ordering stuff online that isn't really legal.</li>
-        <li>You've asked yourself, "Am I ugly?" and an app or a comment section was happy to answer.</li>
+        <li>Your feed is full of guys rating faces, explaining "canthal tilt," and telling you what's wrong with yours.</li>
+        <li>You've checked your side profile in the mirror or in photos more times than you'd admit.</li>
+        <li>Missing a lift, or eating something off plan, puts you in a bad mood for the whole day.</li>
+        <li>A teammate is talking about "running a cycle," or a friend just ordered something online that isn't really legal.</li>
+        <li>You've asked yourself "am I ugly?" and an app or a comment section was happy to answer.</li>
       </ul>
-      <p style="margin:0">Lots of students feel this, and it's mostly by design. A lot of this content is built to make you feel behind, so you keep watching and buying.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">The words you keep hearing</span><span class="sticker">New words, same old trick: find a flaw.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>Looksmaxing</dt>
-        <dd>Trying to max out how good you look. It can mean a haircut and sleep. Online, it often means ranking every part of your face.</dd>
-        <dt>Mogging</dt>
-        <dd>Looking so much better than someone that they "lose." It turns every photo into a contest.</dd>
-        <dt>Mewing</dt>
-        <dd>Pressing your tongue to the roof of your mouth to reshape your jaw. There's no good evidence it changes your bones.</dd>
-        <dt>Bone smashing</dt>
-        <dd>Tapping or hitting your face with hard objects to "build" bone. It can break bones and damage nerves. Doctors say don't.</dd>
-        <dt>Rating and "PSL"</dt>
-        <dd >Scoring faces on a scale. The scale was invented by forums, not science, and it changes based on who's posting.</dd>
-        <dt>Bigorexia</dt>
-        <dd>Feeling like you're never muscular enough, even when you're strong. The clinical name is muscle dysmorphia, and it's real.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">💸 Follow the money</span><span class="sticker">First they find a flaw. Then they sell the fix.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>A lot of looksmax and gym creators sell something: a course, a jaw trainer, a supplement, a "glow up" plan. The easiest way to sell a fix is to convince you that you're broken first.</p>
-      <p style="margin:0">Rating videos also get huge numbers of comments, because people argue about the scores. The app shows you more of whatever keeps you arguing.</p>
-      <p class="worst">The worst part: the more you watch, the more "flaws" you learn to see in yourself. Most of them you never noticed before.</p>
+      <p style="margin:0">This page focuses on the pressure aimed at guys, because a lot of it is. Anyone of any gender can feel it. The mechanics underneath are the same: find a flaw, then sell the fix.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Your body is on its own schedule.</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">📏</span><strong>Growth</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Many guys keep growing and filling out into their late teens and early twenties. Comparing yourself to a 24 year old influencer is not a fair fight.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">💪</span><strong>Muscle</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Your body builds muscle much more easily after your growth spurt. If the guy next to you gains faster, it's mostly timing, not effort.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧬</span><strong>Genes</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Your bone structure is mostly set by your genes. No video, tongue trick, or app is going to change it.</p></details>
+    <h3 style="margin-top:28px">Your body runs on its own clock</h3>
+    <figure class="fig">
+<svg class="growth" viewBox="0 0 400 318" role="img" aria-label="Schematic chart of how fast height grows by age. Girls' growth spurt usually peaks around ages 10 to 12. Boys' spurt usually peaks around 12 to 14, at roughly 9 to 10 centimeters a year, then slows to almost nothing by 17 to 19. Strength gains in boys tend to peak during and shortly after the spurt. Most fitness influencers are adults who finished growing years ago." xmlns="http://www.w3.org/2000/svg">
+  <rect x="161.6" y="60" width="55.8" height="190" fill="#E8F0FB"/>
+  <g font-size="12" fill="#6E6E73"><line x1="50" y1="250" x2="385" y2="250" stroke="#E5E5EA"/><text x="44" y="254" text-anchor="end">0</text><line x1="50" y1="155" x2="385" y2="155" stroke="#E5E5EA"/><text x="44" y="159" text-anchor="end">5</text><line x1="50" y1="60" x2="385" y2="60" stroke="#E5E5EA"/><text x="44" y="64" text-anchor="end">10</text><line x1="50.0" y1="250" x2="50.0" y2="255" stroke="#86868B"/><text x="50.0" y="270" text-anchor="middle">8</text><line x1="105.8" y1="250" x2="105.8" y2="255" stroke="#86868B"/><text x="105.8" y="270" text-anchor="middle">10</text><line x1="161.6" y1="250" x2="161.6" y2="255" stroke="#86868B"/><text x="161.6" y="270" text-anchor="middle">12</text><line x1="217.4" y1="250" x2="217.4" y2="255" stroke="#86868B"/><text x="217.4" y="270" text-anchor="middle">14</text><line x1="273.2" y1="250" x2="273.2" y2="255" stroke="#86868B"/><text x="273.2" y="270" text-anchor="middle">16</text><line x1="329.0" y1="250" x2="329.0" y2="255" stroke="#86868B"/><text x="329.0" y="270" text-anchor="middle">18</text><line x1="384.8" y1="250" x2="384.8" y2="255" stroke="#86868B"/><text x="384.8" y="270" text-anchor="middle">20</text></g>
+  <line x1="50" y1="250" x2="385" y2="250" stroke="#86868B"/>
+  <path d="M50.0 143.6 C54.6 142.7 68.6 142.3 77.9 137.9 C87.2 133.5 98.4 123.3 105.8 117.0 C113.2 110.7 117.9 103.4 122.5 99.9 C127.2 96.4 129.5 95.5 133.7 96.1 C137.9 96.7 141.6 96.4 147.6 103.7 C153.7 111.0 163.0 127.5 170.0 139.8 C176.9 152.2 181.6 165.1 189.5 177.8 C197.4 190.5 208.1 206.0 217.4 215.8 C226.7 225.6 236.0 231.6 245.3 236.7 C254.6 241.8 261.6 244.0 273.2 246.2 C284.8 248.4 296.5 249.4 315.1 250.0 C333.6 250.6 373.2 250.0 384.8 250.0" fill="none" stroke="#AEAEB2" stroke-width="3" stroke-dasharray="6 5"/>
+  <path d="M50.0 145.5 C54.6 146.4 68.6 149.6 77.9 151.2 C87.2 152.8 96.5 153.7 105.8 155.0 C115.1 156.3 124.4 162.6 133.7 158.8 C143.0 155.0 153.7 143.6 161.6 132.2 C169.5 120.8 175.5 100.5 181.1 90.4 C186.7 80.3 190.0 72.0 195.1 71.4 C200.2 70.8 205.3 75.8 211.8 86.6 C218.3 97.4 226.2 118.9 234.1 136.0 C242.0 153.1 250.4 174.6 259.2 189.2 C268.1 203.8 277.8 215.2 287.1 223.4 C296.4 231.6 305.8 234.8 315.1 238.6 C324.4 242.4 331.3 244.3 342.9 246.2 C354.6 248.1 377.8 249.4 384.8 250.0" fill="none" stroke="#0071E3" stroke-width="3.5"/>
+  <path d="M195.1 46 L250.9 46" stroke="#1D1D1F" stroke-width="1.5"/>
+  <g font-size="13" font-weight="700">
+    <text x="189.5" y="22" text-anchor="middle" fill="#0058B0">Boys' peak: often 12 to 14</text>
+    <text x="55.6" y="80.9" fill="#8E8E93">Girls: earlier</text>
+    <text x="256.5" y="50" fill="#1D1D1F" font-size="12">strength gains peak</text>
+    <text x="256.5" y="65" fill="#1D1D1F" font-size="12">during and just after</text>
+    <text x="385" y="117.0" text-anchor="end" fill="#1D1D1F">Most influencers:</text>
+    <text x="385" y="132.2" text-anchor="end" fill="#6E6E73" font-size="12" font-weight="400">20s and up, done growing</text>
+  </g>
+  <text x="218" y="292" text-anchor="middle" font-size="12" fill="#6E6E73">Age</text>
+  <text x="14" y="155" font-size="12" fill="#6E6E73" transform="rotate(-90 14 155)" text-anchor="middle">Height gain, cm per year</text>
+</svg>
+      <figcaption>Schematic of average growth, drawn from pediatric growth research. Individuals vary by years in either direction, and both early and late are normal.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#0071E3"></span><div><strong>The height spurt</strong><p>For boys, the fastest growth usually comes somewhere between 12 and 14, at roughly 9 to 10 cm a year at the peak. Recent US data suggests it's arriving a little earlier than it did a generation ago. Some guys keep filling out into their late teens and early 20s.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Strength comes during and after</strong><p>Studies that track boys over time find the biggest jumps in strength happen during the spurt or within about a year after it. If the guy next to you is gaining faster, timing explains a lot of it.</p></div></div>
+      <div class="region"><span class="dot" style="background:#AEAEB2"></span><div><strong>Genes set the frame</strong><p>Your bone structure, jaw shape and height range are mostly set by genetics and growth. Training, food and sleep change what you build on that frame. Tongue tricks and apps don't change the frame.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Gym culture: the good and the grind</span><span class="sticker">Train for you, not for the camera.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The words you keep hearing</span><span class="sticker">New vocabulary, same move: find a flaw.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>👍 The good</dt>
-        <dd >Lifting is great for your body, mood, sleep, and stress. Training with friends is one of the best habits you can build.</dd>
-        <dt>😬 The grind</dt>
-        <dd>When missing a workout feels like failing, when you can't skip a session even when you're sick or hurt, or when your mood depends on the mirror, the gym is running you.</dd>
-        <dt>📸 The physique online</dt>
-        <dd>Many bodies you see online are lit, posed, pumped up right before the photo, or filtered. Some are on steroids and don't say so.</dd>
+        <dt>Looksmaxing</dt>
+        <dd>Maximizing how you look. It can mean a haircut and better sleep. In a lot of online spaces, it means scoring every part of your face.</dd>
+        <dt>Mogging</dt>
+        <dd>Looking so much better than someone that they "lose." It turns every group photo into a contest.</dd>
+        <dt>Mewing</dt>
+        <dd>Pressing your tongue to the roof of your mouth to reshape your jaw. There's no good evidence it changes bone structure in teens or adults.</dd>
+        <dt>Bone smashing</dt>
+        <dd>Hitting your face with hard objects to "build" bone. It can cause fractures and nerve damage. Doctors are clear: don't.</dd>
+        <dt>PSL and face ratings</dt>
+        <dd>Scoring faces on a scale invented by forums, not science. The "rules" shift depending on who's posting.</dd>
+        <dt>"It's over" thinking</dt>
+        <dd>Some looksmax spaces push the idea that your face decides your whole future, so there's no point trying. That's a worldview being sold to you, not a finding. Relationships, friendships and careers are built on far more than bone structure.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What's in the shaker?</span><span class="sticker">Supplements aren't checked before they're sold.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">How common this is.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🥤 Protein powder</dt>
-        <dd>Most teens get enough protein from regular food. Powder is a convenience, not a requirement.</dd>
-        <dt>⚡ Pre-workout and energy drinks</dt>
-        <dd>Often packed with a lot of caffeine. That can mean a racing heart, shaky hands, and bad sleep, which hurts your training.</dd>
-        <dt>💊 "Natural" supplements</dt>
-        <dd>Supplements don't have to be approved by the FDA before they're sold. Some have been found to contain ingredients that aren't on the label.</dd>
-        <dt>💉 Steroids and SARMs</dt>
-        <dd >Anabolic steroids are illegal without a prescription. In teens they can stop growth early, and they're linked to acne, mood swings, depression when you stop, and shrinking testicles. SARMs are sold as "research chemicals," and the FDA has warned about liver damage, heart attack, and stroke.</dd>
+        <dt>Muscle-building behavior is widespread.</dt>
+        <dd>A University of Minnesota team surveyed 2,793 students at 20 urban middle and high schools. About 35% had used protein powders or shakes, and about 5% said they had used steroids. Most of the five muscle-building behaviors they asked about were more common in boys.</dd>
+        <dt>Filters feed it.</dt>
+        <dd>A 2024 Canadian study of 912 teens and young adults found that guys who often used photo filters scored higher on drive for size and on how much muscle concerns interfered with daily life.</dd>
+        <dt>Guys get eating disorders.</dt>
+        <dd>In a national US survey, about 2% of men had binge eating disorder at some point in their lives. Men with eating disorders often get missed, because restricting, bulking and over-training can look like discipline.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🍽 When eating turns into a rule book</span><span class="sticker">Boys get eating disorders too.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What's actually in the product</span><span class="sticker">Labels on muscle products are often wrong.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Bulking, cutting, skipping meals to "get shredded," or eating only "clean" foods can slide into an eating disorder. People often picture eating disorders as a girl thing. Boys and men get them too, and they often get missed because the behavior looks like dedication.</p>
-      <p class="worst">Signs to take seriously: panic about missing a meal plan, hiding how you eat, feeling dizzy or cold all the time, or exercising to "undo" food.</p>
+      <p><b>Supplements.</b> The FDA doesn't approve supplements before they're sold. A 2018 analysis of FDA warnings found 776 supplements that contained hidden drug ingredients. About 12% were sold for muscle building, and those most often contained synthetic steroids.</p>
+      <p><b>SARMs.</b> Researchers bought 44 products sold online as SARMs and tested them. Only 52% actually contained a SARM. 39% contained a different unapproved drug, and only 41% had the amount the label claimed. The FDA has warned that SARMs are linked to liver damage, heart attack and stroke.</p>
+      <p><b>Steroids.</b> Anabolic steroids are illegal without a prescription. In teens they can close growth plates early, which stops height growth for good. They're also linked to acne, mood swings, depression when stopping, and shrinking testicles.</p>
+      <p class="worst">Many physiques online are lit, posed, pumped up right before the photo, filtered, or built with drugs nobody mentions.</p>
       </div>
     </details>
   </div>
@@ -511,149 +566,121 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Taking your mirror back</h2>
+    <h2 id="h-practice">Take your mirror back</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Boring habits beat secret tricks.</h3>
+      <div class="fold-label">What actually builds a body</div>
+      <h3 class="sticker">The boring basics beat every secret.</h3>
+      <p>The American Academy of Pediatrics supports strength training for teens when it's supervised and focused on technique. Here's what that looks like.</p>
+      <div class="levers">
+        <div class="lever"><b>Train for performance</b><span>A faster mile, a first pull-up, making varsity. Goals about what your body does hold up better than goals about how it looks.</span></div>
+        <div class="lever"><b>Sleep like it matters</b><span>Teens need 8 to 10 hours. Recovery happens there, not in a shaker bottle.</span></div>
+        <div class="lever"><b>Food first</b><span>Most teens get enough protein from regular meals. Powder is a convenience, not a requirement.</span></div>
+        <div class="lever"><b>Real coaching</b><span>An athletic trainer, coach, or doctor who knows you beats a stranger with a shirtless profile picture.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">Protect your head</div>
+      <h3 class="sticker">Moves for the feed and the mirror.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🎯 Train for something you can do.<span class="row-cue" aria-hidden="true"></span></summary><p>Pick goals about what your body does: run a mile faster, do your first pull up, make the team. These feel better than goals about how it looks.</p></details>
-        <details class="row"><summary>🧹 Clean up your feed.<span class="row-cue" aria-hidden="true"></span></summary><p>Tap "not interested" on rating and "fix your face" videos. Follow athletes for skills, not physiques. The algorithm learns fast.</p></details>
-        <details class="row"><summary>🛑 Ask "what are they selling?"<span class="row-cue" aria-hidden="true"></span></summary><p>Before you believe a creator, find the link in their bio. If they profit from you feeling ugly, take that into account.</p></details>
-        <details class="row"><summary>😴 Do the boring stuff.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, real meals, water, and showing up consistently do more for how you look and feel than any trick online.</p></details>
-        <details class="row"><summary>🪞 Limit mirror checks.<span class="row-cue" aria-hidden="true"></span></summary><p>Checking a "flaw" over and over makes it look bigger. Try setting a rule: one look before you leave, then done.</p></details>
-        <details class="row"><summary>🧑‍⚕️ Ask a real expert.<span class="row-cue" aria-hidden="true"></span></summary><p>A doctor, athletic trainer, or coach who knows you beats a stranger with a shirtless profile picture.</p></details>
+        <details class="row"><summary><span class="num">1</span> Ask "what are they selling?"<span class="row-cue" aria-hidden="true"></span></summary><p>Check the link in bio before you believe a creator. If they profit from you feeling ugly, weigh their advice that way.</p></details>
+        <details class="row"><summary><span class="num">2</span> Reset the algorithm.<span class="row-cue" aria-hidden="true"></span></summary><p>Tap "not interested" on rating and "fix your face" videos, or reset your recommendations in settings. Follow athletes for skills, not physiques.</p></details>
+        <details class="row"><summary><span class="num">3</span> Cap the body checks.<span class="row-cue" aria-hidden="true"></span></summary><p>Checking a "flaw" again and again makes it look bigger. Try one look before you leave, then done.</p></details>
+        <details class="row"><summary><span class="num">4</span> Let rest days be rest days.<span class="row-cue" aria-hidden="true"></span></summary><p>Muscle grows during recovery. If skipping a session makes you panic, that panic is worth paying attention to.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Mewing, steroids, supplements. Myth or fact?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">SARMs, supplements, mewing. Myth or fact?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Tap your answer. No score, just checking.</p>
-      <div class="scenario"><p>Mewing can reshape your jaw if you do it long enough.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. There's no good evidence mewing changes bone structure in teens or adults. Your jaw is mostly set by genes and growth.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. There's no good evidence mewing changes bone structure in teens or adults. Your jaw is mostly set by genes and growth.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Strength training is safe for middle and high schoolers when it's supervised and done with good form.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. Pediatricians support it. It builds strength, protects against injury, and helps your mood.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. Pediatricians support it. It builds strength, protects against injury, and helps your mood.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>If a supplement is sold at a big store, it's been tested and approved.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Supplements don't need FDA approval before they're sold. Some have been found with hidden ingredients.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Supplements don't need FDA approval before they're sold. Some have been found with hidden ingredients.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Steroids can stop you from growing taller.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. In teens, steroids can close growth plates early. Once they close, growth stops.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. In teens, steroids can close growth plates early. Once they close, growth stops.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Boys don't really get eating disorders.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. They do, and they're often missed because restricting and over-exercising can look like being &quot;disciplined.&quot;">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. They do, and they're often missed because restricting and over-exercising can look like being &quot;disciplined.&quot;">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
+      <div class="scenario">
+        <p>Mewing can reshape your jaw if you do it long enough.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Myth. There&#x27;s no good evidence mewing changes bone structure in teens or adults.">Myth</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. There&#x27;s no good evidence mewing changes bone structure in teens or adults.">Fact</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Supervised strength training is safe for high schoolers.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. The American Academy of Pediatrics supports it with good technique and supervision. It builds strength and helps prevent injury.">Myth</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Fact. The American Academy of Pediatrics supports it with good technique and supervision. It builds strength and helps prevent injury.">Fact</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>If a supplement is sold at a big store, the FDA has approved it.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Myth. Supplements don&#x27;t need FDA approval before they&#x27;re sold, and hundreds have been caught with hidden drugs.">Myth</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Supplements don&#x27;t need FDA approval before they&#x27;re sold, and hundreds have been caught with hidden drugs.">Fact</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>SARMs are a safer alternative to steroids.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Myth. They aren&#x27;t approved for any use, the FDA has warned about liver and heart damage, and in one test only about half of products sold as SARMs even contained one.">Myth</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. They aren&#x27;t approved for any use, the FDA has warned about liver and heart damage, and in one test only about half of products sold as SARMs even contained one.">Fact</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Guys don't really get eating disorders.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Myth. They do, and it often gets missed because restricting and over-exercising can look like dedication.">Myth</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. They do, and it often gets missed because restricting and over-exercising can look like dedication.">Fact</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Useful tip or sales pitch? You vote.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Useful advice or sales pitch? Vote first.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 10 minutes · no materials needed</p>
-      <ol class="tight" style="padding-left:1.3em">
-        <li>The leader reads each claim out loud, like it's from a video.</li>
-        <li>Everyone votes with a hand signal: thumbs up for "useful," thumbs down for "sales pitch," flat hand for "not sure."</li>
-        <li>Then the leader taps the claim to show what's actually going on.</li>
-      </ol>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Spot the sales pitch · 1 of 5</span><span class="sticker">"This jawline routine fixed my face in 30 days. Link in bio."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Sales pitch. Bone structure doesn't change in 30 days, and the link is how they make money.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Spot the sales pitch · 2 of 5</span><span class="sticker">"Sleep 8 to 9 hours. Recovery is where you grow."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Useful. Sleep is when your body builds muscle and when teens do most of their growing.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Spot the sales pitch · 3 of 5</span><span class="sticker">"You're a 4 out of 10. Here's how to get to a 7."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Sales pitch. The scale is made up, and the fix is usually something for sale.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Spot the sales pitch · 4 of 5</span><span class="sticker">"Start light, learn form first, add weight slowly."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Useful. That's what coaches and athletic trainers teach.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Spot the sales pitch · 5 of 5</span><span class="sticker">"Natty or not? I'll never tell."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Not sure, which is the point. If someone won't say whether they use steroids, don't use their body as your goal.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li>Why do you think rating videos get so many views?</li>
-        <li><span >If a younger kid you care about started watching this stuff, what would you tell them?</span></li>
-        <li>What would a healthier version of gym culture at our school look like?</li>
-      </ul>
+      <p class="tap-hint" style="margin-top:0">For advisory or class, about 10 minutes, no materials. The leader reads each claim like it's from a video. Everyone votes: thumbs up for useful, thumbs down for sales pitch, flat hand for not sure. Then tap to reveal.</p>
+        <details class="row"><summary><span class="num">1</span> "This jawline routine fixed my face in 30 days. Link in bio."<span class="row-cue" aria-hidden="true"></span></summary><p>Sales pitch. Bone structure doesn't change in a month, and the link is the business model.</p></details>
+        <details class="row"><summary><span class="num">2</span> "Sleep 8 to 10 hours. Recovery is where you grow."<span class="row-cue" aria-hidden="true"></span></summary><p>Useful. Sleep is when muscle repairs, and teens need more of it than adults do.</p></details>
+        <details class="row"><summary><span class="num">3</span> "You're a 4 out of 10. Here's how to get to a 7."<span class="row-cue" aria-hidden="true"></span></summary><p>Sales pitch. The scale is made up, and the fix is usually something for sale.</p></details>
+        <details class="row"><summary><span class="num">4</span> "Start light, learn form, add weight slowly."<span class="row-cue" aria-hidden="true"></span></summary><p>Useful. It's what coaches, athletic trainers and pediatricians recommend.</p></details>
+        <details class="row"><summary><span class="num">5</span> "Natty or not? I'll never tell."<span class="row-cue" aria-hidden="true"></span></summary><p>The answer is "not sure," which is the point. If someone won't say whether they use steroids, don't use their body as your target.</p></details>
+      <p style="margin-top:14px"><b>Talk about it.</b> Why do rating videos get so many views? If a younger kid you care about started watching this stuff, what would you tell them? What would a healthier gym culture at our school look like?</p>
       <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep the talk on the content, not anyone's body. Nobody should be asked to rate, describe, or compare themselves or anyone in the room.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Your friend wants to try it. What do you say?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real situations. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the move you'd want a friend to make.</p>
-      
-      <div class="scenario" >
-        <p>A teammate tells you he ordered SARMs online and offers to split them with you.</p>
+      <div class="scenario">
+        <p>A teammate says he ordered SARMs online and offers to split them with you before the season.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="SARMs aren't approved, labels are often wrong, and the FDA has warned about liver and heart damage.">Say yes, he said they're safe</button>
-          <button class="choice" type="button" data-fb="good" data-msg="You protect yourself and give him a way out without a lecture.">"I'm good. You might want to ask the trainer about those first."</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's looking out for him, not snitching. These can do real harm.">Tell the coach or athletic trainer privately if you're worried</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Half of these products aren&#x27;t what the label says, and the FDA has warned about liver and heart damage.">Say yes, he says they're clean</button>
+          <button class="choice" type="button" data-fb="good" data-msg="You protect yourself and give him an opening without a lecture.">"I'm good. Might be worth asking the trainer about those first."</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That&#x27;s looking out for him, not snitching. These can do real harm, and adults can step in without making it a scene.">Tell the athletic trainer or coach privately if you're worried</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario">
-        <p>You've been working out every day. You get sick, and the idea of skipping makes you anxious.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>A group chat starts ranking everyone's faces from the formal photos, one to ten.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Every rating posted is a screenshot someone will see. The people at the bottom of the list will remember it for years.">Add your ratings, it's just a joke</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Short, clear, and it gives others cover to stop too.">"Not doing this," then mute or leave the chat</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than joining in. If someone&#x27;s being targeted, a private message to them or a word to an adult helps more.">Stay quiet and don't rate anyone</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>You've been training every day. You get sick, and the idea of skipping makes you anxious.</p>
         <div class="choices" role="group" aria-label="Choose a response">
           <button class="choice" type="button" data-fb="nope" data-msg="Training sick slows recovery and can make you sicker. Rest is part of training.">Push through, rest is for the weak</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That anxiety is information. If it's strong or keeps happening, talk to someone about it.">Take the days off and notice the anxiety</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That anxiety is information. If it&#x27;s strong or keeps coming back, talk to someone about it.">Take the days off and notice how hard that feels</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">What to do about the feed right now</span><span class="sticker">Mute the raters. Your face isn't a test.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🔕 Mute the raters.</dt>
-        <dd>Mute or block accounts that score faces or bodies. You'll stop seeing your own face as a list of problems.</dd>
-        <dt>🔁 Reset your recommendations.</dt>
-        <dd>Most apps let you reset or refresh your feed in settings. It's a quick fresh start.</dd>
-        <dt>📵 No rating apps.</dt>
-        <dd>"Rate my face" apps and AI raters are built to keep you coming back. The score changes with lighting and angle.</dd>
-        <dt>🙅 Don't post for ratings.</dt>
-        <dd>Posting your face or body for strangers to score invites cruelty, and screenshots last.</dd>
-      </dl>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one decent answer. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
@@ -668,6 +695,20 @@
       <p>Tell a counselor, the health office, or a trusted adult. You can also call or text <strong>988</strong>, any time, day or night.</p>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Eisenberg, M. E., Wall, M., &amp; Neumark-Sztainer, D. (2012). Muscle-enhancing behaviors among adolescent girls and boys. <i>Pediatrics</i>, 130(6), 1019&ndash;1026.</li>
+        <li>Ganson, K. T., et al. (2024). Photo filter use and muscle dysmorphia in a sample of 912 Canadian adolescents and young adults. <i>Body Image</i>. (Study as summarized by the authors; see the journal for the full title.)</li>
+        <li>Hudson, J. I., Hiripi, E., Pope, H. G., &amp; Kessler, R. C. (2007). The prevalence and correlates of eating disorders in the National Comorbidity Survey Replication. <i>Biological Psychiatry</i>, 61(3), 348&ndash;358.</li>
+        <li>Tucker, J., et al. (2018). Unapproved pharmaceutical ingredients included in dietary supplements associated with US Food and Drug Administration warnings. <i>JAMA Network Open</i>, 1(6), e183337.</li>
+        <li>Van Wagoner, R. M., et al. (2017). Chemical composition and labeling of substances marketed as selective androgen receptor modulators and sold via the internet. <i>JAMA</i>, 318(20), 2004&ndash;2010.</li>
+        <li>Stricker, P. R., Faigenbaum, A. D., McCambridge, T. M., &amp; AAP Council on Sports Medicine and Fitness. (2020). Resistance training for children and adolescents. <i>Pediatrics</i>, 145(6), e20201011.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -678,16 +719,16 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">Something about my body I've started worrying about since I started watching this content</label>
+      <label class="prompt" for="tx-1">Something about my body I started worrying about after I started watching this content</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">What my body can do that I'm proud of</label>
+      <label class="prompt" for="tx-2">What my body can do now that it couldn't a year ago</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">Who I'd ask for real advice about training or eating</label>
+      <label class="prompt" for="tx-3">The person I'd actually trust for advice on training or eating, and why</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">One account I could mute, and how I might feel after</label>
+      <label class="prompt" for="tx-4">One account or creator I could mute, and what they're selling</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
       <label class="prompt" for="tx-5">What I'd tell a younger kid who just found looksmax videos</label>
@@ -697,7 +738,7 @@
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You are not a score. Your body is growing on its own schedule, and the people who matter most to you are not rating your jaw.</p>
+      <p>You are not a score. Your body is on its own schedule, and the people who matter most to you are not rating your jaw.</p>
     </div>
     </div>
   </div>
@@ -713,7 +754,7 @@
     <div class="card" id="checkin-card">
       <div class="ci-step">
         <h3 id="ci-1">How much did your looks or your body take up your mind today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -735,8 +776,7 @@
           <button type="button" class="chip" aria-pressed="false">a comment someone made</button>
           <button type="button" class="chip" aria-pressed="false">missing a workout</button>
           <button type="button" class="chip" aria-pressed="false">what I ate</button>
-          
-          <button type="button" class="chip" aria-pressed="false" >comparing myself to teammates</button>
+          <button type="button" class="chip" aria-pressed="false">comparing myself to teammates</button>
           <button type="button" class="chip" aria-pressed="false">honestly, I felt fine</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
@@ -744,42 +784,42 @@
 
       <div class="ci-step">
         <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <p class="ci-hint">Pick the one closest to today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">🪞 Stuck on a flaw</button>
-          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">📉 Behind everyone else</button>
-          <button type="button" class="choice" data-path="p-rules" aria-pressed="false">📋 Rules about food or workouts</button>
-          <button type="button" class="choice" data-path="p-fine" aria-pressed="false">🌤 Pretty okay today</button>
+          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">Stuck on a flaw</button>
+          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">Behind everyone else</button>
+          <button type="button" class="choice" data-path="p-rules" aria-pressed="false">Rules about food or workouts</button>
+          <button type="button" class="choice" data-path="p-fine" aria-pressed="false">Pretty okay today</button>
         </div>
 
         <div class="path-panel" id="p-stuck" hidden>
           <h4>What this might mean</h4>
-          <p>Staring at one feature makes it look bigger. Your brain is zoomed in. Other people see your whole face, and mostly they see you.</p>
+          <p>Staring at one feature makes it look bigger. Your brain is zoomed in. Other people see your whole face, and mostly they just see you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏸</span>Put the mirror or camera down for the next hour.</li>
-            <li><span class="e" aria-hidden="true">🔕</span>Mute one account that made it worse.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Say to yourself what you'd tell a friend who said this about themselves.</li>
+            <li>Put the mirror or camera down for the next hour.</li>
+            <li>Mute one account that made it worse.</li>
+            <li>Say to yourself what you'd tell a friend who said this about himself.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-behind" hidden>
           <h4>What this might mean</h4>
-          <p>Bodies grow on different schedules. You're comparing your middle to someone else's highlight reel, and sometimes to a filter.</p>
+          <p>Bodies grow on different schedules. You may be comparing your middle chapter to someone else's highlight reel, or to a filter.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📏</span>Remember the timing: muscle and height often come later than you expect.</li>
-            <li><span class="e" aria-hidden="true">🎯</span>Pick one goal about what your body can do, not how it looks.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk to a coach or doctor about what's realistic for you.</li>
+            <li>Remember the timing: strength and size often come later than you expect.</li>
+            <li>Pick one goal about what your body can do.</li>
+            <li>Ask a coach or doctor what's realistic for you.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-rules" hidden>
           <h4>What this might mean</h4>
-          <p>When rules about eating or training make you anxious, they've stopped helping. That's worth taking seriously.</p>
+          <p>When rules about eating or training make you anxious, they've stopped helping you. That's worth taking seriously.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🍽</span>Eat a regular meal today, even if it's off plan.</li>
-            <li><span class="e" aria-hidden="true">🛌</span>Let a rest day be a rest day.</li>
-            <li><span class="e" aria-hidden="true">🧑‍⚕️</span>Talk to the health office, a counselor, or your doctor this week.</li>
+            <li>Eat a regular meal today, even if it's off plan.</li>
+            <li>Let a rest day be a rest day.</li>
+            <li>Talk to the health office, a counselor, or your doctor this week.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-fine" hidden>
@@ -787,9 +827,9 @@
           <p>Good. Notice what helped, so you can come back to it.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>What was different today? Less scrolling, more sleep, good people?</li>
-            <li><span class="e" aria-hidden="true">🤝</span>Check on a friend who's been deep in this content.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Enjoy it.</li>
+            <li>What was different today? Less scrolling, more sleep, good people?</li>
+            <li>Check on a friend who's been deep in this content.</li>
+            <li>Enjoy it.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>

@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ----- lesson figure + callouts ----- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.97rem; line-height:1.5; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:16px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🏫 High School · Transitions</div>
+  <div class="eyebrow">High School · Transitions</div>
   <h1>New School, Who Dis</h1>
-  <p class="tagline">Because starting over somewhere new is a lot, even when it's exciting.</p>
+  <p class="tagline">Why the first months feel long, what the research says about making friends from scratch, and how to speed it up.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +476,70 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why starting somewhere new feels so big</h2>
+    <h2 id="h-understand">Why new takes longer than it should</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">New building, new faces. Nervous is normal.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know where to go now. You don't know who to sit with.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You're starting upper school and it feels like everyone else already knows the rules.</li>
-        <li>You got lost looking for a classroom, or you're worried you will.</li>
-        <li>Your old friends ended up in different classes, sections, or lunch periods.</li>
-        <li>You don't know where to sit at lunch yet.</li>
-        <li>You watched stories of other people's first week and it looked like they already had a group.</li>
-        <li>You're excited and nervous at the same time, and it's hard to tell which one is winning.</li>
+        <li>You transferred in, and everyone else has had years to form their groups.</li>
+        <li>You moved from another state or another country, and the unwritten rules here are different.</li>
+        <li>Your old friends are at a different school now, and the group chat is getting quieter.</li>
+        <li>You're one of very few students here who share your background, your faith, or your home language.</li>
+        <li>You've had good conversations with people in class, but nobody's turned into an actual friend yet.</li>
+        <li>Everyone's stories make it look like they found their people on day two.</li>
       </ul>
-      <p style="margin:0">Starting somewhere new is one of the biggest changes you'll go through, and almost everyone around you is feeling some version of it.</p>
+      <p style="margin:0">Being new is hard at any age. College, a first job, and a new city all bring it back. What follows is what the research says about the part nobody explains: how long it really takes, and what speeds it up.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What changes all at once</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🗺</span><strong>The place</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">New building, new routines, new rules. Your brain is working overtime just to figure out where to go and when.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📚</span><strong>The work</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Harder classes, more independence, and grades that feel like they count more.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">👥</span><strong>The people</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Friend groups reshuffle. People you knew may change, and lots of people you don't know yet.</p></details>
+    <h3 style="margin-top:28px">Friendship runs on hours</h3>
+    <p>Communication researcher Jeffrey Hall surveyed adults who had just moved to a new city and first-year college students making friends from scratch. His estimate: about 50 hours together to go from acquaintance to casual friend, about 90 to become friends, and more than 200 for a close friend.</p>
+    <figure class="fig">
+<svg viewBox="0 0 400 262" role="img" aria-label="Timeline of hours spent together. About 50 hours to go from acquaintance to casual friend, about 90 hours to friend, and more than 200 hours to close friend. At three hours a week of real hangout time, 50 hours takes about four months." xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="ns-g" x1="0" x2="1"><stop offset="0" stop-color="#D2D2D7"/><stop offset="1" stop-color="#0071E3"/></linearGradient></defs>
+  <rect x="24" y="106" width="352.0" height="8" rx="4" fill="url(#ns-g)"/>
+  <line x1="24.0" y1="70" x2="24.0" y2="104" stroke="#C7C7CC"/><text x="20.0" y="44" font-size="15" font-weight="700" fill="#1D1D1F" text-anchor="start">Acquaintance</text><circle cx="24.0" cy="110" r="7" fill="#fff" stroke="#1D1D1F" stroke-width="3"/><line x1="104.0" y1="116" x2="104.0" y2="146" stroke="#C7C7CC"/><text x="104.0" y="166" font-size="15" font-weight="700" fill="#1D1D1F" text-anchor="middle">Casual friend</text><text x="104.0" y="184" font-size="13.5" fill="#6E6E73" text-anchor="middle">about 50 h</text><circle cx="104.0" cy="110" r="7" fill="#fff" stroke="#1D1D1F" stroke-width="3"/><line x1="168.0" y1="70" x2="168.0" y2="104" stroke="#C7C7CC"/><text x="168.0" y="44" font-size="15" font-weight="700" fill="#1D1D1F" text-anchor="middle">Friend</text><text x="168.0" y="62" font-size="13.5" fill="#6E6E73" text-anchor="middle">about 90 h</text><circle cx="168.0" cy="110" r="7" fill="#fff" stroke="#1D1D1F" stroke-width="3"/><line x1="344.0" y1="116" x2="344.0" y2="146" stroke="#C7C7CC"/><text x="338.0" y="166" font-size="15" font-weight="700" fill="#1D1D1F" text-anchor="end">Close friend</text><text x="338.0" y="184" font-size="13.5" fill="#6E6E73" text-anchor="end">200+ h</text><circle cx="344.0" cy="110" r="7" fill="#fff" stroke="#1D1D1F" stroke-width="3"/>
+  <line x1="0" y1="204" x2="400" y2="204" stroke="#E5E5EA"/>
+  <text x="0" y="228" font-size="14" fill="#1D1D1F"><tspan font-weight="700">The math:</tspan> 3 hours a week of real hangout</text>
+  <text x="0" y="248" font-size="14" fill="#1D1D1F">time gets you to 50 hours in about 4 months.</text>
+</svg>
+      <figcaption>Based on Hall (2019). These are rough averages from people's own estimates, and students got there faster than adults. The 3-hours-a-week example is ours, to show the scale.</figcaption>
+    </figure>
+    <div class="levers">
+      <div class="lever"><b>Counts a lot</b><span>Hanging out, joking around, gaming, real conversations about each other's lives.</span></div>
+      <div class="lever"><b>Counts less</b><span>Sitting near each other in class or working side by side. Small talk alone was linked to drifting apart.</span></div>
     </div>
+    <p class="stat"><b>So if it's October and you don't have a group yet,</b> that's arithmetic, not a verdict on you.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it feels so big</span><span class="sticker">You see their outsides. You feel your insides.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">People like you more than you think.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Uncertainty is tiring.</dt>
-        <dd>When you don't know what to expect, your brain stays on alert. That's why the first weeks can feel exhausting even if nothing goes wrong.</dd>
-        <dt>It looks easier for everyone else.</dt>
-        <dd>You see other people's confident outsides. You feel your own nervous insides.</dd>
-        <dt>Friend groups take time.</dt>
-        <dd>Research on friendship suggests it takes many hours together before someone feels like a real friend. A few weeks isn't long enough yet.</dd>
-        <dt>Old things end while new things start.</dt>
-        <dd>You can miss your old school, teachers, or routine even if you're glad to be somewhere new.</dd>
+        <dt>The liking gap.</dt>
+        <dd>In a 2018 set of studies, people who had just talked with someone new consistently underestimated how much the other person liked them. It showed up in first-year college students getting to know their roommates, and it lasted for months. After that awkward conversation, you probably came across better than you think.</dd>
+        <dt>Strangers want to talk more than you'd guess.</dt>
+        <dd>When commuters were asked to talk to a stranger on a train or bus, they reported a more pleasant ride than people who sat alone, even though others predicted the opposite. The researchers traced the mistake to underestimating how interested other people are in connecting.</dd>
+        <dt>Time isn't enough on its own.</dt>
+        <dd>In Hall's study, closeness grew with real conversation, joking, and hanging out, not just with being around each other. A whole semester next to someone in class can stay at "hey."</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 The first weeks online</span><span class="sticker">Friend groups aren't locked in. Not even close.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">"Do I belong here?"</span><span class="sticker">The question is normal, and it fades.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Group chats form fast. Stories show people who seem to have found their group on day two. Snap Map shows clusters of classmates hanging out. Online, the first weeks can look settled when they really aren't.</p>
-      <p class="worst">The worst part: seeing a new group chat or a photo of people hanging out can make you feel like friendships are already locked in. They aren't. Groups keep shifting all year.</p>
+      <p>In a 2011 study, first-year college students read short stories from older students: worrying about whether you belong is common at first, and it fades. Over the next three years, the Black students who got that message earned higher grades, cutting the racial achievement gap in half. It was a small study, so researchers repeated it in 2023 with almost 27,000 students at 22 colleges. A version under 30 minutes helped more students finish their first year full time, especially in groups that had historically struggled more, but only at schools that actually offered those students ways to belong.</p>
+      <p style="margin:0">If you're one of few students here from your background, the "do I belong" question can be louder. That isn't proof you're in the wrong place. It's also fair to expect the school to make room for you. You don't have to leave your home culture at the door, and finding even one club, affinity group, or adult who shares part of your background can help.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Online</span><span class="sticker">Groups look locked in. They aren't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Group chats form fast. Stories show people who seem to have a crew by the first Friday. Location sharing shows clusters of classmates you weren't with.</p>
+      <p class="worst">The worst part: online, the first weeks look settled. They're not. At 50 hours a friendship, almost nobody has a real group yet, and groups keep shifting all year.</p>
       </div>
     </details>
   </div>
@@ -465,63 +548,72 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Speed up the math</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Small moves add up fast.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🗺 Learn the place.<span class="row-cue" aria-hidden="true"></span></summary><p>Walk your schedule, find the bathrooms, figure out your locker or cubby. Less to figure out means less stress.</p></details>
-        <details class="row"><summary>🙋 Say yes to small things.<span class="row-cue" aria-hidden="true"></span></summary><p>Join one club, team, or activity. Shared activities are one of the easiest ways friendships start.</p></details>
-        <details class="row"><summary>👋 Use simple openers.<span class="row-cue" aria-hidden="true"></span></summary><p>"Is this seat taken?" "Did you get what we're supposed to do for homework?" "What lunch do you have?" Small talk is how big talk starts.</p></details>
-        <details class="row"><summary>🧑‍🏫 Find one adult.<span class="row-cue" aria-hidden="true"></span></summary><p>Pick one teacher, advisor, coach, or counselor you feel okay with. Knowing one adult makes a whole building feel smaller.</p></details>
-        <details class="row"><summary>⏳ Give it time.<span class="row-cue" aria-hidden="true"></span></summary><p>Most people take a few months to feel settled. Feeling unsure in September doesn't mean you'll feel that way in December.</p></details>
-        <details class="row"><summary>🔗 Keep some old connections.<span class="row-cue" aria-hidden="true"></span></summary><p>You can make new friends and keep old ones. It's not either or.</p></details>
+      <h3 class="sticker">More hours, better hours.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Join something that meets every week.<span class="row-cue" aria-hidden="true"></span></summary><p>A team, a club, a show, a job, a faith group. Repeated time with the same people is the hours problem solved for you.</p></details>
+        <details class="row"><summary><span class="num">2</span> Turn class time into hangout time.<span class="row-cue" aria-hidden="true"></span></summary><p>Make a specific, easy ask: "want to study for the chem test at the library Thursday?" Specific is easier to say yes to than "we should hang out sometime."</p></details>
+        <details class="row"><summary><span class="num">3</span> Go one question past small talk.<span class="row-cue" aria-hidden="true"></span></summary><p>"What lunch do you have?" is a fine start. Then ask a real follow-up: what they did at their old school, what they're into, what they think of the new coach.</p></details>
+        <details class="row"><summary><span class="num">4</span> Assume they liked talking to you.<span class="row-cue" aria-hidden="true"></span></summary><p>The liking gap says you're probably underestimating it. Act on the better guess: say hi again tomorrow.</p></details>
+        <details class="row"><summary><span class="num">5</span> Find one adult.<span class="row-cue" aria-hidden="true"></span></summary><p>An advisor, coach, teacher, or counselor you feel okay with. One adult who knows your name makes a building feel smaller, and they often know which club or person would be a good fit.</p></details>
+        <details class="row"><summary><span class="num">6</span> Keep your old friends, not as a hiding place.<span class="row-cue" aria-hidden="true"></span></summary><p>Old friends are a real support. Just keep some evenings open for the new hours to happen.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Pick a few small things. Start tomorrow.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Build your first-month plan.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick a few small things to try. Small is the point. Nothing is saved.</p>
+      <p>Pick a few. The point is hours, so choose things that repeat. Nothing is saved.</p>
       <div class="checklist" role="group" aria-label="First month plan">
-        <label><input type="checkbox"> Walk my schedule so I know where everything is.</label>
-        <label><input type="checkbox"> Sit near someone new in one class.</label>
-        <label><input type="checkbox"> Ask one person a question about homework or lunch.</label>
-        <label><input type="checkbox"> Go to one club, team, or activity meeting.</label>
+        <label><input type="checkbox"> Go to the same club, team, or activity every week for a month.</label>
+        <label><input type="checkbox"> Turn one class conversation into a plan outside class.</label>
+        <label><input type="checkbox"> Sit with the same people at lunch three days in a row.</label>
+        <label><input type="checkbox"> Ask one real follow-up question in a conversation I'd normally keep short.</label>
         <label><input type="checkbox"> Introduce myself to one adult I could go to.</label>
-        <label><input type="checkbox"> Message an old friend to check in.</label>
+        <label><input type="checkbox"> Check in with an old friend, and keep one evening free for new people.</label>
       </div>
-      <p id="test-tally" class="feedback" aria-live="polite" data-done="That's a full plan. Pick one to start with tomorrow." data-partial="{n} picked. That's a real plan. Start with the easiest one."></p>
-      <label class="prompt" for="tx-1">One thing I'm looking forward to:</label>
+      <p id="test-tally" class="feedback" aria-live="polite" data-done="That's a full plan. Start with the one that happens soonest." data-partial="{n} picked. That's a real plan. Start with the easiest one."></p>
+      <label class="prompt" for="tx-1">One thing here I'm actually looking forward to:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Lunch, old friends, new faces. What would you try?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Two moments. What would you try?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Pick the move you'd try.</p>
-      
       <div class="scenario" >
-        <p>Your middle school friends are all in different sections now, and you mostly see them in passing.</p>
+        <p>You transferred in as a junior. For three weeks you and Priya, your lab partner, have had good conversations in class. You've never seen her outside it.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Different schedules don't have to mean the end. They just need a little more effort.">Assume the friendships are over</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Keeping old friends while making new ones is exactly the balance that works.">Set up a regular thing, like lunch on Fridays, and also say yes to new people</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Comfort is good, but leaving room for new people makes the year a lot bigger.">Only hang out with old friends and skip meeting anyone new</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That's the liking gap talking. She's probably enjoying the conversations more than you think.">Decide she's just being polite</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Specific and low-pressure. It moves the friendship from class hours to hangout hours, which count more.">"Want to study for the test at the library Thursday?"</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="She might. But she may be waiting on you too, and the new person often has to go first.">Wait for her to invite you somewhere</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your old friends invite you out Friday. The robotics club you just joined has a team dinner the same night.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Both friendships get time. The dinner is the kind of hangout hour that builds a new group, and Saturday keeps the old one going.">Go to the team dinner, see your old friends Saturday</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Old friends matter, and sometimes you need the comfort. If it's every weekend, though, the new hours never happen.">Old friends, every time. They're the ones who get you</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Dropping old friends to make room isn't necessary. You can have both. It's not either or.">Skip the old friends from now on so you can fit in here</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">More than one answer works. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These make the first weeks harder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These make the first months longer.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>📱 Comparing your first week to everyone's stories.<span class="row-cue" aria-hidden="true"></span></summary><p>Stories show the highlights, not the awkward lunch tables.</p></details>
-        <details class="row"><summary>🙈 Waiting for someone to come to you.<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes they will. More often, it helps to make the first small move.</p></details>
-        <details class="row"><summary>🏃 Deciding in week two how the whole year will go.<span class="row-cue" aria-hidden="true"></span></summary><p>It's way too early to know.</p></details>
-        <details class="row"><summary>🤐 Not telling anyone it's hard.<span class="row-cue" aria-hidden="true"></span></summary><p>Adults at school expect this. Telling one of them is normal, not dramatic.</p></details>
+        <details class="row"><summary>Comparing your month one to everyone's stories.<span class="row-cue" aria-hidden="true"></span></summary><p>Stories show the highlights, not the awkward lunch tables.</p></details>
+        <details class="row"><summary>Waiting to be invited.<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes it happens. More often, the new person has to make the first small move.</p></details>
+        <details class="row"><summary>Judging the whole school by October.<span class="row-cue" aria-hidden="true"></span></summary><p>At 50 hours for a casual friend, it's too early to know.</p></details>
+        <details class="row"><summary>Hiding who you are to fit in.<span class="row-cue" aria-hidden="true"></span></summary><p>Adjusting to a new place is normal. Erasing your background, accent, or faith to blend in tends to cost more than it buys, and the friends you make that way only know part of you.</p></details>
+        <details class="row"><summary>Not telling anyone it's hard.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors and advisors expect this. Telling one of them is normal, not dramatic.</p></details>
       </div>
       </div>
     </details>
@@ -531,11 +623,24 @@
       <ul class="tight">
         <li>You dread school most mornings or feel sick before going.</li>
         <li>After a couple of months, you still feel alone most of the time.</li>
-        <li>Someone is being unkind to you or excluding you on purpose.</li>
-        <li>Your sleep, eating, or mood has changed a lot.</li>
+        <li>Someone is targeting or excluding you on purpose, including because of your race, religion, accent, or where you're from.</li>
+        <li>Your sleep, eating, or mood has changed a lot, or you feel hopeless. You can call or text <a href="tel:988">988</a> any time.</li>
       </ul>
       <p style="margin:0">A counselor helps new students all the time. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Hall, J. A. (2019). How many hours does it take to make a friend? <i>Journal of Social and Personal Relationships, 36</i>(4), 1278&ndash;1296.</li>
+        <li>Boothby, E. J., Cooney, G., Sandstrom, G. M., &amp; Clark, M. S. (2018). The liking gap in conversations: Do people like us more than we think? <i>Psychological Science, 29</i>(11), 1742&ndash;1756.</li>
+        <li>Epley, N., &amp; Schroeder, J. (2014). Mistakenly seeking solitude. <i>Journal of Experimental Psychology: General, 143</i>(5), 1980&ndash;1999.</li>
+        <li>Walton, G. M., &amp; Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. <i>Science, 331</i>(6023), 1447&ndash;1451.</li>
+        <li>Walton, G. M., et al. (2023). Where and with whom does a brief social-belonging intervention promote progress in college? <i>Science, 380</i>(6644), 499&ndash;505.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -546,26 +651,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-2">What I'm most nervous about at this school</label>
+      <label class="prompt" for="tx-2">What I'm most nervous about here, and what I'm telling myself it means</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-3">What I'm actually looking forward to</label>
+      <label class="prompt" for="tx-3">Where my hangout hours could come from this month</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-4">Something I already know how to do that will help me here</label>
+      <label class="prompt" for="tx-4">A time I was new before and it got better. What helped?</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">One person, club, or place that feels a little bit safe</label>
+      <label class="prompt" for="tx-5">One person, club, or place where I can be fully myself, including my background</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">What I'd tell a younger kid starting here next year</label>
+      <label class="prompt" for="tx-6">What I'd tell the next transfer student, a year from now</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Every person who looks settled here had a first day too. You're allowed to be new for a while.</p>
+      <p>Friendship takes hours, and you just got here. You're allowed to be new for a while. Keep adding hours.</p>
     </div>
     </div>
   </div>
@@ -611,11 +716,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">🫥 Feeling alone</button>
-          <button type="button" class="choice" data-path="p-overwhelm" aria-pressed="false">🌊 Overwhelmed by everything</button>
-          <button type="button" class="choice" data-path="p-miss" aria-pressed="false">🏡 Missing how things were</button>
-          <button type="button" class="choice" data-path="p-left" aria-pressed="false">📱 Left out by what I saw online</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Finding my way</button>
+          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">Feeling alone</button>
+          <button type="button" class="choice" data-path="p-overwhelm" aria-pressed="false">Overwhelmed by everything</button>
+          <button type="button" class="choice" data-path="p-miss" aria-pressed="false">Missing how things were</button>
+          <button type="button" class="choice" data-path="p-left" aria-pressed="false">Left out by what I saw online</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Finding my way</button>
         </div>
 
         <div class="path-panel" id="p-alone" hidden>

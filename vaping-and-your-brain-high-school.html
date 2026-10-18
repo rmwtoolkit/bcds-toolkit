@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figures */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:center; background:var(--paper); border-radius:14px; padding:14px 16px; margin:12px 0; }
+  .stat-n { font-size:2rem; font-weight:700; letter-spacing:-.03em; line-height:1; color:var(--ink); }
+  .stat-t { font-size:.95rem; line-height:1.45; color:var(--ink); }
+  .stat-t small { display:block; color:var(--ink-soft); font-size:.8rem; margin-top:3px; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:14px 0; }
+  .research b { display:block; font-size:.78rem; letter-spacing:.04em; color:var(--ink-soft); font-weight:600; margin-bottom:2px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">💨 High School · Looking out for each other</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>Vaping and Your Brain</h1>
-  <p class="tagline">Because your brain is still building itself, and you get to decide what goes into it.</p>
+  <p class="tagline">How nicotine trains the brain's reward system, why it feels like stress relief, and what actually helps people quit.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,168 +481,257 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What vaping does to a growing brain</h2>
+    <h2 id="h-understand">What nicotine does to a reward system still being wired</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Real facts, not a lecture.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">It started as a few hits. Now it's on a schedule.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You've seen kids vaping in the bathroom, on the bus, or at a party.</li>
-        <li>Someone offered you a hit and said it's "basically just flavored water."</li>
-        
-        <li >You see vapes in people's stories and it seems like everyone does it.</li>
-        <li>You're curious about it, or you already tried it.</li>
-        
-        <li >You vape, and it's gotten harder to go a day without it.</li>
-        <li>You're worried about a friend who vapes a lot.</li>
+        <li>Someone hits their vape between every class, and gets edgy when a teacher keeps them late.</li>
+        <li>A two-hour exam feels longer than it should because you can't vape in the middle of it.</li>
+        <li>A friend switched to nicotine pouches "because it's not vaping."</li>
+        <li>You or someone you know tried to quit and made it two days.</li>
+        <li>A parent smokes, or vapes to quit smoking, and you've heard very different messages at home and at school.</li>
       </ul>
-      <p style="margin:0">Whatever your experience, this is information, not a lecture. You get to make your own choices, and you deserve to make them with real facts.</p>
+      <p style="margin:0">You've probably heard that vapes have nicotine and that nicotine is addictive. Here's how that actually works in the brain, and why quitting feels the way it does.</p>
       </div>
     </details>
 
+    <div class="stat"><span class="stat-n">7.8%</span><span class="stat-t">of U.S. high school students vaped in the past 30 days in 2024, down from 10% the year before and the lowest in a decade. Nicotine pouches were the second most used product.<small>National Youth Tobacco Survey, 2024</small></span></div>
+
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What's actually in a vape</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧪</span><strong>Nicotine</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Most vapes have nicotine, often a lot. Some single disposables have about as much as a pack of cigarettes or more. Some labeled "nicotine free" have been found to contain it.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌿</span><strong>Sometimes THC</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Some vapes contain THC, the part of cannabis that gets you high. They're often much stronger than people expect.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">☁️</span><strong>Other chemicals</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The "vapor" is an aerosol with tiny particles and flavor chemicals that go deep into your lungs. It's not water vapor.</p></details>
+    <h3 style="margin-top:28px">The loop nicotine plugs into</h3>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 270" role="img" aria-label="Side view of the brain showing the reward pathway. Nicotine activates dopamine neurons in the ventral tegmental area in the midbrain, which send dopamine forward to the nucleus accumbens and to the prefrontal cortex." xmlns="http://www.w3.org/2000/svg">
+  <title>Side view of the brain</title>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/><path d="M266 216 C286 212 306 214 324 220"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <ellipse cx="216" cy="142" rx="21" ry="12" fill="none" stroke="#C9BDAE" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <ellipse cx="158" cy="146" rx="15" ry="9" fill="#D9822B"/>
+  <ellipse cx="236" cy="184" rx="8" ry="6" fill="#C0392B"/>
+  <defs><marker id="vh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#1D1D1F"/></marker></defs><path d="M230 182 C212 168 190 156 172 150" fill="none" stroke="#1D1D1F" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#vh)"/><path d="M232 178 C220 120 170 92 112 112" fill="none" stroke="#1D1D1F" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#vh)"/><text x="186" y="104" font-size="12" font-weight="600" fill="#1D1D1F">dopamine</text>
+  <g font-size="13" font-weight="700">
+        <line x1="92" y1="112" x2="60" y2="32" stroke="#245A96" stroke-width="1.4"/><circle cx="92" cy="112" r="3" fill="#245A96"/><text x="8" y="26" fill="#245A96" text-anchor="start">Prefrontal cortex</text>
+    <line x1="158" y1="146" x2="70" y2="228" stroke="#9A5714" stroke-width="1.4"/><circle cx="158" cy="146" r="3" fill="#9A5714"/><text x="8" y="240" fill="#9A5714" text-anchor="start">Nucleus accumbens</text>
+    <line x1="236" y1="184" x2="300" y2="247" stroke="#A3301F" stroke-width="1.4"/><circle cx="236" cy="184" r="3" fill="#A3301F"/><text x="392" y="262" fill="#A3301F" text-anchor="end">Ventral tegmental area</text>
+  </g>
+  <text x="392" y="14" font-size="11" fill="#6B6156" text-anchor="end">← face · back of head →</text>
+</svg>
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. Simplified: nicotine acts on receptors all over the brain; this is the circuit most tied to addiction.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Ventral tegmental area: the trigger</strong><p>Nicotine fits receptors that normally respond to acetylcholine. On dopamine neurons in this midbrain area, it makes them fire in bursts within seconds of a hit.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Nucleus accumbens: "do that again"</strong><p>Dopamine lands here and tags whatever just happened as worth repeating, along with everything around it: the bathroom, the car, the friend, the after-school slump. Those cues start triggering cravings on their own.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: the brakes</strong><p>Impulse control and attention live here, and they're still maturing until your mid-20s. The Surgeon General's 2016 report concluded that nicotine during adolescence can disrupt the growth of circuits for attention, learning, and susceptibility to addiction.</p></div></div>
     </div>
+    <p style="margin-top:16px">With regular use, the brain adds more nicotine receptors to cope. Now it needs nicotine just to feel normal. That's dependence.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it matters for your brain</span><span class="sticker">Your brain is still under construction.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The stress trap</span><span class="sticker">It relieves stress it created.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <figure class="fig" style="margin-top:0">
+<svg viewBox="0 30 400 186" role="img" aria-label="Line chart across one day. A non-user's mood stays at a steady baseline. A dependent vaper's mood climbs back to that baseline after each hit, then sinks below it into withdrawal until the next hit." xmlns="http://www.w3.org/2000/svg">
+  <line x1="40" y1="60" x2="388" y2="60" stroke="#3A8F5C" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="44" y="50" font-size="15" font-weight="700" fill="#2B6E46">non-user's normal</text>
+  <path d="M40 128 L56 128 L62 62 C76 64 86 118 112 128 L118 62 C132 64 142 118 168 128 L174 62 C188 64 198 118 224 128 L230 62 C244 64 254 118 280 128 L286 62 C300 64 310 118 336 128 L342 62 C356 64 362 118 388 128" fill="none" stroke="#1D1D1F" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#C0392B"><circle cx="56" cy="128" r="4"/><circle cx="112" cy="128" r="4"/><circle cx="168" cy="128" r="4"/><circle cx="224" cy="128" r="4"/><circle cx="280" cy="128" r="4"/><circle cx="336" cy="128" r="4"/></g>
+  <text x="44" y="154" font-size="15" font-weight="700" fill="#A3301F">dips between hits = withdrawal</text>
+  <text x="44" y="173" font-size="15" fill="#1D1D1F">irritable, anxious, hard to focus</text>
+  <line x1="40" y1="188" x2="388" y2="188" stroke="#6E6E73" stroke-width="1.5"/>
+  <g font-size="14" fill="#6E6E73"><text x="40" y="206">7am</text><text x="388" y="206" text-anchor="end">9pm</text><text x="214" y="206" text-anchor="middle">red dot = a hit</text></g>
+</svg>
+        <figcaption>Based on Parrott's stress model (1999). An illustration of the pattern, not measured data.</figcaption>
+      </figure>
+      <div class="research"><b>PARROTT, 1999</b><p>Psychologist Andy Parrott reviewed the research on smokers and stress. His conclusion: nicotine does not lower stress overall. Dependent users feel tense and irritable as nicotine wears off, and the next dose brings them back to roughly where non-users already are. The relief is real. The stress it relieves is mostly withdrawal.</p></div>
+      <p style="margin:0">The same studies found that people who quit report feeling less stressed over time, not more, once withdrawal passes.</p>
+      </div>
+    </details>
+
+
+    <details class="fold ">
+      <summary><span class="fold-label">The research</span><span class="sticker">Faster, and more tangled, than people expect.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain is still building itself.</dt>
-        <dd>Brains keep developing until about age 25. The parts for focus, decision-making, and impulse control are some of the last to finish.</dd>
-        <dt>Nicotine changes that wiring.</dt>
-        <dd>Research shows nicotine can affect attention, learning, and memory in developing brains, and makes the brain more sensitive to other addictions.</dd>
-        <dt>Addiction happens faster for teens.</dt>
-        <dd>Teen brains get hooked on nicotine more quickly than adult brains. Many teens who vape say they want to quit but find it hard.</dd>
-        <dt>It can make stress and anxiety worse.</dt>
-        <dd>Lots of people vape to calm down. Nicotine withdrawal causes anxiety and irritability, so the vape feels like relief, but it's partly relieving the stress it created.</dd>
+        <dt>Dependence can start within weeks.</dt>
+        <dd>In a study of 681 seventh graders in central Massachusetts (DiFranza, 2000), 22% of those who had started smoking occasionally reported a symptom of dependence within four weeks of starting to smoke monthly. Many had symptoms before they ever smoked daily. That study was about cigarettes; the same nicotine is in vapes, often at higher doses.</dd>
+        <dt>For teens, vaping is linked to smoking later.</dt>
+        <dd>The National Academies of Sciences (2018) found substantial evidence that e-cigarette use increases the risk that young people will try regular cigarettes.</dd>
+        <dt>The honest tradeoff.</dt>
+        <dd>The same report found conclusive evidence that e-cigarette aerosol has fewer and lower levels of most toxic chemicals than cigarette smoke. That matters for an adult smoker who switches completely. For someone who doesn't smoke, a vape doesn't reduce harm. It adds nicotine dependence.</dd>
+        <dt>THC carts carry their own risks.</dt>
+        <dd>In 2019 and 2020, the CDC counted 2,807 people hospitalized and 68 deaths from a vaping lung injury called EVALI. Most cases were tied to vitamin E acetate in THC carts bought from friends, dealers, or online.</dd>
       </dl>
       </div>
     </details>
 
+
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📢 The marketing trick</span><span class="sticker">Candy flavors aren't an accident.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Why vapes hit so hard</span><span class="sticker">Nicotine salts, big batteries, no stopping point.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Bright colors, candy flavors, sleek designs that look like USB drives or highlighters, influencers posting clouds. None of that is an accident. It's designed to make vaping look harmless and fun, especially to young people.</p>
-      <p class="worst">The worst part: the companies that make vapes earn more when you need them. Getting hooked young is exactly what keeps them in business.</p>
+      <p>Many vapes use nicotine salts, a form of nicotine that's smoother to inhale at high concentrations, so a high dose doesn't feel harsh. Disposables can last thousands of puffs, and there's no natural end point like finishing a cigarette.</p>
+      <p class="worst">Massachusetts banned flavored vapes in 2019, the first state to do so, and raised the buying age to 21 in 2018. Flavored disposables still turn up through illegal imports and online sellers, often with no reliable label.</p>
       </div>
     </details>
+
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Breaking the loop</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Know the facts. Have your line ready.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🧠 Know the facts.<span class="row-cue" aria-hidden="true"></span></summary><p>Knowing what's in a vape makes it easier to decide for yourself, without guessing or going along.</p></details>
-        <details class="row"><summary>💬 Have a line ready.<span class="row-cue" aria-hidden="true"></span></summary><p>"Nah, I'm good." "I've got practice." "My parents would smell it." You don't owe anyone a long explanation.</p></details>
-        <details class="row"><summary>🌬 Find other ways to handle stress.<span class="row-cue" aria-hidden="true"></span></summary><p>Movement, music, breathing, talking to someone. Anything that calms you without a crash afterward.</p></details>
-        <details class="row"><summary>👥 Hang with people who don't push.<span class="row-cue" aria-hidden="true"></span></summary><p>Real friends accept no. If someone keeps pressuring you, Saying No Without Losing Your Friends can help.</p></details>
-        <details class="row"><summary>🔍 Notice your triggers.<span class="row-cue" aria-hidden="true"></span></summary><p>If you already vape, notice when: stress, boredom, being with certain people. Knowing triggers is step one to changing them.</p></details>
-        <details class="row"><summary>🆓 Get free help to quit.<span class="row-cue" aria-hidden="true"></span></summary><p >Text <strong>DITCHVAPE</strong> to <strong>88709</strong> for This is Quitting, a free text program built for young people. A counselor or doctor can help too.</p></details>
+      <h3 class="sticker">Quitting is a skill. It has steps.</h3>
+      <div class="research"><b>GRAHAM AND COLLEAGUES, JAMA, 2024</b><p>In a randomized trial with 1,503 teens aged 13 to 17 who vaped, 37.8% of those using the free This is Quitting text program had stopped vaping seven months later, compared with 28.0% of those who did not get it. The program was built and studied by Truth Initiative.</p></div>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Map your loop.<span class="row-cue" aria-hidden="true"></span></summary><p>For a few days, notice every craving: where you were, who you were with, what you felt. Most people find three or four cues that drive most of it. Those are what you plan around.</p></details>
+        <details class="row"><summary><span class="num">2</span> Know the timeline.<span class="row-cue" aria-hidden="true"></span></summary><p>Withdrawal is usually worst in the first few days: irritable, restless, foggy, hungry, bad sleep. It fades over a few weeks. A single craving often peaks and passes within minutes if you ride it out.</p></details>
+        <details class="row"><summary><span class="num">3</span> Use the free program.<span class="row-cue" aria-hidden="true"></span></summary><p>Text DITCHVAPE to 88709 for This is Quitting. It's free, anonymous, and built for people your age.</p></details>
+        <details class="row"><summary><span class="num">4</span> Bring in a professional.<span class="row-cue" aria-hidden="true"></span></summary><p>A doctor, nurse, or counselor can help you plan, and can talk with you about whether nicotine replacement like patches or gum makes sense for you. It's about your health, not getting in trouble.</p></details>
+        <details class="row"><summary><span class="num">5</span> Swap the cue along with the vape.<span class="row-cue" aria-hidden="true"></span></summary><p>If the cue is the walk between classes, change the route or the company. If it's stress, pick a replacement that takes a minute: water, a walk, music, a slow exhale longer than the inhale.</p></details>
+        <details class="row"><summary><span class="num">6</span> Have your line ready.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm quitting." "I'm good." Short is enough. Friends who care will back you up.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Flavored water? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Check what you know.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>"Vapes are just flavored water vapor."</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. It's an aerosol with nicotine and chemicals, not water vapor.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. The cloud is an aerosol with nicotine and fine particles.">Fact</button>
+      <div class="scenario"><p>Vaping relieves stress.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. It relieves withdrawal. Overall, people who are dependent on nicotine are more stressed, and people who quit tend to feel less stressed once withdrawal passes.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. It relieves withdrawal. Overall, people who are dependent on nicotine are more stressed, and people who quit tend to feel less stressed once withdrawal passes.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>"Teens get addicted to nicotine faster than adults."</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. Developing brains get hooked more quickly.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. Teen brains are more sensitive to nicotine.">Fact</button>
+      <div class="scenario"><p>Nicotine pouches aren't addictive because you don't inhale them.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. The nicotine still reaches the same reward circuit. Not inhaling changes the lung risk, not the dependence.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. The nicotine still reaches the same reward circuit. Not inhaling changes the lung risk, not the dependence.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>"Vaping helps with anxiety."</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. It can feel calming because it relieves withdrawal, but nicotine tends to make anxiety worse over time.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="It's a myth. The relief is mostly from easing withdrawal. Over time, nicotine is linked to more anxiety.">Fact</button>
+      <div class="scenario"><p>Some teens show signs of nicotine dependence within weeks of starting.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. In the DiFranza study, about 1 in 5 occasional smokers had a symptom within four weeks of smoking monthly.">Myth</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Fact. In the DiFranza study, about 1 in 5 occasional smokers had a symptom within four weeks of smoking monthly.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>"If a vape says nicotine free, it definitely is."</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Testing has found nicotine in some products labeled nicotine free.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Myth. Labels aren't always accurate. Some 'nicotine free' vapes contain it.">Fact</button>
+      <div class="scenario"><p>Vape aerosol has fewer toxic chemicals than cigarette smoke.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. The National Academies found conclusive evidence for this. Fewer isn&#x27;t none, and for a non-smoker it&#x27;s still new risk.">Myth</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Fact. The National Academies found conclusive evidence for this. Fewer isn&#x27;t none, and for a non-smoker it&#x27;s still new risk.">Fact</button>
+      </div><div class="feedback" aria-live="polite"></div></div>
+      <div class="scenario"><p>A vape labeled "nicotine free" definitely has no nicotine.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. Lab tests have found nicotine in some products labeled nicotine free, especially unregulated disposables.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Lab tests have found nicotine in some products labeled nicotine free, especially unregulated disposables.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
       </div>
     </details>
 
+
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick a move that works for you.</p>
-      
-      <div class="scenario" >
-        <p>You've been vaping for a few months and notice you get irritable and anxious when you can't.</p>
+      <p>Pick a move. There may be more than one good one.</p>
+      <div class="scenario">
+        <p>Lucas hits his vape between every class. During a two-hour practice SAT, he gets shaky, can't focus, and leaves early.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="That's the addiction cycle. The relief is short and the need grows.">Vape more to make the feeling go away</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's a strong step. Quitting is easier with support, and you can start anytime.">Text DITCHVAPE to 88709 or talk to a counselor about quitting</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Some people manage it, but support makes it much more likely to stick.">Try to quit cold turkey alone without telling anyone</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That&#x27;s withdrawal, not a focus problem. More nicotine keeps the cycle going and makes the next long test harder.">Bring the vape and sneak a hit at the break</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Withdrawal is showing up in the things he cares about. A quit program and a plan for the first week give him a real shot.">Treat it as a sign of dependence and make a quit plan</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Cutting down can be a step, but without a plan most people drift back up.">Just vape a little less before tests</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your friend Imani switched from vaping to nicotine pouches. "It's not vaping, so I quit," she says.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Pouches still deliver nicotine to the same reward circuit. The dependence carries right over.">Agree. Pouches don't count</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes, and kindly. Not inhaling may spare her lungs, but she&#x27;s still dependent on nicotine. If she wants to be free of it, This is Quitting and a counselor can help.">"That's easier on your lungs, but it's still nicotine"</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your dad smokes. He started vaping to cut down and says it's "basically harmless."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="okay" data-msg="For him, switching completely from cigarettes likely does lower his exposure to toxic chemicals. &quot;Harmless&quot; goes too far, and the best outcome is quitting both.">Tell him vaping is just as bad as smoking</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That&#x27;s the accurate version. For an adult smoker, switching completely can reduce harm. For you, starting would add a dependence you don&#x27;t have. You can be glad for him and still decide differently.">Recognize it may help him, and that it's a different decision for you</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">The best answer is the one you'll actually do.</p>
       </div>
     </details>
 
+
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually keep the habit going.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually keep the loop going.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>😨 Scare tactics.<span class="row-cue" aria-hidden="true"></span></summary><p>Fear doesn't usually change behavior. Facts and support do.</p></details>
-        <details class="row"><summary>🙈 "I can stop anytime."<span class="row-cue" aria-hidden="true"></span></summary><p>Most people who get hooked thought that too.</p></details>
-        <details class="row"><summary>🔁 Switching to "lighter" vapes.<span class="row-cue" aria-hidden="true"></span></summary><p>Lower nicotine can still keep the habit going.</p></details>
-        <details class="row"><summary>🤐 Hiding it and struggling alone.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors help students quit all the time. It's about your health, not getting in trouble.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I can stop anytime.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Most people who end up dependent thought the same. The easiest way to find out is to try a week without it.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Switching to a lower-nicotine vape is quitting.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It can be a step down, but it keeps the cue and the habit alive. Pair it with a real plan or it tends to drift back up.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Going cold turkey alone, in secret.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Some people manage it, but support helps. In the 2024 trial, a free text program alone raised quit rates by about 10 points.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> One slip means I failed.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Most people who quit for good had slips first. A slip is information about a cue you missed.</p></details>
       </div>
       </div>
     </details>
+
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Get help right away if</h3>
       <ul class="tight">
         <li>You or a friend has trouble breathing, chest pain, or a cough that won't go away after vaping.</li>
         <li>Someone gets very sick, confused, or passes out after using a vape, especially one that might contain THC.</li>
-        <li>You feel like you can't get through the day without vaping.</li>
+        <li>A young child swallows vape liquid. Nicotine liquid is poisonous.</li>
       </ul>
-      <p style="margin:0">For an emergency, call <strong>911</strong>. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">For an emergency, call <a href="tel:911">911</a>. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Jamal, A., et al. (2024). Tobacco product use among middle and high school students: National Youth Tobacco Survey, United States, 2024. <i>MMWR</i>, 73, 917 to 924.</li>
+        <li>U.S. Department of Health and Human Services. (2016). <i>E-Cigarette Use Among Youth and Young Adults: A Report of the Surgeon General</i>.</li>
+        <li>Parrott, A. C. (1999). Does cigarette smoking cause stress? <i>American Psychologist</i>, 54, 817 to 820.</li>
+        <li>DiFranza, J. R., et al. (2000). Initial symptoms of nicotine dependence in adolescents. <i>Tobacco Control</i>, 9, 313 to 319.</li>
+        <li>National Academies of Sciences, Engineering, and Medicine. (2018). <i>Public Health Consequences of E-Cigarettes</i>. National Academies Press.</li>
+        <li>Centers for Disease Control and Prevention. (2020). Outbreak of lung injury associated with the use of e-cigarette, or vaping, products (final update, February 2020).</li>
+        <li>Graham, A. L., et al. (2024). A vaping cessation text message program for adolescent e-cigarette users: A randomized clinical trial. <i>JAMA</i>, 332, 713 to 721.</li>
+      </ul>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="reflect" aria-labelledby="h-reflect">
   <div class="wrap">
     <div class="eyebrow">Part 3 · Reflect</div>
-    <h2 id="h-reflect">Take a moment to write</h2>
+    <h2 id="h-reflect">Think it through</h2>
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">What I've heard about vaping, and what surprised me here</label>
+      <label class="prompt" for="tx-1">What I believed about vaping before this, and what changed</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Where I see vaping most, in person and online</label>
+      <label class="prompt" for="tx-2">If I vape: my three biggest cues, and one swap for each</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd say if someone offered me one</label>
+      <label class="prompt" for="tx-3">Where nicotine shows up around me: friends, family, online, stores</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">Ways I handle stress that actually help</label>
+      <label class="prompt" for="tx-4">What I'd want a friend to say to me if I were trying to quit</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I'd want a friend to know if they were trying to quit</label>
+      <label class="prompt" for="tx-5">How I handle stress when nothing is in my hand</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your brain is still building itself, and it's worth protecting. Whatever you've done before, you can choose what comes next.</p>
+      <p>Dependence is something that happens to a brain, not a verdict on a person. Brains that learned a loop can learn a new one, and plenty of people your age are doing it right now.</p>
     </div>
     </div>
   </div>
@@ -579,14 +740,14 @@
 <section class="part" id="checkin" aria-labelledby="h-checkin">
   <div class="wrap">
     <div class="eyebrow">Part 4 · Check in</div>
-    <h2 id="h-checkin">Check-in tool</h2>
+    <h2 id="h-checkin">Check in with yourself</h2>
 <div class="unit unit-checkin">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span><strong>Your privacy:</strong> Nothing you enter here is saved, stored, or sent anywhere. This tool works entirely in your browser.</span></p>
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
         <h3 id="ci-1">Where are you with vaping today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -602,25 +763,25 @@
           <button type="button" class="chip" aria-pressed="false">felt pressure</button>
           <button type="button" class="chip" aria-pressed="false">saw it all over social media</button>
           <button type="button" class="chip" aria-pressed="false">worried about a friend</button>
-          <button type="button" class="chip" aria-pressed="false">curious about it</button>
+          <button type="button" class="chip" aria-pressed="false">someone at home uses</button>
           <button type="button" class="chip" aria-pressed="false">I vape and want to cut back</button>
           <button type="button" class="chip" aria-pressed="false">craving it</button>
           <button type="button" class="chip" aria-pressed="false">said no</button>
-          <button type="button" class="chip" aria-pressed="false">talked to someone about it</button>
+          <button type="button" class="chip" aria-pressed="false">talked to someone</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😬 Felt pressure to try it</button>
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-quit" aria-pressed="false">🛑 I want to quit</button>
-          <button type="button" class="choice" data-path="p-craving" aria-pressed="false">🌀 Craving it right now</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about my choices</button>
+        <h3>Which is closest to where you are?</h3>
+        <p class="ci-hint">Pick one.</p>
+        <div class="paths" role="group" aria-label="Where you are right now">
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Feeling pressure to try it</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-quit" aria-pressed="false">I want to quit</button>
+          <button type="button" class="choice" data-path="p-craving" aria-pressed="false">Craving it right now</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling good about my choices</button>
         </div>
 
         <div class="path-panel" id="p-pressure" hidden>
@@ -628,39 +789,39 @@
           <p>Pressure is real, and saying no can feel awkward. It gets easier with practice.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Have a short line ready: "Nah, I'm good."</li>
-            <li><span class="e" aria-hidden="true">🙅</span>Saying No Without Losing Your Friends has more ideas.</li>
-            <li><span class="e" aria-hidden="true">👥</span>Stick near friends who don't push.</li>
+            <li>Have a short line ready: "I'm good."</li>
+            <li>Saying No Without Losing Your Friends has more ideas.</li>
+            <li>Stick near friends who don't push.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-friend" hidden>
           <h4>What this might mean</h4>
-          <p>Caring about someone who vapes is hard. You can't make them quit, but you can help.</p>
+          <p>Caring about someone who's dependent is hard. You can't quit for them, but you can make it easier.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Tell them you care, without lecturing.</li>
-            <li><span class="e" aria-hidden="true">📱</span>Share the DITCHVAPE text line if they want to quit.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If you're worried about their health, tell an adult.</li>
+            <li>Tell them you care, without a lecture.</li>
+            <li>Share the DITCHVAPE text line if they want to quit.</li>
+            <li>If you're worried about their health, tell a trusted adult.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-quit" hidden>
           <h4>What this might mean</h4>
-          <p>Wanting to quit is a big first step. Lots of teens do it, and support helps.</p>
+          <p>Wanting to quit is a real first step. Lots of teens do it, and support makes a measurable difference.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📱</span>Text DITCHVAPE to 88709.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor, nurse, or doctor.</li>
-            <li><span class="e" aria-hidden="true">🔍</span>Write down your triggers and one replacement for each.</li>
+            <li>Text DITCHVAPE to 88709.</li>
+            <li>Talk to a counselor, nurse, or doctor.</li>
+            <li>Write down your top three cues and one swap for each.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-craving" hidden>
           <h4>What this might mean</h4>
-          <p>Cravings usually peak and pass within a few minutes. You can ride it out.</p>
+          <p>A craving usually peaks and passes within minutes. You can ride this one out.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏱</span>Wait 10 minutes and do something else.</li>
-            <li><span class="e" aria-hidden="true">💧</span>Drink some water or chew gum.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times.</li>
+            <li>Wait 10 minutes and change what you're doing.</li>
+            <li>Drink some water or chew gum.</li>
+            <li>Breathe in for 4, out for 6, five times.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -668,9 +829,9 @@
           <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">💪</span>Keep your go-to line ready.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Look out for a friend who might be struggling.</li>
+            <li>Notice what helped.</li>
+            <li>Keep your line ready.</li>
+            <li>Look out for a friend who might be struggling.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -695,10 +856,10 @@
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
-        <p class="ci-hint">The smallest version counts.</p>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One thing you'll do in the next day or two?</label>
+        <p class="ci-hint">Small and specific counts: "Leave the vape at home on Thursday."</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend making hard choices. Change is possible, and you don't have to do it alone.</p>
+        <p class="closing">Be as patient with yourself as you would be with a friend changing a habit. Change is possible, and you don't have to do it alone.</p>
       </div>
     </div>
     </div>

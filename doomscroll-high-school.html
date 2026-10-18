@@ -362,6 +362,69 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  .fig svg.loop { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +444,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">📱 High School · Digital life</div>
+  <div class="eyebrow">High School · Digital life</div>
   <h1>Doomscroll</h1>
-  <p class="tagline">Because the feed is designed to never end, but your time does.</p>
+  <p class="tagline">How the feed is engineered to keep you, what the research says it costs, and how to take your attention back.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +472,85 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">How the feed hooks you</h2>
+    <h2 id="h-understand">The feed is engineered. Here's how.</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Opened it for one thing. Looked up an hour later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">One video before the problem set. Now it's 12:40.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You opened an app to check one thing and looked up an hour later.</li>
-        <li>You reached for your phone without even deciding to.</li>
-        <li>You kept scrolling even though you weren't enjoying it anymore.</li>
-        
-        <li >You scrolled past midnight on a school night, again.</li>
-        <li>You saw scary or upsetting news and couldn't stop reading more.</li>
-        <li>You felt anxious or empty after a long scroll, but couldn't say why.</li>
+        <li>You check the same three apps in a circle, then start the circle again.</li>
+        <li>Your screen time report came in and you dismissed it without reading the number.</li>
+        <li>On a bad news day you read every update, and each one made you feel a little worse.</li>
+        <li>You picked up your phone to set an alarm and found yourself in someone's comments twenty minutes later.</li>
       </ul>
-      <p style="margin:0">If it feels hard to put your phone down, that's not a willpower problem. Apps are designed by experts to keep you scrolling.</p>
+      <p style="margin:0">You probably already know apps are designed to be hard to put down. This goes a layer deeper: how the loop works, what the research shows, and where the evidence is weaker than the headlines.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">How the feed keeps you hooked</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">♾</span><strong>No stopping points</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Infinite scroll and autoplay remove the natural end of a page or episode. There's never a moment that says "you're done."</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎰</span><strong>Surprise rewards</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">You never know if the next video will be amazing, so you keep swiping. Slot machines use the same trick.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>Made for you</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Algorithms learn exactly what keeps you watching, including stuff that makes you anxious or angry.</p></details>
+    <h3 style="margin-top:28px">The loop that keeps you scrolling</h3>
+    <figure class="fig">
+<svg class="loop" viewBox="0 0 400 320" role="img" aria-label="The scroll loop. Step 1, a trigger such as boredom or stress. Step 2, the reach for the phone, often before you decide to. Step 3, a variable reward: maybe the next post is great. Step 4, brief relief and then a dip, which becomes the next trigger. A pause between trigger and reach is the exit." xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#86868B"/></marker>
+  <marker id="arg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#1E8E3E"/></marker></defs>
+  <circle cx="200" cy="165" r="110" fill="none" stroke="#E5E5EA" stroke-width="10"/>
+  <g fill="none" stroke="#86868B" stroke-width="2.2" marker-end="url(#ar)">
+    <path d="M246.5 65.3 A110 110 0 0 1 299.7 118.5"/>
+    <path d="M299.7 211.5 A110 110 0 0 1 246.5 264.7"/>
+    <path d="M153.5 264.7 A110 110 0 0 1 100.3 211.5"/>
+    <path d="M100.3 118.5 A110 110 0 0 1 153.5 65.3"/>
+  </g>
+  <circle cx="200" cy="165" r="38" fill="#E8F5EC" stroke="#1E8E3E" stroke-width="1.6"/>
+  <text x="200" y="161" text-anchor="middle" font-size="13" font-weight="700" fill="#1E6B33">Pause</text>
+  <text x="200" y="177" text-anchor="middle" font-size="11" fill="#1E6B33">the exit</text>
+  <path d="M276 90 L229 140" fill="none" stroke="#1E8E3E" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arg)"/>
+  <g font-size="14">
+    <rect x="112" y="32" width="176" height="46" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/>
+    <text x="200" y="51" text-anchor="middle" font-weight="700" fill="#1D1D1F">1  Trigger</text>
+    <text x="200" y="68" text-anchor="middle" font-size="12" fill="#6E6E73">bored, stressed, stuck</text>
+    <rect x="242" y="142" width="148" height="46" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/>
+    <text x="316" y="161" text-anchor="middle" font-weight="700" fill="#1D1D1F">2  Reach</text>
+    <text x="316" y="178" text-anchor="middle" font-size="12" fill="#6E6E73">before you decide to</text>
+    <rect x="104" y="252" width="192" height="46" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/>
+    <text x="200" y="271" text-anchor="middle" font-weight="700" fill="#1D1D1F">3  Variable reward</text>
+    <text x="200" y="288" text-anchor="middle" font-size="12" fill="#6E6E73">maybe the next one is great</text>
+    <rect x="10" y="142" width="148" height="46" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/>
+    <text x="84" y="161" text-anchor="middle" font-weight="700" fill="#1D1D1F">4  Brief relief</text>
+    <text x="84" y="178" text-anchor="middle" font-size="12" fill="#6E6E73">then the dip</text>
+  </g>
+</svg>
+      <figcaption>Each lap takes seconds. Features like infinite scroll and autoplay remove the natural stopping points, so the loop keeps going until something outside it breaks in.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>1. Trigger: a feeling you want to change</strong><p>Boredom, stress, loneliness, a task you're avoiding. The phone is the fastest mood shift within reach.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>2. Reach: a habit, not a choice</strong><p>After enough repetitions, the feeling cues the reach automatically. You often notice the phone is in your hand only after it's there.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>3. Variable reward: the hook</strong><p>Psychologists have known since the 1950s that rewards arriving on an unpredictable schedule keep a behavior going longer than steady ones. Most posts are fine. Every so often one is great. That uncertainty is what keeps your thumb moving, the same principle a slot machine runs on.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>4. Relief, then the dip</strong><p>The feeling eases for a few minutes. Then the original problem is still there, now with less time, and often a worse mood. That dip becomes the next trigger.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1E8E3E"></span><div><strong>The exit: a pause between trigger and reach</strong><p>You can't out-willpower a loop built by full-time engineers. You can put a pause in it: a question, a little friction, or distance. Part 2 is about building that pause.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it takes more than it gives</span><span class="sticker">Those hours come from somewhere.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">What the evidence shows, and where it gets argued about.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>It steals time from things that help.</dt>
-        <dd>Sleep, friends, homework, hobbies, moving your body. Hours of scrolling come from somewhere.</dd>
-        <dt>Bad news grabs attention.</dt>
-        <dd>Brains are wired to notice threats. Scary or upsetting content can pull you in and leave you more anxious.</dd>
-        <dt>It leaves you drained.</dt>
-        <dd>Lots of people feel tired, flat, or restless after a long scroll, even though it felt relaxing while it was happening.</dd>
-        <dt>It's not all bad.</dt>
-        <dd>Connecting with friends, learning, laughing, finding your people. Phones can do a lot of good. The goal is choosing how you use it.</dd>
+        <dt>Sleep takes the clearest hit.</dt>
+        <dd>Lauren Hale and Stanley Guan reviewed 67 studies of screens and sleep in school-age kids and teens. In 90% of them, more screen time went with shorter sleep or later bedtimes. For most teens, this is the most concrete cost.</dd>
+        <dt>Heavy use is linked to more anxiety and depression.</dt>
+        <dd>A Johns Hopkins study followed 6,595 US teens. Those using social media more than three hours a day were more likely to report anxiety or depression symptoms later. The 2023 Surgeon General's advisory cited this work. The lead author was careful to say it doesn't prove social media causes the problems.</dd>
+        <dt>The average effect is small, and that's debated too.</dt>
+        <dd>Oxford researchers Amy Orben and Andrew Przybylski analyzed data on more than 300,000 young people and parents in the US and UK. Technology use explained at most 0.4% of the differences in well-being. Other researchers argue that averages hide the teens who are hit hard.</dd>
+        <dt>What this means for you.</dt>
+        <dd>The research can't tell you what your phone does to you. Your own data can: your sleep, your mood after a long scroll, and what you skipped to do it.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 The scroll and your mood</span><span class="sticker">How you scroll matters more than how long.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Doomscrolling the news</span><span class="sticker">More coverage can mean more stress, not more information.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Research on teens and social media is mixed. How you use it matters more than the hours alone. Actively connecting with friends tends to feel better than passively scrolling. Using it late at night, or to avoid feelings, tends to feel worse.</p>
-      <p class="worst">The worst part: when you feel down, scrolling feels like comfort. Then it often leaves you feeling more down, and the cycle repeats.</p>
+      <p>After the 2013 Boston Marathon bombings, a UC Irvine team surveyed 4,675 adults. People who took in six or more hours a day of bombing coverage in the week afterward reported more acute stress than people who were at or near the finish line.</p>
+      <p>That was a survey, so it shows a link, not proof of cause. It does match what a lot of people feel during a bad news cycle.</p>
+      <p class="worst">Being informed matters. Past a certain point, the next update adds stress without adding anything you can act on.</p>
       </div>
     </details>
   </div>
@@ -465,60 +559,87 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Build the pause into your setup</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Change your setup, not just your willpower.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🛑 Decide before you open.<span class="row-cue" aria-hidden="true"></span></summary><p>Before opening an app, decide what you're there for and how long. Set a timer if you need one.</p></details>
-        <details class="row"><summary>🧭 Notice the reach.<span class="row-cue" aria-hidden="true"></span></summary><p>Catch the moment you reach for your phone. Ask: what am I feeling right now? Bored? Anxious? Avoiding something?</p></details>
-        <details class="row"><summary>🏠 Move apps off your home screen.<span class="row-cue" aria-hidden="true"></span></summary><p>Put the most time-sucking apps in a folder on a back page. A few extra taps break the autopilot.</p></details>
-        <details class="row"><summary>🌙 Phone-free zones.<span class="row-cue" aria-hidden="true"></span></summary><p>Bed, meals, homework time. Pick one and keep the phone out of it.</p></details>
-        <details class="row"><summary>⏱ Use screen time tools.<span class="row-cue" aria-hidden="true"></span></summary><p>Most phones let you set daily limits for specific apps. They're easy to override, but the reminder helps.</p></details>
-        <details class="row"><summary>🧩 Have a replacement.<span class="row-cue" aria-hidden="true"></span></summary><p>Know what you'll do instead: music, a book, a walk, drawing, texting one friend.</p></details>
+      <div class="fold-label">Friction beats willpower</div>
+      <h3 class="sticker">Change the environment, not your character.</h3>
+      <p>Habits run on cues and ease. The simplest way to break one is to make it a little harder to do and a little easier to do something else.</p>
+      <div class="levers">
+        <div class="lever"><b>Add distance</b><span>Charge your phone outside your bedroom, or across the room. Buy a $10 alarm clock if that's what's stopping you.</span></div>
+        <div class="lever"><b>Add friction</b><span>Log out of the worst app, move it off your home screen, or turn on grayscale. A few extra taps are enough to interrupt autopilot.</span></div>
+        <div class="lever"><b>Add stopping points</b><span>Turn off autoplay. Set a timer before you open the app, not after you notice you're deep in it.</span></div>
+        <div class="lever"><b>Replace the reward</b><span>Know what you'll do instead: text one specific person, put on an album, take a ten-minute walk.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">The pause</div>
+      <h3 class="sticker">Ask three questions. Change two settings.</h3>
+      <p>Ask them out loud if you have to. They put a gap between the trigger and the reach, which is the only place the loop can be broken.</p>
+        <details class="row"><summary><span class="num">1</span> What am I here for?<span class="row-cue" aria-hidden="true"></span></summary><p>A specific answer ("reply to Jess," "check the game score") gives you a finish line. "Nothing really" tells you the trigger is a feeling. Name it.</p></details>
+        <details class="row"><summary><span class="num">2</span> How long?<span class="row-cue" aria-hidden="true"></span></summary><p>Pick a number before you start. Your sense of time inside the feed is unreliable, so a timer outside it does the job.</p></details>
+        <details class="row"><summary><span class="num">3</span> What will I do when I'm done?<span class="row-cue" aria-hidden="true"></span></summary><p>Leaving is easier when you're going toward something. Decide what that is before you open the app.</p></details>
+        <details class="row"><summary><span class="num">4</span> Turn off notifications that aren't people.<span class="row-cue" aria-hidden="true"></span></summary><p>Likes, "suggested for you," streak reminders and app promos are triggers built into your pocket. Keep messages from humans. Cut the rest.</p></details>
+        <details class="row"><summary><span class="num">5</span> Give the news a window.<span class="row-cue" aria-hidden="true"></span></summary><p>Pick one or two trusted sources and a set time, like ten minutes after dinner. Outside that window, the updates can wait.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Next time you grab your phone, ask why.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Next time you reach for your phone, catch the reason.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Next time you grab your phone without thinking, pause and pick what's going on. Notice patterns.</p>
+      <p>When you notice the phone in your hand, pause and pick what's going on. Patterns show up after a few days.</p>
       <div class="scenario"><div class="choices" role="group" aria-label="Why I'm reaching for my phone" id="reach">
-        <button class="choice" type="button" data-fb="okay" data-msg="Boredom is the most common reason. Try having a go-to replacement ready, like music or a quick walk.">😐 Bored</button>
-        <button class="choice" type="button" data-fb="okay" data-msg="Phones are a fast escape from hard feelings. The feeling usually waits for you. Try naming it, or doing three slow breaths first.">😬 Anxious or stressed</button>
-        <button class="choice" type="button" data-fb="okay" data-msg="Avoiding a task? Why You Can't Start has tools for that. Try 10 minutes of the task first, then a phone break.">🙈 Avoiding something</button>
-        <button class="choice" type="button" data-fb="okay" data-msg="Loneliness is a real reason. Instead of scrolling, try texting or calling one specific person.">😔 Lonely</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Great, that's using your phone on purpose. Do the thing, then put it down.">🎯 I actually need something specific</button>
+        <button class="choice" type="button" data-fb="okay" data-msg="Boredom is the most common trigger. Boredom is also where a lot of ideas come from. Try sitting with it for two minutes, or have a go-to replacement ready.">Bored</button>
+        <button class="choice" type="button" data-fb="okay" data-msg="The phone is a fast way out of a hard feeling, and the feeling usually waits for you. Name it in one word first. Then decide if you still want the phone.">Anxious or stressed</button>
+        <button class="choice" type="button" data-fb="okay" data-msg="Avoiding a task? Give it ten minutes first and make the phone the reward after. Why You Can't Start has more on this.">Avoiding something</button>
+        <button class="choice" type="button" data-fb="okay" data-msg="Loneliness is a real reason. A feed full of other people rarely fixes it. One message or call to a specific person usually does more.">Lonely</button>
+        <button class="choice" type="button" data-fb="good" data-msg="That's using it on purpose. Do the thing, then put it down.">I need something specific</button>
       </div>
       <div class="feedback" aria-live="polite" id="reach-fb"></div></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Late nights, bad news. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What would actually work?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      
-      <div class="scenario" >
-        <p>You keep reading upsetting news on your phone and feel more and more anxious.</p>
+      <div class="scenario">
+        <p>Amara has a calculus test at 8. She's in bed "winding down" with short videos. It's 12:15.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Past a point, more information doesn't help. It just feeds anxiety.">Keep reading so you know everything</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Staying informed doesn't require constant updates. Limits protect your mood.">Check one trusted source once a day, then put it away</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="That might help for some, but it's hard to stick with. Limits are often easier.">Delete every app forever</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Ten minutes becomes forty inside the loop. Her sense of time is the first thing autoplay takes.">Ten more minutes, then sleep</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Night mode changes the color of the screen, not the time or how alert the content keeps her. The bigger cost is the lost hour.">Turn on night mode and keep watching</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Distance beats willpower. Tomorrow night, the phone charges across the room before she gets into bed.">Phone on the charger across the room, lights off</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>A shooting in another state is all over the news. Mateo has been refreshing coverage for three hours and feels sick.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="This is the pattern from the Boston research. More hours of coverage went with more stress, not more safety.">Keep watching so he's prepared</button>
+          <button class="choice" type="button" data-fb="good" data-msg="One trusted update, then a real conversation. Fear shared with someone you trust usually gets smaller.">Check one reliable source, close it, and talk to someone about how he feels</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It might help short term, but it&#x27;s hard to keep up. A news window usually lasts longer than a ban.">Delete every news app for good</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Kai's screen time report says 7 hours a day. He feels gross about it and plans to quit everything cold turkey on Monday.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="okay" data-msg="Some people do well with a full break. Without a plan for the empty time, most snap back within a week.">Cold turkey, all apps, starting Monday</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Targeted and realistic. A limit on his worst app at his worst time, plus something to do instead, is a change he can keep.">Find the one app and time of day that cost the most, and change that first</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Shame tends to send people back into the feed. The report is information, not a verdict.">Turn off the report so it stops making him feel bad</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one decent answer. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These sound good but rarely stick.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you scrolling</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>💪 Relying on willpower.<span class="row-cue" aria-hidden="true"></span></summary><p>You're up against teams of designers. Change your setup, not just your intentions.</p></details>
-        <details class="row"><summary>😔 Shaming yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>Feeling bad about screen time can make you want to escape into your phone more.</p></details>
-        <details class="row"><summary>🛏 Phone in bed.<span class="row-cue" aria-hidden="true"></span></summary><p>It's the hardest place to stop, and it costs you sleep.</p></details>
-        <details class="row"><summary>🚫 Going cold turkey without a plan.<span class="row-cue" aria-hidden="true"></span></summary><p>If you take something away, put something in its place.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Night mode solves the sleep problem.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The research on screens and sleep points mainly at time: later bedtimes and shorter sleep. A warmer screen doesn't give you back the hour, and engaging content keeps your brain alert regardless of color.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Scrolling helps me relax.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It can feel like rest while it's happening. Notice how you feel ten minutes after you stop. That after-feeling is better data than the in-the-moment one.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> All screen time is the same.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Two hours on a video call with a friend and two hours of autoplay are different experiences. The time number matters less than what the time replaced and how you feel after.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Willpower is the answer.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Willpower is least reliable at 11pm, and the apps never get tired. Setup changes work because they don't depend on how you feel at 11pm.</p></details>
       </div>
       </div>
     </details>
@@ -526,13 +647,27 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to get more help</h3>
       <ul class="tight">
-        <li>You can't cut back even when you really want to.</li>
-        <li>Phone use is hurting your sleep, grades, or relationships.</li>
-        <li>You're using your phone to escape feelings that seem too big to handle.</li>
-        <li>Something you saw online is upsetting you and won't go away.</li>
+        <li>You've tried to cut back several times and can't, even when you really want to.</li>
+        <li>Your phone use is costing you sleep, grades, a job, or people you care about.</li>
+        <li>You're using the feed to escape feelings that seem too big to face.</li>
+        <li>Something you saw online keeps replaying in your head and won't let go.</li>
       </ul>
-      <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can help you sort out what's underneath it. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Ferster, C. B., &amp; Skinner, B. F. (1957). <i>Schedules of Reinforcement</i>. Appleton-Century-Crofts.</li>
+        <li>Hale, L., &amp; Guan, S. (2015). Screen time and sleep among school-aged children and adolescents: A systematic literature review. <i>Sleep Medicine Reviews</i>, 21, 50&ndash;58.</li>
+        <li>Riehm, K. E., et al. (2019). Associations between time spent using social media and internalizing and externalizing problems among US youth. <i>JAMA Psychiatry</i>, 76(12), 1266&ndash;1273.</li>
+        <li>Office of the U.S. Surgeon General. (2023). <i>Social Media and Youth Mental Health: The U.S. Surgeon General's Advisory</i>.</li>
+        <li>Orben, A., &amp; Przybylski, A. K. (2019). The association between adolescent well-being and digital technology use. <i>Nature Human Behaviour</i>, 3, 173&ndash;182.</li>
+        <li>Holman, E. A., Garfin, D. R., &amp; Silver, R. C. (2014). Media's role in broadcasting acute stress following the Boston Marathon bombings. <i>Proceedings of the National Academy of Sciences</i>, 111(1), 93&ndash;98.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -543,26 +678,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">When I scroll most, and what I'm usually feeling</label>
+      <label class="prompt" for="tx-1">When I scroll most, and the feeling that usually starts it</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Apps that leave me feeling good, and apps that leave me feeling drained</label>
+      <label class="prompt" for="tx-2">Apps that leave me better off, and apps that leave me drained</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd do with an extra hour a day</label>
+      <label class="prompt" for="tx-3">What the scrolling has been replacing: sleep, people, work, something I used to like</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">One phone-free zone I'll try this week</label>
+      <label class="prompt" for="tx-4">One setup change I'll make this week (distance, friction, a stopping point, a replacement)</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Ways my phone actually helps my life</label>
+      <label class="prompt" for="tx-5">What my phone does well for me, and how I want to keep that</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your attention is valuable. That's why so many apps compete for it. You get to decide where it goes.</p>
+      <p>Companies earn money from your attention, which is why they work so hard for it. It's still yours. You decide where it goes.</p>
     </div>
     </div>
   </div>
@@ -577,8 +712,8 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with your phone today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How much has your phone been running your day today?</h3>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -590,14 +725,14 @@
         <h3>What's been most present today?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">scrolled way longer than planned</button>
-          <button type="button" class="chip" aria-pressed="false">on my phone late at night</button>
-          <button type="button" class="chip" aria-pressed="false">reached for it without thinking</button>
+          <button type="button" class="chip" aria-pressed="false">scrolled way past what I planned</button>
+          <button type="button" class="chip" aria-pressed="false">on it after midnight</button>
+          <button type="button" class="chip" aria-pressed="false">reached for it without deciding to</button>
           <button type="button" class="chip" aria-pressed="false">upsetting news or videos</button>
-          <button type="button" class="chip" aria-pressed="false">felt drained after</button>
-          <button type="button" class="chip" aria-pressed="false">used it to avoid something</button>
-          <button type="button" class="chip" aria-pressed="false">used it to connect with friends</button>
-          <button type="button" class="chip" aria-pressed="false">set a limit</button>
+          <button type="button" class="chip" aria-pressed="false">felt flat after</button>
+          <button type="button" class="chip" aria-pressed="false">used it to dodge something</button>
+          <button type="button" class="chip" aria-pressed="false">used it to connect with someone</button>
+          <button type="button" class="chip" aria-pressed="false">set a limit and kept it</button>
           <button type="button" class="chip" aria-pressed="false">had a phone-free stretch</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
@@ -606,63 +741,63 @@
 
       <div class="ci-step">
         <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <p class="ci-hint">Pick the one closest to today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">♾ Can't stop scrolling</button>
-          <button type="button" class="choice" data-path="p-anxious" aria-pressed="false">😬 Anxious from what I saw</button>
-          <button type="button" class="choice" data-path="p-drained" aria-pressed="false">🪫 Drained and flat</button>
-          <button type="button" class="choice" data-path="p-sleep" aria-pressed="false">🌙 Up too late on my phone</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Used it on purpose today</button>
+          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">Can't stop scrolling</button>
+          <button type="button" class="choice" data-path="p-anxious" aria-pressed="false">Wound up from what I saw</button>
+          <button type="button" class="choice" data-path="p-drained" aria-pressed="false">Flat and drained</button>
+          <button type="button" class="choice" data-path="p-sleep" aria-pressed="false">Up too late on my phone</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Used it on purpose today</button>
         </div>
 
         <div class="path-panel" id="p-stuck" hidden>
           <h4>What this might mean</h4>
-          <p>The feed is designed so there's never a good place to stop. Make your own stopping point.</p>
+          <p>The loop is running without a pause in it. That's the design working, not a flaw in you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔌</span>Put the phone in another room for 30 minutes.</li>
-            <li><span class="e" aria-hidden="true">⏱</span>Set an app limit for your biggest time sink.</li>
-            <li><span class="e" aria-hidden="true">🧩</span>Pick a replacement: music, a walk, a snack, a friend.</li>
+            <li>Put the phone in another room for 30 minutes.</li>
+            <li>Set an app limit on your biggest time sink, right now.</li>
+            <li>Pick a replacement and start it before you change your mind.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-anxious" hidden>
           <h4>What this might mean</h4>
-          <p>Upsetting content can stay with you. Your feelings make sense.</p>
+          <p>Upsetting content stays in your body after the screen goes dark. That reaction makes sense.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📵</span>Step away from the feed for the rest of the day.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk to someone about what you saw, especially if it's scary.</li>
+            <li>Close the feed for the rest of the day.</li>
+            <li>Breathe in for 4 and out for 6, five times. A long exhale tells your body to settle.</li>
+            <li>Talk to someone about what you saw, especially if it scared you.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-drained" hidden>
           <h4>What this might mean</h4>
-          <p>Long scrolls often leave people feeling empty. Your body and brain want something different.</p>
+          <p>Long scrolls often leave people emptier than when they started. Your brain is asking for something different.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🌳</span>Go outside, even for five minutes.</li>
-            <li><span class="e" aria-hidden="true">🏃</span>Move your body a little.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Talk to someone in person or on a call.</li>
+            <li>Go outside, even for five minutes.</li>
+            <li>Move: a walk, stairs, anything.</li>
+            <li>Talk to someone in person or on a call, not in a feed.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-sleep" hidden>
           <h4>What this might mean</h4>
-          <p>Late-night scrolling is one of the biggest sleep stealers for teens.</p>
+          <p>Late-night scrolling is one of the most common sleep thieves for teens, and the research on it is consistent.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔌</span>Charge your phone outside your bedroom tonight.</li>
-            <li><span class="e" aria-hidden="true">⏰</span>Set a phone bedtime alarm.</li>
-            <li><span class="e" aria-hidden="true">😴</span>Running on Empty has more on sleep.</li>
+            <li>Charge the phone outside your room tonight.</li>
+            <li>Set a phone bedtime alarm 30 minutes before lights out.</li>
+            <li>Running on Empty has more on sleep.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's the goal. Better days don't have to be perfect days to count.</p>
+          <p>That's the goal. A better day doesn't have to be a perfect one.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Keep the setup that worked.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Enjoy the time you got back.</li>
+            <li>Notice what made the difference.</li>
+            <li>Keep the setup that worked.</li>
+            <li>Use the time you got back on purpose too.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -690,7 +825,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who can't put their phone down. You'd help them, not shame them.</p>
+        <p class="closing">If a friend told you they couldn't put their phone down, you'd help them change their setup. You wouldn't call them weak. Give yourself the same treatment.</p>
       </div>
     </div>
     </div>

@@ -362,6 +362,80 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure (relationship series) ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .finding { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; line-height:1.5; }
+  .finding b { color:var(--ink); }
+
+  .gates .node { fill:#F5F5F7; }
+  .gates .t1 { font-size:16px; font-weight:700; fill:#1D1D1F; }
+  .gates .t2 { font-size:14px; fill:#6E6E73; }
+  .gates .n { font-size:13px; font-weight:700; fill:#fff; }
+  .gates .yes { font-size:11px; font-weight:600; fill:#6E6E73; }
+  .gates .stop { font-size:13px; font-weight:700; fill:#D70015; }
 </style>
 </head>
 
@@ -381,9 +455,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🤝 High School · Relationships and dating</div>
+  <div class="eyebrow">High School · Relationships and dating</div>
   <h1>Consent, Clearly</h1>
-  <p class="tagline">Because asking first is how respect sounds, in person and online.</p>
+  <p class="tagline">What makes a yes count, why people freeze instead of saying no, and what to do when you see it going wrong.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +465,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,54 +482,92 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What consent actually means</h2>
+    <h2 id="h-understand">Consent, past the definition</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Ever felt like you had to say yes?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know the definition. Real moments are messier.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>Someone hugged you, tickled you, or grabbed you, and you didn't like it but didn't say anything.</li>
-        <li>A friend posted a photo of you that you hated, without asking.</li>
-        <li>Someone grabbed your phone and started reading your messages.</li>
-        
-        <li >You weren't sure if someone was really into something physical, or just going along with it.</li>
-        <li>You felt like you had to say yes because saying no would be awkward.</li>
-        <li>You've wondered what consent actually looks like in real life, not just in a health class definition.</li>
+        <li>You've been in a moment where you couldn't tell if the other person was into it, or just not saying no.</li>
+        <li>Someone at a party is clearly drunk, and the person they're with doesn't seem to care.</li>
+        <li>A friend told you about a night that didn't sit right with them, and they don't know what to call it.</li>
+        <li>You said yes to one thing and got treated like you'd agreed to everything.</li>
+        <li>A photo you sent to one person ended up in front of people you never meant to see it.</li>
       </ul>
-      <p style="margin:0">Consent means asking and respecting the answer. It applies to everything from hugs to photos to phones to anything physical or romantic.</p>
+      <p style="margin:0">You know the basics already: ask, and respect the answer. This is the next layer. What a yes needs in order to count, why people freeze instead of saying no, and why reading signals is less reliable than most people assume.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What consent is</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🗣</span><strong>Asked and given freely</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >A real yes happens without pressure, guilt, threats, or someone being too drunk, high, or asleep to answer.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔄</span><strong>Can change anytime</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Saying yes once doesn't mean yes forever, or yes to everything. Anyone can change their mind, even partway through.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">✨</span><strong>Clear and enthusiastic</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Silence isn't a yes. "I guess" isn't really a yes. If you're not sure, ask, and look for a clear, happy yes.</p></details>
+    <h3 style="margin-top:28px">Four checks. All of them, every time.</h3>
+    <figure class="fig">
+<svg class="gates" viewBox="0 0 400 430" role="img" aria-label="Consent works like four checks in a row. One, capacity: the person is awake, sober enough to understand, and old enough. Two, freely given: no pressure, guilt, or threats. Three, specific: a yes to this act, here. Four, ongoing: still a yes right now. A no at any check means stop. Only when all four are yes is there consent, and you keep checking." xmlns="http://www.w3.org/2000/svg">
+  <rect class="node" x="8" y="8" width="292" height="70" rx="16"/>
+  <circle cx="38" cy="43" r="14" fill="#1D1D1F"/><text class="n" x="38" y="48" text-anchor="middle">1</text>
+  <text class="t1" x="62" y="38">Capacity</text><text class="t2" x="62" y="59">Awake, sober, old enough?</text>
+  <line x1="300" y1="43" x2="326" y2="43" stroke="#D70015" stroke-width="1.6"/>
+  <text class="yes" x="305" y="36">no</text>
+  <rect x="326" y="27" width="66" height="32" rx="16" fill="#FFF0F1"/><text class="stop" x="359" y="48" text-anchor="middle">Stop</text>
+  <line x1="154" y1="78" x2="154" y2="100" stroke="#1D1D1F" stroke-width="1.6"/>
+  <text class="yes" x="162" y="94">yes</text>
+  <rect class="node" x="8" y="100" width="292" height="70" rx="16"/>
+  <circle cx="38" cy="135" r="14" fill="#1D1D1F"/><text class="n" x="38" y="140" text-anchor="middle">2</text>
+  <text class="t1" x="62" y="130">Freely given</text><text class="t2" x="62" y="151">No pressure, guilt, or threats?</text>
+  <line x1="300" y1="135" x2="326" y2="135" stroke="#D70015" stroke-width="1.6"/>
+  <text class="yes" x="305" y="128">no</text>
+  <rect x="326" y="119" width="66" height="32" rx="16" fill="#FFF0F1"/><text class="stop" x="359" y="140" text-anchor="middle">Stop</text>
+  <line x1="154" y1="170" x2="154" y2="192" stroke="#1D1D1F" stroke-width="1.6"/>
+  <text class="yes" x="162" y="186">yes</text>
+  <rect class="node" x="8" y="192" width="292" height="70" rx="16"/>
+  <circle cx="38" cy="227" r="14" fill="#1D1D1F"/><text class="n" x="38" y="232" text-anchor="middle">3</text>
+  <text class="t1" x="62" y="222">Specific</text><text class="t2" x="62" y="243">A yes to this, right here?</text>
+  <line x1="300" y1="227" x2="326" y2="227" stroke="#D70015" stroke-width="1.6"/>
+  <text class="yes" x="305" y="220">no</text>
+  <rect x="326" y="211" width="66" height="32" rx="16" fill="#FFF0F1"/><text class="stop" x="359" y="232" text-anchor="middle">Stop</text>
+  <line x1="154" y1="262" x2="154" y2="284" stroke="#1D1D1F" stroke-width="1.6"/>
+  <text class="yes" x="162" y="278">yes</text>
+  <rect class="node" x="8" y="284" width="292" height="70" rx="16"/>
+  <circle cx="38" cy="319" r="14" fill="#1D1D1F"/><text class="n" x="38" y="324" text-anchor="middle">4</text>
+  <text class="t1" x="62" y="314">Ongoing</text><text class="t2" x="62" y="335">Still a yes, right now?</text>
+  <line x1="300" y1="319" x2="326" y2="319" stroke="#D70015" stroke-width="1.6"/>
+  <text class="yes" x="305" y="312">no</text>
+  <rect x="326" y="303" width="66" height="32" rx="16" fill="#FFF0F1"/><text class="stop" x="359" y="324" text-anchor="middle">Stop</text>
+  <line x1="154" y1="354" x2="154" y2="376" stroke="#1D1D1F" stroke-width="1.6"/>
+  <text class="yes" x="162" y="370">yes</text>
+  <rect x="8" y="376" width="292" height="46" rx="23" fill="#000"/>
+  <text x="154" y="405" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#fff">Consent. Keep checking in.</text>
+</svg>
+      <figcaption>A no at any step means stop. A yes at one step doesn't carry over to the next, or to next time.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Capacity: can they actually decide?</strong><p>Asleep, passed out, or too drunk or high to follow what's happening means no capacity, whatever was said earlier. Age counts too. In Massachusetts, a person under 16 can't legally consent to sex, and the law has no exception for partners who are close in age.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Freely given: could they say no at no cost?</strong><p>A yes that comes after asking five times, a guilt trip, a threat to break up, or pressure from someone with power over you (older, more popular, holding your photos) isn't free.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Specific: a yes to what?</strong><p>Yes to kissing isn't yes to more. Yes last weekend isn't yes tonight. Sending a photo to one person isn't permission to show anyone else.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Ongoing: still yes?</strong><p>Anyone can stop at any point, including partway through and including in a long relationship. Being someone's partner never means automatic yes.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it can feel complicated</span><span class="sticker">Going along isn't the same as yes.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Why "they didn't say no" proves nothing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Saying no can feel rude.</dt>
-        <dd>Lots of people are taught to be polite and go along. Your body, your stuff, and your image belong to you. Saying no is allowed.</dd>
-        <dt>Body language is real communication.</dt>
-        <dd>Pulling away, going quiet, looking uncomfortable, or freezing all mean stop, even without words.</dd>
-        <dt>Pressure isn't always loud.</dt>
-        <dd>"Come on, don't be boring" or asking over and over until someone gives in isn't consent. It's pressure.</dd>
-        <dt><span >The law and the line matter.</span></dt>
-        <dd >In every US state there's an age below which a person can't legally consent to sexual activity. And no one can consent if they're drunk, high, asleep, or pressured.</dd>
+        <dt>Freezing is a reflex, not a choice.</dt>
+        <dd>In a 2017 Swedish study of 298 women seen at an emergency clinic after a sexual assault, 70% said they experienced significant involuntary paralysis during the assault, and 48% extreme paralysis. Researchers call it tonic immobility. The study included only women, but the reflex is human. Silence and stillness can be fear, not agreement.</dd>
+        <dt>Signals get misread, in both directions.</dt>
+        <dd>In a 2012 speed-dating study, men on average overestimated how sexually interested women were in them, and women tended to underestimate men's interest. If trained adults misread three minutes of conversation, guessing in a dark room goes worse. Asking fixes it.</dd>
+        <dt>Alcohol is involved more often than not.</dt>
+        <dd>A review of research on college students found that at least half of sexual assaults involve alcohol, drunk by the person who did it, the person it happened to, or both. Alcohol slows thinking and makes stop signals easier to miss. It never moves responsibility onto the person who was drinking.</dd>
+        <dt>This happens to people your age.</dt>
+        <dd>In the CDC's 2021 national survey of high school students, 14% of girls said they had been forced to have sex at some point, the first increase in ten years. Boys and nonbinary students are assaulted too, and are often less likely to tell anyone.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Consent online</span><span class="sticker">Ask before you post, share, or send.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Images and screens</span><span class="sticker">A photo sent to one person is not permission to share it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Asking before posting a photo of someone. Not screenshotting private messages to share. Not adding someone to a group chat they'd hate. Not sending photos nobody asked for. Consent applies to screens too.</p>
-      <p class="worst">The worst part: once something is posted or sent without someone's okay, it can't really be taken back.</p>
+      <p>A 2018 review of 39 studies with more than 110,000 teens found about 15% had sent a sext and 27% had received one. About 12% had forwarded one without permission, and 8% had their own forwarded without their consent.</p>
+      <p>Massachusetts law changed in 2024. Sharing someone's explicit images without consent is now a crime, including fake images made with AI. For people under 18, sexting can still fall under child exploitation laws, but the new law lets teens be sent to an education program instead of being charged in most cases.</p>
+      <p class="worst">If an image of you is out there: you didn't cause this by trusting someone. If it was taken when you were under 18, Take It Down (takeitdown.ncmec.org) can help get it removed without you sending the image to anyone. A counselor can help with the rest.</p>
       </div>
     </details>
   </div>
@@ -465,49 +576,78 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">What to say, and what to do</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Asking is awkward for two seconds. Do it anyway.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>❓ Just ask.<span class="row-cue" aria-hidden="true"></span></summary><p>"Can I post this?" "Want a hug?" "Is this okay?" Asking feels awkward for about two seconds, and it shows respect.</p></details>
-        <details class="row"><summary>👀 Watch for signals.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone hesitates, pulls back, goes quiet, or looks uncomfortable, stop and check in.</p></details>
-        <details class="row"><summary>🛑 Accept no gracefully.<span class="row-cue" aria-hidden="true"></span></summary><p>"Okay, no problem" is the best answer to a no. No sulking, no pushing, no guilt trips.</p></details>
-        <details class="row"><summary>🗣 Practice saying no.<span class="row-cue" aria-hidden="true"></span></summary><p>"No thanks." "I'm not into that." "Stop." You don't owe anyone a reason or an apology.</p></details>
-        <details class="row"><summary>🔄 Check in again.<span class="row-cue" aria-hidden="true"></span></summary><p>Things change. Asking "Still good?" is part of respecting someone.</p></details>
-        <details class="row"><summary>🧑‍🏫 Tell someone if your no wasn't respected.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone ignored your no, it's not your fault, and a trusted adult can help.</p></details>
+      <div class="fold-label">Asking well</div>
+      <h3 class="sticker">Asking is a skill. It gets smoother with practice.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Ask questions that are easy to say no to.<span class="row-cue" aria-hidden="true"></span></summary><p>"Is this okay?" "Want to slow down?" "What do you want to do?" When no is easy to say, you get a more honest answer.</p></details>
+        <details class="row"><summary><span class="num">2</span> Treat hesitation as a no.<span class="row-cue" aria-hidden="true"></span></summary><p>"Um," "I guess," a pause, going still, turning away. Stop and ask. Don't push through it.</p></details>
+        <details class="row"><summary><span class="num">3</span> Check in when anything changes.<span class="row-cue" aria-hidden="true"></span></summary><p>A new place, a new activity, more drinking, a long pause. "Still good?" takes two seconds.</p></details>
+        <details class="row"><summary><span class="num">4</span> Take a no well.<span class="row-cue" aria-hidden="true"></span></summary><p>"Okay." Then actually change course. No sulking, no asking again ten minutes later. How you handle a no decides whether people feel safe telling you the truth.</p></details>
+        <details class="row"><summary><span class="num">5</span> Say no your way.<span class="row-cue" aria-hidden="true"></span></summary><p>"I don't want to." "Not tonight." "Stop." No reason required. If the words won't come, an exit works too: "I need the bathroom," or a code text to a friend who'll call you.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. Is that a real yes?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Four situations. Does the yes count?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>Your friend says "sure, I guess" when you ask to post a photo, but looks unhappy.</p><div class="choices" role="group" aria-label="Is that consent">
-        <button class="choice" type="button" data-fb="nope" data-msg="Not really. Their words say maybe, their face says no. Check in: 'You sure? I can pick another one.'">Yes, they said sure</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Right. Look for a real yes, not just words. Offer to choose a different photo.">Not really, check in</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Someone says yes to a hug, and then a minute later says they want to stop.</p><div class="choices" role="group" aria-label="Is that consent">
-        <button class="choice" type="button" data-fb="nope" data-msg="Consent can change anytime. Once they say stop, you stop.">They already said yes, so it's fine</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Exactly. Anyone can change their mind at any point.">Stop right away</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Someone keeps asking after being told no, until the other person finally says "fine."</p><div class="choices" role="group" aria-label="Is that consent">
-        <button class="choice" type="button" data-fb="nope" data-msg="A yes that comes from wearing someone down is pressure, not consent.">Yes, they agreed</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Right. Pressure until someone gives in is not consent.">No, that's pressure</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
+      <p>Run each one through the four checks.</p>
+      <div class="scenario">
+        <p>Dev and Aaliyah are making out at his place. Aaliyah has gone quiet and still. She hasn't said no.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Stillness can be freezing. No answer is not a yes.">Keep going. She didn't say no</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Stopping costs nothing. Make the no easy to say, and accept whatever answer comes.">Stop and ask: "Hey, you okay? We can stop."</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Slowing down isn't checking in. Stop, then ask.">Slow down a little and keep going</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>At a party, Jules has had a lot to drink and is slurring. Someone Jules met an hour ago asks if they want to go upstairs, and Jules says yes.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Capacity comes first. A yes from someone too drunk to follow what's happening doesn't count.">That's consent. Jules said yes</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The words were yes, but the first check fails. This is a moment for a friend to step in.">Not consent. Jules is too drunk to decide</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Respecting choices matters, but Jules can't make a real one right now. Stepping in protects that choice for later.">It's Jules's choice, so stay out of it</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Kenji is an 18-year-old senior. Ana, a 15-year-old sophomore, is into him, and both want to have sex.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="In Massachusetts, someone under 16 can't legally consent, and there's no close-in-age exception. The three-year gap also adds real power.">Fine, if both of them want it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The law sets the line at 16, and a senior dating a sophomore brings a power gap even when feelings are real.">Not okay. She can't legally consent in Massachusetts</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Mateo's girlfriend sent him a private photo months ago. After they break up, she asks him to delete it.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Consent to send isn't consent to keep forever or to share. Sharing it would now be a crime in Massachusetts.">She sent it. It's his now</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Her consent changed, so the photo goes.">Delete it, and don't show anyone</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Someone said stop. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">You're the one who sees it. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      
-      <div class="scenario" >
-        <p>At a party, a friend is really drunk and someone is trying to take them upstairs.</p>
+      <p>Bystanders change outcomes. In a trial across 26 Kentucky high schools, schools that trained students to step in (direct, distract, or delegate) had less sexual violence in the years that followed than schools that didn't.</p>
+      <div class="scenario">
+        <p>At a party, an older guy keeps refilling Maya's cup and steering her toward a back room. She looks unsteady. You barely know her.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Someone that drunk can't consent. Stepping in could protect them.">Stay out of it, it's not your business</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Distract, stay with them, and get a trusted adult or call for help if needed.">Step in: "Hey, I need to talk to you," stay with your friend, and get help</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That doesn't protect your friend. Act in the moment.">Text the group chat about it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. You don't have to make a scene. Interrupting and staying close changes what happens next.">Distract: "Maya, come to the bathroom with me." Then stay with her</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Also strong. Getting help is stepping in. If anyone is in danger, call 911.">Delegate: get her friends, the host, or call a trusted adult</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="You don't need the whole story to ask 'Hey, you okay?' Checking in costs you little and could protect her.">Do nothing. You don't know the whole story</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Someone in a group chat posts a classmate's private photo.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Sharing makes everyone who forwards it part of the harm, and in Massachusetts it can be a crime.">Don't forward it. Say "delete that," report it, tell an adult</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than forwarding, but the photo is still out there. Report it, and if you can, let the person or an adult know.">Quietly leave the chat</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Each share spreads it further. Stopping it is still possible.">Laugh it off. Everyone has already seen it</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -516,27 +656,44 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">Guessing isn't asking. These don't work.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that blur the line</span><span class="sticker">What people say, and what's true.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🤷 Assuming silence means yes.<span class="row-cue" aria-hidden="true"></span></summary><p>No answer is not a yes. Ask.</p></details>
-        <details class="row"><summary>😒 Guilt-tripping after a no.<span class="row-cue" aria-hidden="true"></span></summary><p>"Wow, okay, whatever" turns a no into pressure.</p></details>
-        <details class="row"><summary>🙈 Ignoring body language.<span class="row-cue" aria-hidden="true"></span></summary><p>Freezing or pulling back says a lot, even without words.</p></details>
-        <details class="row"><summary>🍺 Thinking alcohol changes the rules.<span class="row-cue" aria-hidden="true"></span></summary><p>Being drunk or high means someone can't give consent. It's not an excuse for anyone.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If they didn't fight back, they wanted it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Freezing is one of the most common reactions to a threat. Not resisting tells you nothing about consent.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Couples don't need to ask.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Being together means you know each other better, so asking gets easier. It doesn't become optional.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If they were drinking, it's partly on them.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Responsibility belongs to the person who went ahead without consent. Drinking is never an invitation.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Guys always want it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Anyone can be pressured, and anyone can be assaulted. Boys can say no, and that no counts the same.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Asking kills the mood.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Pressure kills the mood. A quick question tells the other person you care what they want.</p></details>
       </div>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>Get help if</h3>
+      <h3>If something happened</h3>
       <ul class="tight">
-        <li>Someone touched you or did something sexual without your consent.</li>
-        <li>Someone is pressuring or threatening you to do something physical.</li>
-        <li>You're worried about something that happened to a friend.</li>
+        <li>It is not your fault, whatever you drank, wore, said, or did before.</li>
+        <li>You get to decide what to call it and what to do next.</li>
+        <li>Medical care helps even if you never report, and going sooner keeps more options open.</li>
+        <li>Who you tell first can depend on your family and culture: a friend, a sibling, an aunt, a coach, a faith leader, a counselor. Any start counts.</li>
       </ul>
-      <p>It's not your fault, no matter what. <strong>RAINN</strong> is free and confidential, 24/7: call <strong>1-800-656-4673</strong>. A school counselor can help too.</p>
-      <p style="margin:0">If you're in danger, call <strong>911</strong>. See <a href="#help">Get help</a> below.</p>
+      <p><strong>RAINN</strong> is free and confidential, 24/7: call <strong>1-800-656-4673</strong>. School counselors can help, and you can ask them up front what they'd have to share and with whom.</p>
+      <p style="margin:0">If you're in danger, call <strong>911</strong>. If you're overwhelmed, call or text <strong>988</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Möller, A., Söndergaard, H. P., &amp; Helström, L. (2017). Tonic immobility during sexual assault: A common reaction predicting post-traumatic stress disorder and severe depression. <i>Acta Obstetricia et Gynecologica Scandinavica</i>.</li>
+        <li>Perilloux, C., Easton, J. A., &amp; Buss, D. M. (2012). The misperception of sexual interest. <i>Psychological Science</i>.</li>
+        <li>Abbey, A. (2002). Alcohol-related sexual assault: A common problem among college students. <i>Journal of Studies on Alcohol, Supplement</i>.</li>
+        <li>Centers for Disease Control and Prevention. (2023). <i>Youth Risk Behavior Survey: Data Summary &amp; Trends Report, 2011 to 2021</i>.</li>
+        <li>Madigan, S., Ly, A., Rash, C. L., et al. (2018). Prevalence of multiple forms of sexting behavior among youth: A systematic review and meta-analysis. <i>JAMA Pediatrics</i>.</li>
+        <li>Coker, A. L., Bush, H. M., Cook-Craig, P. G., et al. (2017). RCT testing bystander effectiveness to reduce violence. <i>American Journal of Preventive Medicine</i>.</li>
+        <li>Massachusetts General Laws, chapter 265, section 23; and An Act to Prevent Abuse and Exploitation (St. 2024, c. 118).</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -547,26 +704,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">A time someone asked for my consent, and how it felt</label>
+      <label class="prompt" for="tx-1">Ways I could ask that sound like me, not a script</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">A time I didn't feel like I could say no</label>
+      <label class="prompt" for="tx-2">A time I went along with something I didn't want. What made no feel hard?</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">Words I can use to say no, and words I can use to ask</label>
+      <label class="prompt" for="tx-3">What I would do if I saw someone too drunk to consent</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">How I'll respond if someone tells me no</label>
+      <label class="prompt" for="tx-4">What I want a partner to do if I go quiet or pull back</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Things online I'll ask before doing</label>
+      <label class="prompt" for="tx-5">Where I learned what I believe about consent (family, faith, friends, media). What I keep, and what I question</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your body, your stuff, and your image belong to you. Everyone else's belong to them. Asking is how respect sounds.</p>
+      <p>Consent isn't a box you check once. It's paying attention to the other person the whole time, and stopping when the answer changes.</p>
     </div>
     </div>
   </div>
@@ -581,7 +738,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with consent today?</h3>
+        <h3 id="ci-1">How much is consent on your mind today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -594,15 +751,15 @@
         <h3>What's been most present today?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">someone didn't respect my no</button>
-          <button type="button" class="chip" aria-pressed="false">I wasn't sure if they were okay with it</button>
-          <button type="button" class="chip" aria-pressed="false">someone posted me without asking</button>
-          <button type="button" class="chip" aria-pressed="false">felt pressure</button>
-          <button type="button" class="chip" aria-pressed="false">I asked first</button>
-          <button type="button" class="chip" aria-pressed="false">said no and it was respected</button>
+          <button type="button" class="chip" aria-pressed="false">someone didn't stop when I said no</button>
+          <button type="button" class="chip" aria-pressed="false">I went quiet and they kept going</button>
+          <button type="button" class="chip" aria-pressed="false">not sure if what happened was okay</button>
+          <button type="button" class="chip" aria-pressed="false">a photo of me got shared</button>
+          <button type="button" class="chip" aria-pressed="false">pressure from someone I'm dating</button>
           <button type="button" class="chip" aria-pressed="false">worried about a friend</button>
-          <button type="button" class="chip" aria-pressed="false">spoke up for someone</button>
-          <button type="button" class="chip" aria-pressed="false">thinking about something that happened</button>
+          <button type="button" class="chip" aria-pressed="false">I stepped in for someone</button>
+          <button type="button" class="chip" aria-pressed="false">I asked, they said no, and that was fine</button>
+          <button type="button" class="chip" aria-pressed="false">thinking about something from a while ago</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
@@ -612,60 +769,60 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-ignored" aria-pressed="false">🛑 My no wasn't respected</button>
-          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">🤔 Not sure if it was okay</button>
-          <button type="button" class="choice" data-path="p-posted" aria-pressed="false">📸 Something of mine got posted</button>
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😟 Feeling pressured</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling respected</button>
+          <button type="button" class="choice" data-path="p-ignored" aria-pressed="false">My no wasn't respected</button>
+          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">Not sure if it was okay</button>
+          <button type="button" class="choice" data-path="p-posted" aria-pressed="false">Something of mine got shared</button>
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Feeling pressured</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling respected</button>
         </div>
 
         <div class="path-panel" id="p-ignored" hidden>
           <h4>What this might mean</h4>
-          <p>That's not okay, and it's not your fault.</p>
+          <p>That is not okay, and it is not your fault, even if you froze, even if you said yes to something earlier.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult.</li>
-            <li><span class="e" aria-hidden="true">📞</span>RAINN: 1-800-656-4673, any time.</li>
-            <li><span class="e" aria-hidden="true">🫶</span>Be gentle with yourself. Your feelings make sense.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell someone you trust today: a counselor, a relative, a friend.</li>
+            <li><span class="e" aria-hidden="true">📞</span>RAINN: 1-800-656-4673, any time. They can explain medical and reporting options.</li>
+            <li><span class="e" aria-hidden="true">🫶</span>Whatever you feel (numb, angry, confused) is a normal reaction.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unsure" hidden>
           <h4>What this might mean</h4>
-          <p>Wondering is a sign you care about respecting people.</p>
+          <p>Not being sure is common, whether it happened to you or you worry you crossed a line. Both are worth talking through.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">❓</span>Next time, ask: "Is this okay?"</li>
-            <li><span class="e" aria-hidden="true">💬</span>If you're worried you crossed a line, check in and apologize.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>A counselor can help you think it through.</li>
+            <li><span class="e" aria-hidden="true">❓</span>Run it through the four checks above.</li>
+            <li><span class="e" aria-hidden="true">💬</span>If you think you crossed a line, own it, apologize, and change how you check in.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>A counselor can help you sort out what happened without judging you.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-posted" hidden>
           <h4>What this might mean</h4>
-          <p>You get a say in what's shared about you.</p>
+          <p>You get a say in what is shared about you. In Massachusetts, sharing explicit images without consent is a crime.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Ask them to take it down.</li>
-            <li><span class="e" aria-hidden="true">🚩</span>Report it if they won't.</li>
-            <li><span class="e" aria-hidden="true">📸</span>Screenshot Culture has more steps.</li>
+            <li><span class="e" aria-hidden="true">💬</span>Ask them to delete it, and report it on the platform.</li>
+            <li><span class="e" aria-hidden="true">🛡</span>If you were under 18 in it, use Take It Down (takeitdown.ncmec.org).</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult. You are not in trouble for being the person in the photo.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-pressure" hidden>
           <h4>What this might mean</h4>
-          <p>Pressure isn't consent. You can say no, even to someone you like.</p>
+          <p>Pressure is the opposite of a free yes. You can say no to someone you like, love, or are dating.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗣</span>"No" is a full sentence.</li>
-            <li><span class="e" aria-hidden="true">🚪</span>Leave the situation if you can.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell someone you trust.</li>
+            <li><span class="e" aria-hidden="true">🗣</span>"No" is enough. You don't owe a reason.</li>
+            <li><span class="e" aria-hidden="true">🚪</span>Leave, or text a friend your code word.</li>
+            <li><span class="e" aria-hidden="true">📱</span>love is respect: text LOVEIS to 22522 to talk it through.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>That's worth noticing. Being with people who check in is what respect feels like.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice who respects your boundaries.</li>
-            <li><span class="e" aria-hidden="true">❓</span>Keep asking first.</li>
+            <li><span class="e" aria-hidden="true">🔎</span>Notice who makes no easy to say.</li>
+            <li><span class="e" aria-hidden="true">❓</span>Keep asking, even when you think you know the answer.</li>
             <li><span class="e" aria-hidden="true">🤲</span>Back someone up when their no gets ignored.</li>
           </ul>
         </div>
@@ -694,7 +851,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as respectful of yourself as you are of others. Your boundaries matter, and so do your feelings.</p>
+        <p class="closing">Your body, your images, and your choices belong to you. Treat everyone else's the same way.</p>
       </div>
     </div>
     </div>

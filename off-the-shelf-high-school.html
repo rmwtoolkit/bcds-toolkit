@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figures */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:center; background:var(--paper); border-radius:14px; padding:14px 16px; margin:12px 0; }
+  .stat-n { font-size:2rem; font-weight:700; letter-spacing:-.03em; line-height:1; color:var(--ink); }
+  .stat-t { font-size:.95rem; line-height:1.45; color:var(--ink); }
+  .stat-t small { display:block; color:var(--ink-soft); font-size:.8rem; margin-top:3px; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:14px 0; }
+  .research b { display:block; font-size:.78rem; letter-spacing:.04em; color:var(--ink-soft); font-weight:600; margin-bottom:2px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🏪 High School · Substance use</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>Off the Shelf</h1>
-  <p class="tagline">Because "legal" and "natural" are marketing words, and a one-minute high can leave damage that lasts.</p>
+  <p class="tagline">Nitrous, inhalants, kratom, and tianeptine: what they do to nerves, the heart, and breathing, and why "sold in a store" doesn't mean tested.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,234 +481,205 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Whippets, dusters, and the stuff behind the counter</h2>
+    <h2 id="h-understand">What's behind the counter, and what it does</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Cheap, easy to buy, and misunderstood.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Cheap, legal-looking, and badly understood.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You've seen big, colorful "Galaxy Gas" tanks in smoke shops, and videos of people inhaling from balloons.</li>
-        <li>Someone called whippets "just laughing gas, like at the dentist."</li>
-        
-        <li >You've heard about people huffing dusters, markers, or spray paint.</li>
-        
-        <li >You've seen kratom shots or "7-OH" tablets behind the counter, or heard the nickname "gas station heroin."</li>
-        <li>Someone said it's legal, so it can't be that bad.</li>
+        <li>Smoke shops sell big, flavored "Galaxy Gas" tanks, and people fill balloons at parties.</li>
+        <li>Someone stood up after a few balloons, dropped, and hit their head.</li>
+        <li>Kratom shots are sold for "focus" or "energy," and people use them to get through a double shift or an all-nighter.</li>
+        <li>7-OH tablets or tianeptine ("gas station heroin") sit by the register.</li>
+        <li>Someone in your family uses kratom for pain or to get off pain pills, and it doesn't feel like a drug to them.</li>
       </ul>
-      <p style="margin:0">Some of the riskiest highs are also the cheapest and easiest to buy. Here's what they actually do.</p>
+      <p style="margin:0">You probably already know these aren't harmless. This goes into the how: what nitrous does to your nerves, why a computer duster can stop a heart, and what the opioid-like products actually are.</p>
       </div>
     </details>
 
+    <div class="stat"><span class="stat-n">8×</span><span class="stat-t">more emergency room visits for nitrous oxide misuse in Michigan in 2023 than in 2019 (60, up from 7). EMS calls rose from 15 to 78. Most patients were in their 20s and 30s.<small>Vohra and colleagues, CDC MMWR, 2025</small></span></div>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">How nitrous damages nerves</h3>
+    <p>Dentists use nitrous mixed with oxygen, for minutes, with someone watching. Balloons are pure gas, often dozens in a night. The high is only part of the problem. Nitrous oxide inactivates vitamin B12, and your nerves need B12 to maintain myelin, the insulating coat that lets signals travel.</p>
+    <figure class="fig">
+<svg viewBox="0 0 400 268" role="img" aria-label="Left: a cross-section of the spinal cord. The dorsal columns, a band of nerve fibers at the back of the cord between the two dorsal horns of gray matter, are highlighted as the area nitrous oxide damages. Right: one nerve fiber with its myelin coating. Two segments of myelin are intact; two further along are breaking down." xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="120" cy="134" rx="100" ry="84" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <path d="M92 60 C106 52 134 52 148 60 L152 68 C140 80 130 100 120 118 C110 100 100 80 88 68 Z" fill="#C0392B" fill-opacity=".85"/>
+  <line x1="120" y1="51" x2="120" y2="116" stroke="#fff" stroke-width="1.5"/>
+  <path d="M120 118 C110 100 100 80 88 68 C84 64 78 66 80 72 C86 92 92 108 96 124 C80 130 66 140 62 158 C60 170 70 178 82 172 C98 164 108 152 116 146 L124 146 C132 152 142 164 158 172 C170 178 180 170 178 158 C174 140 160 130 144 124 C148 108 154 92 160 72 C162 66 156 64 152 68 C140 80 130 100 120 118 Z" fill="#D9CBBB" stroke="#A89A89" stroke-width="1.2"/>
+  <circle cx="120" cy="134" r="3" fill="#8A7F72"/>
+  <g font-size="13" font-weight="700">
+    <line x1="120" y1="58" x2="120" y2="34" stroke="#A3301F" stroke-width="1.4"/><text x="120" y="28" fill="#A3301F" text-anchor="middle">Dorsal columns</text>
+    <line x1="74" y1="160" x2="40" y2="232" stroke="#6E6E73" stroke-width="1.4"/><text x="10" y="248" fill="#6E6E73">Gray matter</text>
+  </g>
+  <text x="10" y="16" font-size="11" fill="#6B6156">↑ back of body</text>
+  <line x1="236" y1="144" x2="392" y2="144" stroke="#8A7F72" stroke-width="5" stroke-linecap="round"/>
+  <g stroke="#8A7F72" stroke-width="1.6">
+    <rect x="240" y="122" width="34" height="44" rx="14" fill="#F4EEE6"/>
+    <rect x="278" y="122" width="34" height="44" rx="14" fill="#F4EEE6"/>
+  </g>
+  <g fill="none" stroke="#C0392B" stroke-width="1.8" stroke-dasharray="4 3">
+    <path d="M318 126 C326 120 338 126 348 122 M318 162 C330 168 336 158 348 166"/>
+    <path d="M356 124 C362 130 372 120 384 128 M356 164 C366 156 374 168 384 160"/>
+  </g>
+  <g font-size="13" font-weight="700">
+    <line x1="257" y1="120" x2="257" y2="96" stroke="#6E6E73" stroke-width="1.4"/><text x="240" y="90" fill="#1D1D1F">Myelin</text>
+    <line x1="350" y1="168" x2="350" y2="196" stroke="#A3301F" stroke-width="1.4"/><text x="392" y="212" fill="#A3301F" text-anchor="end">Breaking down</text>
+    <text x="392" y="112" fill="#6E6E73" text-anchor="end" font-weight="600">axon</text>
+  </g>
+  <g font-size="12" fill="#6E6E73" text-anchor="middle"><text x="120" y="266">Spinal cord, cross-section</text><text x="314" y="266">One nerve fiber</text></g>
+</svg>
+      <figcaption>Simplified. Nitrous damage shows up first in the spinal cord's dorsal columns, the long fibers that carry touch, vibration, and your sense of where your feet are.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Dorsal columns: where you are in space</strong><p>These fibers tell your brain where your feet are without looking. When their myelin breaks down, people feel numbness and tingling in their hands and feet, then walk unsteadily, especially in the dark.</p></div></div>
+      <div class="region"><span class="dot" style="background:#8A7F72"></span><div><strong>Myelin: the insulation</strong><p>Without enough working B12, the body can't keep myelin in repair. Signals slow, scramble, or stop. Doctors call this nitrous oxide myeloneuropathy.</p></div></div>
+    </div>
+    <div class="research"><b>SWART AND COLLEAGUES, 2021</b><p>Doctors in Sydney described 20 patients with nerve damage from nitrous, average age 24. Spinal MRI showed dorsal column damage in all 20, and seven could not walk when they arrived. Their average B12 blood test looked normal, which is one reason the damage gets missed. Most patients who were followed up still had symptoms.</p></div>
+    </div>
+
     <details class="fold ">
-      <summary><span class="fold-label">What's on the shelf</span><span class="sticker">Whippets, dusters, kratom, and more.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Other inhalants</span><span class="sticker">Dusters can stop a heart on the first try.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="research"><b>BASS, 1970</b><p>A forensic pathologist described 110 sudden deaths in young people who had been sniffing solvents and aerosols, and coined the term sudden sniffing death. The most likely cause: the chemicals make the heart oversensitive to adrenaline, so a scare, a chase, or exercise can trigger a fatal rhythm.</p></div>
+      <p>Computer dusters, spray paint, and lighter fluid also cut oxygen to the brain with every hit. Judgment and balance drop within seconds, which is why falls and head injuries are so common.</p>
+      <p style="margin:0">Gas from a nitrous tank or duster comes out freezing cold and can cause frostbite to the lips, mouth, and throat.</p>
+      </div>
+    </details>
+
+
+    <details class="fold ">
+      <summary><span class="fold-label">Kratom, 7-OH, and tianeptine</span><span class="sticker">Opioid effects, gas-station packaging.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🎈 Nitrous oxide.</dt>
-        <dd>Laughing gas. Sold as whipped-cream chargers (whippets) and big flavored tanks like Galaxy Gas. People inhale it from balloons.</dd>
-        <dt>🧴 Household inhalants.</dt>
-        <dd>Computer dusters, spray paint, glue, markers, and other chemicals people sniff or huff.</dd>
-        <dt>🌿 Kratom and 7-OH.</dt>
-        <dd >Kratom is a plant that acts like a stimulant in small amounts and like an opioid in larger ones. 7-OH is a lab-concentrated kratom chemical, far stronger. In 2025 the FDA recommended making 7-OH a controlled substance.</dd>
-        <dt>⚠️ Tianeptine.</dt>
-        <dd >Sold as "Neptune's Fix" and other names. Not approved for any use in the U.S. It acts on the brain's opioid system, which is why people call it gas station heroin. The FDA has warned against it repeatedly.</dd>
+        <dt>Kratom</dt>
+        <dd>A plant from Southeast Asia. Small amounts act like a stimulant; larger amounts act on opioid receptors. Regular use can lead to dependence, with flu-like withdrawal.</dd>
+        <dt>7-OH</dt>
+        <dd>A kratom chemical concentrated in a lab. It binds the same mu-opioid receptors as morphine and may be up to 13 times as potent. In July 2025, the FDA recommended making it a controlled substance.</dd>
+        <dt>Tianeptine</dt>
+        <dd>Not approved for any use in the U.S. It acts on the opioid system, and the FDA has warned against it repeatedly.</dd>
       </dl>
+      <div class="research"><b>COUNTS AND COLLEAGUES, CDC MMWR, 2024</b><p>Between June and November 2023, the New Jersey poison center tracked 17 people with severe illness after taking tianeptine products, mostly the brand Neptune&#39;s Fix. Thirteen went to intensive care and seven needed a breathing tube. Lab tests found synthetic cannabinoids in the product that were not on the label.</p></div>
+      <p style="margin:0">Some adults use kratom to manage pain or to cut back on opioids, and the research on that is still limited. If someone in your family does, the safest step is talking it through with a doctor, not judging them.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What inhalants do in your brain</span><span class="sticker">Every hit cuts your brain's oxygen.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Legal vs. tested</span><span class="sticker">Sold in a store. Rarely tested.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 640 285" role="img" aria-label="Brain diagram: inhalants affect judgment, balance, and breathing and heartbeat." style="width:100%;max-width:720px;height:auto;display:block"><path d="M60 150 C40 80 120 25 210 30 C300 32 365 80 360 145 C357 190 320 205 280 200 L140 205 C95 205 68 185 60 150Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M120 70 C150 90 140 120 170 130 M210 45 C200 80 230 95 220 125 M285 60 C270 90 300 110 290 140 M330 110 C310 120 320 150 300 165 M95 160 C120 150 140 170 170 165" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><ellipse cx="296" cy="222" rx="46" ry="26" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M290 214 C300 210 312 214 322 222 M275 228 C290 222 305 226 318 234" fill="none" stroke="var(--line)" stroke-width="3"/><path d="M222 200 L252 200 L246 272 L230 272Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><text x="40" y="30" font-size="13" fill="var(--ink-soft)">front</text><circle cx="100" cy="115" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="100" y="120" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><circle cx="420" cy="85" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="90" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><text x="442" y="91" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">judgment, reaction time</text><circle cx="300" cy="222" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="300" y="227" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><circle cx="420" cy="123" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="128" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><text x="442" y="129" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">balance, coordination</text><circle cx="238" cy="238" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="238" y="243" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><circle cx="420" cy="161" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="166" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><text x="442" y="167" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">breathing, heartbeat</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >With every hit, the brain briefly runs low on oxygen. Judgment, balance, and coordination drop, which is why falls and head injuries are common. Dusters and other chemical inhalants can also throw off the heart's rhythm.</span></figcaption>
-      </figure>
+      <div class="levers">
+        <div class="lever"><b>Reviewed?</b><span>A medicine from a pharmacy is FDA-reviewed for safety and dose. A product from the counter usually isn't.</span></div>
+        <div class="lever"><b>Label</b><span>Pharmacy: an accurate dose. Counter: strength can vary a lot, and ingredients may be missing from the label.</span></div>
+        <div class="lever"><b>Warnings</b><span>Pharmacy: clear instructions. Counter: often just "not for human consumption."</span></div>
+        <div class="lever"><b>Who's selling</b><span>A pharmacist who can answer questions, or whoever is working the register.</span></div>
+      </div>
+      <p class="worst" style="margin-top:14px">In March 2025 the FDA warned people not to inhale flavored nitrous products like Galaxy Gas after a rise in reports of injuries. Being on a shelf only means nobody has stopped it yet.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">Nitrous wears down your nerves</span><span class="sticker">Nitrous eats the coating on your nerves.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 510 210" role="img" aria-label="A healthy nerve with a full coating of myelin, and a damaged nerve with gaps in the coating." style="width:100%;max-width:600px;height:auto;display:block"><line x1="20" y1="60" x2="490" y2="60" stroke="var(--school-accent)" stroke-width="5"/><rect x="40" y="43" width="54" height="34" rx="17" fill="var(--school)" /><rect x="102" y="43" width="54" height="34" rx="17" fill="var(--school)" /><rect x="164" y="43" width="54" height="34" rx="17" fill="var(--school)" /><rect x="226" y="43" width="54" height="34" rx="17" fill="var(--school)" /><rect x="288" y="43" width="54" height="34" rx="17" fill="var(--school)" /><rect x="350" y="43" width="54" height="34" rx="17" fill="var(--school)" /><rect x="412" y="43" width="54" height="34" rx="17" fill="var(--school)" /><text x="20" y="32" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">Healthy nerve: coating intact, signals move fast</text><line x1="20" y1="160" x2="490" y2="160" stroke="var(--school-accent)" stroke-width="5"/><rect x="40" y="143" width="54" height="34" rx="17" fill="var(--school)" /><rect x="102" y="143" width="54" height="34" rx="17" fill="none" stroke="var(--alert)" stroke-width="2" stroke-dasharray="4 4"/><rect x="164" y="143" width="54" height="34" rx="17" fill="none" stroke="var(--alert)" stroke-width="2" stroke-dasharray="4 4"/><rect x="226" y="143" width="54" height="34" rx="17" fill="var(--school)" /><rect x="288" y="143" width="54" height="34" rx="17" fill="none" stroke="var(--alert)" stroke-width="2" stroke-dasharray="4 4"/><rect x="350" y="143" width="54" height="34" rx="17" fill="var(--school)" /><rect x="412" y="143" width="54" height="34" rx="17" fill="var(--school)" /><text x="20" y="132" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">After heavy nitrous use: coating breaks down</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Nitrous inactivates vitamin B12, which nerves need to maintain myelin, the coating that lets signals travel. Heavy or frequent use can damage nerves in the spinal cord, causing numbness, tingling, weakness, and trouble walking. Doctors are seeing it in teens and young adults. Some recover with treatment, some don't fully.</span></figcaption>
-      </figure>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Other ways inhalants go wrong</span><span class="sticker">Frostbite. Falls. Heart stops.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🧊 Frostbite.</dt>
-        <dd>Gas comes out of the tank freezing cold. It can burn your lips, mouth, and throat.</dd>
-        <dt>😵‍💫 Passing out.</dt>
-        <dd>Blood pressure drops and people faint, often hitting their heads on the way down.</dd>
-        <dt>💓 Sudden sniffing death.</dt>
-        <dd >Dusters, aerosols, and other chemicals can trigger a deadly heart rhythm, even on the first try. It's called sudden sniffing death syndrome.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <details  class="fold ">
-      <summary><span class="fold-label">Kratom, 7-OH, and tianeptine</span><span class="sticker">Opioid effects, gas station packaging.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🧠 Opioid effects.</dt>
-        <dd>At higher doses they hit the brain's opioid receptors: a reward rush, then tolerance, cravings, and slowed breathing.</dd>
-        <dt>🪝 Getting hooked.</dt>
-        <dd>Regular use can lead to dependence. Withdrawal feels like the flu: aches, sweating, anxiety, no sleep.</dd>
-        <dt>😵 Overdose.</dt>
-        <dd>High doses, especially of 7-OH or tianeptine, or mixed with alcohol or pills, can cause seizures, coma, or stopped breathing.</dd>
-        <dt>❓ Not what the label says.</dt>
-        <dd>Products have been found to contain more, or different, chemicals than listed.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">"Legal" vs. tested</span><span class="sticker">Sold in a store. Rarely tested.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <table style="width:100%;border-collapse:collapse;font-size:1rem"><tr><th></th><th style="text-align:left;padding:8px;color:var(--school)">A medicine from a pharmacy</th><th style="text-align:left;padding:8px;color:var(--alert)">A product from the counter</th></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">Tested</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">FDA reviewed for safety and dose</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Usually not</td></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">Label</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Accurate dose</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Strength can vary a lot</td></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">Warnings</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Clear instructions</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Often "not for human consumption"</td></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">Who's selling</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">A pharmacist</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Whoever's at the counter</td></tr></table>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Being sold in a store only means nobody has stopped it yet. In 2025 the FDA warned people not to inhale Galaxy Gas and similar products, after rising reports of injuries and deaths. Many states have banned some kratom and tianeptine products, and the rules keep changing.</span></figcaption>
-      </figure>
-      </div>
-    </details>
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Making your own call</h2>
+    <h2 id="h-practice">Reading past the marketing</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Read past the marketing.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🔎 Read past the marketing.<span class="row-cue" aria-hidden="true"></span></summary><p>"Natural," "legal," and "botanical" are sales words. They say nothing about safety.</p></details>
-        <details class="row"><summary>💬 Have your line.<span class="row-cue" aria-hidden="true"></span></summary><p>"Nah, that stuff wrecks your nerves." Short and true.</p></details>
-        <details class="row"><summary>🪑 If someone uses near you, keep them sitting.<span class="row-cue" aria-hidden="true"></span></summary><p>Most inhalant injuries happen when people stand up, pass out, and fall.</p></details>
-        <details class="row"><summary>🦶 Notice warning signs.<span class="row-cue" aria-hidden="true"></span></summary><p>Numbness, tingling, or weak legs after nitrous means see a doctor soon. Treatment works better early.</p></details>
-        <details class="row"><summary>🆘 Know when to call 911.<span class="row-cue" aria-hidden="true"></span></summary><p>Won't wake up, slow or no breathing, blue lips, seizure, chest pain, or collapse.</p></details>
+      <h3 class="sticker">Ask what it does, not where it's sold.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Decode the label.<span class="row-cue" aria-hidden="true"></span></summary><p>"Natural," "botanical," "legal," and "for culinary use" are sales words. "Not for human consumption" usually means "we don't want to be responsible."</p></details>
+        <details class="row"><summary><span class="num">2</span> Know the early warning signs.<span class="row-cue" aria-hidden="true"></span></summary><p>After nitrous: numbness, tingling, weak or clumsy legs. After kratom, 7-OH, or tianeptine: needing more, feeling sick without it. Either one means see a doctor soon, and tell them what you've been using.</p></details>
+        <details class="row"><summary><span class="num">3</span> If someone is using near you, keep them sitting.<span class="row-cue" aria-hidden="true"></span></summary><p>Most inhalant injuries happen when people stand up, faint, and fall. Don't chase or startle someone who's been sniffing.</p></details>
+        <details class="row"><summary><span class="num">4</span> Know when to call 911.<span class="row-cue" aria-hidden="true"></span></summary><p>Won't wake up, slow or no breathing, blue lips, a seizure, chest pain, or a head injury. With kratom, 7-OH, or tianeptine, give naloxone if you have it.</p></details>
+        <details class="row"><summary><span class="num">5</span> Have your line.<span class="row-cue" aria-hidden="true"></span></summary><p>"That stuff wrecks your nerves." Short and true.</p></details>
+        <details class="row"><summary><span class="num">6</span> Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors and nurses help with this, including when it's a family member who uses.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Just like the dentist? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Check what you know.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>Nitrous is safe because dentists use it.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Dentists mix it with oxygen, control the dose, and watch you. Balloons and tanks don't.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Dentists mix it with oxygen, control the dose, and watch you. Balloons and tanks don't.">Fact</button>
+      <div class="scenario"><p>A normal B12 blood test means nitrous hasn't hurt your nerves.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. In the Sydney study, average B12 levels looked normal even in patients with spinal cord damage. Doctors need to know about the nitrous to run the right tests.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. In the Sydney study, average B12 levels looked normal even in patients with spinal cord damage. Doctors need to know about the nitrous to run the right tests.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>You can't get hurt the first time you sniff a duster.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Sudden sniffing death can happen on the first try.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Sudden sniffing death can happen on the first try.">Fact</button>
+      <div class="scenario"><p>You can die from sniffing a duster the very first time.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. Sudden sniffing death can happen on any use, including the first.">Myth</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Fact. Sudden sniffing death can happen on any use, including the first.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Kratom can act like an opioid at higher doses.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. It acts on the same brain receptors.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. It acts on the same brain receptors.">Fact</button>
+      <div class="scenario"><p>7-OH is just a stronger energy supplement.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. It acts on the same opioid receptors as morphine and may be far more potent.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. It acts on the same opioid receptors as morphine and may be far more potent.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>If a store sells it, the government says it's safe.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Many of these products are not FDA reviewed, and some carry FDA warnings.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Many of these products are not FDA reviewed, and some carry FDA warnings.">Fact</button>
+      <div class="scenario"><p>Tianeptine products have contained drugs that weren't on the label.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. A New Jersey cluster of severe illness was linked to synthetic cannabinoids found in a tianeptine product.">Myth</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Fact. A New Jersey cluster of severe illness was linked to synthetic cannabinoids found in a tianeptine product.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
       </div>
     </details>
 
+
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Read the label like a detective.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 10 minutes · no materials needed</p>
+      <p>Pick a move. There may be more than one good one.</p>
+      <div class="scenario">
+        <p>At a party, people are passing balloons from a Galaxy Gas tank. Andre has done six and is getting up to walk to the kitchen.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Low oxygen plus a drop in blood pressure is how people faint and hit their heads.">Let him go. It wears off in a minute</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. &quot;Sit for a minute first&quot; prevents the most common injury. If he faints, check that he&#x27;s breathing; if he hit his head or won&#x27;t wake up, call 911.">Tell him to sit down for a minute first</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your coworker Lin takes 7-OH tablets every day "for stress" and feels awful when she skips a day.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Feeling awful without it is withdrawal. That&#x27;s dependence on an opioid-like drug, legal or not.">Tell her it's fine since it's sold legally</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Tell her what you&#x27;ve noticed and that withdrawal means her body depends on it. A doctor can help her taper safely; stopping suddenly can be miserable.">Tell her you're worried and suggest she talk to a doctor</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your friend Jordan has been doing whippets most weekends and mentions his toes have been tingling for a couple of weeks.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Tingling after nitrous is an early sign of nerve damage. Waiting can make it worse.">Probably just cold feet</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Stop the nitrous and see a doctor soon, and tell them about the nitrous so they test for the right thing. Caught early, treatment works better.">Tell him it's a warning sign and he should see a doctor soon</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">The best answer is the one you'll actually do.</p>
+      </div>
+    </details>
+
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">In a group</span><span class="sticker">Take apart the package.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 15 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
-        <li>Imagine a bright package that says: "Natural. Energy and calm. Not for human consumption."</li>
-        <li>In small groups, list what the package wants you to believe, and what it leaves out.</li>
-        <li>Go through the next screens and vote on each claim.</li>
+        <li>Imagine a bright package: "All natural. Focus and calm. Lab tested. Not for human consumption."</li>
+        <li>In small groups, list what the package wants you to believe, what it leaves out, and who benefits.</li>
+        <li>Then rewrite the label so it's honest, using what you learned on this page.</li>
+        <li>Share a few. Which honest label would make people stop and think?</li>
       </ol>
       </div>
     </details>
 
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Read the label · 1 of 4</span><span class="sticker">"It only lasts a minute, so it can't hurt you."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>One minute without enough oxygen is enough to pass out and fall, and nerve damage builds with repeated use.</p></details>
-      </div>
-    </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Read the label · 2 of 4</span><span class="sticker">"It's basically what the dentist gives you."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Dentists mix it with oxygen and monitor you. Pure gas from a balloon is a different situation.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Read the label · 3 of 4</span><span class="sticker">"It's legal, so it's been tested."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Most aren't FDA reviewed. Legal often just means not banned yet.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Read the label · 4 of 4</span><span class="sticker">"It's natural, so it's safe."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Kratom is a plant and can still cause dependence, liver problems, and overdose.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
         <li>Why would a product say "not for human consumption" when it's obviously meant to be used?</li>
-        <li>Why do you think companies make these tanks and packages look like candy?</li>
-        <li>What questions should you ask before trusting any product?</li>
+        <li>Why do you think these products are sold at gas stations and smoke shops instead of pharmacies?</li>
+        <li>How should someone talk to a family member who uses kratom for pain?</li>
       </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Treat this as a media literacy activity. Keep it about products and claims, not personal use. Students may know family members who use kratom for pain, so stay non-judgmental.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Treat this as a media literacy activity. Keep it about products and claims, not personal use. Some students have family members who use kratom for pain or recovery, so keep it non-judgmental.</p></details>
       </div>
     </details>
 
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      
-      <div class="scenario" >
-        <p>At a party, people are passing around balloons from a Galaxy Gas tank.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Passing out and falling is common, and repeated use hurts nerves.">Try one, it's just a minute</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Most injuries come from falling. Watching out matters.">Pass, and keep an eye on people standing up</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>A friend says they take 7-OH tablets every day for stress, and they feel awful when they skip.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Feeling awful when they skip is withdrawal, a sign of dependence.">Tell them it's fine since it's legal</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Quitting is easier and safer with support.">Tell them you're worried and help them talk to a counselor or doctor</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
-      </div>
-    </details>
-
-    <details  class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>⏱ "Just one more balloon."<span class="row-cue" aria-hidden="true"></span></summary><p>The damage stacks up with every hit.</p></details>
-        <details class="row"><summary>🙈 Ignoring numbness or tingling.<span class="row-cue" aria-hidden="true"></span></summary><p>That's a warning sign. Get checked.</p></details>
-        <details class="row"><summary>🍺 Mixing with alcohol.<span class="row-cue" aria-hidden="true"></span></summary><p>Raises the risk of overdose with kratom, 7-OH, and tianeptine.</p></details>
-        <details class="row"><summary>🤫 Keeping it quiet when someone collapses.<span class="row-cue" aria-hidden="true"></span></summary><p>Call for help right away.</p></details>
-      </div>
-      </div>
-    </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Call 911 right away if someone</h3>
@@ -645,38 +688,52 @@
         <li>Has blue lips, a seizure, chest pain, or an irregular heartbeat.</li>
         <li>Hits their head when they fall.</li>
       </ul>
-      <p style="margin:0">Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Give naloxone if opioid-like products were involved. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Vohra, V., et al. (2025). Notes from the field: Recreational nitrous oxide misuse, Michigan, 2019 to 2023. <i>MMWR</i>, 74.</li>
+        <li>Swart, G., et al. (2021). Nitrous oxide-induced myeloneuropathy. <i>European Journal of Neurology</i>, 28, 3938 to 3944.</li>
+        <li>Bass, M. (1970). Sudden sniffing death. <i>JAMA</i>, 212, 2075 to 2079.</li>
+        <li>Counts, C. J., et al. (2024). Notes from the field: Cluster of severe illness from Neptune's Fix tianeptine linked to synthetic cannabinoids, New Jersey, June to November 2023. <i>MMWR</i>, 73, 89 to 90.</li>
+        <li>U.S. Food and Drug Administration. (2025). FDA warns consumers not to inhale nitrous oxide products (March 2025); FDA recommends scheduling 7-hydroxymitragynine (July 2025).</li>
+      </ul>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="reflect" aria-labelledby="h-reflect">
   <div class="wrap">
     <div class="eyebrow">Part 3 · Reflect</div>
-    <h2 id="h-reflect">Take a moment to write</h2>
+    <h2 id="h-reflect">Think it through</h2>
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
       <label class="prompt" for="tx-1">What I'd heard about these products, and what surprised me</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Where I see them, in stores or online</label>
+      <label class="prompt" for="tx-2">Where I see them, in stores or online, and how they're marketed to people my age</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">Words in ads that make things sound safe</label>
+      <label class="prompt" for="tx-3">Words in ads that make things sound safe, and what they actually mean</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I'd say if someone offered me one</label>
+      <label class="prompt" for="tx-4">What I'd say if someone passed me a balloon</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Ways I like to feel good that don't cost my brain anything</label>
+      <label class="prompt" for="tx-5">How I'd bring it up with someone I care about who uses one of these</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You deserve to know what's really in something before you decide. Asking questions is a strength.</p>
+      <p>You deserve to know what's actually in something before you decide. Asking what it does, instead of where it's sold, is a skill you'll use for the rest of your life.</p>
     </div>
     </div>
   </div>
@@ -685,14 +742,14 @@
 <section class="part" id="checkin" aria-labelledby="h-checkin">
   <div class="wrap">
     <div class="eyebrow">Part 4 · Check in</div>
-    <h2 id="h-checkin">Check-in tool</h2>
+    <h2 id="h-checkin">Check in with yourself</h2>
 <div class="unit unit-checkin">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span><strong>Your privacy:</strong> Nothing you enter here is saved, stored, or sent anywhere. This tool works entirely in your browser.</span></p>
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
         <h3 id="ci-1">How much has this been on your mind today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -719,23 +776,23 @@
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about someone</button>
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😬 Felt pressure</button>
-          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">🤔 Just curious</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about my choices</button>
+        <h3>Which is closest to where you are?</h3>
+        <p class="ci-hint">Pick one.</p>
+        <div class="paths" role="group" aria-label="Where you are right now">
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about someone</button>
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Felt pressure</button>
+          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">Just curious</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling good about my choices</button>
         </div>
 
         <div class="path-panel" id="p-friend" hidden>
           <h4>What this might mean</h4>
-          <p>It's hard to watch someone take risks with their body.</p>
+          <p>It's hard to watch someone take risks with their body, especially when it's sold like it's nothing.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Tell them what you learned, without lecturing.</li>
-            <li><span class="e" aria-hidden="true">🦶</span>If they mention numbness, tingling, or withdrawal, urge them to see a doctor.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a trusted adult if you're worried.</li>
+            <li>Tell them what you learned, without lecturing.</li>
+            <li>If they mention tingling, numbness, or withdrawal, urge them to see a doctor.</li>
+            <li>Tell a trusted adult if you're worried.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-pressure" hidden>
@@ -743,9 +800,9 @@
           <p>Saying no to something sold in a store can feel weird. You're allowed to.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Have a line ready.</li>
-            <li><span class="e" aria-hidden="true">🙅</span>Saying No Without Losing Your Friends has more ideas.</li>
-            <li><span class="e" aria-hidden="true">👥</span>Stick near friends who don't push.</li>
+            <li>Have a line ready.</li>
+            <li>Saying No Without Losing Your Friends has more ideas.</li>
+            <li>Stick near friends who don't push.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-curious" hidden>
@@ -753,9 +810,9 @@
           <p>Good questions lead to good decisions.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📖</span>Look back at the "legal vs. tested" screen.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Ask a trusted adult your questions.</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Think about what you'd want it to do, and what else could.</li>
+            <li>Look back at the nerve diagram.</li>
+            <li>Ask a trusted adult your questions.</li>
+            <li>Think about what you'd want it to do, and what else could.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -763,9 +820,9 @@
           <p>That's worth noticing.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">💪</span>Keep your line ready.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Look out for friends.</li>
+            <li>Notice what helped.</li>
+            <li>Keep your line ready.</li>
+            <li>Look out for friends.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -790,8 +847,8 @@
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
-        <p class="ci-hint">The smallest version counts.</p>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One thing you'll do in the next day or two?</label>
+        <p class="ci-hint">Small and specific counts: "Tell Jordan the tingling is worth a doctor visit."</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
         <p class="closing">Be kind to yourself. Knowing what's really in things gives you more choices.</p>
       </div>

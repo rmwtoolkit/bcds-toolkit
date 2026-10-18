@@ -362,6 +362,79 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
+
+  .ef-grid { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .ef { background:#fff; border-radius:18px; padding:16px 18px; }
+  .ef .k { font-size:.78rem; font-weight:600; color:var(--ink-soft); letter-spacing:.02em; }
+  .ef b { display:block; font-size:1.05rem; margin:2px 0 4px; }
+  .ef span { font-size:.93rem; color:var(--ink-soft); line-height:1.45; display:block; }
 </style>
 </head>
 
@@ -381,9 +454,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🧠 High School · Getting things done</div>
+  <div class="eyebrow">High School · Getting things done</div>
   <h1>Running the Show</h1>
-  <p class="tagline">Because your brain has a manager, and it's still learning the job.</p>
+  <p class="tagline">The three skills behind getting things done, where they live in your brain, and how to build a system that carries the load for you.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +464,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,56 +481,101 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">How your brain gets things done</h2>
+    <h2 id="h-understand">The skills behind getting things done</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">It's not lazy. It's a skill you're building.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Smart enough. Still dropping balls.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You had a project due in two weeks and started it the night before.</li>
-        
-        <li >Your Google Drive is 300 files named "Untitled document."</li>
-        <li>You sat down to study and suddenly it was an hour later and you'd done nothing.</li>
-        <li>You meant to start, and then you just didn't.</li>
-        
-        <li >Between classes, practice, a job, and everything else, you can't keep it all straight.</li>
-        <li>Someone called you lazy, and you know that's not it, but you can't explain what is.</li>
+        <li>Assignments live in four places: the class page, an email, a group chat, and a photo of the whiteboard.</li>
+        <li>You knew about the shift swap, the permission form, and the lab, and you still forgot one.</li>
+        <li>A plan works fine until practice gets moved, and then the whole evening falls apart.</li>
+        <li>You start the reading, check one message, and come back 40 minutes later with no idea where you were.</li>
+        <li>Adults keep saying "you're so capable" in a tone that means "so why is this happening?"</li>
       </ul>
-      <p style="margin:0">These aren't character flaws. They're signs that your brain's management system is still being built, and it can be trained.</p>
+      <p style="margin:0">You've probably heard that your brain's planning system is still developing. True. This lesson goes further: what those skills actually are, where they run, what knocks them offline, and how adults who are good at this really do it. (Hint: mostly not with willpower.)</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Your brain's management team</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">📋</span><strong>The planner</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Figures out what needs to happen, in what order, and by when.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>The focus keeper</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Holds your attention on one thing and blocks out distractions, including the ones in your pocket.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧠</span><strong>The working memory</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Holds information in your head while you use it, like remembering the directions while you do the worksheet.</p></details>
+    <h3 style="margin-top:28px">Three core skills, not one</h3>
+    <p>"Executive function" sounds like one thing. In 2000, researchers led by Akira Miyake gave college students a battery of thinking tasks and found three related but separate abilities. Most later work, including a major review by Adele Diamond in 2013, uses the same three.</p>
+    <div class="ef-grid">
+      <div class="ef"><span class="k">Working memory</span><b>Holding and updating</b><span>Keeping the steps of a problem in mind while you work it, and swapping old information for new.</span></div>
+      <div class="ef"><span class="k">Inhibition</span><b>Not doing the easy thing</b><span>Ignoring the buzz, finishing the paragraph, waiting to reply until you've thought about it.</span></div>
+      <div class="ef"><span class="k">Cognitive flexibility</span><b>Switching gears</b><span>Changing plans when practice moves, trying a different approach when the first one fails.</span></div>
+    </div>
+    <h3 style="margin-top:28px">Where they run</h3>
+    <figure class="fig">
+<svg viewBox="0 0 400 290" role="img" aria-labelledby="ef-t ef-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="ef-t">Side view of the left side of the brain, showing the executive control network</title>
+  <desc id="ef-d">The dorsolateral prefrontal cortex sits on the upper side of the frontal lobe. The inferior frontal gyrus sits lower, just above the lateral fissure. The posterior parietal cortex sits toward the back and top of the brain. The anterior cingulate is on the inner surface, drawn as a dashed line as if the brain were see-through.</desc>
+  <!-- brainstem + cerebellum -->
+  <path d="M246 200 C250 222 254 246 258 272 L278 272 C274 246 274 222 276 202 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.5"/>
+  <ellipse cx="300" cy="214" rx="42" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.5"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.1"><path d="M266 208 C286 202 312 202 336 210"/><path d="M268 220 C290 214 314 216 336 224"/></g>
+  <!-- cerebrum, lateral view -->
+  <path d="M66 146 C54 92 102 46 176 40 C252 34 320 64 336 120 C346 154 332 184 304 194 C286 200 266 200 250 204 C222 212 190 222 156 214 C134 209 118 198 116 184 C100 180 80 170 66 146 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <!-- gyri hints -->
+  <g fill="none" stroke="#D5CABC" stroke-width="1.4" stroke-linecap="round">
+    <path d="M96 76 C112 86 108 100 122 108"/><path d="M144 54 C150 70 142 82 154 94"/><path d="M246 48 C240 62 250 72 244 88"/>
+    <path d="M292 72 C282 86 294 96 286 112"/><path d="M318 118 C304 124 310 138 296 146"/>
+    <path d="M168 192 C188 186 212 190 232 182"/><path d="M262 160 C276 152 292 158 306 150"/>
+  </g>
+  <!-- central sulcus + lateral fissure -->
+  <path d="M216 41 C208 72 198 104 184 150" fill="none" stroke="#A89C8D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M118 176 C156 164 204 156 254 132" fill="none" stroke="#A89C8D" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- regions -->
+  <ellipse cx="116" cy="94" rx="34" ry="22" fill="#2E6DB4" fill-opacity=".85"/>
+  <ellipse cx="132" cy="152" rx="26" ry="12" transform="rotate(-12 132 152)" fill="#1F8A70" fill-opacity=".85"/>
+  <ellipse cx="266" cy="88" rx="38" ry="24" transform="rotate(14 266 88)" fill="#D9822B" fill-opacity=".85"/>
+  <path d="M146 132 C156 106 186 94 222 98" fill="none" stroke="#7A4FB5" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 6" stroke-opacity=".9"/>
+  <!-- network link -->
+  <path d="M150 90 C186 72 214 72 230 80" fill="none" stroke="#6E6E73" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <!-- labels -->
+  <g font-size="13" font-weight="700">
+    <line x1="104" y1="82" x2="62" y2="30" stroke="#245A96" stroke-width="1.4"/><circle cx="104" cy="82" r="3" fill="#245A96"/>
+    <text x="6" y="22" fill="#245A96">Dorsolateral prefrontal</text>
+    <line x1="122" y1="156" x2="58" y2="236" stroke="#16705A" stroke-width="1.4"/><circle cx="122" cy="156" r="3" fill="#16705A"/>
+    <text x="6" y="252" fill="#16705A">Inferior frontal gyrus</text>
+    <line x1="278" y1="82" x2="312" y2="30" stroke="#9A5714" stroke-width="1.4"/><circle cx="278" cy="82" r="3" fill="#9A5714"/>
+    <text x="394" y="22" fill="#9A5714" text-anchor="end">Posterior parietal</text>
+    <line x1="196" y1="96" x2="214" y2="270" stroke="#5E3B8F" stroke-width="1.4"/><circle cx="196" cy="96" r="3" fill="#5E3B8F"/>
+    <text x="150" y="286" fill="#5E3B8F">Anterior cingulate</text>
+  </g>
+  <text x="394" y="286" font-size="11" fill="#6E6E73" text-anchor="end">front ← → back</text>
+</svg>
+      <figcaption>Left side of the brain, front to the left. The dashed purple line is on the inner surface. The gray dotted line marks the front-to-back network these areas form. Simplified: each skill uses several areas working together.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Dorsolateral prefrontal cortex: the workspace</strong><p>Holds information online while you use it. It is among the last areas of the brain to finish maturing. A study that scanned the same young people every two years from childhood into their early 20s found it finishing at the end of adolescence.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1F8A70"></span><div><strong>Inferior frontal gyrus: the brake</strong><p>Helps stop an action that's already started, like the thumb heading for the app. The right side is especially involved in stopping.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Posterior parietal cortex: the spotlight</strong><p>Works with the prefrontal areas to aim and hold attention. Together they form what researchers call the frontoparietal control network.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Anterior cingulate: the error alarm</strong><p>Notices when what you're doing doesn't match what you meant to do, and calls the prefrontal cortex in to fix it. That "wait, I was supposed to..." moment.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's hard</span><span class="sticker">Your brain's manager is still in training.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">This matters past high school. And it changes.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain's manager is still under construction.</dt>
-        <dd>The front part of your brain (the prefrontal cortex) handles planning and self-control. It keeps developing into your mid-twenties. Struggling with this at your age is expected, not a sign something's wrong.</dd>
-        <dt>The load keeps growing.</dt>
-        <dd >High school adds bigger projects, more activities, and less hand-holding, right when the stakes feel higher.</dd>
-        <dt>Sleep and stress drain it fast.</dt>
-        <dd>Executive functions are the first thing to go when you're tired, hungry, or stressed. A bad night of sleep can make a capable brain look disorganized.</dd>
-        <dt>Some brains have to work harder at this.</dt>
-        <dd>For students with ADHD or other learning differences, these skills can take more effort. That's about brain wiring, not effort or intelligence. A counselor can help you figure out if that's part of the picture.</dd>
+        <dt>It predicts a lot.</dt>
+        <dd>The Dunedin study in New Zealand followed about 1,000 people from birth to age 32. Childhood self-control predicted adult health, finances, and run-ins with the law, even after accounting for IQ and family income.</dd>
+        <dt>It isn't fixed.</dt>
+        <dd>In the same study, people whose self-control improved over time did better as adults than their childhood scores predicted. Where you start is not where you have to stay.</dd>
+        <dt>Your day changes your ability.</dt>
+        <dd>Diamond's review lists four things that reliably weaken executive function: stress, poor sleep, loneliness, and lack of exercise. A capable person running on five hours of sleep and a bad week will look disorganized. That's a condition, not a character trait.</dd>
+        <dt>Some brains work harder at this.</dt>
+        <dd>ADHD is largely a difference in executive function. It has nothing to do with intelligence or effort. People with ADHD often do best with more outside structure, and sometimes with treatment. An evaluation can tell you whether it's part of your picture.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Your phone and your focus</span><span class="sticker">Switching isn't multitasking. It's restarting.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Your phone and your focus</span><span class="sticker">Switching costs more than it feels like.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Apps are designed to grab your attention, and they're very good at it. Every notification pulls the focus keeper off the job, and getting back on track takes time. Some studies suggest that even having your phone in sight can tug at your attention.</p>
-      <p class="worst">The worst part: switching back and forth between homework and your phone feels like multitasking. Your brain is really just restarting, over and over.</p>
+      <p>Every time you switch tasks, your brain has to drop one set of rules and load another. That switch costs time and accuracy, even when it feels instant.</p>
+      <p>A 2009 Stanford study found that heavy media multitaskers were worse at filtering out distractions and slower at switching tasks than light multitaskers. Later studies haven't all found the same thing, so treat it as a warning sign, not settled fact. The underlying switch cost is well established.</p>
+      <p class="worst">You can't train yourself into being a great multitasker. You can set things up so you don't have to be.</p>
       </div>
     </details>
   </div>
@@ -467,59 +584,76 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Build a system outside your head</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Get it out of your head and onto paper.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>📝 Get it out of your head.<span class="row-cue" aria-hidden="true"></span></summary><p>Your working memory is small. Write every assignment and to-do in one place, a planner, an app, or a single list, the moment you get it.</p></details>
-        <details class="row"><summary>🪜 Break it down.<span class="row-cue" aria-hidden="true"></span></summary><p>"Do the history project" is too big to start. "Pick three possible topics" is a step your brain can see.</p></details>
-        <details class="row"><summary>⏲ Make time visible.<span class="row-cue" aria-hidden="true"></span></summary><p>Use a timer, a clock you can see, or a calendar with blocks. Time is invisible, so make it show up.</p></details>
-        <details class="row"><summary>🧹 Set up your space.<span class="row-cue" aria-hidden="true"></span></summary><p>Phone in another room. Only what you need on the desk. Your environment does a lot of the focusing for you.</p></details>
-        <details class="row"><summary>🔁 Use routines.<span class="row-cue" aria-hidden="true"></span></summary><p>Same time, same place, same steps. Routines turn decisions into habits so your planner doesn't have to work so hard.</p></details>
-        <details class="row"><summary>🔎 Do a five-minute check.<span class="row-cue" aria-hidden="true"></span></summary><p>At the end of the day: what's due tomorrow? What's due this week? What's one thing I can do now?</p></details>
+      <div class="fold-label">The core idea</div>
+      <h3 class="sticker">Organized people don't remember more. They offload more.</h3>
+      <p>Working memory holds only a few things at once. People who seem effortlessly organized usually aren't relying on it. They've moved the job into tools and routines, so their brain is free to think. Each skill has a matching offload.</p>
+      <div class="levers">
+        <div class="lever"><b>For working memory: one capture point</b><span>Every assignment, shift, form, and promise goes into one place the moment you hear it. One app or one notebook, never "I'll remember."</span></div>
+        <div class="lever"><b>For inhibition: design the room</b><span>Make the distraction harder to reach than the work. Phone charging across the room, one tab, notifications off for set hours.</span></div>
+        <div class="lever"><b>For flexibility: a plan B in advance</b><span>"If practice runs late, I do the reading on the bus and the problem set after dinner." Decide it before the plan breaks.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">The habit that holds it together</div>
+      <h3 class="sticker">A weekly review, about 20 minutes.</h3>
+      <p>Same time every week. Many people pick Sunday evening. Tap each step.</p>
+        <details class="row"><summary><span class="num">1</span> Empty everything into one list.<span class="row-cue" aria-hidden="true"></span></summary><p>Class pages, email, texts, your backpack, the sticky notes. Anything you owe anyone goes on the list.</p></details>
+        <details class="row"><summary><span class="num">2</span> Put fixed things on the calendar first.<span class="row-cue" aria-hidden="true"></span></summary><p>Classes, work shifts, practice, religious services, family responsibilities like picking up a sibling. These aren't obstacles to your plan. They are the frame it fits around.</p></details>
+        <details class="row"><summary><span class="num">3</span> Break big things into dated steps.<span class="row-cue" aria-hidden="true"></span></summary><p>"History paper" becomes "Tue: pick sources. Thu: outline. Sat: rough draft." A step should be small enough to finish in one sitting.</p></details>
+        <details class="row"><summary><span class="num">4</span> Spot the crunch day.<span class="row-cue" aria-hidden="true"></span></summary><p>Look for the day with a test, a shift, and a game. Move work earlier now, or email a teacher now, while you still have options.</p></details>
+        <details class="row"><summary><span class="num">5</span> Close it out every night.<span class="row-cue" aria-hidden="true"></span></summary><p>Two minutes before bed: what's due tomorrow, and is it done? Then stop thinking about it. Your list is holding it.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Make the first step tiny.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Design your system in five lines.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick one big thing you've been putting off. Break it into steps small enough that each one takes 25 minutes or less.</p>
-      <label class="prompt" for="tx-1">The big thing:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="research paper for English"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">Step 1 (the very first, tiny step):</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="open a doc and write the title"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">Step 2:</label>
+      <p>Be specific. A system you'd actually use beats a perfect one you won't. Nothing you type here is saved.</p>
+      <label class="prompt" for="tx-1">My one capture point (where everything goes):</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="notes app on my phone, one list called Everything"></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">My weekly review: day, time, and place</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="Sunday, 7:30, kitchen table"></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">One change to my space that makes distraction harder to reach:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-4">Step 3:</label>
+      <label class="prompt" for="tx-4">The situation that usually blows up my plans:</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-5">Step 4:</label>
-      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <p style="margin-top:12px">Now do only Step 1. That's it. Starting is the hardest part, and you just made it small.</p>
+      <label class="prompt" for="tx-5">My plan B for that situation:</label>
+      <textarea id="tx-5" autocomplete="off" spellcheck="false" placeholder="If my shift runs late, then I do flashcards on the bus and skip the extra problems."></textarea><div class="write-lines"></div>
+      <p style="margin-top:12px">Put your weekly review in your calendar now, with an alarm. The first one is the hardest.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real school jams. Pick the tool.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three overloaded weeks. Which skill needs the backup?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the strategy that would help most.</p>
-      
-      
-      <div class="scenario" >
-        <p>You have a ten-page paper due in two weeks and haven't started.</p>
+      <div class="scenario">
+        <p>Dev is a junior with two AP classes and 15 hours a week at a grocery store. He keeps missing small things: a form, a shift swap, a quiz date. Each one was posted somewhere different.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Inspiration usually shows up after you start, not before.">Wait until you feel inspired</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Exactly. Ten pages over two weeks is doable when each day has one small job.">Break it into steps and put each one on a calendar day</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Possible, but one big block is easy to lose to plans, sickness, or a long Saturday. Smaller chunks are safer.">Plan one big weekend to do it all</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. This is a working memory overload, not a motivation problem. One capture point plus a weekly review means nothing depends on him remembering where he saw it.">Working memory: one capture point and a weekly review</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Cutting hours might help eventually, but the missed items are small and scattered. That points to a capture problem he can fix first.">He should quit the job</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Trying harder to remember asks more of the exact system that's overloaded.">He needs to pay more attention</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
+      <div class="scenario">
         <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>Between practice, a part-time job, and five classes, you feel like you're always behind.</p>
+        <p>Amara watches her two younger brothers after school until her mom gets home at 6:30. Every plan she makes for 3:30 to 6:30 falls apart, and she ends up starting homework at 9.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="good" data-msg="Seeing the whole week helps you plan around busy days and spot the open time you actually have.">Use a weekly calendar with everything on it</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Sometimes cutting back is right, but try planning first. Activities often help you stay organized.">Drop everything and focus only on school</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Less sleep makes every executive skill worse. It's like borrowing from tomorrow at a terrible interest rate.">Just stay up later</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Her family responsibility is a fixed block, like a class. Planning around it honestly, maybe short tasks while the boys do theirs and real work after 6:30, beats a plan that pretends it isn't there. A counselor can also help her talk with teachers about timing.">Flexibility: plan around the fixed block, with short tasks that fit it</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Many students carry real family responsibilities, and in a lot of families that's simply what you do for each other. The plan should fit her life, not the other way around.">She should tell her family she can't help anymore</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Waking early can work for some people, but cutting sleep weakens every executive skill. It's a last resort.">Get up at 5 to do homework</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Luis sits down to write his lab report at 8. His phone is next to the laptop. By 9:15 he has a title and a long group chat thread.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The brake works better when the thing it has to stop isn't in reach. Changing the room beats trying to resist for an hour.">Inhibition: phone in another room, chats muted until 9</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="A deadline helps, but the phone still wins most of the small battles if it's within reach.">Give himself an earlier deadline</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Most people overestimate how well they can ignore a phone that's right there.">Just ignore the notifications</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -528,13 +662,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These feel productive but backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🧠 Keeping it all in your head.<span class="row-cue" aria-hidden="true"></span></summary><p>Your brain is for thinking, not storage. Write it down.</p></details>
-        <details class="row"><summary>🔀 "Multitasking."<span class="row-cue" aria-hidden="true"></span></summary><p>Research shows switching between tasks costs time and accuracy. One thing at a time is faster.</p></details>
-        <details class="row"><summary>🌙 All-nighters.<span class="row-cue" aria-hidden="true"></span></summary><p>You lose the sleep your brain needs to remember what you studied. Short-term save, long-term cost.</p></details>
-        <details class="row"><summary>😔 Calling yourself lazy.<span class="row-cue" aria-hidden="true"></span></summary><p>Struggling with organization is about skills, not character. Skills can be learned.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'm just not an organized person.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Organization is a set of skills plus tools, and the Dunedin data show self-control can improve over time. "Not organized yet" is more accurate.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'm good at multitasking.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Almost everyone pays a cost each time they switch. People who feel good at it are often just used to the cost.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> The right app will fix it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A paper list you check every day beats a beautiful app you open once. The habit matters more than the tool.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'll catch up on sleep after this week.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Short sleep weakens the exact skills you need to get through the week. Protecting sleep is part of the plan.</p></details>
       </div>
       </div>
     </details>
@@ -542,12 +676,25 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to ask for more help</h3>
       <ul class="tight">
-        <li>You're trying hard and still falling behind in several classes.</li>
-        <li>Getting organized feels impossible no matter what you try.</li>
-        <li>Schoolwork stress is affecting your sleep, mood, or how you feel about yourself.</li>
+        <li>You've tried real systems for a few weeks and you're still falling behind in several classes.</li>
+        <li>You've struggled with focus, losing things, or time for as long as you can remember. That can point to ADHD.</li>
+        <li>School stress is hurting your sleep, mood, or how you see yourself.</li>
       </ul>
-      <p style="margin:0">A counselor or learning specialist can help you find strategies that fit how your brain works. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor or learning specialist can help you look at what's going on. If an evaluation shows a learning difference, you may qualify for supports such as a 504 plan now. Colleges have disability services offices that provide accommodations too, so getting clarity now helps later. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Miyake, A., Friedman, N., Emerson, M., Witzki, A., Howerter, A., &amp; Wager, T. (2000). The unity and diversity of executive functions and their contributions to complex "frontal lobe" tasks: A latent variable analysis. <i>Cognitive Psychology</i>.</li>
+        <li>Diamond, A. (2013). Executive functions. <i>Annual Review of Psychology</i>.</li>
+        <li>Gogtay, N., et al. (2004). Dynamic mapping of human cortical development during childhood through early adulthood. <i>Proceedings of the National Academy of Sciences</i>.</li>
+        <li>Moffitt, T., et al. (2011). A gradient of childhood self-control predicts health, wealth, and public safety. <i>Proceedings of the National Academy of Sciences</i>.</li>
+        <li>Ophir, E., Nass, C., &amp; Wagner, A. (2009). Cognitive control in media multitaskers. <i>Proceedings of the National Academy of Sciences</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -558,26 +705,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-6">The part of getting things done that's hardest for me right now</label>
+      <label class="prompt" for="tx-6">Which of the three skills gives me the most trouble, and where it shows up</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">Which member of my brain's management team needs the most support: the planner, the focus keeper, or the working memory</label>
+      <label class="prompt" for="tx-7">What I'm currently asking my memory to hold that should live somewhere else</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-8">A time I got something done that felt hard, and what helped</label>
+      <label class="prompt" for="tx-8">A stretch when I was on top of things. What was different about my sleep, stress, or routine?</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-9">One change to my space or routine I could try this week</label>
+      <label class="prompt" for="tx-9">The responsibilities outside school my plan has to fit around</label>
       <textarea id="tx-9" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-10">Something I'm good at that has nothing to do with being organized</label>
+      <label class="prompt" for="tx-10">How I'd want to run my days a year from now, when fewer people are checking on me</label>
       <textarea id="tx-10" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Being disorganized sometimes doesn't make you lazy or not smart. Running the show is a skill, and you're still learning it, like everyone your age.</p>
+      <p>Nobody runs the show on willpower alone. The people who look organized built a system and keep using it. You can build yours now, and it will travel with you.</p>
     </div>
     </div>
   </div>
@@ -624,16 +771,16 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-over" aria-pressed="false">😵 Overwhelmed, it's too much</button>
-          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">🧱 Stuck, I can't start</button>
-          <button type="button" class="choice" data-path="p-scattered" aria-pressed="false">🌀 Scattered, losing track of things</button>
-          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">😰 Behind and stressed</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 On top of it today</button>
+          <button type="button" class="choice" data-path="p-over" aria-pressed="false">Overwhelmed, it's too much</button>
+          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">Stuck, I can't start</button>
+          <button type="button" class="choice" data-path="p-scattered" aria-pressed="false">Scattered, losing track of things</button>
+          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">Behind and stressed</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">On top of it today</button>
         </div>
 
         <div class="path-panel" id="p-over" hidden>
           <h4>What this might mean</h4>
-          <p>When everything feels urgent, your planner shuts down. That's a stress response, not a sign you can't handle it.</p>
+          <p>Stress is one of the fastest ways to knock executive function offline. When everything feels urgent, your prefrontal cortex has less to work with. That says more about your load than about you.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">📝</span>Do a brain dump: write every single thing down, then circle just one.</li>
@@ -644,7 +791,7 @@
         </div>
         <div class="path-panel" id="p-stuck" hidden>
           <h4>What this might mean</h4>
-          <p>Starting is one of the hardest executive skills. The task usually feels bigger in your head than it really is.</p>
+          <p>Starting takes inhibition (not doing the easier thing) and working memory (seeing the first step). When the task is vague, both stall.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">⏲</span>Set a timer for 10 minutes and promise yourself you can stop after that.</li>
@@ -654,10 +801,10 @@
         </div>
         <div class="path-panel" id="p-scattered" hidden>
           <h4>What this might mean</h4>
-          <p>Your working memory is overloaded. The fix is getting things out of your head and into one system.</p>
+          <p>Your working memory is holding too much. The fix is one capture point, not a better memory.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📒</span>Pick one place for all assignments and use only that.</li>
+            <li><span class="e" aria-hidden="true">📒</span>Pick one capture point and empty everything into it tonight.</li>
             <li><span class="e" aria-hidden="true">🔎</span>Do a five-minute check tonight: what's due tomorrow?</li>
             <li><span class="e" aria-hidden="true">🧹</span>Clean out one thing, your backpack or one folder, nothing more.</li>
           </ul>
@@ -678,7 +825,7 @@
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🔎</span>Notice what helped so you can repeat it.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Turn it into a routine: same time, same place tomorrow.</li>
+            <li><span class="e" aria-hidden="true">🔁</span>Put a weekly review on your calendar so this keeps happening.</li>
             <li><span class="e" aria-hidden="true">🎉</span>Give yourself credit.</li>
           </ul>
         </div>

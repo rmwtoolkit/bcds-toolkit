@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ----- lesson figure + callouts ----- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.97rem; line-height:1.5; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:16px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🙋 High School · Looking out for each other</div>
+  <div class="eyebrow">High School · Looking out for each other</div>
   <h1>Speaking Up</h1>
-  <p class="tagline">Because one person saying something can change how the whole moment goes.</p>
+  <p class="tagline">Why good people freeze, what the research says actually works, and how to step in without making it worse.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +476,77 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why speaking up matters, and why it's hard</h2>
+    <h2 id="h-understand">Why good people stay quiet</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You saw it. You froze. That's normal.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You saw it. You froze. Then you replayed it all night.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You saw someone get teased, and you laughed along or stayed quiet.</li>
-        <li>Someone in the group chat posted something mean about a kid who isn't in it.</li>
-        <li>You noticed a kid on the edge of the group, left behind when everyone got up and walked off together.</li>
-        
-        <li >Someone made a comment about a person's race, religion, body, gender, or sexuality, and everyone acted like it was no big deal.</li>
-        <li>You wanted to say something but didn't know what, or worried you'd be next.</li>
-        <li>You did say something, and it felt scary and good at the same time.</li>
+        <li>Someone in the locker room made a comment about a teammate's body, and you laughed before you thought about it.</li>
+        <li>A classmate mocked someone's accent, quietly enough that the teacher didn't hear.</li>
+        <li>The group chat keeps "joking" about a new student's religion.</li>
+        <li>At a party, a guy wouldn't leave a girl alone, and she kept looking around the room.</li>
+        <li>A friend said something racist "ironically," and everyone moved on.</li>
+        <li>You did say something once. Your voice shook, and afterward you were glad.</li>
       </ul>
-      <p style="margin:0">Most people want to help when they see something wrong. Knowing how makes it a lot easier.</p>
+      <p style="margin:0">You already know the word upstander. The harder question is why it's so hard in the moment, and what makes the difference.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Being an upstander</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">👀</span><strong>Notice</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Pay attention to who's being left out, picked on, or talked about, in person or online.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧠</span><strong>Decide it matters</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">It's easy to think "it's just a joke" or "someone else will do something." Decide that it's worth acting on.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🤝</span><strong>Do one thing</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">It doesn't have to be dramatic. One small action can change how the moment goes.</p></details>
-    </div>
+    <h3 style="margin-top:28px">Five gates between seeing it and doing something</h3>
+    <p>In 1970, psychologists Bibb Latané and John Darley mapped the steps a bystander has to get through before helping. Freezing usually isn't a character flaw. It's getting stuck at one of these gates.</p>
+    <figure class="fig">
+  <svg viewBox="0 0 400 347" role="img" aria-label="Five steps a bystander must pass through before helping: notice it, read it as a problem, take it on yourself, know what to do, and do it. Under each step, what usually stops people there." xmlns="http://www.w3.org/2000/svg">
+  <line x1="20" y1="24" x2="20" y2="291" stroke="#D2D2D7" stroke-width="3"/>
+  <circle cx="20" cy="24" r="16" fill="#1D1D1F"/><text x="20" y="29" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+  <text x="50" y="23" font-size="17" font-weight="700" fill="#1D1D1F">Notice it</text>
+  <text x="50" y="45" font-size="15" fill="#6E6E73">Phones, earbuds, being in a hurry.</text>
+  <circle cx="20" cy="88" r="16" fill="#1D1D1F"/><text x="20" y="93" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+  <text x="50" y="87" font-size="17" font-weight="700" fill="#1D1D1F">Read it as a problem</text>
+  <text x="50" y="109" font-size="15" fill="#6E6E73">"It's just a joke." Everyone else</text>
+  <text x="50" y="128" font-size="15" fill="#6E6E73">looks calm, so maybe it's fine.</text>
+  <circle cx="20" cy="171" r="16" fill="#1D1D1F"/><text x="20" y="176" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+  <text x="50" y="170" font-size="17" font-weight="700" fill="#1D1D1F">Take it on yourself</text>
+  <text x="50" y="192" font-size="15" fill="#6E6E73">"Someone else will deal with it."</text>
+  <circle cx="20" cy="235" r="16" fill="#1D1D1F"/><text x="20" y="240" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+  <text x="50" y="234" font-size="17" font-weight="700" fill="#1D1D1F">Know what to do</text>
+  <text x="50" y="256" font-size="15" fill="#6E6E73">No plan, no words ready.</text>
+  <circle cx="20" cy="299" r="16" fill="#0071E3"/><text x="20" y="304" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">5</text>
+  <text x="50" y="298" font-size="17" font-weight="700" fill="#1D1D1F">Do it</text>
+  <text x="50" y="320" font-size="15" fill="#6E6E73">Fear of being next, or of looking stupid.</text>
+</svg>
+      <figcaption>Latané and Darley's bystander decision model (1970), with what usually stops people at each step. Every gate is a place to drop out, and a place to get through. Most of the skills on this page are about gates 3 and 4.</figcaption>
+    </figure>
+    <p class="stat"><b>The classic finding:</b> in a 1968 study, students heard another student over an intercom seem to have a seizure. When they thought they were the only one listening, 85% went for help before the call cut off. When they thought four others could hear, 31% did.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why speaking up is hard</span><span class="sticker">Everyone's waiting for someone else to go first.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">The bystander effect is real. So is the comeback.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>The bystander effect.</dt>
-        <dd>Research shows that the more people who see something, the less likely any one person is to help. Everyone assumes someone else will.</dd>
-        <dt>Fear of being next.</dt>
-        <dd>It's a real worry. Many of the ways to help don't put you in the spotlight.</dd>
-        <dt>It's not clear it's serious.</dt>
-        <dd>Teasing between friends and cruelty can look similar. Watch the person's face. If they don't look like they're having fun, it's not fun.</dd>
-        <dt>Group pressure.</dt>
-        <dd>When everyone is laughing, going against it feels huge. Often others are uncomfortable too and are waiting for someone to go first.</dd>
+        <dt>Crowds slow people down, but not always.</dt>
+        <dd>A 2011 review of studies with more than 7,700 people confirmed the bystander effect, and found it gets weaker when a situation is clearly dangerous and when the bystanders know each other. Friends who notice together act more.</dd>
+        <dt>In real life, someone usually steps in.</dt>
+        <dd>Researchers analyzed security-camera footage of 219 real public fights in the UK, the Netherlands, and South Africa. In 9 of 10, at least one bystander, usually several, did something to help. More people around made it more likely, not less.</dd>
+        <dt>Peers can stop it fast.</dt>
+        <dd>On school playgrounds, peers were present for 88% of bullying episodes but stepped in during only 19%. When they did step in, most of the time (57%) it stopped. Those were younger kids, and high school is more complicated, but the lesson travels: the people watching hold a lot of power.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Speaking up online</span><span class="sticker">A laughing emoji is still joining in.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Peers set the norm</span><span class="sticker">When the right students take a stand, the climate shifts.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>A lot of cruelty happens on screens: pile-ons in comments, screenshots passed around, group chats that exist to talk about someone, or photos of a hangout posted so someone sees what they weren't invited to.</p>
-      <p class="worst">The worst part: online, it's easy to tell yourself a like or a laughing emoji isn't really joining in. To the person on the other end, every one counts.</p>
+      <p>In a study of 56 New Jersey middle schools and more than 24,000 students, small groups of students were invited to take a public stand against conflict at school, in their own words and their own style. Over the next year, disciplinary reports of conflict at those schools fell 25% compared with other schools.</p>
+      <p style="margin:0">The effect was strongest when the group included students other students paid attention to. If people watch what you do, your "not cool" travels further than a poster ever will.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Online</span><span class="sticker">A reaction is still joining in.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Pile-ons in comments, screenshots passed around, side chats that exist to talk about one person, AI-edited photos. Online, every gate gets harder: it's easy not to notice, easy to call it a joke, and easy to assume someone else will report it.</p>
+      <p class="worst">The worst part: a like or a laughing reaction feels like nothing to you. To the person on the other end, every one counts.</p>
       </div>
     </details>
   </div>
@@ -465,71 +555,81 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Pick your move</h2>
     <div class="card">
-      <div class="fold-label">What actually helps: five ways to step in</div>
+      <div class="fold-label">Six ways to step in</div>
       <h3 class="sticker">You don't need a speech. You need one move.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🔀 Distract.<span class="row-cue" aria-hidden="true"></span></summary><p>Change the subject, interrupt with a question, or invite the person away. "Hey, want to come with us to the library?"</p></details>
-        <details class="row"><summary>🧑‍🏫 Delegate.<span class="row-cue" aria-hidden="true"></span></summary><p>Get help from an adult or a friend with more influence. Telling an adult is not snitching when someone is getting hurt.</p></details>
-        <details class="row"><summary>🗣 Direct.<span class="row-cue" aria-hidden="true"></span></summary><p>Say something short and clear: "Not cool." "Leave them alone." "That's not funny." Only if it feels safe.</p></details>
-        <details class="row"><summary>⏳ Delay.<span class="row-cue" aria-hidden="true"></span></summary><p>Check in with the person afterward. "I saw what happened. Are you okay?" This matters more than people think.</p></details>
-        <details class="row"><summary>📸 Document.<span class="row-cue" aria-hidden="true"></span></summary><p>Online, screenshot harmful posts to show an adult or report. Then don't share them anywhere else.</p></details>
-        <details class="row"><summary>🚪 Include.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone is on the edge of the group, wait for them, save them a seat, add them to the plan.</p></details>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Distract.<span class="row-cue" aria-hidden="true"></span></summary><p>Interrupt without confronting anyone. Ask a random question, spill something, or pull the person away: "hey, your friend's looking for you."</p></details>
+        <details class="row"><summary><span class="num">2</span> Delegate.<span class="row-cue" aria-hidden="true"></span></summary><p>Bring in someone with more power: a coach, a teacher, the host, a friend people listen to. That's using your resources, not snitching.</p></details>
+        <details class="row"><summary><span class="num">3</span> Direct.<span class="row-cue" aria-hidden="true"></span></summary><p>Short and flat: "Not funny." "Leave her alone." "Bro, stop." Only if it feels safe. One sentence, then move on.</p></details>
+        <details class="row"><summary><span class="num">4</span> Delay.<span class="row-cue" aria-hidden="true"></span></summary><p>Check in afterward: "I saw what happened. You okay?" It's never too late, and people remember who did this.</p></details>
+        <details class="row"><summary><span class="num">5</span> Document.<span class="row-cue" aria-hidden="true"></span></summary><p>Screenshot or note what happened so an adult can act on it. Don't share it anywhere else, and let the person who was targeted decide what happens next when you can.</p></details>
+        <details class="row"><summary><span class="num">6</span> Include.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone keeps ending up on the edge, wait for them, save them a seat, add them to the plan. Prevention counts.</p></details>
+      <p style="margin:14px 0 0">What's safe to say can depend on who you are. A comment one student makes with no cost might cost another more, because of race, gender, size, being new, or how people already treat them. Pick the move that's safe for you. All six count.</p>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Have your line ready before you need it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick or write a few lines you'd actually say. Having them ready makes it easier. Nothing is saved.</p>
+      <p>Gate 4 is "know what to do." Pick or write lines you'd actually say. Nothing is saved.</p>
       <div class="checklist" role="group" aria-label="Lines I could use">
-        <label><input type="checkbox"> "That's not funny."</label>
-        <label><input type="checkbox"> "Come on, let's go."</label>
-        <label><input type="checkbox"> "Hey, wait up for them."</label>
-        <label><input type="checkbox"> "I'm not going to send that around."</label>
-        <label><input type="checkbox"> "Are you okay?" (afterward, in private)</label>
+        <label><input type="checkbox"> "Not funny."</label>
+        <label><input type="checkbox"> "Yo, come with me for a sec." (pulling someone out)</label>
+        <label><input type="checkbox"> "I'm not sending that around."</label>
+        <label><input type="checkbox"> "Would you say that if they were standing here?"</label>
+        <label><input type="checkbox"> "You okay? That was messed up." (afterward, in private)</label>
       </div>
-      <p id="test-tally" class="feedback" aria-live="polite" data-done="Those are all solid. Pick the one that feels most like you." data-partial="Good. {n} ready. Even one line you'll actually say is enough."></p>
+      <p id="test-tally" class="feedback" aria-live="polite" data-done="Those are all solid. Pick the one that sounds most like you." data-partial="Good. {n} ready. One line you'll actually say is enough."></p>
       <label class="prompt" for="tx-1">A line in my own words:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Pick a move that could help.</p>
-      
       <div class="scenario">
-        <p>Someone in a group chat posts an unflattering photo of a classmate with a mean caption. People start reacting with laughing emojis.</p>
+        <p>In the locker room, a teammate makes a comment about another player's body. A few guys laugh. The player goes quiet.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Every reaction adds to the pile. It makes the person feel more alone.">Add a laughing emoji so you don't stand out</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Direct, and it often makes others feel brave enough to agree.">Post "not cool, take it down" or message the poster privately</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Delegate plus delay. Two strong moves, and you don't have to be in the spotlight.">Screenshot it to show an adult, then check on the classmate</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That tells everyone, including him, that the room is fine with it.">Laugh so it isn't awkward</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Short and flat works best in a room like that. Teammates often follow the first person who shows it isn't okay.">"Bro, chill," and change the subject</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Delay counts. He'll know at least one person noticed. If it keeps happening, a coach should know.">Check on him after: "that was out of line. you good?"</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <p>A friend makes a joke that's homophobic. Everyone laughs.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>At a party, a guy keeps following a girl from your chemistry class. She looks uncomfortable and keeps scanning the room.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Jokes like this can hurt people in the room you don't know about.">Laugh along, it's just a joke</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Short and clear. You don't need a speech.">"Dude, not funny" and move on</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Sometimes people listen better in private. That's a strong choice too.">Bring it up with your friend later, one on one</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Distraction is low-risk and often enough. It gives her an exit without anyone having to confront him.">Walk over: "hey, we're heading to the kitchen, come with us"</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Strong, especially if he won't back off. Getting your friends or the host involved is how most real interventions work.">Get a couple of friends or the host to step in together</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="If she's scanning the room, she may be looking for exactly the kind of help you could give.">Assume she can handle it, it's not your business</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>In a 30-person chat, someone posts a voice clip mocking a classmate's accent. Reactions start rolling in.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Every reaction adds to the pile and tells the person this is what the group thinks of them.">React so you don't stand out</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Direct and short. Online, one person breaking the pattern often gives others permission to stop.">Post "not okay, delete it"</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Document plus delay, and you're not in the spotlight. If they want help, an adult can act on what you saved.">Screenshot it for an adult, then check on the classmate</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">More than one answer works. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🙈 Assuming someone else will.<span class="row-cue" aria-hidden="true"></span></summary><p>Everyone is thinking that. You can be the one who does.</p></details>
-        <details class="row"><summary>👊 Getting physical.<span class="row-cue" aria-hidden="true"></span></summary><p>It can escalate things and get you hurt or in trouble. Get an adult.</p></details>
-        <details class="row"><summary>🔁 Forwarding it to show it's wrong.<span class="row-cue" aria-hidden="true"></span></summary><p>Sharing it spreads it, even with good intentions. Report it instead.</p></details>
-        <details class="row"><summary>😔 Beating yourself up for past silence.<span class="row-cue" aria-hidden="true"></span></summary><p>Everyone has frozen before. What matters is what you do next time.</p></details>
+        <details class="row"><summary>Assuming someone else will.<span class="row-cue" aria-hidden="true"></span></summary><p>That's gate 3, and everyone in the room is stuck at it with you.</p></details>
+        <details class="row"><summary>Getting physical.<span class="row-cue" aria-hidden="true"></span></summary><p>It can escalate fast and get you hurt or suspended. Get an adult.</p></details>
+        <details class="row"><summary>Forwarding it to show it's wrong.<span class="row-cue" aria-hidden="true"></span></summary><p>Sharing it spreads it, even with good intentions. Save it for an adult instead.</p></details>
+        <details class="row"><summary>Making it about you.<span class="row-cue" aria-hidden="true"></span></summary><p>A big speech can put the target in a bigger spotlight. Short, then check on them.</p></details>
+        <details class="row"><summary>Beating yourself up for past silence.<span class="row-cue" aria-hidden="true"></span></summary><p>Everyone has frozen. What matters is the next time, and a late check-in still counts.</p></details>
       </div>
       </div>
     </details>
@@ -537,13 +637,27 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Get an adult right away if</h3>
       <ul class="tight">
-        <li>Someone is being physically hurt or threatened.</li>
+        <li>Someone is being physically hurt or threatened. If it's happening now, call <a href="tel:911">911</a>.</li>
         <li>The same person is being targeted over and over.</li>
-        <li>Private or sexual images of someone are being shared.</li>
-        <li>Someone says they want to hurt themselves or others.</li>
+        <li>Private or sexual images of someone are being shared, real or AI-made.</li>
+        <li>Someone says they want to hurt themselves or others. A counselor, a trusted adult, or <a href="tel:988">988</a> can help.</li>
       </ul>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Latané, B., &amp; Darley, J. M. (1970). <i>The unresponsive bystander: Why doesn't he help?</i> Appleton-Century-Crofts.</li>
+        <li>Darley, J. M., &amp; Latané, B. (1968). Bystander intervention in emergencies: Diffusion of responsibility. <i>Journal of Personality and Social Psychology, 8</i>(4), 377&ndash;383.</li>
+        <li>Fischer, P., Krueger, J. I., Greitemeyer, T., et al. (2011). The bystander-effect: A meta-analytic review on bystander intervention in dangerous and non-dangerous emergencies. <i>Psychological Bulletin, 137</i>(4), 517&ndash;537.</li>
+        <li>Philpot, R., Liebst, L. S., Levine, M., Bernasco, W., &amp; Lindegaard, M. R. (2020). Would I be helped? Cross-national CCTV footage shows that intervention is the norm in public conflicts. <i>American Psychologist, 75</i>(1), 66&ndash;75.</li>
+        <li>Hawkins, D. L., Pepler, D. J., &amp; Craig, W. M. (2001). Naturalistic observations of peer interventions in bullying. <i>Social Development, 10</i>(4), 512&ndash;527.</li>
+        <li>Paluck, E. L., Shepherd, H., &amp; Aronow, P. M. (2016). Changing climates of conflict: A social network experiment in 56 schools. <i>Proceedings of the National Academy of Sciences, 113</i>(3), 566&ndash;571.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -554,26 +668,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-2">A time I saw something wrong and didn't say anything, and what stopped me</label>
+      <label class="prompt" for="tx-2">A time I saw something and stayed quiet. Which gate did I get stuck at?</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-3">A time someone stood up for me, or I wish they had</label>
+      <label class="prompt" for="tx-3">A time someone stepped in for me, or I wish they had. What did it, or would it, have meant?</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-4">Which of the five ways feels most doable for me</label>
+      <label class="prompt" for="tx-4">Which of the six moves is safest and most realistic for me, given who I am and where I stand</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Someone at school who might be on the edge, and how I could include them</label>
+      <label class="prompt" for="tx-5">A friend I could agree with, ahead of time, to back each other up</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">What kind of person I want to be when something happens</label>
+      <label class="prompt" for="tx-6">What I want people to be able to count on me for</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You don't have to be fearless to speak up. You just have to do one small thing. That's what upstanders do.</p>
+      <p>You don't have to be fearless. You have to get through one more gate than you did last time.</p>
     </div>
     </div>
   </div>
@@ -619,11 +733,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-quiet" aria-pressed="false">😶 I stayed quiet</button>
-          <button type="button" class="choice" data-path="p-online" aria-pressed="false">📱 Saw something cruel online</button>
-          <button type="button" class="choice" data-path="p-scared" aria-pressed="false">😟 Scared to speak up</button>
-          <button type="button" class="choice" data-path="p-did" aria-pressed="false">💪 I said something</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Looking out for people</button>
+          <button type="button" class="choice" data-path="p-quiet" aria-pressed="false">I stayed quiet</button>
+          <button type="button" class="choice" data-path="p-online" aria-pressed="false">Saw something cruel online</button>
+          <button type="button" class="choice" data-path="p-scared" aria-pressed="false">Scared to speak up</button>
+          <button type="button" class="choice" data-path="p-did" aria-pressed="false">I said something</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Looking out for people</button>
         </div>
 
         <div class="path-panel" id="p-quiet" hidden>

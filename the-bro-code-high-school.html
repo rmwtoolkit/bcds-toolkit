@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ----- lesson figure + callouts ----- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.97rem; line-height:1.5; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:16px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🫂 High School · Growing up</div>
+  <div class="eyebrow">High School · Growing up</div>
   <h1>The Bro Code</h1>
-  <p class="tagline">Because being a good friend and being a real guy were never opposites.</p>
+  <p class="tagline">How the manosphere finds you, what the research says about its claims, and what strength actually looks like.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,85 +476,96 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What's really going on</h2>
+    <h2 id="h-understand">What's really going on in your feed</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You didn't go looking for it. It found you.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You didn't search for it. It still showed up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You watched one video about discipline or making money, and now your feed is full of guys explaining what women are "really" like.</li>
-        
-        <li >Someone in the group chat rated girls from your grade, and nobody said anything.</li>
-        
-        <li >A friend started talking about girls like they're either prizes or problems.</li>
-        <li>You've been called "beta," "simp," or "soft" for being nice to someone.</li>
-        
-        <li >A joke went too far, and saying something felt like it would cost you the group.</li>
-        <li>You're a girl, and you've seen guys you like repeat stuff from these videos.</li>
+        <li>You watched a few videos about lifting or making money, and now your feed explains what women "really" want.</li>
+        <li>A guy in your grade quotes a creator about "high-value men" like it's settled science.</li>
+        <li>Someone in the chat rated girls from the junior class, and the only replies were laughing reactions.</li>
+        <li>You got called "soft" or a "simp" for texting a girl back like a normal person.</li>
+        <li>A friend has started talking about women as prizes or threats, and he seems angrier than he used to be.</li>
+        <li>You're a girl, and a guy you like has started repeating this stuff.</li>
       </ul>
-      <p style="margin:0">If any of this sounds familiar, you're far from alone. A lot of this content is built to find guys your age, whether you go looking for it or not.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">📲 How it finds you</span><span class="sticker">Anger keeps you watching. That's the business.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Researchers have set up test accounts as teenage boys and watched what apps recommended. Even when the accounts only watched gym, gaming, or money videos, the apps quickly started serving creators who talk about girls with contempt.</p>
-      <p style="margin:0">It works because anger and shock keep people watching. Watch time is how apps and creators make money.</p>
-      <p class="worst">The worst part: it feels like you discovered it yourself. Really, it was delivered.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why it pulls you in</span><span class="sticker">Real wants, sold back to you with a catch.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🎯 It starts with real stuff.</dt>
-        <dd>Wanting to be confident, strong, respected, and not lonely. Those are good things to want.</dd>
-        <dt>📦 Then it sells a package.</dt>
-        <dd>The package says respect comes from dominating people, and that girls are something to win, rate, or control.</dd>
-        <dt>🧾 Then it sells a product.</dt>
-        <dd>Courses, coaching, "secret" group chats, supplements. Usually with a monthly fee.</dd>
-        <dt>🔒 And it makes it hard to leave.</dt>
-        <dd>If you push back, you're "beta" or "brainwashed." That's a trick to keep you from thinking for yourself.</dd>
-      </dl>
+      <p style="margin:0">You probably already know this content exists. This page goes further: how it reaches you, why it works, and what the research says about the claims it makes.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Three moves the content makes</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🏆</span><strong>Girls as points</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Talking about girls as numbers, "body counts," or a scoreboard. It turns people into proof.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎭</span><strong>Girls as the enemy</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Saying girls are fake, manipulative, or only want money. It's a way of blaming a whole group for a guy feeling rejected.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🪜</span><strong>Guys as a ranking</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Alpha, beta, sigma. It sorts every guy into a ladder, so friends become competition. Scientists who study wolves dropped the "alpha" idea years ago.</p></details>
+    <h3 style="margin-top:28px">How a feed drifts</h3>
+    <p>In 2024, researchers at Dublin City University set up ten fresh phones with accounts posing as 16- and 18-year-old boys. Some searched only for gym, sports, and gaming. Every account was shown misogynistic or "alpha" content within 23 minutes.</p>
+    <figure class="fig">
+<svg viewBox="0 0 400 330" role="img" aria-label="Diagram of a recommendation loop. You watch gym, sports, or gaming videos. The app tracks what you finish. It tests something edgier. Anger and shock keep you watching, and the loop repeats. Below, a bar chart: by the 400th video, about 2 to 3 hours of scrolling, 76 percent of recommended videos on TikTok and 78 percent on YouTube Shorts were toxic content, averaged across test accounts posing as teenage boys." xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="bc-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6E6E73"/></marker></defs>
+  <rect x="8" y="8" width="172" height="52" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/><text x="94" y="30" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">You watch gym,</text><text x="94" y="48" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">sports, gaming</text><rect x="220" y="8" width="172" height="52" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/><text x="306" y="30" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">The app tracks</text><text x="306" y="48" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">what you finish</text><rect x="220" y="100" width="172" height="52" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/><text x="306" y="122" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">It tests something</text><text x="306" y="140" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">edgier</text><rect x="8" y="100" width="172" height="52" rx="12" fill="#F5F5F7" stroke="#D2D2D7"/><text x="94" y="122" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">Anger and shock</text><text x="94" y="140" font-size="13.5" font-weight="700" fill="#1D1D1F" text-anchor="middle">keep you watching</text>
+  <g stroke="#6E6E73" stroke-width="1.8" fill="none" marker-end="url(#bc-ar)">
+    <path d="M182 34 L216 34"/><path d="M306 62 L306 96"/><path d="M218 126 L184 126"/><path d="M94 98 L94 64"/>
+  </g>
+  <text x="200" y="88" font-size="12" fill="#6E6E73" text-anchor="middle">repeats</text>
+  <line x1="0" y1="176" x2="400" y2="176" stroke="#E5E5EA"/>
+  <text x="0" y="202" font-size="13" fill="#6E6E73">Toxic share of recommended videos</text>
+  <text x="0" y="220" font-size="13" fill="#6E6E73">by video 400 (about 2 to 3 hours)</text>
+  <text x="0" y="251" font-size="13.5" font-weight="700" fill="#1D1D1F">TikTok</text><rect x="132" y="238" width="240.0" height="18" rx="5" fill="#E8E8ED"/><rect x="132" y="238" width="182.4" height="18" rx="5" fill="#D70015"/><text x="308.4" y="251.5" font-size="12.5" font-weight="700" fill="#fff" text-anchor="end">76%</text><text x="0" y="281" font-size="13.5" font-weight="700" fill="#1D1D1F">YouTube Shorts</text><rect x="132" y="268" width="240.0" height="18" rx="5" fill="#E8E8ED"/><rect x="132" y="268" width="187.2" height="18" rx="5" fill="#D70015"/><text x="313.2" y="281.5" font-size="12.5" font-weight="700" fill="#fff" text-anchor="end">78%</text>
+  <text x="132" y="310" font-size="12" fill="#6E6E73">0%</text><text x="372" y="310" font-size="12" fill="#6E6E73" text-anchor="end">100%</text>
+</svg>
+      <figcaption>Baker, Ging &amp; Andreasen (2024). Toxic content meant alpha-male, anti-women, reactionary, or conspiracy videos. Bars average five accounts per app, including ones that searched for this content on purpose. A small study, but it matches what other researchers have found.</figcaption>
+    </figure>
+    <div class="levers">
+      <div class="lever"><b>It starts with real wants</b><span>Confidence, strength, money, respect, not being lonely. Those are good things to want.</span></div>
+      <div class="lever"><b>Then it sells a package</b><span>Respect comes from dominating people, and women are something to win, rate, or control.</span></div>
+      <div class="lever"><b>Then a product</b><span>Courses, coaching, paid group chats, supplements. Usually monthly.</span></div>
+      <div class="lever"><b>Then leaving costs you</b><span>Push back and you're "beta" or "brainwashed." It's built to stop you thinking for yourself.</span></div>
     </div>
     </div>
 
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">😂 "It's just a joke"</span><span class="sticker">Silence sounds like agreement.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">The claims vs. the research</span><span class="sticker">Alpha wolves, "what women want," and other myths.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Jokes are how a group figures out what's okay. Somebody tests a line. If everyone laughs, or nobody says anything, the line moves a little further next time.</p>
-      <p style="margin:0">Silence reads as agreement, even when you're cringing inside.</p>
-      <p class="worst">Here's what most people don't know: in studies, lots of guys say they're privately uncomfortable with this kind of talk, and wrongly guess their friends are fine with it.</p>
+      <dl class="helps">
+        <dt>"Alpha" came from wolves in captivity.</dt>
+        <dd>Biologist L. David Mech, who helped make "alpha wolf" famous, studied wild wolves for 13 summers and concluded in 1999 that a typical pack is a family: two parents and their young. The old ranking picture came mostly from unrelated wolves housed together in captivity. He has since called the term misleading.</dd>
+        <dt>Kindness ranks high everywhere.</dt>
+        <dd>In a classic study of 10,047 people in 37 cultures, both men and women ranked "kind and understanding" and "intelligent" above earning power and good looks, in every sample. Looks and money mattered. They just weren't on top.</dd>
+        <dt>Most guys are less into it than they seem.</dt>
+        <dd>In a 2008 study, college men overestimated how sexist the other men in the room were. When researchers showed each group its real numbers, their estimates of other men's sexism were lower three weeks later. Thinking everyone else agrees is part of what keeps guys quiet.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">The loneliness piece</span><span class="sticker">It sells belonging. Friends are the real version.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>In a 2021 national survey, 15% of American men said they had no close friends, up from 3% in 1990. A lot of this content lands because it offers a team: guys who seem to get you, and someone to blame.</p>
+      <p style="margin:0">The habits that keep men connected as adults, like reaching out first, making plans, and talking about more than sports, get built now. That's a skill, not a weakness.</p>
+      <p class="worst">The worst part: it feels like you found it yourself. Really, it was delivered, and it profits from you staying angry and alone.</p>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">"It's just a joke"</span><span class="sticker">Silence sounds like agreement.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Jokes are how a group tests what's okay. Somebody pushes a line. If everyone laughs, or nobody says anything, the line moves a little further next time.</p>
+      <p style="margin:0">Silence reads as agreement, even when you're cringing inside, and the guy next to you may be cringing too.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What being a good guy actually looks like</span><span class="sticker">Confident guys don't need to rank anyone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What strong actually looks like</span><span class="sticker">Confident guys don't need to rank anyone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>💪 Strong</dt>
+        <dt>Strong</dt>
         <dd>Strong enough to be the first one to say "nah."</dd>
-        <dt>🤝 Loyal</dt>
+        <dt>Loyal</dt>
         <dd>Loyal to your friends, which includes not letting them become someone they'll regret.</dd>
-        <dt>😄 Funny</dt>
+        <dt>Funny</dt>
         <dd>Funny without needing someone to be the punchline.</dd>
-        <dt>🧭 Confident</dt>
-        <dd>Confident enough that you don't need to rank anyone to feel okay.</dd>
-        <dt>❤️ Respectful</dt>
-        <dd >Treats girls and women like full people, in person and online, including when they aren't around.</dd>
+        <dt>Confident</dt>
+        <dd>Secure enough that you don't need to rank anyone to feel okay.</dd>
+        <dt>Respectful</dt>
+        <dd>Treats women as full people, online and off, including when they aren't in the room.</dd>
       </dl>
+      <p style="margin:10px 0 0">What being a man means is shaped by family, culture, and faith, and people you respect may define it differently. Worth asking: which parts of what you were taught do you want to keep?</p>
       </div>
     </details>
   </div>
@@ -499,111 +577,118 @@
     <h2 id="h-practice">Staying yourself in the group</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">One low key "nah" goes a long way.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🧠 Name the move.<span class="row-cue" aria-hidden="true"></span></summary><p>When a video makes you angry at girls, ask: what does this person want me to feel, and what are they selling?</p></details>
-        <details class="row"><summary>🎚 Keep the good, drop the package.<span class="row-cue" aria-hidden="true"></span></summary><p>You can still lift, study, save money, and build discipline without signing up for the rest.</p></details>
-        <details class="row"><summary>😐 The low key "nah."<span class="row-cue" aria-hidden="true"></span></summary><p>You don't need a speech. "Bro, what," "that's weird," or a flat face often does more than a lecture.</p></details>
-        <details class="row"><summary>🔀 Change the subject.<span class="row-cue" aria-hidden="true"></span></summary><p>Moving the conversation is a real skill, and it works more often than people think.</p></details>
-        <details class="row"><summary>💬 Talk one on one later.<span class="row-cue" aria-hidden="true"></span></summary><p>"Hey, that stuff you said about her was kind of a lot." Friends hear it better without an audience.</p></details>
-        <details class="row"><summary>🛡 Check on the person it was about.<span class="row-cue" aria-hidden="true"></span></summary><p>A quick message like "that wasn't cool, you okay?" can matter a lot to them.</p></details>
+      <h3 class="sticker">One low-key "nah" goes a long way.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Ask what it's selling.<span class="row-cue" aria-hidden="true"></span></summary><p>When a video makes you angry at women, ask two questions: what does this person want me to feel, and what do they want me to buy?</p></details>
+        <details class="row"><summary><span class="num">2</span> Keep the good, drop the package.<span class="row-cue" aria-hidden="true"></span></summary><p>Lift, study, save money, build discipline. None of that requires signing up for the rest.</p></details>
+        <details class="row"><summary><span class="num">3</span> The low-key "nah."<span class="row-cue" aria-hidden="true"></span></summary><p>No speech needed. "Bro, what," "that's weird," or a flat look often does more than a lecture.</p></details>
+        <details class="row"><summary><span class="num">4</span> Change the subject.<span class="row-cue" aria-hidden="true"></span></summary><p>Moving the conversation is a real skill, and it works more often than people think.</p></details>
+        <details class="row"><summary><span class="num">5</span> Talk one on one later.<span class="row-cue" aria-hidden="true"></span></summary><p>"That stuff you said about her was a lot." Friends hear it better without an audience.</p></details>
+        <details class="row"><summary><span class="num">6</span> Check on the person it was about.<span class="row-cue" aria-hidden="true"></span></summary><p>"That wasn't cool. You okay?" can matter a lot to them.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">The chat just went there. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>You're in a chat with your friends. Pick what you'd actually do.</p>
-      
+      <p>Pick what you'd actually do.</p>
       <div class="scenario" >
-        <p>Someone posts a list ranking girls in your grade by looks. A few people add comments.</p>
+        <p>On the team bus, someone plays a clip of a creator saying women over 25 have "no value." Half the bus laughs.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="okay" data-msg="Protects you, but the list is still there, and so are the girls on it.">Ignore it and mute the chat</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Direct, short, and hard to argue with. Someone usually agrees once you go first.">"Delete this, man. They're people we see every day."</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That spreads it further and hurts the girls on the list more.">Screenshot it and send it around</button>
-          <button class="choice" type="button" data-fb="good" data-msg="If it targets real people, an adult can help stop it. That's protecting people, not snitching.">Tell a trusted adult if it keeps going</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Not laughing matters. The guys who were cringing can't tell you were too, though.">Put your earbuds in and ignore it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Short and hard to argue with. Someone else usually agrees once one person goes first.">"That's a weird thing to believe about every woman you know."</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Strong, especially with a guy who respects you. Without an audience, nobody has to defend his image.">Bring it up with him later, one on one</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario">
-        <p>Your friend calls you "beta" for helping a girl in your class with homework.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Marco has been posting clips about how women "are all the same" since his breakup a month ago.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Then they decide who you're allowed to be kind to.">Stop helping her so they drop it</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Confident and unbothered. It's hard to keep teasing someone who isn't rattled.">"Helping someone is beta? Okay." and laugh it off</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That feeds the loop. The content is giving him somewhere to put the hurt, and an enemy.">Send him more clips so he feels understood</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It might stop the posts, but getting mocked in front of everyone usually pushes a guy further into the corner that welcomes him.">Roast him in the group chat</button>
+          <button class="choice" type="button" data-fb="good" data-msg="This goes at what's underneath. Hurt and lonely is what this content feeds on, and a real friend is the better offer.">"You doing okay since the breakup? Gym Saturday?"</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">You won't always get it perfect. One honest "nah" is more than most people say.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>A friend calls you a simp for planning something for your girlfriend's birthday.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Then he decides how you get to treat people you care about.">Cancel the plan so he drops it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Unbothered is the hardest thing to tease. It's tough to keep roasting someone who isn't rattled.">"Being good to my girlfriend is simp? Okay." and laugh it off</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">You won't always get it right. One honest "nah" is more than most people say.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a corner. Then see if your guess was right.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Pick a corner. Then see if your guess was right.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 15 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
-        <li>The leader reads a statement. Students move or point to a corner of the room: agree, disagree, not sure, or it depends.</li>
+        <li>The leader reads a statement. Students move to or point at a corner: agree, disagree, not sure, or it depends.</li>
         <li>Ask one or two people from different corners to explain why. No one has to share.</li>
-        <li>After each one, the leader taps it to show what research says.</li>
+        <li>After each one, the leader taps to show what the research says.</li>
       </ol>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Four corners · 1 of 4</span><span class="sticker">"Most guys at our school are fine with jokes that rate girls."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Four corners · 1 of 4</span><span class="sticker">"Most guys at our school are fine with jokes that rate girls."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Usually wrong. Studies keep finding that guys guess their friends approve of this talk more than they actually do.</p></details>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Probably not. In studies of college men, guys consistently overestimated how sexist the other men around them were. When groups saw their real numbers, those estimates dropped.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Four corners · 2 of 4</span><span class="sticker">"Being called nice or respectful makes a guy less attractive."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Four corners · 2 of 4</span><span class="sticker">"Being nice makes a guy less attractive."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Not what the research shows. In studies around the world, kindness is at or near the top of what people say they want in a partner.</p></details>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Not what a 37-culture study of more than 10,000 people found. Both men and women ranked kindness and intelligence above earning power and looks, in every sample.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Four corners · 3 of 4</span><span class="sticker">"If you don't laugh, you'll lose your friends."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Four corners · 3 of 4</span><span class="sticker">"Guys don't really need close friends."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes it's awkward for a minute. More often, someone else was waiting for one person to go first.</p></details>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>In a 2021 national survey, 15% of American men had no close friends, five times the share in 1990. Friendship takes practice, and guys can build it.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Four corners · 4 of 4</span><span class="sticker">"Alpha wolves prove there's a natural ranking of guys."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Four corners · 4 of 4</span><span class="sticker">"Alpha wolves prove there's a natural ranking of guys."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>The wolf scientist who made "alpha" famous later said it was wrong. Wild wolf packs are mostly families.</p></details>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>The wolf scientist who made "alpha" famous later said it was wrong. Wild packs are mostly families, led by the parents.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Three questions for the group.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>Why do you think so many guys go along with jokes they don't actually like?</li>
+        <li>Why do so many guys go along with jokes they don't actually like?</li>
         <li><span >What would make it easier to be the one who speaks up in our grade?</span></li>
-        <li>What do you wish online creators said about being a good guy?</li>
+        <li>What did the men in your family or community teach you about being a man? What do you want to keep?</li>
       </ul>
       <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep it about content and situations, not named students. If someone gets defensive, that's okay: "Wanting confidence and respect makes total sense. The question is what gets you there."</p></details>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What to do about your feed right now</span><span class="sticker">Your feed learns from you. Teach it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Your feed right now</span><span class="sticker">Your feed learns from you. Teach it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🙅 Tap "not interested."</dt>
-        <dd>Do it a few times in a row on these creators. The feed shifts quickly.</dd>
-        <dt>➕ Follow the real thing.</dt>
+        <dt>Tap "not interested."</dt>
+        <dd>Do it several times in a row on these creators. The feed shifts fast in both directions.</dd>
+        <dt>Follow the real thing.</dt>
         <dd>Athletes, coaches, and creators who talk about strength, discipline, or money without trashing anyone.</dd>
-        <dt>⏳ Watch the after-feeling.</dt>
+        <dt>Watch the after-feeling.</dt>
         <dd>If you feel angrier at people you actually know after watching, that's the content working on you.</dd>
-        <dt>👀 For girls:</dt>
-        <dd>Muting and blocking is always okay. If a guy you know repeats this stuff to you, you don't have to debate him.</dd>
+        <dt>For girls:</dt>
+        <dd>Muting and blocking is always okay. If a guy you know repeats this stuff to you, you don't owe him a debate.</dd>
       </dl>
       </div>
     </details>
@@ -611,14 +696,27 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When it crosses a line</h3>
       <ul class="tight">
-        <li>Someone is sharing photos of a real person, or threatening someone.</li>
+        <li>Someone is sharing photos of a real person, real or AI-made, or threatening someone.</li>
         <li>Talk about a girl turns into a plan to hurt, follow, or embarrass her.</li>
         <li>You feel so angry or alone that these videos are the only place that gets you.</li>
         <li>You have thoughts of hurting yourself or someone else.</li>
       </ul>
-      <p>Tell a counselor or a trusted adult today. You can also call or text <strong>988</strong>, any time, day or night.</p>
+      <p>Tell a counselor or a trusted adult today. You can also call or text <strong>988</strong>, any time, day or night. If someone is in danger right now, call <strong>911</strong>.</p>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Baker, C., Ging, D., &amp; Andreasen, M. B. (2024). <i>Recommending toxicity: The role of algorithmic recommender functions on YouTube Shorts and TikTok in promoting male supremacist influencers</i>. DCU Anti-Bullying Centre, Dublin City University.</li>
+        <li>Mech, L. D. (1999). Alpha status, dominance, and division of labor in wolf packs. <i>Canadian Journal of Zoology, 77</i>(8), 1196&ndash;1203.</li>
+        <li>Buss, D. M. (1989). Sex differences in human mate preferences: Evolutionary hypotheses tested in 37 cultures. <i>Behavioral and Brain Sciences, 12</i>(1), 1&ndash;49.</li>
+        <li>Kilmartin, C., Smith, T., Green, A., Heinzen, H., Kuchler, M., &amp; Kolar, D. (2008). A real time social norms intervention to reduce male sexism. <i>Sex Roles, 59</i>, 264&ndash;273.</li>
+        <li>Cox, D. A. (2021). <i>The state of American friendship: Change, challenges, and loss</i>. Survey Center on American Life.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -629,26 +727,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">A creator I watch, and what they might be selling me</label>
+      <label class="prompt" for="tx-1">A creator I watch. What do they want me to feel, and what do they want me to buy?</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">What I actually admire in the guys I look up to</label>
+      <label class="prompt" for="tx-2">A man I actually look up to, in real life. What does he do that I respect?</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">A time I laughed along when I didn't want to, and what I'd do now</label>
+      <label class="prompt" for="tx-3">A time I laughed along when I didn't want to. What did I think would happen if I didn't?</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I'd want a friend to do if I started going too far</label>
+      <label class="prompt" for="tx-4">What I'd want a friend to say to me if I started going down this road</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">The kind of guy, or friend, I want to be known as</label>
+      <label class="prompt" for="tx-5">The kind of man, or friend, I want to be at 25</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Wanting respect, confidence, and friends makes total sense. You get to decide what earns them, and treating people well is still the strongest move.</p>
+      <p>Wanting respect, confidence, and real friends makes sense. Nobody who profits from your anger gets to define how you earn them.</p>
     </div>
     </div>
   </div>
@@ -696,11 +794,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-pulled" aria-pressed="false">📲 Pulled in</button>
-          <button type="button" class="choice" data-path="p-quiet" aria-pressed="false">😶 Stayed quiet</button>
-          <button type="button" class="choice" data-path="p-target" aria-pressed="false">💢 It was about me</button>
-          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">🌧 Angry or alone</button>
-          <button type="button" class="choice" data-path="p-good" aria-pressed="false">🌤 Feeling good about it</button>
+          <button type="button" class="choice" data-path="p-pulled" aria-pressed="false">Pulled in</button>
+          <button type="button" class="choice" data-path="p-quiet" aria-pressed="false">Stayed quiet</button>
+          <button type="button" class="choice" data-path="p-target" aria-pressed="false">It was about me</button>
+          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">Angry or alone</button>
+          <button type="button" class="choice" data-path="p-good" aria-pressed="false">Feeling good about it</button>
         </div>
 
         <div class="path-panel" id="p-pulled" hidden>

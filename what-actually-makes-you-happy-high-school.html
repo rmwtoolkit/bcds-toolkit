@@ -362,6 +362,70 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure: wanting and liking */
+  .fig svg.wantbrain { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +445,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🌻 High School · Happiness and well-being</div>
+  <div class="eyebrow">High School · Happiness and well-being</div>
   <h1>What Actually Makes You Happy</h1>
-  <p class="tagline">Because your brain is bad at guessing what makes you happy, and an 85-year study has some answers.</p>
+  <p class="tagline">Why getting what you want rarely feels the way you expected, and what the research says actually lasts.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,121 +473,92 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What actually lasts</h2>
+    <h2 id="h-understand">Wanting something isn't the same as liking it</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Got the thing you wanted? Felt great. For a week.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You got it. It faded. Now you want the next thing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You finally got the thing you wanted, a phone, a car, a spot on the team, and the good feeling faded faster than you expected.</li>
-        
-        <li >You've thought "I'll be happy when I get into that school" or "when I finally make varsity."</li>
-        <li>Your feed makes it look like everyone else has figured out how to be happy.</li>
-        <li>You have lots of followers or group chats, and still not many people you'd really call.</li>
-        <li>You're on the edge of a big friend group and figure you'd be happier in the middle of it.</li>
-        <li>You felt better after one real conversation than after hours online.</li>
+        <li>You got the license, the acceptance, or the starting spot, and a week later it was just normal.</li>
+        <li>You've told yourself this year's stress will be worth it once you're in college.</li>
+        <li>A post did better than anything you've ever put up. You checked it twelve times and felt oddly flat.</li>
+        <li>You're busier than you've ever been, and you talk to fewer people for real.</li>
       </ul>
-      <p style="margin:0">Your brain is a surprisingly bad guesser about what will make you happy. That's true for adults too. The good news is that there's real research on what actually works.</p>
+      <p style="margin:0">You've probably heard that relationships matter more than stuff. That's still true. This is the next layer: why your brain keeps chasing anyway, and how to make better bets with your time.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Want it. Get it. Get used to it.</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>Want it</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"I'll be happy when..." Your brain locks onto the next thing: the item, the grade, the group, the follower count.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎉</span><strong>Get it</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">And it works! You get a real lift. For a while.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">😐</span><strong>Get used to it</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The lift fades, and your brain is already pointing at the next "when." Psychologists call this getting used to things, or adaptation.</p></details>
+    <h3 style="margin-top:28px">Two systems: one wants, one enjoys</h3>
+    <figure class="fig">
+<svg class="wantbrain" viewBox="0 0 400 272" role="img" aria-labelledby="wb-t wb-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="wb-t">Side view of the brain showing the wanting and liking systems</title>
+  <desc id="wb-d">Dopamine pathways run from the ventral tegmental area in the midbrain forward to the nucleus accumbens and up to the frontal cortex. The ventral pallidum sits just behind and below the nucleus accumbens. The orbitofrontal cortex lines the underside of the frontal lobe, above the eyes.</desc>
+  <defs><marker id="wb-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#B8691C"/></marker></defs>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <!-- orbitofrontal cortex -->
+  <path d="M90 172 C104 186 126 194 150 196" fill="none" stroke="#2E6DB4" stroke-width="10" stroke-linecap="round" stroke-opacity=".9"/>
+  <!-- dopamine pathways -->
+  <path d="M232 180 C216 170 200 160 178 152" fill="none" stroke="#B8691C" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#wb-arrow)"/>
+  <path d="M234 178 C214 140 170 104 122 92" fill="none" stroke="#B8691C" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#wb-arrow)"/>
+  <!-- nucleus accumbens -->
+  <ellipse cx="158" cy="150" rx="14" ry="9" fill="#C0392B"/>
+  <!-- ventral pallidum -->
+  <ellipse cx="178" cy="166" rx="8" ry="5.5" fill="#7A4FB5"/>
+  <!-- VTA -->
+  <ellipse cx="240" cy="185" rx="8" ry="6" fill="#D9822B"/>
+  <g font-family="inherit" font-size="13" font-weight="700">
+    <line x1="152" y1="146" x2="70" y2="36" stroke="#C0392B" stroke-width="1.5"/><circle cx="152" cy="146" r="3" fill="#fff"/>
+    <text x="8" y="28" fill="#A3301F">Nucleus accumbens</text>
+    <line x1="300" y1="22" x2="320" y2="22" stroke="#B8691C" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="392" y="27" fill="#9A5714" text-anchor="end" font-size="12">dopamine</text>
+    <line x1="104" y1="186" x2="64" y2="226" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="104" cy="186" r="3" fill="#fff"/>
+    <text x="8" y="242" fill="#245A96">Orbitofrontal cortex</text>
+    <line x1="178" y1="166" x2="184" y2="248" stroke="#7A4FB5" stroke-width="1.5"/>
+    <text x="184" y="264" fill="#5E3B8F" text-anchor="middle">Ventral pallidum</text>
+    <line x1="240" y1="185" x2="330" y2="236" stroke="#B8691C" stroke-width="1.5"/>
+    <text x="392" y="252" fill="#9A5714" text-anchor="end">VTA</text>
+  </g>
+</svg>
+      <figcaption>Side view, face on the left, with deeper structures drawn as if the brain were see-through. Dashed lines are dopamine pathways starting in the midbrain. Simplified: these are networks, not single switches.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>VTA: where wanting starts</strong><p>A small area in the midbrain that sends out dopamine. Dopamine is about anticipation and pursuit more than pleasure. It surges for what's next and what's uncertain: the reply, the result, the refresh.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Nucleus accumbens: the pull</strong><p>Dopamine here creates the drive to go get something. It also holds a few tiny "hotspots" that produce the actual feeling of enjoying it. The drive is big. The hotspots are small.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Ventral pallidum: a liking hotspot</strong><p>Neuroscientist Kent Berridge's work suggests pleasure comes from a few small spots like this one, while wanting runs through a much larger network. That's how you can want something intensely and barely enjoy it.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Orbitofrontal cortex: keeps score</strong><p>Tracks how rewarding things actually feel, and its response drops as you get your fill. One reason the tenth time is never as good as the first.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">The longest study of happiness</span><span class="sticker">Researchers followed people for 85 years.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Your brain is a bad fortune teller.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>It started in 1938.</dt>
-        <dd>Harvard researchers began following 268 college students. A second group joined: 456 boys from Boston neighborhoods, many of them teenagers.</dd>
-        <dt>They never stopped.</dt>
-        <dd>For more than 85 years: questionnaires, medical records, brain scans, and interviews in people's living rooms. Today the study includes their families too.</dd>
-        <dt>Every kind of life.</dt>
-        <dd>Rich and poor, famous and unknown, through wars, marriages, divorces, and old age.</dd>
-        <dt>An honest note.</dt>
-        <dd>The original groups were all men, and mostly white. Later waves added wives and children, and other research points the same way. Still, it's worth knowing.</dd>
+        <dt>You overestimate how good, and for how long.</dt>
+        <dd>Psychologists Timothy Wilson and Daniel Gilbert call it the impact bias. When you imagine getting into a school, you picture the moment you find out. You don't picture the ordinary Tuesday three months later, with laundry and a lab report.</dd>
+        <dt>You adapt, but it isn't hopeless.</dt>
+        <dd>The "hedonic treadmill" idea said everyone drifts back to the same baseline no matter what. Later research by Ed Diener and colleagues revised it: most people's baseline is mildly positive, it differs from person to person, and it can shift. What you do with your time can move it.</dd>
+        <dt>Money is more complicated than "it can't buy happiness."</dt>
+        <dd>A 2023 study run jointly by researchers who had disagreed found that for most people, happiness kept rising with income. It leveled off around $100,000 only for the least happy group. The gains also shrink per dollar as income rises, so it's real, but it's not the whole story.</dd>
+        <dt>People still matter most.</dt>
+        <dd>The Harvard Study of Adult Development, running for more than 85 years, found that how satisfied people were in their relationships at 50 predicted their health at 80 better than their cholesterol did.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🤝 The big finding</span><span class="sticker">It wasn't money or fame. It was people.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Your phone</span><span class="sticker">Built for wanting.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>The researchers looked at people in middle age to see what predicted who would be healthy and happy at 80. It wasn't their cholesterol. It was how satisfied they were in their relationships.</p>
-      <div class="script">"The people who were the most satisfied in their relationships at age 50 were the healthiest at age 80."<br><span style="font-style:normal;font-size:.9rem">Robert Waldinger, the study's director</span></div>
-      <p style="margin:10px 0 0">Close relationships, more than money or fame, kept people happy across their lives.</p>
-      <p class="worst">The good part: you don't have to wait until you're 50. Relationships are something you can work on now.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why our guesses go wrong</span><span class="sticker">Your brain is a bad happiness predictor.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🔄 We get used to things.</dt>
-        <dd >The new phone feeling fades in weeks. So does the new car or the new license.</dd>
-        <dt>📏 We compare.</dt>
-        <dd >A good score feels great until you hear what someone else got.</dd>
-        <dt>🔮 We overestimate.</dt>
-        <dd>We think the good feeling will be bigger and last longer than it actually does.</dd>
-        <dt>🕰 We put people off.</dt>
-        <dd >Friends will be there later. Grades, practice, and the feed feel urgent now.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Connection protects your body and brain</span><span class="sticker">Good friends are good for your health.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🚬 Loneliness is hard on the body.</dt>
-        <dd>Waldinger compares the health risk of loneliness to smoking about half a pack of cigarettes a day.</dd>
-        <dt>🧠 Connection protects the brain.</dt>
-        <dd>People who could count on someone kept sharper memories longer.</dd>
-        <dt>⚡ Arguing is allowed.</dt>
-        <dd>People who bickered still did fine, as long as they felt they could rely on each other.</dd>
-        <dt>👥 Quality beats count.</dt>
-        <dd>You don't need a crowd. You need people you can count on.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">✨ Something bigger than yourself</span><span class="sticker">Care about something beyond you. It helps.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>The people in the study who did best often found ways to care about something beyond themselves, like teaching, helping younger people, or building something that would last.</p>
-      <p>For you, that could look like:</p>
-      <ul class="tight">
-        
-        <li >Coaching, tutoring, or mentoring someone younger.</li>
-        <li>Being part of a team, a band, a club, or a cause.</li>
-        <li>Faith, nature, music, or art.</li>
-        <li>Volunteering, even for an hour.</li>
-      </ul>
-      <p style="margin:0">Moments of awe count too: a huge night sky, a mountain, a loud concert, a choir. Research on awe finds it quiets the "me" part of your brain for a moment, and most people feel better for it.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Likes are a quick lift</span><span class="sticker">Likes are a quick lift. Then they fade.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Apps run on the same loop: want it, get it, get used to it. Online it can look like:</p>
-      <ul class="tight">
-        <li>Checking how many likes a post got, then checking again.</li>
-        <li>Seeing everyone's best moments and deciding they're happier than you.</li>
-        <li>Having hundreds of followers and still nobody to sit with at lunch.</li>
-        
-        <li >Chasing the next follower count, view count, or ranking.</li>
-        <li>Feeling worse after scrolling than before you started.</li>
-      </ul>
-      <p class="worst">The worst part: the feed counts likes and followers. The study counted the people who would show up for you.</p>
+      <p>Likes, streaks, and feeds run on unpredictable rewards: maybe this refresh, maybe the next one. That's exactly what the wanting system responds to. It's how you can scroll for an hour you didn't enjoy. Wanting kept you there. Liking never showed up.</p>
+      <p class="worst">A more useful question than "is this bad for me?": did I like that, or did I just want more of it?</p>
       </div>
     </details>
   </div>
@@ -532,36 +567,46 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Building a good life</h2>
+    <h2 id="h-practice">Make better bets with your time</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Small reps with people, every week.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>💪 Build social fitness.<span class="row-cue" aria-hidden="true"></span></summary><p>Waldinger calls it social fitness. Friendships work like muscles: a few real conversations a week keep them strong. Skip a month and they drift.</p></details>
-        <details class="row"><summary>💭 Ask yourself: who do I miss?<span class="row-cue" aria-hidden="true"></span></summary><p>Then reach out. One short text is enough. Most of the time, the other person is glad you did.</p></details>
-        <details class="row"><summary>🔁 See the same faces every week.<span class="row-cue" aria-hidden="true"></span></summary><p >Pick a club, team, job, or activity and keep showing up. Seeing the same people again and again is how strangers turn into friends.</p></details>
-        <details class="row"><summary>🧍 Find at least one solid person.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't need to be in the middle of the big group. You need at least one person you can count on when things fall apart.</p></details>
-        <details class="row"><summary>🧭 Do something that points beyond you.<span class="row-cue" aria-hidden="true"></span></summary><p >Tutor, coach, volunteer, make something, or pass on something you learned the hard way.</p></details>
-        <details class="row"><summary>🛑 Catch the "I'll be happy when..."<span class="row-cue" aria-hidden="true"></span></summary><p>When you hear yourself think it, treat it as a signal. Your goals are worth chasing. Just don't put your happiness on hold until you reach them.</p></details>
+      <div class="fold-label">What the research says lasts</div>
+      <h3 class="sticker">People pay off more than you predict.</h3>
+      <div class="levers">
+        <div class="lever"><b>Start the conversation</b><span>Chicago commuters predicted that talking to a stranger would be the worst way to spend the ride. The ones asked to do it had the most pleasant commutes.</span></div>
+        <div class="lever"><b>Assume you're liked</b><span>After talking with someone new, people consistently underestimate how much the other person liked them. In one study the gap lasted most of a year between college roommates.</span></div>
+        <div class="lever"><b>Put in the hours</b><span>One study estimated it takes about 50 hours together to go from acquaintance to casual friend, about 90 to friend, and more than 200 to close friend. Friendship is a time investment.</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Catch "I'll be happy when."<span class="row-cue" aria-hidden="true"></span></summary><p>Your goals are worth chasing. Just notice when you've put your whole life on hold until you reach one. Ask what you could enjoy about this stretch, now.</p></details>
+        <details class="row"><summary><span class="num">2</span> Score want versus like.<span class="row-cue" aria-hidden="true"></span></summary><p>For a week, after something you were looking forward to, rate how much you wanted it and how much you liked it, 1 to 10. Patterns show up fast.</p></details>
+        <details class="row"><summary><span class="num">3</span> Do things with people, not just near them.<span class="row-cue" aria-hidden="true"></span></summary><p>Sitting in the same room on separate phones barely counts. Cooking, driving somewhere, playing, building, or working on something together does.</p></details>
+        <details class="row"><summary><span class="num">4</span> Care about something beyond you.<span class="row-cue" aria-hidden="true"></span></summary><p>Tutoring, coaching younger kids, faith, a cause, your family, your community. Meaning holds up on the days pleasure doesn't.</p></details>
+      <p style="margin:16px 0 0">What "a good life" looks like isn't the same everywhere. Psychologist Jeanne Tsai's research finds cultures differ in the kind of good feeling people aim for: some lean toward excitement, others toward calm and contentment. Neither one is the right answer. What does your family hope your life will feel like, and where do you agree?</p>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Who do you miss? One text is enough.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think of one person you miss: an old friend, a cousin, someone from camp or your old school. Nothing here is saved.</p>
+      <p>Think of someone you've drifted from: an old teammate, a cousin, a friend from your last school or from summer. Nothing here is saved.</p>
       <label class="prompt" for="tx-1">Someone I miss:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-2">A short text I could send them:</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="hey, I was just thinking about you. how's it going?"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <p style="margin:10px 0 0">Short is fine. The reply is often warmer than you'd guess.</p>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="saw something today that reminded me of you. how are you doing?"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <p style="margin:0">Remember the liking gap. They're more likely to be glad you did than you'd guess.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Happy when...? Try a better question.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">"I'll be happy when..." Ask a better question.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Every "I'll be happy when..." thought has a better question hiding behind it.</p>
-      <div ><dl class="helps"><dt>"I'll be happy when I get into that school."</dt><dd>Who would I want to celebrate it with?</dd><dt>"I'll be happy when I make varsity."</dt><dd>What do I like about playing right now?</dd><dt>"I'll be happy when people finally notice me."</dt><dd>Who already does?</dd></dl></div>
+      <dl class="helps">
+        <dt>"I'll be happy when I get into that school."</dt>
+        <dd>What do I want a regular Tuesday there to feel like? Can I build any of that now?</dd>
+        <dt>"I'll be happy when I'm in a relationship."</dt>
+        <dd>Who do I already feel most like myself around?</dd>
+        <dt>"I'll be happy when I'm making my own money."</dt>
+        <dd>What do I want that money to make room for?</dd>
+      </dl>
       <label class="prompt" for="tx-3">My "I'll be happy when..." thought, and a better question:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
@@ -572,80 +617,86 @@
       <div class="fold-body">
       <p>Think of one person. Check anything that's true about them.</p>
       <div class="checklist" role="group" aria-label="My solid person">
-        <label><input type="checkbox"> I could reach out to them when things fall apart.</label>
-        <label><input type="checkbox"> They know the real version of me.</label>
+        <label><input type="checkbox"> I could call them if something went really wrong.</label>
+        <label><input type="checkbox"> They've seen me at my worst and stayed.</label>
         <label><input type="checkbox"> I'd show up for them, too.</label>
       </div>
-      <p id="test-tally" class="feedback" aria-live="polite" data-done="Sounds like a solid person. Consider telling them they matter to you." data-partial="{n} of {total}. That's a start. Solid friendships get built over time."></p>
-      <p style="margin:10px 0 0">If no name came to mind, that's important information, not a failure. A counselor is a good person to talk with about it.</p>
+      <p id="test-tally" class="feedback" aria-live="polite" data-done="That's a solid person. Consider telling them they matter to you. People rarely hear it." data-partial="{n} of {total}. That's a start. Close friendships are built over a lot of hours."></p>
+      <p style="margin:10px 0 0">If no name came to mind, that's useful information, not a verdict on you. Plenty of people are between friend groups at some point, especially after a move or a big change. A counselor is a good person to think it through with.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Likes, lunch, or a free Saturday. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three choices. Which bet pays off?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the move that builds something that lasts.</p>
-      
       <div class="scenario">
-        <p>At lunch you sit on the edge of a big friend group. There's one person in it you really click with.</p>
+        <p>Sofia has 900 followers and posts almost every day. At lunch she usually eats alone with her phone.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="okay" data-msg="Maybe, but the middle isn't where happiness lives. One solid friend matters more.">Work hard to get into the middle of the group</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Great move. Quality beats count, and one good friendship is worth building.">Make a plan with the one person you click with</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That's a guess, not a fact. Pulling back makes it easier for people to forget you.">Decide the group doesn't want you and stop sitting there</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. One person and a real plan builds more than another post. And thanks to the liking gap, she's probably underestimating how much that classmate likes her.">Ask the person from chem who makes her laugh to get food after school</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Could help her notice how posting actually feels. It doesn't add anyone to her lunch table, though.">Post less for a week and see how she feels</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="More reach feeds the wanting system. It doesn't add a single person who'd show up for her.">Post more so people notice her</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <p>It's Saturday. You could scroll all afternoon, or text a friend you haven't seen in a while about getting food.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Jamal moved for senior year. He figures there's no point making friends with nine months left.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="okay" data-msg="Easier, yes. Most people feel worse after a few hours of it, not better.">Scroll, it's easier</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's a social fitness rep. Even if they're busy, you reached out.">Text the friend</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="They might be waiting for you too. Somebody has to go first.">Wait for them to text first</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A few hours a week of the same faces adds up. At that pace he can reach casual-friend territory by winter, and that makes senior year a lot better.">Join one thing that meets every week and go every time</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Keeping old friends matters. It just won't help much with who he sits with at lunch on a Tuesday.">Stay close with his old friends online and wait it out</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That's the impact bias talking: picturing college as the fix. Nine months is a long time to spend alone, and the skill of starting over is one he'll need there too.">Save his energy for starting fresh at college</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Mei-Lin can take a paid summer job at a camp where her friends work, or an unpaid lab internship that "looks better."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Good thinking. There may not be one right answer here. Picturing ordinary days, who she'll be with, and what her family needs from her summer gives her a real comparison instead of a highlight reel.">Picture an ordinary day in each, and talk it through with her family</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It might be the right call for her. Just make sure it's a choice, not an automatic 'résumé first, life later.' That pattern rarely ends on its own.">Take the internship. Résumé first.</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Friends and income are real reasons. Worth checking whether the internship matters for something she actually wants, too.">Take the camp job. Friends first.</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These keep you on the treadmill.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you on the treadmill</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🏃 Chasing the next thing.<span class="row-cue" aria-hidden="true"></span></summary><p>The next item, grade, or follower count will feel good for a while. Then it fades, and there's another one.</p></details>
-        <details class="row"><summary>📊 Measuring your life against feeds.<span class="row-cue" aria-hidden="true"></span></summary><p>You're comparing your everyday to everyone else's best moments.</p></details>
-        <details class="row"><summary>⏸ Putting happiness on hold.<span class="row-cue" aria-hidden="true"></span></summary><p>"After this test, after this season, after I'm older." There's always another "after."</p></details>
-        <details class="row"><summary>🧱 Going it alone.<span class="row-cue" aria-hidden="true"></span></summary><p>Handling everything yourself feels strong. It's also lonely, and loneliness is hard on your body and mind.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Once I get in, I'll be set.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You'll get a real lift, and then you'll adapt. Build a life you like on the way there, not only after.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> People don't want to talk to me.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The commuter studies found people were more open than expected, and the liking gap says you come across better than you think.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Money doesn't matter.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It does, especially when there isn't enough. It's just one ingredient, and it won't replace time with people.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A good life feels good all the time.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Meaningful things include hard parts: training, caring for someone, building something. Happy and easy aren't the same.</p></details>
       </div>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">Followers aren't friends.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>💬 Turn one like into a real message.</dt>
-        <dd>Reply to someone's story with an actual question, or text them about something you both care about.</dd>
-        <dt>📵 Trade one scroll for one person.</dt>
-        <dd>Next time you reach for your phone out of boredom, text someone you miss instead.</dd>
-        <dt>🙈 Stop counting.</dt>
-        <dd>Some apps let you hide like counts. Followers aren't friends, and the number isn't you.</dd>
-        <dt>🧘 Notice the after-feeling.</dt>
-        <dd>If an app leaves you feeling worse most times, that's information. Try a set time to check instead of all day.</dd>
-      </dl>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>If it gets heavy</h3>
       <ul class="tight">
-        <li>Loneliness or low mood has been around most days for a while.</li>
+        <li>Loneliness or low mood has been around most days for weeks.</li>
+        <li>Nothing feels good anymore, even things you used to love.</li>
         <li>You feel hopeless, or like nobody would notice if you weren't around.</li>
-        <li>You have thoughts of not wanting to be here.</li>
       </ul>
-      <p>Tell a counselor or a trusted adult right away. You can also call or text <strong>988</strong>, any time, day or night.</p>
-      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Tell a counselor or a trusted adult. You can also call or text 988 any time. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Berridge, K., &amp; Kringelbach, M. (2015). Pleasure systems in the brain. <i>Neuron</i>.</li>
+        <li>Wilson, T., &amp; Gilbert, D. (2005). Affective forecasting: Knowing what to want. <i>Current Directions in Psychological Science</i>.</li>
+        <li>Diener, E., Lucas, R., &amp; Scollon, C. (2006). Beyond the hedonic treadmill: Revising the adaptation theory of well-being. <i>American Psychologist</i>.</li>
+        <li>Killingsworth, M., Kahneman, D., &amp; Mellers, B. (2023). Income and emotional well-being: A conflict resolved. <i>Proceedings of the National Academy of Sciences</i>.</li>
+        <li>Waldinger, R., &amp; Schulz, M. (2023). <i>The Good Life: Lessons from the World's Longest Scientific Study of Happiness</i>. Simon &amp; Schuster.</li>
+        <li>Epley, N., &amp; Schroeder, J. (2014). Mistakenly seeking solitude. <i>Journal of Experimental Psychology: General</i>.</li>
+        <li>Boothby, E., Cooney, G., Sandstrom, G., &amp; Clark, M. (2018). The liking gap in conversations: Do people like us more than we think? <i>Psychological Science</i>.</li>
+        <li>Hall, J. (2019). How many hours does it take to make a friend? <i>Journal of Social and Personal Relationships</i>.</li>
+        <li>Tsai, J., Knutson, B., &amp; Fung, H. (2006). Cultural variation in affect valuation. <i>Journal of Personality and Social Psychology</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -656,26 +707,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">Someone I miss, and what I'd say to them</label>
+      <label class="prompt" for="tx-4">Someone I miss, and what actually stops me from reaching out</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">A time I got something I wanted, and how long the good feeling lasted</label>
+      <label class="prompt" for="tx-5">Something I wanted badly and got. How long did the good feeling last?</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">My biggest "I'll be happy when..." thought right now</label>
+      <label class="prompt" for="tx-6">Something I want a lot right now. Do I expect to like it as much as I want it?</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">Who my solid person is, or who could become one</label>
+      <label class="prompt" for="tx-7">Who knows the real version of me, and when I last spent real time with them</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Something bigger than me that I care about</label>
+      <label class="prompt" for="tx-8">Something bigger than me that I care about, and one way to show up for it</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>The people who did best in life weren't the richest or the most famous. They were the most connected. You can start building that now.</p>
+      <p>Your brain will keep chasing the next thing. That's how it's built. You still decide where your hours go, and the research keeps pointing the same way: people are the best bet.</p>
     </div>
     </div>
   </div>
@@ -690,7 +741,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">How much has feeling alone been on your mind today?</h3>
+        <h3 id="ci-1">How connected do you feel today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -708,11 +759,11 @@
           <button type="button" class="chip" aria-pressed="false">comparing myself</button>
           <button type="button" class="chip" aria-pressed="false">felt left out</button>
           <button type="button" class="chip" aria-pressed="false">a real conversation</button>
-          <button type="button" class="chip" aria-pressed="false">time with someone I like</button>
+          <button type="button" class="chip" aria-pressed="false">laughed with someone</button>
           <button type="button" class="chip" aria-pressed="false">helped someone</button>
           <button type="button" class="chip" aria-pressed="false">time outside</button>
           <button type="button" class="chip" aria-pressed="false">something bigger: faith, nature, music, a cause</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">a good day</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
       </div>
@@ -721,61 +772,61 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-treadmill" aria-pressed="false">🏃 On the treadmill</button>
-          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">😔 Running low on connection</button>
-          <button type="button" class="choice" data-path="p-compare" aria-pressed="false">📏 Comparing myself</button>
-          <button type="button" class="choice" data-path="p-invest" aria-pressed="false">🤝 Investing in what lasts</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Pretty good today</button>
+          <button type="button" class="choice" data-path="p-treadmill" aria-pressed="false">Chasing the next thing</button>
+          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">Low on connection</button>
+          <button type="button" class="choice" data-path="p-compare" aria-pressed="false">Comparing myself</button>
+          <button type="button" class="choice" data-path="p-invest" aria-pressed="false">Invested in people today</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Pretty good today</button>
         </div>
 
         <div class="path-panel" id="p-treadmill" hidden>
           <h4>What this might mean</h4>
-          <p>Everyone gets on it. The question is whether one small step today can go toward a person instead of the next thing.</p>
+          <p>Everyone gets on the treadmill. The question is whether one hour today can go to a person instead of the next "when."</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🛑</span>Catch the "I'll be happy when..." thought and name it: treadmill.</li>
-            <li><span class="e" aria-hidden="true">💭</span>Ask: who would I want to share this goal with?</li>
-            <li><span class="e" aria-hidden="true">📵</span>Trade one scroll for one person this week.</li>
+            <li>Name the thought when it shows up: "I'll be happy when..."</li>
+            <li>Ask who you'd want to share the goal with, and text them.</li>
+            <li>Trade one scroll for one conversation this week.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-alone" hidden>
           <h4>What this might mean</h4>
-          <p>Loneliness is painful, and it's also fixable in small steps. One text counts.</p>
+          <p>Loneliness is painful, and it's also fixable in steps. Friendship is mostly hours, and hours start small.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💭</span>Ask yourself: who do I miss? Send one short text.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Pick one place with the same faces every week, and go twice.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult. Loneliness matters for your health, too.</li>
+            <li>Send one short text to someone you miss.</li>
+            <li>Pick one place with the same faces every week, and go twice.</li>
+            <li>Talk to a counselor or trusted adult. Loneliness matters for your health, too.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-compare" hidden>
           <h4>What this might mean</h4>
-          <p>Comparing is how brains work. Feeds just give yours a lot more to work with.</p>
+          <p>Comparing is how brains work. Feeds just hand yours an endless supply of other people's best moments.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔕</span>Mute or unfollow anything that leaves you feeling worse.</li>
-            <li><span class="e" aria-hidden="true">🧍</span>Think of one person who likes you as you are.</li>
-            <li><span class="e" aria-hidden="true">🪞</span>The Comparison Trap lesson has more.</li>
+            <li>Mute or unfollow anything that reliably leaves you feeling worse.</li>
+            <li>Ask: did I like that scroll, or just want more of it?</li>
+            <li>The Comparison Trap lesson goes deeper.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-invest" hidden>
           <h4>What this might mean</h4>
-          <p>You did the stuff the study says matters most. Notice what helped.</p>
+          <p>You did the thing the research says pays off most. Notice what made it possible.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔍</span>What made it possible? That's your recipe.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Tell the person it mattered to you.</li>
-            <li><span class="e" aria-hidden="true">🗓</span>Plan the next one.</li>
+            <li>What made it easy today? That's your recipe.</li>
+            <li>Tell the person it mattered to you.</li>
+            <li>Put the next one on the calendar.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>Better days don't have to be perfect days to count.</p>
+          <p>Good days don't need a reason to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped today.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Look around for someone who could use a text from you.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Enjoy it.</li>
+            <li>Notice what helped today.</li>
+            <li>Think of someone who could use a text from you.</li>
+            <li>Enjoy it without checking whether it'll last.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -803,7 +854,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be kind to yourself. Reaching out takes more courage than people admit, and every small rep counts.</p>
+        <p class="closing">Reaching out takes more nerve than people admit. Every conversation is a rep, and the reps add up.</p>
       </div>
     </div>
     </div>

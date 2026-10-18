@@ -362,6 +362,72 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .src { font-size:.82rem; color:var(--ink-soft); }
 </style>
 </head>
 
@@ -408,9 +474,9 @@
 </style>
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🔔 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>Name the Need</h1>
-  <p class="tagline">Because every feeling is trying to tell you something.</p>
+  <p class="tagline">What happens in your brain when you name a feeling, why precise words matter, and how to get from a feeling to a clear ask.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -436,141 +502,169 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Feelings and needs</h2>
+    <h2 id="h-understand">Why naming a feeling changes it</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"Fine" isn't a feeling.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"Fine" covers a lot of ground.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>Someone asks how you're doing and all you've got is "fine," "good," or "tired."</li>
-        
-        <li >You snapped at someone you like and couldn't explain why.</li>
-        <li>You felt off all day, but couldn't put a name on it.</li>
-        <li>Someone asked "what do you need?" and your mind went blank.</li>
-        <li>Some days just feel great, and you're not sure what made them different.</li>
+        <li>Someone asks how you are and you say "fine," "tired," or "stressed," no matter what's going on.</li>
+        <li>You were short with someone you care about and only figured out why hours later.</li>
+        <li>You felt off for days before you realized it was about one specific thing.</li>
+        <li>You're scrolling and can't tell if you're bored, lonely, or avoiding something.</li>
+        <li>Someone asks "What do you need?" and nothing comes.</li>
       </ul>
-      <p style="margin:0">Most people only have a handful of feeling words. Nobody hands you the rest. This lesson does.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">🔔 Feelings are notifications</span><span class="sticker">Every feeling is a notification from a need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Every feeling is a notification. It pops up because one of your <strong>needs</strong> wants your attention.</p>
-      <p style="margin:0">Lonely is a notification from your need for connection. Cranky is often a notification from your need for sleep or food. Proud is a notification that a need to grow, or to matter, just got met.</p>
-      <p class="worst">A feeling isn't the problem. It's the message.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Your lock screen</span><span class="sticker">Red means something's missing. Green means more of this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 380 470" role="img" aria-label="A phone lock screen with four notifications. Two red ones from Rest and Belonging, two green ones from Fun and To matter." style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto"><rect x="10" y="5" width="360" height="460" rx="40" fill="var(--school)"/><rect x="24" y="20" width="332" height="430" rx="30" fill="var(--tint)"/><text x="190" y="88" text-anchor="middle" font-size="46" font-weight="300" fill="var(--ink)">3:12</text><rect x="40" y="120" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="146" r="12" fill="var(--alert)"/><text x="88" y="148" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">REST</text><text x="88" y="172" font-size="16" fill="var(--ink)">Exhausted. Also kind of cranky.</text><rect x="40" y="204" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="230" r="12" fill="var(--alert)"/><text x="88" y="232" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">BELONGING</text><text x="88" y="256" font-size="16" fill="var(--ink)">Lonely. They're all hanging out.</text><rect x="40" y="288" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="314" r="12" fill="var(--good)"/><text x="88" y="316" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">FUN</text><text x="88" y="340" font-size="16" fill="var(--ink)">Giddy. Best lunch all week.</text><rect x="40" y="372" width="300" height="72" rx="16" fill="var(--card)"/><circle cx="66" cy="398" r="12" fill="var(--good)"/><text x="88" y="400" font-size="13" font-weight="800" fill="var(--ink-soft)" letter-spacing="1">TO MATTER</text><text x="88" y="424" font-size="16" fill="var(--ink)">Proud. Coach noticed.</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">Same phone, two kinds of notifications. Red ones say "something's missing." Green ones say "more of this, please."</figcaption>
-      </figure>
+      <p style="margin:0">Think of every feeling as a notification from a need. If you've worked with feeling words before, this goes further: what naming does inside your brain, why precise words predict better mental health, and how to turn a feeling into a clear ask.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Two kinds of notifications</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔴</span><strong>Need not met</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Lonely, worried, frustrated, tired. These say something's missing. Read them before you swipe them away.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🟢</span><strong>Need met</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Calm, proud, grateful, curious. These say something's working. They tell you what to do more of.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔁</span><strong>Same need, both sides</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Connection met feels warm and safe. Connection not met feels lonely and hurt. One need, two very different notifications.</p></details>
+    <h3 style="margin-top:28px">What happens when you put it into words</h3>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 270" role="img" aria-labelledby="nn-t nn-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="nn-t">Side view of the right side of the brain</title>
+  <desc id="nn-d">The right ventrolateral prefrontal cortex sits low on the side of the frontal lobe, toward the front. The insula is folded inside the deep groove on the side of the brain. The amygdala sits deep inside the front of the temporal lobe.</desc>
+  <g transform="translate(400 0) scale(-1 1)">
+    <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+    <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+    <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+    <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+    <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+      <path d="M100 86 C118 96 114 110 132 118"/><path d="M146 58 C152 74 144 88 156 102"/>
+      <path d="M248 52 C242 70 254 82 246 100"/><path d="M286 74 C276 88 290 100 280 116"/><path d="M314 116 C300 122 304 136 292 144"/>
+      <path d="M150 176 C176 170 206 176 236 168"/><path d="M168 190 C196 186 224 190 252 182"/>
+    </g>
+    <path d="M206 42 C198 66 214 90 204 120" fill="none" stroke="#B5A897" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M100 152 C140 144 196 140 262 116" fill="none" stroke="#8A7F72" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="180" cy="137" rx="34" ry="11" fill="#2E8B57" fill-opacity=".35" stroke="#2E8B57" stroke-width="1.6" stroke-dasharray="4 3" transform="rotate(-10 180 137)"/>
+    <path d="M78 136 C82 118 98 108 118 110 C134 112 142 124 140 138 C128 144 110 148 92 152 C84 148 78 144 78 136 Z" fill="#2E6DB4" fill-opacity=".85"/>
+    <ellipse cx="160" cy="170" rx="10" ry="7" fill="#C0392B" fill-opacity=".9" stroke="#C0392B" stroke-dasharray="3 2"/>
+  </g>
+  <g font-size="13" font-weight="700">
+    <line x1="290" y1="128" x2="346" y2="48" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="290" cy="128" r="3" fill="#fff"/>
+    <text x="392" y="22" fill="#245A96" text-anchor="end">Right ventrolateral</text>
+    <text x="392" y="38" fill="#245A96" text-anchor="end">prefrontal cortex</text>
+    <line x1="214" y1="138" x2="70" y2="44" stroke="#2E8B57" stroke-width="1.5"/>
+    <text x="8" y="22" fill="#1F6B41">Insula</text>
+    <text x="8" y="37" fill="#1F6B41" font-size="11" font-weight="500">inside the side fold</text>
+    <line x1="240" y1="172" x2="262" y2="236" stroke="#C0392B" stroke-width="1.5"/>
+    <text x="236" y="252" fill="#A3301F">Amygdala (deep)</text>
+  </g>
+  <text x="392" y="266" font-size="11" fill="#6B6156" text-anchor="end">face &#8594;</text>
+</svg>
+      <figcaption>The right side of the brain, front at the right. The insula and amygdala are drawn as if seen through the surface. Simplified: these areas work as networks.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#2E8B57"></span><div><strong>Insula: reads your body</strong><p>It tracks signals from inside you: heartbeat, gut, breathing, muscle tension. Neuroscientist Bud Craig (2009) proposed that it's where those body signals become conscious feelings. Often your body knows before you have a word.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: reacts fast</strong><p>It responds quickly to emotional events, especially threatening ones, and drives the rush you feel before you've thought anything through.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Right ventrolateral prefrontal cortex: the labeler</strong><p>In a UCLA brain-imaging study, putting a word to the emotion in a face ("angry," "scared") turned down amygdala activity and turned up activity here. The two moved in opposite directions (Lieberman et al., 2007).</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Needs everyone has</span><span class="sticker">Seven kinds of needs. Everyone has all of them.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Precise words, steadier mind.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🫂 Connection.</dt>
+        <dt>Labeling helps with fear, too.</dt>
+        <dd>People afraid of spiders who described their feelings out loud while near one ("I'm anxious, it's terrifying") had smaller physical fear responses a week later than people who distracted themselves or tried to talk themselves out of it (Kircanski, Lieberman &amp; Craske, 2012).</dd>
+        <dt>Granularity is protective.</dt>
+        <dd>People who describe their emotions in more detail, which psychologists call emotional granularity, are less likely to binge drink, lash out, or hurt themselves when upset, and report less severe anxiety and depression (Kashdan, Barrett &amp; McKnight, 2015).</dd>
+        <dt>It's a skill, not a personality trait.</dt>
+        <dd>Like any vocabulary, it grows with use. The word banks below are a place to start.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Feelings across cultures</span><span class="sticker">Which feelings count as "good" depends on where you learned them.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>In research by Stanford psychologist Jeanne Tsai and colleagues, European American participants ideally wanted to feel excited and enthusiastic more than Hong Kong Chinese participants did, who valued calm and peace more. Chinese American participants landed in between (Tsai, Knutson &amp; Fung, 2006). Neither is better.</p>
+      <p>Families also differ on which feelings get said out loud, to whom, and in which language. Some feelings don't translate neatly. If your family has a word for a feeling that English doesn't, use it.</p>
+      <p class="worst">Which feelings were welcome out loud in your house growing up? Which ones weren't?</p>
+      </div>
+    </details>
+
+<details class="fold ">
+      <summary><span class="fold-label">Needs everyone has</span><span class="sticker">Seven kinds of needs. Everyone has all of them.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="margin-top:0">These categories are adapted from Nonviolent Communication. Research on self-determination theory (Ryan &amp; Deci, 2000) points to three needs at the core of motivation and well-being: <b>autonomy</b> (a say in your own life), <b>competence</b> (feeling capable), and <b>relatedness</b> (connection). You'll see them below as Freedom, Meaning, and Connection.</p>
+      <dl class="helps">
+        <dt>Connection.</dt>
         <dd >Belonging, acceptance, trust, support, being seen and understood.</dd>
-        <dt>🔋 Body.</dt>
+        <dt>Body.</dt>
         <dd >Rest and sleep, food, water, movement, physical safety.</dd>
-        <dt>🎭 Honesty.</dt>
+        <dt>Honesty.</dt>
         <dd >Authenticity, integrity, being the same person in every room.</dd>
-        <dt>🎮 Play.</dt>
+        <dt>Play.</dt>
         <dd >Joy, humor, fun for its own sake.</dd>
-        <dt>🌊 Peace.</dt>
+        <dt>Peace.</dt>
         <dd >Ease, calm, order, harmony, things feeling fair.</dd>
-        <dt>🗝 Freedom.</dt>
+        <dt>Freedom.</dt>
         <dd >Choice, independence, space, a say in your own life.</dd>
-        <dt>🌱 Meaning.</dt>
+        <dt>Meaning.</dt>
         <dd >Purpose, growth, challenge, creativity, contributing, to matter.</dd>
       </dl>
       </div>
     </details>
 
-    <details class="fold ">
+<details class="fold ">
       <summary><span class="fold-label">Same need, two sides</span><span class="sticker">Same need. Two very different feelings.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p class="tap-hint">Tap a need to see both sides.</p>
-      <div class="nn-pick" role="group" aria-label="Pick a need"><button type="button" data-nn="conn" aria-pressed="true">🫂 Connection</button><button type="button" data-nn="body" aria-pressed="false">🔋 Body</button><button type="button" data-nn="honest" aria-pressed="false">🎭 Honesty</button><button type="button" data-nn="play" aria-pressed="false">🎮 Play</button><button type="button" data-nn="peace" aria-pressed="false">🌊 Peace</button><button type="button" data-nn="free" aria-pressed="false">🗝 Freedom</button><button type="button" data-nn="meaning" aria-pressed="false">🌱 Meaning</button></div>
+      <div class="nn-pick" role="group" aria-label="Pick a need"><button type="button" data-nn="conn" aria-pressed="true">Connection</button><button type="button" data-nn="body" aria-pressed="false">Body</button><button type="button" data-nn="honest" aria-pressed="false">Honesty</button><button type="button" data-nn="play" aria-pressed="false">Play</button><button type="button" data-nn="peace" aria-pressed="false">Peace</button><button type="button" data-nn="free" aria-pressed="false">Freedom</button><button type="button" data-nn="meaning" aria-pressed="false">Meaning</button></div>
       <div class="nn-panel" id="nn-conn">
-        <p class="nn-what"><strong>🫂 Connection:</strong> <span >Belonging, acceptance, trust, support, being seen and understood.</span></p>
+        <p class="nn-what"><strong>Connection:</strong> <span >Belonging, acceptance, trust, support, being seen and understood.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >warm · safe · open hearted · grateful · trusting</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >lonely · hurt · jealous · guarded · insecure</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >warm · safe · open hearted · grateful · trusting</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >lonely · hurt · jealous · guarded · insecure</p></div>
         </div>
       </div>
       <div class="nn-panel" id="nn-body" hidden>
-        <p class="nn-what"><strong>🔋 Body:</strong> <span >Rest and sleep, food, water, movement, physical safety.</span></p>
+        <p class="nn-what"><strong>Body:</strong> <span >Rest and sleep, food, water, movement, physical safety.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >rested · refreshed · energetic · comfortable</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >exhausted · cranky · depleted · jittery · irritable</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >rested · refreshed · energetic · comfortable</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >exhausted · cranky · depleted · jittery · irritable</p></div>
         </div>
       </div>
       <div class="nn-panel" id="nn-honest" hidden>
-        <p class="nn-what"><strong>🎭 Honesty:</strong> <span >Authenticity, integrity, being the same person in every room.</span></p>
+        <p class="nn-what"><strong>Honesty:</strong> <span >Authenticity, integrity, being the same person in every room.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >proud · confident · open · relieved · clear headed</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >guilty · uneasy · torn · ashamed · mistrustful</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >proud · confident · open · relieved · clear headed</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >guilty · uneasy · torn · ashamed · mistrustful</p></div>
         </div>
       </div>
       <div class="nn-panel" id="nn-play" hidden>
-        <p class="nn-what"><strong>🎮 Play:</strong> <span >Joy, humor, fun for its own sake.</span></p>
+        <p class="nn-what"><strong>Play:</strong> <span >Joy, humor, fun for its own sake.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >giddy · amused · delighted · lively · enthusiastic</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >bored · restless · listless · gloomy</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >giddy · amused · delighted · lively · enthusiastic</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >bored · restless · listless · gloomy</p></div>
         </div>
       </div>
       <div class="nn-panel" id="nn-peace" hidden>
-        <p class="nn-what"><strong>🌊 Peace:</strong> <span >Ease, calm, order, harmony, things feeling fair.</span></p>
+        <p class="nn-what"><strong>Peace:</strong> <span >Ease, calm, order, harmony, things feeling fair.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >calm · content · centered · serene · relieved</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >overwhelmed · frazzled · stressed out · anxious · agitated</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >calm · content · centered · serene · relieved</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >overwhelmed · frazzled · stressed out · anxious · agitated</p></div>
         </div>
       </div>
       <div class="nn-panel" id="nn-free" hidden>
-        <p class="nn-what"><strong>🗝 Freedom:</strong> <span >Choice, independence, space, a say in your own life.</span></p>
+        <p class="nn-what"><strong>Freedom:</strong> <span >Choice, independence, space, a say in your own life.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >empowered · confident · eager · relaxed</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >frustrated · resentful · exasperated · impatient · irritated</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >empowered · confident · eager · relaxed</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >frustrated · resentful · exasperated · impatient · irritated</p></div>
         </div>
       </div>
       <div class="nn-panel" id="nn-meaning" hidden>
-        <p class="nn-what"><strong>🌱 Meaning:</strong> <span >Purpose, growth, challenge, creativity, contributing, to matter.</span></p>
+        <p class="nn-what"><strong>Meaning:</strong> <span >Purpose, growth, challenge, creativity, contributing, to matter.</span></p>
         <div class="nn-cols">
-          <div class="nn-met"><h4>🟢 When it's met, you might feel</h4><p class="nn-words" >inspired · engaged · fascinated · hopeful · fulfilled</p></div>
-          <div class="nn-unmet"><h4>🔴 When it's not, you might feel</h4><p class="nn-words" >discouraged · lost · apathetic · disheartened</p></div>
+          <div class="nn-met"><h4>When it's met, you might feel</h4><p class="nn-words" >inspired · engaged · fascinated · hopeful · fulfilled</p></div>
+          <div class="nn-unmet"><h4>When it's not, you might feel</h4><p class="nn-words" >discouraged · lost · apathetic · disheartened</p></div>
         </div>
       </div>
       <p class="nn-credit">Feeling and need words adapted from the Feelings Inventory and Needs Inventory, &copy; 2005 by Center for Nonviolent Communication. Website: www.cnvc.org. Email: cnvc@cnvc.org. Phone: +1.505.244.4041.</p>
       </div>
     </details>
 
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">🧠 Why bother naming it?</span><span class="sticker">Name it to tame it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>In a brain scan study at UCLA, putting a feeling into words calmed the brain's alarm system, the amygdala. Psychiatrist Dan Siegel calls this "name it to tame it."</p>
-      <p style="margin:0">People who can tell "annoyed" from "hurt" from "embarrassed" also tend to handle stress better. The more specific the word, the easier it is to figure out what would help.</p>
-      <p class="worst">"Bad" tells you almost nothing. "Left out and kind of jealous" tells you exactly where to look.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
+<details class="fold ">
       <summary><span class="fold-label">Word bank: needs met</span><span class="sticker">Green words: a need is getting met.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="nn-bank green"><div><strong>Close</strong><span >warm · affectionate · tender · open hearted · safe · trusting</span></div><div><strong>Into it</strong><span >curious · absorbed · engaged · fascinated · intrigued · alert</span></div><div><strong>Pumped</strong><span >excited · eager · energetic · enthusiastic · lively · vibrant</span></div><div><strong>Happy</strong><span >happy · glad · amused · delighted · joyful · tickled</span></div><div><strong>Thankful</strong><span >grateful · appreciative · moved · touched</span></div><div><strong>Strong</strong><span >proud · confident · empowered · secure</span></div><div><strong>Hopeful</strong><span >hopeful · encouraged · optimistic · inspired</span></div><div><strong>Calm</strong><span >calm · relaxed · relieved · content · centered · peaceful</span></div><div><strong>Recharged</strong><span >rested · refreshed · renewed · restored</span></div></div>
@@ -578,7 +672,7 @@
       </div>
     </details>
 
-    <details class="fold ">
+<details class="fold ">
       <summary><span class="fold-label">Word bank: needs not met</span><span class="sticker">Red words: something's missing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="nn-bank red"><div><strong>Scared</strong><span >scared · worried · anxious · dread · panicked · wary</span></div><div><strong>Mad</strong><span >annoyed · frustrated · irritated · angry · furious · resentful</span></div><div><strong>Mixed up</strong><span >confused · torn · lost · hesitant · bewildered</span></div><div><strong>Shut down</strong><span >bored · detached · numb · withdrawn · apathetic</span></div><div><strong>Exposed</strong><span >embarrassed · ashamed · guilty · self-conscious · mortified</span></div><div><strong>Worn out</strong><span >tired · exhausted · burnt out · depleted · drained</span></div><div><strong>Hurting</strong><span >hurt · lonely · heartbroken · grief · regretful</span></div><div><strong>Sad</strong><span >sad · disappointed · discouraged · hopeless · gloomy</span></div><div><strong>On edge</strong><span >stressed out · edgy · irritable · overwhelmed · restless</span></div><div><strong>Unsteady</strong><span >insecure · fragile · guarded · helpless · sensitive</span></div><div><strong>Wanting</strong><span >jealous · envious · longing · nostalgic</span></div></div>
@@ -591,25 +685,30 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Reading the notification</h2>
+    <h2 id="h-practice">From feeling, to need, to ask</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Read it before you swipe it away.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🔍 Get specific.<span class="row-cue" aria-hidden="true"></span></summary><p>Go one word past "fine" or "stressed." Check the word bank if you're stuck.</p></details>
-        <details class="row"><summary>🔔 Read the notification.<span class="row-cue" aria-hidden="true"></span></summary><p>Before you scroll it away, ask: what is this feeling trying to tell me?</p></details>
-        <details class="row"><summary>🧭 Look under it.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask: what am I missing right now? Sleep? People? A say in this? Some fun?</p></details>
-        <details class="row"><summary>🗣 Put it together.<span class="row-cue" aria-hidden="true"></span></summary><p>"I feel ___ because I need ___." Saying it, even just in your head, makes the next step clearer.</p></details>
-        <details class="row"><summary>🟢 Notice the good ones too.<span class="row-cue" aria-hidden="true"></span></summary><p>When you feel calm or proud, ask what need just got met. That's your recipe.</p></details>
-        <details class="row"><summary>🧩 Find more than one way.<span class="row-cue" aria-hidden="true"></span></summary><p>A need can usually be met lots of ways. If one door is closed, look for another.</p></details>
+      <div class="fold-label">The core skill</div>
+      <h3 class="sticker">Feeling. Need. Request.</h3>
+      <p>Most conflicts skip straight from feeling to blame. Slowing down to find the need in between changes what you say next.</p>
+      <div class="levers">
+        <div class="lever"><b>Get granular</b><span>Go one word past "stressed." Overwhelmed? Behind? Dreading one specific thing?</span></div>
+        <div class="lever"><b>Check your body</b><span>Where is it: chest, stomach, jaw, shoulders? Body signals often arrive before the word does.</span></div>
+        <div class="lever"><b>Find the need</b><span>Ask: what am I missing right now? Rest, connection, a say in this, a sense that I can handle it?</span></div>
+        <div class="lever"><b>Make a request</b><span>Clear and doable: "Can we talk tonight instead of over text?" A request can get a no. If no isn't allowed, it's a demand.</span></div>
+      </div>
+      <p class="tap-hint">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Catch thoughts in disguise.<span class="row-cue" aria-hidden="true"></span></summary><p>"I feel ignored" describes what someone else did. The feeling underneath might be hurt or lonely. The try-it below has practice.</p></details>
+        <details class="row"><summary><span class="num">2</span> Read the green ones too.<span class="row-cue" aria-hidden="true"></span></summary><p>When you feel calm, proud, or close to someone, ask which need just got met. That's your recipe.</p></details>
+        <details class="row"><summary><span class="num">3</span> Look for another door.<span class="row-cue" aria-hidden="true"></span></summary><p>Most needs can be met more than one way. If one door is closed, look for another.</p></details>
+        <details class="row"><summary><span class="num">4</span> Name it before you open the app.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm bored" or "I'm lonely." Then decide whether the feed is what you actually need.</p></details>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Tap a feeling. Find the need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <h4 style="margin:0">🔴 Feels hard</h4>
+      <h4 style="margin:0">Feels hard</h4>
       <div class="nn-fws" role="group" aria-label="Feelings when needs are not met"><button type="button" class="nn-fw red" aria-pressed="false" data-f="lonely">lonely</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="hurt">hurt</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="jealous">jealous</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="embarrassed">embarrassed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="insecure">insecure</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="worried">worried</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="nervous">nervous</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="overwhelmed">overwhelmed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="stressed out">stressed out</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="annoyed">annoyed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="frustrated">frustrated</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="angry">angry</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="resentful">resentful</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="bored">bored</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="restless">restless</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="tired">tired</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="cranky">cranky</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="sad">sad</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="disappointed">disappointed</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="discouraged">discouraged</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="guilty">guilty</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="confused">confused</button><button type="button" class="nn-fw red" aria-pressed="false" data-f="numb">numb</button></div>
-      <h4 style="margin:0">🟢 Feels good</h4>
+      <h4 style="margin:0">Feels good</h4>
       <div class="nn-fws" role="group" aria-label="Feelings when needs are met"><button type="button" class="nn-fw green" aria-pressed="false" data-f="calm">calm</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="happy">happy</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="proud">proud</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="grateful">grateful</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="excited">excited</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="curious">curious</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="relieved">relieved</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="confident">confident</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="content">content</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="giddy">giddy</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="hopeful">hopeful</button><button type="button" class="nn-fw green" aria-pressed="false" data-f="rested">rested</button></div>
       <div class="nn-out" id="nn-out" aria-live="polite">Tap a feeling to decode it.</div>
       <p style="font-size:.95rem;margin-top:10px">These are good guesses, not rules. You're the expert on what's under your own feelings.</p>
@@ -617,52 +716,50 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">"I feel ignored" is a thought in disguise.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">"I feel used" is a thought in disguise.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Some "feelings" are really thoughts about what someone else did. If you can add "like" or "that" after "I feel," it's usually a thought. Pick one.</p>
+      <p>Some "feelings" are really judgments about what someone else did. If you can add "like" or "that" after "I feel," it's usually a thought. Pick one.</p>
       <div class="scenario">
-        <p>"I feel ignored."</p>
+        <p>"I feel used."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Sneaky one. &quot;Ignored&quot; is about what someone else did. The feeling underneath might be hurt or lonely, and the need is to matter.">A feeling</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath, maybe hurt or lonely. The need: to matter, to be noticed.">A thought in disguise</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="It's a judgment about what someone else did. Underneath might be hurt or resentful. The need: respect, fairness, being valued.">A feeling</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath: hurt or resentful. The need: respect and fairness.">A thought in disguise</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario">
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>"I feel nervous."</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>"I feel resentful."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Nervous is a real feeling. The need underneath is often safety or confidence.">A feeling</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="This one's a real feeling. Nervous usually points to a need for safety or support.">A thought in disguise</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Resentful is a real feeling. It often points to a need for fairness or to be appreciated.">A feeling</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This one's a real feeling. It often points to a need for fairness.">A thought in disguise</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      
-      <div class="scenario" >
-        <p>"I feel judged."</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>"I feel like I'm not good enough."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="It's a guess about what others think. Underneath might be embarrassed or insecure. The need: acceptance, respect.">A feeling</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath: embarrassed or insecure. The need: acceptance and respect.">A thought in disguise</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="The word "like" gives it away. That's a belief about yourself. Underneath might be discouraged or ashamed. The need: competence, acceptance.">A feeling</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath: discouraged, ashamed, insecure. The need: to feel capable and accepted.">A thought in disguise</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario">
-        <p>"I feel disappointed."</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>"I feel overwhelmed."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Disappointed often points to a need for hope, or for things to work out.">A feeling</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="This one's a real feeling. It often points to a need for hope.">A thought in disguise</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Overwhelmed is a real feeling. It usually points to a need for peace, order, or help.">A feeling</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This one's a real feeling. The need underneath is often ease or support.">A thought in disguise</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <p>"I feel pressured."</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>"I feel manipulated."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="&quot;Pressured&quot; describes what others are doing. Underneath: stressed or torn. The need: choice.">A feeling</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath: stressed or torn. The need: choice, a say in it.">A thought in disguise</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="It's a guess about someone's intentions. Underneath might be confused, wary, or angry. The need: honesty and choice.">A feeling</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Underneath: wary or angry. The need: honesty, and a free choice.">A thought in disguise</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">Thoughts in disguise aren't wrong. They're just one step away from the real feeling, and the real feeling points to the need.</p>
+      <p style="margin-top:14px;font-size:.95rem">Thoughts in disguise aren't wrong. They're one step away from the real feeling, and the real feeling points to the need.</p>
       </div>
     </details>
 
@@ -670,12 +767,12 @@
       <summary><span class="fold-label">A need can be met more than one way</span><span class="sticker">Most needs have more than one door.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt><span >"I need you to text me back right now."</span></dt>
-        <dd>The need is reassurance and connection. A text is one way. Talking tomorrow, or reaching out to someone else, are others.</dd>
-        <dt><span >"I need to make varsity."</span></dt>
-        <dd >The need might be competence, belonging, or to matter. Varsity is one way. There are others, even if it doesn't feel like it right now.</dd>
-        <dt>"I need everyone to stop bugging me."</dt>
-        <dd>The need is space, or peace. Headphones, a walk, or asking for ten minutes can all get you there.</dd>
+        <dt>"I need them to apologize."</dt>
+        <dd>The need might be respect, or repair. An apology is one door. Setting a boundary, or getting support from someone else, are others.</dd>
+        <dt>"I need to get into this school."</dt>
+        <dd>The need might be competence, belonging, or a future you can be proud of. That school is one door. There are others, even when it doesn't feel that way.</dd>
+        <dt>"I need my parents to stop asking about my grades."</dt>
+        <dd>The need might be trust and a say in your own life. A weekly check-in you lead yourself might meet it better than silence would.</dd>
       </dl>
       </div>
     </details>
@@ -683,22 +780,22 @@
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">I feel ___ because I need ___.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think of something small from this week, nothing huge. Fill in the blanks.</p>
+      <p>Think of something small from this week. Fill in the blanks.</p>
       <label class="prompt" for="tx-1">I felt...</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="annoyed"></textarea><div class="write-lines"></div>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="frustrated, and a little embarrassed"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-2">because I needed...</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="some space"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">Something I could ask for, or do for myself:</label>
-      <textarea id="tx-3" autocomplete="off" spellcheck="false" placeholder="Ask for ten minutes before talking about it"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="to be trusted to handle it"></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">A request I could make, or something I could do for myself:</label>
+      <textarea id="tx-3" autocomplete="off" spellcheck="false" placeholder="Can I tell you how it went, instead of you checking the portal?"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Same story, different feelings, one need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Same story, different feelings, one need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 10 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 10 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
-        <li>Read the story on each screen out loud.</li>
+        <li>Read each story out loud. These are made-up students, not anyone in the room.</li>
         <li>Everyone silently picks a feeling word the character might have. Use the word bank if it helps.</li>
         <li>A few people share their word. Different words are fine. That's the point.</li>
         <li>Vote on the need underneath. Then tap to see one answer.</li>
@@ -708,79 +805,78 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Name that need · 1 of 4</span><span class="sticker">Left out at lunch</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Name that need · 1 of 4</span><span class="sticker">The weekend off</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.25rem" >The friend group made a new group chat. Sam found out when someone mentioned it by accident.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Body</li><li>Connection</li><li>Freedom</li><li>Play</li></ol>
-      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>Connection: belonging, to matter. Feelings might be hurt, lonely, embarrassed. If the need were met: warm, included, safe.</p></details>
+      <p style="font-size:1.1rem">Marisol asked for a Saturday off from her job a month ago. Her manager gave it to a coworker who asked last week, and scheduled Marisol to close.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Body</li><li>Peace</li><li>Play</li><li>Honesty</li></ol>
+      <details class="row"><summary>One answer<span class="row-cue" aria-hidden="true"></span></summary><p>Peace, in the sense of fairness, and respect. Feelings might be frustrated, resentful, discouraged. If met: settled, respected.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Name that need · 2 of 4</span><span class="sticker">Every single grade</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Name that need · 2 of 4</span><span class="sticker">The translator</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.25rem" >Maya's parents check the grades portal every night and ask about every assignment before she can tell them.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Freedom</li><li>Play</li><li>Honesty</li><li>Body</li></ol>
-      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>Freedom: choice, trust, a say in her own life. Feelings might be frustrated, annoyed, resentful. If met: confident, relaxed.</p></details>
+      <p style="font-size:1.1rem">Tuan translates at his parents' medical appointments and helps with the bills. It matters to him. At school nobody knows, and lately he feels drained and kind of invisible.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Connection</li><li>Meaning</li><li>Body</li><li>Play</li></ol>
+      <details class="row"><summary>One answer<span class="row-cue" aria-hidden="true"></span></summary><p>Several at once. Meaning: helping his family is important to him. Connection: being seen for it. Body: rest. Feelings might be proud, depleted, and unseen at the same time. Mixed notifications are normal.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Name that need · 3 of 4</span><span class="sticker">The 1 a.m. project</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Name that need · 3 of 4</span><span class="sticker">The college list</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.25rem">Leo stayed up until 1 a.m. finishing a project, then had a test and practice. At dinner, his sister asks one question and he snaps at her.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Connection</li><li>Meaning</li><li>Body</li><li>Honesty</li></ol>
-      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>Body: rest and food. Feelings might be cranky, exhausted, irritable. If met: rested, patient, calm.</p></details>
+      <p style="font-size:1.1rem">Nadia wants to apply to schools across the country. Her parents want her close to home. Every conversation ends in silence.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Freedom</li><li>Connection</li><li>Body</li><li>Meaning</li></ol>
+      <details class="row"><summary>One answer<span class="row-cue" aria-hidden="true"></span></summary><p>Freedom and Connection pulling against each other: a say in her own future, and staying close to her family. Feelings might be torn, frustrated, guilty. Both needs are real. In many families a decision like this is shared, not made alone, which is part of what makes it hard.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Name that need · 4 of 4</span><span class="sticker">The coach noticed</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Name that need · 4 of 4</span><span class="sticker">Lunch after a long week</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.25rem">Priya's coach pulls her aside: "I saw how you helped the new kid at practice today." Priya grins the whole ride home.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Peace</li><li>Meaning</li><li>Freedom</li><li>Body</li></ol>
-      <details class="row"><summary>What usually happens<span class="row-cue" aria-hidden="true"></span></summary><p>This one is a green notification. Meaning and connection: to matter, to contribute. Feelings: proud, touched, glad.</p></details>
+      <p style="font-size:1.1rem">After a week of games, a test, and two shifts, Andre ends up laughing so hard at lunch he can't breathe. He feels better than he has in days.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Peace</li><li>Play</li><li>Freedom</li><li>Honesty</li></ol>
+      <details class="row"><summary>One answer<span class="row-cue" aria-hidden="true"></span></summary><p>A green notification. Play and Connection: fun, belonging. Feelings: giddy, relieved, close. Worth noticing what made it happen, so it can happen again.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
         <li>Did people pick different feeling words for the same story? Why might that be?</li>
         <li>Which was harder to spot, the feeling or the need?</li>
-        <li>Why do you think people often say "fine" instead of naming a real feeling?</li>
-        <li>What's one way a friend could help meet each of these needs?</li>
+        <li>When is "fine" the right answer, and when does it cost you something?</li>
+        <li>How do the rules about naming feelings change between home, school, and friends?</li>
       </ul>
       <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep it on the characters. Nobody should have to share their own feelings out loud. If students disagree about the need, that's a good discussion: a feeling can come from more than one need.</p></details>
       </div>
     </details>
 
-    <details class="fold ">
+<details class="fold ">
       <summary><span class="fold-label">Notifications on your phone, notifications in you</span><span class="sticker">The feed can mute a feeling. It can't meet the need.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>📱 Scrolling can mute the notification.</dt>
+        <dt>Scrolling can mute the notification.</dt>
         <dd>When you're bored, lonely, or tired, the feed is an easy way to not feel it. The need is still there when you look up.</dd>
-        <dt>❤️ Likes are a quick hit of "I matter."</dt>
+        <dt>Likes are a quick hit of "I matter."</dt>
         <dd>Real need, fast and small dose. Texting one friend usually meets it better.</dd>
-        <dt>👀 Envy is a notification too.</dt>
+        <dt>Envy is a notification too.</dt>
         <dd>Jealous of someone's post? Ask what it shows you want. That's information about your needs.</dd>
-        <dt>🔕 Before you open the app, name it.</dt>
+        <dt>Before you open the app, name it.</dt>
         <dd>"I'm bored" or "I'm lonely." Then decide if the app is actually what you need.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">"Fine" on repeat keeps the need waiting.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>😐 "Fine" on repeat.<span class="row-cue" aria-hidden="true"></span></summary><p>Fine is a way to skip the notification. It doesn't make the need go away.</p></details>
-        <details class="row"><summary>🗑 Swiping it away.<span class="row-cue" aria-hidden="true"></span></summary><p>Ignoring, scrolling, or numbing a feeling means it usually comes back louder.</p></details>
-        <details class="row"><summary>🙅 Treating the feeling as the problem.<span class="row-cue" aria-hidden="true"></span></summary><p>Feelings aren't bad. Getting mad at yourself for feeling sad just adds a second notification.</p></details>
-        <details class="row"><summary>🎯 Only one way to meet a need.<span class="row-cue" aria-hidden="true"></span></summary><p>"It has to be this person, this way" is a trap. Most needs have lots of doors.</p></details>
-        <details class="row"><summary>📢 Making someone else guess.<span class="row-cue" aria-hidden="true"></span></summary><p>People can't read your notifications. Saying "I need ___" gives them a chance to help.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Naming a feeling makes it bigger.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The research says the opposite. Labeling tends to turn the alarm down, not up.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Some feelings are bad.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Feelings are information. Actions can hurt people. Feelings can't.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If they cared, they'd know what I need.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Nobody can read your notifications. Saying "I need ___" gives people a real chance to help.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> There's only one way to meet this need.</span><span class="row-cue" aria-hidden="true"></span></summary><p>"It has to be this person, this way" is a trap. Most needs have several doors.</p></details>
       </div>
       </div>
     </details>
@@ -790,12 +886,26 @@
       <ul class="tight">
         <li>A red notification won't go away for weeks, or keeps getting louder.</li>
         <li>You feel numb or hopeless most of the time.</li>
-        <li>A need for safety isn't being met, at home, online, or anywhere else.</li>
+        <li>A need for safety isn't being met, at home, online, in a relationship, or anywhere else.</li>
         <li>You have thoughts of not wanting to be here.</li>
       </ul>
-      <p>Tell a counselor or a trusted adult right away. You can also call or text <strong>988</strong>, any time, day or night.</p>
-      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Tell a counselor or a trusted adult soon. You can also call or text <strong>988</strong>, any time. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Lieberman, M. D., Eisenberger, N. I., Crockett, M. J., Tom, S. M., Pfeifer, J. H., &amp; Way, B. M. (2007). Putting feelings into words: Affect labeling disrupts amygdala activity in response to affective stimuli. <i>Psychological Science</i>.</li>
+        <li>Kircanski, K., Lieberman, M. D., &amp; Craske, M. G. (2012). Feelings into words: Contributions of language to exposure therapy. <i>Psychological Science</i>.</li>
+        <li>Craig, A. D. (2009). How do you feel, now? The anterior insula and human awareness. <i>Nature Reviews Neuroscience</i>.</li>
+        <li>Kashdan, T. B., Barrett, L. F., &amp; McKnight, P. E. (2015). Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity. <i>Current Directions in Psychological Science</i>.</li>
+        <li>Ryan, R. M., &amp; Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <i>American Psychologist</i>.</li>
+        <li>Tsai, J. L., Knutson, B., &amp; Fung, H. H. (2006). Cultural variation in affect valuation. <i>Journal of Personality and Social Psychology</i>.</li>
+        <li>Feeling and need words adapted from the Feelings Inventory and Needs Inventory, &copy; 2005 by Center for Nonviolent Communication, www.cnvc.org.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -806,26 +916,28 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">A feeling I had this week, and the need that might have been underneath</label>
+      <label class="prompt" for="tx-4">A feeling I had this week, as precisely as I can name it, and the need underneath</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">A time I felt really good lately, and which need was getting met</label>
+      <label class="prompt" for="tx-5">Where I noticed it in my body first</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">A need of mine that's been running low</label>
+      <label class="prompt" for="tx-6">A need of mine that's been running low, and one door I haven't tried</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">A feeling I usually just call "fine"</label>
+      <label class="prompt" for="tx-7">Which feelings were easy to say out loud in my family, and which weren't</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Something I could ask for, or do for myself, to meet a need</label>
+      <label class="prompt" for="tx-8">A request I could make this week, and who I'd make it to</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Every feeling is information, even the uncomfortable ones. You don't have to fix it right away. Naming it is already a step.</p>
+      <p>Every feeling is information, including the uncomfortable ones. You don't have to fix it right away. Naming it is already doing something.</p>
     </div>
     </div>
   </div>
@@ -855,10 +967,10 @@
         <div class="chips" id="ci-chips">
           <button type="button" class="chip" aria-pressed="false">tired</button>
           <button type="button" class="chip" aria-pressed="false">lonely</button>
-          <button type="button" class="chip" aria-pressed="false">stressed out</button>
+          <button type="button" class="chip" aria-pressed="false">overwhelmed</button>
           <button type="button" class="chip" aria-pressed="false">frustrated</button>
           <button type="button" class="chip" aria-pressed="false">worried</button>
-          <button type="button" class="chip" aria-pressed="false">bored</button>
+          <button type="button" class="chip" aria-pressed="false">resentful</button>
           <button type="button" class="chip" aria-pressed="false">hurt</button>
           <button type="button" class="chip" aria-pressed="false">numb</button>
           <button type="button" class="chip" aria-pressed="false">calm</button>
@@ -875,12 +987,12 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-conn" aria-pressed="false">💬 Missing people</button>
-          <button type="button" class="choice" data-path="p-body" aria-pressed="false">🔋 Running low</button>
-          <button type="button" class="choice" data-path="p-free" aria-pressed="false">🚧 Boxed in</button>
-          <button type="button" class="choice" data-path="p-peace" aria-pressed="false">🌪 Too much at once</button>
-          <button type="button" class="choice" data-path="p-numb" aria-pressed="false">🌫 Can't tell what I feel</button>
-          <button type="button" class="choice" data-path="p-met" aria-pressed="false">🟢 Pretty good, actually</button>
+          <button type="button" class="choice" data-path="p-conn" aria-pressed="false">Missing people</button>
+          <button type="button" class="choice" data-path="p-body" aria-pressed="false">Running low</button>
+          <button type="button" class="choice" data-path="p-free" aria-pressed="false">Boxed in</button>
+          <button type="button" class="choice" data-path="p-peace" aria-pressed="false">Too much at once</button>
+          <button type="button" class="choice" data-path="p-numb" aria-pressed="false">Can't tell what I feel</button>
+          <button type="button" class="choice" data-path="p-met" aria-pressed="false">Pretty good, actually</button>
         </div>
 
         <div class="path-panel" id="p-conn" hidden>
@@ -968,7 +1080,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Naming a feeling takes practice. The more words you have, the easier it gets to find what you need.</p>
+        <p class="closing">The more precisely you can name a feeling, the easier it is to find what you need, and to ask for it.</p>
       </div>
     </div>
     </div>

@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure + research notes (same palette) */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .rn { background:#fff; border-radius:14px; padding:14px 16px; margin:14px 0; font-size:.95rem; line-height:1.5; }
+  .rn > span:first-child { display:block; font-size:.72rem; font-weight:700; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:4px; text-transform:uppercase; }
+  .card .rn, .fold-body .rn { background:var(--paper); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:6px 0 10px; }
+  .stat { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .stat b { display:block; font-size:1.7rem; letter-spacing:-.02em; line-height:1.05; }
+  .stat span { display:block; margin-top:6px; font-size:.88rem; color:var(--ink-soft); line-height:1.4; }
+  .ways details.tile > summary strong { font-size:1.02rem; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🚨 High School · Launch Ready</div>
+  <div class="eyebrow">High School · Launch Ready</div>
   <h1>The Red Zone</h1>
-  <p class="tagline">Because the first months of college are the riskiest, and looking out for each other changes that.</p>
+  <p class="tagline">What the research says about the first weeks of college, how bystanders change the outcome, and what your options are if something happens.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +463,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,40 +480,64 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Sexual assault awareness</h2>
+    <h2 id="h-understand">What the research shows</h2>
     <details class="fold fold-callout">
-      <summary><span class="fold-label">💛 Before we start</span><span class="sticker">Take care of yourself as you read.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Before we start</span><span class="sticker">Take care of yourself as you read.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>This lesson talks about sexual assault. Some people reading it may have already experienced it, at home, at school, or somewhere else. Take breaks if you need to. If anything here brings something up, the Get help button is always at the bottom, and a counselor is available to talk.</p>
-      <p class="worst">If it ever happened to you, it was not your fault.</p>
+      <p>This lesson talks about sexual assault. Some people reading it have already experienced it, at home, at school, in a relationship, or somewhere else. Skip any part you need to, take breaks, and come back later if you want. The Get help section is at the bottom, and a counselor is available to talk.</p>
+      <p class="worst">If it ever happened to you, it was not your fault. Not because of what you drank, wore, said, or didn't say.</p>
       </div>
     </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">The red zone</h3>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 360 180" role="img" aria-label="Timeline of the first college year from August to May. The red zone runs from move-in in late August to Thanksgiving in late November, overlapping the fall football weekends. Risk continues the rest of the year at a lower level." xmlns="http://www.w3.org/2000/svg">
+  <g font-family="inherit">
+    <rect x="16" y="86" width="328" height="26" rx="13" fill="#E8E8ED"/>
+    <rect x="163.6" y="86" width="36.1" height="26" fill="#F5F5F7"/>
+    <text x="181.6" y="103" text-anchor="middle" font-size="10.5" fill="#8E8E93">break</text>
+    <rect x="42.2" y="86" width="100.0" height="26" rx="13" fill="#C0392B"/>
+    <text x="92.3" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Red zone</text>
+    <line x1="42.2" y1="58" x2="42.2" y2="86" stroke="#1D1D1F" stroke-width="1.5"/>
+    <text x="34.2" y="50" font-size="12.5" font-weight="600" fill="#1D1D1F">Move-in</text>
+    <line x1="142.3" y1="58" x2="142.3" y2="86" stroke="#1D1D1F" stroke-width="1.5"/>
+    <text x="142.3" y="50" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1D1D1F">Thanksgiving</text>
+    <text x="344" y="50" text-anchor="end" font-size="12" fill="#6E6E73">risk never drops to zero</text>
+    <line x1="182.3" y1="60" x2="344" y2="60" stroke="#AEAEB2" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <text x="32.4" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">A</text><text x="65.2" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">S</text><text x="98.0" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">O</text><text x="130.8" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">N</text><text x="163.6" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">D</text><text x="196.4" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">J</text><text x="229.2" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">F</text><text x="262.0" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">M</text><text x="294.8" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">A</text><text x="327.6" y="134" text-anchor="middle" font-size="12.5" fill="#6E6E73">M</text>
+    <path d="M48.8 146 v6 H142.3 v-6" fill="none" stroke="#B86E00" stroke-width="1.5"/>
+    <text x="95.5" y="170" text-anchor="middle" font-size="12.5" font-weight="600" fill="#8A5200">fall football weekends</text>
+  </g>
+</svg>
+      <figcaption>Schematic of the first year, not a graph of data. The red zone is a pattern from research and campus reports, not a precise boundary.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>First-years, first months</strong><p>Researchers call the stretch from move-in to Thanksgiving the red zone. In one campus study, first-year women were at higher risk of unwanted sex than second-year women, especially early in the fall (Kimble and colleagues, 2008). Other studies are more mixed on exact timing, so treat it as a warning about new situations, not a calendar.</p></div></div>
+      <div class="region"><span class="dot" style="background:#B86E00"></span><div><strong>Big party days</strong><p>An economics study of Division 1 schools found that reports of rape involving victims aged 17 to 24 rose 28% on football game days (Lindo, Siminski and Swensen, 2018). The game isn't the cause. Crowds, heavy drinking, and unfamiliar places are the conditions.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Mostly someone they know</strong><p>In a national study of college women, about 9 in 10 victims of rape or attempted rape knew the person who did it: a classmate, a friend, a date, someone from the floor (Fisher, Cullen and Turner, 2000). "Stranger danger" misses most of the risk.</p></div></div>
+    </div>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">What the data shows</span><span class="sticker">Move-in to Thanksgiving: the red zone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The numbers</span><span class="sticker">Common, underreported, and not only women.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <div style="display:flex;flex-wrap:wrap;gap:12px"><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">1 in 4</div><div style="margin-top:6px;font-weight:600">undergraduate women experience sexual assault in college (about 1 in 15 men)</div></div><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">50%+</div><div style="margin-top:6px;font-weight:600">of campus sexual assaults happen between August and November</div></div><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">9 in 10</div><div style="margin-top:6px;font-weight:600">survivors knew the person who assaulted them</div></div><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">1 in 5</div><div style="margin-top:6px;font-weight:600">female student survivors report to police</div></div><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">+41%</div><div style="margin-top:6px;font-weight:600">more rape reports on home football game days</div></div></div>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">First-year students, in their first months on campus, face the highest risk. That stretch from move-in to Thanksgiving is called the red zone. Transgender and nonbinary students face rates as high as women's. On football game days, reports involving 17 to 24 year olds rise 28%, and 41% for home games. Sources: AAU Campus Climate Survey (2019), RAINN, Bureau of Justice Statistics, National College Women Sexual Victimization Study, Lindo, Siminski and Swensen, American Economic Journal: Applied Economics (2018).</figcaption>
-      </figure>
+      <div class="stats">
+        <div class="stat"><b>1 in 4</b><span>undergraduate women reported nonconsensual sexual contact by force or incapacitation since enrolling (25.9%).</span></div>
+        <div class="stat"><b>22.8%</b><span>of transgender, genderqueer, and nonbinary students reported the same, close to the rate for women.</span></div>
+        <div class="stat"><b>1 in 15</b><span>undergraduate men reported it too (6.8%). Men are often the least likely to tell anyone.</span></div>
+        <div class="stat"><b>1 in 5</b><span>rapes and sexual assaults of female college students were reported to police.</span></div>
+      </div>
+      <p style="margin:0">Sources: AAU Campus Climate Survey (2019), 33 universities and about 180,000 students; Bureau of Justice Statistics (Sinozich and Langton, 2014). Survey numbers depend on how questions are asked, which is why different studies give different figures.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🧊 Alcohol is a risk factor, never the cause</span><span class="sticker">Ice makes falls likelier. The pusher is still at fault.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Alcohol is a risk factor, never the cause</span><span class="sticker">Ice makes falls likelier. The pusher is still at fault.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Think of icy sidewalks. Ice makes falls more likely, and people still fall on dry sidewalks. Clearing the ice helps. But if someone pushes you, the person who pushed you is always at fault.</p>
-      <p style="margin:0">About half of campus sexual assaults involve alcohol. Alcohol never makes an assault the survivor's fault, and drinking never counts as consent.</p>
+      <p style="margin:0">A review of college research found that at least half of sexual assaults involve alcohol, used by the person who commits the assault, the victim, or both (Abbey, 2002). Being drunk never makes an assault the survivor's fault, and someone who is incapacitated can't consent.</p>
       <p class="worst">The only person responsible for an assault is the person who commits it.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">🌙 Who do you call at 2 a.m.?</span><span class="sticker">Who do you call at 2 a.m.?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Do you have that person yet? Someone at school, not just at home, who would pick up, walk over, or notice you didn't come back?</p>
-      <p style="margin:0">If the answer is "not yet," that's normal in the first weeks. It's also the thing to work on first.</p>
-      <p class="worst">Everything in this series comes back to this question.</p>
       </div>
     </details>
 
@@ -450,14 +545,14 @@
       <summary><span class="fold-label">Why the first months are riskiest</span><span class="sticker">No network yet means no safety net yet.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>👥 No network yet.</dt>
-        <dd>A student without an established friend group may have no one to notice they didn't come home. Building community early protects you emotionally and physically.</dd>
-        <dt>🎉 Lots of new parties.</dt>
-        <dd>Everything is new: people, places, how to get home. That's what makes it exciting, and what makes it harder to read situations.</dd>
-        <dt>🏈 Big party days are riskier.</dt>
-        <dd>At schools with big football programs, rape reports jump on game days, the biggest party days of the fall. Plan for those days the way you'd plan for any big night out.</dd>
-        <dt>🧭 People who take advantage know this.</dt>
-        <dd>Most assaults are committed by someone the survivor knows: a classmate, a friend of a friend, someone from orientation.</dd>
+        <dt>No one notices yet.</dt>
+        <dd>Without a friend group that knows you, there may be no one who sees you leave with someone or notices you didn't come home.</dd>
+        <dt>Everything is unfamiliar.</dt>
+        <dd>New people, new buildings, no sense yet of which parties are safe or how to get home. That's part of the excitement, and it's what makes situations harder to read.</dd>
+        <dt>People who commit assault use this.</dt>
+        <dd>Isolation, heavy drinking, and newness are conditions someone can take advantage of. That's on them, not on the person they target.</dd>
+        <dt>Who do you call at 2 a.m.?</dt>
+        <dd>Someone at school who would pick up, walk over, or notice you didn't come back. If you don't have that person yet, that's the first thing to build.</dd>
       </dl>
       </div>
     </details>
@@ -468,60 +563,61 @@
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
     <h2 id="h-practice">Stepping in and looking out</h2>
-    <details class="fold ">
-      <summary><span class="fold-label">Step in: the 3 Ds</span><span class="sticker">Direct. Distract. Delegate.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🗣 Direct.</dt>
-        <dd>Say something. "Hey, are you okay?" "She's coming with us." Politeness can wait.</dd>
-        <dt>🔀 Distract.</dt>
-        <dd>Interrupt without confrontation. Spill a drink, ask for directions, "Your Uber's here," pull them into a conversation.</dd>
-        <dt>📣 Delegate.</dt>
-        <dd>Get help: their friends, the host, an RA, campus safety, 911.</dd>
-      </dl>
+    <div class="card">
+      <div class="fold-label">Why nobody steps in</div>
+      <h3 class="sticker">Everyone assumes someone else will.</h3>
+      <p>In a classic experiment, people who believed they were the only one hearing someone have a seizure were much more likely to go for help than people who believed others could hear it too (Darley and Latan&eacute;, 1968). Responsibility spreads thin in a crowd. A party is a crowd.</p>
+      <p style="margin-bottom:6px">The fix is deciding ahead of time that you're the someone. Four ways to do it:</p>
+      <div class="levers">
+        <div class="lever"><b>Direct</b><span>Say something. "Hey, are you okay?" "She's coming with us." Polite can wait.</span></div>
+        <div class="lever"><b>Distract</b><span>Interrupt without a confrontation. "Your Uber's here." Spill a drink. Ask for help finding the bathroom.</span></div>
+        <div class="lever"><b>Delegate</b><span>Get someone with more pull: their friends, the host, an RA, campus safety, 911.</span></div>
+        <div class="lever"><b>Delay</b><span>If you couldn't act in the moment, check in after. "I saw what happened last night. Are you okay?"</span></div>
       </div>
-    </details>
+    </div>
+
+    <div class="rn"><span>Research</span>Training helps people act. In a survey of about 2,500 undergraduates at one university, students who'd had active bystander training through the Green Dot program reported doing more to step in, and held fewer myths that blame victims, than students without training (Coker and colleagues, 2011).</div>
 
     <details class="fold ">
       <summary><span class="fold-label">Looking out for your people</span><span class="sticker">Arrive together. Leave together.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>👯 Arrive together, leave together.</dt>
-        <dd>Agree on it before you go. Check in during the night. Don't leave anyone behind, even if they say they're fine.</dd>
-        <dt>📍 Share locations and a code word.</dt>
-        <dd>A text that means "come get me," no questions asked.</dd>
-        <dt>👂 Trust the feeling.</dt>
-        <dd>If something feels off, it's worth acting on. You don't need proof to check in on someone.</dd>
-        <dt>🤝 Everyone can help.</dt>
-        <dd>Guys especially: stepping in is a strength. People listen to their friends.</dd>
-        <dt>✅ Consent is clear and ongoing.</dt>
-        <dd>Someone who's very drunk, high, or asleep can't consent. See Consent, Clearly.</dd>
+        <dt>Agree on the plan before you go.</dt>
+        <dd>Who you're arriving with, when you'll check in, and that nobody leaves alone or gets left, even if they say they're fine.</dd>
+        <dt>Share locations and a code word.</dt>
+        <dd>A text that means "come get me," no questions asked, then or later.</dd>
+        <dt>Trust the off feeling.</dt>
+        <dd>You don't need proof to check on someone. Being a little awkward is a small price.</dd>
+        <dt>Guys have extra pull.</dt>
+        <dd>When a friend makes a comment about getting someone drunk, another guy saying "Not cool, man" often lands harder than anything else.</dd>
+        <dt>Consent is clear, ongoing, and sober enough.</dt>
+        <dd>Someone who is very drunk, high, or asleep can't consent. See Consent, Clearly.</dd>
       </dl>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">If it happens to you or a friend</span><span class="sticker">It's not your fault. You have options.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">If it happens to you or a friend</span><span class="sticker">It's not your fault. Every choice after is yours.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🏠 Get somewhere safe.</dt>
-        <dd>Call a friend, campus safety, or 911 if you're in danger.</dd>
-        <dt>💛 It's not your fault.</dt>
-        <dd>No matter what you were wearing, drinking, or doing.</dd>
-        <dt>🏥 Medical care matters.</dt>
-        <dd>A hospital can treat injuries, prevent pregnancy and infections, and collect evidence, usually within 5 days. You can get care without deciding to report.</dd>
-        <dt>🗂 You have options.</dt>
-        <dd>Campus advocates, the Title IX office, and RAINN (800-656-4673) can explain reporting and support. You get to decide.</dd>
-        <dt>👂 If a friend tells you.</dt>
-        <dd>Believe them. "I'm so sorry. It's not your fault. What do you need?" Let them make their own choices.</dd>
+        <dt>Get somewhere safe.</dt>
+        <dd>A friend's room, a public place, campus safety, or 911 if you're in danger.</dd>
+        <dt>Medical care is worth it, even if you never report.</dt>
+        <dd>A hospital can treat injuries, help prevent pregnancy and infections, and collect evidence. Evidence collection usually needs to happen within about five days (in Massachusetts, 120 hours, at any hospital). In Massachusetts, you can have the exam without reporting to police. The kit is stored, and you shouldn't get a bill.</dd>
+        <dt>Know which people are confidential.</dt>
+        <dd>At most colleges, counselors, health center staff, and sexual assault advocates are confidential. Many other staff, often including RAs, have to pass what you tell them to the Title IX office, which then reaches out with options. Check your school's policy so you choose who to tell.</dd>
+        <dt>You decide about reporting.</dt>
+        <dd>Campus advocates, the Title IX office, and RAINN (800-656-4673, or chat at rainn.org) can walk you through options. Many colleges have amnesty policies so students who report aren't disciplined for drinking. Reporting now, later, or never are all allowed.</dd>
+        <dt>If a friend tells you.</dt>
+        <dd>Believe them. "I'm so sorry. It's not your fault. What do you need?" Don't push them to report, don't investigate, and don't share it. Help them reach the people they choose.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Two parties. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Two nights. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 20 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 20 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
         <li>Read each story out loud.</li>
         <li>Talk through the questions in small groups or as a class.</li>
@@ -531,56 +627,56 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Lauren and Natalie · 1 of 2</span><span class="sticker">Lauren</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Story 1 of 2</span><span class="sticker">Mateo at the party</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem">It's week five. Lauren goes to a party with two girls from her floor she's just getting close with. In the second hour she gets separated from them. A guy from one of her classes, friendly and someone she recognizes, keeps bringing her drinks and steering the conversation somewhere that feels off. When she says she should find her friends, he says they already left. Her phone has no service. She's not drunk, but the room is loud and disorienting. Nothing has happened. But something feels wrong, and she can't tell if she's overreacting.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Her instinct counts. Lauren can move toward a group, ask someone to help her find her friends, step outside to get service, and call safe-ride or campus safety. Anyone nearby who notices can step in: "Hey, Lauren! Your friends are looking for you." A distraction can change everything.</p></details>
+      <p style="font-size:1.1rem">It's the Saturday of the first home game. Mateo is at an off-campus party with guys from his floor. He notices a first-year he recognizes from orientation, Sienna, who can barely stand. A junior Mateo doesn't know keeps refilling her cup and is steering her toward the stairs. Her friends aren't around. One of Mateo's floormates laughs and says, "He's doing well tonight." Nobody else seems to be paying attention.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do if you were Mateo?</li><li>What makes stepping in hard here?</li><li>Which of the four Ds fits best?</li></ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Any of the Ds works. Direct: "Hey, Sienna, I think your friends are looking for you. Come get some water." Distract: block the stairs with a question for the junior. Delegate: tell the host, find someone who knows her, or call campus safety. He can also answer his floormate: "Not funny. She's wasted." Anyone can be targeted, and the bystander who acts may be the only one who does.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Lauren and Natalie · 2 of 2</span><span class="sticker">Natalie and Ryan</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Story 2 of 2</span><span class="sticker">Priya the next morning</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem">Natalie is at an off-campus party. She notices a guy she's seen in the library, Ryan, who's much drunker than anyone else. Two people she doesn't recognize keep refilling his drink and steering him toward the back of the apartment. He's laughing and going along with it, but his eyes are unfocused and he's leaning on the wall to stay up. Natalie thinks it's not her business. Maybe she's reading it wrong. She looks around to see if anyone else is noticing. Nobody is.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Natalie can use the 3 Ds: go talk to Ryan directly ("Hey, I know you from the library, want some water?"), distract ("Your friend's looking for you out front"), or delegate to the host, someone who knows him, or campus safety. Anyone can be targeted, including guys. If nobody else is noticing, she might be his only chance.</p></details>
+      <p style="font-size:1.1rem">Priya's roommate, Jordan, comes back at 9 a.m. and gets into bed without talking. Later Jordan says, "I think something happened last night. I was really drunk. I don't remember most of it. It's probably my fault for going back to his room." Jordan doesn't want to call it anything and keeps saying, "Please don't make this a big deal."</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What should Priya say first?</li><li>What should she avoid saying?</li><li>How can she help without taking over?</li></ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>First: "I believe you. It's not your fault, no matter how much you drank or where you were." She can let Jordan set the pace and mention options without pushing: medical care within about five days, a confidential counselor or advocate, RAINN. She avoids questions that sound like blame ("Why did you go to his room?"). She doesn't tell anyone else. If Jordan seems in danger or talks about self-harm, she gets help right away.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>Does it change your answer if Ryan is on a sports team or in a fraternity?</li>
-        <li>What if the genders were reversed, or everyone was the same gender?</li>
-        <li>What makes stepping in feel hard? What would make it easier?</li>
+        <li>Does Mateo's choice change if the junior is on a team or in a fraternity he hopes to join?</li>
+        <li>What if the genders were different, or everyone was the same gender?</li>
+        <li>How do your family, culture, or faith talk about sex and assault? How might that affect who a survivor tells?</li>
       </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Acknowledge before you start that some people in the room may have experienced assault. Keep the frame on bystander action, which is the most empowering one, and never on what a victim should have done. Make sure a counselor is available afterward.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Say before you start that some people in the room may have experienced assault, and that anyone can step out. Keep the frame on bystander action and on what the person who commits the assault chose. Never discuss what a victim should have done. Make sure a counselor is available afterward.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Save these numbers before move-in.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Look up your college's version of each one now, and put the numbers in your phone before move-in.</p>
+      <p>Look up your college's version of each one now, and put the numbers in your phone. Nothing you type here is saved.</p>
       <label class="prompt" for="cc-0" style="margin-top:8px;font-size:1rem">Counseling center (location, walk-in hours, after-hours line)</label><textarea id="cc-0" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
-      <label class="prompt" for="cc-1" style="margin-top:8px;font-size:1rem">Health services</label><textarea id="cc-1" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
+      <label class="prompt" for="cc-1" style="margin-top:8px;font-size:1rem">Health services, and the nearest hospital that does sexual assault exams</label><textarea id="cc-1" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-2" style="margin-top:8px;font-size:1rem">Campus safety, and safe-ride or safe-walk</label><textarea id="cc-2" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
-      <label class="prompt" for="cc-3" style="margin-top:8px;font-size:1rem">Title IX coordinator</label><textarea id="cc-3" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
+      <label class="prompt" for="cc-3" style="margin-top:8px;font-size:1rem">Title IX coordinator, and the confidential advocate</label><textarea id="cc-3" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-4" style="margin-top:8px;font-size:1rem">My RA or residence director</label><textarea id="cc-4" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-5" style="margin-top:8px;font-size:1rem">My 2 a.m. person</label><textarea id="cc-5" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🙊 "It's not my business."<span class="row-cue" aria-hidden="true"></span></summary><p>Most people stay quiet because they assume someone else will act.</p></details>
-        <details class="row"><summary>🧊 Blaming the survivor.<span class="row-cue" aria-hidden="true"></span></summary><p>Questions about drinking or clothing hurt people and stop them from getting help.</p></details>
-        <details class="row"><summary>😶 Waiting for proof.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't need to be sure to check in.</p></details>
-        <details class="row"><summary>🚶 Leaving a friend behind.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm fine, go" from someone who's drunk isn't the final word.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It's not my business.</span><span class="row-cue" aria-hidden="true"></span></summary><p>That's the crowd effect talking. If you noticed, it's your business.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Why was she drinking, though?</span><span class="row-cue" aria-hidden="true"></span></summary><p>Questions about drinking, clothes, or whose room it was put the blame on the wrong person and stop survivors from getting help.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I need to be sure first.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Checking in doesn't require proof. If you're wrong, someone got a glass of water.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> "I'm fine, go" settles it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>From someone very drunk, it isn't the final word. Leave together.</p></details>
       </div>
       </div>
     </details>
@@ -589,11 +685,28 @@
       <h3>Get help right away</h3>
       <ul class="tight">
         <li>If you or someone else is in danger, call <strong>911</strong> or campus safety.</li>
-        <li>National Sexual Assault Hotline (RAINN): <strong>800-656-4673</strong>, or chat at rainn.org, 24/7.</li>
+        <li>National Sexual Assault Hotline (RAINN): <strong>800-656-4673</strong>, or chat at rainn.org, 24/7, confidential.</li>
         <li>Call or text <strong>988</strong>, or text HOME to <strong>741741</strong>, if you're struggling.</li>
       </ul>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Cantor, D., Fisher, B., et al. (2019). <i>Report on the AAU Campus Climate Survey on Sexual Assault and Misconduct</i> (2019 survey). Association of American Universities and Westat.</li>
+        <li>Kimble, M., Neacsiu, A., Flack, W., &amp; Horner, J. (2008). Risk of unwanted sex for college women: Evidence for a red zone. <i>Journal of American College Health</i>.</li>
+        <li>Lindo, J. M., Siminski, P., &amp; Swensen, I. D. (2018). College party culture and sexual assault. <i>American Economic Journal: Applied Economics</i>.</li>
+        <li>Fisher, B. S., Cullen, F. T., &amp; Turner, M. G. (2000). <i>The Sexual Victimization of College Women</i>. National Institute of Justice and Bureau of Justice Statistics.</li>
+        <li>Sinozich, S., &amp; Langton, L. (2014). <i>Rape and Sexual Assault Victimization Among College-Age Females, 1995 to 2013</i>. Bureau of Justice Statistics.</li>
+        <li>Abbey, A. (2002). Alcohol-related sexual assault: A common problem among college students. <i>Journal of Studies on Alcohol</i>, Supplement 14.</li>
+        <li>Darley, J. M., &amp; Latan&eacute;, B. (1968). Bystander intervention in emergencies: Diffusion of responsibility. <i>Journal of Personality and Social Psychology</i>.</li>
+        <li>Coker, A. L., et al. (2011). Evaluation of Green Dot: An active bystander intervention to reduce sexual violence on college campuses. <i>Violence Against Women</i>.</li>
+        <li>Massachusetts Executive Office of Public Safety and Security: Information on the Massachusetts Sexual Assault Evidence Collection Kit.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -604,26 +717,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">Who I'll go out with in the first weeks, and our plan</label>
+      <label class="prompt" for="tx-1">Who I'll go out with in the first weeks, and the plan we'll agree on</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Which of the 3 Ds feels most natural for me</label>
+      <label class="prompt" for="tx-2">Which of the four Ds fits me best, and the exact words I'd use</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd say if a friend told me something happened</label>
+      <label class="prompt" for="tx-3">The first thing I'd say if a friend told me something happened, and what I'd avoid saying</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">The campus resources I'll look up before move-in</label>
+      <label class="prompt" for="tx-4">Who on campus is confidential, and who has to report. What I'll look up before move-in.</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I already know about myself that will help me speak up</label>
+      <label class="prompt" for="tx-5">What could stop me from stepping in, and what I'd tell myself in that moment</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Looking out for each other is the strongest protection there is. You can be the person who notices, and the one who acts.</p>
+      <p>The person who commits an assault is the only one responsible for it. Everyone else in the room can still change what happens. Decide now that you'll be the one who acts.</p>
     </div>
     </div>
   </div>
@@ -669,10 +782,10 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-hard" aria-pressed="false">💛 This brought something up</button>
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-speak" aria-pressed="false">🤔 Not sure I'd speak up</button>
-          <button type="button" class="choice" data-path="p-ready" aria-pressed="false">🌤 Feeling more prepared</button>
+          <button type="button" class="choice" data-path="p-hard" aria-pressed="false">This brought something up</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-speak" aria-pressed="false">Not sure I'd speak up</button>
+          <button type="button" class="choice" data-path="p-ready" aria-pressed="false">Feeling more prepared</button>
         </div>
 
         <div class="path-panel" id="p-hard" hidden>
@@ -700,7 +813,7 @@
           <p>Most people feel that way. Practicing makes it easier.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔀</span>Distract is a great start: no confrontation needed.</li>
+            <li><span class="e" aria-hidden="true">🔀</span>Distract and Delay work without any confrontation.</li>
             <li><span class="e" aria-hidden="true">📣</span>Delegating counts. Get someone else.</li>
             <li><span class="e" aria-hidden="true">👯</span>Plan with friends to look out for each other.</li>
           </ul>

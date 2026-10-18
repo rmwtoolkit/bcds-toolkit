@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🍄 High School · Substance use</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>Mushrooms and Psychedelics</h1>
-  <p class="tagline">Because the headlines only tell half the story.</p>
+  <p class="tagline">What psilocybin and LSD do in the brain, what the clinical trials found, and why a gummy from a shop is a different thing.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +458,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,67 +475,77 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What psychedelics do to a growing brain</h2>
+    <h2 id="h-understand">What a psychedelic actually changes</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">The headlines skip a few things.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Miracle cure or brain damage. Neither is the full story.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You've seen headlines about psychedelics treating depression and PTSD.</li>
-        
-        <li >You've seen "shroom" gummies, chocolates, and vapes sold in smoke shops and online.</li>
-        <li>Someone said mushrooms are natural, so they're safe.</li>
-        
-        <li >You've heard about acid (LSD) or mushrooms at parties or concerts.</li>
-        <li>You're curious what they actually do.</li>
+        <li>A podcast host calls psilocybin the future of mental health.</li>
+        <li>A smoke shop or gas station near you sells "mushroom" gummies in bright packaging.</li>
+        <li>Someone says they microdose before exams to stay calm and creative.</li>
+        <li>You know someone who had a trip they still don't like talking about.</li>
       </ul>
-      <p style="margin:0">Psychedelics are in the news a lot right now. Here's what the science says, including the part the headlines skip.</p>
+      <p style="margin:0">You've heard the hype and the scare version. This is what the research shows, including what it hasn't shown yet.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What psychedelics do in your brain</span><span class="sticker">Hours you can't switch off.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 640 285" role="img" aria-label="Brain diagram: psychedelics affect sense of self and time, fear and emotion, and memory." style="width:100%;max-width:720px;height:auto;display:block"><path d="M60 150 C40 80 120 25 210 30 C300 32 365 80 360 145 C357 190 320 205 280 200 L140 205 C95 205 68 185 60 150Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M120 70 C150 90 140 120 170 130 M210 45 C200 80 230 95 220 125 M285 60 C270 90 300 110 290 140 M330 110 C310 120 320 150 300 165 M95 160 C120 150 140 170 170 165" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><ellipse cx="296" cy="222" rx="46" ry="26" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M290 214 C300 210 312 214 322 222 M275 228 C290 222 305 226 318 234" fill="none" stroke="var(--line)" stroke-width="3"/><path d="M222 200 L252 200 L246 272 L230 272Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><text x="40" y="30" font-size="13" fill="var(--ink-soft)">front</text><circle cx="100" cy="115" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="100" y="120" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><circle cx="420" cy="85" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="90" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><text x="442" y="91" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">sense of self, time</text><circle cx="198" cy="178" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="198" y="183" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><circle cx="420" cy="123" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="128" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><text x="442" y="129" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">fear, emotion</text><circle cx="232" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="232" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><circle cx="420" cy="161" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="166" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><text x="442" y="167" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">memory</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Psilocybin and LSD act on serotonin 5-HT2A receptors, changing how brain networks talk to each other. Perception, time, emotion, and your sense of self can shift dramatically for 4 to 12 hours. You can't turn it off once it starts.</span></figcaption>
-      </figure>
-      </div>
-    </details>
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Four areas where the trip happens</h3>
+    <p>Psilocybin (in mushrooms) and LSD work mainly by switching on one type of serotonin receptor, called 2A. Those receptors are packed into the outer layer of the brain, the cortex. When they fire, areas that normally keep each other in check start to lose their grip.</p>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 290" role="img" aria-labelledby="psy-t psy-d" xmlns="http://www.w3.org/2000/svg"><title id="psy-t">Side view of the brain: where psilocybin acts</title><desc id="psy-d">The medial prefrontal cortex sits at the front, on the inner surface. The posterior cingulate cortex sits above the back of the corpus callosum. The thalamus sits deep in the center. The visual cortex is at the back of the brain.</desc><g transform="translate(30 18) scale(0.88)"><path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/><ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/><g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g><path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/><g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round"><path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/><path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/><path d="M232 160 C246 152 262 158 276 150"/></g><path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/><ellipse cx="114" cy="116" rx="26" ry="20" fill="#2E6DB4" fill-opacity=".85"/><ellipse cx="248" cy="97" rx="21" ry="10" transform="rotate(18 248 97)" fill="#7A4FB5" fill-opacity=".9"/><ellipse cx="206" cy="138" rx="18" ry="11" fill="#D9822B"/><path d="M306 98 C320 106 330 122 330 140 C330 152 324 162 314 168 L302 158 C310 146 312 124 300 108 Z" fill="#1F8A70" fill-opacity=".85"/></g><line x1="128.6" y1="116.6" x2="70" y2="34" stroke="#245A96" stroke-width="1.4"/><circle cx="128.6" cy="116.6" r="3" fill="#245A96"/><text x="8" y="30" fill="#245A96" font-size="13" font-weight="700" text-anchor="start">Medial prefrontal cortex</text><line x1="248.2" y1="103.4" x2="320" y2="34" stroke="#5E3B8F" stroke-width="1.4"/><circle cx="248.2" cy="103.4" r="3" fill="#5E3B8F"/><text x="392" y="30" fill="#5E3B8F" font-size="13" font-weight="700" text-anchor="end">Posterior cingulate cortex</text><line x1="211.3" y1="141.2" x2="40" y2="255" stroke="#9A5714" stroke-width="1.4"/><circle cx="211.3" cy="141.2" r="3" fill="#9A5714"/><text x="8" y="266" fill="#9A5714" font-size="13" font-weight="700" text-anchor="start">Thalamus</text><line x1="313.4" y1="141.2" x2="356" y2="255" stroke="#17694F" stroke-width="1.4"/><circle cx="313.4" cy="141.2" r="3" fill="#17694F"/><text x="392" y="266" fill="#17694F" font-size="13" font-weight="700" text-anchor="end">Visual cortex</text><text x="200" y="284" font-size="11" fill="#6B6156" text-anchor="middle">&#8592; face &#183; back of head &#8594;</text></svg>
+      <figcaption>Side view, as if the brain were cut down the middle, with deeper structures drawn see-through. Simplified: these areas work as networks, not single switches.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Medial prefrontal cortex: your inner narrator</strong><p>A hub of the default mode network, the system that keeps a running story of who you are and what might happen next. In a 2012 brain-imaging study, psilocybin lowered activity here, and the bigger the drop, the stronger people rated the trip.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Posterior cingulate: the other hub</strong><p>The same study found psilocybin weakened the connection between this area and the prefrontal cortex. Researchers link that to the feeling of losing your sense of self. Some people find it freeing. Others find it terrifying, and you don't get to pick in advance.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Thalamus: the filter</strong><p>Think of it as a sound engineer deciding which tracks reach your awareness and how loud. Its activity dropped too. With less filtering, sounds, colors, and thoughts arrive faster and less sorted.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1F8A70"></span><div><strong>Visual cortex: where the visuals come from</strong><p>Dense with 2A receptors. When its signals stop being checked against the rest of the brain as tightly, you see patterns, motion, and color that aren't there.</p></div></div>
+    </div>
+    <p class="stat">None of this can be switched off once it starts. Depending on the drug and the dose, it lasts 4 to 12 hours.</p>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">What can go wrong</span><span class="sticker">Bad trips are real.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Promising in clinics. Early, small, and adults only.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>😱 Bad trips.</dt>
-        <dd>Intense fear, panic, or paranoia that can last hours. Some people feel like they're dying or losing their mind.</dd>
-        <dt>🚦 Risky moments.</dt>
-        <dd>Judgment and perception change. People have been hurt wandering into traffic, falling, or doing things they'd never normally do.</dd>
-        <dt>🧠 Psychosis risk.</dt>
-        <dd >For people with a personal or family history of psychosis, schizophrenia, or bipolar disorder, psychedelics can trigger a lasting episode. That's why research studies screen people out.</dd>
-        <dt>🔁 Flashbacks.</dt>
-        <dd>A small number of people keep seeing visual changes long after, a condition called HPPD.</dd>
-        <dt>❓ Mystery products.</dt>
-        <dd >In 2024, a popular brand of "mushroom" chocolates and gummies was recalled after people got seriously ill. Tests found other chemicals that weren't on the label.</dd>
+        <dt>The trials are real.</dt>
+        <dd>In a 2021 trial in the <i>New England Journal of Medicine</i>, 59 adults with long-term depression got either two psilocybin sessions or six weeks of a standard antidepressant, both with therapy. Psilocybin did about as well. On the main measure it wasn't significantly better, though several other measures leaned its way.</dd>
+        <dt>The conditions are strict.</dt>
+        <dd>Research guidelines published in 2008 still shape these studies: screen out anyone with a personal or family history of psychosis, use a measured dose of pure drug, and keep trained monitors in the room the whole time. The authors named overwhelming distress during the session as the most likely risk.</dd>
+        <dt>Teens aren't in the studies.</dt>
+        <dd>The trials enroll adults. Your brain is still wiring its long-distance connections into your mid-20s, and nobody has tested what strong doses do during that window.</dd>
+        <dt>Microdosing mostly matches placebo.</dt>
+        <dd>In a 2021 study, people who already microdosed set up their own blind test with real doses and empty capsules. Over four weeks, both groups improved about the same. Expectation did most of the work.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">Clinic vs. party</span><span class="sticker">Research and parties are different worlds.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What can go wrong</span><span class="sticker">Low addiction risk. Real psychological risk.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <table style="width:100%;border-collapse:collapse;font-size:1rem"><tr><th></th><th style="text-align:left;padding:8px;color:var(--school)">In a research study</th><th style="text-align:left;padding:8px;color:var(--alert)">At a party</th></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">Who</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Adults, screened for mental health risks</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Anyone, no screening</td></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">What</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Pure, measured dose</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Unknown strength, maybe other chemicals</td></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">Where</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Calm room, trained guides for hours</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Crowds, noise, roads, water</td></tr><tr><td style="padding:8px;font-weight:700;vertical-align:top;border-top:1px solid var(--line)">After</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">Therapy to make sense of it</td><td style="padding:8px;vertical-align:top;border-top:1px solid var(--line)">On your own</td></tr></table>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Research on psilocybin for depression and PTSD is promising and still early. Every study uses adults, careful screening, measured doses, and trained guides. Teens are generally excluded because developing brains respond differently.</span></figcaption>
-      </figure>
+      <dl class="helps">
+        <dt>Hard trips.</dt>
+        <dd>Panic, paranoia, or the certainty that you're dying or going insane, for hours, with no exit. This is the most common harm.</dd>
+        <dt>Accidents.</dt>
+        <dd>Perception and judgment change. Roads, water, heights, and crowds are where a bad trip becomes an injury.</dd>
+        <dt>Psychosis.</dt>
+        <dd>For people with a personal or family history of psychosis, schizophrenia, or bipolar disorder, a trip can set off an episode that doesn't end when the drug wears off. That's why trials screen for it.</dd>
+        <dt>Flashbacks that stay.</dt>
+        <dd>A small number of people keep having visual changes for weeks or longer, a condition called hallucinogen persisting perception disorder (HPPD).</dd>
+        <dt>Mixing.</dt>
+        <dd>Alcohol, weed, or other drugs on top make reactions harder to predict and harder to manage.</dd>
+      </dl>
+      <p style="margin:0">Some Indigenous communities have used psychedelic plants and mushrooms in ceremony for centuries, inside traditions with their own guides, rules, and preparation. That's a different thing from a party or a gummy from a shop, and it's worth not lumping them together.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📈 More teens, more poison center calls</span><span class="sticker">Teen poison calls: up more than 300%.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What's in the bag</span><span class="sticker">"Mushroom" gummies are often not mushrooms.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Poison center calls about psilocybin among teens rose by more than 300% from 2019 to 2023, as products got easier to buy (Annals of Internal Medicine, 2025).</p>
-      <p class="worst">The worst part: products sold as "legal" or "microdose" can be strong, mislabeled, or something else entirely.</p>
+      <p>In 2024, Diamond Shruumz chocolates and gummies were recalled nationwide. The FDA linked them to at least 48 illnesses in 24 states, including seizures, 27 hospitalizations, and one possible death. The company's own testing found high levels of muscimol, a compound from a different mushroom.</p>
+      <p>Between 2019 and 2023, poison center calls about psilocybin among 12 to 17 year olds rose 317%, according to a 2025 study in <i>Annals of Internal Medicine</i>.</p>
+      <p class="worst">Being sold in a store doesn't mean it was tested, or that it contains what the label says.</p>
       </div>
     </details>
   </div>
@@ -478,137 +554,115 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Making your own call</h2>
+    <h2 id="h-practice">Thinking it through, and having a plan</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Know what to do in a bad trip.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>💬 Have your line.<span class="row-cue" aria-hidden="true"></span></summary><p>"Not for me." "My brain's busy enough." Short is fine.</p></details>
-        <details class="row"><summary>🫂 If someone's having a bad trip.<span class="row-cue" aria-hidden="true"></span></summary><p>Stay with them, find a quiet place, speak calmly, remind them it will pass. Call 911 if they're in danger, hurting themselves, or having trouble breathing.</p></details>
-        <details class="row"><summary>🚫 Don't mix.<span class="row-cue" aria-hidden="true"></span></summary><p>Mixing psychedelics with alcohol, weed, or other drugs makes reactions harder to predict.</p></details>
-        <details class="row"><summary>🧬 Know your family history.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone in your family has had psychosis, schizophrenia, or bipolar disorder, your risk is higher.</p></details>
-        <details class="row"><summary>🧑‍🏫 Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>If you're curious about mental health treatment, a counselor or doctor can tell you what's real and what's hype.</p></details>
+      <div class="fold-label">Before anyone hands you anything</div>
+      <h3 class="sticker">Four questions with real answers.</h3>
+      <div class="levers">
+        <div class="lever"><b>What is it, actually?</b><span>Dried mushrooms vary a lot in strength. Gummies and "microdose" products may not contain psilocybin at all. You can't see a dose.</span></div>
+        <div class="lever"><b>What's in my family?</b><span>Psychosis, schizophrenia, or bipolar disorder in a parent or sibling raises your risk. If you don't know, that's worth finding out.</span></div>
+        <div class="lever"><b>Where would I be?</b><span>Strangers, traffic, water, and heights are where things go wrong. A trip doesn't end because the party did.</span></div>
+        <div class="lever"><b>What's the law here?</b><span>Psilocybin and LSD are illegal in Massachusetts. In 2024, about 57% of voters rejected a ballot question that would have legalized psilocybin and some other natural psychedelics.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">If someone is having a hard trip</div>
+      <h3 class="sticker">Stay, lower the noise, keep it simple.</h3>
+      <p class="tap-hint">Tap each step.</p>
+        <details class="row"><summary><span class="num">1</span> Stay with them.<span class="row-cue" aria-hidden="true"></span></summary><p>Panic and accidents are much more likely alone. If you have to step away, hand off to someone you trust, by name.</p></details>
+        <details class="row"><summary><span class="num">2</span> Turn the input down.<span class="row-cue" aria-hidden="true"></span></summary><p>A quieter, dimmer spot away from the crowd. Sitting down. Fewer people talking at them.</p></details>
+        <details class="row"><summary><span class="num">3</span> Say the same few things.<span class="row-cue" aria-hidden="true"></span></summary><p>"You took something. It's going to wear off. I'm right here." Calm and repeated beats clever.</p></details>
+        <details class="row"><summary><span class="num">4</span> Know when to get help.<span class="row-cue" aria-hidden="true"></span></summary><p>Get event medical staff or call 911 if they're hurting themselves, can't be calmed, have a seizure, chest pain, or trouble breathing, or took an unknown product and are getting sick. Massachusetts' Good Samaritan law protects people who call for help with a drug overdose from possession charges.</p></details>
+        <details class="row"><summary><span class="num">5</span> Check in the next day.<span class="row-cue" aria-hidden="true"></span></summary><p>Some people feel shaky or low for days after a hard trip. A counselor can help them make sense of it.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Natural means safe? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three situations. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>Mushrooms are natural, so they're safe.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Natural doesn't mean safe. Bad trips, risky behavior, and psychosis can all happen.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Natural doesn't mean safe. Bad trips, risky behavior, and psychosis can all happen.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Psilocybin is being studied as a treatment for depression.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. In adults, with screening, measured doses, and therapists. That's very different from a party.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. In adults, with screening, measured doses, and therapists. That's very different from a party.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>You can stop a trip if it gets too intense.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Once it starts, it lasts for hours.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Once it starts, it lasts for hours.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Mushroom gummies always contain what the label says.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Some have been recalled after testing found other chemicals.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Some have been recalled after testing found other chemicals.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Headline vs. reality.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 10 minutes · no materials needed</p>
-      <ol class="tight" style="padding-left:1.3em">
-        <li>Read a headline out loud.</li>
-        <li>Vote: is this the whole story? Agree, disagree, or not sure.</li>
-        <li>Tap to see what the research actually says. Talk about what the headline left out.</li>
-      </ol>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Headline vs. reality · 1 of 3</span><span class="sticker">"Magic mushrooms cure depression!"</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Early studies in adults are promising, with careful screening, measured doses, and therapists. "Cure" goes way beyond the evidence, and none of it applies to party use.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Headline vs. reality · 2 of 3</span><span class="sticker">"Microdosing makes you smarter and calmer."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Placebo-controlled studies have mostly found microdosing works about as well as a sugar pill.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Headline vs. reality · 3 of 3</span><span class="sticker">"Psychedelics aren't addictive, so they're harmless."</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>They're less likely to cause cravings than many drugs, but bad trips, injuries, and psychosis are real risks.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li>Why do you think headlines about psychedelics get so much attention?</li>
-        <li>How can you tell if a news story is giving you the full picture?</li>
-        <li>What would you want a younger sibling to know about psychedelics?</li>
-      </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>This works well as a media literacy activity. Keep it about headlines and research, not personal experiences.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      <div class="scenario" >
-        <p>At a concert, your friend took acid and now says the walls are closing in and they can't breathe.</p>
+      <p>Pick a move. There may be more than one reasonable one.</p>
+      <div class="scenario">
+        <p>Kai's older cousin offers him a "microdose" capsule for focus the week of AP exams.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="They need someone with them.">Leave them to ride it out</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Calm company helps, and medical staff can check them.">Find a quiet spot, stay calm, get event medical staff</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Tiny is a guess. Nobody tested that capsule, and in a blinded study, microdosing did about as well as empty capsules.">Take it. It's a tiny amount.</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. The things with real evidence for exam week are boring and they work: sleep, practice testing, and spreading out your review.">Pass, and put the energy into sleep and practice tests</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Half of an unknown dose is still an unknown dose.">Take half to be safe</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>A friend says they're microdosing mushrooms for anxiety instead of seeing a therapist.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>At a summer festival, Amara's friend took mushrooms an hour ago and now keeps saying she's dying.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Microdosing hasn't beaten placebo in good studies, and products are unregulated.">Tell them it sounds smart</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Anxiety deserves real help, and counselors can offer it.">Say you care, and suggest they talk to a counselor too</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Calm company and a quieter spot help, and festival medical staff deal with this all the time. Their job is care.">Stay with her, move somewhere quieter, and find the medical tent</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Water is fine, but leaving her with a near-stranger makes panic and wandering off more likely.">Get her water and leave her with someone nearby</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Fear of trouble keeps people from getting help. Medical staff are there for care, and Massachusetts law protects people who seek help for an overdose from possession charges.">Avoid medical staff so nobody gets in trouble</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Diego has felt low for months. He's read that psilocybin treats depression and plans to try mushrooms on his own this weekend.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. The honest version is more convincing than a scare: the research is real, and it happened with screening and therapists he can't recreate alone. His depression deserves help now.">Tell him the research is real but it isn't this, and help him reach a counselor or doctor</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="It isn't fake, and saying so loses his trust. He'll find the studies.">Tell him the research is fake</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Well meant. A friend isn't a screened, trained monitor, and it skips the part he needs most: real support for his depression.">Offer to sit with him while he tries it</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>📰 Trusting headlines.<span class="row-cue" aria-hidden="true"></span></summary><p>Research in clinics doesn't tell you anything about a gummy from a smoke shop.</p></details>
-        <details class="row"><summary>🧪 "Starting small."<span class="row-cue" aria-hidden="true"></span></summary><p>With unknown products, you can't know what a small dose actually is.</p></details>
-        <details class="row"><summary>🍺 Mixing to take the edge off.<span class="row-cue" aria-hidden="true"></span></summary><p>Adding other drugs makes reactions less predictable.</p></details>
-        <details class="row"><summary>🚶 Leaving someone alone mid-trip.<span class="row-cue" aria-hidden="true"></span></summary><p>Panic and accidents are much more likely alone.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It's natural, so it's safe.</span><span class="row-cue" aria-hidden="true"></span></summary><p>"Natural" describes where something comes from, not what it does. Some of the most toxic compounds known come from plants and mushrooms.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It isn't addictive, so it's harmless.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The low addiction risk is real. The harms come from somewhere else: hours of panic, injuries, and psychosis in people who are vulnerable.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A trip sitter makes it safe.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A sober friend lowers some risks. It doesn't fix an unknown dose, an unknown product, or a family history of psychosis.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> The research proves it works.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The research says "promising, in small groups of screened adults, with therapy." That's a reason for more studies, not for trying it at 16.</p></details>
       </div>
       </div>
     </details>
 
+    <details class="fold fold-try">
+      <summary><span class="fold-label">For advisory or class</span><span class="sticker">Headline vs. reality.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">About 15 minutes. Read each headline, vote (whole story, half the story, or wrong), then open the research.</p>
+      <details class="row"><summary>"Magic mushrooms cure depression."<span class="row-cue" aria-hidden="true"></span></summary><p>Half the story. Early trials in adults are promising. "Cure" goes past the evidence, and none of it applies to unscreened use.</p></details>
+      <details class="row"><summary>"Microdosing makes you calmer and more creative."<span class="row-cue" aria-hidden="true"></span></summary><p>Mostly wrong. In a blinded study, real microdoses and empty capsules worked about the same.</p></details>
+      <details class="row"><summary>"Psychedelics aren't addictive, so they're harmless."<span class="row-cue" aria-hidden="true"></span></summary><p>Half the story. Low addiction risk, real psychological risk.</p></details>
+      <ul class="tight" style="margin-top:12px">
+        <li>Why does a "breakthrough" headline spread faster than a careful one?</li>
+        <li>What would you need to know before trusting a study's result applies to you?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Run it as media literacy. Keep it about headlines and research, not anyone's personal experience.</p></details>
+      </div>
+    </details>
+
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>Call 911 right away if someone</h3>
+      <h3>Get help right away if someone</h3>
       <ul class="tight">
         <li>Is trying to hurt themselves or someone else.</li>
         <li>Has a seizure, trouble breathing, or chest pain.</li>
         <li>Is so confused or terrified they could walk into danger.</li>
         <li>Took a product and is getting very sick.</li>
       </ul>
-      <p style="margin:0">Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Call <strong>911</strong> or get event medical staff. Poison Control is <strong>1-800-222-1222</strong>, any time. If someone is in an emotional crisis but not in physical danger, call or text <strong>988</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Nichols, D. (2016). Psychedelics. <i>Pharmacological Reviews</i>.</li>
+        <li>Carhart-Harris, R., et al. (2012). Neural correlates of the psychedelic state as determined by fMRI studies with psilocybin. <i>Proceedings of the National Academy of Sciences</i>.</li>
+        <li>Carhart-Harris, R., et al. (2021). Trial of psilocybin versus escitalopram for depression. <i>New England Journal of Medicine</i>.</li>
+        <li>Johnson, M., Richards, W., &amp; Griffiths, R. (2008). Human hallucinogen research: Guidelines for safety. <i>Journal of Psychopharmacology</i>.</li>
+        <li>Szigeti, B., et al. (2021). Self-blinding citizen science to explore psychedelic microdosing. <i>eLife</i>.</li>
+        <li>Rockhill, K., et al. (2025). The rise of psilocybin use in the United States: A multisource observational study. <i>Annals of Internal Medicine</i>.</li>
+        <li>U.S. Food and Drug Administration (2024). Investigation of illnesses: Diamond Shruumz-brand chocolate bars, cones, and gummies.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -619,26 +673,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">What I'd heard about psychedelics, and what surprised me</label>
+      <label class="prompt" for="tx-1">What I'd heard about psychedelics, and what the research changed for me</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">A headline I've seen, and what it left out</label>
+      <label class="prompt" for="tx-2">A headline or post I've seen, and what it left out</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd do if a friend was having a bad trip</label>
+      <label class="prompt" for="tx-3">My plan if a friend were having a hard trip: where we'd go, who I'd get</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I'd say if someone offered me something</label>
+      <label class="prompt" for="tx-4">What I'd say if someone offered, in words I'd actually use</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Ways I take care of my mood and anxiety</label>
+      <label class="prompt" for="tx-5">What I reach for when I want relief from stress or a low mood, and what I could add</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Being curious about your mind is a good thing. Your developing brain deserves care, real information, and real support.</p>
+      <p>Curiosity about your own mind is a good thing. So is asking for the real evidence, and protecting a brain that is still being built.</p>
     </div>
     </div>
   </div>
@@ -667,7 +721,7 @@
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
           <button type="button" class="chip" aria-pressed="false">saw it online</button>
-          <button type="button" class="chip" aria-pressed="false">saw it in a shop</button>
+          <button type="button" class="chip" aria-pressed="false">saw it sold in a shop</button>
           <button type="button" class="chip" aria-pressed="false">someone offered</button>
           <button type="button" class="chip" aria-pressed="false">friends were using</button>
           <button type="button" class="chip" aria-pressed="false">worried about a friend</button>
@@ -684,25 +738,25 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-mood" aria-pressed="false">🌧 I've been anxious or down</button>
-          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">🤔 Just curious</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about my choices</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-mood" aria-pressed="false">I've been anxious or down</button>
+          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">Just curious</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling good about my choices</button>
         </div>
 
         <div class="path-panel" id="p-friend" hidden>
           <h4>What this might mean</h4>
-          <p>It's hard to watch someone take risks.</p>
+          <p>It's hard to watch someone take risks, especially when they think you're overreacting.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Tell them you care, without lecturing.</li>
-            <li><span class="e" aria-hidden="true">🫂</span>Know what to do if someone has a bad trip.</li>
+            <li><span class="e" aria-hidden="true">💬</span>Talk when they're sober. Ask what they know about what they took, without lecturing.</li>
+            <li><span class="e" aria-hidden="true">🫂</span>Know the hard-trip steps above: stay, lower the noise, keep it simple.</li>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a trusted adult if you're worried.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-mood" hidden>
           <h4>What this might mean</h4>
-          <p>Wanting relief from anxiety or sadness makes total sense. There are safer ways to get it.</p>
+          <p>Wanting relief from anxiety or sadness makes sense. You deserve treatment that has been tested for people your age.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor this week.</li>
@@ -712,17 +766,17 @@
         </div>
         <div class="path-panel" id="p-curious" hidden>
           <h4>What this might mean</h4>
-          <p>Curiosity is normal. Now you know the full story.</p>
+          <p>Curiosity is normal. Now you have more of the actual evidence.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📖</span>Look back at the clinic vs. party screen.</li>
+            <li><span class="e" aria-hidden="true">📖</span>Read one of the studies in Sources and see what it actually tested.</li>
             <li><span class="e" aria-hidden="true">🗣</span>Ask a trusted adult your questions.</li>
             <li><span class="e" aria-hidden="true">🧭</span>Think about what you'd want it to do, and what else could.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing.</p>
+          <p>That's worth noticing. Choices you've thought through hold up better under pressure.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>

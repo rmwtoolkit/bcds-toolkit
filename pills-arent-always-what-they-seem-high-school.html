@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figures */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:center; background:var(--paper); border-radius:14px; padding:14px 16px; margin:12px 0; }
+  .stat-n { font-size:2rem; font-weight:700; letter-spacing:-.03em; line-height:1; color:var(--ink); }
+  .stat-t { font-size:.95rem; line-height:1.45; color:var(--ink); }
+  .stat-t small { display:block; color:var(--ink-soft); font-size:.8rem; margin-top:3px; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:14px 0; }
+  .research b { display:block; font-size:.78rem; letter-spacing:.04em; color:var(--ink-soft); font-weight:600; margin-bottom:2px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">💊 High School · Substance use</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>Pills Aren't Always What They Seem</h1>
-  <p class="tagline">Because a pill can look perfect and still be something else.</p>
+  <p class="tagline">Counterfeit pills, fentanyl, and what to do in the minutes that matter.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,175 +481,201 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Fake pills and fentanyl</h2>
+    <h2 id="h-understand">Fake pills, real fentanyl</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">A familiar pill can still be fake.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">A pill feels safer than a powder. That's the trap.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >You've heard about people getting "Xanax" or "Percs" from a friend, or online.</li>
-        <li>Someone said pills are safer than street drugs because they come from a pharmacy.</li>
-        
-        <li >You've heard about fentanyl, and you're not totally sure what it is or why everyone's talking about it.</li>
-        
-        <li >Someone said fentanyl only shows up in heroin, so pills are fine.</li>
-        
-        <li >You've seen dealers advertise on Snapchat, Instagram, or other apps.</li>
+        <li>Someone mentions "Percs" or "bars," and it sounds more like medicine than drugs.</li>
+        <li>A plug on Snapchat or Telegram posts a menu with prices and delivery.</li>
+        <li>A friend takes Xanax for anxiety before exams, but it isn't prescribed to them.</li>
+        <li>Someone has leftover pills from a surgery and offers to share.</li>
+        <li>You heard about an overdose at another school, and nobody explained what actually happened.</li>
       </ul>
-      <p style="margin:0">Pills feel familiar. Everyone's got a medicine cabinet. That familiarity is exactly what makes fake pills so dangerous.</p>
+      <p style="margin:0">Most of this you may already know: fake pills exist, and fentanyl is in them. This goes further: how an opioid overdose stops breathing, what the death data shows, and exactly what to do if it happens in front of you.</p>
       </div>
     </details>
 
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">📉 Fewer teens are using. More are dying.</span><span class="sticker">Fewer teens using. More teens dying.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <div ><p>Teen drug use has been low and falling for years. Overdose deaths went the other way: from 2020 to 2022, about 22 U.S. teens died of an overdose every week. Researchers traced most of that rise to fentanyl hidden in fake pills made to look like Xanax, Percocet, or oxycodone.</p></div>
-      <p class="worst">The worst part: many of them thought they were taking a regular prescription pill.</p>
-      </div>
-    </details>
+    <div class="stat"><span class="stat-n">22</span><span class="stat-t">U.S. teens aged 14 to 18 died of a drug overdose each week in 2022, even though teen drug use has been falling. Most of those deaths involved fentanyl, often in counterfeit pills.<small>Friedman and Hadland, New England Journal of Medicine, 2024</small></span></div>
 
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real or fake? Take a guess.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <svg viewBox="0 0 320 165" role="img" aria-label="Two blue pills, A and B, that look exactly the same." style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto"><g transform="translate(20 0)"><circle cx="60" cy="70" r="46" fill="#5ab0e6" stroke="#3a8fc4" stroke-width="3"/><line x1="18" y1="70" x2="102" y2="70" stroke="#3a8fc4" stroke-width="3"/><text x="60" y="150" font-size="22" font-weight="800" text-anchor="middle" font-family="inherit" fill="var(--ink)">A</text></g><g transform="translate(180 0)"><circle cx="60" cy="70" r="46" fill="#5ab0e6" stroke="#3a8fc4" stroke-width="3"/><line x1="18" y1="70" x2="102" y2="70" stroke="#3a8fc4" stroke-width="3"/><text x="60" y="150" font-size="22" font-weight="800" text-anchor="middle" font-family="inherit" fill="var(--ink)">B</text></g></svg>
-      <div class="scenario"><p>One of these is a real prescription pill. One was pressed in someone's garage. Which is real?</p><div class="choices" role="group" aria-label="Which pill is real">
-        <button class="choice" type="button" data-fb="nope" data-msg="Nope, or at least, you can't know. Fake pills are made with real-looking presses and stamps.">A</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Nope, or at least, you can't know. Fake pills copy the color, shape, and stamp exactly.">B</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Right. Nobody can tell by looking: not you, not the person selling it, not the friend who got it from a friend. Only a lab can.">You can't tell</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      </div>
-    </details>
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">How an opioid overdose stops breathing</h3>
+    <figure class="fig">
+<svg class="brain" viewBox="40 22 330 250" role="img" aria-label="Side view of the brain. Opioids act on the nucleus accumbens, part of the reward circuit, and on two breathing centers in the brainstem: one in the pons and the preBotzinger complex in the medulla, which sets the rhythm of each breath." xmlns="http://www.w3.org/2000/svg">
+  <title>Side view of the brain</title>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/><path d="M266 216 C286 212 306 214 324 220"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <ellipse cx="216" cy="142" rx="21" ry="12" fill="none" stroke="#C9BDAE" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <ellipse cx="158" cy="146" rx="15" ry="9" fill="#D9822B"/>
+  <path d="M233 196 C228 204 230 222 238 226 L262 226 L262 197 Z" fill="#7A4FB5" fill-opacity=".9"/>
+  <path d="M239 228 L262 228 C262 240 264 250 266 258 L246 258 C243 248 241 238 239 228 Z" fill="#C0392B" fill-opacity=".9"/>
+  
+  <g font-size="13" font-weight="700">
+        <line x1="158" y1="146" x2="100" y2="226" stroke="#9A5714" stroke-width="1.4"/><circle cx="158" cy="146" r="3" fill="#9A5714"/><text x="46" y="238" fill="#9A5714" text-anchor="start">Nucleus accumbens</text>
+    <line x1="246" y1="212" x2="340" y2="250" stroke="#5E3B8F" stroke-width="1.4"/><circle cx="246" cy="212" r="3" fill="#5E3B8F"/><text x="364" y="262" fill="#5E3B8F" text-anchor="end">Pons</text>
+    <line x1="254" y1="246" x2="230" y2="254" stroke="#A3301F" stroke-width="1.4"/><circle cx="254" cy="246" r="3" fill="#A3301F"/><text x="226" y="264" fill="#A3301F" text-anchor="end">Medulla</text>
+  </g>
+  <text x="364" y="36" font-size="11" fill="#6B6156" text-anchor="end">← face · back of head →</text>
+</svg>
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. Simplified: opioid receptors are found in many areas; these are the ones behind the high and the overdose.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Nucleus accumbens: the rush</strong><p>Opioids, including fentanyl, oxycodone, and heroin, activate mu-opioid receptors in the reward circuit. The rush and the calm are why they hook people quickly, and tolerance builds fast.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Medulla: the breathing rhythm</strong><p>A small cluster of neurons here, the preBötzinger complex, sets the rhythm of every breath without you thinking about it. Opioids slow it. Enough of them and the rhythm stalls.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Pons: the breathing pace-setter</strong><p>Another brainstem area that helps shape each breath. In a 2020 study in mice, researchers found that opioid receptors in these two small brainstem sites account for the slowed breathing that kills in an overdose.</p></div></div>
+    </div>
+    <p style="margin-top:16px">As breathing slows, oxygen drops. After a few minutes without enough oxygen, the brain starts to be damaged, and then the heart stops. Naloxone (Narcan) binds the same receptors more tightly than opioids do, knocks them off, and restarts breathing, usually within minutes.</p>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">How common fake pills are, and how little it takes</span><span class="sticker">Half the fakes could kill.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The data</span><span class="sticker">Most teens who died weren't alone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 560 250" role="img" aria-label="Five out of ten pills marked as containing a potentially deadly dose. Beside them, two milligrams shown as a few grains next to a penny." style="width:100%;max-width:600px;height:auto;display:block"><ellipse cx="40" cy="50" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="98" cy="50" rx="24" ry="14" fill="var(--line)"/><ellipse cx="156" cy="50" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="214" cy="50" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="272" cy="50" rx="24" ry="14" fill="var(--line)"/><ellipse cx="40" cy="100" rx="24" ry="14" fill="var(--line)"/><ellipse cx="98" cy="100" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="156" cy="100" rx="24" ry="14" fill="var(--line)"/><ellipse cx="214" cy="100" rx="24" ry="14" fill="var(--line)"/><ellipse cx="272" cy="100" rx="24" ry="14" fill="var(--alert)"/><text x="10" y="172" font-size="44" font-weight="800" fill="var(--alert)">5 in 10</text><text x="12" y="198" font-size="14" font-family="inherit" fill="var(--ink)"><tspan x="12">fake pills tested by the DEA in 2024</tspan><tspan x="12" dy="18">had a potentially deadly dose</tspan></text><circle cx="410" cy="80" r="48" fill="#c98a55" stroke="#a86b3a" stroke-width="3"/><text x="410" y="86" font-size="14" text-anchor="middle" fill="#5a3415">penny</text><circle cx="406" cy="152" r="1.8" fill="var(--ink)"/><circle cx="410" cy="150" r="1.8" fill="var(--ink)"/><circle cx="413" cy="153" r="1.8" fill="var(--ink)"/><circle cx="409" cy="155" r="1.8" fill="var(--ink)"/><circle cx="404" cy="156" r="1.8" fill="var(--ink)"/><line x1="420" y1="152" x2="450" y2="152" stroke="var(--ink-soft)"/><text x="345" y="190" font-size="14" font-family="inherit" fill="var(--ink)"><tspan x="345" font-weight="700">2 milligrams of fentanyl:</tspan><tspan x="345" dy="18">about the size of a few</tspan><tspan x="345" dy="18">grains of salt</tspan></text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Fentanyl is a synthetic opioid, about 50 times stronger than heroin (DEA). It's cheap to make, so it gets pressed into fake pills. It's invisible, odorless, and tasteless, and it isn't spread evenly, so two pills from the same batch can be totally different.</span></figcaption>
-      </figure>
+      <div class="research"><b>TANZ AND COLLEAGUES, CDC, 2022</b><p>In a review of U.S. overdose deaths among 10 to 19 year olds from mid-2019 to 2021, 84% involved illicit fentanyl, and about 1 in 4 had evidence of counterfeit pills. Two out of three had a potential bystander nearby. Most of the time, there was no record of anyone responding.</p></div>
+      <div class="research"><b>DEA LAB TESTING, 2024</b><p>Half of the fake pills the DEA tested contained a potentially deadly dose of fentanyl, which is 2 milligrams, a speck small enough to fit on the tip of a pencil. That is down from 7 in 10 in 2023. It is still a coin flip.</p></div>
+      <p style="margin:0">Fentanyl isn't spread evenly when pills are pressed, so two pills from the same batch can be completely different. The person selling them can't tell either.</p>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">What opioids do in your brain</span><span class="sticker">Opioids tell your body to stop breathing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+
+    <details class="fold ">
+      <summary><span class="fold-label">What else is in the supply</span><span class="sticker">Fentanyl isn't the only thing showing up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 640 285" role="img" aria-label="Brain diagram: opioids slow breathing in the brainstem, flood the reward system, and cloud judgment." style="width:100%;max-width:720px;height:auto;display:block"><path d="M60 150 C40 80 120 25 210 30 C300 32 365 80 360 145 C357 190 320 205 280 200 L140 205 C95 205 68 185 60 150Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M120 70 C150 90 140 120 170 130 M210 45 C200 80 230 95 220 125 M285 60 C270 90 300 110 290 140 M330 110 C310 120 320 150 300 165 M95 160 C120 150 140 170 170 165" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><ellipse cx="296" cy="222" rx="46" ry="26" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M290 214 C300 210 312 214 322 222 M275 228 C290 222 305 226 318 234" fill="none" stroke="var(--line)" stroke-width="3"/><path d="M222 200 L252 200 L246 272 L230 272Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><text x="40" y="30" font-size="13" fill="var(--ink-soft)">front</text><circle cx="238" cy="238" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="238" y="243" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><circle cx="420" cy="85" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="90" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><text x="442" y="91" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">slows breathing</text><circle cx="170" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="170" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><circle cx="420" cy="123" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="128" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><text x="442" y="129" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">floods reward</text><circle cx="100" cy="115" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="100" y="120" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><circle cx="420" cy="161" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="166" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><text x="442" y="167" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">clouds judgment</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Opioids (fentanyl, oxycodone, Percocet, heroin) attach to receptors that control pain, reward, and breathing. In the brainstem, they tell your body to breathe slower. Enough of them, and breathing stops. That's an overdose. The reward rush is also why opioids hook people so fast.</span></figcaption>
-      </figure>
+      <dl class="helps">
+        <dt>Xylazine</dt>
+        <dd>An animal sedative, not an opioid, often mixed with fentanyl. Naloxone doesn't reverse xylazine itself, but it still reverses the fentanyl mixed with it. Always give naloxone in a suspected overdose.</dd>
+        <dt>Nitazenes</dt>
+        <dd>A newer group of synthetic opioids, some stronger than fentanyl, found pressed into fake oxycodone, Xanax, and Adderall. Naloxone works on them, but it may take more than one dose.</dd>
+        <dt>Fake Adderall and Xanax</dt>
+        <dd>Counterfeit pills aren't only painkillers. Fake study drugs and anxiety pills have contained fentanyl and meth.</dd>
+      </dl>
       </div>
     </details>
+
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Test strips</span><span class="sticker">A negative result isn't a green light.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Fentanyl test strips can show whether fentanyl is in a sample. They can't tell you how much, they don't detect xylazine, and because fentanyl clumps, testing one part of a pill doesn't clear the rest.</p>
+      <p class="worst">The only pills you can trust come from a pharmacy with your name on the label.</p>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Looking out for each other</h2>
+    <h2 id="h-practice">The minutes that matter</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Pharmacy, your name, or nothing.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🏥 Pharmacy, your name, or nothing.<span class="row-cue" aria-hidden="true"></span></summary><p>The only pills you can trust come from a pharmacy with your name on the label. A friend's, a cousin's, or one ordered online could be anything.</p></details>
-        <details class="row"><summary>👀 Know an opioid overdose.<span class="row-cue" aria-hidden="true"></span></summary><p>Won't wake up or respond. Slow, shallow, or no breathing. Gurgling or snoring sounds. Blue or gray lips and fingertips. Tiny pupils.</p></details>
-        <details class="row"><summary>📞 Call 911 first.<span class="row-cue" aria-hidden="true"></span></summary><p >Then give naloxone if you have it, lay them on their side, and stay. Many states have Good Samaritan laws to protect people who call for help during an overdose.</p></details>
-        <details class="row"><summary>👃 Naloxone (Narcan) reverses opioid overdoses.<span class="row-cue" aria-hidden="true"></span></summary><p >It's a nasal spray, sold over the counter, no prescription, no age limit. It can't hurt someone who isn't on opioids. Spray in one nostril, and if there's no response in 2 to 3 minutes, give a second dose. Many schools and families keep it on hand.</p></details>
-        <details class="row"><summary>📚 Stress has better fixes.<span class="row-cue" aria-hidden="true"></span></summary><p>When school or life feels like too much, a pill can sound like a shortcut. A counselor, sleep, and Study Drugs and Your Brain have better ones.</p></details>
-        <details class="row"><summary>🧑‍🏫 Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Worried about a friend, or yourself? Counselors and the school nurse help with this all the time.</p></details>
+      <h3 class="sticker">Recognize. Call. Narcan. Breathe. Stay.</h3>
+      <p>Learn this sequence once and it stays with you. It works for a friend, a stranger, or a family member.</p>
+      <p class="tap-hint">Tap each step.</p>
+        <details class="row"><summary><span class="num">1</span> Recognize it.<span class="row-cue" aria-hidden="true"></span></summary><p>Won't respond when you shout their name or rub their breastbone hard. Slow, shallow, or no breathing. Gurgling or snoring sounds. Blue or gray lips and fingertips. Tiny pupils.</p></details>
+        <details class="row"><summary><span class="num">2</span> Call 911.<span class="row-cue" aria-hidden="true"></span></summary><p>Say "someone isn't breathing" and give the address. In Massachusetts, the Good Samaritan law means neither you nor the person overdosing can be charged with drug possession because you called for help. It covers possession, not every possible charge, but it was written so people would call.</p></details>
+        <details class="row"><summary><span class="num">3</span> Give naloxone.<span class="row-cue" aria-hidden="true"></span></summary><p>One spray in one nostril. No response in 2 to 3 minutes: second dose in the other nostril. Narcan nasal spray has been sold over the counter since 2023, no prescription needed. It can't hurt someone who isn't on opioids, so when in doubt, give it.</p></details>
+        <details class="row"><summary><span class="num">4</span> Help them breathe.<span class="row-cue" aria-hidden="true"></span></summary><p>Roll them onto their side so they don't choke. If the 911 dispatcher walks you through rescue breaths, follow along.</p></details>
+        <details class="row"><summary><span class="num">5</span> Stay.<span class="row-cue" aria-hidden="true"></span></summary><p>Naloxone wears off in 30 to 90 minutes, and some opioids last longer, so the overdose can come back. Expect them to wake up sick, shaky, or upset. That's withdrawal, not ingratitude. Keep them with you until EMS arrives.</p></details>
+        <details class="row"><summary><span class="num">6</span> Prevent the next one.<span class="row-cue" aria-hidden="true"></span></summary><p>Pharmacy, your name, or nothing. Know where naloxone is kept at school and at home, and consider carrying it. If you ever take a pill that didn't come from a pharmacy, don't take it alone.</p></details>
     </div>
 
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Half a pill is safer? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">Real or fake? Take a guess.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>If a friend gave it to you, it's safe.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Your friend can't see fentanyl either. Most fake pills get passed along by people who believe they're real.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Your friend can't see fentanyl either. Most fake pills get passed along by people who believe they're real.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>A fake pill can look exactly like a real one.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. Counterfeiters use real-looking presses, colors, and stamps.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. Counterfeiters use real-looking presses, colors, and stamps.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Narcan can hurt someone if they're not overdosing on opioids.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Naloxone only works on opioids and doesn't harm someone who hasn't taken any. When in doubt, use it.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Naloxone only works on opioids and doesn't harm someone who hasn't taken any. When in doubt, use it.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>You could smell or taste fentanyl if it was in a pill.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Fentanyl has no smell or taste, and a deadly amount is too small to see.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Fentanyl has no smell or taste, and a deadly amount is too small to see.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Taking half a pill makes it safe.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Fentanyl isn't mixed evenly. Half a pill can still hold a deadly amount.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Fentanyl isn't mixed evenly. Half a pill can still hold a deadly amount.">Fact</button>
+      <svg viewBox="0 0 320 160" role="img" aria-label="Two round blue pills, A and B, each stamped with an M in a box. They look identical." style="width:100%;max-width:340px;height:auto;display:block;margin:0 auto"><defs><radialGradient id="pg" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#9FD3F2"/><stop offset="1" stop-color="#4FA3DA"/></radialGradient></defs><g transform="translate(20 0)"><circle cx="60" cy="64" r="48" fill="url(#pg)" stroke="#2E7FB8" stroke-width="2"/><rect x="42" y="46" width="36" height="34" rx="3" fill="none" stroke="#2E7FB8" stroke-width="2.5"/><text x="60" y="71" font-size="24" font-weight="700" text-anchor="middle" fill="#2E7FB8">M</text><text x="60" y="146" font-size="20" font-weight="700" text-anchor="middle" fill="#1D1D1F">A</text></g><g transform="translate(180 0)"><circle cx="60" cy="64" r="48" fill="url(#pg)" stroke="#2E7FB8" stroke-width="2"/><rect x="42" y="46" width="36" height="34" rx="3" fill="none" stroke="#2E7FB8" stroke-width="2.5"/><text x="60" y="71" font-size="24" font-weight="700" text-anchor="middle" fill="#2E7FB8">M</text><text x="60" y="146" font-size="20" font-weight="700" text-anchor="middle" fill="#1D1D1F">B</text></g></svg>
+      <div class="scenario"><p>One of these is a real 30 mg oxycodone tablet. One was made in a pill press. Which is real?</p><div class="choices" role="group" aria-label="Which pill is real">
+        <button class="choice" type="button" data-fb="nope" data-msg="You can&#39;t know. Fake pills are made with presses and stamps that copy the color, shape, and imprint exactly.">A</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="You can&#39;t know. Fake pills are made with presses and stamps that copy the color, shape, and imprint exactly.">B</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Right. Nobody can tell by looking: not you, not the seller, not the friend who got it from a friend. Only a lab can.">You can&#39;t tell</button>
       </div><div class="feedback" aria-live="polite"></div></div>
       </div>
     </details>
 
+
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Spot the fake. Then write the text.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
+      <p>Pick a move. There may be more than one good one.</p>
+      <div class="scenario">
+        <p>Sofia buys "bars" from a Snapchat plug to sleep before big tests. "He only sells pressed-from-pharma," she says.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="&quot;Pressed&quot; means made in someone&#x27;s pill press, not a pharmacy. There&#x27;s no such thing as a verified street pill.">If the plug says so, it's probably fine</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Tell her plainly why you&#x27;re worried: half of the fake pills the DEA tests have a deadly dose. Then help her find real help for the sleep and the anxiety, like a doctor or counselor.">Tell her why you're scared for her, and help her find real help for sleep</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It&#x27;s a start, but she&#x27;s still taking a pill nobody can verify. The safest move is not to take it.">Tell her to take half</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>At a party, Devin is slumped on the bathroom floor, snoring loudly. His lips look gray. Someone says, "He's fine, he just took a Perc and he's sleeping."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Loud snoring or gurgling with gray lips is a sign of an opioid overdose, not sleep.">Let him sleep it off</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Shout his name and rub his breastbone hard. No response: call 911, give naloxone, and keep him breathing on his side.">Try to wake him. If he doesn't respond, call 911 and give naloxone</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Cold water doesn&#x27;t reverse an opioid and wastes minutes he doesn&#x27;t have.">Put him in a cold shower</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>You gave Devin naloxone. He wakes up, throws up, and is angry and shaky. He wants to leave before the ambulance gets there.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Naloxone can wear off in 30 to 90 minutes, and some opioids last longer. He could stop breathing again.">Let him go. He's awake now</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Feeling sick and agitated is normal: naloxone throws him into sudden withdrawal. Keep him calm, keep him with you, and let EMS check him. Have a second dose ready.">Stay with him, explain why, and wait for EMS</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">The best answer is the one you'll actually do.</p>
+      </div>
+    </details>
+
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">In a group</span><span class="sticker">Run the drill. Then write the text.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 15 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
-        <li>Go back to the 'Which one is real?' screen. Everyone votes: A, B, or can't tell.</li>
-        <li>Reveal the answer, and give people a second to sit with it.</li>
-        <li><span >In pairs, read this text from a friend: "my cousin can get us percs for saturday, u in?" Write back what you'd actually send.</span></li>
-        <li>A few pairs share. The group picks the replies that sound most like a real friend, and least like a parent.</li>
+        <li>In pairs, one person says the five steps out loud, from memory, while the other checks: Recognize, Call, Narcan, Breathe, Stay. Switch.</li>
+        <li>Read this text from a friend: "my cousin can get us percs for saturday, u in?" Each pair writes the reply they'd actually send.</li>
+        <li>A few pairs share. The group picks the replies that sound most like a real friend and least like a parent.</li>
       </ol>
       </div>
     </details>
 
+
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>What makes it hard to say something to a friend about this?</li>
-        <li>Why do you think so many people trust a pill more than other drugs?</li>
-        <li>Who's an adult at school you could go to if you were worried about a friend?</li>
-        <li><span >Should every student know how to use Narcan? Why or why not?</span></li>
+        <li>In the CDC data, most teens who died had someone nearby. Why might people not respond?</li>
+        <li>What would make it easier for students to carry or find naloxone?</li>
+        <li>How do families and communities you know talk about drugs and overdose? What gets left unsaid?</li>
+        <li>Who is an adult at school you'd go to if you were worried about a friend?</li>
       </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep the replies about helping a friend, never about anyone's own experiences.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep it about helping a friend, never about anyone's own use. Some students may have lost someone to an overdose; let people pass, and know where the counselor is.</p></details>
       </div>
     </details>
 
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      
-      <div class="scenario" >
-        <p>A friend says their plug "tests everything," so the Percs are safe.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Nobody can test every part of every pill, and fentanyl clumps. Pharmacy, your name, or nothing.">Trust it, they said it's tested</button>
-          <button class="choice" type="button" data-fb="good" data-msg="You might be the only person who tells them the truth about fake pills.">"I'm good," and tell them why you'd skip it too</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>At a party, someone is slumped on the bathroom floor. Their lips look blue and they're making a snoring sound.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Snoring sounds and blue lips can mean an overdose. Every minute matters.">Let them sleep, they're just really out of it</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. You could save their life. Stay with them until help arrives.">Call 911, use Narcan if anyone has it, roll them on their side</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That won't help their breathing. Call 911 now.">Splash water on them and wait</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
-      </div>
-    </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🤝 "I trust my source."<span class="row-cue" aria-hidden="true"></span></summary><p>The source can't see fentanyl either. Trust doesn't show up on a lab test.</p></details>
-        <details class="row"><summary>✂️ Taking half to be safe.<span class="row-cue" aria-hidden="true"></span></summary><p>Fentanyl clumps. Half a pill can hold all of it.</p></details>
-        <details class="row"><summary>⏳ Waiting to see if they wake up.<span class="row-cue" aria-hidden="true"></span></summary><p>An opioid overdose can stop breathing within minutes. Call right away.</p></details>
-        <details class="row"><summary>💬 Keeping it secret when a friend is buying.<span class="row-cue" aria-hidden="true"></span></summary><p>Telling an adult can feel like snitching. With fentanyl, it can be the thing that keeps a friend alive.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I trust my source.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The source can't see fentanyl either. Trust doesn't show up on a lab test.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Half a pill is safer.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Fentanyl clumps. Half a pill can hold all of it.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Narcan could hurt them if it's not opioids.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It can't. If it isn't an opioid overdose, naloxone does nothing. If it is, it can save their life.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> They woke up, so the danger's over.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Naloxone can wear off before the opioid does. Stay until EMS takes over.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Calling 911 means my friend gets arrested.</span><span class="row-cue" aria-hidden="true"></span></summary><p>In Massachusetts, the Good Samaritan law protects both of you from drug-possession charges when you call for help.</p></details>
       </div>
       </div>
     </details>
+
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Call 911 right away if someone</h3>
@@ -589,36 +687,52 @@
       </ul>
       <p style="margin:0">Give naloxone (Narcan) if you have it, and stay with them. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Friedman, J., &amp; Hadland, S. E. (2024). The overdose crisis among U.S. adolescents. <i>New England Journal of Medicine</i>, 390, 97 to 100.</li>
+        <li>Tanz, L. J., et al. (2022). Drug overdose deaths among persons aged 10 to 19 years: United States, July 2019 to December 2021. <i>MMWR</i>, 71, 1576 to 1582.</li>
+        <li>Bachmutsky, I., Wei, X. P., Kish, E., &amp; Yackle, K. (2020). Opioids depress breathing through two small brainstem sites. <i>eLife</i>, 9, e52694.</li>
+        <li>U.S. Drug Enforcement Administration. (2024). Fake pill laboratory testing results; One Pill Can Kill.</li>
+        <li>U.S. Food and Drug Administration. (2023). FDA approves first over-the-counter naloxone nasal spray.</li>
+        <li>Centers for Disease Control and Prevention. Xylazine: What clinicians need to know.</li>
+        <li>Massachusetts General Laws, chapter 94C, section 34A (Good Samaritan immunity for drug overdose).</li>
+      </ul>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="reflect" aria-labelledby="h-reflect">
   <div class="wrap">
     <div class="eyebrow">Part 3 · Reflect</div>
-    <h2 id="h-reflect">Take a moment to write</h2>
+    <h2 id="h-reflect">Think it through</h2>
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
       <label class="prompt" for="tx-1">What I knew about fake pills before, and what surprised me</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">What I'd text a friend who said they were getting pills</label>
+      <label class="prompt" for="tx-2">The five steps, in my own words, and where the nearest naloxone is</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">Which adult I'd go to if I were worried about a friend</label>
+      <label class="prompt" for="tx-3">What I'd text a friend who said they were getting pills</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I do when school stress gets really high</label>
+      <label class="prompt" for="tx-4">Which adult I'd go to if I were worried about someone</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">An adult I'd go to if I was worried about someone</label>
+      <label class="prompt" for="tx-5">What I do when stress or sleep gets bad, instead of reaching for a pill</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Knowing this stuff makes you the person who can help in a moment nobody else knows how to handle. That's a real kind of strength.</p>
+      <p>Knowing this makes you the person who can act in a moment most people freeze. That's a real kind of strength, and it's worth teaching to someone else.</p>
     </div>
     </div>
   </div>
@@ -627,14 +741,14 @@
 <section class="part" id="checkin" aria-labelledby="h-checkin">
   <div class="wrap">
     <div class="eyebrow">Part 4 · Check in</div>
-    <h2 id="h-checkin">Check-in tool</h2>
+    <h2 id="h-checkin">Check in with yourself</h2>
 <div class="unit unit-checkin">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span><strong>Your privacy:</strong> Nothing you enter here is saved, stored, or sent anywhere. This tool works entirely in your browser.</span></p>
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
         <h3 id="ci-1">How much has this been on your mind today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -650,10 +764,9 @@
           <button type="button" class="chip" aria-pressed="false">someone offered</button>
           <button type="button" class="chip" aria-pressed="false">worried about a friend</button>
           <button type="button" class="chip" aria-pressed="false">school stress</button>
+          <button type="button" class="chip" aria-pressed="false">can't sleep</button>
           <button type="button" class="chip" aria-pressed="false">scared after learning this</button>
-          <button type="button" class="chip" aria-pressed="false">curious</button>
-          
-          <button type="button" class="chip" aria-pressed="false" >lost someone, or know someone who did</button>
+          <button type="button" class="chip" aria-pressed="false">lost someone, or know someone who did</button>
           <button type="button" class="chip" aria-pressed="false">said no</button>
           <button type="button" class="chip" aria-pressed="false">talked to someone</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
@@ -662,14 +775,14 @@
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-stress" aria-pressed="false">📚 Stress is high</button>
-          <button type="button" class="choice" data-path="p-scared" aria-pressed="false">😨 This scared me</button>
-          <button type="button" class="choice" data-path="p-grief" aria-pressed="false">💔 Someone I know was hurt</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about what I know</button>
+        <h3>Which is closest to where you are?</h3>
+        <p class="ci-hint">Pick one.</p>
+        <div class="paths" role="group" aria-label="Where you are right now">
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-stress" aria-pressed="false">Stress is high</button>
+          <button type="button" class="choice" data-path="p-scared" aria-pressed="false">This scared me</button>
+          <button type="button" class="choice" data-path="p-grief" aria-pressed="false">Someone I know was hurt</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling ready</button>
         </div>
 
         <div class="path-panel" id="p-friend" hidden>
@@ -677,19 +790,19 @@
           <p>Caring about someone who might be taking pills is scary. You don't have to handle it alone.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Tell them you care, and why you're worried.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a trusted adult. That's looking out for them.</li>
-            <li><span class="e" aria-hidden="true">👃</span>Learn how Narcan works. It's a simple nasal spray.</li>
+            <li>Tell them you care, and why you're worried.</li>
+            <li>Tell a trusted adult. That's looking out for them, not snitching.</li>
+            <li>Learn the five steps and where naloxone is.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-stress" hidden>
           <h4>What this might mean</h4>
-          <p>When school feels like too much, a shortcut can sound tempting. There are better ones.</p>
+          <p>When school feels like too much, a pill can sound like a shortcut. There are better ones that don't carry this risk.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">😴</span>Protect sleep. It's the best study tool there is.</li>
-            <li><span class="e" aria-hidden="true">📖</span>Study Smarter, Not Longer has quick wins.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor or teacher about the load.</li>
+            <li>Protect sleep. It's the best study tool there is.</li>
+            <li>Study Smarter, Not Longer has quick wins.</li>
+            <li>Talk to a counselor or teacher about the load.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-scared" hidden>
@@ -697,29 +810,29 @@
           <p>That makes sense. This is heavy information. Knowing it makes you safer, and makes you someone who can help.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🌬</span>Slow breath: in for 4, out for 6.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk about it with an adult you trust.</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Remember the one rule: pharmacy, your name, or nothing.</li>
+            <li>Slow breath: in for 4, out for 6.</li>
+            <li>Talk about it with an adult you trust.</li>
+            <li>Remember the one rule: pharmacy, your name, or nothing.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-grief" hidden>
           <h4>What this might mean</h4>
-          <p>Losing someone, or almost losing them, is a lot to carry. You deserve support with it.</p>
+          <p>Losing someone, or almost losing them, is a lot to carry. Grief after an overdose can come with anger, guilt, or silence, and all of that is normal. You deserve support.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor. They can help with grief and shock.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Let people who care about you know you're struggling.</li>
-            <li><span class="e" aria-hidden="true">📞</span>988 is there any time, for any kind of crisis.</li>
+            <li>Talk to a counselor. They can help with grief and shock.</li>
+            <li>Let people who care about you know you're struggling.</li>
+            <li>988 is there any time, for any kind of crisis.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. You know more than most adults about this now.</p>
+          <p>That's worth noticing. You know more about this than most adults.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Share one thing you learned with a friend.</li>
-            <li><span class="e" aria-hidden="true">💪</span>Know your line if someone offers.</li>
-            <li><span class="e" aria-hidden="true">👃</span>Learn the overdose signs on this page.</li>
+            <li>Teach the five steps to one friend.</li>
+            <li>Know your line if someone offers.</li>
+            <li>Find out where naloxone is kept at school.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -744,10 +857,10 @@
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
-        <p class="ci-hint">The smallest version counts.</p>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One thing you'll do in the next day or two?</label>
+        <p class="ci-hint">Small and specific counts: "Ask the nurse where the Narcan is."</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be kind to yourself. This is a lot to take in. You don't have to have all the answers to look out for the people you care about.</p>
+        <p class="closing">Be kind to yourself. This is a lot to take in. You don't need all the answers to look out for the people you care about.</p>
       </div>
     </div>
     </div>

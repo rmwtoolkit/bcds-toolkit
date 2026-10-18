@@ -362,6 +362,70 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure: HPA axis */
+  .fig svg.hpa { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +445,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🏠 High School · Home and family</div>
+  <div class="eyebrow">High School · Home and family</div>
   <h1>When Home Feels Tense</h1>
-  <p class="tagline">Because home is supposed to feel safe, and sometimes it doesn't.</p>
+  <p class="tagline">What tension at home does to your stress system, what research says helps, and how to tell what&#39;s yours to carry.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -411,52 +475,97 @@
     <div class="eyebrow">Part 1 · Understand it</div>
     <h2 id="h-understand">When home feels unsettled</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Hard stretches at home affect everything.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Headphones in before you open the door.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>The adults at home argue a lot, and you can hear it from your room.</li>
-        <li>Your parents are separating or divorced, and everything is changing.</li>
-        <li>You split time between two homes and keep forgetting things at the other house.</li>
-        <li>Someone at home is sick, stressed about money, or going through something hard.</li>
-        <li>There's a new stepparent, partner, or sibling, and it's an adjustment.</li>
-        
-        <li >You've started taking care of younger siblings or a parent more than feels fair.</li>
+        <li>You check the mood of the house before you walk in.</li>
+        <li>You've become the one who translates, smooths things over, or keeps the peace.</li>
+        <li>Your parents split, and now your life has two addresses and two sets of rules.</li>
+        <li>Money is tight, and you worry about it more than anyone knows, or you work partly to help.</li>
+        <li>You're driving siblings, cooking, or caring for someone who's sick.</li>
+        <li>You're counting the months until college or moving out, and feel guilty about it.</li>
       </ul>
-      <p style="margin:0">Every family goes through hard stretches. When home feels tense, it affects everything: sleep, focus, friendships, and mood.</p>
+      <p style="margin:0">Every family hits hard stretches, and families handle them in different ways. This goes into what stress at home does to your body, what the research says about conflict and divorce, and how to sort what's yours to carry from what isn't.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What tense can look like</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">⛈</span><strong>Conflict</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Fighting, yelling, or the silent treatment between adults, or between you and someone at home.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🏠🏠</span><strong>Change</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Divorce, two homes, moving, new family members. Even good changes take getting used to.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎒</span><strong>Stress</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Money worries, illness, a family member struggling. Everyone is on edge, even if no one talks about it.</p></details>
+    <h3 style="margin-top:28px">Why stress at home follows you to school</h3>
+    <figure class="fig">
+<svg class="hpa" viewBox="0 0 400 300" role="img" aria-labelledby="hp-t hp-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="hp-t">The stress response system, called the HPA axis</title>
+  <desc id="hp-d">Side view of the brain. The amygdala signals the hypothalamus, which signals the pituitary gland just below it. The pituitary sends a hormone through the blood to the adrenal glands on top of the kidneys, which release cortisol. Cortisol travels back to the hippocampus and prefrontal cortex, which help turn the response off.</desc>
+  <defs><marker id="hp-a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#7A4FB5"/></marker><marker id="hp-a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8E6E53"/></marker></defs>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <path d="M214 180 C228 174 244 168 258 156" fill="none" stroke="#1A8F6E" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="200" cy="182" rx="9" ry="6.5" fill="#C0392B"/>
+  <ellipse cx="206" cy="160" rx="10" ry="7" fill="#D9822B"/>
+  <path d="M204 167 L202 192" stroke="#7A4FB5" stroke-width="3"/>
+  <ellipse cx="201" cy="198" rx="7" ry="5.5" fill="#7A4FB5"/>
+  <!-- kidney + adrenal (not to scale) -->
+  <g transform="translate(4,-16)"><path d="M338 246 C324 246 318 262 322 276 C326 290 346 292 356 282 C362 276 352 268 356 260 C360 252 350 246 338 246 Z" fill="#E7D6CF" stroke="#8A7F72" stroke-width="1.5"/>
+  <path d="M328 246 L340 228 L354 248 Z" fill="#8E6E53"/></g>
+  <!-- signal arrows -->
+  <path d="M204 206 C222 262 286 268 326 236" fill="none" stroke="#7A4FB5" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#hp-a1)"/>
+  <path d="M352 210 C356 184 318 166 266 160" fill="none" stroke="#8E6E53" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#hp-a2)"/>
+  <g font-family="inherit" font-size="13" font-weight="700">
+    <line x1="92" y1="112" x2="56" y2="36" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="92" cy="112" r="3" fill="#2E6DB4"/>
+    <text x="8" y="28" fill="#245A96">Prefrontal cortex</text>
+    <line x1="208" y1="156" x2="300" y2="22" stroke="#B8691C" stroke-width="1.5"/><circle cx="208" cy="158" r="3" fill="#fff"/>
+    <text x="392" y="16" fill="#9A5714" text-anchor="end">Hypothalamus</text>
+    <line x1="248" y1="164" x2="318" y2="46" stroke="#1A8F6E" stroke-width="1.5"/><circle cx="248" cy="164" r="3" fill="#fff"/>
+    <text x="392" y="40" fill="#146B53" text-anchor="end">Hippocampus</text>
+    <line x1="196" y1="184" x2="104" y2="240" stroke="#C0392B" stroke-width="1.5"/>
+    <text x="8" y="256" fill="#A3301F">Amygdala</text>
+    <line x1="200" y1="203" x2="178" y2="268" stroke="#7A4FB5" stroke-width="1.5"/>
+    <text x="178" y="284" fill="#5E3B8F" text-anchor="middle">Pituitary</text>
+    <text x="392" y="294" fill="#6B5240" text-anchor="end">Adrenal gland</text>
+    <text x="250" y="272" fill="#5E3B8F" font-size="11" font-weight="600">ACTH</text>
+    <text x="350" y="172" fill="#6B5240" font-size="11" font-weight="600">cortisol</text>
+  </g>
+</svg>
+      <figcaption>This chain is called the HPA axis: hypothalamus, pituitary, adrenal. Brain in side view, face on the left. Kidney and adrenal gland drawn below, not to scale. Simplified.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: spots the threat</strong><p>Raised voices, a slammed door, a silence that feels loaded. It reacts in a fraction of a second, before you've decided anything.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Hypothalamus: sounds the alarm</strong><p>It signals the pituitary gland, which hangs just below it, to start the hormone side of the stress response.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Pituitary: sends the message</strong><p>It releases a hormone called ACTH into your blood. The target is your adrenal glands.</p></div></div>
+      <div class="region"><span class="dot" style="background:#8E6E53"></span><div><strong>Adrenal glands: release cortisol</strong><p>They sit on top of your kidneys. Cortisol raises energy and alertness, which helps in a short crisis. Switched on for weeks, it wears you down: sleep, focus, and mood all take a hit.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1A8F6E"></span><div><strong>Hippocampus and prefrontal cortex: turn it down</strong><p>Cortisol feeds back to these areas, which help shut the response off. They also handle memory and focus. That's one reason a bad night at home can turn into a bad test the next day.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">It's not your fault. Ever.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">What actually matters when home is tense.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Home is supposed to be the safe base.</dt>
-        <dd>When home feels unsettled, it can feel like there's nowhere to fully relax.</dd>
-        <dt>It follows you to school.</dt>
-        <dd>Stress at home can make it hard to focus, sleep, or enjoy things. That's a normal reaction, not a weakness.</dd>
-        <dt>Kids often blame themselves.</dt>
-        <dd>It's common to wonder if you caused it or could fix it. Adult problems are adult responsibilities. It's not your fault.</dd>
-        <dt>It can be hard to talk about.</dt>
-        <dd>You might feel embarrassed, or worry about being disloyal to your family. Talking to someone safe isn't betrayal.</dd>
+        <dt>Arguing isn't automatically harmful. How it ends matters.</dt>
+        <dd>Researchers E. Mark Cummings and Patrick Davies study what they call emotional security. When kids saw adults disagree and work it out, they felt more secure. Yelling, threats, and fights that never resolve had the opposite effect.</dd>
+        <dt>What you tell yourself about it matters too.</dt>
+        <dd>John Grych and Frank Fincham found that the impact of parents' conflict depends partly on how kids read it, especially whether they feel threatened and whether they blame themselves. Self-blame makes it heavier. Adult conflict is an adult responsibility.</dd>
+        <dt>Divorce is hard. Most kids end up okay.</dt>
+        <dd>Paul Amato's reviews of dozens of studies found that kids of divorced parents scored a bit lower on average than kids of married parents, but the differences were small, with lots of overlap. The details (conflict, money, stability) matter more than the label.</dd>
+        <dt>Parents buffer stress less as you get older. That's normal.</dt>
+        <dd>In a 2015 lab study, help from a parent before a stressful speech wiped out the cortisol response in 9- and 10-year-olds. For 15- and 16-year-olds it had no measurable effect. Teens need a wider circle: friends, relatives, coaches, mentors, counselors.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">💛 You are not responsible for fixing it</span><span class="sticker">You can care without carrying it all.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Helping at home</span><span class="sticker">Carrying some is normal. Carrying all of it isn't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>You can care about the people in your family without carrying their problems. Your job right now is to be a kid, go to school, and take care of yourself.</p>
-      <p class="worst">The worst part: sometimes you have to act fine at school when things at home are anything but fine.</p>
+      <p>In many families, teens help a lot: watching siblings, translating at appointments, working, caring for a grandparent. A daily diary study of 752 teens from Latin American, Asian, and European backgrounds found that on days they helped their families, they felt happier, mostly because helping felt meaningful. Overall, it didn't add stress.</p>
+      <p class="worst">The line comes when it costs your sleep, school, or friendships, or when you're handed adult problems: being a parent's therapist, keeping their secrets, making money decisions. Where is that line in your family?</p>
       </div>
     </details>
   </div>
@@ -465,62 +574,81 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Finding steady ground</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">You can't fix home. You can find steady ground.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🛋 Find your calm spot.<span class="row-cue" aria-hidden="true"></span></summary><p>A room, headphones, a walk, a friend's house. Somewhere you can take a breather when things get loud.</p></details>
-        <details class="row"><summary>📓 Get it out.<span class="row-cue" aria-hidden="true"></span></summary><p>Write, draw, play music. Feelings that stay bottled up tend to get bigger.</p></details>
-        <details class="row"><summary>🧑‍🏫 Tell one adult.<span class="row-cue" aria-hidden="true"></span></summary><p>A counselor, teacher, coach, relative, or friend's parent. You don't have to share everything to get support.</p></details>
-        <details class="row"><summary>🚫 Stay out of the middle.<span class="row-cue" aria-hidden="true"></span></summary><p>If adults ask you to carry messages or pick sides, it's okay to say, "I don't want to be in the middle of this."</p></details>
-        <details class="row"><summary>🗂 Make two homes work.<span class="row-cue" aria-hidden="true"></span></summary><p>Keep a checklist for packing, a shared calendar, and duplicates of the basics if you can. Less to forget, less stress.</p></details>
-        <details class="row"><summary>🌱 Keep your routines.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, school, activities, and friends give you something steady when home isn't.</p></details>
+      <h3 class="sticker">You can't fix home. You can steady yourself.</h3>
+      <div class="levers">
+        <div class="lever"><b>Sort what's yours</b><span>Yours: your schoolwork, your sleep, how you respond. Not yours: their relationship, the bills, an adult's drinking or temper.</span></div>
+        <div class="lever"><b>Build a circle</b><span>Two or three people outside the conflict: a friend, a relative, a coach, a counselor, a friend's parent, someone from your faith community.</span></div>
+        <div class="lever"><b>Have an exit</b><span>A room, headphones, a walk, a friend's house you can go to. Somewhere your stress system can stand down.</span></div>
+        <div class="lever"><b>Keep your routines</b><span>Practice, work, rehearsal, a regular bedtime. Steady things outside home help when home isn't steady.</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Step out of the middle.<span class="row-cue" aria-hidden="true"></span></summary><p>"I love you both, and I'm not going to carry messages." Say it calmly, and repeat it as often as you need to. You're allowed to love people who are fighting each other.</p></details>
+        <details class="row"><summary><span class="num">2</span> Make two homes run.<span class="row-cue" aria-hidden="true"></span></summary><p>One shared calendar, a packing checklist on your phone, and doubles of the basics if possible: charger, toiletries, the gym bag.</p></details>
+        <details class="row"><summary><span class="num">3</span> Pick the calm moment to talk.<span class="row-cue" aria-hidden="true"></span></summary><p>Not mid-fight. Later, one adult, one thing: "When you two argue at night, I can't sleep before school." Talking to Your Parents has more.</p></details>
+        <details class="row"><summary><span class="num">4</span> Plan for after high school, without guilt.<span class="row-cue" aria-hidden="true"></span></summary><p>Wanting your own space someday isn't betrayal. Many people stay close to family and still build their own life. A counselor can help you think it through.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">What can you count on when home feels shaky?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">What can you count on when home is shaky?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>When home feels tense, it helps to know what you can count on. Fill this in. Nothing is saved.</p>
-      <label class="prompt" for="tx-1">A place I can go to calm down:</label>
+      <p>Fill this in now, on a calm day, so it's ready on a hard one. Nothing is saved.</p>
+      <label class="prompt" for="tx-1">Where I can go to cool down, at home or away from it:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">Something that helps me feel better (music, a show, a walk, drawing):</label>
+      <label class="prompt" for="tx-2">What reliably settles me (music, a run, a show, drawing, prayer, cooking):</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">An adult I could talk to:</label>
+      <label class="prompt" for="tx-3">An adult outside the conflict I could talk to:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-4">A friend who gets it:</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-5">Something I can say if I'm put in the middle:</label>
+      <label class="prompt" for="tx-5">What I'll say if I get pulled into the middle:</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false" placeholder="I love you both, and I don't want to be part of this."></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two tough nights. What would help you?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three hard situations. What would help?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the most helpful move.</p>
-      
-      <div class="scenario" >
-        <p>One parent keeps asking you questions about the other parent's new partner.</p>
+      <div class="scenario">
+        <p>Since the divorce, your dad keeps asking whether your mom is seeing someone.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="That puts you in the middle, and it often makes things worse for everyone.">Tell them everything so they're not upset</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Kind and clear. You're allowed to protect your relationship with both of them.">"I'd rather not be the messenger. Can you ask them directly?"</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="You might need some space, but cutting off contact can make things harder. A counselor can help you think it through.">Stop talking to that parent</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A calm, repeatable line keeps you out of the middle without picking a side.">"I don't want to be the go-between. You'd have to ask her."</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Works for a night. If it keeps happening, saying it out loud once is easier than dodging forever.">Change the subject every time</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That pulls you deeper into their conflict and can cost you trust with both of them.">Look through her phone to find out</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your parents argue most nights. Lately you stay late at practice or a friend's to avoid going home.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Having places to go is healthy. Telling one adult means you aren't holding it alone, and they can help if things get worse.">Keep the safe places, and tell one adult what's going on</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It's protecting you, which matters. On its own, it leaves you carrying all of it with nobody who knows.">Keep avoiding home. It's working.</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="If a fight ever turns physical, don't step between them. Get to a safe place and call for help: 911 if someone is in danger, or SafeLink at 877-785-2020.">Step in between them next time</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Since her mom got sick, Ana does most of the cooking and her brother's pickups. Her grades are sliding.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A counselor can quietly get teachers to adjust deadlines, and asking who else could take one pickup a week is a fair question in any family.">Tell her counselor so teachers can adjust, and ask family who could help</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Sometimes something has to give. Dropping everything that's hers, though, removes the things keeping her steady.">Quit her activities to keep up</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Helping her family matters to her. Keeping the cost hidden means nobody can help with it.">Keep it to herself so nobody worries</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make the stress heavier.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually make it heavier.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🦸 Trying to fix it all yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>It's too much for one person, especially a kid.</p></details>
-        <details class="row"><summary>🙊 Pretending everything is fine.<span class="row-cue" aria-hidden="true"></span></summary><p>Holding it in usually makes stress come out sideways: irritability, trouble sleeping, or headaches.</p></details>
-        <details class="row"><summary>⚖️ Picking sides.<span class="row-cue" aria-hidden="true"></span></summary><p>You get to love the people in your family even when they disagree.</p></details>
-        <details class="row"><summary>📱 Venting about it publicly online.<span class="row-cue" aria-hidden="true"></span></summary><p>Posting about family stuff can make things worse at home and stick around longer than the feeling.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I try harder, I can fix it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Adult problems need adult solutions. Trying to fix them yourself is a fast way to burn out.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I act fine, it won't affect me.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Stress that's held in tends to show up sideways: short temper, bad sleep, headaches, trouble focusing.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I have to pick a side.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You can love people who disagree with each other. Safety is the exception: if someone is being hurt, getting help isn't taking sides.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Posting about it will make me feel better.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It can make things worse at home and stays online longer than the feeling. Tell a person instead.</p></details>
       </div>
       </div>
     </details>
@@ -533,9 +661,24 @@
         <li>You don't have enough food, or no one is taking care of you.</li>
         <li>You're thinking about hurting yourself.</li>
       </ul>
-      <p>School adults are there to help keep you safe, and this is not your fault. The <strong>Childhelp National Child Abuse Hotline</strong> is free and open 24/7: call or text <strong>1-800-422-4453</strong>.</p>
+      <p>None of this is your fault. You can call or text <strong>Childhelp</strong> at <strong>1-800-422-4453</strong> (24/7). In Massachusetts, the <strong>DCF Child-at-Risk Hotline</strong> is <strong>1-800-792-5200</strong>, and <strong>SafeLink</strong> (<strong>877-785-2020</strong>, 24/7, many languages) helps when there's violence between adults. Call or text <strong>988</strong> if you're thinking about hurting yourself.</p>
+      <p>School counselors and teachers are required by law to report suspected abuse or neglect. You can ask them how that works before you share.</p>
       <p style="margin:0">If you're in danger right now, call <strong>911</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>McCoy, K., Cummings, E. M., &amp; Davies, P. (2009). Constructive and destructive marital conflict, emotional security and children's prosocial behavior. <i>Journal of Child Psychology and Psychiatry</i>.</li>
+        <li>Grych, J., &amp; Fincham, F. (1990). Marital conflict and children's adjustment: A cognitive-contextual framework. <i>Psychological Bulletin</i>.</li>
+        <li>Amato, P., &amp; Keith, B. (1991). Parental divorce and the well-being of children: A meta-analysis. <i>Psychological Bulletin</i>.</li>
+        <li>Amato, P. (2001). Children of divorce in the 1990s: An update of the Amato and Keith (1991) meta-analysis. <i>Journal of Family Psychology</i>.</li>
+        <li>Hostinar, C., Johnson, A., &amp; Gunnar, M. (2015). Parent support is less effective in buffering cortisol stress reactivity for adolescents compared to children. <i>Developmental Science</i>.</li>
+        <li>Telzer, E., &amp; Fuligni, A. (2009). Daily family assistance and the psychological well-being of adolescents from Latin American, Asian, and European backgrounds. <i>Developmental Psychology</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -549,23 +692,23 @@
       <label class="prompt" for="tx-6">What feels hardest about home right now</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">What I wish the adults at home knew about how this feels</label>
+      <label class="prompt" for="tx-7">What I wish the adults at home understood about how this lands on me</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-8">Things that help me feel steady</label>
+      <label class="prompt" for="tx-8">What I'm carrying that might not be mine to carry</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-9">People I can lean on</label>
+      <label class="prompt" for="tx-9">The people in my circle, and one I could add</label>
       <textarea id="tx-9" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-10">Something that is mine and stays the same, no matter what</label>
+      <label class="prompt" for="tx-10">Something that's mine and stays steady, no matter what happens at home</label>
       <textarea id="tx-10" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your family's problems are not your fault, and you don't have to solve them. You deserve support while things are hard.</p>
+      <p>Your family's problems aren't your fault, and solving them isn't your job. You can love the people at home and still take care of yourself. Both are allowed.</p>
     </div>
     </div>
   </div>
@@ -580,7 +723,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">How does home feel today?</h3>
+        <h3 id="ci-1">How much is home on your mind today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -593,16 +736,16 @@
         <h3>What's been most present today?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">adults were fighting</button>
-          <button type="button" class="chip" aria-pressed="false">I got in a fight with someone</button>
-          <button type="button" class="chip" aria-pressed="false">two-homes stuff</button>
-          <button type="button" class="chip" aria-pressed="false">forgot things at the other house</button>
-          <button type="button" class="chip" aria-pressed="false">felt stuck in the middle</button>
-          <button type="button" class="chip" aria-pressed="false">worried about someone at home</button>
+          <button type="button" class="chip" aria-pressed="false">yelling or tension</button>
+          <button type="button" class="chip" aria-pressed="false">silent treatment</button>
+          <button type="button" class="chip" aria-pressed="false">stuck in the middle</button>
+          <button type="button" class="chip" aria-pressed="false">switching houses</button>
+          <button type="button" class="chip" aria-pressed="false">money stress</button>
+          <button type="button" class="chip" aria-pressed="false">someone sick</button>
+          <button type="button" class="chip" aria-pressed="false">taking care of siblings</button>
           <button type="button" class="chip" aria-pressed="false">couldn't sleep</button>
-          <button type="button" class="chip" aria-pressed="false">hard to focus at school</button>
-          <button type="button" class="chip" aria-pressed="false">found a calm spot</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">stayed out to avoid home</button>
+          <button type="button" class="chip" aria-pressed="false">calmer today</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
       </div>
@@ -611,61 +754,62 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-conflict" aria-pressed="false">⛈ Fighting at home</button>
-          <button type="button" class="choice" data-path="p-middle" aria-pressed="false">⚖️ Stuck in the middle</button>
-          <button type="button" class="choice" data-path="p-change" aria-pressed="false">🏠🏠 Hard changes</button>
-          <button type="button" class="choice" data-path="p-unsafe" aria-pressed="false">🚨 I don't feel safe</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Calmer at home today</button>
+          <button type="button" class="choice" data-path="p-conflict" aria-pressed="false">Fighting at home</button>
+          <button type="button" class="choice" data-path="p-middle" aria-pressed="false">Stuck in the middle</button>
+          <button type="button" class="choice" data-path="p-change" aria-pressed="false">Hard changes</button>
+          <button type="button" class="choice" data-path="p-unsafe" aria-pressed="false">I don't feel safe</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Calmer at home today</button>
         </div>
 
         <div class="path-panel" id="p-conflict" hidden>
           <h4>What this might mean</h4>
-          <p>Hearing people you love fight is stressful. Your feelings make sense.</p>
+          <p>Living around conflict keeps your stress system switched on. Being worn out or on edge makes sense.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🎧</span>Go to your calm spot or put on music.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor what's been going on.</li>
+            <li>Use your exit: headphones, a walk, a friend's place.</li>
+            <li>Tell one person in your circle what's happening.</li>
+            <li>Protect your sleep tonight however you can.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-middle" hidden>
           <h4>What this might mean</h4>
-          <p>Being caught between adults isn't fair to you.</p>
+          <p>Being pulled between people you love is exhausting. It isn't your job to carry their messages.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Use your line from the steady list.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Ask a counselor to help you plan what to say.</li>
-            <li><span class="e" aria-hidden="true">🛑</span>You can say no to carrying messages.</li>
+            <li>Use your line: "I love you both, and I'm not going to be the messenger."</li>
+            <li>You don't owe either of them a report on the other.</li>
+            <li>A counselor can help you plan what to say.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-change" hidden>
           <h4>What this might mean</h4>
-          <p>Big family changes take time to adjust to, even when everyone is trying.</p>
+          <p>Even changes that might be good in the long run hit hard while they're happening.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗂</span>Make a packing checklist for switching homes.</li>
-            <li><span class="e" aria-hidden="true">📓</span>Write about what you miss and what's new.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell a parent one thing that would make it easier.</li>
+            <li>Keep one routine the same this week.</li>
+            <li>Write down what you need from each adult, then pick one to tell.</li>
+            <li>Give it time. Adjusting takes longer than people expect.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unsafe" hidden>
           <h4>What this might mean</h4>
-          <p>You deserve to be safe. This is not your fault, and you don't have to handle it alone.</p>
+          <p>Feeling unsafe at home is serious, and you deserve help right away. This is not your fault.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult at school today.</li>
-            <li><span class="e" aria-hidden="true">📞</span>Childhelp: call or text 1-800-422-4453, any time.</li>
-            <li><span class="e" aria-hidden="true">🚓</span>If you're in danger right now, call 911.</li>
+            <li>If you're in danger right now, get somewhere safe and call 911.</li>
+            <li>Tell a school counselor or trusted adult today.</li>
+            <li>Call or text Childhelp at 1-800-422-4453, any time. In Massachusetts, DCF: 1-800-792-5200.</li>
+            <li>If adults at home are violent with each other, SafeLink can help: 877-785-2020.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>Calm days count. Notice what was different.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">🌱</span>Keep your routines going.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Do something kind for yourself.</li>
+            <li>What helped today? Write it down.</li>
+            <li>Use the calm to restock: sleep, friends, things you like.</li>
+            <li>Thank someone who's been steady for you.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -693,7 +837,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as gentle with yourself as you would be with a friend going through a hard time at home. You deserve the same care.</p>
+        <p class="closing">Be as gentle with yourself as you'd be with a friend going through a hard time at home. You deserve the same care.</p>
       </div>
     </div>
     </div>

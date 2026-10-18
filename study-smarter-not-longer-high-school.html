@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">📚 High School · Getting things done</div>
+  <div class="eyebrow">High School · Getting things done</div>
   <h1>Study Smarter, Not Longer</h1>
-  <p class="tagline">Because the way most people study isn't the way brains learn best.</p>
+  <p class="tagline">What memory research says about studying, why the methods that work feel worse, and how to plan for the test that counts.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +458,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,53 +475,71 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">How learning really works</h2>
+    <h2 id="h-understand">Why studying that feels good often isn't</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Studied for hours. Still blanked.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You felt ready. The test disagreed.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You reread your notes three times, felt ready, and then blanked on the test.</li>
-        <li>You highlighted almost the entire page.</li>
-        
-        <li >You crammed all night and remembered almost nothing by finals.</li>
-        <li>Studying with friends turned into talking with friends.</li>
-        <li>You feel like you study more than other people and get less out of it.</li>
+        <li>You reread the chapter twice, everything looked familiar, and you still couldn't write the free response.</li>
+        <li>You learned the unit for the unit test, and by the cumulative final it was gone.</li>
+        <li>You did 20 problems of the same type perfectly, then froze when the test mixed them up.</li>
+        <li>Your study group spent two hours "going over it." Nobody quizzed anyone.</li>
       </ul>
-      <p style="margin:0">Most students were never taught how to study. The good news: the methods that work best are known, and they often take less time.</p>
+      <p style="margin:0">If you've heard "quiz yourself and spread it out," that's right. Here's the next layer: why your brain tells you the wrong methods are working, and how to plan for tests that cover months of material.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What the research says works</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧠</span><strong>Pulling it out</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Testing yourself, without looking, is one of the strongest ways to remember something. It's called retrieval practice.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📆</span><strong>Spreading it out</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Short sessions over several days beat one long session. It's called spaced practice.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔀</span><strong>Mixing it up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Practicing different types of problems together, instead of all of one kind, helps you learn when to use what.</p></details>
-    </div>
+    <h3 style="margin-top:28px">The experiment that changed how researchers think about studying</h3>
+    <p>In 2006, Henry Roediger and Jeffrey Karpicke had college students learn short nonfiction passages. Some reread the passage. Others read it once, then wrote down everything they could remember, with no feedback. Then everyone took a final test after five minutes, two days, or a week.</p>
+    <figure class="fig">
+<svg viewBox="0 0 400 270" role="img" aria-labelledby="rk-t rk-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="rk-t">Testing versus rereading: how much students remembered over time</title>
+  <desc id="rk-d">After 5 minutes, students who reread remembered 81 percent and students who tested themselves remembered 75 percent. After 2 days, rereaders remembered 54 percent and testers 68 percent. After 1 week, rereaders remembered 42 percent and testers 56 percent.</desc>
+  <g font-size="12" fill="#6E6E73"><line x1="56" y1="171.7" x2="384" y2="171.7" stroke="#E5E5EA"/><text x="48" y="175.7" text-anchor="end">40%</text><line x1="56" y1="115.0" x2="384" y2="115.0" stroke="#E5E5EA"/><text x="48" y="119.0" text-anchor="end">60%</text><line x1="56" y1="58.3" x2="384" y2="58.3" stroke="#E5E5EA"/><text x="48" y="62.3" text-anchor="end">80%</text>
+    <text x="92" y="226" text-anchor="middle">5 minutes</text>
+    <text x="220" y="226" text-anchor="middle">2 days</text>
+    <text x="348" y="226" text-anchor="middle">1 week</text>
+    <text x="220" y="246" text-anchor="middle">time until the final test</text>
+  </g>
+  <polyline points="92,55.5 220,132.0 348,166.0" fill="none" stroke="#8E8E93" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="92,72.5 220,92.3 348,126.3" fill="none" stroke="#0071E3" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="92" cy="55.5" r="5" fill="#8E8E93"/><circle cx="220" cy="132.0" r="5" fill="#8E8E93"/><circle cx="348" cy="166.0" r="5" fill="#8E8E93"/><circle cx="92" cy="72.5" r="5" fill="#0071E3"/><circle cx="220" cy="92.3" r="5" fill="#0071E3"/><circle cx="348" cy="126.3" r="5" fill="#0071E3"/>
+  <g font-size="12.5" font-weight="700"><text x="92" y="94.5" text-anchor="middle" fill="#0060C0" stroke="#fff" stroke-width="4" paint-order="stroke">75%</text><text x="220" y="81.3" text-anchor="middle" fill="#0060C0" stroke="#fff" stroke-width="4" paint-order="stroke">68%</text><text x="348" y="115.3" text-anchor="middle" fill="#0060C0" stroke="#fff" stroke-width="4" paint-order="stroke">56%</text><text x="220" y="153.0" text-anchor="middle" fill="#6E6E73" stroke="#fff" stroke-width="4" paint-order="stroke">54%</text><text x="348" y="187.0" text-anchor="middle" fill="#6E6E73" stroke="#fff" stroke-width="4" paint-order="stroke">42%</text><text x="92" y="44.5" text-anchor="middle" fill="#6E6E73" stroke="#fff" stroke-width="4" paint-order="stroke">81%</text></g>
+  <g font-size="13" font-weight="700">
+    <rect x="60" y="254" width="12" height="12" rx="3" fill="#0071E3"/><text x="78" y="264" fill="#1D1D1F">Tested themselves</text>
+  </g>
+  <g font-size="13" font-weight="700">
+    <rect x="230" y="254" width="12" height="12" rx="3" fill="#8E8E93"/><text x="248" y="264" fill="#1D1D1F">Reread</text>
+  </g>
+</svg>
+      <figcaption>Percent of the passage recalled on the final test (Roediger &amp; Karpicke, 2006, Experiment 1). Rereading wins for about five minutes. After that, testing wins by 14 points, at two days and at one week.</figcaption>
+    </figure>
+    <p>In a second experiment, students who had only reread predicted they would remember the most. They remembered the least a week later. That's the trap: rereading makes material feel familiar, and familiar feels like knowing.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why the usual way doesn't work</span><span class="sticker">Familiar isn't the same as remembered.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Most students use the methods that work least.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Rereading feels like learning.</dt>
-        <dd>When you reread, things look familiar, so your brain says "I know this." But recognizing something isn't the same as being able to recall it on a test.</dd>
-        <dt>Highlighting is mostly coloring.</dt>
-        <dd>Research on highlighting finds it does little on its own. Deciding what's important helps a bit. Testing yourself on it helps a lot more.</dd>
-        <dt>Cramming fades fast.</dt>
-        <dd>Cramming can get you through tomorrow's quiz, but most of it is gone in a few days. That's why finals feel like learning it all over again.</dd>
-        <dt>Hard is good.</dt>
-        <dd>Testing yourself feels harder than rereading. That struggle is the feeling of your brain building stronger memories.</dd>
+        <dt>The ratings are in.</dt>
+        <dd>In 2013, psychologist John Dunlosky and colleagues reviewed hundreds of studies on ten common study techniques. Only two earned a "high utility" rating: practice testing and spreading study out over time. Rereading, highlighting, and summarizing were rated low.</dd>
+        <dt>And yet.</dt>
+        <dd>In a 2009 survey of college students, about 84% said they reread notes or textbooks to study. About 11% said they practiced recalling information, and only 1% called it their main method.</dd>
+        <dt>Why the good methods feel bad.</dt>
+        <dd>Psychologist Robert Bjork calls these "desirable difficulties." Pulling information out of memory, waiting a few days, and mixing problem types all feel slower and clumsier in the moment. That effort is what builds a memory you can use later.</dd>
+        <dt>Sleep is part of the method.</dt>
+        <dd>During sleep, the brain replays and strengthens what you learned that day. A review by Susanne Diekelmann and Jan Born describes sleep as an active part of memory consolidation. Cutting sleep to study more trades away part of what you studied.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Studying with your phone nearby</span><span class="sticker">Forty focused minutes beat two distracted hours.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Mixing it up</span><span class="sticker">Practice that feels worse, results that are better.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Texts and notifications break up study time into tiny pieces. Even quick checks pull your attention away, and it takes a while to get it back.</p>
-      <p class="worst">The worst part: two distracted hours can teach you less than 40 focused minutes, and they feel twice as exhausting.</p>
+      <p>In a 2007 study by Doug Rohrer and Kelli Taylor, college students practiced math problems either in blocks (all of one type, then the next) or mixed. During practice, the block group did better: 89% correct versus 60%. On a test a week later, the mixed group scored 63% and the block group 20%.</p>
+      <p>It was a small study, but mixed practice has held up in classrooms since. Blocking tells you which method to use before you start. Mixing makes you figure that out, which is exactly what the test asks.</p>
+      <p class="worst">If practice feels smooth, check whether it's practice or a performance for yourself.</p>
       </div>
     </details>
   </div>
@@ -464,56 +548,76 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">A study system for high-stakes tests</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Quiz yourself. Spread it out. Sleep.</h3>
+      <div class="fold-label">Retrieval, upgraded</div>
+      <h3 class="sticker">Make every session a test.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🙈 Close the book and recall.<span class="row-cue" aria-hidden="true"></span></summary><p>Read a section, then close it and write or say everything you remember. Then check what you missed.</p></details>
-        <details class="row"><summary>🃏 Make practice questions.<span class="row-cue" aria-hidden="true"></span></summary><p>Turn notes into questions. Flashcards, practice tests, or just covering the answer and quizzing yourself.</p></details>
-        <details class="row"><summary>📆 Start a few days early.<span class="row-cue" aria-hidden="true"></span></summary><p>Three 20-minute sessions on different days beat one hour the night before.</p></details>
-        <details class="row"><summary>👩‍🏫 Teach it.<span class="row-cue" aria-hidden="true"></span></summary><p>Explain it out loud to a friend, a parent, or your dog. If you can teach it, you know it.</p></details>
-        <details class="row"><summary>🔀 Mix your practice.<span class="row-cue" aria-hidden="true"></span></summary><p >Mix problem types and topics in one session. It feels harder and works better.</p></details>
-        <details class="row"><summary>😴 Sleep on it.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep is when your brain locks in what you learned. A night of sleep is part of studying.</p></details>
+        <details class="row"><summary><span class="num">1</span> Brain dump first, notes second.<span class="row-cue" aria-hidden="true"></span></summary><p>Before you open anything, write everything you know about the topic on a blank page. Then check your notes and fill gaps in a different color. The colored parts are tomorrow's study list.</p></details>
+        <details class="row"><summary><span class="num">2</span> Ask why and how.<span class="row-cue" aria-hidden="true"></span></summary><p>Don't stop at "what is it." Ask "why does this happen?" and "how does it connect to last unit?" Explaining forces you to rebuild the idea.</p></details>
+        <details class="row"><summary><span class="num">3</span> Practice in test format.<span class="row-cue" aria-hidden="true"></span></summary><p>If the test is free response, write free responses. If it's timed, time yourself. Released AP and SAT questions are free online.</p></details>
+        <details class="row"><summary><span class="num">4</span> Mix old with new.<span class="row-cue" aria-hidden="true"></span></summary><p>Every session, include a few questions from earlier units. Cumulative finals reward the people who never stopped reviewing.</p></details>
+        <details class="row"><summary><span class="num">5</span> Quiz each other, don't review together.<span class="row-cue" aria-hidden="true"></span></summary><p>Study groups work when people take turns asking questions with books closed. Reading notes to each other is rereading with company.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Close the book. What do you remember?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Brain dump. Ten minutes, no notes.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick something you're studying. Read it once, then hide it and write down everything you remember here. Then look back and see what you missed. That gap is what to study next.</p>
+      <p>Pick a topic from a class with a test coming. Write everything you can remember without looking. Then open your notes and list what you missed. That gap is your study plan. Nothing here is saved.</p>
       <label class="prompt" for="tx-1">Topic:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="causes of World War I"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-2">Everything I remember, without looking:</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">What I missed (check after):</label>
+      <label class="prompt" for="tx-3">What I missed, and one "why" question I couldn't answer:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">Build a study plan</span><span class="sticker">Four short sessions beat one long night.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Spacing, by the numbers</span><span class="sticker">How far apart should study sessions be?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Test coming up? Spread it out:</p>
+      <p>In a 2008 study of more than 1,350 people, Nicholas Cepeda and colleagues varied the gap between study sessions and the time until the test. The best gap grew with the test delay. For a test a week away, the best gap was a day or two. For a test a year away, it was closer to a month.</p>
+      <p>A plan for a unit test ten days out:</p>
       <ol class="steps-list">
-        <li><strong>4 days before:</strong> Make practice questions from your notes. Try them.</li>
-        <li><strong>3 days before:</strong> Recall check on the hardest topics.</li>
-        <li><strong>2 days before:</strong> Practice test, mixed topics, no notes. Check answers.</li>
-        <li><strong>Night before:</strong> Short review of what you missed. Then sleep.</li>
+        <li><strong>Day 1:</strong> Learn it. End with a brain dump.</li>
+        <li><strong>Day 3:</strong> Practice questions from memory, then check.</li>
+        <li><strong>Day 6:</strong> Mixed practice test, including last unit. Mark what you missed.</li>
+        <li><strong>Day 8:</strong> Only the missed material, from memory.</li>
+        <li><strong>Day 9:</strong> Short final quiz. Then sleep.</li>
       </ol>
+      <p style="margin:0">For finals, AP exams, and the SAT or ACT, the same rule means starting weeks out, with a little each week, not a big push at the end.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two tests coming. Pick the method.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three study plans. Which one would you bet on?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Which one would help most?</p>
-      
-      <div class="scenario" >
-        <p>You have a history test on three chapters next week.</p>
+      <div class="scenario">
+        <p>Kenji has an AP Bio unit exam in ten days. His plan: make a detailed color-coded study guide over the weekend, then reread it every night.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Highlighting alone does little. You'll recognize things without being able to recall them.">Highlight the chapters and reread the highlights</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Retrieval practice plus spacing. This is what the research supports most strongly.">Make practice questions for each chapter and quiz yourself over several days</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Can help you understand, but follow up by testing yourself without the video.">Watch videos about the topics</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Making the guide involves some thinking, but rereading it every night is the low-utility part. It will feel great and fade fast.">Good plan. He's putting in the time.</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A shorter guide, then spaced sessions where he answers questions from memory, gets more out of fewer hours.">Make a short guide, then quiz himself from it on spaced days</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Cramming the night before is the version that fades fastest, especially with a cumulative AP exam in May.">Skip the guide and cram the night before</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Rosa's precalc final covers six units. She plans to review one unit per day, in order, doing all the problems of each type together.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. The final will mix problem types without labels. Practicing that way teaches her to recognize which method each problem needs.">Mix problems from all six units in each session</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Order isn't the issue. The blocking is. By day six she'll have gone a week without seeing unit one.">Do the units in reverse order</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Watching someone solve problems feels like learning. Solving them yourself is what transfers.">Watch video walkthroughs of each unit instead</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Malik's study group meets the night before the history test. Last time, they read their notes out loud to each other for two hours.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Everyone writes a few test-style questions, notes closed, and they quiz each other. Same group, much better method.">Each person brings five questions and they quiz each other</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Maybe, but a group can help when it's used for retrieval. Change the method before dropping the group.">Drop the group and study alone</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="More time on rereading is still rereading.">Meet for three hours instead of two</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -522,13 +626,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These feel like studying but don't stick.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that waste study time</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>📖 Rereading as your main method.<span class="row-cue" aria-hidden="true"></span></summary><p>Fine as a first step. Not enough on its own.</p></details>
-        <details class="row"><summary>🖍 Highlighting everything.<span class="row-cue" aria-hidden="true"></span></summary><p>If everything is highlighted, nothing is.</p></details>
-        <details class="row"><summary>🌙 Cramming all night.<span class="row-cue" aria-hidden="true"></span></summary><p>Trading sleep for study time usually backfires. Sleep helps memory.</p></details>
-        <details class="row"><summary>📱 Studying with your phone face up.<span class="row-cue" aria-hidden="true"></span></summary><p>Every buzz costs you focus. Out of sight works better.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'm a visual learner.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You may prefer visuals, and that's fine. But a 2008 review by Harold Pashler and colleagues found no good evidence that teaching to a person's "learning style" improves learning. Retrieval and spacing help everyone.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If it feels easy, I know it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Ease while studying often means familiarity, not recall. The rereaders in Roediger and Karpicke's study were the most confident and remembered the least.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> More hours means more learning.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Two hours of rereading can teach less than 45 minutes of quizzing yourself. Count questions answered from memory, not minutes spent.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> An all-nighter is worth it for a big test.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Sleep is when memories get strengthened. Skipping it costs you some of what you studied, plus focus on test day.</p></details>
       </div>
       </div>
     </details>
@@ -536,12 +640,28 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to ask for more help</h3>
       <ul class="tight">
-        <li>You study hard and still struggle in a class.</li>
-        <li>Reading or focusing feels much harder for you than for others.</li>
-        <li>School stress is taking over your evenings or your sleep.</li>
+        <li>You're using good methods and still struggling in a class.</li>
+        <li>Reading, writing, or focusing takes you much longer than it seems to take others.</li>
+        <li>School stress is taking over your evenings, your sleep, or your mood.</li>
       </ul>
-      <p style="margin:0">Teachers, learning specialists, and counselors can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Teachers, learning specialists, and counselors can help. If a learning difference is part of it, an evaluation can open up supports, now and in college. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Roediger, H., &amp; Karpicke, J. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <i>Psychological Science</i>.</li>
+        <li>Dunlosky, J., Rawson, K., Marsh, E., Nathan, M., &amp; Willingham, D. (2013). Improving students' learning with effective learning techniques. <i>Psychological Science in the Public Interest</i>.</li>
+        <li>Karpicke, J., Butler, A., &amp; Roediger, H. (2009). Metacognitive strategies in student learning: Do students practise retrieval when they study on their own? <i>Memory</i>.</li>
+        <li>Cepeda, N., Vul, E., Rohrer, D., Wixted, J., &amp; Pashler, H. (2008). Spacing effects in learning: A temporal ridgeline of optimal retention. <i>Psychological Science</i>.</li>
+        <li>Rohrer, D., &amp; Taylor, K. (2007). The shuffling of mathematics problems improves learning. <i>Instructional Science</i>.</li>
+        <li>Diekelmann, S., &amp; Born, J. (2010). The memory function of sleep. <i>Nature Reviews Neuroscience</i>.</li>
+        <li>Bjork, R. (1994). Memory and metamemory considerations in the training of human beings. In J. Metcalfe &amp; A. Shimamura (Eds.), <i>Metacognition: Knowing about knowing</i>. MIT Press.</li>
+        <li>Pashler, H., McDaniel, M., Rohrer, D., &amp; Bjork, R. (2008). Learning styles: Concepts and evidence. <i>Psychological Science in the Public Interest</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -552,26 +672,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">How I usually study, honestly</label>
+      <label class="prompt" for="tx-4">How I actually study, and how much of it is rereading</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">One method from this page I'll try for my next test</label>
+      <label class="prompt" for="tx-5">My next big test, and the spaced plan I'll use for it</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">A class where studying feels hardest, and why</label>
+      <label class="prompt" for="tx-6">A time I felt ready and wasn't. What was I mistaking for knowing?</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">When and where I focus best</label>
+      <label class="prompt" for="tx-7">How studying worked in my family or past schools, and what I want to keep or change</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">How I'll know if the new method is working</label>
+      <label class="prompt" for="tx-8">How I'll know the new method is working (a score, fewer hours, less stress)</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Studying smarter isn't about being smarter. It's about using methods that work with your brain instead of against it.</p>
+      <p>The methods that work will feel harder at first. That feeling is the learning happening. Trust the results on the test, not the comfort of the study session.</p>
     </div>
     </div>
   </div>
@@ -617,11 +737,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-over" aria-pressed="false">📚 Overwhelmed by how much there is</button>
-          <button type="button" class="choice" data-path="p-blank" aria-pressed="false">😶 Studied and still blanked</button>
-          <button type="button" class="choice" data-path="p-lost" aria-pressed="false">❓ Don't know how to study for this class</button>
-          <button type="button" class="choice" data-path="p-tired" aria-pressed="false">😴 Tired from studying late</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling ready</button>
+          <button type="button" class="choice" data-path="p-over" aria-pressed="false">Overwhelmed by how much there is</button>
+          <button type="button" class="choice" data-path="p-blank" aria-pressed="false">Studied and still blanked</button>
+          <button type="button" class="choice" data-path="p-lost" aria-pressed="false">Don't know how to study for this class</button>
+          <button type="button" class="choice" data-path="p-tired" aria-pressed="false">Tired from studying late</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling ready</button>
         </div>
 
         <div class="path-panel" id="p-over" hidden>

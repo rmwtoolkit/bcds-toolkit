@@ -394,6 +394,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ----- lesson figure + callouts ----- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.97rem; line-height:1.5; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:16px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -413,9 +480,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">💬 High School · Friends and belonging</div>
+  <div class="eyebrow">High School · Friends and belonging</div>
   <h1>Group Chat Drama</h1>
-  <p class="tagline">Because a few words on a screen can wreck a whole evening.</p>
+  <p class="tagline">Why texts get misread, why pile-ons snowball, and what one person can do about it.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -442,271 +509,264 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What's going on in the chat</h2>
-    <p>Group chats are where a lot of friendship happens now. They're also where a lot of friendship drama starts. If a text has ever ruined your night, you are in very good company.</p>
-
-        <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">A text ruined your night? You're in good company.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <h2 id="h-understand">What's actually happening in the chat</h2>
+    <details class="fold ">
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Ten words on a screen. Two hours of overthinking.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You sent something and got "k" or "ok." back, and spent an hour wondering what you did.</li>
-        <li>You posted in the chat and nobody answered.</li>
-        
-        <li >You saw everyone's stories from Saturday and realized the plans were made in a chat you're not in.</li>
-        <li>Someone made a joke about you, and everyone added laughing emojis.</li>
-        
-        <li >A screenshot of something you said privately ended up in a much bigger chat.</li>
-        <li>You watched it happen to someone else and didn't know what to do.</li>
+        <li>You sent a long, honest message and got "ok." back.</li>
+        <li>You posted in the team chat, nobody answered, and an hour later everyone was talking about something else.</li>
+        <li>A private reply you sent one person showed up as a screenshot in a 40-person chat.</li>
+        <li>The plans for after the dance were made in a chat you didn't know existed.</li>
+        <li>A friend asked you to "back them up" in a fight you weren't part of.</li>
+        <li>You watched someone get roasted, typed something, deleted it, and put the phone down.</li>
       </ul>
-      <p style="margin:0">All of these count. You don't have to call it bullying for it to hurt.</p>
+      <p style="margin:0">If you already know "texts have no tone," good. This page goes further: what the research says about why this happens, and the specific moves that change how it goes.</p>
       </div>
     </details>
 
-        <div class="unit unit-one">
-    <h3 style="margin-top:28px">Misread, left out, piled on.</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">📱</span><strong>Misread</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">A short reply, a period, a slow answer, or no answer at all. Your brain decides it means something bad, before you have any real information.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🚪</span><strong>Left out</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The side chat, the plans you hear about later, the inside joke from a night you weren't there. Sometimes it's on purpose. Often it isn't.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧱</span><strong>Piled on</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">One person becomes the target and everyone else joins in with comments, emojis, or screenshots. It can go from zero to the whole grade in minutes.</p></details>
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Text strips out most of the signal</h3>
+    <p>In a 2005 set of experiments, psychologists Justin Kruger and Nicholas Epley had pairs of people send each other short statements meant to sound sarcastic, serious, angry, or sad. Readers felt about 89% sure they'd read the tone right. Face to face they were right about three times in four. Over email, less than two in three.</p>
+    <figure class="fig">
+  <svg viewBox="0 0 400 262" role="img" aria-label="Bar chart. People who received messages felt about 89 percent sure they had read the tone right in every format. They were actually right 74 percent of the time face to face, 73 percent by voice only, and 63 percent by email." xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="12" height="12" rx="3" fill="#D2D2D7"/><text x="18" y="11" font-size="13" fill="#6E6E73">How sure readers felt</text>
+    <rect x="186" y="0" width="12" height="12" rx="3" fill="#1D1D1F"/><text x="204" y="11" font-size="13" fill="#6E6E73">How often they were right</text>
+    
+    <text x="0" y="48" font-size="14" font-weight="700" fill="#1D1D1F">Face to face</text>
+    <rect x="128" y="36" width="223.5" height="15" rx="4" fill="#D2D2D7"/>
+    <text x="357.5" y="48" font-size="13" fill="#6E6E73">89%</text>
+    <rect x="128" y="56" width="184.8" height="15" rx="4" fill="#1D1D1F"/>
+    <text x="318.8" y="68" font-size="13" font-weight="700" fill="#1D1D1F">74%</text>
+    
+    <text x="0" y="112" font-size="14" font-weight="700" fill="#1D1D1F">Voice only</text>
+    <rect x="128" y="100" width="223.5" height="15" rx="4" fill="#D2D2D7"/>
+    <text x="357.5" y="112" font-size="13" fill="#6E6E73">89%</text>
+    <rect x="128" y="120" width="183.2" height="15" rx="4" fill="#1D1D1F"/>
+    <text x="317.2" y="132" font-size="13" font-weight="700" fill="#1D1D1F">73%</text>
+    
+    <text x="0" y="176" font-size="14" font-weight="700" fill="#1D1D1F">Text (email)</text>
+    <rect x="128" y="164" width="223.2" height="15" rx="4" fill="#D2D2D7"/>
+    <text x="357.2" y="176" font-size="13" fill="#6E6E73">89%</text>
+    <rect x="128" y="184" width="157.0" height="15" rx="4" fill="#D70015"/>
+    <text x="291.0" y="196" font-size="13" font-weight="700" fill="#D70015">63%</text>
+    <line x1="128" y1="30" x2="128" y2="222" stroke="#C7C7CC" stroke-width="1"/>
+    <line x1="128" y1="230" x2="378" y2="230" stroke="#C7C7CC" stroke-width="1"/>
+    <text x="128" y="248" font-size="12" fill="#6E6E73">0%</text><text x="253" y="248" font-size="12" fill="#6E6E73" text-anchor="middle">50%</text><text x="378" y="248" font-size="12" fill="#6E6E73" text-anchor="end">100%</text>
+    <line x1="253" y1="226" x2="253" y2="234" stroke="#C7C7CC"/>
+  </svg>
+      <figcaption>Readers' confidence versus accuracy at reading tone. Kruger et al. (2005), Study 3. Email is the closest the study gets to texting, and there were no emoji. Senders were just as overconfident as readers.</figcaption>
+    </figure>
+    <div class="levers">
+      <div class="lever"><b>What text deletes</b><span>Voice, face, timing, and the situation the sender is in. A reply typed at a red light looks the same as a reply typed in anger.</span></div>
+      <div class="lever"><b>What your brain adds</b><span>Your own mood. Tired, anxious, or already worried about a friendship, you'll read the worst version and feel sure about it.</span></div>
     </div>
     </div>
 
-        <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Texts have no tone. Your brain fills in the worst.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">The research</span><span class="sticker">Why three words can ruin a night.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Texts have no tone, so your brain fills it in.</dt>
-        <dd>In person you get a face, a voice, timing. In a text you get a few letters. When you're tired, stressed, or already worried about a friendship, your brain tends to fill in the worst version. "ok." might mean annoyed. It might also mean typing with one thumb in the car.</dd>
-        <dt>Being left out really does hurt.</dt>
-        <dd>Research suggests being left out activates some of the same brain systems as physical pain. That's why finding a chat you're not in can feel like getting hit. Your brain is treating belonging as something that matters, because it does.</dd>
-        <dt>It's public, and it lasts.</dt>
-        <dd>An awkward moment in the hallway fades. A message can be reread, screenshotted, and forwarded. Knowing other people can see it makes everything feel bigger.</dd>
+        <dt>A period changes the tone.</dt>
+        <dd>In a 2016 study at Binghamton University, one-word replies like "Okay." read as less sincere with a period than without one. The same replies on handwritten notes showed no difference. In texting, punctuation has become tone of voice.</dd>
+        <dt>Being left out hurts, even in tiny doses.</dt>
+        <dd>In the Cyberball studies, more than 1,400 people from 62 countries played an online ball toss with two strangers. When the others stopped throwing to them, they reported a drop in belonging and mood. That was strangers, a cartoon ball, and a few minutes. A chat full of people you know hits harder.</dd>
+        <dt>Everyone thinks their own tone is obvious.</dt>
+        <dd>Kruger and Epley traced the overconfidence to egocentrism: you hear your own voice in your head as you type, so it's hard to imagine the message reading any other way. The person reading it does the same thing, with their voice and their mood.</dd>
       </dl>
       </div>
     </details>
 
-        <details class="fold fold-callout">
-      <summary><span class="fold-label"><span class="e" aria-hidden="true">🧱</span>Why pile-ons spread so fast</span><span class="sticker">One person stepping out can turn it around.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Pile-ons</span><span class="sticker">The bigger the chat, the longer everyone waits.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <ul class="tight">
-        <li><strong>Joining feels safer than standing out.</strong> People laugh along so they aren't next.</li>
-        <li><strong>Everyone assumes someone else will say something.</strong> So nobody does.</li>
-        <li><strong>Screens make it feel less real.</strong> It's easy to type things you would never say to someone's face.</li>
-      </ul>
-      <p class="worst">The worst part: the person being targeted is reading every single message, usually alone, usually at night.</p>
-      <p style="margin:10px 0 0">The hopeful part: most people in a pile-on aren't cruel, they're going along. One person stepping out can change the direction.</p>
+      <p>A 2000 study of online chat rooms found that the more people were in a chat, the longer it took someone asking for help to get it. When the request named a specific person, the delay nearly disappeared. A 40-person group chat works the same way: everyone saw it, and everyone assumes one of the other 39 will deal with it.</p>
+      <p>This is common. In a 2022 Pew survey, 46% of U.S. teens ages 13 to 17 said they had experienced at least one of six kinds of online harassment, most often offensive name-calling. Among girls 15 to 17, it was 54%. Common is not the same as okay.</p>
+      <p class="worst">The worst part: the person being targeted reads every message, usually alone, usually late at night.</p>
+      <p style="margin:10px 0 0">The useful part: most people in a pile-on aren't cruel. They're waiting. One person stepping out, or naming one other person to step out with them, changes what everyone else does.</p>
       </div>
     </details>
-
-        <details class="fold fold-callout">
-      <summary><span class="fold-label"><span class="e" aria-hidden="true">📱</span>It's bigger than the group chat</span><span class="sticker">Apps show you exactly what you're missing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>The chat is only one place this happens. The same misreads, left-out moments, and pile-ons show up everywhere online:</p>
-      <ul class="tight">
-        
-        <li >Seeing everyone at the same house on Snap Map on a Friday night.</li>
-        <li>Watching stories from a hangout you didn't know about.</li>
-        <li>A friend letting a streak die, or leaving your snap on "opened" for hours.</li>
-        
-        <li >Being taken off someone's Close Friends story, or noticing you were never on it.</li>
-        <li>Comments under a post that start as jokes and turn into a pile-on.</li>
-      </ul>
-      <p class="worst">The worst part: apps show you exactly what you're missing, in real time, with photos. It's like being left out over and over.</p>
-      </div>
-    </details>
-  
   </div>
 </section>
 
-<!-- ================= PRACTICE THE SKILLS ================= -->
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">What to do when your stomach drops</h2>
 
-        <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Read it three times before you react.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>📖 The Three Reads.<span class="row-cue" aria-hidden="true"></span></summary><p>When a text makes your stomach drop, read it three times before reacting. First, just the words, nothing added. Second, in a flat robot voice. Third, as if your best friend sent it. A lot of "mean" texts stop sounding mean by the third read.</p></details>
-        <details class="row"><summary>❓ Ask instead of assuming.<span class="row-cue" aria-hidden="true"></span></summary><p>If you still can't tell, check it out. Short and light works best:
-          <div class="script">"hey, couldn't tell your tone there. we good?"</div>
-          <div class="script">"wait, joking or actually annoyed? genuinely can't tell lol"</div>
-        </p></details>
-        <details class="row"><summary>🗣 Take it out of the group.<span class="row-cue" aria-hidden="true"></span></summary><p>Real conversations go better one on one, and better in person or on a call than over text. A group chat is the worst place to work something out, because everyone's watching.</p></details>
-        <details class="row"><summary>🔕 Mute is allowed.<span class="row-cue" aria-hidden="true"></span></summary><p>You can mute a chat for an evening, turn off notifications, or leave. Catching up tomorrow is fine. You don't have to be on call for every message.</p></details>
+    <div class="card">
+      <div class="fold-label">Before you react</div>
+      <h3 class="sticker">Read it three ways. Then decide.</h3>
+      <p>The first read is your mood talking. These steps put space between the message and your reply.</p>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Read only the words.<span class="row-cue" aria-hidden="true"></span></summary><p>Strip out the tone you added. "ok." is two letters and a period. Everything else is your guess.</p></details>
+        <details class="row"><summary><span class="num">2</span> Read it as if they're busy.<span class="row-cue" aria-hidden="true"></span></summary><p>At work, at practice, driving, babysitting a sibling, half asleep. Most short replies are about the sender's situation, not about you.</p></details>
+        <details class="row"><summary><span class="num">3</span> Ask instead of assuming.<span class="row-cue" aria-hidden="true"></span></summary><p>Short and low-key works best:</p><div class="script">"couldn't read your tone there. we good?"</div><div class="script">"joking or actually annoyed? can't tell over text"</div></details>
+        <details class="row"><summary><span class="num">4</span> Switch to voice.<span class="row-cue" aria-hidden="true"></span></summary><p>The research is clear that voice carries tone better than text. Anything serious goes better as a call or a conversation, one on one, with nobody watching.</p></details>
+        <details class="row"><summary><span class="num">5</span> Let it sit overnight.<span class="row-cue" aria-hidden="true"></span></summary><p>What you write at midnight gets read at 7am, by someone in a different mood. If it can wait, let it.</p></details>
     </div>
 
-    <!-- Decode practice -->
-        <details class="fold fold-try">
+    <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">What else could that text mean?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Notice what your brain says first. Then type another possible reason before you peek.</p>
-
-      
-
-      
-
       <div class="decode" >
         <div class="phone">
-          <div class="row-me"><span class="bubble me">is it cool if i bring my friend from work friday?</span></div>
+          <div class="row-me"><span class="bubble me">hey, I said a lot in that message last night. did you read it?</span></div>
           <div class="chat-name">Friend</div>
-          <span class="bubble">I guess</span>
+          <span class="bubble">yeah. we can talk later</span>
         </div>
         <label class="prompt" for="d-us-1">What else could be going on?</label>
         <textarea id="d-us-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
         <button class="btn ghost" type="button" data-reveal="r-us-1">Show other possibilities</button>
         <div class="reveal" id="r-us-1" hidden>
           <ul class="tight">
-            <li>They're not sure how many people the host said was okay.</li>
-            <li>They're stressed about something unrelated and texting fast.</li>
-            <li>They're a little unsure, and that's useful to know, not a crisis.</li>
+            <li>They're at work or in class and can't give it real attention.</li>
+            <li>It was a serious message, and they want to answer it properly, not with a quick text.</li>
+            <li>"Later" means in person. Some people would rather not do hard conversations over text.</li>
           </ul>
-          <p><strong>Check it out:</strong> "you sound kinda unsure, totally fine if it's not a good night for it. what's up?"</p>
+          <p><strong>Check it out:</strong> "no rush. want to call tonight or talk tomorrow?"</p>
         </div>
       </div>
 
       <div class="decode" >
         <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
         <div class="phone">
-          <div class="chat-name">Friend 1</div>
-          <span class="bubble">LMAOOO the parking lot thing 💀</span>
-          <div class="chat-name">Friend 2</div>
-          <span class="bubble">stoppp I can't 😭</span>
-          <div class="chat-meta">You have no idea what "the parking lot thing" is.</div>
+          <div class="chat-meta">Team chat · 22 people</div>
+          <div class="row-me"><span class="bubble me">anyone want to carpool to the away game sat?</span></div>
+          <div class="chat-meta">2 thumbs up. Then 30 messages about something else.</div>
         </div>
         <label class="prompt" for="d-us-2">What else could be going on?</label>
         <textarea id="d-us-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
         <button class="btn ghost" type="button" data-reveal="r-us-2">Show other possibilities</button>
         <div class="reveal" id="r-us-2" hidden>
           <ul class="tight">
-            <li>Two people ran into each other somewhere and something funny happened.</li>
-            <li>They forgot not everyone in the chat was there.</li>
-            <li>There is a side chat, and that stings, and it still might not be about you.</li>
+            <li>The thumbs up were the answer. Those two people are in.</li>
+            <li>Everyone assumed someone else would reply. That's the chat-room bystander effect.</li>
+            <li>People don't know their ride situation yet and didn't want to commit.</li>
           </ul>
-          <p><strong>Check it out:</strong> "ok I need the parking lot story immediately." Most people are happy to fill you in.</p>
+          <p><strong>Check it out:</strong> name people. "@Dani @Marcus you two still need a ride?" Naming someone is what the research says breaks the wait.</p>
         </div>
       </div>
       </div>
     </details>
 
-        <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These keep the drama going.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These keep it going.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🔥 Replying while you're heated.<span class="row-cue" aria-hidden="true"></span></summary><p>Your thumbs move faster than your judgment. Run the Screenshot Test below first.</p></details>
-        <details class="row"><summary>🔍 Investigating.<span class="row-cue" aria-hidden="true"></span></summary><p>Scrolling back through old messages, checking who's online, asking three other people what they think it meant. It feels like getting answers. Mostly it keeps the worry going.</p></details>
-        <details class="row"><summary>📣 Vague posts.<span class="row-cue" aria-hidden="true"></span></summary><p>Posting "some people are so fake" so the right person sees it. Everyone guesses who it's about, and now there are two problems.</p></details>
-        <details class="row"><summary>😐 Pretending it doesn't bother you.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to make a scene. You also don't have to act fine. Telling one person the real version helps a lot.</p></details>
+        <details class="row"><summary>Replying while you're heated.<span class="row-cue" aria-hidden="true"></span></summary><p>Your thumbs move faster than your judgment. Run the screenshot test below first.</p></details>
+        <details class="row"><summary>Investigating.<span class="row-cue" aria-hidden="true"></span></summary><p>Scrolling back through old messages, checking who's active, asking three people what it meant. It feels like getting answers. Mostly it keeps the worry going.</p></details>
+        <details class="row"><summary>Sending screenshots to get opinions.<span class="row-cue" aria-hidden="true"></span></summary><p>"Does this sound mean to you?" Now three more people are involved, and your screenshot is out of your hands.</p></details>
+        <details class="row"><summary>Vague posts.<span class="row-cue" aria-hidden="true"></span></summary><p>Posting "some people are so fake" so the right person sees it. Everyone guesses who it's about, and now there are two problems.</p></details>
+        <details class="row"><summary>Acting like it doesn't bother you.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to make a scene. Telling one person the real version helps more than acting fine.</p></details>
       </div>
       </div>
     </details>
 
-        <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Would you be okay if this got screenshotted?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">The screenshot test.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Type the reply you <em>want</em> to send. It stays on this page and goes nowhere.</p>
       <label class="prompt" for="hot-reply">The reply I want to send right now:</label>
       <textarea id="hot-reply" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <div class="checklist" role="group" aria-label="Screenshot test questions">
-        <label><input type="checkbox"> I'd be okay if this got screenshotted and shown to the whole grade.</label>
+        <label><input type="checkbox"> I'd be okay if this got screenshotted and seen by the whole grade, a coach, or a future employer.</label>
         <label><input type="checkbox"> I'd say this to their face.</label>
-        <label><input type="checkbox"> I'm reacting to what they actually said, not what I <em>think</em> they meant.</label>
+        <label><input type="checkbox"> I'm reacting to what they actually wrote, not what I <em>think</em> they meant.</label>
         <label><input type="checkbox"> This belongs in the group, not in a one-on-one conversation.</label>
         <label><input type="checkbox"> It can't wait until tomorrow.</label>
       </div>
       <p id="test-tally" class="feedback" aria-live="polite"></p>
       <label class="prompt" for="calm-reply">A calmer version (or "not sending anything yet"):</label>
       <textarea id="calm-reply" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <p style="margin-top:12px">Not replying is a reply option. "Let me think about it" counts too.</p>
+      <p style="margin-top:12px">Not replying is a reply. So is "let me think about it."</p>
       </div>
     </details>
 
-        <details class="fold ">
-      <summary><span class="fold-label"><span class="e" aria-hidden="true">🚪</span>When you're left out</span><span class="sticker">Sort the facts from the guesses.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">When you're left out</span><span class="sticker">Once, or every time?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
+      <p>Not every chat has to include you. Five people planning a birthday dinner can have a small chat without it being a verdict on you. The useful question is pattern: is this once, or is it how this group treats you?</p>
       <ol class="steps-list">
-        <li><strong>Name the feeling.</strong> Hurt, embarrassed, jealous, lonely. Naming it, even just in your head, turns the volume down a little.</li>
-        <li><strong>Sort facts from guesses.</strong> <em>Fact:</em> there's a chat I'm not in. <em>Guess:</em> they all secretly hate me. Guesses feel like facts when you're hurt.</li>
-        <li><strong>Pick a move.</strong> Talk to the one friend you trust most, one on one. Make your own plan and invite someone. Spend time with your other people. Or let it go, if it's a one-time thing.</li>
+        <li><strong>Name the feeling.</strong> Hurt, embarrassed, jealous, lonely. Naming it turns the volume down a little.</li>
+        <li><strong>Sort facts from guesses.</strong> <em>Fact:</em> there's a chat I'm not in. <em>Guess:</em> they all talk about me in it. Guesses feel like facts when you're hurt.</li>
+        <li><strong>Pick a move.</strong> Talk to the one person you trust most in the group. Make your own plan and invite people. Put more time into the friends who do include you. Or let a one-time thing go.</li>
       </ol>
-      <p>If you want to bring it up, keep it short, say how it felt, and ask a real question:</p>
-      
-      <div class="script" >"I noticed you all had a separate chat for Saturday. not trying to make it weird, it just stung a little. is something going on with us?"</div>
+      <p>If you bring it up, keep it short, say how it landed, and ask a real question:</p>
+      <div class="script" >"saw there was a separate chat for saturday. not trying to make it a thing, it just stung. is something up with us?"</div>
+      <p style="margin-top:12px">How directly you raise it can depend on your family and culture, and on the friendship. Some people say it straight out. Some would rather show it by spending time elsewhere. Think about what fits you, and what this friend will actually hear.</p>
       </div>
     </details>
 
-        <details class="fold ">
-      <summary><span class="fold-label"><span class="e" aria-hidden="true">🧱</span>When a pile-on starts</span><span class="sticker">Target or watching, you have moves.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">When a pile-on starts</span><span class="sticker">Target or watching, you have moves.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="grid-2">
         <div>
           <h3 style="font-size:1rem">If you're the target</h3>
           <ul class="tight">
-            <li>Don't reply while it's happening. Replies keep it going.</li>
-            <li>Screenshot it so there's a record.</li>
-            <li>Mute or leave the chat. You're allowed.</li>
+            <li>Don't reply while it's happening. Replies feed it.</li>
+            <li>Screenshot it so there's a record, then stop rereading.</li>
+            <li>Mute or leave. You're allowed.</li>
             <li>Tell an adult you trust, even if you worry it'll make it worse.</li>
-            <li>Reach out to one person who's on your side.</li>
+            <li>Message one person who's on your side.</li>
           </ul>
         </div>
         <div>
           <h3 style="font-size:1rem">If you're watching</h3>
           <ul class="tight">
-            <li>Don't add anything, not even an emoji.</li>
-            <li>DM the person: "that wasn't okay. you good?"</li>
-            <li>Say "ok can we not," or change the subject.</li>
-            <li>Leave the chat if it won't stop.</li>
-            <li>Tell an adult. That's being a good friend, not snitching.</li>
+            <li>Add nothing, not even a reaction.</li>
+            <li>Message the target: "that wasn't okay. you good?"</li>
+            <li>Say "ok we're done with this," or change the subject.</li>
+            <li>Name an ally: "@Jaylen back me up, this isn't funny."</li>
+            <li>Tell an adult if it keeps going. That's looking out, not snitching.</li>
           </ul>
         </div>
       </div>
-      <p style="margin-top:12px"><strong>If you were part of it:</strong> stop adding, delete what you can, and apologize to the person directly. Owning it is hard, and it matters.</p>
+      <p style="margin-top:12px"><strong>If you were part of it:</strong> stop adding, delete what you can, and apologize to the person directly, without excuses. Owning it is hard, and it matters.</p>
       </div>
     </details>
 
-        <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">The laughing emojis keep coming. What do you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">A private message just went public. What do you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      
-
       <div class="scenario" >
         <div class="phone">
-          <div class="chat-meta">Big friend group chat (18 people)</div>
+          <div class="chat-meta">Junior class chat · 41 people</div>
           <div class="chat-name">Someone</div>
-          <span class="bubble">[screenshot of a private message Sam sent about a crush] look who's down bad 😭</span>
+          <span class="bubble">[screenshot of a message Theo sent to a girl he likes] theo writing poetry now??</span>
           <div class="chat-name">Someone</div>
-          <span class="bubble">NO WAY 💀</span>
+          <span class="bubble">I'm crying</span>
           <div class="chat-name">Someone</div>
-          <span class="bubble">sending this to the other chat lmao</span>
+          <span class="bubble">sending to the soccer chat</span>
         </div>
-        <p>Sam is in this chat and hasn't said anything. What do you do?</p>
+        <p>Theo is in this chat and hasn't said anything. What do you do?</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Forwarding is how a small moment turns into a schoolwide one. Once it's out, nobody can pull it back.">Forward it to my own friends, it's funny</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Not adding to it matters. Sam still sees a wall of people who seem fine with this, though. Is there one more thing you could do?">Stay quiet so I don't get dragged in</button>
-          <button class="choice" type="button" data-fb="good" data-msg="This is huge for the person on the other end. It costs you very little and might be the only kind thing Sam reads tonight.">DM Sam: "that was messed up of them. you okay?"</button>
-          <button class="choice" type="button" data-fb="good" data-msg="It takes nerve, and it often works. Pile-ons run on everyone assuming everyone else is fine with it. You just showed they aren't.">Post "this was a private convo, delete it"</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Good call, especially if it keeps spreading. If a screenshot ever includes a sexual photo of someone under 18, tell an adult right away and don't forward it: sharing it can be a crime.">Talk to an adult I trust about it</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Forwarding is how one bad night becomes the whole school's story. Once it's out, nobody can pull it back.">Forward it, it's funny</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Not adding to it matters. From Theo's side, though, 40 people seem fine with this. Is there one more thing you could do?">Stay quiet so I don't get dragged in</button>
+          <button class="choice" type="button" data-fb="good" data-msg="This costs you almost nothing and might be the only decent message Theo reads tonight.">Message Theo: "that was messed up. you okay?"</button>
+          <button class="choice" type="button" data-fb="good" data-msg="It takes nerve, and it often works. Pile-ons run on everyone assuming everyone else is fine with it. You just showed they aren't.">Post "this was private. delete it."</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Good call, especially if it keeps spreading. If a screenshot ever includes a sexual image of anyone under 18, don't forward or save it, and tell an adult right away.">Talk to an adult I trust about it</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <p style="margin-top:14px;font-size:.95rem">More than one answer works. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
-        <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">Streaks aren't friendship scores.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">Settings worth changing</span><span class="sticker">You don't have to be on call.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>📍 Turn on Ghost Mode, or stop checking the map.</dt>
-        <dd>You don't need a live feed of where everyone is. Not knowing is often easier than knowing.</dd>
-        <dt>⏱ Streaks aren't friendship scores.</dt>
-        <dd>Apps make streaks feel important so you keep opening them. A dropped streak usually means someone was busy.</dd>
-        <dt>🔕 Mute stories for a while.</dt>
-        <dd>Muting is private. Nobody gets notified, and you get a break.</dd>
-        <dt>🧘 Notice the after-feeling.</dt>
-        <dd>If you feel worse every time you open an app, that's information. Try a set time to check instead of all day.</dd>
+        <dt>Mute is private.</dt>
+        <dd>Muting a chat or a story notifies nobody. Catching up tomorrow is fine.</dd>
+        <dt>Turn off read receipts and activity status.</dt>
+        <dd>Fewer signals means fewer things to misread, in both directions.</dd>
+        <dt>Put the phone to bed.</dt>
+        <dd>A sleep or focus mode that silences group chats after a set time protects your sleep and stops midnight replies.</dd>
+        <dt>Notice the after-feeling.</dt>
+        <dd>If one chat leaves you feeling worse almost every time, that's information. You can leave it.</dd>
       </dl>
       </div>
     </details>
@@ -716,42 +776,54 @@
       <ul class="tight">
         <li>Threats to hurt someone, or talk about a weapon</li>
         <li>Someone saying they want to hurt themselves or die, even as a "joke"</li>
-        
-        <li >Nude or sexual images of anyone under 18 (don't forward, don't save, tell an adult)</li>
+        <li>Nude or sexual images of anyone under 18, real or AI-made. Don't forward, don't save, tell an adult.</li>
         <li>The same person getting targeted again and again</li>
       </ul>
+      <p>In Massachusetts, sharing a sexual image of someone under 18 can still bring legal consequences, even between teens. A 2024 state law added an education-based diversion program for teens, and made sharing anyone's intimate images without consent, including AI deepfakes, a crime.</p>
       <p style="margin:0">A counselor, teacher, coach, or parent can help. See <a href="#help">Get help</a> below.</p>
     </div>
-  
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Kruger, J., Epley, N., Parker, J., &amp; Ng, Z. (2005). Egocentrism over e-mail: Can we communicate as well as we think? <i>Journal of Personality and Social Psychology, 89</i>(6), 925&ndash;936.</li>
+        <li>Gunraj, D. N., Drumm-Hewitt, A. M., Dashow, E. M., Upadhyay, S. S. N., &amp; Klin, C. M. (2016). Texting insincerely: The role of the period in text messaging. <i>Computers in Human Behavior, 55</i>, 1067&ndash;1075.</li>
+        <li>Williams, K. D., Cheung, C. K. T., &amp; Choi, W. (2000). Cyberostracism: Effects of being ignored over the Internet. <i>Journal of Personality and Social Psychology, 79</i>(5), 748&ndash;762.</li>
+        <li>Markey, P. M. (2000). Bystander intervention in computer-mediated communication. <i>Computers in Human Behavior, 16</i>(2), 183&ndash;188.</li>
+        <li>Vogels, E. A. (2022). <i>Teens and cyberbullying 2022</i>. Pew Research Center.</li>
+        <li>Commonwealth of Massachusetts (2024). An Act to prevent abuse and exploitation (H.4744), signed June 20, 2024.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
-<!-- ================= REFLECT ================= -->
 <section class="part" id="reflect" aria-labelledby="h-reflect">
   <div class="wrap">
     <div class="eyebrow">Part 3 · Reflect</div>
     <h2 id="h-reflect">Take a moment to write</h2>
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="rf-1">The message that got to me, and the story my brain told about it</label>
+      <label class="prompt" for="rf-1">A message that got to me, and the tone I heard in it</label>
       <textarea id="rf-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-2">Another story that could also be true</label>
+      <label class="prompt" for="rf-2">What the sender's situation might have been when they typed it</label>
       <textarea id="rf-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-3">The chat or group where I feel most like myself, and why</label>
+      <label class="prompt" for="rf-3">A chat that leaves me feeling better, and one that leaves me feeling worse. What's the difference?</label>
       <textarea id="rf-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-4">If a pile-on started tomorrow, one thing I could realistically do</label>
+      <label class="prompt" for="rf-4">If a pile-on started tonight, the one person I'd name to step out with me</label>
       <textarea id="rf-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-5">One person, a friend or an adult, I could talk to when chat stuff gets heavy</label>
+      <label class="prompt" for="rf-5">Something I'd rather say by voice than by text this week</label>
       <textarea id="rf-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>A group chat is a tiny window into a friendship. It isn't the whole friendship, and it definitely isn't the whole you.</p>
+      <p>Text loses a lot of what people mean. Read generously, ask before you assume, and take the real conversations off the screen.</p>
     </div>
   </div>
 </section>
@@ -765,7 +837,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with the group chat stuff today?</h3>
+        <h3 id="ci-1">How much is chat stuff on your mind today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -797,11 +869,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-anxious" aria-pressed="false">😬 Anxious, and I can't stop checking</button>
-          <button type="button" class="choice" data-path="p-left" aria-pressed="false">🚪 Left out, and it's sitting heavy</button>
-          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">😤 Angry, because this wasn't fair</button>
-          <button type="button" class="choice" data-path="p-exposed" aria-pressed="false">😳 Embarrassed or exposed</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 A little better today</button>
+          <button type="button" class="choice" data-path="p-anxious" aria-pressed="false">Anxious, and I can't stop checking</button>
+          <button type="button" class="choice" data-path="p-left" aria-pressed="false">Left out, and it's sitting heavy</button>
+          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">Angry, because this wasn't fair</button>
+          <button type="button" class="choice" data-path="p-exposed" aria-pressed="false">Embarrassed or exposed</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">A little better today</button>
         </div>
 
         <div class="path-panel" id="p-anxious" hidden>
@@ -810,7 +882,7 @@
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">📵</span>Put the phone in another room for 30 minutes. Set a timer if that helps.</li>
-            <li><span class="e" aria-hidden="true">📖</span>Do the Three Reads on the message one time, then stop rereading.</li>
+            <li><span class="e" aria-hidden="true">📖</span>Read it three ways one time (words only, as if they're busy, then ask), then stop rereading.</li>
             <li><span class="e" aria-hidden="true">❓</span>If you really need to know, ask: "couldn't tell your tone, we good?"</li>
             <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times. A longer exhale tells your body to settle.</li>
           </ul>
@@ -831,7 +903,7 @@
           <p>Anger usually shows up when something crossed a line. That's useful information. It's also the feeling most likely to make you send something you regret.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Type the message you want to send in the Screenshot Test above. Don't send it.</li>
+            <li><span class="e" aria-hidden="true">📝</span>Type the message you want to send in the screenshot test above. Don't send it.</li>
             <li><span class="e" aria-hidden="true">🏃</span>Move your body: a walk, a run, shooting hoops, loud music.</li>
             <li><span class="e" aria-hidden="true">⏳</span>Wait until tomorrow before you respond to anyone involved.</li>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>If someone was targeted, tell an adult. Anger at unfairness is a good reason to speak up.</li>

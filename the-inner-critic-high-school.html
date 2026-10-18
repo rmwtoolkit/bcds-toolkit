@@ -362,6 +362,72 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .src { font-size:.82rem; color:var(--ink-soft); }
 </style>
 </head>
 
@@ -381,9 +447,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🗯 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>The Inner Critic</h1>
-  <p class="tagline">Because the meanest voice in your life might be your own, and it's not telling the truth.</p>
+  <p class="tagline">Where that voice comes from, why being hard on yourself backfires, and what the research says works better.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +475,75 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Where the inner critic comes from</h2>
+    <h2 id="h-understand">Why the critic is so convincing</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">That mean voice in your head? Everyone has one.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You would never talk to a friend like this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>A voice in your head says "you're so stupid" when you make a mistake.</li>
-        <li>You'd never talk to a friend the way you talk to yourself.</li>
-        <li>Someone gave you a compliment and you immediately thought of reasons it wasn't true.</li>
-        
-        <li >You look at photos of yourself and only see flaws.</li>
-        <li>You replay embarrassing moments at night, over and over.</li>
-        <li>You feel like everyone else has it figured out and you're behind.</li>
+        <li>You replay one comment you made in class at 1 a.m., three days later.</li>
+        <li>A coach gives you one note and ten compliments. You remember the note.</li>
+        <li>You quietly assume your friends are tolerating you.</li>
+        <li>You think the harsh voice keeps you sharp, and that without it you'd slack off.</li>
+        <li>Praise slides right off. Criticism sticks for weeks.</li>
       </ul>
-      <p style="margin:0">Almost everyone has an inner critic. For some people it's quiet. For others, it's loud and mean. Either way, it's not the truth about you.</p>
+      <p style="margin:0">You've probably heard that the critic isn't telling the truth. This goes further: why it argues so well, what it's trying to do for you, and why research says kindness toward yourself makes you work harder, not less.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What the inner critic sounds like</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">📢</span><strong>The name-caller</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"You're such an idiot." "You're so annoying." Harsh labels that stick.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔮</span><strong>The fortune-teller</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"You'll embarrass yourself." "Nobody will like you." Predicting the worst before anything happens.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📏</span><strong>The comparer</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"Everyone's better than you." "You'll never be as good as them."</p></details>
+    <h3 style="margin-top:28px">Three systems that are supposed to balance</h3>
+    <figure class="fig">
+<svg viewBox="0 0 400 296" role="img" aria-labelledby="ic-t ic-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="ic-t">Three emotion systems</title>
+  <desc id="ic-d">Three circles in a triangle. Threat system: protect, with anxiety, anger, and shame. Drive system: achieve, with wanting, excitement, and pride. Soothing system: calm and connect, with feeling safe, content, and cared for. Arrows between them show they balance each other.</desc>
+  <g stroke="#AEAEB2" stroke-width="1.6" fill="none" stroke-dasharray="4 4">
+    <path d="M168 82 H232"/><path d="M134 146 L154 162"/><path d="M266 146 L246 162"/>
+  </g>
+  <circle cx="88" cy="80" r="76" fill="#FBE3E1" stroke="#C0392B" stroke-width="2"/>
+  <text x="88" y="62" text-anchor="middle" font-size="18" font-weight="700" fill="#A3301F">Threat</text>
+  <text x="88" y="84" text-anchor="middle" font-size="14" font-weight="600" fill="#A3301F">protect</text>
+  <text x="88" y="102" text-anchor="middle" font-size="14" fill="#A3301F">anxiety, anger,</text>
+  <text x="88" y="120" text-anchor="middle" font-size="14" fill="#A3301F">shame</text>
+  <circle cx="312" cy="80" r="76" fill="#FCEBD8" stroke="#D9822B" stroke-width="2"/>
+  <text x="312" y="62" text-anchor="middle" font-size="18" font-weight="700" fill="#8A4B0F">Drive</text>
+  <text x="312" y="84" text-anchor="middle" font-size="14" font-weight="600" fill="#8A4B0F">achieve</text>
+  <text x="312" y="102" text-anchor="middle" font-size="14" fill="#8A4B0F">wanting,</text>
+  <text x="312" y="120" text-anchor="middle" font-size="14" fill="#8A4B0F">excitement, pride</text>
+  <circle cx="200" cy="216" r="76" fill="#DDF0E4" stroke="#2E8B57" stroke-width="2"/>
+  <text x="200" y="198" text-anchor="middle" font-size="18" font-weight="700" fill="#1F6B41">Soothing</text>
+  <text x="200" y="220" text-anchor="middle" font-size="14" font-weight="600" fill="#1F6B41">calm, connect</text>
+  <text x="200" y="238" text-anchor="middle" font-size="14" fill="#1F6B41">safe, content,</text>
+  <text x="200" y="256" text-anchor="middle" font-size="14" fill="#1F6B41">cared for</text>
+</svg>
+      <figcaption>Based on psychologist Paul Gilbert's model from compassion-focused therapy (2009). It's a way of thinking about emotions, not a map of brain regions.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Threat: protect</strong><p>Scans for danger and gets you ready to defend. The inner critic runs on this system. It treats a mistake as a threat to your standing and attacks you before anyone else can.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Drive: achieve</strong><p>Pushes you toward goals, rewards, and status. Useful fuel. When it gets fused with fear of failing, it starts feeding the critic.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E8B57"></span><div><strong>Soothing: calm and connect</strong><p>Comes online when you feel safe and cared for, by someone else or by yourself. Gilbert argues that self-critical people tend to underuse it, so the threat system runs unchecked.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's so loud</span><span class="sticker">It thinks it's protecting you. It's not.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Self-criticism feels motivating. It mostly isn't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>It thinks it's protecting you.</dt>
-        <dd>The inner critic often tries to keep you from getting hurt or embarrassed by getting to you first. Its methods are just terrible.</dd>
-        <dt>Teen brains are tuned to how others see you.</dt>
-        <dd>During the teen years, your brain pays extra attention to social judgment. That can make self-criticism louder.</dd>
-        <dt>Negative thoughts feel more true.</dt>
-        <dd>Brains have a negativity bias: bad stuff sticks more than good. One criticism can outweigh ten compliments.</dd>
-        <dt>It repeats what it's heard.</dt>
-        <dd>Sometimes the inner critic echoes things other people have said to you. That doesn't make them true.</dd>
+        <dt>Self-compassion makes people try harder.</dt>
+        <dd>After failing a hard test, college students who were prompted to treat themselves with compassion studied longer for a retest than students prompted to boost their self-esteem, or given no prompt (Breines &amp; Chen, 2012).</dd>
+        <dt>It's linked to less distress in teens.</dt>
+        <dd>A review of 19 studies with more than 7,000 adolescents found a large link between higher self-compassion and lower anxiety, depression, and stress (Marsh, Chan &amp; MacBeth, 2018). These are correlations: a strong connection, not proof of cause.</dd>
+        <dt>People notice you far less than you think.</dt>
+        <dd>Students who walked into a room in an embarrassing T-shirt guessed about half the room noticed. Fewer than a quarter did (Gilovich, Medvec &amp; Savitsky, 2000). Psychologists call it the spotlight effect.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 The critic online</span><span class="sticker">Their highlight reel isn't evidence against you.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Where the voice learned its lines</span><span class="sticker">Some of the critic's words were someone else's first.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Social media gives the inner critic a lot of material: likes, follower counts, filtered faces, highlight reels. Every scroll can become a comparison.</p>
-      <p class="worst">The worst part: the critic uses other people's best moments as evidence against you, and it never mentions that those moments are edited.</p>
+      <p>The critic often repeats people: a coach, a sibling, a teacher, comments about your body, or messages about your race, size, gender, sexuality, or background that you've absorbed from the world around you.</p>
+      <p>Some families show love through high expectations and blunt feedback. That can be loving, and it can still leave a harsh voice behind. You can respect where a voice came from and still decide it doesn't get the last word.</p>
+      <p class="worst">Ask yourself: whose voice does this sound like?</p>
       </div>
     </details>
   </div>
@@ -465,58 +552,79 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Turn the critic into a coach</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">You can talk back to it.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🏷 Notice and name it.<span class="row-cue" aria-hidden="true"></span></summary><p>"There's my inner critic again." Just noticing creates a little distance between you and the thought.</p></details>
-        <details class="row"><summary>❓ Check the evidence.<span class="row-cue" aria-hidden="true"></span></summary><p>Is this thought a fact or an opinion? What would I say if a friend thought this about themselves?</p></details>
-        <details class="row"><summary>🫶 Talk to yourself like a friend.<span class="row-cue" aria-hidden="true"></span></summary><p>Research on self-compassion shows that being kind to yourself after mistakes helps people feel better and try again.</p></details>
-        <details class="row"><summary>🔄 Find a fairer thought.<span class="row-cue" aria-hidden="true"></span></summary><p>Not fake positive, just more accurate. "I'm an idiot" becomes "I made a mistake, and I can fix it."</p></details>
-        <details class="row"><summary>📝 Keep a proof list.<span class="row-cue" aria-hidden="true"></span></summary><p>Write down compliments, wins, and kind things people say. Read it when the critic gets loud.</p></details>
+      <div class="fold-label">The core skill</div>
+      <h3 class="sticker">Get some distance from the voice.</h3>
+      <p>You can't delete the critic. You can change how much it gets to decide.</p>
+      <div class="levers">
+        <div class="lever"><b>Notice it</b><span>"I'm having the thought that I'm an idiot" is different from "I'm an idiot." One is a thought. The other is a verdict.</span></div>
+        <div class="lever"><b>Use your name</b><span>People who prepped for a stressful speech by talking to themselves by name or as "you" felt less anxious and gave better speeches than people who used "I" (Kross et al., 2014). "Maya, you've done this before."</span></div>
+        <div class="lever"><b>Check the evidence</b><span>Fact or opinion? Would it hold up if a friend said it about themselves?</span></div>
+        <div class="lever"><b>Coach, don't condemn</b><span>A good coach is honest about the mistake and specific about the fix: "That intro was rushed. Slow down next time."</span></div>
+      </div>
+      <p class="tap-hint">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Don't try to shut it up.<span class="row-cue" aria-hidden="true"></span></summary><p>In the classic "white bear" study, people told not to think about a white bear ended up thinking about it more (Wegner et al., 1987). Banning a thought can make it louder. Notice it, then redirect.</p></details>
+        <details class="row"><summary><span class="num">2</span> Keep an evidence file.<span class="row-cue" aria-hidden="true"></span></summary><p>Wins, kind words, hard things you handled. The critic has a selective memory. Give yours a counterweight.</p></details>
+        <details class="row"><summary><span class="num">3</span> Audit your feed.<span class="row-cue" aria-hidden="true"></span></summary><p>Notice which accounts leave you feeling worse about yourself. Mute a few for a week and see what changes.</p></details>
+        <details class="row"><summary><span class="num">4</span> Say it out loud to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>The critic sounds more convincing inside your head than it does spoken to a person who likes you.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Answer it like your best friend would.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Rewrite the critic as a coach.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Write down something your inner critic says. Then answer it the way a good friend would.</p>
-      <label class="prompt" for="tx-1">What my inner critic says:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="you're so awkward, everyone thinks you're weird"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">Is that a fact or an opinion? What's the evidence?</label>
+      <p>Write down something your critic says. Then rewrite it as someone who's honest and on your side.</p>
+      <label class="prompt" for="tx-1">What the critic says:</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="you're so awkward, everyone noticed"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">Fact or opinion? What's the evidence on both sides?</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">What a good friend would say back:</label>
+      <label class="prompt" for="tx-3">The same message from a coach on your side. Try using your name:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-4">A fairer, more accurate thought:</label>
+      <label class="prompt" for="tx-4">One specific thing to do differently next time, if anything:</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Same moment, two voices. Which one's talking?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. Which voice is talking?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Which voice is talking?</p>
       <div class="scenario">
-        <p>You stumble over your words during a class presentation.</p>
+        <p>Your SAT score comes back 80 points below your goal.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="That's the critic: exaggerating and predicting the worst. Most people barely notice small stumbles.">"Everyone saw that. You're so embarrassing."</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's the friend voice: honest and kind at the same time.">"That was awkward for a second, but I kept going. That takes guts."</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That's the critic's fortune-teller. One stumble doesn't decide your future.">"I'll never present again."</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That's the critic: one score turned into a verdict on your whole future.">&quot;I'm not smart enough for the schools I want. Why even try?&quot;</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Honest about the disappointment and focused on what's next.">&quot;That stings. Which section cost me the most, and do I want to retake it?&quot;</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It protects you for a minute. Brushing it off isn't the same as being kind to yourself. You can care and still be gentle.">&quot;Whatever. Tests don't matter.&quot;</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>At practice, you miss an easy shot and hear a teammate laugh.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="That's mind reading. One laugh isn't the team's verdict, and most people forget a missed shot by the next drill.">&quot;Everyone thinks I don't deserve my spot.&quot;</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That is how athletes coach themselves under pressure: short, kind, and forward.">&quot;Bad miss. Shake it off. Next rep.&quot;</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>A friend has a small birthday dinner, and you weren't invited.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="The critic jumped from one dinner to everyone, forever.">&quot;Of course. Nobody actually likes me.&quot;</button>
+          <button class="choice" type="button" data-fb="good" data-msg="You let it hurt and kept the explanation open. Plenty of small dinners are family-only or limited by space.">&quot;That hurts. Maybe it was a family thing or a small table. I could ask, or let it go.&quot;</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually use.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make the critic louder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🙉 Trying to shut it up completely.<span class="row-cue" aria-hidden="true"></span></summary><p>Fighting thoughts often makes them louder. Noticing and answering works better.</p></details>
-        <details class="row"><summary>😁 Forced positivity.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm amazing at everything!" doesn't feel believable. Aim for fair and kind instead.</p></details>
-        <details class="row"><summary>🔁 Replaying mistakes at night.<span class="row-cue" aria-hidden="true"></span></summary><p>If you can't stop, write it down and tell yourself you'll think about it tomorrow.</p></details>
-        <details class="row"><summary>📏 Comparing to others.<span class="row-cue" aria-hidden="true"></span></summary><p>Comparison is the critic's favorite tool. Take breaks from feeds that feed it.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I'm nice to myself, I'll get lazy.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The research points the other way. Self-compassion after failure goes with more effort to improve, not less.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Positive affirmations will fix it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Telling yourself "I'm amazing" when you don't believe it can make the gap feel bigger. Aim for fair and kind, not glowing.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Everyone saw it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The spotlight effect says most people noticed less than you think, and forgot faster.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> The critic is the real me.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It's a learned habit of thinking. Habits can be relearned.</p></details>
       </div>
       </div>
     </details>
@@ -526,10 +634,25 @@
       <ul class="tight">
         <li>The critic is loud most of the day, most days.</li>
         <li>You feel worthless or hopeless.</li>
+        <li>The critic is mostly about your body, food, or weight.</li>
         <li>You're having thoughts of hurting yourself.</li>
       </ul>
       <p style="margin:0">These are signs to talk to someone soon. A counselor can help. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Gilbert, P. (2009). Introducing compassion-focused therapy. <i>Advances in Psychiatric Treatment</i>.</li>
+        <li>Breines, J. G., &amp; Chen, S. (2012). Self-compassion increases self-improvement motivation. <i>Personality and Social Psychology Bulletin</i>.</li>
+        <li>Marsh, I. C., Chan, S. W. Y., &amp; MacBeth, A. (2018). Self-compassion and psychological distress in adolescents: A meta-analysis. <i>Mindfulness</i>.</li>
+        <li>Gilovich, T., Medvec, V. H., &amp; Savitsky, K. (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. <i>Journal of Personality and Social Psychology</i>.</li>
+        <li>Kross, E., et al. (2014). Self-talk as a regulatory mechanism: How you do it matters. <i>Journal of Personality and Social Psychology</i>.</li>
+        <li>Wegner, D. M., Schneider, D. J., Carter, S. R., &amp; White, T. L. (1987). Paradoxical effects of thought suppression. <i>Journal of Personality and Social Psychology</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -540,26 +663,28 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-5">What my inner critic says most often</label>
+      <label class="prompt" for="tx-5">What my critic says most, word for word</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">Where I think that voice came from</label>
+      <label class="prompt" for="tx-6">Whose voice it sounds like, or where it might have learned that</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-7">What I'd say to a friend who said that about themselves</label>
+      <label class="prompt" for="tx-7">What it might be trying to protect me from</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Three things I've done that I'm proud of, even small ones</label>
+      <label class="prompt" for="tx-8">The same message, rewritten by someone on my side</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-9">A kinder sentence I could tell myself this week</label>
+      <label class="prompt" for="tx-9">Evidence the critic leaves out</label>
       <textarea id="tx-9" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your inner critic is a voice, not the truth. You get to decide which voices you listen to.</p>
+      <p>The critic is a voice, not a verdict. You don't have to silence it. You need a second voice that's fairer, and on your side.</p>
     </div>
     </div>
   </div>
@@ -574,7 +699,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where is your inner critic today?</h3>
+        <h3 id="ci-1">How loud is your inner critic today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -588,10 +713,10 @@
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
           <button type="button" class="chip" aria-pressed="false">critic was loud</button>
-          <button type="button" class="chip" aria-pressed="false">replaying a mistake</button>
+          <button type="button" class="chip" aria-pressed="false">replaying something I said</button>
           <button type="button" class="chip" aria-pressed="false">comparing myself to others</button>
-          <button type="button" class="chip" aria-pressed="false">didn't believe a compliment</button>
-          <button type="button" class="chip" aria-pressed="false">felt not good enough</button>
+          <button type="button" class="chip" aria-pressed="false">brushed off a compliment</button>
+          <button type="button" class="chip" aria-pressed="false">a grade or score</button>
           <button type="button" class="chip" aria-pressed="false">body or looks stuff</button>
           <button type="button" class="chip" aria-pressed="false">felt behind everyone</button>
           <button type="button" class="chip" aria-pressed="false">scrolled and felt worse</button>
@@ -605,11 +730,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-loud" aria-pressed="false">📢 Critic is really loud</button>
-          <button type="button" class="choice" data-path="p-compare" aria-pressed="false">📏 Comparing myself to everyone</button>
-          <button type="button" class="choice" data-path="p-mistake" aria-pressed="false">🔁 Stuck on a mistake</button>
-          <button type="button" class="choice" data-path="p-low" aria-pressed="false">🌫 Feeling down about myself</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Kinder to myself today</button>
+          <button type="button" class="choice" data-path="p-loud" aria-pressed="false">Critic is really loud</button>
+          <button type="button" class="choice" data-path="p-compare" aria-pressed="false">Comparing myself to everyone</button>
+          <button type="button" class="choice" data-path="p-mistake" aria-pressed="false">Stuck on a mistake</button>
+          <button type="button" class="choice" data-path="p-low" aria-pressed="false">Down on myself</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Kinder to myself today</button>
         </div>
 
         <div class="path-panel" id="p-loud" hidden>
@@ -617,9 +742,9 @@
           <p>When the critic is this loud, it can feel like the truth. It isn't.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🏷</span>Name it: "That's my critic talking."</li>
-            <li><span class="e" aria-hidden="true">✍️</span>Use the talk-back exercise above.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell someone you trust what the voice is saying. Saying it out loud often shrinks it.</li>
+            <li><span class="e" aria-hidden="true"></span>Name it: "That's the critic talking."</li>
+            <li><span class="e" aria-hidden="true"></span>Use the critic-to-coach exercise above.</li>
+            <li><span class="e" aria-hidden="true"></span>Tell someone you trust what the voice is saying. Out loud, it often shrinks.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-compare" hidden>
@@ -627,19 +752,19 @@
           <p>Comparison gives the critic its ammunition. You're seeing other people's outsides, not their insides.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📵</span>Take a break from the feed for a few hours.</li>
-            <li><span class="e" aria-hidden="true">🪞</span>The Comparison Trap has more on this.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write down one thing you're good at that has nothing to do with anyone else.</li>
+            <li><span class="e" aria-hidden="true"></span>Take a break from the feed for a few hours.</li>
+            <li><span class="e" aria-hidden="true"></span>The Comparison Trap has more on this.</li>
+            <li><span class="e" aria-hidden="true"></span>Write one thing you value about yourself that has nothing to do with anyone else.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-mistake" hidden>
           <h4>What this might mean</h4>
-          <p>Mistakes feel huge in the moment. Most fade faster than you think.</p>
+          <p>Mistakes feel huge in the moment. Most fade faster than you expect, for you and for everyone else.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🫶</span>Say: "I made a mistake. I'm still okay."</li>
-            <li><span class="e" aria-hidden="true">🧰</span>If someone was affected, The Repair Kit can help.</li>
-            <li><span class="e" aria-hidden="true">🌙</span>If it keeps you up, write it down and leave it for tomorrow.</li>
+            <li><span class="e" aria-hidden="true"></span>Say: "I made a mistake. I'm still okay."</li>
+            <li><span class="e" aria-hidden="true"></span>If someone was affected, The Repair Kit can help.</li>
+            <li><span class="e" aria-hidden="true"></span>If it keeps you up, write it down and leave it for tomorrow.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-low" hidden>
@@ -647,9 +772,9 @@
           <p>Feeling low about yourself is heavy. You don't have to carry it alone.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Read your proof list, or start one now with one thing.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Reach out to someone who makes you feel good about yourself.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>If this feeling hangs around, talk to a counselor.</li>
+            <li><span class="e" aria-hidden="true"></span>Read your evidence file, or start one with one thing.</li>
+            <li><span class="e" aria-hidden="true"></span>Reach out to someone who makes you feel like yourself.</li>
+            <li><span class="e" aria-hidden="true"></span>If this feeling hangs around, talk to a counselor.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -657,9 +782,9 @@
           <p>That's a skill, and you're using it. Better days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Add something to your proof list.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Pass it on: say something kind to someone else.</li>
+            <li><span class="e" aria-hidden="true"></span>Notice what helped.</li>
+            <li><span class="e" aria-hidden="true"></span>Add something to your evidence file.</li>
+            <li><span class="e" aria-hidden="true"></span>Pass it on: say something kind to someone else.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -687,7 +812,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to your best friend. You deserve to hear the same kindness you give.</p>
+        <p class="closing">Talk to yourself the way a good coach would: honest about the miss, and clearly on your side.</p>
       </div>
     </div>
     </div>

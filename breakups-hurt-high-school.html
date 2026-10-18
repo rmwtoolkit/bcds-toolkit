@@ -362,6 +362,75 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure (relationship series) ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .finding { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; line-height:1.5; }
+  .finding b { color:var(--ink); }
+
+  .fig svg.brain text { font-size:13px; font-weight:700; }
 </style>
 </head>
 
@@ -381,9 +450,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">💧 High School · Relationships and dating</div>
+  <div class="eyebrow">High School · Relationships and dating</div>
   <h1>Breakups Hurt</h1>
-  <p class="tagline">Because the first breakup can feel like the end of the world, and it isn't.</p>
+  <p class="tagline">What a breakup does to your brain, why the urge to check is so strong, and what actually speeds recovery.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +460,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,54 +477,93 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why breakups hurt so much</h2>
+    <h2 id="h-understand">Why it hits this hard</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Even if it was short, it can really hurt.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know it's over. Your brain hasn't caught up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Someone you were dating ended it, or you ended it, and it hurts more than you expected.</li>
-        <li>A crush you really liked started liking someone else.</li>
-        <li>You changed your mind about someone and don't know how to tell them.</li>
-        <li>Everyone at school seems to know about it, and maybe has an opinion.</li>
-        <li>You keep checking their stories, their Snap score, or who they're with.</li>
-        <li>Friend groups got awkward and you're not sure where you fit now.</li>
+        <li>You know it's over, and you still reread old messages at 1 a.m.</li>
+        <li>You're fine all day, then one song in the car wrecks you.</li>
+        <li>You ended it, it was the right call, and you still feel terrible.</li>
+        <li>You sit two rows from them in chemistry every day.</li>
+        <li>People keep saying "it was only a few months."</li>
+        <li>Your family didn't know about the relationship, so you can't talk about it at home.</li>
       </ul>
-      <p style="margin:0">('Even if it was short, even if it was "just" a crush, it can hurt a lot. Your feelings count.', 'Even if it was short, even if people say "you\'ll get over it," a breakup can hurt a lot. Your feelings count.')</p>
+      <p style="margin:0">You already know breakups hurt. Here's why the pain takes the shape it does, and what research says about getting through it.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Why it hurts so much</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">💔</span><strong>Loss</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">You lost someone you cared about and a future you imagined. Grief is a normal reaction.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">👀</span><strong>It's public</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">At school and online, everyone sees. You might have to see them every day.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧩</span><strong>Ripple effects</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Shared friends, shared lunch tables, and shared group chats can all shift.</p></details>
+    <h3 style="margin-top:28px">Your brain is still wired for them</h3>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 276" role="img" aria-labelledby="bk-t bk-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="bk-t">Side view of the brain, regions active after a breakup</title>
+  <desc id="bk-d">The ventral tegmental area sits in the midbrain at the top of the brainstem. A dopamine pathway runs forward from it to the nucleus accumbens, deep near the front, and on to the orbitofrontal cortex on the underside of the frontal lobe, behind the eyes. The insula lies deep inside the side of the brain, folded under the outer cortex.</desc>
+  <!-- cerebellum + brainstem -->
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <!-- cerebrum -->
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <!-- folds (gyri hints) -->
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <!-- corpus callosum -->
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <!-- orbitofrontal cortex -->
+  <path d="M71 150 C76 172 104 195 156 203 L158 180 C128 178 102 166 92 140 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <!-- insula (deep lateral cortex) -->
+  <ellipse cx="200" cy="150" rx="26" ry="13" transform="rotate(-12 200 150)" fill="#1A9E8F" fill-opacity=".85"/>
+  <!-- dopamine pathway -->
+  <path d="M236 184 C214 176 186 160 160 148 C140 150 124 168 120 186" fill="none" stroke="#7A4FB5" stroke-width="2" stroke-dasharray="4 4"/>
+  <!-- nucleus accumbens -->
+  <ellipse cx="158" cy="148" rx="13" ry="8" fill="#D9822B"/>
+  <!-- VTA -->
+  <ellipse cx="238" cy="185" rx="9" ry="6" fill="#7A4FB5"/>
+  <g>
+    <line x1="200" y1="140" x2="176" y2="22" stroke="#127A6E" stroke-width="1.5"/><circle cx="200" cy="140" r="3" fill="#127A6E"/>
+    <text x="150" y="16" fill="#0F6B60">Insula (deep)</text>
+    <line x1="158" y1="148" x2="100" y2="123" stroke="#B8691C" stroke-width="1.5"/><circle cx="158" cy="148" r="3" fill="#B8691C"/>
+    <text x="8" y="112" fill="#9A5714">Nucleus</text><text x="8" y="127" fill="#9A5714">accumbens</text>
+    <line x1="116" y1="182" x2="72" y2="236" stroke="#245A96" stroke-width="1.5"/><circle cx="116" cy="182" r="3" fill="#245A96"/>
+    <text x="8" y="252" fill="#245A96">Orbitofrontal cortex</text>
+    <line x1="238" y1="185" x2="212" y2="252" stroke="#5E3B8F" stroke-width="1.5"/><circle cx="238" cy="185" r="3" fill="#5E3B8F"/>
+    <text x="176" y="268" fill="#5E3B8F">VTA (midbrain)</text>
+  </g>
+  <text x="392" y="14" style="font-size:11px;font-weight:400" fill="#6B6156" text-anchor="end">face ← · → back of head</text>
+</svg>
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. The insula sits inside the side of the brain, under the outer folds. Simplified: these areas work as networks.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>VTA: the wanting doesn't switch off</strong><p>A hub of the brain's dopamine system. In a 2010 brain-imaging study of people recently rejected but still in love, it lit up when they looked at a photo of their ex, much as it does in people who are happily in love. The relationship ended. The wanting didn't, yet.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Nucleus accumbens: the pull to check</strong><p>Part of the reward system, also active in that study. The researchers noted overlap with regions involved in craving. That's one reason the urge to text or check their story feels like a pull more than a decision. Whether rejection truly works like addiction is still debated.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1A9E8F"></span><div><strong>Insula: why it can feel physical</strong><p>In a 2011 study, 40 people who'd had an unwanted breakup in the past six months looked at their ex's photo in a scanner. Areas that also process physical pain became active, including part of the insula. Other scientists argue these areas aren't pain-specific, so "heartbreak is physical pain" goes too far. The overlap is still real.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Orbitofrontal cortex: making sense of it</strong><p>Weighs gains and losses and helps regulate emotion. It was active as rejected people tried to understand what happened. It's the part you're using when you step back and rethink the story.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">What's going on inside</span><span class="sticker">It hurts because your brain feels it like pain.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Most people recover faster than they expect. Not everyone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain is in withdrawal.</dt>
-        <dd>Research suggests romantic rejection activates some of the same brain areas as physical pain. It really can feel like it hurts.</dd>
-        <dt>First experiences hit hard.</dt>
-        <dd>When something is new, there's nothing to compare it to, so it can feel like it will never get better.</dd>
-        <dt>You might feel lots of things at once.</dt>
-        <dd>Sad, angry, relieved, embarrassed, lonely. Mixed feelings are completely normal.</dd>
-        <dt>It gets better.</dt>
-        <dd>The pain usually fades week by week, even if it doesn't feel that way right now.</dd>
+        <dt>You'll probably feel better sooner than you predict.</dt>
+        <dd>A Northwestern study asked college students in relationships to predict how upset they'd be if they broke up, then followed the ones who did. Most overestimated their distress, and the people most in love overestimated it the most.</dd>
+        <dt>And breakups are a real risk factor.</dt>
+        <dd>In a study of 1,470 older teens, a recent romantic breakup was linked to a higher chance of a first episode of major depression. Both things are true: most people recover well, and some need more help. If the low isn't lifting, that's a signal, not a weakness.</dd>
+        <dt>Rebuilding "me" is the work.</dt>
+        <dd>In a 2015 study of 210 young adults after a breakup, the ones who reflected on it repeatedly regained a clearer sense of who they were. That clearer sense of self, apart from "us," predicted less loneliness and fewer intrusive thoughts.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Breakups online</span><span class="sticker">Every check rips the bandage off again.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Checking their profile</span><span class="sticker">Every check resets the clock.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Checking their stories. Seeing them on Snap Map with someone new. Watching your streak die. Wondering whether to unfollow, archive old photos, or leave the group chat. The phone keeps reopening the wound.</p>
-      <p class="worst">The worst part: every time you check their profile, it's like ripping the bandage off again.</p>
+      <p>In a study of 464 people, those who kept checking an ex's profile reported more distress, more longing, and less personal growth, even after accounting for how much they saw the ex in person. The study can't prove checking causes the pain. People who miss someone more may check more.</p>
+      <p class="worst">Still, muting them for two weeks is the cheapest experiment you can run on yourself.</p>
       </div>
     </details>
   </div>
@@ -465,53 +572,64 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Getting through it</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">You don't have to be over it today.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>😢 Let yourself feel it.<span class="row-cue" aria-hidden="true"></span></summary><p>Cry, vent, write, listen to sad music for a bit. Feelings move through faster when you let them.</p></details>
-        <details class="row"><summary>👥 Lean on your people.<span class="row-cue" aria-hidden="true"></span></summary><p>Spend time with friends and family who make you feel good. You don't have to talk about the breakup the whole time.</p></details>
-        <details class="row"><summary>📵 Take an online break from them.<span class="row-cue" aria-hidden="true"></span></summary><p>Mute, archive, or unfollow for a while. You can always change it later. It's about protecting yourself, not making a statement.</p></details>
-        <details class="row"><summary>🗓 Keep your routine.<span class="row-cue" aria-hidden="true"></span></summary><p>School, sleep, activities, eating. Keeping things normal gives your mind something steady.</p></details>
-        <details class="row"><summary>🛑 Skip the revenge.<span class="row-cue" aria-hidden="true"></span></summary><p>Posting about them, sending angry texts, or spreading rumors usually makes you feel worse and can stick around.</p></details>
-        <details class="row"><summary>🌱 Do something just for you.<span class="row-cue" aria-hidden="true"></span></summary><p>Try something new, pick up an old hobby, or spend time on what you love.</p></details>
+      <div class="fold-label">Strategies with research behind them</div>
+      <h3 class="sticker">What works, and what each one costs.</h3>
+      <div class="levers">
+        <div class="lever"><b>Rethink the story</b><span>In a 2018 study, deliberately focusing on an ex's flaws lowered love feelings, but made people feel worse in the moment. Useful when you're stuck idealizing them. Go easy.</span></div>
+        <div class="lever"><b>Distract on purpose</b><span>Same study: distraction lifted mood but didn't change love feelings. Good for getting through a bad night.</span></div>
+        <div class="lever"><b>Cut the exposure</b><span>Mute, archive, move the app. Fewer reminders means fewer restarts.</span></div>
+        <div class="lever"><b>Rebuild "me"</b><span>Friends, plans, and interests that were yours before. A clearer sense of self predicted better recovery.</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">More moves. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Plan for the hard hours.<span class="row-cue" aria-hidden="true"></span></summary><p>Nights, weekends, the drive home. Know in advance who you'll text and what you'll do instead of scrolling.</p></details>
+        <details class="row"><summary><span class="num">2</span> Decide how to handle shared spaces.<span class="row-cue" aria-hidden="true"></span></summary><p>Same class, team, or friends? Pick your script ahead of time: a nod, polite and short, no big talks in public.</p></details>
+        <details class="row"><summary><span class="num">3</span> Keep your routine.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, food, practice, work shifts. Routine keeps a bad week from turning into a bad month.</p></details>
+        <details class="row"><summary><span class="num">4</span> Let it be as big as it is.<span class="row-cue" aria-hidden="true"></span></summary><p>Short relationships, secret ones, and first ones can hurt a lot. You don't need anyone's permission to grieve it.</p></details>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Say all of it. You won't hit send.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Write what you wish you could say to them. You won't send it, and nothing here is saved. Getting it out can help.</p>
-      <label class="prompt" for="tx-1">What I want to say:</label>
+      <p>Writing it out is a way of reflecting on purpose. Nothing here is saved or sent.</p>
+      <label class="prompt" for="tx-1">The message I'm not sending:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">What I need right now:</label>
+      <label class="prompt" for="tx-2">What I actually need right now, from other people and from myself:</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">One thing I'm looking forward to:</label>
+      <label class="prompt" for="tx-3">Something that was mine before them, that I want back:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Tough moments. What would actually help?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three hard moments. What would help?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Pick the most helpful move.</p>
-      
-      <div class="scenario" >
-        <p>It's been a week and you keep checking their stories to see who they're with.</p>
+      <div class="scenario">
+        <p>Two weeks after the breakup, Rafael's ex texts at 11:40 p.m.: "I miss you. Can we talk?" He's still hurting.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Each check restarts the hurt. Not knowing is easier over time.">Keep checking, you just want to know</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's not petty. It's giving yourself room to heal.">Mute or archive them for now</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That usually leads to more pain and confusion.">Message them asking who they're hanging out with</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Late at night, with feelings this high, is the worst time to decide anything.">Reply right away</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Talking again might be fine. Deciding with a rested brain is what matters.">Wait until morning, then decide what he actually wants</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Fair if he needs distance. It's a choice he can make in daylight too.">Block them</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>You want to end things with someone, but you don't want to hurt them.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Priyanka's ex is now dating someone in their friend group, and they all sit at the same lunch table.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Ghosting leaves the other person confused and hurt.">Ghost them and hope they get the hint</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Honest and kind is the most respectful way. A text is okay if talking doesn't feel safe.">Tell them kindly and clearly, in person or a call if it's safe</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="That can feel easier, but it's usually more hurtful. Do it yourself if you can.">Have a friend tell them</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That turns her pain into a public fight, and the screenshots last longer than the feelings.">Call it out in the group chat</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Space plus one honest conversation. She doesn't have to pretend or perform.">Sit with other friends for a while, and tell one close friend the truth</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Possible for a few days, but pretending takes energy. Some space is easier.">Act fine every day</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Malik has dated someone for five months and wants to end it. He doesn't want to be cruel.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="A slow fade is ghosting in slow motion. It's confusing and drags out the hurt.">Slowly reply less until they get it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Short, honest, no blame: &quot;I don't want to keep dating. I'm sorry this hurts.&quot; A text is fine if talking doesn't feel safe.">Say it clearly and kindly, in person or on a call if it's safe</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Easier for him, harder for them. Do it yourself if you can.">Have a friend tell them</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -520,13 +638,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These keep the wound open.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths about getting over it</span><span class="sticker">What people say, and what's closer to true.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🔍 Checking their profiles.<span class="row-cue" aria-hidden="true"></span></summary><p>It keeps the wound open.</p></details>
-        <details class="row"><summary>📲 Drunk-texting or late-night texting.<span class="row-cue" aria-hidden="true"></span></summary><p>Feelings run high at night. Wait until morning.</p></details>
-        <details class="row"><summary>🗣 Talking badly about them.<span class="row-cue" aria-hidden="true"></span></summary><p>It can backfire and hurt shared friendships.</p></details>
-        <details class="row"><summary>🏃 Jumping into something new right away.<span class="row-cue" aria-hidden="true"></span></summary><p>It can feel like a fix, but feelings usually catch up.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If it was short, it shouldn't hurt this much.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Your reward system doesn't check the calendar. How much you invested matters more than how long it lasted.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Staying friends right away is the mature move.</span><span class="row-cue" aria-hidden="true"></span></summary><p>In the profile study, people who stayed online friends with an ex reported less longing but also less personal growth. Friendship can come later, if you both want it.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Someone new will fix it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A new person can be a distraction, and distraction helps for a while. It doesn't do the work of rebuilding your own sense of self.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I ended it, I don't get to be sad.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You can lose something you chose to leave. Guilt and relief can sit next to each other.</p></details>
       </div>
       </div>
     </details>
@@ -534,13 +652,28 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to get more help</h3>
       <ul class="tight">
-        <li>You feel hopeless, or the sadness isn't easing after a few weeks.</li>
-        <li>You're having trouble eating, sleeping, or going to school.</li>
-        <li>Your ex is threatening you, harassing you, or sharing private things.</li>
-        <li>You're thinking about hurting yourself.</li>
+        <li>The sadness isn't easing after a few weeks, or you feel hopeless.</li>
+        <li>You're having trouble eating, sleeping, or getting to school.</li>
+        <li>Your ex is threatening you, harassing you, or sharing private images. In Massachusetts, sharing explicit images without consent is a crime.</li>
+        <li>You're thinking about hurting yourself. Call or text <strong>988</strong> any time.</li>
       </ul>
-      <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can help, and so can love is respect (text LOVEIS to 22522) if your ex won't leave you alone. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Fisher, H. E., Brown, L. L., Aron, A., Strong, G., &amp; Mashek, D. (2010). Reward, addiction, and emotion regulation systems associated with rejection in love. <i>Journal of Neurophysiology</i>.</li>
+        <li>Kross, E., Berman, M. G., Mischel, W., Smith, E. E., &amp; Wager, T. D. (2011). Social rejection shares somatosensory representations with physical pain. <i>Proceedings of the National Academy of Sciences</i>.</li>
+        <li>Eastwick, P. W., Finkel, E. J., Krishnamurti, T., &amp; Loewenstein, G. (2008). Mispredicting distress following romantic breakup: Revealing the time course of the affective forecasting error. <i>Journal of Experimental Social Psychology</i>.</li>
+        <li>Monroe, S. M., Rohde, P., Seeley, J. R., &amp; Lewinsohn, P. M. (1999). Life events and depression in adolescence: Relationship loss as a prospective risk factor for first onset of major depressive disorder. <i>Journal of Abnormal Psychology</i>.</li>
+        <li>Larson, G. M., &amp; Sbarra, D. A. (2015). Participating in research on romantic breakups promotes emotional recovery via changes in self-concept clarity. <i>Social Psychological and Personality Science</i>.</li>
+        <li>Marshall, T. C. (2012). Facebook surveillance of former romantic partners: Associations with postbreakup recovery and personal growth. <i>Cyberpsychology, Behavior, and Social Networking</i>.</li>
+        <li>Langeslag, S. J. E., &amp; Sanchez, M. E. (2018). Down-regulation of love feelings after a romantic break-up: Self-report and electrophysiological data. <i>Journal of Experimental Psychology: General</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -551,26 +684,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">What I miss, and what I don't</label>
+      <label class="prompt" for="tx-4">What I miss, and what I don't miss at all</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I learned about what I want, and don't want, in a relationship</label>
+      <label class="prompt" for="tx-5">What I know now about what I want, and won't accept, next time</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">People who've been there for me</label>
+      <label class="prompt" for="tx-6">Who I was before this relationship, and what I want back</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">Things that make me feel like myself again</label>
+      <label class="prompt" for="tx-7">How my family, culture, or friends talk about breakups, and whether that helps me</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">What I'd tell a friend going through this</label>
+      <label class="prompt" for="tx-8">What I would tell a friend at this exact point in a breakup</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>A breakup ends a relationship, not your story. You're still you, and good things are still ahead.</p>
+      <p>The pull you feel is your brain doing what brains do after a loss. It fades with less contact and more of your own life. Give it both.</p>
     </div>
     </div>
   </div>
@@ -585,7 +718,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">How are you doing with the breakup today?</h3>
+        <h3 id="ci-1">How much is the breakup taking up your head today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -601,12 +734,12 @@
           <button type="button" class="chip" aria-pressed="false">really sad</button>
           <button type="button" class="chip" aria-pressed="false">angry</button>
           <button type="button" class="chip" aria-pressed="false">relieved</button>
-          <button type="button" class="chip" aria-pressed="false">embarrassed it's public</button>
-          <button type="button" class="chip" aria-pressed="false">keep checking their profile</button>
+          <button type="button" class="chip" aria-pressed="false">reread old messages</button>
+          <button type="button" class="chip" aria-pressed="false">checked their profile</button>
           <button type="button" class="chip" aria-pressed="false">saw them with someone new</button>
           <button type="button" class="chip" aria-pressed="false">awkward with shared friends</button>
           <button type="button" class="chip" aria-pressed="false">I ended it and feel guilty</button>
-          <button type="button" class="chip" aria-pressed="false">hung out with friends</button>
+          <button type="button" class="chip" aria-pressed="false">can't talk about it at home</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
@@ -616,50 +749,50 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-sad" aria-pressed="false">😢 Really sad</button>
-          <button type="button" class="choice" data-path="p-online" aria-pressed="false">📱 Can't stop checking</button>
-          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">😤 Angry</button>
-          <button type="button" class="choice" data-path="p-guilt" aria-pressed="false">😔 I ended it and feel guilty</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Starting to feel better</button>
+          <button type="button" class="choice" data-path="p-sad" aria-pressed="false">Really sad</button>
+          <button type="button" class="choice" data-path="p-online" aria-pressed="false">Can't stop checking</button>
+          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">Angry</button>
+          <button type="button" class="choice" data-path="p-guilt" aria-pressed="false">I ended it and feel guilty</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Starting to feel better</button>
         </div>
 
         <div class="path-panel" id="p-sad" hidden>
           <h4>What this might mean</h4>
-          <p>Sadness after a breakup is real grief. It makes sense to hurt.</p>
+          <p>This is grief, and grief comes in waves. A hard day doesn't mean you're going backward.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">😢</span>Let yourself feel it. Crying helps.</li>
-            <li><span class="e" aria-hidden="true">👥</span>Spend time with someone who makes you laugh.</li>
-            <li><span class="e" aria-hidden="true">🌙</span>Keep your sleep and meals as normal as you can.</li>
+            <li><span class="e" aria-hidden="true">😢</span>Let the wave come. Then do one ordinary thing.</li>
+            <li><span class="e" aria-hidden="true">👥</span>Be around one person who makes you feel like yourself.</li>
+            <li><span class="e" aria-hidden="true">🌙</span>Protect sleep. Everything hurts more on four hours.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-online" hidden>
           <h4>What this might mean</h4>
-          <p>The urge to check is strong. Each check makes it harder to move on.</p>
+          <p>That's the reward system pulling. Each check is a small restart.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔕</span>Mute or archive them for two weeks.</li>
-            <li><span class="e" aria-hidden="true">📱</span>Move the app off your home screen for now.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Text a friend instead of checking.</li>
+            <li><span class="e" aria-hidden="true">🔕</span>Mute or archive them for two weeks. You can undo it later.</li>
+            <li><span class="e" aria-hidden="true">📱</span>Move the app off your home screen, or log out at night.</li>
+            <li><span class="e" aria-hidden="true">💬</span>When the urge hits, text a friend instead.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-angry" hidden>
           <h4>What this might mean</h4>
-          <p>Anger after a breakup is normal. It's what you do with it that matters.</p>
+          <p>Anger after a breakup is normal. It often sits on top of hurt.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">✍️</span>Write the letter you won't send.</li>
-            <li><span class="e" aria-hidden="true">🏃</span>Move your body to burn it off.</li>
-            <li><span class="e" aria-hidden="true">😤</span>Anger Is Information can help.</li>
+            <li><span class="e" aria-hidden="true">✍️</span>Write the message you won't send, in the box above.</li>
+            <li><span class="e" aria-hidden="true">🏃</span>Move hard for twenty minutes.</li>
+            <li><span class="e" aria-hidden="true">⏳</span>Wait a day before saying anything you can't take back.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-guilt" hidden>
           <h4>What this might mean</h4>
-          <p>Ending something that wasn't right takes courage. You can be kind and still say no.</p>
+          <p>Ending something that wasn't right takes courage. You can be kind and still be sure.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🫶</span>Remind yourself why you made the choice.</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Give them space.</li>
+            <li><span class="e" aria-hidden="true">🫶</span>Write down why you chose this. Reread it on hard days.</li>
+            <li><span class="e" aria-hidden="true">🧭</span>Give them space, even if checking on them feels kind.</li>
             <li><span class="e" aria-hidden="true">🗣</span>Talk it through with a friend or counselor.</li>
           </ul>
         </div>
@@ -668,9 +801,9 @@
           <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what's helping.</li>
-            <li><span class="e" aria-hidden="true">🌱</span>Keep doing things that are just for you.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Thank a friend who's been there.</li>
+            <li><span class="e" aria-hidden="true">🔎</span>Notice what's helping, so you can do more of it.</li>
+            <li><span class="e" aria-hidden="true">🌱</span>Keep investing in the things that are just yours.</li>
+            <li><span class="e" aria-hidden="true">🤲</span>Thank someone who's been there.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -698,7 +831,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend going through a breakup. You'd remind them they're worth it. So are you.</p>
+        <p class="closing">Be as patient with yourself as you'd be with a friend going through this. You'd tell them it gets easier. It does.</p>
       </div>
     </div>
     </div>

@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure + research notes (same palette) */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .rn { background:#fff; border-radius:14px; padding:14px 16px; margin:14px 0; font-size:.95rem; line-height:1.5; }
+  .rn > span:first-child { display:block; font-size:.72rem; font-weight:700; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:4px; text-transform:uppercase; }
+  .card .rn, .fold-body .rn { background:var(--paper); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:6px 0 10px; }
+  .stat { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .stat b { display:block; font-size:1.7rem; letter-spacing:-.02em; line-height:1.05; }
+  .stat span { display:block; margin-top:6px; font-size:.88rem; color:var(--ink-soft); line-height:1.4; }
+  .ways details.tile > summary strong { font-size:1.02rem; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🆘 High School · Looking out for each other</div>
+  <div class="eyebrow">High School · Looking out for each other</div>
   <h1>When a Friend Tells You Something Scary</h1>
-  <p class="tagline">Because being trusted is a big deal, and some things are too big to keep.</p>
+  <p class="tagline">What to say in the first five minutes, how to tell how urgent it is, and what actually happens after you tell an adult.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +463,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,54 +480,83 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">When a friend shares something serious</h2>
+    <h2 id="h-understand">When someone picks you to tell</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Too big to hold alone? You don't have to.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">They chose you. Now you're holding it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>A friend told you they've been hurting themselves.</li>
-        <li>A friend said something like "I don't want to be here anymore" or "Everyone would be better off without me."</li>
-        <li>A friend told you someone is hurting them, at home or somewhere else.</li>
-        
-        <li >A friend is drinking or using drugs in a way that scares you, or isn't eating.</li>
-        <li>A friend posted or messaged something late at night that made your stomach drop.</li>
-        <li>A friend made you promise not to tell anyone.</li>
+        <li>It's 1 a.m. and a friend texts, "Can I tell you something if you swear you won't say anything?"</li>
+        <li>A teammate has been skipping meals since preseason and fainted at practice. She says it's "just cutting weight."</li>
+        <li>Your friend's jokes about not waking up have gotten darker, and nobody laughs anymore.</li>
+        <li>Someone tells you their partner checks their phone, controls who they see, and shoved them once.</li>
+        <li>A friend says an adult at home has been hurting them, and begs you not to make it worse.</li>
       </ul>
-      <p style="margin:0">Being the person someone trusts is a big deal. It can also feel like way too much to hold by yourself. You don't have to.</p>
+      <p style="margin:0">You learned "tell an adult" years ago. That's still the rule. What's harder now is everything around it: you know more, people trust you with more, and the right adult isn't always obvious.</p>
       </div>
     </details>
 
+    <div class="rn"><span>Research</span>You are probably the first to know. In a survey of 6,020 students aged 15 and 16, teens who had hurt themselves or thought about it were more likely to go to a friend than to anyone else. Many who felt they needed help never asked anyone at all (Evans, Hawton and Rodham, 2005).</div>
+
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What "scary" can look like</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">💬</span><strong>Something they say</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Talking about wanting to die, hurting themselves, or feeling hopeless, even as a joke.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📱</span><strong>Something online</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">A worrying post, a goodbye-sounding message, a dark story or comment, or a sudden change in what they share.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">👀</span><strong>Something you notice</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Giving away things they care about, pulling away from everyone, cuts or burns, big changes in eating or sleep.</p></details>
+    <h3 style="margin-top:28px">First question: how urgent is it?</h3>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 360 300" role="img" aria-label="Three levels of urgency. Now: a plan, a goodbye, already hurt or took something, or being hurt right now. Stay with them if it is safe and call 988 or 911. Today: talk of dying, self-harm, abuse, or not eating. Tell a trusted adult before the day ends. This week: withdrawn, struggling, or you feel uneasy. Keep checking in and tell a counselor." xmlns="http://www.w3.org/2000/svg">
+  <g font-family="inherit">
+    <rect x="0" y="0" width="360" height="92" rx="14" fill="#FDECEA"/>
+    <rect x="0" y="0" width="72" height="92" rx="14" fill="#C0392B"/><rect x="60" y="0" width="14" height="92" fill="#C0392B"/>
+    <text x="36" y="52" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">NOW</text>
+    <text x="84" y="26" fill="#1D1D1F" font-size="13.5">A plan or a goodbye. Already hurt</text>
+    <text x="84" y="44" fill="#1D1D1F" font-size="13.5">or took something. Being hurt now.</text>
+    <text x="84" y="74" fill="#A3271B" font-size="13.5" font-weight="700">Stay if safe. Call 988 or 911.</text>
+
+    <rect x="0" y="104" width="360" height="92" rx="14" fill="#FFF4E0"/>
+    <rect x="0" y="104" width="72" height="92" rx="14" fill="#B86E00"/><rect x="60" y="104" width="14" height="92" fill="#B86E00"/>
+    <text x="36" y="156" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">TODAY</text>
+    <text x="84" y="130" fill="#1D1D1F" font-size="13.5">Talk of dying. Self-harm. Abuse.</text>
+    <text x="84" y="148" fill="#1D1D1F" font-size="13.5">Not eating. Scary use of substances.</text>
+    <text x="84" y="178" fill="#8A5200" font-size="13.5" font-weight="700">Trusted adult before the day ends.</text>
+
+    <rect x="0" y="208" width="360" height="92" rx="14" fill="#EAF1FA"/>
+    <rect x="0" y="208" width="72" height="92" rx="14" fill="#2E6DB4"/><rect x="60" y="208" width="14" height="92" fill="#2E6DB4"/>
+    <text x="36" y="250" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">THIS</text>
+    <text x="36" y="268" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">WEEK</text>
+    <text x="84" y="234" fill="#1D1D1F" font-size="13.5">Pulling away. Struggling. You</text>
+    <text x="84" y="252" fill="#1D1D1F" font-size="13.5">have a bad feeling you can't name.</text>
+    <text x="84" y="282" fill="#245A96" font-size="13.5" font-weight="700">Keep checking in. Tell a counselor.</text>
+  </g>
+</svg>
+      <figcaption>A way to sort what you heard. You don't have to get it exactly right. When you're unsure, treat it as the more urgent level.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Now: don't wait until morning</strong><p>Suicidal crises can move fast. In a study of people aged 13 to 34 who survived a nearly fatal attempt, about 1 in 4 said less than five minutes passed between deciding and acting. Stay with your friend if it's safe, call 988 or 911, and get an adult there in person. Help get pills, weapons, or anything else they might use out of reach.</p></div></div>
+      <div class="region"><span class="dot" style="background:#B86E00"></span><div><strong>Today: an adult hears it before you sleep</strong><p>Self-harm, talk about wanting to die, abuse, an eating problem, or drug use that scares you. These need an adult who can act, today. If school is over, that's a parent, your friend's parent if it's safe, or a call to 988 together.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>This week: keep the door open</strong><p>Your friend seems off, quieter, or more checked out than usual. Keep showing up, ask how they're really doing, and tell a counselor what you've noticed. You can say, "Nothing big happened. I'm just worried."</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's so hard</span><span class="sticker">You don't have to decide if it's serious. Just tell.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Why it's hard</span><span class="sticker">Loyalty and safety pull in opposite directions.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>You're scared of losing the friendship.</dt>
-        <dd>It's common to worry your friend will be mad at you for telling. They might be, at first. Most people later say they're grateful someone cared enough.</dd>
-        <dt>You want to keep your promise.</dt>
-        <dd>Keeping secrets is part of being a good friend, usually. Some secrets are too big and too dangerous to keep.</dd>
-        <dt>You might not know if it's serious.</dt>
-        <dd>You don't have to decide that. That's an adult's job. Your job is to tell.</dd>
-        <dt>It's not your job to fix it.</dt>
-        <dd>You can be a good friend without being their counselor. Getting an adult involved is how you help.</dd>
+        <dt>You promised.</dt>
+        <dd>Keeping confidences is part of being a good friend, most of the time. A secret that puts someone's life or body at risk is the exception, and it's the one that matters most.</dd>
+        <dt>You're scared you'll make it worse.</dt>
+        <dd>Many people worry that asking about suicide plants the idea. The research says it doesn't. More on that in Part 2.</dd>
+        <dt>You might know more than any adult does.</dt>
+        <dd>That's a lot of weight. It's also why your telling matters: the adults who could help may have no idea.</dd>
+        <dt>Telling isn't snitching.</dt>
+        <dd>The difference is purpose. Snitching gets someone in trouble. Telling gets someone help. Your friend might be angry for a while. Most people later say they're glad someone cared enough.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🛟 Safety beats secrets</span><span class="sticker">Telling isn't snitching. It's how you help.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What happens after you tell</span><span class="sticker">Usually a conversation and a plan, not sirens.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>If a friend's safety is at risk, telling a trusted adult is the most caring thing you can do. You're not snitching. You're making sure your friend gets help from people who know how to give it.</p>
-      <p class="worst">The worst part: you might feel like you're betraying them. You're actually doing the opposite. You're keeping them safe.</p>
+      <p>Not knowing what happens next stops a lot of people. Most of the time, a counselor listens to you, checks how safe your friend is, talks with your friend, and helps make a plan. Family usually gets involved when it's safe for them to.</p>
+      <p>If the danger comes from an adult at home, it's different. In Massachusetts, school staff are mandated reporters: if they believe someone under 18 is being abused or neglected, they must report it to the Department of Children and Families (DCF), a child-protection agency. They're required to act, which is the point. It means you aren't the one who has to fix it.</p>
+      <p>You can ask the counselor whether your name has to come up. Often it doesn't, though they can't always promise.</p>
+      <p class="worst">Families handle hard things differently. In some, problems stay inside the family, mental health isn't talked about, or contact with any agency feels frightening. If that's true for your friend, tell the counselor. It changes how they help, and they can plan around it.</p>
       </div>
     </details>
   </div>
@@ -465,56 +565,75 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">What to do next</h2>
+    <h2 id="h-practice">The first five minutes, and after</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Listen first. Then bring in an adult.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>👂 Listen first.<span class="row-cue" aria-hidden="true"></span></summary><p>Let them talk. You don't need the perfect words. "Thank you for telling me" and "I'm really glad you told me" are a great start.</p></details>
-        <details class="row"><summary>❓ Ask directly.<span class="row-cue" aria-hidden="true"></span></summary><p>If you're worried about suicide, it's okay to ask, "Are you thinking about killing yourself?" Research shows asking does not put the idea in someone's head. It can bring relief.</p></details>
-        <details class="row"><summary>🙅 Don't promise to keep it secret.<span class="row-cue" aria-hidden="true"></span></summary><p>Try: "I care about you too much to keep this to myself. Let's figure out who to tell together."</p></details>
-        <details class="row"><summary>🧑‍🏫 Tell a trusted adult.<span class="row-cue" aria-hidden="true"></span></summary><p>A counselor, teacher, coach, nurse, or parent. Tell them today. If it's after school, tell a parent or call 988 together.</p></details>
-        <details class="row"><summary>🤝 Offer to go with them.<span class="row-cue" aria-hidden="true"></span></summary><p>"Want me to walk with you to the counselor?" can make it much easier for them to go.</p></details>
-        <details class="row"><summary>🫶 Take care of yourself too.<span class="row-cue" aria-hidden="true"></span></summary><p>Hearing something scary is heavy. Talk to an adult about how you're feeling as well.</p></details>
+      <h3 class="sticker">Listen, ask straight, then bring in an adult.</h3>
+      <p class="tap-hint">Tap each step.</p>
+        <details class="row"><summary><span class="num">1</span> Slow down and listen.<span class="row-cue" aria-hidden="true"></span></summary><p>Don't rush to fix it or argue them out of how they feel. "Thank you for telling me. Keep going, I'm listening" does more than advice.</p></details>
+        <details class="row"><summary><span class="num">2</span> Ask the direct question.<span class="row-cue" aria-hidden="true"></span></summary><p>"Are you thinking about killing yourself?" Saying the actual words tells them you can handle the answer. In a trial with 2,342 New York high school students, those randomly assigned to be asked about suicide were no more distressed or suicidal afterward than those who weren't, including the students at highest risk (Gould and colleagues, 2005).</p></details>
+        <details class="row"><summary><span class="num">3</span> Ask about a plan.<span class="row-cue" aria-hidden="true"></span></summary><p>"Have you thought about how?" A plan, a date, or access to pills or a weapon moves this to <b>Now</b>.</p></details>
+        <details class="row"><summary><span class="num">4</span> Don't promise secrecy. Offer company.<span class="row-cue" aria-hidden="true"></span></summary><p>"I care about you too much to keep this to myself. Let's go to the counselor together, and I'll stay while you talk."</p></details>
+        <details class="row"><summary><span class="num">5</span> Tell the adult, even if they won't.<span class="row-cue" aria-hidden="true"></span></summary><p>If your friend refuses, you still tell. You can let them know first: "I'm going to talk to Ms. Rivera after lunch. I'd rather you came with me."</p></details>
+        <details class="row"><summary><span class="num">6</span> Stay their friend afterward.<span class="row-cue" aria-hidden="true"></span></summary><p>Text, sit together at lunch, act normal. Telling an adult doesn't end your part. It changes it from carrying to supporting.</p></details>
     </div>
 
+    <div class="rn"><span>Research</span>Friends who know what to do change outcomes. In a randomized trial in 18 high schools, students trained as peer leaders were about four times more likely than untrained peers to connect a suicidal friend with an adult, and the whole school grew more confident that adults could help (Wyman and colleagues, 2010).</div>
+
     <details class="fold ">
-      <summary><span class="fold-label">Which adult do I tell?</span><span class="sticker">There's always someone you can tell.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Who to call</span><span class="sticker">There's a right person for every hour.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li><strong>At school:</strong> a counselor is the best first choice. Any teacher, coach, advisor, or nurse can help you get there.</li>
-        <li><strong>After school or on the weekend:</strong> your parent or guardian, or your friend's parent if it feels safe.</li>
-        <li><strong>Anytime, day or night:</strong> call or text <strong>988</strong>, or text <strong>HOME</strong> to <strong>741741</strong>. You can call for a friend, not just for yourself.</li>
-        <li><strong>If they're in danger right now:</strong> call <strong>911</strong>.</li>
-        <li><strong>If it's an online post:</strong> tell an adult, and use the app's report tool. Most apps have a way to flag self-harm posts so the person gets support resources.</li>
+        <li><strong>During school:</strong> a counselor first. A teacher, coach, athletic trainer, advisor, or nurse can walk you there.</li>
+        <li><strong>After school or weekends:</strong> your parent or guardian, another adult relative you trust, or your friend's parent if that's safe.</li>
+        <li><strong>Any hour:</strong> call or text <strong>988</strong>, or text <strong>HOME</strong> to <strong>741741</strong>. You can call about a friend. They'll help you figure out the next step.</li>
+        <li><strong>In Massachusetts:</strong> the Behavioral Health Help Line, <strong>833-773-2445</strong>, call or text, 24/7, free, in more than 200 languages. It can send a mobile crisis team to a home instead of police.</li>
+        <li><strong>Danger right now:</strong> <strong>911</strong> or the nearest emergency room.</li>
+        <li><strong>An online post:</strong> screenshot it, tell an adult, and use the app's report tool so the person gets support resources.</li>
       </ul>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Practice the words now, so they're there later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Write the words now, so they're there later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Practice the words now so they're easier later. Nothing is saved.</p>
-      <label class="prompt" for="tx-1">What I'd say to my friend:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="I'm really glad you told me. I care about you, and I want to help."></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">What I'd say to an adult:</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="I'm worried about my friend. They told me something and I don't think I should keep it to myself."></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">The adult I'd go to first:</label>
+      <p>Nothing you type here is saved.</p>
+      <label class="prompt" for="tx-1">My direct question, in my own words:</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="I've been worried about you. Are you thinking about killing yourself?"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">What I'd say to the adult, in two sentences:</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="My friend told me something last night that scared me. I can't keep it to myself, and I need help knowing what to do."></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">My first adult, my backup, and how I'd reach each after 9 p.m.:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two hard moments. What's the caring move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three hard calls. What's the move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      
-      <div class="scenario" >
-        <p>At 11pm, a friend posts a story that says "I'm done. Goodbye everyone."</p>
+      <div class="scenario">
+        <p>Dev's girlfriend tells him her stepdad has been hitting her and her mom. She makes him swear not to tell, because she's scared of what will happen to her family.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Don't wait. A message like this needs action now.">Wait and see if they post again in the morning</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. It's always better to act and be wrong than to wait and be right.">Wake up your parent or call 988 right away, and call 911 if you think they're in danger</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Reaching out is good, but don't stop there. Get an adult involved right away.">Reply to the story asking if they're okay</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Keeping it leaves her alone with someone who is hurting her. Her fear about her family is real, and it's exactly what a counselor can help plan around.">Keep the promise so she keeps trusting him</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Honest about what he'll do, and he offers to go with her. Adults at school are required to act on abuse, so this doesn't stay on Dev.">"I can't keep this. Can we see the counselor first thing tomorrow? I'll come with you."</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Confronting him could put her and her mom in more danger. Getting adults who know how to handle this is the safer move.">Go talk to the stepdad himself</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Ana, a teammate, fainted at practice. Later she tells you she's been eating almost nothing to make weight and asks you not to tell the coach until the season's over.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Fainting means her body is already in trouble. Eating disorders can do real damage, and waiting months makes it harder to treat.">Wait until the season ends</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Talking to her first is kind, and it's a good start. It can't be the whole plan, because she's asked you to keep it from the people who could help.">Talk to her about it first and see if she'll stop</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The athletic trainer, coach, or counselor can get her real care. You can tell her you're doing it because you want her on the team next year too.">Tell the athletic trainer, coach, or counselor today</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>At 12:40 a.m. Jalen posts in the group chat: "it's fine, i won't be a problem much longer." People react with laughing emojis. He jokes like this a lot.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="A goodbye-sounding message is a Now sign, even from someone who jokes. Acting and being wrong costs a little awkwardness. Waiting and being wrong can cost a life.">Assume it's a joke, since he always does this</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Reaching out is good. Don't let it be the only thing, especially if he doesn't answer quickly.">DM him to ask if he's okay</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Wake an adult, call or text 988 for guidance, and if you think he's in danger and can't reach him, call 911 so someone checks on him.">Wake a parent and call 988 now. Call 911 if you think he's in danger</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -523,27 +642,51 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These leave your friend without real help.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep people quiet</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🤐 Keeping it to yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>You're not trained to handle this alone, and you shouldn't have to.</p></details>
-        <details class="row"><summary>😬 Freaking out or lecturing.<span class="row-cue" aria-hidden="true"></span></summary><p>Stay as calm as you can. Your friend needs to feel heard, not judged.</p></details>
-        <details class="row"><summary>🦸 Trying to be their only support.<span class="row-cue" aria-hidden="true"></span></summary><p>No one person can hold this. Bring in adults.</p></details>
-        <details class="row"><summary>💬 Spreading it to other friends.<span class="row-cue" aria-hidden="true"></span></summary><p>Telling peers isn't the same as getting help, and it can hurt your friend.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Asking about suicide gives them the idea.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Trials and reviews keep finding the opposite. Asking doesn't raise risk, and many people feel relief that someone finally said it out loud.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> People who talk about it won't do it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Talking about wanting to die is one of the main warning signs crisis lines list, even when it comes out as a joke. Take every mention seriously.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If they seem fine now, it's over.</span><span class="row-cue" aria-hidden="true"></span></summary><p>They may be better. They may also have stopped talking. Keep checking in, and keep the adult in the loop.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A real friend handles it themselves.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A real friend gets the right people involved. You're a friend, not a therapist, and nobody should carry this alone.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Telling other friends is getting help.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It spreads the story without getting your friend care, and it can hurt them. Go to one adult instead.</p></details>
       </div>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Carrying it</span><span class="sticker">Hearing it can stay with you too.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>After a disclosure, it's common to replay the conversation, sleep badly, feel guilty, or feel angry at your friend for putting you in this spot. All of that is normal. None of it means you did something wrong.</p>
+      <p style="margin:0">Tell the counselor how <i>you</i> are doing, not only how your friend is. Keep doing the things that steady you. You can care about someone and still have limits on how much you hold.</p>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Act right away if your friend</h3>
       <ul class="tight">
-        <li>Talks about wanting to die or has a plan to hurt themselves.</li>
-        <li>Is being hurt or abused by someone.</li>
-        <li>Posts or sends something that sounds like a goodbye.</li>
-        <li>Has taken something or hurt themselves already.</li>
+        <li>Talks about wanting to die and has a plan, a date, or a way to do it.</li>
+        <li>Sends or posts something that sounds like a goodbye.</li>
+        <li>Has already hurt themselves or taken something.</li>
+        <li>Is being hurt by someone, or is afraid to go home.</li>
       </ul>
-      <p style="margin:0">Tell an adult now, call or text <strong>988</strong>, or call <strong>911</strong> if they're in danger. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Get an adult now, call or text <strong>988</strong>, or call <strong>911</strong> if they're in danger. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Evans, E., Hawton, K., &amp; Rodham, K. (2005). In what ways are adolescents who engage in self-harm or experience thoughts of self-harm different in terms of help-seeking, communication and coping strategies? <i>Journal of Adolescence</i>.</li>
+        <li>Gould, M. S., et al. (2005). Evaluating iatrogenic risk of youth suicide screening programs: A randomized controlled trial. <i>JAMA</i>.</li>
+        <li>Simon, T. R., et al. (2001). Characteristics of impulsive suicide attempts and attempters. <i>Suicide and Life-Threatening Behavior</i>.</li>
+        <li>Wyman, P. A., et al. (2010). An outcome evaluation of the Sources of Strength suicide prevention program delivered by adolescent peer leaders in high schools. <i>American Journal of Public Health</i>.</li>
+        <li>Dazzi, T., et al. (2014). Does asking about suicide and related behaviours induce suicidal ideation? What is the evidence? <i>Psychological Medicine</i>.</li>
+        <li>Massachusetts DESE and DCF (2021). Joint advisory on mandated reporting of child abuse and neglect (G.L. c. 119, s. 51A).</li>
+        <li>Massachusetts Behavioral Health Help Line: masshelpline.com, 833-773-2445.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -554,26 +697,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">Adults I trust enough to go to with something serious</label>
+      <label class="prompt" for="tx-4">Adults I would actually go to with something serious, at school and outside it</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What makes it hard to tell an adult</label>
+      <label class="prompt" for="tx-5">What would make me hesitate to tell, and what I'd say back to that hesitation</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">What I'd want a friend to do if I were the one struggling</label>
+      <label class="prompt" for="tx-6">If I were the one struggling, what I'd want a friend to do, even if I told them not to</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">How I'd take care of myself after hearing something scary</label>
+      <label class="prompt" for="tx-7">How my family handles hard news, and how that might shape what I do</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Words I could use to start the conversation</label>
+      <label class="prompt" for="tx-8">What I'd need afterward to take care of myself</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Telling an adult when a friend is in danger is not betrayal. It's one of the bravest, kindest things a friend can do.</p>
+      <p>Loyalty means wanting your friend alive and safe more than you want them pleased with you tonight. Telling is how you act on that.</p>
     </div>
     </div>
   </div>
@@ -619,11 +762,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-holding" aria-pressed="false">🫨 Holding something big</button>
-          <button type="button" class="choice" data-path="p-promise" aria-pressed="false">🤞 I promised not to tell</button>
-          <button type="button" class="choice" data-path="p-told" aria-pressed="false">✅ I told an adult</button>
-          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">😟 Can't stop worrying</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling steadier</button>
+          <button type="button" class="choice" data-path="p-holding" aria-pressed="false">Holding something big</button>
+          <button type="button" class="choice" data-path="p-promise" aria-pressed="false">I promised not to tell</button>
+          <button type="button" class="choice" data-path="p-told" aria-pressed="false">I told an adult</button>
+          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">Can't stop worrying</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling steadier</button>
         </div>
 
         <div class="path-panel" id="p-holding" hidden>
@@ -633,7 +776,7 @@
           <ul>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult today.</li>
             <li><span class="e" aria-hidden="true">📞</span>Call or text 988 for advice on what to do.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Use the practice box above to plan your words.</li>
+            <li><span class="e" aria-hidden="true">📝</span>Sort it with the Now / Today / This week guide above.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-promise" hidden>
@@ -641,7 +784,7 @@
           <p>Breaking a promise feels bad. Keeping a dangerous secret is worse for your friend.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>"I care about you too much to keep this."</li>
+            <li><span class="e" aria-hidden="true">💬</span>"I care about you too much to keep this. I'll come with you."</li>
             <li><span class="e" aria-hidden="true">🤝</span>Offer to go with them to tell someone.</li>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>If they won't go, tell an adult yourself.</li>
           </ul>
@@ -701,7 +844,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you're being to your friend. Looking out for someone is hard, and you're doing it.</p>
+        <p class="closing">You don't have to carry this by yourself. Bringing in an adult is part of looking out for your friend, not the end of it.</p>
       </div>
     </div>
     </div>

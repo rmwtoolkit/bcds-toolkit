@@ -394,6 +394,74 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .fig svg.chart text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:20px 0; }
+  .research .fold-label { margin-bottom:4px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -413,9 +481,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🫥 High School · Friends and belonging</div>
+  <div class="eyebrow">High School · Friends and belonging</div>
   <h1>The Third Wheel</h1>
-  <p class="tagline">Because being the extra one hurts, even when nobody meant it.</p>
+  <p class="tagline">What being left out does to your brain and your judgment, and how to respond without making it worse.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -442,147 +510,180 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What being left out feels like</h2>
-    <p>Almost everyone has been the third wheel at some point. It doesn't make it hurt less. It does mean the feeling is normal, and there are things you can do with it.</p>
-
-        <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Feeling like the extra one? It's a real hurt.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <h2 id="h-understand">Why being left out hits so hard</h2>
+    <details class="fold ">
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Technically in the group. Somehow always on the edge.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You end up walking a step behind two friends in the hallway, because only two fit.</li>
-        <li>Everyone at the table gets up together, to the bathroom or the next class, and nobody waits for you or asks if you're coming.</li>
-        <li>You're part of the group, sort of, but always on the edge: last to hear the plan, last to be asked, first to be forgotten.</li>
-        <li>Your two closest friends have inside jokes from a time you weren't there.</li>
-        
-        
-        
-        <li >Your friend group splintered into smaller groups, and you're not sure which one you're in anymore.</li>
-        <li >A close friend started dating someone, and you see them a lot less than you used to.</li>
-        <li >The rides, the lunch table, the weekend plans all seem to get settled before you hear about them.</li>
-        <li >Your friend group split into pairs, and you're the odd number.</li>
+        <li>Your closest friend started dating someone, and you get whatever time is left over.</li>
+        <li>The group started a new chat. You found out from a screenshot.</li>
+        <li>The map shows four of your friends at one house on a Friday night.</li>
+        <li>Everyone sorted out rides to the away game. Nobody asked if you needed one.</li>
+        <li>Your friend group split into pairs, and you're the odd number.</li>
         <li>You're physically there, and still feel like you're watching from outside.</li>
       </ul>
-      <p style="margin:0">None of these have to be dramatic to count. Feeling like the extra one is a real hurt.</p>
+      <p style="margin:0">None of these have to be dramatic to count. Here's what's going on underneath: why even small exclusions hit hard, why your read on them is often off, and how to respond in a way that makes things better instead of worse.</p>
       </div>
     </details>
 
-        <div class="unit unit-one">
-    <h3 style="margin-top:28px">Three ways to end up the third wheel.</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🚶</span><strong>On the edge</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">You're with them, but a half step outside. They finish each other's sentences, get up together, make plans while you're catching up. Whether anyone means it or not, you feel it.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">👯</span><strong>Pairing off and splintering</strong><span class="row-cue" aria-hidden="true"></span></summary>
-        <p style="margin:0" >The friend group splinters into smaller groups or pairs, and you're left figuring out where you fit.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📅</span><strong>Hearing about it after</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Plans you didn't know about until you saw the photos or heard the stories. That one stings in a specific way.</p></details>
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">What exclusion does, in order</h3>
+    <p>Psychologist Kipling Williams has spent decades studying what happens when people are ignored or left out. His model describes three stages.</p>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 400 352" role="img" aria-labelledby="nt-t nt-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="nt-t">The three stages of reacting to being left out</title>
+  <desc id="nt-d">A vertical timeline with three stages. Reflexive, within seconds to minutes: it hurts right away, and four needs take a hit: belonging, self-esteem, control, and feeling that you matter. Reflective, over hours to days: you make sense of it and respond, by reconnecting, lashing out, or pulling away. Resignation, after long, repeated exclusion: alienation, helplessness, and low mood.</desc>
+  <line x1="24" y1="30" x2="24" y2="290" stroke="#D1D1D6" stroke-width="3"/>
+  <circle cx="24" cy="30" r="9" fill="#C0392B"/>
+  <text x="46" y="35" font-size="16" font-weight="700" fill="#1D1D1F">Reflexive</text>
+  <text x="394" y="35" font-size="12" fill="#6E6E73" text-anchor="end">seconds to minutes</text>
+  <text x="46" y="58" font-size="13" fill="#3A3A3C">It hurts right away, before you have time to</text>
+  <text x="46" y="76" font-size="13" fill="#3A3A3C">think. Four needs take a hit:</text>
+  <rect x="46" y="96" width="80" height="24" rx="12" fill="#FDECEA"/><text x="86.0" y="112" font-size="12" font-weight="600" fill="#A3301F" text-anchor="middle">belonging</text><rect x="132" y="96" width="86" height="24" rx="12" fill="#FDECEA"/><text x="175.0" y="112" font-size="12" font-weight="600" fill="#A3301F" text-anchor="middle">self-esteem</text><rect x="224" y="96" width="64" height="24" rx="12" fill="#FDECEA"/><text x="256.0" y="112" font-size="12" font-weight="600" fill="#A3301F" text-anchor="middle">control</text><rect x="294" y="96" width="98" height="24" rx="12" fill="#FDECEA"/><text x="343.0" y="112" font-size="12" font-weight="600" fill="#A3301F" text-anchor="middle">mattering</text>
+  <circle cx="24" cy="162" r="9" fill="#D9822B"/>
+  <text x="46" y="167" font-size="16" font-weight="700" fill="#1D1D1F">Reflective</text>
+  <text x="394" y="167" font-size="12" fill="#6E6E73" text-anchor="end">hours to days</text>
+  <text x="46" y="190" font-size="13" fill="#3A3A3C">You figure out what it meant, then respond:</text>
+  <text x="46" y="208" font-size="13" fill="#3A3A3C">reconnect, lash out, or pull away.</text>
+  <text x="46" y="226" font-size="13" fill="#3A3A3C">This is the stage where your choices matter.</text>
+  <circle cx="24" cy="270" r="9" fill="#6E6E73"/>
+  <text x="46" y="275" font-size="16" font-weight="700" fill="#1D1D1F">Resignation</text>
+  <text x="394" y="275" font-size="12" fill="#6E6E73" text-anchor="end">long, repeated exclusion</text>
+  <text x="46" y="298" font-size="13" fill="#3A3A3C">Feeling alienated, helpless, low. If that is</text>
+  <text x="46" y="316" font-size="13" fill="#3A3A3C">where you are, it is time to bring in help.</text>
+  <text x="46" y="344" font-size="11" fill="#6E6E73">Based on Williams (2009), the temporal need-threat model.</text>
+</svg>
+      <figcaption>The first two stages are well studied in experiments. The third comes mostly from interviews and long-term observations, so it's less certain.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Belonging</strong><p>The sense that you're part of something. Usually the most obvious hit.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Self-esteem</strong><p>"What's wrong with me?" Exclusion invites you to blame yourself, even when it was an accident.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Control</strong><p>Being left out happens to you. That's why doing something, anything, about it often helps.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Mattering</strong><p>The feeling that your presence makes a difference to anyone. Williams calls it "meaningful existence."</p></div></div>
     </div>
     </div>
 
-        <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Your brain treats left out like pain.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <div class="research">
+      <div class="fold-label">Research</div>
+      <p>In one of Williams's studies, 1,486 people from 62 countries played a simple online ball-tossing game with two other "players" who were really a computer. The ones who stopped getting the ball felt worse and reported a weaker sense of belonging. Being left out by strangers they would never meet, in a game that didn't matter, still hurt.</p>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Why your read might be off</span><span class="sticker">The feeling is real. The story it tells may not be.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Belonging is wired in.</dt>
-        <dd>Humans are built to care about being part of the group. Research suggests being left out activates some of the same brain systems as physical pain. That's why it can feel like a punch even when you know it was an accident.</dd>
         <dt>The spotlight effect.</dt>
-        <dd>When you feel left out, it can seem like everyone notices you standing alone. Studies show people consistently overestimate how much others notice them. Most people are busy worrying about themselves.</dd>
-        <dt>The comparison spiral.</dt>
-        <dd>It's easy to decide everyone else has a best friend and a full weekend. You're comparing your inside to everyone else's outside, and the outside always looks easier.</dd>
+        <dd>In a classic Cornell study, students wore an embarrassing T-shirt into a room of peers. They guessed about half the room would notice. About a quarter did. When you're standing alone, it feels like everyone sees it. Most people are busy thinking about themselves.</dd>
+        <dt>Inside versus outside.</dt>
+        <dd>You compare your inside, the loneliness, to everyone else's outside, the photos. Their outside always looks easier.</dd>
+        <dt>Pain looks for a reason.</dt>
+        <dd>The reflexive hurt shows up first. Your brain then searches for an explanation, and "they don't want me" is often the first one it finds, even when the real one is boring, like a car with four seats.</dd>
       </dl>
       </div>
     </details>
 
-        <details class="fold fold-callout">
-      <summary><span class="fold-label"><span class="e" aria-hidden="true">⚖️</span>The feeling isn't the verdict</span><span class="sticker">Accident, drift, or on purpose? Check first.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">The feeling isn't the verdict</span><span class="sticker">Accident, drift, or on purpose? Check first.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Feeling left out and being left out on purpose are two different things. There are usually three possibilities:</p>
-      <ul class="tight">
-        <li><strong>An accident.</strong> Someone didn't think, or assumed you were busy.</li>
-        <li><strong>A drift.</strong> Schedules, classes, or interests pulled people in different directions. Nobody decided anything.</li>
-        <li><strong>On purpose.</strong> Someone is choosing to keep you out. This happens, and it isn't okay.</li>
-      </ul>
-      <p class="worst">The worst part: when you feel left out, it's natural to pull back to protect yourself. Pulling back makes it easier for people to forget to include you, and the feeling gets confirmed.</p>
+      <dl class="helps">
+        <dt>An accident.</dt>
+        <dd>Someone didn't think, or assumed you were busy.</dd>
+        <dt>A drift.</dt>
+        <dd>Schedules, jobs, relationships, or interests pulled people apart. Nobody decided anything.</dd>
+        <dt>On purpose.</dt>
+        <dd>Someone is choosing to keep you out. This happens, and it isn't okay.</dd>
+      </dl>
+      <p class="worst">The trap: in the reflective stage, pulling back feels protective. It also makes it easier for people to forget to include you, which confirms the feeling.</p>
       </div>
     </details>
 
-        <details class="fold fold-callout">
-      <summary><span class="fold-label"><span class="e" aria-hidden="true">📱</span>When it happens on social media</span><span class="sticker">Online, you watch it happen live.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">When a friend starts dating</span><span class="sticker">Romance shrinks everyone's circle. It isn't a ranking of you.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Being the third wheel doesn't stop when school ends. Online, you can see it happening in real time:</p>
-      <ul class="tight">
-        
-        <li >Snap Map shows your friends together on a Friday night, and nobody texted you.</li>
-        <li>Stories from a hangout you didn't know about, posted while you're home.</li>
-        <li>Two friends posting each other constantly, with inside jokes in the captions.</li>
-        
-        <li >A Close Friends story you can tell you're not on, or got taken off of.</li>
-        
-        <li >The group splintered, and now there's a new group chat and new photos you're not in.</li>
-      </ul>
-      <p class="worst">The worst part: online, you don't just hear about it later. You watch it happen, with photos, sometimes as it's happening.</p>
+      <p>Oxford researchers Max Burton-Chellew and Robin Dunbar surveyed 540 adults about their closest support networks. People in a romantic relationship had smaller networks. Even counting the new partner, they had lost about two close people on average.</p>
+      <p>So when your friend disappears into a relationship, it's a common pattern. It's still a real loss, and it's fair to ask for time that's protected: "Can Thursdays still be ours?"</p>
       </div>
     </details>
-  
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Online</span><span class="sticker">You watch it happen live.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>The map shows your friends together, and nobody texted you.</li>
+        <li>Stories from a hangout you didn't know about, posted while you're home.</li>
+        <li>A Close Friends list you can tell you're not on, or got taken off of.</li>
+        <li>A new group chat, and new photos you're not in.</li>
+      </ul>
+      <p class="worst">Online, you don't just hear about it later. You see it as it happens, which restarts the reflexive hurt every time you check.</p>
+      </div>
+    </details>
   </div>
 </section>
 
-<!-- ================= PRACTICE THE SKILLS ================= -->
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
-
-        <div class="card">
+    <h2 id="h-practice">Respond, don't react</h2>
+    <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Five moves for the left-out feeling.</h3>
+      <h3 class="sticker">Five moves for the reflective stage.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🏷 Name it.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm feeling left out" or "I'm feeling jealous." Putting a name on a feeling, even silently, lowers its volume a little. Jealousy is normal too. It means you care about the friendship.</p></details>
-        <details class="row"><summary>⚖️ Check the evidence.<span class="row-cue" aria-hidden="true"></span></summary><p>Was it an accident, a drift, or on purpose? Look for facts, not vibes. One missed invite is different from a pattern.</p></details>
-        <details class="row"><summary>📣 Say it simply.<span class="row-cue" aria-hidden="true"></span></summary><p>A short, honest sentence to the friend who matters most, one on one. Not an accusation, just how it felt. (Try the builder below.)</p></details>
-        <details class="row"><summary>🎯 Join instead of waiting.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask "can I come?" Suggest the plan yourself. Sit down at the table. It feels risky, and it works more often than you'd expect.</p></details>
-        <details class="row"><summary>🌐 Widen your circle a little.<span class="row-cue" aria-hidden="true"></span></summary><p>One friend can't be your whole world. Having a few people in different places (a team, a club, a neighbor, a cousin) means one change doesn't knock everything over.</p></details>
+        <details class="row"><summary><span class="num">1</span> Name it, including jealousy.<span class="row-cue" aria-hidden="true"></span></summary><p>"I feel left out." "I'm jealous of her new friend." Naming a feeling, even silently, lowers its volume. Jealousy isn't a character flaw. It means the friendship matters to you.</p></details>
+        <details class="row"><summary><span class="num">2</span> Check the evidence.<span class="row-cue" aria-hidden="true"></span></summary><p>Accident, drift, or on purpose? Look for facts, not vibes. One missed invite is different from a pattern over a month.</p></details>
+        <details class="row"><summary><span class="num">3</span> Take back some control.<span class="row-cue" aria-hidden="true"></span></summary><p>Exclusion happens to you. Making a plan yourself reverses that: suggest Saturday, ask "can I come?", sit down at the table. It works more often than it feels like it will.</p></details>
+        <details class="row"><summary><span class="num">4</span> Say it simply, one on one.<span class="row-cue" aria-hidden="true"></span></summary><p>One short, honest sentence to the friend who matters most. Describe how it felt, without accusing. (Try the builder below.)</p></details>
+        <details class="row"><summary><span class="num">5</span> Widen your base.<span class="row-cue" aria-hidden="true"></span></summary><p>People with friends in several places (a team, a job, a cousin, a neighbor, an online group) get knocked over less when one place changes.</p></details>
     </div>
 
-        <details class="fold fold-try">
+    <div class="card">
+      <div class="fold-label">When your family's rules shape it</div>
+      <p style="margin:0">Curfews, religious commitments, family responsibilities, a job, or rules about where you can go can mean you miss more plans than other people do. That's logistics, not a sign you're less wanted. It helps to say it out loud so friends don't stop asking: "I usually can't do Friday nights, but I'm in for Saturday afternoons." What are the rules or responsibilities in your family that shape your social life?</p>
+    </div>
+
+    <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Accident, drift, or on purpose? You decide.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick what you think is most likely. There's room for more than one answer.</p>
-
-      
-
-      
-
-      <div class="scenario" >
-        <p><strong>1.</strong> Your friend group of six has quietly split into two smaller groups, and your closest friend is in the other one. You used to hang out every Friday. Now it's maybe once a month.</p>
+      <p>Pick what seems most likely. There's room for more than one answer.</p>
+      <div class="scenario">
+        <p><strong>1.</strong> Your best friend Nadia started dating Chris in October. She used to drive you home after practice. Now she drives him. She still texts you most nights.</p>
         <div class="choices" role="group" aria-label="Choose one">
-          <button class="choice" type="button" data-fb="okay" data-msg="Probably not a one-time accident. It's been a steady change.">Accident</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Most likely a drift. Groups often splinter as classes, teams, and interests change, without anyone deciding it. It's fair to tell your friend you miss them and suggest a standing plan, like one Friday a month that's just the two of you.">Drift</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Possible, but nothing here says they're choosing to shut you out. It's worth a conversation before you decide that.">On purpose</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Not quite. It isn't a one-time slip. It's a steady change in how she spends her time.">Accident</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Most likely a drift. New relationships shrink everyone's circle for a while. The nightly texts say she still cares. It's fair to ask for one protected thing, like a weekly drive or lunch.">Drift</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Nothing here says she's trying to shut you out. Check before you decide.">On purpose</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-
-      <div class="scenario" >
+      <div class="scenario">
         <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p><strong>2.</strong> Your friend group is making weekend plans at lunch, right in front of you. When you ask about it, someone says "oh, it's kind of a small thing," and the others look away.</p>
+        <p><strong>2.</strong> Rohan posts a story from a late study session at the library with three friends. Earlier that week, you'd mentioned you work Tuesday nights.</p>
         <div class="choices" role="group" aria-label="Choose one">
-          <button class="choice" type="button" data-fb="nope" data-msg="Making plans in front of you and then shutting it down is hard to call an accident.">Accident</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Could be part of a slow change, but the looking away suggests people know it feels bad.">Drift</button>
-          <button class="choice" type="button" data-fb="good" data-msg="This one looks intentional, at least in the moment. It's worth a one-on-one with the person you're closest to in the group. If it keeps happening, it might be time to invest in people who make room for you.">On purpose</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Probably. They likely remembered you were working, or didn't think about it. A light &quot;I'd be in next time if it's not a Tuesday&quot; keeps you on the list.">Accident</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It could become a drift if it keeps happening. For now there's one data point, with a likely explanation.">Drift</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That's the pain looking for a reason. Your schedule explains this one.">On purpose</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p><strong>3.</strong> For three weekends, your lunch group has made plans in a separate chat. When you walk up, the conversation stops. Someone says, "It's nothing, just a small thing."</p>
+        <div class="choices" role="group" aria-label="Choose one">
+          <button class="choice" type="button" data-fb="nope" data-msg="Three weekends plus the conversation stopping is hard to call an accident.">Accident</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It might have started as a drift, but going quiet when you arrive suggests people know it feels bad.">Drift</button>
+          <button class="choice" type="button" data-fb="good" data-msg="This looks intentional, at least for some people. Talk one on one with the person you're closest to. If it keeps happening, put your energy into people who make room for you.">On purpose</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
       </div>
     </details>
 
-        <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These feel protective. They usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🐢 Disappearing to protect yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>Skipping lunch, not texting back, waiting to see if anyone notices. It makes sense, and it usually backfires. People read it as "they're busy," not "they're hurt."</p></details>
-        <details class="row"><summary>🧾 Keeping score.<span class="row-cue" aria-hidden="true"></span></summary><p>Counting who texted first and who got invited where. Friendships are rarely perfectly even, and keeping a list keeps you stuck in the hurt.</p></details>
-        <details class="row"><summary>🪢 Making them choose.<span class="row-cue" aria-hidden="true"></span></summary>
-          <p >"It's me or them." Ultimatums push people toward the other side. Asking for some time that's just yours works much better.</p></details>
-        <details class="row"><summary>📱 Watching their stories on repeat.<span class="row-cue" aria-hidden="true"></span></summary><p>Every replay is a fresh hit. Muting for a while is allowed.</p></details>
+        <details class="row"><summary>Disappearing to see if anyone notices.<span class="row-cue" aria-hidden="true"></span></summary><p>It makes sense, and people usually read it as "they're busy," not "they're hurt." The gap gets wider.</p></details>
+        <details class="row"><summary>Keeping score.<span class="row-cue" aria-hidden="true"></span></summary><p>Counting who texted first and who got invited where. Friendships are rarely even, and the list keeps you in the hurt.</p></details>
+        <details class="row"><summary>Making them choose.<span class="row-cue" aria-hidden="true"></span></summary><p>"It's me or them" pushes people toward the other side. Asking for time that's just yours works much better.</p></details>
+        <details class="row"><summary>Watching their stories on repeat.<span class="row-cue" aria-hidden="true"></span></summary><p>Each replay restarts the hurt. Muting for a while is allowed.</p></details>
       </div>
       </div>
     </details>
@@ -590,31 +691,31 @@
         <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">One honest sentence can change things.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Fill in the blanks to build a short, honest message. It stays on this page. You decide if and how to say it.</p>
+      <p>Fill in the blanks to build a short, honest message. It stays on this page. You decide whether and how to say it.</p>
       <label class="prompt" for="sb-when">When...</label>
-      <textarea id="sb-when" class="sb" autocomplete="off" spellcheck="false" style="min-height:52px" placeholder="you two made plans for Saturday without me"></textarea><div class="write-lines"></div>
+      <textarea id="sb-when" class="sb" autocomplete="off" spellcheck="false" style="min-height:52px" placeholder="everyone sorted out rides to the game and nobody asked me"></textarea><div class="write-lines"></div>
       <label class="prompt" for="sb-felt">I felt...</label>
-      <textarea id="sb-felt" class="sb" autocomplete="off" spellcheck="false" style="min-height:52px" placeholder="kind of left out"></textarea><div class="write-lines"></div>
+      <textarea id="sb-felt" class="sb" autocomplete="off" spellcheck="false" style="min-height:52px" placeholder="kind of invisible, honestly"></textarea><div class="write-lines"></div>
       <label class="prompt" for="sb-ask">Could we...</label>
-      <textarea id="sb-ask" class="sb" autocomplete="off" spellcheck="false" style="min-height:52px" placeholder="plan something, just us, this week?"></textarea><div class="write-lines"></div>
+      <textarea id="sb-ask" class="sb" autocomplete="off" spellcheck="false" style="min-height:52px" placeholder="loop me in next time? I'd have come."></textarea><div class="write-lines"></div>
       <div class="phone" aria-live="polite" style="margin-top:14px">
         <div class="row-me"><span class="bubble me" id="sb-preview">Your message will show up here.</span></div>
       </div>
-      <p style="margin:0;font-size:.95rem">Tip: say it in person or one on one, not in a group. Keep it about how you felt, not what they did wrong.</p>
+      <p style="margin:0;font-size:.95rem">Say it one on one, in person or on a call if you can, not in the group. Keep it about how it felt, not a list of what they did wrong.</p>
       </div>
     </details>
 
-        <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">You don't need a live feed of everyone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">Online, right now</span><span class="sticker">You don't need a live feed of everyone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>📍 Turn on Ghost Mode, or stop checking the map.</dt>
-        <dd>You don't need a live feed of where everyone is. Not knowing is often easier.</dd>
-        <dt>🔕 Mute stories, privately.</dt>
+        <dt>Turn off the map, or stop checking it.</dt>
+        <dd>You don't need to know where everyone is. Not knowing is often easier.</dd>
+        <dt>Mute stories, privately.</dt>
         <dd>Muting doesn't notify anyone. It just gives you a break from the replays.</dd>
-        <dt>⚖️ Remember what you're seeing.</dt>
+        <dt>Remember what you're seeing.</dt>
         <dd>A story is a highlight. It doesn't show who was bored, who left early, or who wished you were there.</dd>
-        <dt>💬 Reach out instead of watching.</dt>
+        <dt>Reach out instead of watching.</dt>
         <dd>If you miss them, text one of them about something else. A conversation beats scrolling their night.</dd>
       </dl>
       </div>
@@ -622,44 +723,55 @@
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When it's on purpose, again and again</h3>
-      <p>If someone keeps leaving you out deliberately, spreads things about you, or tells others not to hang out with you, that's a form of bullying. It's not your fault, and it's not something you have to fix alone.</p>
+      <p>If someone keeps leaving you out deliberately, spreads things about you, or tells others not to hang out with you, that's a form of bullying. It's not your fault, and you don't have to fix it alone.</p>
       <ul class="tight">
         <li>Tell a counselor, teacher, or parent what's been happening.</li>
         <li>Put your energy into people who make room for you.</li>
         <li>You're allowed to step back from friendships that keep hurting.</li>
+        <li>If you've been feeling hopeless or low for weeks, that's the resignation stage. Bring in help now.</li>
       </ul>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
-  
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Williams, K. D. (2009). Ostracism: A temporal need-threat model. <i>Advances in Experimental Social Psychology</i>, 41, 275&ndash;314.</li>
+        <li>Williams, K. D., Cheung, C. K. T., &amp; Choi, W. (2000). Cyberostracism: Effects of being ignored over the Internet. <i>Journal of Personality and Social Psychology</i>, 79(5), 748&ndash;762.</li>
+        <li>Gilovich, T., Medvec, V. H., &amp; Savitsky, K. (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. <i>Journal of Personality and Social Psychology</i>, 78(2), 211&ndash;222.</li>
+        <li>Burton-Chellew, M. N., &amp; Dunbar, R. I. M. (2015). Romance and reproduction are socially costly. <i>Evolutionary Behavioral Sciences</i>, 9(4), 229&ndash;241.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
-<!-- ================= REFLECT ================= -->
 <section class="part" id="reflect" aria-labelledby="h-reflect">
   <div class="wrap">
     <div class="eyebrow">Part 3 · Reflect</div>
     <h2 id="h-reflect">Take a moment to write</h2>
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="rf-1">A time I felt like the third wheel, in my own words</label>
+      <label class="prompt" for="rf-1">A recent time I felt like the extra one, and which of the four needs took the biggest hit</label>
       <textarea id="rf-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-2">Looking at the facts, I think it was an accident, a drift, or on purpose, because...</label>
+      <label class="prompt" for="rf-2">Looking only at the facts, I think it was an accident, a drift, or on purpose, because...</label>
       <textarea id="rf-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-3">Someone I feel like an equal with, not an extra</label>
+      <label class="prompt" for="rf-3">What I usually do in the reflective stage: reconnect, lash out, or pull away</label>
       <textarea id="rf-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-4">One place I could meet or get closer to someone new</label>
+      <label class="prompt" for="rf-4">One plan I could make myself this week, instead of waiting to be asked</label>
       <textarea id="rf-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="rf-5">Something about me that stays true, whether or not I'm included</label>
+      <label class="prompt" for="rf-5">Someone I feel like an equal with, not an extra, and what they do that makes it feel that way</label>
       <textarea id="rf-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Being left out of one plan, or even one group, doesn't decide your worth. You're not the extra one in your own life.</p>
+      <p>The first sting of being left out is automatic. What you do next is yours. One plan, or even one group, doesn't decide your worth.</p>
     </div>
   </div>
 </section>
@@ -708,11 +820,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-lonely" aria-pressed="false">😔 Lonely, like I don't really have my people</button>
-          <button type="button" class="choice" data-path="p-self" aria-pressed="false">😬 Self-conscious, like everyone can tell</button>
-          <button type="button" class="choice" data-path="p-hurt" aria-pressed="false">😠 Hurt and kind of resentful</button>
-          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">🤷 Confused about where I stand</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 A little better today</button>
+          <button type="button" class="choice" data-path="p-lonely" aria-pressed="false">Lonely, like I don't really have my people</button>
+          <button type="button" class="choice" data-path="p-self" aria-pressed="false">Self-conscious, like everyone can tell</button>
+          <button type="button" class="choice" data-path="p-hurt" aria-pressed="false">Hurt and kind of resentful</button>
+          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">Confused about where I stand</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">A little better today</button>
         </div>
 
         <div class="path-panel" id="p-lonely" hidden>
@@ -720,10 +832,10 @@
           <p>Loneliness is a signal, like hunger. It's telling you that you need connection, not that something is wrong with you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Text one person you haven't talked to in a while. "saw this and thought of you" is enough.</li>
-            <li><span class="e" aria-hidden="true">🎯</span>Pick one place this week to show up: a club, practice, a study group.</li>
-            <li><span class="e" aria-hidden="true">🏠</span>Spend time with someone at home, a sibling, a parent, a pet. Connection counts wherever it comes from.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell a counselor. Helping students find their people is part of their job.</li>
+            <li>Text one person you haven't talked to in a while. "saw this and thought of you" is enough.</li>
+            <li>Pick one place this week to show up: a club, practice, a study group.</li>
+            <li>Spend time with someone at home, a sibling, a parent, a pet. Connection counts wherever it comes from.</li>
+            <li>Tell a counselor. Helping students find their people is part of their job.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-self" hidden>
@@ -731,9 +843,9 @@
           <p>That's the spotlight effect. It feels like everyone's watching. Most people are thinking about themselves far more than about you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times. A longer exhale helps your body settle.</li>
-            <li><span class="e" aria-hidden="true">📚</span>Give yourself something to do in tough moments, like a book, sketching, or helping a teacher.</li>
-            <li><span class="e" aria-hidden="true">👋</span>Say hi to one person tomorrow. Small moments build up.</li>
+            <li>Breathe in for 4, out for 6, five times. A longer exhale helps your body settle.</li>
+            <li>Give yourself something to do in awkward moments: headphones and a task, a book, an errand.</li>
+            <li>Say hi to one person tomorrow. Small moments build up.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-hurt" hidden>
@@ -741,10 +853,10 @@
           <p>Resentment often means you've been holding hurt for a while without saying it. It's a sign it might be time to have the conversation.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Use the "Say it simply" builder above to find your words.</li>
-            <li><span class="e" aria-hidden="true">🏃</span>Move your body before you talk to anyone: a walk, a run, music.</li>
-            <li><span class="e" aria-hidden="true">⏳</span>Choose a calm moment, one on one, rather than bringing it up in front of others.</li>
-            <li><span class="e" aria-hidden="true">🙅</span>Skip the vague posts and the cold shoulder. They rarely get you what you need.</li>
+            <li>Use the one-honest-sentence builder in Part 2 to find your words.</li>
+            <li>Move your body before you talk to anyone: a walk, a run, music.</li>
+            <li>Choose a calm moment, one on one, rather than bringing it up in front of others.</li>
+            <li>Skip the vague posts and the cold shoulder. They rarely get you what you need.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unsure" hidden>
@@ -752,9 +864,9 @@
           <p>Friendships change shape, and not knowing where you fit is uncomfortable. You don't have to figure it out alone or all at once.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⚖️</span>Sort it: accident, drift, or on purpose? Write down the facts you have.</li>
-            <li><span class="e" aria-hidden="true">❓</span>Ask the friend directly, in a low-key way: "are we good? I've missed hanging out."</li>
-            <li><span class="e" aria-hidden="true">🌐</span>Invest a little in one other friendship while you wait to see.</li>
+            <li>Sort it: accident, drift, or on purpose? Write down the facts you have.</li>
+            <li>Ask the friend directly, in a low-key way: "are we good? I've missed hanging out."</li>
+            <li>Invest a little in one other friendship while you wait to see.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -762,9 +874,9 @@
           <p>Some distance from it is helping. Better days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped today, so you can do it again.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Look around for someone else who might be the third wheel, and include them.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Spend time with the people who feel easy to be around.</li>
+            <li>Notice what helped today, so you can do it again.</li>
+            <li>Look around for someone else who might be the third wheel, and include them.</li>
+            <li>Spend time with the people who feel easy to be around.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>

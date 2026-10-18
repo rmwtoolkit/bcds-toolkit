@@ -362,6 +362,69 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  .fig svg.funnel { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +444,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🪞 High School · Digital life</div>
+  <div class="eyebrow">High School · Digital life</div>
   <h1>The Comparison Trap</h1>
-  <p class="tagline">Because everyone's highlight reel makes your everyday look small.</p>
+  <p class="tagline">Why your brain compares, why feeds rig the comparison, and how to keep it from deciding how you feel about your life.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +472,70 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why comparison hits so hard online</h2>
+    <h2 id="h-understand">The comparison is rigged before it starts</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know it's edited. It still stings.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know it's curated. It still lands.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You scrolled for ten minutes and came away feeling worse about your life, your looks, or your friends.</li>
-        <li>You compared your follower count or likes to someone else's.</li>
-        
-        <li >Everyone seems to have a perfect body, perfect friends, perfect weekends, or a perfect college list.</li>
-        <li>You deleted a post because it didn't get enough likes.</li>
-        <li>You edited a photo of yourself until it didn't really look like you.</li>
-        <li>You know it's fake, and it still gets to you.</li>
+        <li>Decision season: your feed fills with acceptance posts, and each one makes your own wait feel heavier.</li>
+        <li>Someone your age has an internship, a startup, a modeling contract, or 200,000 followers.</li>
+        <li>You opened the app in a fine mood and closed it feeling like your life is smaller than everyone else's.</li>
+        <li>You've checked a post's likes three times in an hour and felt something drop when the number stalled.</li>
+        <li>A relative compared you to a cousin or sibling, and the feed picked up right where they left off.</li>
       </ul>
-      <p style="margin:0">Comparing yourself to others is a normal human thing. Social media turns it up to a volume that's hard to handle.</p>
+      <p style="margin:0">You already know feeds are highlight reels. Knowing doesn't switch the feeling off. Here's why, and what does help.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">How the trap works</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎞</span><strong>Highlight reels</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">People post their best moments, best angles, and best news. You see everyone else's best next to your everyday.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">✨</span><strong>Filters and editing</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Faces, bodies, and rooms are smoothed, slimmed, and brightened. Some of what you see isn't physically real.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔢</span><strong>Numbers on everything</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Likes, views, and followers turn social life into a scoreboard, and your brain notices scores.</p></details>
+    <h3 style="margin-top:28px">The highlight filter</h3>
+    <figure class="fig">
+<svg class="funnel" viewBox="0 0 400 290" role="img" aria-label="Illustration of the highlight filter. Someone's actual week is wide and ordinary. Less of it gets photographed, less of that gets posted, and the posted part is the best take, filtered and captioned. That narrow slice is what you compare your whole unedited life to." xmlns="http://www.w3.org/2000/svg">
+  <g font-size="14">
+    <rect x="20" y="14" width="360" height="42" rx="10" fill="#E5E5EA"/>
+    <text x="34" y="40" fill="#1D1D1F" font-weight="700">Their actual week</text>
+    <text x="366" y="40" fill="#6E6E73" text-anchor="end" font-size="13">boring, bad, ordinary</text>
+    <rect x="20" y="68" width="280" height="42" rx="10" fill="#C7C7CC"/>
+    <text x="34" y="94" fill="#1D1D1F" font-weight="700">What gets photographed</text>
+    <rect x="20" y="122" width="200" height="42" rx="10" fill="#8E8E93"/>
+    <text x="34" y="148" fill="#FFFFFF" font-weight="700">What gets posted</text>
+    <rect x="20" y="176" width="120" height="42" rx="10" fill="#3A3A3C"/>
+    <text x="34" y="202" fill="#FFFFFF" font-weight="700">Best take</text>
+    <text x="150" y="202" fill="#6E6E73" font-size="13">filtered, cropped, captioned</text>
+    <rect x="20" y="230" width="44" height="42" rx="10" fill="#0071E3"/>
+    <text x="76" y="249" fill="#0058B0" font-weight="700">What you see</text>
+    <text x="76" y="266" fill="#6E6E73" font-size="13">and compare your whole life to</text>
+  </g>
+</svg>
+      <figcaption>Illustration, not data. You see a thin, edited slice of other people's lives and set it against everything you know about your own: the doubts, the bad days, the unfiltered face.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Comparing is built in</strong><p>In 1954, psychologist Leon Festinger proposed that people judge their own abilities and opinions by comparing themselves to others, especially when there's no objective measure. That's normal. For most of history, the comparison group was a few dozen people you actually knew.</p></div></div>
+      <div class="region"><span class="dot" style="background:#3A3A3C"></span><div><strong>Likes hit the reward system</strong><p>In a UCLA brain-imaging study, teens saw photos in a simulated Instagram feed. Photos with more likes activated the nucleus accumbens, part of the brain's reward circuit. Teens were also more likely to like a photo that already had lots of likes, even photos of risky behavior. Popularity is partly contagious.</p></div></div>
+      <div class="region"><span class="dot" style="background:#0071E3"></span><div><strong>Everyone hides the hard parts</strong><p>Stanford researchers found that people consistently underestimate how often their peers feel sad, lonely, or anxious, in part because others hide those moments. People who underestimated more also reported more loneliness. The feed makes this blind spot bigger.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Your brain compares. Feeds never stop.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">What happens when you compare up, and what helps.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain is built to compare.</dt>
-        <dd>Humans have always sized themselves up against others. It used to be a handful of people. Now it's thousands, including professionals and celebrities.</dd>
-        <dt>Teen brains are tuned to social feedback.</dt>
-        <dd>Research has found that likes activate the brain's reward system, and teens are especially sensitive to what peers think.</dd>
-        <dt>It's endless.</dt>
-        <dd>There's always someone who seems prettier, richer, more popular, or more talented. The scroll never runs out of people to compare to.</dd>
-        <dt>It's not just social media.</dt>
-        <dd>Grades, sports, and who got invited where. Feeds amplify comparisons that already happen at school.</dd>
+        <dt>Upward comparison costs self-esteem.</dt>
+        <dd>In a 2014 study, Erin Vogel and colleagues found that heavier Facebook users had lower self-esteem, explained by more exposure to people who seemed to be doing better. In their experiment, just viewing a profile with an active social life and healthy habits lowered how people felt about themselves.</dd>
+        <dt>Cutting back helped in a controlled trial.</dt>
+        <dd>Melissa Hunt's team at Penn randomly assigned 143 college students either to keep their usual habits or to limit Facebook, Instagram and Snapchat to 10 minutes each per day for three weeks. The limited group reported less loneliness and fewer depression symptoms. It was a small sample of college students, so it's a strong hint, not the final word.</dd>
+        <dt>Seeing behind the edit helps.</dt>
+        <dd>Marika Tiggemann and Isabella Anderberg showed young women either idealized Instagram photos or "Instagram vs reality" pairs. Those who saw the real versions next to the posed ones felt better about their own bodies than those who saw only the ideal.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🪞 You're comparing the wrong things</span><span class="sticker">Your inside vs. their best outside.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Comparison you didn't pick</span><span class="sticker">Families, cultures, and the cousin who got into Stanford.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>You're putting your inside (your doubts, your bad days, your unedited face) next to everyone else's outside (their best day, their best angle, their best filter). That comparison is rigged before it starts.</p>
-      <p class="worst">The worst part: the people you're comparing yourself to are often comparing themselves to someone else, and feeling just as behind.</p>
+      <p>Some families talk openly about how you stack up against siblings, cousins, or the neighbor's kid. In some, that's how care and high hopes get expressed. In others, achievement is rarely discussed at all. Neither is the "right" way, and the same comment can feel like pressure or like love depending on who says it and how.</p>
+      <p>Think about how comparison works in your family. What part of it do you want to keep, and what part do you want to set down?</p>
+      <p class="worst">The people you're measuring yourself against are usually measuring themselves against someone else, and feeling just as behind.</p>
       </div>
     </details>
   </div>
@@ -465,40 +544,51 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Question the comparison</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Your feed should work for you.</h3>
+      <div class="fold-label">The four-question check</div>
+      <h3 class="sticker">When a post stings, interrogate it.</h3>
+      <p>You can't stop your brain from comparing. You can audit the comparison before you let it decide anything.</p>
+      <div class="levers">
+        <div class="lever"><b>Is it real?</b><span>How much of what you saw is the best take, cropped and captioned? What did they leave out?</span></div>
+        <div class="lever"><b>Is it a fair match?</b><span>Same starting line? Same money, family support, time, connections, and luck?</span></div>
+        <div class="lever"><b>Is it useful?</b><span>Is there something here you can learn from or act on? If not, it's just noise that hurts.</span></div>
+        <div class="lever"><b>What's the after-feeling?</b><span>If an account reliably leaves you worse, that's data. You can act on it.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">Moves that work</div>
+      <h3 class="sticker">Change the inputs.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🔍 Notice the after-feeling.<span class="row-cue" aria-hidden="true"></span></summary><p>After scrolling, ask: do I feel better or worse? Your feelings are data about which accounts are good for you.</p></details>
-        <details class="row"><summary>🧹 Curate your feed.<span class="row-cue" aria-hidden="true"></span></summary><p>Mute or unfollow accounts that make you feel bad, even friends. Muting is private. Follow things that make you laugh, learn, or feel inspired.</p></details>
-        <details class="row"><summary>🎬 Remember the editing.<span class="row-cue" aria-hidden="true"></span></summary><p>Every time you see a perfect post, remind yourself: chosen, angled, edited. Not the whole story.</p></details>
-        <details class="row"><summary>📏 Compare to past you.<span class="row-cue" aria-hidden="true"></span></summary><p>Instead of measuring against others, notice how you've grown since last year.</p></details>
-        <details class="row"><summary>🙈 Hide the numbers.<span class="row-cue" aria-hidden="true"></span></summary><p>Many apps let you hide like counts. Try it for a week and see how it feels.</p></details>
-        <details class="row"><summary>🌳 Do more, scroll less.<span class="row-cue" aria-hidden="true"></span></summary><p>Time spent doing things you enjoy builds confidence. Time spent watching other people do things usually doesn't.</p></details>
+        <details class="row"><summary><span class="num">1</span> Mute without guilt.<span class="row-cue" aria-hidden="true"></span></summary><p>Muting is private, and it isn't a judgment of the person. You can like your friend and still not need their vacation in your feed during finals.</p></details>
+        <details class="row"><summary><span class="num">2</span> Hide the numbers.<span class="row-cue" aria-hidden="true"></span></summary><p>Instagram and Facebook let you hide like counts on your posts and on other people's. Try it for two weeks and notice whether posting feels different.</p></details>
+        <details class="row"><summary><span class="num">3</span> Set a ceiling, not a ban.<span class="row-cue" aria-hidden="true"></span></summary><p>The Penn study used 10 minutes per app per day. You don't have to match it. A clear limit on your worst app is a realistic start.</p></details>
+        <details class="row"><summary><span class="num">4</span> Compare to last year's you.<span class="row-cue" aria-hidden="true"></span></summary><p>That's the only comparison with the same starting line. What can you do now that you couldn't then?</p></details>
+        <details class="row"><summary><span class="num">5</span> Say it out loud to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Telling a friend "that post made me feel behind" usually gets you "me too." That breaks the illusion that everyone else is fine.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Which accounts leave you feeling worse?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Audit the accounts you see most.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Next time you scroll, notice how each account makes you feel. Check what fits for the accounts you see most.</p>
+      <p>Next time you scroll, notice how the accounts you see most make you feel. Check what fits.</p>
       <div class="grid-2">
         <div>
-          <h3 style="font-size:1rem">💚 Keep</h3>
+          <h3 style="font-size:1rem">Keep</h3>
           <div class="checklist audit" role="group" aria-label="Accounts that help" data-kind="keep">
             <label><input type="checkbox"> Makes me laugh</label>
-            <label><input type="checkbox"> Teaches me something</label>
-            <label><input type="checkbox"> Real friends, real life</label>
-            <label><input type="checkbox"> Inspires me to do something</label>
+            <label><input type="checkbox"> Teaches me something I use</label>
+            <label><input type="checkbox"> Real people, real life</label>
+            <label><input type="checkbox"> Makes me want to go do something</label>
           </div>
         </div>
         <div>
-          <h3 style="font-size:1rem">🔇 Mute</h3>
+          <h3 style="font-size:1rem">Mute</h3>
           <div class="checklist audit" role="group" aria-label="Accounts that hurt" data-kind="mute">
-            <label><input type="checkbox"> Makes me feel ugly or not enough</label>
-            <label><input type="checkbox"> Makes me feel left out</label>
-            <label><input type="checkbox"> Makes me want to buy stuff</label>
-            <label><input type="checkbox"> Makes me feel anxious or angry</label>
+            <label><input type="checkbox"> Leaves me feeling not enough</label>
+            <label><input type="checkbox"> Leaves me feeling left out</label>
+            <label><input type="checkbox"> Makes me want to buy something to fix myself</label>
+            <label><input type="checkbox"> Leaves me anxious or angry</label>
           </div>
         </div>
       </div>
@@ -507,31 +597,47 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Scroll moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three comparison moments. What helps most?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the most helpful move.</p>
-      
-      <div class="scenario" >
-        <p>An influencer you follow always makes you feel bad about your body.</p>
+      <div class="scenario">
+        <p>Mid-December, senior year. Your feed is wall-to-wall early decision acceptances. You haven't heard back yet.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="If it consistently makes you feel worse, it's not motivating. It's draining.">Keep following, it's motivation</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Your feed should work for you. You don't owe any account your attention.">Unfollow or mute</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Chasing an edited standard means always falling short. Nobody actually looks like that.">Edit your photos more to keep up</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Protecting your attention for one hard week is a skill, not weakness. Say congrats in person when you&#x27;re ready.">Mute decision posts for the week and talk to someone about the wait</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Being happy for friends is good. Doing it while ignoring your own stress tends to make the stress louder later.">Congratulate everyone right away and act fine</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Stat-hunting turns their good news into your verdict. It almost always makes the wait worse.">Look up their test scores and GPA online to see how you compare</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Jae sees a classmate post about a summer research internship. Jae spends his summers working at his family's restaurant and suddenly feels behind.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="This compares a curated post to his whole life, and ignores very different starting lines.">Decide he's already too far behind to catch up</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Running a lunch rush, handling customers, and showing up for family are real skills and real responsibility. Colleges and employers count them.">Name the different starting lines, and recognize what his work has built</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Wanting more options is fine. Applying out of panic, not interest, usually leads somewhere he doesn&#x27;t want to be.">Apply to every program he can find tonight</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Riley follows fitness creators. Every video leaves her feeling like her body is wrong, but she says it's motivation.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="If an account reliably leaves her worse, it isn&#x27;t motivating her. It&#x27;s draining her.">Keep watching, it's motivation</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better, but form tutorials from bodies she compares herself to may still sting. Notice the after-feeling.">Only watch the technique videos</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Her feed should work for her. Accounts about what bodies can do, not how they look, tend to feel different.">Mute the accounts that leave her feeling worse and follow ones focused on skill</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one decent answer. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These keep you stuck in the trap.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🔁 Scrolling to feel better.<span class="row-cue" aria-hidden="true"></span></summary><p>Feeling bad and scrolling more rarely works. Put it down and do something else.</p></details>
-        <details class="row"><summary>🎭 Performing your life.<span class="row-cue" aria-hidden="true"></span></summary><p>Posting to look happy instead of being happy is exhausting.</p></details>
-        <details class="row"><summary>🧮 Counting likes.<span class="row-cue" aria-hidden="true"></span></summary><p>Likes measure timing, algorithms, and luck as much as anything about you.</p></details>
-        <details class="row"><summary>🙊 Keeping it to yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>Talking about how feeds make you feel often reveals that friends feel the same way.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Everyone else is fine.</span><span class="row-cue" aria-hidden="true"></span></summary><p>People reliably underestimate how much their peers struggle, because the struggle is mostly hidden. You are comparing to a version of them that doesn't exist.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Likes measure how much people like me.</span><span class="row-cue" aria-hidden="true"></span></summary><p>They measure timing, the algorithm, and herd behavior. In the UCLA study, teens liked photos more when other people already had.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I just need to stop caring.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Comparing is automatic, so trying not to care rarely works. Changing what you see works better.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> The only fix is quitting.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Some people do well with a full break. In the Penn trial, a firm limit was enough to lower loneliness and depression symptoms.</p></details>
       </div>
       </div>
     </details>
@@ -539,12 +645,26 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to get more help</h3>
       <ul class="tight">
-        <li>Comparing yourself is affecting how you eat, sleep, or feel about your body most of the time.</li>
+        <li>Comparing yourself is affecting how you eat, sleep, or feel about your body most days.</li>
         <li>You feel worthless or hopeless after being online.</li>
-        <li>You're being targeted or bullied online.</li>
+        <li>You're being targeted, mocked, or bullied online.</li>
       </ul>
       <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Festinger, L. (1954). A theory of social comparison processes. <i>Human Relations</i>, 7(2), 117&ndash;140.</li>
+        <li>Sherman, L. E., Payton, A. A., Hernandez, L. M., Greenfield, P. M., &amp; Dapretto, M. (2016). The power of the like in adolescence: Effects of peer influence on neural and behavioral responses to social media. <i>Psychological Science</i>, 27(7), 1027&ndash;1035.</li>
+        <li>Jordan, A. H., Monin, B., Dweck, C. S., Lovett, B. J., John, O. P., &amp; Gross, J. J. (2011). Misery has more company than people think: Underestimating the prevalence of others' negative emotions. <i>Personality and Social Psychology Bulletin</i>, 37(1), 120&ndash;135.</li>
+        <li>Vogel, E. A., Rose, J. P., Roberts, L. R., &amp; Eckles, K. (2014). Social comparison, social media, and self-esteem. <i>Psychology of Popular Media Culture</i>, 3(4), 206&ndash;222.</li>
+        <li>Hunt, M. G., Marx, R., Lipson, C., &amp; Young, J. (2018). No more FOMO: Limiting social media decreases loneliness and depression. <i>Journal of Social and Clinical Psychology</i>, 37(10), 751&ndash;768.</li>
+        <li>Tiggemann, M., &amp; Anderberg, I. (2020). Social media is not real: The effect of "Instagram vs reality" images on women's social comparison and body image. <i>New Media &amp; Society</i>, 22(12), 2183&ndash;2199.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -555,26 +675,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">The accounts or people I compare myself to most</label>
+      <label class="prompt" for="tx-1">Who I compare myself to most, and what exactly I'm measuring</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">How I usually feel after scrolling</label>
+      <label class="prompt" for="tx-2">How I usually feel after scrolling, and which accounts drive it</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">Something about my real, unedited life that I like</label>
+      <label class="prompt" for="tx-3">Something about my real, unedited life that I wouldn't trade</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">How I've grown compared to a year ago</label>
+      <label class="prompt" for="tx-4">How I've grown since this time last year</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">One change I'll make to my feed this week</label>
+      <label class="prompt" for="tx-5">How comparison works in my family or community, and what I want to keep or let go of</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>No one's life is as perfect as their feed. Yours doesn't have to be either. You're more than what shows up on a screen.</p>
+      <p>You are comparing your full story to someone else's best scene. Your life isn't behind. It's just not edited.</p>
     </div>
     </div>
   </div>
@@ -589,8 +709,8 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with comparison today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How much has comparison been on your mind today?</h3>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -605,9 +725,9 @@
           <button type="button" class="chip" aria-pressed="false">scrolled and felt worse</button>
           <button type="button" class="chip" aria-pressed="false">compared my looks</button>
           <button type="button" class="chip" aria-pressed="false">compared my life or friends</button>
+          <button type="button" class="chip" aria-pressed="false">compared grades or college stuff</button>
           <button type="button" class="chip" aria-pressed="false">checked my likes a lot</button>
-          <button type="button" class="chip" aria-pressed="false">saw something that made me feel left out</button>
-          <button type="button" class="chip" aria-pressed="false">edited a photo of myself a lot</button>
+          <button type="button" class="chip" aria-pressed="false">saw something I wasn't invited to</button>
           <button type="button" class="chip" aria-pressed="false">felt behind everyone</button>
           <button type="button" class="chip" aria-pressed="false">muted or unfollowed someone</button>
           <button type="button" class="chip" aria-pressed="false">took a break from my phone</button>
@@ -618,43 +738,43 @@
 
       <div class="ci-step">
         <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <p class="ci-hint">Pick the one closest to today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-worse" aria-pressed="false">😔 Feeling worse after scrolling</button>
-          <button type="button" class="choice" data-path="p-body" aria-pressed="false">🪞 Down on my looks</button>
-          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">🏃 Feeling behind everyone</button>
-          <button type="button" class="choice" data-path="p-left" aria-pressed="false">🫥 Left out by what I saw</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling okay about me</button>
+          <button type="button" class="choice" data-path="p-worse" aria-pressed="false">Feeling worse after scrolling</button>
+          <button type="button" class="choice" data-path="p-body" aria-pressed="false">Down on my looks</button>
+          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">Feeling behind everyone</button>
+          <button type="button" class="choice" data-path="p-left" aria-pressed="false">Left out by what I saw</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling okay about me</button>
         </div>
 
         <div class="path-panel" id="p-worse" hidden>
           <h4>What this might mean</h4>
-          <p>That's your feelings telling you something about what you've been watching.</p>
+          <p>That after-feeling is information about what you've been watching, not about your worth.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📵</span>Close the app and do something with your hands or body.</li>
-            <li><span class="e" aria-hidden="true">🧹</span>Mute one account that made you feel bad.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Text a friend about something real.</li>
+            <li>Close the app and do something with your hands or body.</li>
+            <li>Mute one account that made it worse.</li>
+            <li>Text a friend about something real.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-body" hidden>
           <h4>What this might mean</h4>
-          <p>Comparing your real body to edited images is a fight you can't win, because the images aren't real.</p>
+          <p>Comparing your real body to curated and edited images is a contest nobody wins, because the images aren't real.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🎬</span>Remind yourself: angles, lighting, filters, editing.</li>
-            <li><span class="e" aria-hidden="true">🧹</span>Follow some accounts that show real, unedited people.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>If these feelings stick around or affect eating, talk to a counselor.</li>
+            <li>Remind yourself: lighting, angles, filters, editing, sometimes surgery.</li>
+            <li>Follow a few accounts focused on skill, not appearance.</li>
+            <li>If these feelings stick around or affect eating, talk to a counselor.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-behind" hidden>
           <h4>What this might mean</h4>
-          <p>Everyone's on a different timeline. Feeds make it look like everyone else is ahead.</p>
+          <p>Timelines differ, and so do starting lines. Feeds make it look like everyone else is ahead at once.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📏</span>Compare to where you were last year.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write down three things you've done that you're proud of.</li>
-            <li><span class="e" aria-hidden="true">🗯</span>The Inner Critic can help with that "not enough" voice.</li>
+            <li>Compare to where you were a year ago.</li>
+            <li>Write down three things you've done that took real effort.</li>
+            <li>The Inner Critic can help with the "not enough" voice.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-left" hidden>
@@ -662,19 +782,19 @@
           <p>Seeing what you weren't part of hurts. You're not imagining it.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔕</span>Mute stories for a while.</li>
-            <li><span class="e" aria-hidden="true">🫥</span>The Third Wheel has more on feeling left out.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Reach out to someone and make your own plan.</li>
+            <li>Mute stories for a while.</li>
+            <li>Reach out to someone and make your own plan.</li>
+            <li>The Third Wheel has more on feeling left out.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>That's worth noticing. A better day doesn't have to be a perfect one.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">🧹</span>Keep your feed working for you.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Hype up a friend today. It feels good both ways.</li>
+            <li>Notice what helped.</li>
+            <li>Keep your feed working for you.</li>
+            <li>Hype up a friend today. It feels good both ways.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -702,7 +822,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who felt not good enough. You'd tell them they're enough. You are too.</p>
+        <p class="closing">If a friend told you they felt like a failure after scrolling, you'd point out everything the feed leaves out. Point it out to yourself too.</p>
       </div>
     </div>
     </div>

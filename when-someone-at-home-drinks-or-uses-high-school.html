@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🏠 High School · Substance use</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>When Someone at Home Drinks or Uses</h1>
-  <p class="tagline">Because it isn't your fault, and it isn't your job to fix.</p>
+  <p class="tagline">What living with someone's drinking or drug use does to your stress system, what predicts how kids in your spot do, and how to get support on your terms.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +458,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,76 +475,73 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Living with someone else's addiction</h2>
+    <h2 id="h-understand">What growing up around addiction does, and doesn't, decide</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">If this sounds like home, it's not your fault.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You've been handling more than most people know.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>A parent acts like a different person after drinking.</li>
-        <li>You check what kind of mood someone's in before you decide whether to bring friends over.</li>
-        
-        <li >You've covered for a parent with a teacher, a coach, or your friends' parents.</li>
-        <li>Promises get broken: pickups missed, plans forgotten, apologies that don't stick.</li>
-        
-        <li >You've become the responsible one at home, sometimes the parent to your parent.</li>
-        <li>Home feels unpredictable, and school is where you can finally breathe. Or the other way around.</li>
+        <li>You've had to decide whether to get in a car with a parent who'd been drinking.</li>
+        <li>You're the one who knows which bills are late, or who gets your younger siblings fed and to school.</li>
+        <li>You think about college or moving out partly as a way out, and feel guilty for thinking it.</li>
+        <li>A parent is in recovery, and on every rough day you're scanning for signs of a slip.</li>
+        <li>You've noticed you drink or use to get through weekends, and that scares you a little.</li>
       </ul>
-      <p style="margin:0">If any of that sounds familiar, you are far from alone. And none of it is your fault.</p>
+      <p style="margin:0">"You didn't cause it, can't cure it, can't control it" still holds. This goes further: what's happening in your body, what research says about how kids in your spot turn out, and what support can look like on your terms.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">You're not the only one</span><span class="sticker">About 1 in 4 kids lives with this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 570 290" role="img" aria-label="About 25 out of 100 kids in the U.S. live with a parent who has a substance use disorder." style="width:100%;max-width:560px;height:auto;display:block"><circle cx="20" cy="20" r="11" fill="var(--school)"/><circle cx="48" cy="20" r="11" fill="var(--school)"/><circle cx="76" cy="20" r="11" fill="var(--school)"/><circle cx="104" cy="20" r="11" fill="var(--school)"/><circle cx="132" cy="20" r="11" fill="var(--school)"/><circle cx="160" cy="20" r="11" fill="var(--school)"/><circle cx="188" cy="20" r="11" fill="var(--school)"/><circle cx="216" cy="20" r="11" fill="var(--school)"/><circle cx="244" cy="20" r="11" fill="var(--school)"/><circle cx="272" cy="20" r="11" fill="var(--school)"/><circle cx="20" cy="48" r="11" fill="var(--school)"/><circle cx="48" cy="48" r="11" fill="var(--school)"/><circle cx="76" cy="48" r="11" fill="var(--school)"/><circle cx="104" cy="48" r="11" fill="var(--school)"/><circle cx="132" cy="48" r="11" fill="var(--school)"/><circle cx="160" cy="48" r="11" fill="var(--school)"/><circle cx="188" cy="48" r="11" fill="var(--school)"/><circle cx="216" cy="48" r="11" fill="var(--school)"/><circle cx="244" cy="48" r="11" fill="var(--school)"/><circle cx="272" cy="48" r="11" fill="var(--school)"/><circle cx="20" cy="76" r="11" fill="var(--school)"/><circle cx="48" cy="76" r="11" fill="var(--school)"/><circle cx="76" cy="76" r="11" fill="var(--school)"/><circle cx="104" cy="76" r="11" fill="var(--school)"/><circle cx="132" cy="76" r="11" fill="var(--school)"/><circle cx="160" cy="76" r="11" fill="var(--line)"/><circle cx="188" cy="76" r="11" fill="var(--line)"/><circle cx="216" cy="76" r="11" fill="var(--line)"/><circle cx="244" cy="76" r="11" fill="var(--line)"/><circle cx="272" cy="76" r="11" fill="var(--line)"/><circle cx="20" cy="104" r="11" fill="var(--line)"/><circle cx="48" cy="104" r="11" fill="var(--line)"/><circle cx="76" cy="104" r="11" fill="var(--line)"/><circle cx="104" cy="104" r="11" fill="var(--line)"/><circle cx="132" cy="104" r="11" fill="var(--line)"/><circle cx="160" cy="104" r="11" fill="var(--line)"/><circle cx="188" cy="104" r="11" fill="var(--line)"/><circle cx="216" cy="104" r="11" fill="var(--line)"/><circle cx="244" cy="104" r="11" fill="var(--line)"/><circle cx="272" cy="104" r="11" fill="var(--line)"/><circle cx="20" cy="132" r="11" fill="var(--line)"/><circle cx="48" cy="132" r="11" fill="var(--line)"/><circle cx="76" cy="132" r="11" fill="var(--line)"/><circle cx="104" cy="132" r="11" fill="var(--line)"/><circle cx="132" cy="132" r="11" fill="var(--line)"/><circle cx="160" cy="132" r="11" fill="var(--line)"/><circle cx="188" cy="132" r="11" fill="var(--line)"/><circle cx="216" cy="132" r="11" fill="var(--line)"/><circle cx="244" cy="132" r="11" fill="var(--line)"/><circle cx="272" cy="132" r="11" fill="var(--line)"/><circle cx="20" cy="160" r="11" fill="var(--line)"/><circle cx="48" cy="160" r="11" fill="var(--line)"/><circle cx="76" cy="160" r="11" fill="var(--line)"/><circle cx="104" cy="160" r="11" fill="var(--line)"/><circle cx="132" cy="160" r="11" fill="var(--line)"/><circle cx="160" cy="160" r="11" fill="var(--line)"/><circle cx="188" cy="160" r="11" fill="var(--line)"/><circle cx="216" cy="160" r="11" fill="var(--line)"/><circle cx="244" cy="160" r="11" fill="var(--line)"/><circle cx="272" cy="160" r="11" fill="var(--line)"/><circle cx="20" cy="188" r="11" fill="var(--line)"/><circle cx="48" cy="188" r="11" fill="var(--line)"/><circle cx="76" cy="188" r="11" fill="var(--line)"/><circle cx="104" cy="188" r="11" fill="var(--line)"/><circle cx="132" cy="188" r="11" fill="var(--line)"/><circle cx="160" cy="188" r="11" fill="var(--line)"/><circle cx="188" cy="188" r="11" fill="var(--line)"/><circle cx="216" cy="188" r="11" fill="var(--line)"/><circle cx="244" cy="188" r="11" fill="var(--line)"/><circle cx="272" cy="188" r="11" fill="var(--line)"/><circle cx="20" cy="216" r="11" fill="var(--line)"/><circle cx="48" cy="216" r="11" fill="var(--line)"/><circle cx="76" cy="216" r="11" fill="var(--line)"/><circle cx="104" cy="216" r="11" fill="var(--line)"/><circle cx="132" cy="216" r="11" fill="var(--line)"/><circle cx="160" cy="216" r="11" fill="var(--line)"/><circle cx="188" cy="216" r="11" fill="var(--line)"/><circle cx="216" cy="216" r="11" fill="var(--line)"/><circle cx="244" cy="216" r="11" fill="var(--line)"/><circle cx="272" cy="216" r="11" fill="var(--line)"/><circle cx="20" cy="244" r="11" fill="var(--line)"/><circle cx="48" cy="244" r="11" fill="var(--line)"/><circle cx="76" cy="244" r="11" fill="var(--line)"/><circle cx="104" cy="244" r="11" fill="var(--line)"/><circle cx="132" cy="244" r="11" fill="var(--line)"/><circle cx="160" cy="244" r="11" fill="var(--line)"/><circle cx="188" cy="244" r="11" fill="var(--line)"/><circle cx="216" cy="244" r="11" fill="var(--line)"/><circle cx="244" cy="244" r="11" fill="var(--line)"/><circle cx="272" cy="244" r="11" fill="var(--line)"/><circle cx="20" cy="272" r="11" fill="var(--line)"/><circle cx="48" cy="272" r="11" fill="var(--line)"/><circle cx="76" cy="272" r="11" fill="var(--line)"/><circle cx="104" cy="272" r="11" fill="var(--line)"/><circle cx="132" cy="272" r="11" fill="var(--line)"/><circle cx="160" cy="272" r="11" fill="var(--line)"/><circle cx="188" cy="272" r="11" fill="var(--line)"/><circle cx="216" cy="272" r="11" fill="var(--line)"/><circle cx="244" cy="272" r="11" fill="var(--line)"/><circle cx="272" cy="272" r="11" fill="var(--line)"/><text x="300" y="110" font-size="64" font-weight="800" fill="var(--school)">25</text><text x="302" y="140" font-size="20" font-weight="700" font-family="inherit" fill="var(--ink)">out of 100</text><text x="302" y="176" font-size="18" fill="var(--ink-soft)"><tspan x="302" dy="0">kids in the U.S. live with</tspan><tspan x="302" dy="23">a parent who has a</tspan><tspan x="302" dy="23">substance use disorder</tspan></text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >That's about 1 in 4 U.S. kids, roughly 19 million, in a 2025 JAMA Pediatrics study of national survey data. Most of those parents have an alcohol use disorder; others use cannabis, pills, or other drugs. In any classroom, you are almost certainly not the only one.</span></figcaption>
-      </figure>
-      </div>
-    </details>
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">A stress system that never gets to stand down</h3>
+    <p>Unpredictability is its own kind of stress. When you never know what you'll walk into, your body keeps running a stress chain that's built for short emergencies.</p>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 312" role="img" aria-labelledby="hpa-t hpa-d" xmlns="http://www.w3.org/2000/svg"><title id="hpa-t">The stress chain: brain to adrenal glands and back</title><desc id="hpa-d">The amygdala detects threat and alerts the hypothalamus. The hypothalamus signals the pituitary gland just below it. The pituitary signals the adrenal glands on top of the kidneys to release cortisol into the blood, including the hippocampus and prefrontal cortex.</desc><defs><marker id="hpa-ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#9A5714"/></marker></defs><g transform="translate(70 4) scale(0.84)"><path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/><ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/><g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g><path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/><g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round"><path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/><path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/><path d="M232 160 C246 152 262 158 276 150"/></g><path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/><path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/><path d="M204 180 C216 175 232 175 246 165" fill="none" stroke="#7A4FB5" stroke-width="8" stroke-linecap="round"/><ellipse cx="194" cy="177" rx="10" ry="7" fill="#C0392B"/><ellipse cx="176" cy="157" rx="11" ry="7" fill="#D9822B"/><line x1="176" y1="164" x2="176" y2="200" stroke="#B8691C" stroke-width="2.5"/><circle cx="176" cy="205" r="6.5" fill="#B8691C"/></g><line x1="217.8" y1="183.2" x2="217.8" y2="254" stroke="#9A5714" stroke-width="2" marker-end="url(#hpa-ah)"/><rect x="96" y="262" width="250" height="44" rx="12" fill="#FFF8EC" stroke="#E0B46C"/><text x="221" y="280" font-size="12.5" font-weight="700" fill="#9A5714" text-anchor="middle">Adrenal glands (on top of the kidneys)</text><text x="221" y="297" font-size="11.5" fill="#6E6E73" text-anchor="middle">release cortisol into the blood</text><path d="M346 284 C392 280 384 196 275.9 150.8" fill="none" stroke="#9A5714" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#hpa-ah)"/><line x1="157.4" y1="91.4" x2="70" y2="31" stroke="#245A96" stroke-width="1.4"/><circle cx="157.4" cy="91.4" r="3" fill="#245A96"/><text x="8" y="26" fill="#245A96" font-size="13" font-weight="700" text-anchor="start">Prefrontal cortex</text><line x1="268.2" y1="148.5" x2="340" y2="31" stroke="#5E3B8F" stroke-width="1.4"/><circle cx="268.2" cy="148.5" r="3" fill="#5E3B8F"/><text x="392" y="26" fill="#5E3B8F" font-size="13" font-weight="700" text-anchor="end">Hippocampus</text><line x1="214.5" y1="135.0" x2="106" y2="146" stroke="#9A5714" stroke-width="1.4"/><circle cx="214.5" cy="135.0" r="3" fill="#9A5714"/><text x="8" y="150" fill="#9A5714" font-size="13" font-weight="700" text-anchor="start">Hypothalamus</text><line x1="233.0" y1="153.5" x2="76" y2="202" stroke="#A3301F" stroke-width="1.4"/><circle cx="233.0" cy="153.5" r="3" fill="#A3301F"/><text x="8" y="206" fill="#A3301F" font-size="13" font-weight="700" text-anchor="start">Amygdala</text><line x1="214.5" y1="176.2" x2="72" y2="240" stroke="#9A5714" stroke-width="1.4"/><circle cx="214.5" cy="176.2" r="3" fill="#9A5714"/><text x="8" y="244" fill="#9A5714" font-size="13" font-weight="700" text-anchor="start">Pituitary</text></svg>
+      <figcaption>Side view of the brain, with deeper structures drawn see-through, plus the glands the brain signals. Simplified: these parts work as a loop, not a straight line.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: the threat detector</strong><p>It learns the warning signs at home, a tone of voice, a car door, a certain kind of quiet, and reacts before you've decided anything.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Hypothalamus and pituitary: start the chain</strong><p>The hypothalamus takes the alarm and signals the pituitary gland just below it. The pituitary sends a hormone through your blood to your adrenal glands.</p></div></div>
+      <div class="region"><span class="dot" style="background:#B8691C"></span><div><strong>Adrenal glands: release cortisol</strong><p>Cortisol gets you ready for an emergency: faster heart, sharper alert, sleep and appetite pushed aside. Useful for an hour. Exhausting for months.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Hippocampus: "you're safe now"</strong><p>Memory and context. It helps tell the alarm that this place, this moment, is okay. Long-running stress makes that signal weaker.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: focus and calming down</strong><p>Planning, concentrating, talking yourself down. When the alarm keeps running, it gets less bandwidth. That's why an essay at 11pm after a fight can feel impossible.</p></div></div>
+    </div>
+    <p class="stat">Pediatricians call stress that's severe, long-lasting, and not buffered by support <b>toxic stress</b>. A 2012 American Academy of Pediatrics report also named what buffers it best: steady, supportive relationships with adults.</p>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">The three Cs</span><span class="sticker">Didn't cause it. Can't cure it. Can't control it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <div style="display:flex;flex-wrap:wrap;gap:12px"><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">Cause</div><div style="margin-top:6px;font-weight:600">You didn't cause it.</div></div><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">Cure</div><div style="margin-top:6px;font-weight:600">You can't cure it.</div></div><div style="flex:1 1 150px;background:var(--card);border:2px solid var(--school);border-radius:16px;padding:16px;text-align:center"><div style="font-size:2.4rem;font-weight:800;color:var(--school);line-height:1">Control</div><div style="margin-top:6px;font-weight:600">You can't control it.</div></div></div>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">Addiction is a health condition that changes how a brain handles cravings and choices. Nothing you did made it start, and nothing you do can make it stop. You can take care of yourself.</figcaption>
-      </figure>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why it's so confusing</span><span class="sticker">Love and anger can both be true.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">The risk is real. The outcome isn't fixed.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🎭 Two versions of the same person.</dt>
-        <dd>The parent you love and the parent when they're using can feel like different people. Loving one and being angry at the other can both be true.</dd>
-        <dt>🤫 The unspoken rules.</dt>
-        <dd >Families living with addiction often run on three unspoken rules: don't talk, don't trust, don't feel. They keep the secret, and they keep kids alone with it.</dd>
-        <dt>🌀 Never knowing what you'll walk into.</dt>
-        <dd>Unpredictability keeps your brain on alert. That's why it can be hard to focus at school, sleep, or relax, even on good days.</dd>
-        <dt>😶 Mixed-up feelings.</dt>
-        <dd>Angry, sad, embarrassed, guilty, protective, numb, hopeful. Sometimes all in one evening. Every one of them makes sense.</dd>
+        <dt>You're far from the only one.</dt>
+        <dd>A 2025 study in <i>JAMA Pediatrics</i> estimated that about 19 million U.S. kids, roughly 1 in 4, live with a parent who has a substance use disorder. Alcohol was the most common.</dd>
+        <dt>Genes are about half the story.</dt>
+        <dd>Pooling twin and adoption studies, researchers in 2015 estimated alcohol use disorder is about 50% heritable. That's a real reason to be careful with alcohol and drugs. It also means the other half comes from environment, stress, and experience, and some of that is in your hands.</dd>
+        <dt>Most kids in this spot do okay.</dt>
+        <dd>A study that followed children of parents with alcoholism in Kauai, Hawaii, from birth found that most had not developed serious problems by 18. In the follow-up into adulthood, the ones who did well had leaned on more sources of support growing up: extended family, neighbors, and school.</dd>
       </dl>
       </div>
     </details>
 
-    <div  class="unit unit-one">
-    <h3 style="margin-top:28px">Roles kids often take on</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🏆</span><strong>The hero</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Perfect grades, no trouble, holds it together so nobody worries.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧸</span><strong>The caretaker</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Looks after siblings, covers for the parent, keeps the house running.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🤡</span><strong>The joker</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Cracks jokes to break the tension.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🫥</span><strong>The invisible one</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Stays quiet, stays in their room, needs nothing.</p></details>
-    </div>
-    </div>
-
-    <details  class="fold fold-callout">
-      <summary><span class="fold-label">🧬 What this means for you</span><span class="sticker">Higher risk. Not destiny.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">Why it's so confusing</span><span class="sticker">Love, anger, loyalty, relief. All at once.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div ><p>Kids of parents with addiction have a higher risk of developing one themselves, through genes and through years of stress. Higher risk is not destiny. Knowing it can make you careful with alcohol and drugs, especially early, and quicker to ask for help.</p></div>
-      <p class="worst">The good news: lots of people who grew up with this go on to build calm, steady lives. Support makes a real difference.</p>
+      <dl class="helps">
+        <dt>The unspoken rules.</dt>
+        <dd>Families living with addiction often run on three rules nobody says out loud: don't talk, don't trust, don't feel. They protect the secret, and they leave kids alone with it.</dd>
+        <dt>Helping, or carrying too much?</dt>
+        <dd>In many families and cultures, teens helping run the household is normal and a source of pride. Psychologists use the word parentification when it tips over: when it's constant, when nobody looks after you in return, or when it costs you sleep, school, or friends.</dd>
+        <dt>Recovery isn't a straight line.</dt>
+        <dd>Relapse is common in recovery from addiction, as it is in other long-term illnesses. A slip doesn't mean recovery failed, and it doesn't mean you missed something you should have caught.</dd>
+        <dt>Roles you might recognize.</dt>
+        <dd>The one with perfect grades so nobody worries. The caretaker. The one who cracks jokes to cut the tension. The one who stays in their room and needs nothing. They're ways of coping. They can also become a box.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Looking ahead</span><span class="sticker">Wanting your own life isn't betrayal.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Thinking about college, a job, or moving out can come with guilt, especially if you've been holding things together at home. Some families expect kids to stay close, and that can be a real and good choice. The question is whether you're choosing it, or whether guilt is choosing for you.</p>
+      <p class="worst">If a parent can't help with applications or financial forms, tell your counselor early. Schools see this more than you'd think, and there are options.</p>
       </div>
     </details>
   </div>
@@ -487,120 +550,98 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Taking care of you</h2>
+    <h2 id="h-practice">Support on your own terms</h2>
+    <div class="card">
+      <div class="fold-label">Before you tell an adult</div>
+      <h3 class="sticker">What happens when you talk to a counselor.</h3>
+      <p>In Massachusetts, school counselors, teachers, and nurses are mandated reporters. If they have reason to believe a young person is being abused or neglected, the law requires them to report it to the Department of Children and Families (DCF). Telling a counselor that a parent drinks is not the same thing as a report. The question is whether you are safe and cared for.</p>
+      <p>You can ask first: <b>"If I tell you something, what would you have to share, and with whom?"</b> A good counselor will give you a straight answer.</p>
+      <p style="margin:0">Some families see telling an outsider as disloyal, or have real reasons to distrust agencies, including families with immigration worries or past bad experiences with systems. Those concerns make sense. A counselor can talk through options with you, and you can decide how much to share and when.</p>
+    </div>
+
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Tell one safe adult.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🗣 Tell one safe adult.<span class="row-cue" aria-hidden="true"></span></summary><p>A counselor, a teacher, a coach, a relative. You don't have to tell the whole story at once. "Things are hard at home" is a fine start.</p></details>
-        <details class="row"><summary>🧭 Have a safety plan.<span class="row-cue" aria-hidden="true"></span></summary><p >Know who you'd call, where you'd go, and how you'd get there if home feels unsafe. Never get in a car with someone who's been drinking or using. Have a ride plan.</p></details>
-        <details class="row"><summary>🛟 Find people who get it.<span class="row-cue" aria-hidden="true"></span></summary><p >Alateen (part of Al-Anon) runs free meetings, in person and online, for teens affected by someone else's drinking. NACoA has resources for kids of parents with any addiction.</p></details>
-        <details class="row"><summary>📓 Get the feelings out.<span class="row-cue" aria-hidden="true"></span></summary><p>Write, draw, play music, run. Feelings that stay stuck inside tend to come out sideways.</p></details>
-        <details class="row"><summary>🎒 Protect your own stuff.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, friends, a team, a club, a place that's yours. Those are worth guarding, and you deserve them.</p></details>
-        <details class="row"><summary>💛 Be a kid when you can.<span class="row-cue" aria-hidden="true"></span></summary><p>You might be carrying a lot at home. You still get to have fun, be goofy, and not be in charge sometimes.</p></details>
+      <h3 class="sticker">Six moves, in your own order.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Pick one adult.<span class="row-cue" aria-hidden="true"></span></summary><p>A counselor, coach, aunt, grandparent, faith leader, or a friend's parent. "Things are hard at home" is a complete first sentence.</p></details>
+        <details class="row"><summary><span class="num">2</span> Have a ride rule.<span class="row-cue" aria-hidden="true"></span></summary><p>Never ride with someone who's been drinking or using, and don't let younger siblings either. Save two backup numbers now, before you need them.</p></details>
+        <details class="row"><summary><span class="num">3</span> Know the overdose basics.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone can't be woken or is breathing slowly, call 911, roll them on their side, and give naloxone (Narcan) if opioids could be involved. Narcan has been sold without a prescription since 2023. Massachusetts' Good Samaritan law protects the caller and the person overdosing from drug possession charges.</p></details>
+        <details class="row"><summary><span class="num">4</span> Find people who get it.<span class="row-cue" aria-hidden="true"></span></summary><p>Alateen, part of Al-Anon, runs free meetings in person and online for teens affected by someone else's drinking. NACoA has resources for kids of parents with any addiction.</p></details>
+        <details class="row"><summary><span class="num">5</span> Guard what's yours.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, a team, a job, a friend's kitchen, a place to study. Those buffer stress. Protecting them isn't selfish.</p></details>
+        <details class="row"><summary><span class="num">6</span> Watch your own use.<span class="row-cue" aria-hidden="true"></span></summary><p>With family history, the risk that drinking or using to cope becomes a pattern is higher. If you notice that happening, say it to someone. That's a strength, not a confession.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Who's in your corner?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Map your support, before a bad night.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think of the people you could go to. Write a name next to any that fit.</p>
-      <label class="prompt" for="tx-1">At school:</label>
+      <p>Write a name or a place next to any that fit. Nothing you type here is saved.</p>
+      <label class="prompt" for="tx-1">An adult at school I could start with:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">In my family or a friend's family:</label>
+      <label class="prompt" for="tx-2">Someone in my family, extended family, or community who'd have my back:</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">If I ever needed to leave home fast, I'd go to:</label>
+      <label class="prompt" for="tx-3">If I had to leave home fast tonight: where I'd go, and how I'd get there:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">How could a friend help Jamie?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three situations. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
-      <ol class="tight" style="padding-left:1.3em">
-        <li>Read the story out loud. It's about a friend, Jamie, not anyone in the room.</li>
-        <li>In small groups, talk about the three questions on the next screens.</li>
-        <li>Each group shares one idea. Collect them on the board.</li>
-      </ol>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 What would help Jamie? · 1 of 3</span><span class="sticker">Meet Jamie</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.1rem" >Jamie's dad drinks most nights. Jamie stopped inviting friends over, has been late to school, and snapped at you yesterday when you asked if everything was okay.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What might Jamie be feeling?</li><li>What might Jamie be afraid of?</li></ol>
-      <details class="row"><summary>Ideas to add<span class="row-cue" aria-hidden="true"></span></summary><p>Embarrassed, worried, tired, angry, protective of their parent, scared of what happens if anyone finds out. All of those make sense.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 What would help Jamie? · 2 of 3</span><span class="sticker">What could a friend say?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">If Jamie finally tells you what's going on, what would actually help?</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you say?</li><li>What would you avoid saying?</li></ol>
-      <details class="row"><summary>Ideas to add<span class="row-cue" aria-hidden="true"></span></summary><p>"Thanks for telling me." "That sounds really hard." "It's not your fault." "Want to go talk to a counselor together?" Skip "Just tell your mom to stop" or telling other people.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 What would help Jamie? · 3 of 3</span><span class="sticker">When does a friend tell an adult?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Jamie asks you to keep it secret. When should you tell an adult anyway?</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Never, a secret is a secret</li><li>If Jamie seems unsafe or is hurting</li><li>Only if Jamie says it's okay</li></ol>
-      <details class="row"><summary>Ideas to add<span class="row-cue" aria-hidden="true"></span></summary><p>If Jamie seems unsafe, is being hurt, or is talking about hurting themselves, telling a trusted adult is the caring move, even if Jamie is upset at first. See When a Friend Tells You Something Scary.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li>What makes it hard for kids like Jamie to tell anyone?</li>
-        <li>What could our school do so kids like Jamie know where to go?</li>
-        <li>What's one thing you'd want Jamie to know?</li>
-      </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Assume some students in the room are living with this. Keep it about Jamie, never ask anyone to share their own family, and let students know before you start that a counselor is available afterward. If a student discloses, thank them privately and follow your school's procedures.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      
-      <div class="scenario" >
-        <p>You're trying to write an essay, but there's yelling downstairs again and you can't focus.</p>
+      <p>Pick a move. There may be more than one reasonable one.</p>
+      <div class="scenario">
+        <p>It's 10:30pm. Lucía's mom has been drinking and says she'll drive Lucía's little brother to a friend's house to get his phone.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Losing sleep makes everything harder tomorrow.">Stay up all night to finish it</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Teachers can't help if they don't know. You don't have to give details.">Email your teacher: "Rough night at home, can I have a day?"</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Finding a calm place to work is smart.">Go to a friend's or the library if you can</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Keeping her brother out of the car is the priority. If her mom drives off impaired anyway, calling 911 protects her mom and everyone on the road.">Say no clearly, keep her brother home, and call another adult</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Being in the car doesn't make the driver safer. It adds another person at risk.">Ride along so she can keep an eye on things</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="A short drive impaired is still driving impaired. The phone can wait until morning.">Let it go. It's a five-minute drive.</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>Your mom asks you not to tell anyone about her drinking.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Kwame's dad has been sober for eight months. Tonight he's acting off, and Kwame finds a bottle in the garage.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Carrying it alone is too heavy. Talking to a counselor isn't betraying her.">Keep it to yourself forever</button>
-          <button class="choice" type="button" data-fb="good" data-msg="This is about getting support for you. A counselor can help you figure out next steps.">Talk to a counselor about how you're doing</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A slip isn't Kwame's job to manage. Talking to an adult he trusts, or an Alateen meeting, gives him somewhere to put it.">Tell an adult he trusts what he's seeing, and remember a relapse isn't his to fix</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Understandable. A conversation goes better when his dad is sober and another adult is around.">Confront his dad about it tonight</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Pouring it out doesn't stop a relapse, and saying nothing leaves Kwame carrying it alone.">Pour it out and say nothing</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Mei is applying to colleges a few states away and feels guilty about leaving her younger sister at home.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Her sister deserves support that doesn't depend on one person, and Mei deserves to make this choice without guilt deciding it for her.">Talk to her counselor, and help build support for her sister that doesn't rest only on Mei</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Staying close can be a real choice, and in some families it's the expected one. Make sure it's a choice and not only guilt.">Only apply to schools close to home</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Keeping it to herself is how the don't-talk rule works. Her sister needs to know she'll still be there for her, just differently.">Don't tell anyone how she feels about it</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it heavier.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">Myths</span><span class="sticker">What's actually true.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🔒 Keeping it all inside.<span class="row-cue" aria-hidden="true"></span></summary><p>The secret feels safer, but it leaves you handling everything alone.</p></details>
-        <details class="row"><summary>🧹 Trying to fix them.<span class="row-cue" aria-hidden="true"></span></summary><p>Hiding bottles, pouring things out, or being extra perfect won't make the addiction stop.</p></details>
-        <details class="row"><summary>🙈 Blaming yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>You didn't cause it, and being "better" won't cure it.</p></details>
-        <details class="row"><summary>🍺 Using to cope.<span class="row-cue" aria-hidden="true"></span></summary><p>Alcohol or drugs can feel like an escape, and with family history the risk is higher. Talk to someone instead.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I were easier to live with, they'd stop.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Addiction is a health condition that changes how the brain handles craving and choice. Perfect grades and a clean room don't touch it.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It only counts if someone gets violent.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Unpredictability, broken promises, and doing adult jobs at 15 are hard on their own. You don't need a worse story to deserve support.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'm going to turn out like them.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Your risk is higher, and it isn't destiny. Most kids in long-term studies did well, especially the ones with more people in their corner.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Hiding bottles or pouring things out will help.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It usually leads to fights and doesn't change the drinking. Your energy is better spent on your own support.</p></details>
       </div>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">For advisory or class</span><span class="sticker">What would help Jordan?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">About 15 minutes. Read the story out loud. It's about Jordan, not anyone in the room. Talk in small groups, then share one idea each.</p>
+      <p style="font-size:1.05rem">Jordan, a junior, has started skipping lunch to finish homework, works most nights, and hasn't had anyone over since freshman year. When a friend jokes about it, Jordan snaps. Jordan's mom drinks most nights, and Jordan has been covering for her with the school.</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>What might Jordan be feeling, and afraid of?</li>
+        <li>If Jordan finally tells a friend, what would help them hear? What should they skip?</li>
+        <li>Jordan asks the friend to keep it secret. When should the friend tell an adult anyway?</li>
+      </ol>
+      <details class="row"><summary>Ideas to add<span class="row-cue" aria-hidden="true"></span></summary><p>Exhausted, embarrassed, protective of their mom, scared of what happens if anyone finds out. Helpful: "Thanks for telling me." "That sounds like a lot." "Want to talk to a counselor together?" Skip "Just tell her to stop." If Jordan seems unsafe, is being hurt, or talks about hurting themselves, telling a trusted adult is the caring move, even if Jordan is upset at first.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Assume some students in the room live with this. Keep it about Jordan, never ask anyone to share about their own family, and say before you start that a counselor is available afterward. If a student discloses, thank them privately and follow your school's procedures.</p></details>
       </div>
     </details>
 
@@ -608,12 +649,27 @@
       <h3>Get help right away if</h3>
       <ul class="tight">
         <li>Someone at home hurts you, threatens you, or you feel unsafe.</li>
-        <li>A parent can't be woken up, has trouble breathing, or may have overdosed. Call 911.</li>
-        <li>You don't have food, heat, or someone sober to take care of you.</li>
+        <li>A parent can't be woken up, has trouble breathing, or may have overdosed. Call 911 and give Narcan if you have it.</li>
+        <li>You don't have food, heat, or a sober adult to take care of you.</li>
         <li>You have thoughts of hurting yourself.</li>
       </ul>
-      <p style="margin:0">Call <strong>911</strong> in an emergency. The Childhelp hotline is <strong>1-800-422-4453</strong>, any time. Call or text <strong>988</strong> if you're struggling. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Call <strong>911</strong> in an emergency. The Childhelp hotline is <strong>1-800-422-4453</strong>, any time. Call or text <strong>988</strong> if you're struggling, or go to a trusted adult or an emergency room. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>McCabe, S. E., et al. (2025). Children living with parents with substance use disorders in the United States. <i>JAMA Pediatrics</i>.</li>
+        <li>Shonkoff, J., Garner, A., et al. (2012). The lifelong effects of early childhood adversity and toxic stress. <i>Pediatrics</i>.</li>
+        <li>Verhulst, B., Neale, M., &amp; Kendler, K. (2015). The heritability of alcohol use disorders: A meta-analysis of twin and adoption studies. <i>Psychological Medicine</i>.</li>
+        <li>Werner, E. (1986). Resilient offspring of alcoholics: A longitudinal study from birth to age 18. <i>Journal of Studies on Alcohol</i>.</li>
+        <li>Werner, E., &amp; Johnson, J. (2004). The role of caring adults in the lives of children of alcoholics. <i>Substance Use &amp; Misuse</i>.</li>
+        <li>Massachusetts General Laws, Chapter 119, Section 51A (mandated reporting) and Chapter 94C, Section 34A (Good Samaritan protection).</li>
+        <li>U.S. Food and Drug Administration (2023). FDA approves first over-the-counter naloxone nasal spray.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -624,26 +680,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">Something I wish people knew about what home is like</label>
+      <label class="prompt" for="tx-4">Something I wish people knew about home, and something I don't want them to assume</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">A safe adult I could talk to</label>
+      <label class="prompt" for="tx-5">The adult I'd talk to first, and what I'd want to ask them before I start</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">What I do that helps me feel okay, even on hard days</label>
+      <label class="prompt" for="tx-6">What helps my stress come down after a hard night</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">A role I sometimes take on at home, and how it feels</label>
+      <label class="prompt" for="tx-7">A job I've taken on at home: what it gives my family, and what it costs me</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Something I want for my own future</label>
+      <label class="prompt" for="tx-8">What I want my own future to look like, including how I want to handle alcohol</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You didn't cause this, you can't cure it, and you can't control it. You can take care of yourself, and you deserve people who help you do that.</p>
+      <p>Your family's story is part of you, not all of you. Supportive people make a measurable difference, and you're allowed to go find them.</p>
     </div>
     </div>
   </div>
@@ -675,10 +731,11 @@
           <button type="button" class="chip" aria-pressed="false">worried about a parent</button>
           <button type="button" class="chip" aria-pressed="false">embarrassed</button>
           <button type="button" class="chip" aria-pressed="false">angry</button>
-          <button type="button" class="chip" aria-pressed="false">taking care of siblings</button>
+          <button type="button" class="chip" aria-pressed="false">taking care of siblings or the house</button>
           <button type="button" class="chip" aria-pressed="false">can't focus at school</button>
           <button type="button" class="chip" aria-pressed="false">covered for someone</button>
           <button type="button" class="chip" aria-pressed="false">felt alone</button>
+<button type="button" class="chip" aria-pressed="false">worried about my own drinking or use</button>
           <button type="button" class="chip" aria-pressed="false">talked to someone</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
@@ -689,16 +746,16 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-heavy" aria-pressed="false">😔 It's a lot right now</button>
-          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">😤 Angry</button>
-          <button type="button" class="choice" data-path="p-worried" aria-pressed="false">😟 Worried about them</button>
-          <button type="button" class="choice" data-path="p-unsafe" aria-pressed="false">⚠️ I don't feel safe</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Today's a little better</button>
+          <button type="button" class="choice" data-path="p-heavy" aria-pressed="false">It's a lot right now</button>
+          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">Angry</button>
+          <button type="button" class="choice" data-path="p-worried" aria-pressed="false">Worried about them</button>
+          <button type="button" class="choice" data-path="p-unsafe" aria-pressed="false">I don't feel safe</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Today's a little better</button>
         </div>
 
         <div class="path-panel" id="p-heavy" hidden>
           <h4>What this might mean</h4>
-          <p>Carrying this is hard, and it makes sense that you're worn out.</p>
+          <p>Carrying this is hard, and your stress system has been working overtime. It makes sense that you're worn out.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Stop by the counseling office today. You can just say, "Things are hard at home."</li>
@@ -721,9 +778,9 @@
           <p>Loving someone with an addiction often means worrying about them a lot.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧭</span>Remember the three Cs. Their recovery isn't your job.</li>
+            <li><span class="e" aria-hidden="true">🧭</span>Their drinking, and their recovery, aren't your job. Your support is.</li>
             <li><span class="e" aria-hidden="true">🛟</span>Alateen and NACoA have support for kids exactly like you.</li>
-            <li><span class="e" aria-hidden="true">🆘</span>If they ever can't be woken or aren't breathing right, call 911.</li>
+            <li><span class="e" aria-hidden="true">🆘</span>If they ever can't be woken or aren't breathing right, call 911 and give Narcan if you have it.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unsafe" hidden>

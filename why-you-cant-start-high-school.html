@@ -362,6 +362,67 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
 </style>
 </head>
 
@@ -381,9 +442,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🚀 High School · Getting things done</div>
+  <div class="eyebrow">High School · Getting things done</div>
   <h1>Why You Can't Start (and How to Start Anyway)</h1>
-  <p class="tagline">Because putting things off is about feelings, not laziness.</p>
+  <p class="tagline">The science of procrastination, and a system that works for how your brain actually runs.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,51 +470,91 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What's really going on when you can't start</h2>
+    <h2 id="h-understand">What's actually happening when you can't start</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">It's not laziness. It's a feeling.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know what to do. You still don't do it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You opened your laptop to start an essay and somehow ended up reorganizing your desk.</li>
-        <li>You said "I'll start after one more video" four videos ago.</li>
-        
-        <li >You waited until the night before to start the project that was assigned three weeks ago.</li>
-        <li>The longer you put it off, the worse you felt, and the harder it got to start.</li>
-        <li>You actually wanted to do it. You just couldn't make yourself begin.</li>
+        <li>The college essay doc has had a title and nothing else for two weeks.</li>
+        <li>You "work better under pressure," so the lab report gets written between 11pm and 2am. Again.</li>
+        <li>You keep meaning to email your teacher about the grade, the coach about practice, the manager about your shifts.</li>
+        <li>You did three easy assignments to feel productive, and the hard one is still sitting there.</li>
       </ul>
-      <p style="margin:0">Procrastination isn't laziness. Most of the time, it's a way of avoiding a feeling.</p>
+      <p style="margin:0">If you've already heard "procrastination isn't laziness," good. Here's the next layer: why your brain does this, and how to work with it instead of against it.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">The usual reasons you can't start</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">😬</span><strong>It feels bad</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The task feels boring, confusing, or stressful, so your brain goes looking for something that feels better right now.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🏔</span><strong>It feels too big</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">When you can't see the first step, the whole thing looks like a mountain. Your brain freezes.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>It has to be perfect</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">If you're worried it won't be good enough, not starting protects you from finding out. For a while.</p></details>
+    <h3 style="margin-top:28px">Three parts of your brain are in a negotiation</h3>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 270" role="img" aria-labelledby="brain-t brain-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="brain-t">Side view of the brain</title>
+  <desc id="brain-d">The prefrontal cortex sits at the front of the brain behind the forehead. The anterior cingulate cortex curves above the corpus callosum. The ventral striatum and the amygdala sit deeper, lower in the brain.</desc>
+  <!-- cerebellum + brainstem -->
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <!-- cerebrum -->
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <!-- folds (gyri hints) -->
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <!-- corpus callosum -->
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <!-- prefrontal cortex -->
+  <path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <!-- anterior cingulate -->
+  <path d="M128 124 C140 92 176 80 214 84" fill="none" stroke="#7A4FB5" stroke-width="10" stroke-linecap="round" stroke-opacity=".9"/>
+  <!-- ventral striatum -->
+  <ellipse cx="158" cy="146" rx="15" ry="9" fill="#D9822B"/>
+  <!-- amygdala -->
+  <ellipse cx="190" cy="172" rx="10" ry="7" fill="#C0392B"/>
+  <!-- labels -->
+  <g font-family="inherit" font-size="13" font-weight="700">
+    <line x1="92" y1="112" x2="56" y2="36" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="92" cy="112" r="3" fill="#2E6DB4"/>
+    <text x="8" y="28" fill="#245A96">Prefrontal cortex</text>
+    <line x1="196" y1="86" x2="246" y2="20" stroke="#7A4FB5" stroke-width="1.5"/><circle cx="196" cy="86" r="3" fill="#7A4FB5"/>
+    <text x="200" y="14" fill="#5E3B8F">Anterior cingulate</text>
+    <line x1="158" y1="146" x2="60" y2="222" stroke="#B8691C" stroke-width="1.5"/><circle cx="158" cy="146" r="3" fill="#B8691C"/>
+    <text x="8" y="238" fill="#9A5714">Ventral striatum</text>
+    <line x1="190" y1="172" x2="168" y2="248" stroke="#C0392B" stroke-width="1.5"/><circle cx="190" cy="172" r="3" fill="#C0392B"/>
+    <text x="140" y="264" fill="#A3301F">Amygdala</text>
+  </g>
+  <text x="392" y="262" font-size="11" fill="#6B6156" text-anchor="end">← face · back of head →</text>
+</svg>
+
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. Simplified: these areas work as networks, not single switches.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: flags the threat</strong><p>A hard or uncertain task registers as a threat to your grade, your image, or your sense of being smart. The discomfort is real, and it shows up before you've done anything.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Ventral striatum: offers the exit</strong><p>Your reward system lights up for anything that feels good right now. In the teen years it's more sensitive than it will ever be. Your phone is built to hit it.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: the planner</strong><p>It holds the long game: the deadline, the goal, the version of you that wants this done. It keeps developing into your mid-20s, so in a tug-of-war with the other two, it often loses.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Anterior cingulate: the referee</strong><p>It notices the conflict between "I should" and "I don't want to" and helps the planner step in. One 2018 brain-imaging study found that people who struggle most to act on their intentions showed weaker links between the amygdala and this area.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Your brain picks relief now over later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Procrastination is mood repair, and it backfires.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain picks now over later.</dt>
-        <dd>The relief of avoiding the task happens now. The consequences happen later. Brains, especially teen brains, weigh "now" much more heavily.</dd>
-        <dt>Avoidance feeds itself.</dt>
-        <dd>Every time you avoid the task, you feel a little relief, which teaches your brain that avoiding works. Then the task gets scarier.</dd>
-        <dt>Guilt makes it worse.</dt>
-        <dd>Feeling bad about procrastinating adds another bad feeling to the task, which makes you want to avoid it even more.</dd>
+        <dt>It's about managing a feeling.</dt>
+        <dd>Psychologists Fuschia Sirois and Tim Pychyl describe procrastination as choosing short-term mood repair over long-term goals. You aren't avoiding the work. You're avoiding how the work makes you feel.</dd>
+        <dt>Future you feels like a stranger.</dt>
+        <dd>In brain scans, thinking about yourself ten years from now looks more like thinking about another person than about yourself. That makes it easy to hand the stress to "future me."</dd>
+        <dt>"I work better under pressure" doesn't hold up.</dt>
+        <dd>In a classic study of college students, procrastinators felt less stressed early in the semester. By the end they were more stressed, got sick more often, and earned lower grades. The pressure felt productive. It wasn't.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Your phone is the perfect escape hatch</span><span class="sticker">Your phone is always the easiest way out.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Your phone</span><span class="sticker">It costs you even when it's face down.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>When a task feels hard, your phone offers instant relief: a feed that never ends, messages, games. It's not that you're weak. Apps are designed to be the easiest thing to reach for.</p>
-      <p class="worst">The worst part: an hour of scrolling to avoid 20 minutes of work leaves you more tired and more stressed, with the task still waiting.</p>
+      <p>In a 2017 study, students did worse on attention and memory tasks when their phone was on the desk, even face down and silent, than when it was in another room. Part of your brain spends effort not checking it.</p>
+      <p class="worst">An hour of scrolling to dodge 20 minutes of work doesn't remove the stress. It moves it to later, with interest.</p>
       </div>
     </details>
   </div>
@@ -462,73 +563,120 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Build your own system</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Make the first step almost too small.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🔍 Name the feeling.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask yourself: what feels bad about this? Boring? Confusing? Scary? Naming it shrinks it.</p></details>
-        <details class="row"><summary>🪜 Find the tiniest first step.<span class="row-cue" aria-hidden="true"></span></summary><p>Not "write the essay." Just "open the doc and type the title." Make it so small it feels silly.</p></details>
-        <details class="row"><summary>⏲ Use the 10-minute deal.<span class="row-cue" aria-hidden="true"></span></summary><p>Tell yourself you only have to work for 10 minutes. After that, you can stop. Most of the time you'll keep going, because starting was the hard part.</p></details>
-        <details class="row"><summary>📵 Make the escape harder.<span class="row-cue" aria-hidden="true"></span></summary><p>Phone in another room, or in a drawer. Every step between you and the distraction helps.</p></details>
-        <details class="row"><summary>✅ Aim for done, not perfect.<span class="row-cue" aria-hidden="true"></span></summary><p>A rough first draft is much easier to fix than a blank page. Permission to be messy is permission to start.</p></details>
-        <details class="row"><summary>🤝 Body double.<span class="row-cue" aria-hidden="true"></span></summary><p>Work next to someone else who's working, at a library, a kitchen table, or on a video call. Having company makes it easier to begin.</p></details>
+      <div class="fold-label">The motivation equation</div>
+      <h3 class="sticker">Four levers you can actually pull.</h3>
+      <p>Researcher Piers Steel combined hundreds of studies into one model. It's simplified, but it shows where to push.</p>
+      <div class="formula" role="img" aria-label="Motivation equals confidence times value, divided by impulsiveness times delay">
+        <span class="lhs">Motivation =</span>
+        <span class="frac"><span>Confidence × Value</span><span>Impulsiveness × Delay</span></span>
+      </div>
+      <div class="levers">
+        <div class="lever"><b>Raise confidence</b><span>Make the first step so small you know you can do it: "open the doc, write one ugly sentence."</span></div>
+        <div class="lever"><b>Raise value</b><span>Connect it to something you care about, or pair it with something you like: the good playlist only plays while you work.</span></div>
+        <div class="lever"><b>Lower impulsiveness</b><span>Add friction to the exit. Phone in another room, app timers on, one tab open.</span></div>
+        <div class="lever"><b>Shrink the delay</b><span>Set your own deadline days before the real one, and tell someone who'll ask about it.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">The strongest single tool</div>
+      <h3 class="sticker">If-then plans.</h3>
+      <p>Decide in advance exactly when, where, and what: "<b>If</b> it's 4:00 and I'm at the kitchen table, <b>then</b> I write the first paragraph." A review of 94 studies found these plans meaningfully increase follow-through, because the decision is already made when the moment comes.</p>
+      <p class="tap-hint">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Name the feeling, specifically.<span class="row-cue" aria-hidden="true"></span></summary><p>Not "I don't want to." Try "I'm afraid this essay will prove I'm not as good a writer as people think." Specific feelings are easier to deal with.</p></details>
+        <details class="row"><summary><span class="num">2</span> Work in sprints.<span class="row-cue" aria-hidden="true"></span></summary><p>25 minutes on, 5 off. Starting a timer turns "do the whole project" into "do the next 25 minutes."</p></details>
+        <details class="row"><summary><span class="num">3</span> Write a bad first draft on purpose.<span class="row-cue" aria-hidden="true"></span></summary><p>Editing is easier than creating. Give yourself permission to write badly and fix it later.</p></details>
+        <details class="row"><summary><span class="num">4</span> Use other people.<span class="row-cue" aria-hidden="true"></span></summary><p>Study next to a friend who's also working, or send someone your plan and a screenshot when you're done.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Just 10 minutes. Starting is the hard part.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Write your if-then plan, then start the clock.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the thing you've been avoiding, find the tiniest step, and start a 10-minute timer right here. Nothing is saved.</p>
-      <label class="prompt" for="tx-1">What I've been avoiding:</label>
+      <p>Pick the thing you've been avoiding. Nothing you type here is saved.</p>
+      <label class="prompt" for="tx-1">What I've been avoiding, and the feeling underneath it:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">What feels bad about it (boring, confusing, scary, too big):</label>
+      <label class="prompt" for="tx-2">Which lever I'll pull (confidence, value, impulsiveness, delay):</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">The tiniest first step:</label>
-      <textarea id="tx-3" autocomplete="off" spellcheck="false" placeholder="open the doc and type my name"></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">My if-then plan:</label>
+      <textarea id="tx-3" autocomplete="off" spellcheck="false" placeholder="If it's 7:30 and dinner's done, then I open the lab report and write the methods section."></textarea><div class="write-lines"></div>
       <div class="tool-row" style="align-items:center"><button class="btn" type="button" id="launch-go">Start 10 minutes</button><button class="btn ghost" type="button" id="launch-reset">Reset</button><span id="launch-time" style="font-size:1.6rem;font-weight:800;color:var(--school);margin-left:8px" aria-live="polite">10:00</span></div>
       <p id="launch-msg" class="feedback" aria-live="polite"></p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two stuck students. What's really stopping them?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three stuck students. Which lever would help most?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Guess the real reason someone can't start.</p>
-      
-      <div class="scenario" >
-        <p>Jordan has a college essay due and keeps rewriting the first sentence, then closing the laptop.</p>
+      <div class="scenario">
+        <p>Jordan keeps rewriting the first sentence of his college essay, then closing the laptop.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Perfectionism is a big procrastination driver. Jordan could write a terrible first draft on purpose, just to get words down.">It has to be perfect</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="He might be a great writer. Rewriting one sentence over and over is about pressure, not skill.">He's not a good writer</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Maybe, but more time won't fix it if the real block is needing it to be perfect.">He's out of time</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The stakes feel so high that every sentence has to be perfect. A deliberately rough draft lowers the bar enough to start.">Raise confidence: write a rough draft on purpose</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="An earlier deadline adds pressure, but pressure is already Jordan's problem. Lowering the bar comes first.">Shrink the delay: set an earlier deadline</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Distraction isn't what's stopping him. He's at the laptop. The block is fear of it not being good enough.">Lower impulsiveness: block his apps</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Priya works three shifts a week. She means to start her history paper every night but ends up on her phone until midnight.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Priya is tired, and the phone is right there. An if-then plan for her two free nights plus the phone in another room does more than willpower.">Lower impulsiveness and make an if-then plan</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="She probably does care. Exhaustion plus an easy escape beats caring most nights.">She needs to care more about history</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Could help, but it doesn't touch the real problem: a tired brain and a phone within reach.">Raise value: remind herself the paper matters</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Marcus says he works best the night before, but his last three grades dropped and he's exhausted.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The research says last-minute work feels productive but costs grades, sleep, and health. A fake deadline two days early gives him the pressure without the 2am.">Shrink the delay: set his own earlier deadline</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Maybe, but the pattern is about timing. Moving the deadline is the more direct fix.">Raise value: think about his GPA</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="His grades are telling him otherwise. This is the pressure myth.">Nothing. Some people really do work better that way</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually keep you stuck longer.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>⏳ Waiting to feel motivated.<span class="row-cue" aria-hidden="true"></span></summary><p>Motivation usually shows up after you start, not before. Action comes first.</p></details>
-        <details class="row"><summary>🗡 Beating yourself up.<span class="row-cue" aria-hidden="true"></span></summary><p>Research suggests that forgiving yourself for procrastinating makes you less likely to do it next time. Guilt feeds the cycle.</p></details>
-        <details class="row"><summary>📅 Planning to do it all at once.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'll do the whole thing Saturday" sets up a giant, scary block. Smaller pieces are easier to start.</p></details>
-        <details class="row"><summary>🔀 Productive procrastination.<span class="row-cue" aria-hidden="true"></span></summary><p>Cleaning your room or doing an easier assignment feels useful, but it's still avoiding the hard thing.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I need to feel motivated first.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Motivation usually follows action. Starting is what produces the feeling, not the other way around.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Being hard on myself will fix it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>In a study of college students, those who forgave themselves for procrastinating before one exam procrastinated less before the next. Guilt adds another bad feeling to the task, which feeds avoidance.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'll do it all Saturday.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A giant block of time makes the task look bigger. Two 45-minute sessions with if-then plans beat one heroic day you'll dread.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> At least I was productive.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Cleaning your room or finishing the easy homework is still avoidance if the hard thing is untouched. Do the hard thing first, even for 10 minutes.</p></details>
       </div>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>When to get more help</h3>
+      <h3>When it's more than procrastination</h3>
       <ul class="tight">
-        <li>You can't start things no matter what you try, across most of your classes.</li>
-        <li>Avoiding work is making you feel anxious or hopeless.</li>
-        <li>You're falling far behind and don't know how to catch up.</li>
+        <li>You can't start things in most of your classes, no matter what system you try.</li>
+        <li>You lose track of time, start lots of things and finish few, or have always struggled with this. That can be a sign of ADHD.</li>
+        <li>Avoiding work comes with feeling anxious, flat, or hopeless most days.</li>
+        <li>You're far enough behind that catching up feels impossible.</li>
       </ul>
-      <p style="margin:0">A counselor can help you figure out what's getting in the way, including whether something like anxiety, ADHD, or a learning difference is part of it. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can help you sort out what's going on and talk with teachers about a plan. That's what they're there for. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Sirois, F., &amp; Pychyl, T. (2013). Procrastination and the priority of short-term mood regulation. <i>Social and Personality Psychology Compass</i>.</li>
+        <li>Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review. <i>Psychological Bulletin</i>.</li>
+        <li>Tice, D., &amp; Baumeister, R. (1997). Longitudinal study of procrastination, performance, stress, and health. <i>Psychological Science</i>.</li>
+        <li>Wohl, M., Pychyl, T., &amp; Bennett, S. (2010). I forgive myself, now I can study. <i>Personality and Individual Differences</i>.</li>
+        <li>Gollwitzer, P., &amp; Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis. <i>Advances in Experimental Social Psychology</i>.</li>
+        <li>Ward, A., et al. (2017). Brain drain: The mere presence of one's own smartphone reduces available cognitive capacity. <i>Journal of the Association for Consumer Research</i>.</li>
+        <li>Ersner-Hershfield, H., et al. (2009). Saving for the future self: Neural measures of future self-continuity. <i>Social Cognitive and Affective Neuroscience</i>.</li>
+        <li>Schlüter, C., et al. (2018). The structural and functional signature of action control. <i>Psychological Science</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -539,26 +687,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">What I put off most, and the feeling underneath it</label>
+      <label class="prompt" for="tx-4">What I put off most, and what feels at stake if I try and it isn't good</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I usually do instead of starting</label>
+      <label class="prompt" for="tx-5">My usual escape, and what it costs me later</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">A time I started something hard, and what helped me begin</label>
+      <label class="prompt" for="tx-6">A time I followed through on something hard. Which lever was I pulling?</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">My go-to tiniest first step for schoolwork</label>
+      <label class="prompt" for="tx-7">One if-then plan I could use every school day</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">What I'd say to a friend who can't start something</label>
+      <label class="prompt" for="tx-8">What future me, a month from now, would want me to do tonight</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Not being able to start doesn't mean you don't care. It usually means you care a lot. Be patient with yourself, and start small.</p>
+      <p>Procrastination usually means something matters to you. You don't need more willpower. You need a better system, and you can build one.</p>
     </div>
     </div>
   </div>
@@ -604,26 +752,26 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">🧱 Stuck, can't make myself start</button>
-          <button type="button" class="choice" data-path="p-guilt" aria-pressed="false">😞 Guilty and down on myself</button>
-          <button type="button" class="choice" data-path="p-panic" aria-pressed="false">😰 Panicking about a deadline</button>
-          <button type="button" class="choice" data-path="p-confused" aria-pressed="false">❓ Confused about what to do</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 I got started</button>
+          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">Stuck, can't make myself start</button>
+          <button type="button" class="choice" data-path="p-guilt" aria-pressed="false">Guilty and down on myself</button>
+          <button type="button" class="choice" data-path="p-panic" aria-pressed="false">Panicking about a deadline</button>
+          <button type="button" class="choice" data-path="p-confused" aria-pressed="false">Confused about what to do</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">I got started</button>
         </div>
 
         <div class="path-panel" id="p-stuck" hidden>
           <h4>What this might mean</h4>
-          <p>Your brain is protecting you from a bad feeling. The way through is making the start so small it doesn't trigger that feeling.</p>
+          <p>Your threat system is winning the negotiation. Make the start small enough that it stops registering as a threat.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🪜</span>Write down the tiniest first step. Then do just that.</li>
-            <li><span class="e" aria-hidden="true">⏲</span>Use the 10-minute launch above.</li>
+            <li><span class="e" aria-hidden="true">⏲</span>Write an if-then plan and use the 10-minute timer above.</li>
             <li><span class="e" aria-hidden="true">🤝</span>Find someone to work beside, in person or on a call.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-guilt" hidden>
           <h4>What this might mean</h4>
-          <p>Guilt makes the cycle worse. Forgiving yourself is a real strategy, not letting yourself off the hook.</p>
+          <p>Guilt makes the cycle worse. Self-forgiveness is backed by research as a way to procrastinate less next time. It isn't letting yourself off the hook.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🫶</span>Say to yourself what you'd say to a friend: "It's okay, let's start now."</li>

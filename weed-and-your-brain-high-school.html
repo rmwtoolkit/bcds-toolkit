@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figures */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { display:grid; grid-template-columns:auto 1fr; gap:14px; align-items:center; background:var(--paper); border-radius:14px; padding:14px 16px; margin:12px 0; }
+  .stat-n { font-size:2rem; font-weight:700; letter-spacing:-.03em; line-height:1; color:var(--ink); }
+  .stat-t { font-size:.95rem; line-height:1.45; color:var(--ink); }
+  .stat-t small { display:block; color:var(--ink-soft); font-size:.8rem; margin-top:3px; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:14px 0; }
+  .research b { display:block; font-size:.78rem; letter-spacing:.04em; color:var(--ink-soft); font-weight:600; margin-bottom:2px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🌿 High School · Substance use</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>Weed and Your Brain</h1>
-  <p class="tagline">Because you deserve the real science, and you can handle it.</p>
+  <p class="tagline">Where THC lands in a developing brain, what the strongest research shows, and where scientists still disagree.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,112 +481,106 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What THC does to a growing brain</h2>
+    <h2 id="h-understand">THC and a brain still under construction</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Forget both extremes. Here's the science.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You've heard both extremes. The science is more specific.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >People talk about weed like it's either totally harmless or totally ruins your life.</li>
-        <li>Someone said it's natural, so it must be safe.</li>
-        
-        <li >You've seen pens, carts, dabs, and gummies in people's stories and at parties.</li>
-        <li>It's legal for adults where you live, and someone in your family uses it.</li>
-        
-        <li >You've tried it, or you use it, and you're wondering what it's actually doing.</li>
-        <li>You're worried about a friend who seems high a lot.</li>
+        <li>It's legal for adults in Massachusetts, so the stores, the ads, and the smell are just part of the landscape.</li>
+        <li>Someone you know uses a cart every night to fall asleep, or to take the edge off before a test.</li>
+        <li>A friend is high most days and still gets good grades, so how bad can it be?</li>
+        <li>Someone in your family uses it, maybe with a medical card, and talks about it very differently than your school does.</li>
+        <li>A summer job, a team, or a future employer drug tests, and you're not sure how long THC stays in your system.</li>
       </ul>
-      <p style="margin:0">You've probably heard both extremes. The real science is more interesting than either one, and you can handle it.</p>
+      <p style="margin:0">This lesson skips the scare stories. It covers how THC works, what the biggest studies found, and where the evidence is honestly mixed.</p>
       </div>
     </details>
+
+    <div class="stat"><span class="stat-n">74%</span><span class="stat-t">of U.S. high school seniors did not use cannabis in the past year. For 10th graders, it was 84%.<small>Monitoring the Future, 2025</small></span></div>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Your brain already has a cannabis system</h3>
+    <p>Your brain makes its own cannabinoids, like anandamide, on demand. They act on CB1 receptors to fine-tune signals between neurons, then get broken down quickly. THC fits the same receptors, but it lasts for hours and hits everywhere at once. CB1 receptors are densest in the areas below.</p>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 270" role="img" aria-label="Side view of the brain showing areas dense with cannabinoid receptors: the prefrontal cortex at the front, the striatum deep in the middle, the amygdala and hippocampus low in the temporal lobe, and the cerebellum at the back." xmlns="http://www.w3.org/2000/svg">
+  <title>Side view of the brain</title>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/><path d="M266 216 C286 212 306 214 324 220"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <ellipse cx="216" cy="142" rx="21" ry="12" fill="none" stroke="#C9BDAE" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <path d="M150 140 C150 124 176 116 196 122 C206 126 204 134 196 136 C182 136 170 142 166 152 C160 156 150 152 150 140 Z" fill="#7A4FB5" fill-opacity=".9"/>
+  <ellipse cx="190" cy="172" rx="10" ry="7" fill="#C0392B"/>
+  <path d="M198 174 C212 180 232 176 246 160" fill="none" stroke="#D9822B" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#3A8F5C" fill-opacity=".8"/><g fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/><path d="M266 216 C286 212 306 214 324 220"/></g>
+  
+  <g font-size="13" font-weight="700">
+        <line x1="92" y1="112" x2="60" y2="32" stroke="#245A96" stroke-width="1.4"/><circle cx="92" cy="112" r="3" fill="#245A96"/><text x="8" y="26" fill="#245A96" text-anchor="start">Prefrontal cortex</text>
+    <line x1="176" y1="128" x2="226" y2="22" stroke="#5E3B8F" stroke-width="1.4"/><circle cx="176" cy="128" r="3" fill="#5E3B8F"/><text x="226" y="18" fill="#5E3B8F" text-anchor="start">Striatum</text>
+    <line x1="190" y1="172" x2="60" y2="228" stroke="#A3301F" stroke-width="1.4"/><circle cx="190" cy="172" r="3" fill="#A3301F"/><text x="8" y="240" fill="#A3301F" text-anchor="start">Amygdala</text>
+    <line x1="232" y1="172" x2="218" y2="250" stroke="#9A5714" stroke-width="1.4"/><circle cx="232" cy="172" r="3" fill="#9A5714"/><text x="232" y="262" fill="#9A5714" text-anchor="end">Hippocampus</text>
+    <line x1="300" y1="204" x2="340" y2="234" stroke="#2B6E46" stroke-width="1.4"/><circle cx="300" cy="204" r="3" fill="#2B6E46"/><text x="392" y="246" fill="#2B6E46" text-anchor="end">Cerebellum</text>
+  </g>
+  <text x="392" y="264" font-size="11" fill="#6B6156" text-anchor="end">← face · back of head →</text>
+</svg>
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. Simplified: CB1 receptors are found throughout the brain; these areas have some of the highest concentrations.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Hippocampus: memory</strong><p>Saving new memories depends on precise timing between neurons. THC blurs it. In regular users, memory and attention problems can last for days after the last use, and usually improve after several weeks without it.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: planning and focus</strong><p>Still maturing into your mid-20s. During the teen years, your own cannabinoid system helps decide which connections get strengthened and which get trimmed. That's the main reason researchers worry more about teen use than adult use.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Striatum: reward and habit</strong><p>Part of the brain's reward circuit. Repeated THC trains the habit and builds tolerance, so the same amount does less over time.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: fear and anxiety</strong><p>THC works in two directions here. Low doses can feel calming. High doses are more likely to trigger anxiety, a racing heart, and paranoia.</p></div></div>
+      <div class="region"><span class="dot" style="background:#3A8F5C"></span><div><strong>Cerebellum: coordination and timing</strong><p>Fine motor control and timing. This is part of why reaction time and lane control suffer when someone drives high.</p></div></div>
+    </div>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">How many students actually use it</span><span class="sticker">Most of your grade isn't using.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Strength</span><span class="sticker">Average THC roughly doubled in a decade.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <div ><svg viewBox="0 0 570 290" role="img" aria-label="74 out of 100 twelfth graders did not use weed in the past year." style="width:100%;max-width:560px;height:auto;display:block"><circle cx="20" cy="20" r="11" fill="var(--school)"/><circle cx="48" cy="20" r="11" fill="var(--school)"/><circle cx="76" cy="20" r="11" fill="var(--school)"/><circle cx="104" cy="20" r="11" fill="var(--school)"/><circle cx="132" cy="20" r="11" fill="var(--school)"/><circle cx="160" cy="20" r="11" fill="var(--school)"/><circle cx="188" cy="20" r="11" fill="var(--school)"/><circle cx="216" cy="20" r="11" fill="var(--school)"/><circle cx="244" cy="20" r="11" fill="var(--school)"/><circle cx="272" cy="20" r="11" fill="var(--school)"/><circle cx="20" cy="48" r="11" fill="var(--school)"/><circle cx="48" cy="48" r="11" fill="var(--school)"/><circle cx="76" cy="48" r="11" fill="var(--school)"/><circle cx="104" cy="48" r="11" fill="var(--school)"/><circle cx="132" cy="48" r="11" fill="var(--school)"/><circle cx="160" cy="48" r="11" fill="var(--school)"/><circle cx="188" cy="48" r="11" fill="var(--school)"/><circle cx="216" cy="48" r="11" fill="var(--school)"/><circle cx="244" cy="48" r="11" fill="var(--school)"/><circle cx="272" cy="48" r="11" fill="var(--school)"/><circle cx="20" cy="76" r="11" fill="var(--school)"/><circle cx="48" cy="76" r="11" fill="var(--school)"/><circle cx="76" cy="76" r="11" fill="var(--school)"/><circle cx="104" cy="76" r="11" fill="var(--school)"/><circle cx="132" cy="76" r="11" fill="var(--school)"/><circle cx="160" cy="76" r="11" fill="var(--school)"/><circle cx="188" cy="76" r="11" fill="var(--school)"/><circle cx="216" cy="76" r="11" fill="var(--school)"/><circle cx="244" cy="76" r="11" fill="var(--school)"/><circle cx="272" cy="76" r="11" fill="var(--school)"/><circle cx="20" cy="104" r="11" fill="var(--school)"/><circle cx="48" cy="104" r="11" fill="var(--school)"/><circle cx="76" cy="104" r="11" fill="var(--school)"/><circle cx="104" cy="104" r="11" fill="var(--school)"/><circle cx="132" cy="104" r="11" fill="var(--school)"/><circle cx="160" cy="104" r="11" fill="var(--school)"/><circle cx="188" cy="104" r="11" fill="var(--school)"/><circle cx="216" cy="104" r="11" fill="var(--school)"/><circle cx="244" cy="104" r="11" fill="var(--school)"/><circle cx="272" cy="104" r="11" fill="var(--school)"/><circle cx="20" cy="132" r="11" fill="var(--school)"/><circle cx="48" cy="132" r="11" fill="var(--school)"/><circle cx="76" cy="132" r="11" fill="var(--school)"/><circle cx="104" cy="132" r="11" fill="var(--school)"/><circle cx="132" cy="132" r="11" fill="var(--school)"/><circle cx="160" cy="132" r="11" fill="var(--school)"/><circle cx="188" cy="132" r="11" fill="var(--school)"/><circle cx="216" cy="132" r="11" fill="var(--school)"/><circle cx="244" cy="132" r="11" fill="var(--school)"/><circle cx="272" cy="132" r="11" fill="var(--school)"/><circle cx="20" cy="160" r="11" fill="var(--school)"/><circle cx="48" cy="160" r="11" fill="var(--school)"/><circle cx="76" cy="160" r="11" fill="var(--school)"/><circle cx="104" cy="160" r="11" fill="var(--school)"/><circle cx="132" cy="160" r="11" fill="var(--school)"/><circle cx="160" cy="160" r="11" fill="var(--school)"/><circle cx="188" cy="160" r="11" fill="var(--school)"/><circle cx="216" cy="160" r="11" fill="var(--school)"/><circle cx="244" cy="160" r="11" fill="var(--school)"/><circle cx="272" cy="160" r="11" fill="var(--school)"/><circle cx="20" cy="188" r="11" fill="var(--school)"/><circle cx="48" cy="188" r="11" fill="var(--school)"/><circle cx="76" cy="188" r="11" fill="var(--school)"/><circle cx="104" cy="188" r="11" fill="var(--school)"/><circle cx="132" cy="188" r="11" fill="var(--school)"/><circle cx="160" cy="188" r="11" fill="var(--school)"/><circle cx="188" cy="188" r="11" fill="var(--school)"/><circle cx="216" cy="188" r="11" fill="var(--school)"/><circle cx="244" cy="188" r="11" fill="var(--school)"/><circle cx="272" cy="188" r="11" fill="var(--school)"/><circle cx="20" cy="216" r="11" fill="var(--school)"/><circle cx="48" cy="216" r="11" fill="var(--school)"/><circle cx="76" cy="216" r="11" fill="var(--school)"/><circle cx="104" cy="216" r="11" fill="var(--school)"/><circle cx="132" cy="216" r="11" fill="var(--line)"/><circle cx="160" cy="216" r="11" fill="var(--line)"/><circle cx="188" cy="216" r="11" fill="var(--line)"/><circle cx="216" cy="216" r="11" fill="var(--line)"/><circle cx="244" cy="216" r="11" fill="var(--line)"/><circle cx="272" cy="216" r="11" fill="var(--line)"/><circle cx="20" cy="244" r="11" fill="var(--line)"/><circle cx="48" cy="244" r="11" fill="var(--line)"/><circle cx="76" cy="244" r="11" fill="var(--line)"/><circle cx="104" cy="244" r="11" fill="var(--line)"/><circle cx="132" cy="244" r="11" fill="var(--line)"/><circle cx="160" cy="244" r="11" fill="var(--line)"/><circle cx="188" cy="244" r="11" fill="var(--line)"/><circle cx="216" cy="244" r="11" fill="var(--line)"/><circle cx="244" cy="244" r="11" fill="var(--line)"/><circle cx="272" cy="244" r="11" fill="var(--line)"/><circle cx="20" cy="272" r="11" fill="var(--line)"/><circle cx="48" cy="272" r="11" fill="var(--line)"/><circle cx="76" cy="272" r="11" fill="var(--line)"/><circle cx="104" cy="272" r="11" fill="var(--line)"/><circle cx="132" cy="272" r="11" fill="var(--line)"/><circle cx="160" cy="272" r="11" fill="var(--line)"/><circle cx="188" cy="272" r="11" fill="var(--line)"/><circle cx="216" cy="272" r="11" fill="var(--line)"/><circle cx="244" cy="272" r="11" fill="var(--line)"/><circle cx="272" cy="272" r="11" fill="var(--line)"/><text x="300" y="110" font-size="64" font-weight="800" fill="var(--school)">74</text><text x="302" y="140" font-size="20" font-weight="700" font-family="inherit" fill="var(--ink)">out of 100</text><text x="302" y="176" font-size="18" fill="var(--ink-soft)"><tspan x="302" dy="0">12th graders who did NOT</tspan><tspan x="302" dy="23">use weed in the past year.</tspan><tspan x="302" dy="23">For 10th graders: 84.</tspan></text></svg></div>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >From the 2025 Monitoring the Future survey of students across the U.S. Most people overestimate how many of their classmates use. Most of your grade isn't.</span></figcaption>
-      </figure>
+      <div class="research"><b>CHANDRA, ELSOHLY, AND COLLEAGUES, 2019</b><p>Average THC in cannabis seized in the U.S. nearly doubled in ten years, from 8.9% in 2008 to 17.1% in 2017. Concentrates, the kind in carts and dabs, averaged 55.7% THC.</p></div>
+      <div class="research"><b>DI FORTI AND COLLEAGUES, 2019</b><p>Across 11 cities in Europe and Brazil, researchers compared 901 people with a first episode of psychosis to 1,237 people without. Daily cannabis users had about 3 times the odds of psychosis. Daily users of high-potency cannabis (over 10% THC) had nearly 5 times the odds.</p></div>
+      <div class="research"><b>McDONALD AND COLLEAGUES, 2024</b><p>Following 11,363 young people in Ontario, teens aged 12 to 19 who used cannabis were about 11 times as likely to be diagnosed with a psychotic disorder over the next several years. The study found no clear link for young adults aged 20 to 33, which points to the teen years as the sensitive window.</p></div>
+      <p style="margin:0">Most teens who use won't develop psychosis, and these studies show strong links, not proof of cause. The risk rises with higher potency, daily use, a younger start, and a family history of psychosis or bipolar disorder. Nobody can tell in advance whose brain will react this way.</p>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">This isn't the weed of the 1990s</span><span class="sticker">Same name. Way stronger.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 560 230" role="img" aria-label="THC strength: about 4 percent in 1995, 15 to 25 percent in today's flower, 60 to 90 percent in concentrates." style="width:100%;max-width:600px;height:auto;display:block"><text x="0" y="24" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">1995, average weed</text><rect x="0" y="34" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="34" width="22" height="22" rx="11" fill="var(--school)"/><text x="32" y="51" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">about 4% THC</text><text x="0" y="94" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">Today's flower</text><rect x="0" y="104" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="104" width="78" height="22" rx="11" fill="var(--school)"/><rect x="67" y="104" width="63" height="22" rx="11" fill="var(--school-accent)" opacity=".85"/><text x="140" y="121" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">15 to 25%</text><text x="0" y="164" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">Vapes, wax, dabs</text><rect x="0" y="174" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="174" width="312" height="22" rx="11" fill="var(--school)"/><rect x="301" y="174" width="167" height="22" rx="11" fill="var(--school-accent)" opacity=".85"/><text x="520" y="164" font-size="15" font-weight="700" text-anchor="end" font-family="inherit" fill="var(--ink)">60 to 90%</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">THC is the part of cannabis that gets you high. A lot of what people "know" about weed being mild comes from a time when it was a fraction as strong. Concentrates in vape carts and dabs are the strongest of all.</figcaption>
-      </figure>
-      </div>
-    </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">Where THC lands in your brain</span><span class="sticker">THC borrows your brain's own system.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Thinking and memory</span><span class="sticker">Where the research agrees, and where it doesn't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 640 285" role="img" aria-label="Brain diagram showing areas THC affects: prefrontal cortex, reward system, amygdala, hippocampus, cerebellum." style="width:100%;max-width:720px;height:auto;display:block"><path d="M60 150 C40 80 120 25 210 30 C300 32 365 80 360 145 C357 190 320 205 280 200 L140 205 C95 205 68 185 60 150Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M120 70 C150 90 140 120 170 130 M210 45 C200 80 230 95 220 125 M285 60 C270 90 300 110 290 140 M330 110 C310 120 320 150 300 165 M95 160 C120 150 140 170 170 165" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><ellipse cx="296" cy="222" rx="46" ry="26" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M290 214 C300 210 312 214 322 222 M275 228 C290 222 305 226 318 234" fill="none" stroke="var(--line)" stroke-width="3"/><path d="M222 200 L252 200 L246 272 L230 272Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><text x="40" y="30" font-size="13" fill="var(--ink-soft)">front</text><circle cx="100" cy="115" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="100" y="120" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><circle cx="420" cy="47" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="52" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><text x="442" y="53" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">focus, decisions</text><circle cx="170" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="170" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><circle cx="420" cy="85" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="90" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><text x="442" y="91" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">motivation</text><circle cx="198" cy="178" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="198" y="183" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><circle cx="420" cy="123" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="128" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><text x="442" y="129" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">fear, anxiety</text><circle cx="232" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="232" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">4</text><circle cx="420" cy="161" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="166" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">4</text><text x="442" y="167" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">new memories</text><circle cx="300" cy="222" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="300" y="227" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">5</text><circle cx="420" cy="199" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="204" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">5</text><text x="442" y="205" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">coordination</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Your brain has its own cannabinoid system: chemicals that tune memory, mood, appetite, sleep, and how brain cells wire together during the teen years. THC plugs into those same receptors, much more strongly than your own chemicals do.</span></figcaption>
-      </figure>
+      <div class="research"><b>WADE AND COLLEAGUES, 2026 (ABCD STUDY)</b><p>The largest U.S. study so far followed 11,036 kids from age 9 or 10 to 16 or 17. Before they started using, teens who later used cannabis kept pace with their peers. After they started, gains in memory, attention, language, and processing speed slowed while non-users kept improving. In a subgroup tested with hair samples, THC exposure was tied to worse memory; CBD exposure was not. The differences were modest, and the design shows a link, not cause.</p></div>
+      <div class="research"><b>MEIER AND COLLEAGUES, 2012 (DUNEDIN STUDY)</b><p>Following 1,037 New Zealanders from birth to age 38, people who used heavily and persistently starting in adolescence lost about 8 IQ points between 13 and 38.</p></div>
+      <div class="research"><b>JACKSON AND COLLEAGUES, 2016 (TWIN STUDIES)</b><p>Comparing twins in two U.S. samples (789 and 2,277 people), teens who used cannabis did score lower over time, but so did their twins who did not use. That suggests shared family or genetic factors explain part of the IQ difference.</p></div>
+      <p style="margin:0">The honest summary: frequent teen use is linked to worse thinking and memory, and the signal is strongest with heavy use and an early start. How much is caused by the cannabis itself is still debated. That's a reason for caution, not a reason to panic.</p>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">The biggest U.S. study yet</span><span class="sticker">Your brain keeps leveling up. Weed can stall it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Getting hooked</span><span class="sticker">About 3 in 10 past-year users had a use disorder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 520 280" role="img" aria-label="Illustration: thinking skills keep climbing from age 10 to 17 for teens who did not use cannabis, and level off after use starts for teens who did." style="width:100%;max-width:600px;height:auto;display:block"><line x1="50" y1="230" x2="490" y2="230" stroke="var(--ink-soft)" stroke-width="2"/><line x1="50" y1="230" x2="50" y2="30" stroke="var(--ink-soft)" stroke-width="2"/><text x="56" y="26" font-size="13" fill="var(--ink-soft)">memory, attention, processing speed</text><text x="50" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">10</text><text x="112" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">11</text><text x="174" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">12</text><text x="236" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">13</text><text x="298" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">14</text><text x="360" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">15</text><text x="422" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">16</text><text x="484" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">17</text><text x="270" y="272" font-size="12" text-anchor="middle" fill="var(--ink-soft)">age</text><path d="M50 200 C174 175 360 120 484 62" fill="none" stroke="var(--school)" stroke-width="5" stroke-linecap="round"/><path d="M50 202 C174 178 236 150 298 140 C360 132 422 128 484 126" fill="none" stroke="var(--school-accent)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 0"/><line x1="273" y1="40" x2="273" y2="230" stroke="var(--ink-soft)" stroke-dasharray="5 5"/><text x="279" y="200" font-size="13" font-weight="700" fill="var(--ink-soft)">started using</text><text x="476" y="58" font-size="14" font-weight="700" text-anchor="end" fill="var(--school)">didn't use</text><text x="476" y="118" font-size="14" font-weight="700" text-anchor="end" fill="var(--school-accent)">used cannabis</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >The ABCD Study followed 11,036 kids from age 9 or 10 to 16 or 17, testing their thinking skills and checking hair, urine, and saliva for THC. Teens who used cannabis kept pace with, or even beat, their peers before they started. After they started, gains in memory, attention, language, and processing speed leveled off while non-users kept climbing. Most differences were modest, with the biggest in memory, and the study shows a link, not proof of cause (Neuropsychopharmacology, 2026).</span></figcaption>
-      </figure>
+      <div class="research"><b>HASIN AND COLLEAGUES, 2015</b><p>In a national survey of more than 36,000 U.S. adults, 30.6% of people who had used cannabis in the past year met criteria for a cannabis use disorder: wanting to cut back and not being able to, needing more for the same effect, or letting it crowd out other things.</p></div>
+      <p>People who start before 18 are several times more likely to develop a use disorder than people who start as adults (CDC). Withdrawal is real, too: irritability, poor sleep, vivid dreams, and low appetite, usually worst in the first week and fading over two to three.</p>
+      <p style="margin:0">Heavy, frequent use can also cause cannabinoid hyperemesis syndrome: repeated bouts of severe vomiting and stomach pain. Hot showers relieve it for a while, which is one way doctors spot it. The only fix is stopping.</p>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">What the research shows</span><span class="sticker">Memory, focus, mood, sleep.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🧠 Memory takes a hit.</dt>
-        <dd >While you're high, the hippocampus has trouble saving new memories. In regular users, memory and attention problems can hang around for days after the last use, and they usually get better after weeks without it.</dd>
-        <dt>🎯 Focus and follow-through.</dt>
-        <dd>THC makes it harder to plan, stay on task, and switch between things. Those skills live in the front of the brain, the last part to finish growing, around age 25.</dd>
-        <dt>🪝 Starting young makes it stickier.</dt>
-        <dd >Cannabis use disorder is real: wanting to cut back and not being able to. People who start before 18 are several times more likely to develop it than people who start as adults (CDC).</dd>
-        <dt>😰 It can make anxiety worse.</dt>
-        <dd>Lots of people use weed to chill. Strong weed often does the opposite: racing heart, paranoia, panic. Regular use is linked to more anxiety and depression over time.</dd>
-        <dt>😴 Sleep gets weird.</dt>
-        <dd >THC can help you fall asleep but cuts down REM sleep, the dreaming stage your brain uses to process and remember. Stop after regular use and sleep gets rough for a while, which is a big reason people find it hard to quit.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <details  class="fold fold-callout">
-      <summary><span class="fold-label">⚠️ Strong weed and psychosis</span><span class="sticker">Stronger THC, bigger risk.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <div ><p>Psychosis means losing touch with what's real: hearing or seeing things that aren't there, or paranoid beliefs that won't let go. In a 2024 Ontario study, teens who used cannabis had about 11 times the odds of a psychotic disorder compared with teens who didn't. Risk climbs with higher potency, daily use, a younger start, and a family history of psychosis or bipolar disorder.</p>
-      <p style="margin:0">Most teens who use won't develop psychosis. But it's one of the clearest risks in the research, and it's tied to exactly what's changed: strength.</p></div>
-      <p class="worst">The honest part: nobody can tell in advance whose brain will react this way.</p>
-      </div>
-    </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🍬 Edibles: the slow trap</span><span class="sticker">Edibles: slow to start, hard to stop.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Edibles and carts</span><span class="sticker">Strength and timing are where most bad nights start.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <svg viewBox="0 0 520 225" role="img" aria-label="Smoking or vaping hits within minutes and fades in a few hours. An edible can take up to two hours to start and last six hours or more." style="width:100%;max-width:600px;height:auto;display:block"><line x1="110" y1="30" x2="110" y2="190" stroke="var(--line)"/><text x="110" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">0h</text><line x1="160" y1="30" x2="160" y2="190" stroke="var(--line)"/><text x="160" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">1h</text><line x1="210" y1="30" x2="210" y2="190" stroke="var(--line)"/><text x="210" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">2h</text><line x1="260" y1="30" x2="260" y2="190" stroke="var(--line)"/><text x="260" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">3h</text><line x1="310" y1="30" x2="310" y2="190" stroke="var(--line)"/><text x="310" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">4h</text><line x1="360" y1="30" x2="360" y2="190" stroke="var(--line)"/><text x="360" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">5h</text><line x1="410" y1="30" x2="410" y2="190" stroke="var(--line)"/><text x="410" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">6h</text><line x1="460" y1="30" x2="460" y2="190" stroke="var(--line)"/><text x="460" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">7h</text><line x1="510" y1="30" x2="510" y2="190" stroke="var(--line)"/><text x="510" y="22" font-size="12" text-anchor="middle" fill="var(--ink-soft)">8h</text><text x="0" y="62" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">Vape / smoke</text><rect x="110" y="45" width="150" height="24" rx="12" fill="var(--school)" opacity=".3"/><rect x="115" y="45" width="45" height="24" rx="12" fill="var(--school)"/><text x="110" y="89" font-size="13" fill="var(--ink-soft)">hits in minutes, mostly gone in a few hours</text><text x="0" y="147" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">Edible</text><rect x="135" y="130" width="375" height="24" rx="12" fill="var(--school)" opacity=".3"/><rect x="210" y="130" width="100" height="24" rx="12" fill="var(--school)"/><text x="135" y="174" font-size="13" fill="var(--ink-soft)">30 min to 2 hours to start, lasts 6+ hours</text><path d="M135 122 L210 122" stroke="var(--school-accent)" stroke-width="3"/><text x="135" y="117" font-size="13" font-weight="700" fill="var(--school-accent)">"nothing's happening"</text><rect x="110" y="205" width="14" height="14" rx="7" fill="var(--school)"/><text x="130" y="217" font-size="12" fill="var(--ink-soft)">darker = strongest effects</text></svg>
-      <p style="margin:12px 0 0">The most common edible mistake: "It's not working," so they eat another one. Then both kick in.</p>
-      <p class="worst">The worst part: once it's eaten, there's no way to speed it up or stop it. You wait it out.</p>
+      <p>Edibles can take up to two hours to kick in, and then last six hours or more. The classic mistake is "it's not working," then a second dose, then both hit together. Carts and dabs deliver concentrate fast, at several times the strength of flower.</p>
+      <p class="worst">Delta-8, THC-O, and "hemp-derived" gummies and vapes from gas stations and online shops still get you high. They're loosely regulated, and the FDA has warned about poisonings and mislabeled products.</p>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">Two more things people don't know</span><span class="sticker">The stuff nobody mentions.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🤮 Throwing up for days (CHS).</dt>
-        <dd>Heavy, frequent use can cause cannabinoid hyperemesis syndrome: waves of vomiting and stomach pain that keep coming back. The CDC reports ER visits for it rising fastest among people 15 to 24. The only real fix is stopping.</dd>
-        <dt>⛽ Delta-8 and "hemp" gummies are still THC.</dt>
-        <dd >Delta-8, THC-O, and "hemp-derived" gummies and vapes sold in gas stations and online still get you high. They're loosely regulated, and lab tests often find the label is wrong. About 9 in 100 seniors used them last year.</dd>
-      </dl>
-      </div>
-    </details>
   </div>
 </section>
 
@@ -524,201 +590,190 @@
     <h2 id="h-practice">Making your own call</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Know your why. Have your line.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🧭 Know your why.<span class="row-cue" aria-hidden="true"></span></summary><p>If you're deciding about weed, notice what you're hoping it'll do: relax, sleep, fit in, try something new. Then ask what else gets you that.</p></details>
-        <details class="row"><summary>💬 Have your line ready.<span class="row-cue" aria-hidden="true"></span></summary><p >"I'm good." "It makes me paranoid." "I've got a game." "Not tonight." Nobody needs a speech.</p></details>
-        <details class="row"><summary>🚗 Never drive or ride high.<span class="row-cue" aria-hidden="true"></span></summary><p>THC slows reaction time and messes with judging distance. Call a parent, a friend who's sober, or a ride. Lots of families have a "pick me up, no questions tonight" deal. Ask for one.</p></details>
-        <details class="row"><summary>🫂 Look after a friend who's too high.<span class="row-cue" aria-hidden="true"></span></summary><p>Find a calm, quiet spot. Water, a snack, slow breathing. Remind them it will pass. Stay with them. If they have chest pain, can't stay awake, or something feels like an emergency, call 911.</p></details>
-        <details class="row"><summary>📉 Cutting back? Expect a rough week.<span class="row-cue" aria-hidden="true"></span></summary><p >Irritability, bad sleep, vivid dreams, and low appetite usually peak in the first week and fade over a couple of weeks. A counselor can help you plan for it.</p></details>
-        <details class="row"><summary>🧑‍🏫 Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors and nurses help students with this all the time. If you're worried about what stays private, ask that first.</p></details>
+      <h3 class="sticker">Know what it's doing for you. Know what it costs.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Know your why.<span class="row-cue" aria-hidden="true"></span></summary><p>If you use, or are thinking about it, name the job you want it to do: sleep, calm, fun, fitting in. Then ask what else does that job. If the answer is "calm," note that regular use is linked with more anxiety over time, and withdrawal makes anxiety worse in the short run.</p></details>
+        <details class="row"><summary><span class="num">2</span> Know the law where you live.<span class="row-cue" aria-hidden="true"></span></summary><p>In Massachusetts, buying and having cannabis is legal only at 21. Under 21 it's against the law, and schools have their own rules on top of that. Driving high is OUI. Many employers and teams test, and THC can show up for days to weeks in regular users.</p></details>
+        <details class="row"><summary><span class="num">3</span> Cutting back? Plan for week one.<span class="row-cue" aria-hidden="true"></span></summary><p>Expect irritability, rough sleep, vivid dreams, and less appetite, usually peaking in the first week. Plan for it: exercise, a sleep routine, fewer triggers, and someone who knows you're trying. A counselor can help you build the plan.</p></details>
+        <details class="row"><summary><span class="num">4</span> Never drive or ride high.<span class="row-cue" aria-hidden="true"></span></summary><p>THC slows reaction time and makes it harder to stay in your lane. Call your exit-plan person, a sober friend, or a rideshare.</p></details>
+        <details class="row"><summary><span class="num">5</span> Look after someone who's too high.<span class="row-cue" aria-hidden="true"></span></summary><p>Quiet spot, water, slow breathing, and the reminder that it will pass. Stay with them. Call 911 for chest pain, fainting, a seizure, or if they can't stay awake. If a young child eats an edible, call Poison Control right away.</p></details>
+        <details class="row"><summary><span class="num">6</span> Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors and nurses help students with this all the time. If you're worried about what stays private, ask that first.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Natural means safe? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Check what you know.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>Weed is natural, so it's harmless.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Plenty of natural things are harmful. And today's THC levels are anything but natural.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Plenty of natural things are harmful. And today's THC levels are anything but natural.">Fact</button>
+      <div class="scenario"><p>CBD and THC do basically the same thing.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. CBD doesn&#x27;t get you high. In the ABCD study, THC exposure was tied to worse memory over time, and CBD exposure was not.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. CBD doesn&#x27;t get you high. In the ABCD study, THC exposure was tied to worse memory over time, and CBD exposure was not.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Today's weed is several times stronger than it was in the 1990s.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. Average THC went from about 4% to 15 to 25% in flower, and much higher in vapes and dabs.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. Average THC went from about 4% to 15 to 25% in flower, and much higher in vapes and dabs.">Fact</button>
+      <div class="scenario"><p>About 3 in 10 people who used weed in the past year had a cannabis use disorder.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. In a national survey, 30.6% of past-year users met the criteria.">Myth</button>
+        <button class="choice" type="button" data-fb="good" data-msg="Fact. In a national survey, 30.6% of past-year users met the criteria.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>You can't get addicted to weed.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Cannabis use disorder is real, and it's more likely when you start young.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Cannabis use disorder is real, and it's more likely when you start young.">Fact</button>
+      <div class="scenario"><p>If weed calms you down, it's treating your anxiety.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. It can bring short-term relief. Over time, regular use is linked to more anxiety, and withdrawal adds its own.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. It can bring short-term relief. Over time, regular use is linked to more anxiety, and withdrawal adds its own.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>If an edible isn't working after 30 minutes, take more.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Edibles can take up to 2 hours to kick in. Wait.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Edibles can take up to 2 hours to kick in. Wait.">Fact</button>
+      <div class="scenario"><p>Stronger weed is safer because you use less of it.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. People rarely cut back enough to match. Higher potency is tied to more dependence and higher psychosis risk.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. People rarely cut back enough to match. Higher potency is tied to more dependence and higher psychosis risk.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Being high makes you a safer driver because you drive slower.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. THC slows reaction time and coordination. Crashes go up, not down.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. THC slows reaction time and coordination. Crashes go up, not down.">Fact</button>
+      <div class="scenario"><p>Delta-8 from a gas station is a legal, milder version that's been tested.</p><div class="choices" role="group" aria-label="Myth or fact">
+        <button class="choice" type="button" data-fb="good" data-msg="Myth. It still gets you high, it&#x27;s loosely regulated, and the FDA has warned about poisonings and mislabeled products.">Myth</button>
+        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. It still gets you high, it&#x27;s loosely regulated, and the FDA has warned about poisonings and mislabeled products.">Fact</button>
       </div><div class="feedback" aria-live="polite"></div></div>
       </div>
     </details>
 
-    
 
-    
-
-    
-
-    
-
-    
-
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a side. Then check the science.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
+      <p>Pick a move. There may be more than one good one.</p>
+      <div class="scenario">
+        <p>Mateo, a junior, uses a cart every night to fall asleep before big tests. "It's the only thing that works," he says.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="okay" data-msg="It may help him fall asleep, but THC cuts REM sleep, and tolerance means he needs more over time. When he stops, sleep gets worse for a while, which keeps the cycle going.">If it works, it works</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Ask what&#x27;s keeping him up: test anxiety, screens, schedule. A counselor or doctor can help with sleep and anxiety, and those fixes don&#x27;t build tolerance.">Ask about what's keeping him up, and point him to a counselor or doctor</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Shame usually pushes people to hide it, not change it.">Tell him he's an addict</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Before a party, Kiara offers you a hit from a dab pen. You've only tried flower once, and it made you anxious.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Concentrate can be several times stronger than flower. Your last reaction is useful information.">Take a big hit so you don't look nervous</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Good call. &quot;That stuff makes me paranoid&quot; is true and ends the conversation. If you do decide to use, the safer choice is less, slower, and never concentrate if flower already made you anxious.">"I'm good. It makes me paranoid."</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Owen smoked in the car before driving you to a concert. He says weed makes him a more careful driver.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Driving slower doesn&#x27;t fix slower reactions and worse lane control. In Massachusetts, driving high is OUI, the same charge as drunk driving.">Go. He does drive slower when he's high</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Call your exit-plan person, get a rideshare, or offer to find another ride together. Ten awkward minutes beats the alternative.">Find another ride, and offer him one too</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">The best answer is the one you'll actually do.</p>
+      </div>
+    </details>
+
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">In a group</span><span class="sticker">The gray-area debate.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 15 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
-        <li>Label three spots in the room: Agree, Disagree, Not sure. (Or hold up 1, 2, or 3 fingers.)</li>
-        <li>Read a statement below. Everyone moves to a spot, no talking yet.</li>
-        <li>Ask one person from each spot why they're there.</li>
-        <li>Tap to show what the research says. Talk about what surprised people. Then the next statement.</li>
+        <li>Label three spots: Agree, Disagree, It depends. (Or hold up 1, 2, or 3 fingers.)</li>
+        <li>Read a statement. Everyone moves, no talking yet.</li>
+        <li>Ask one person from each spot to make their case in 30 seconds.</li>
+        <li>Tap to see what the research says, then take a second vote. Did anyone move?</li>
       </ol>
       </div>
     </details>
 
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">👥 Stand where you stand · 1 of 4</span><span class="sticker"><span >Most seniors used weed in the past year.</span></span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p >Nope. About 74 out of 100 seniors didn't use it in the past year (Monitoring the Future, 2025).</p></details>
-      </div>
-    </details>
-
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">👥 Stand where you stand · 2 of 4</span><span class="sticker">Weed helps you focus.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>While high, focus, planning, and memory get worse. Some people feel more focused, but tests show otherwise.</p></details>
-      </div>
-    </details>
-
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">👥 Stand where you stand · 3 of 4</span><span class="sticker">Weed is less risky than it used to be.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>It's much stronger than it used to be, and stronger THC is tied to more anxiety, psychosis, and addiction.</p></details>
-      </div>
-    </details>
-
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">👥 Stand where you stand · 4 of 4</span><span class="sticker">A vape pen and a joint are about the same.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Vape carts and dabs can be 60 to 90% THC, several times stronger than flower.</p></details>
-      </div>
-    </details>
-
-    <details  class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li>Which answer surprised you most? Why do you think so many people believe the opposite?</li>
-        <li>Where do most people our age get their information about weed?</li>
-        <li>If a younger sibling asked you about weed, what would you want them to know?</li>
-        <li><span >What makes it hard to say something to a friend who's using a lot?</span></li>
-      </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep questions about "people our age," never about "you." Nobody should have to share whether they use. If someone does share, thank them and move on without follow-up questions in the group.</p></details>
-      </div>
-    </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Gray area · 1 of 3</span><span class="sticker">If it's legal at 21, it should be legal at 18.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      <div class="scenario" >
-        <p>Saturday night. Your friend ate an edible an hour ago, says nothing's happening, and reaches for a second one.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Then both kick in. That's how a lot of ER visits start.">"Go for it"</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's real friendship. You might just save their night.">"Edibles can take two hours. Give it time."</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Stacking doses makes a bad night much more likely.">Hand them a vape to speed it up</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>Your friend is high, panicking, and convinced their heart is about to explode.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="To them it feels terrifying. Being taken seriously helps them calm down.">Laugh it off, they'll be fine</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Remind them it will pass. If there's chest pain or they can't calm down, call for help.">Quiet spot, water, slow breathing, stay with them</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Rest can help, but don't leave them alone while they're panicking.">Let them sleep it off alone</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>Your ride home has been smoking all night and says they're fine to drive.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="THC slows reaction time. Ten minutes is enough for a crash.">Get in, it's only ten minutes</button>
-          <button class="choice" type="button" data-fb="good" data-msg="A little awkward, very worth it.">Call a parent, a sober friend, or a rideshare with a parent's account</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <p style="font-size:1.1rem">Agree, disagree, or it depends? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>The Ontario study found a strong link between cannabis and psychosis for 12 to 19 year olds, and no clear link for people 20 and up. Brain maturation continues into the mid-20s. Where to draw the line is a values question, but the biology isn't the same at 18 and 25.</p></details>
       </div>
     </details>
 
-    <details  class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Gray area · 2 of 3</span><span class="sticker">A friend who uses daily but gets good grades is fine.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>😱 Scare stories.<span class="row-cue" aria-hidden="true"></span></summary><p>"One hit and your life is over" isn't true, and when people find that out, they stop trusting the real risks.</p></details>
-        <details class="row"><summary>⚖️ "It's legal, so it's fine."<span class="row-cue" aria-hidden="true"></span></summary><p>Alcohol is legal for adults too. The age limits exist because developing brains react differently.</p></details>
-        <details class="row"><summary>🛌 Using it every night to sleep or calm down.<span class="row-cue" aria-hidden="true"></span></summary><p>It works less over time, and stopping makes sleep and anxiety worse for a while.</p></details>
-        <details class="row"><summary>👀 Comparing to friends who seem fine.<span class="row-cue" aria-hidden="true"></span></summary><p>Changes in memory, motivation, and mood are hard to spot from the outside, or in yourself.</p></details>
-      </div>
+      <p style="font-size:1.1rem">Agree, disagree, or it depends? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Grades are one measure. Effects on memory, motivation, sleep, and mood can be hard to see from outside. Daily use is also the pattern most linked to dependence and psychosis. "Fine" and "unaffected" aren't the same thing.</p></details>
       </div>
     </details>
+
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Gray area · 3 of 3</span><span class="sticker">Weed is safer than alcohol.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.1rem">Agree, disagree, or it depends? Vote first.</p>
+      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>It depends on the risk. A cannabis overdose doesn't stop breathing the way an alcohol overdose can. Cannabis carries other risks: psychosis, dependence, impaired driving, and, for teens, possible effects on memory and attention. "Safer" depends on which harm you're asking about, and mixing the two makes both worse.</p></details>
+      </div>
+    </details>
+
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>Which statement was hardest to vote on? Why?</li>
+        <li>How do the messages you've heard about weed differ between school, family, online, and friends?</li>
+        <li>What would you want a younger sibling or cousin to know?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep questions about "people our age," never about "you." Nobody should have to share whether they use. Families and cultures view cannabis very differently, including for medical use, so leave room for that.</p></details>
+      </div>
+    </details>
+
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Get help right away if</h3>
       <ul class="tight">
         <li>Someone has chest pain, or their heart won't slow down.</li>
-        <li>Someone can't stay awake or can't be woken up.</li>
+        <li>Someone faints, has a seizure, or can't stay awake.</li>
         <li>Someone keeps vomiting and can't stop.</li>
         <li>Someone is seeing or hearing things, or is so paranoid they could hurt themselves or someone else.</li>
-        <li>A little kid ate an edible.</li>
+        <li>A young child ate an edible.</li>
       </ul>
-      <p style="margin:0">Call <strong>911</strong> for an emergency. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Call 911 for an emergency. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Miech, R., et al. (2025). <i>Monitoring the Future National Survey Results on Drug Use, 1975 to 2025</i>. University of Michigan / National Institute on Drug Abuse.</li>
+        <li>Chandra, S., Radwan, M. M., ... ElSohly, M. A. (2019). New trends in cannabis potency in USA and Europe during the last decade (2008 to 2017). <i>European Archives of Psychiatry and Clinical Neuroscience</i>, 269, 5 to 15.</li>
+        <li>Di Forti, M., et al. (2019). The contribution of cannabis use to variation in the incidence of psychotic disorder across Europe (EU-GEI). <i>The Lancet Psychiatry</i>, 6, 427 to 436.</li>
+        <li>McDonald, A. J., Kurdyak, P., Rehm, J., Roerecke, M., &amp; Bondy, S. J. (2024). Age-dependent association of cannabis use with risk of psychotic disorder. <i>Psychological Medicine</i>, 54, 2926 to 2936.</li>
+        <li>Wade, N. E., Sullivan, R. M., ... Tapert, S. F. (2026). [ABCD Study analysis of cannabis use and cognitive development, 11,036 youth, ages 9 to 17]. <i>Neuropsychopharmacology</i>. doi:10.1038/s41386-026-02395-1</li>
+        <li>Meier, M. H., et al. (2012). Persistent cannabis users show neuropsychological decline from childhood to midlife. <i>PNAS</i>, 109, E2657 to E2664.</li>
+        <li>Jackson, N. J., et al. (2016). Impact of adolescent marijuana use on intelligence: Results from two longitudinal twin studies. <i>PNAS</i>, 113, E500 to E508.</li>
+        <li>Hasin, D. S., et al. (2015). Prevalence of marijuana use disorders in the United States between 2001 to 2002 and 2012 to 2013. <i>JAMA Psychiatry</i>, 72, 1235 to 1242.</li>
+      </ul>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="reflect" aria-labelledby="h-reflect">
   <div class="wrap">
     <div class="eyebrow">Part 3 · Reflect</div>
-    <h2 id="h-reflect">Take a moment to write</h2>
+    <h2 id="h-reflect">Think it through</h2>
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">What I'd heard about weed, and what surprised me here</label>
+      <label class="prompt" for="tx-1">What I believed about weed before this, and which finding changed my thinking</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Where I see weed most, in person and online</label>
+      <label class="prompt" for="tx-2">If I use, or am thinking about it: the job I want it to do, and what else could do that job</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd say if someone offered it to me</label>
+      <label class="prompt" for="tx-3">How weed shows up around me: family, friends, online, the neighborhood</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I'd do if a friend got way too high</label>
+      <label class="prompt" for="tx-4">What I'd say to a friend who uses every day and says it's fine</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Ways I relax or have fun that don't cost my brain anything</label>
+      <label class="prompt" for="tx-5">What I want to protect about my brain and my plans for the next five years</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your brain is doing some of its most important building right now. You get to decide what goes into it, and you deserve to decide with real information.</p>
+      <p>Your brain is doing some of its most important building right now. You get to decide what goes into it, and you deserve to decide with real information, including the parts scientists are still arguing about.</p>
     </div>
     </div>
   </div>
@@ -727,14 +782,14 @@
 <section class="part" id="checkin" aria-labelledby="h-checkin">
   <div class="wrap">
     <div class="eyebrow">Part 4 · Check in</div>
-    <h2 id="h-checkin">Check-in tool</h2>
+    <h2 id="h-checkin">Check in with yourself</h2>
 <div class="unit unit-checkin">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span><strong>Your privacy:</strong> Nothing you enter here is saved, stored, or sent anywhere. This tool works entirely in your browser.</span></p>
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
         <h3 id="ci-1">How much has weed been on your mind today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -750,10 +805,9 @@
           <button type="button" class="chip" aria-pressed="false">felt pressure</button>
           <button type="button" class="chip" aria-pressed="false">saw it online</button>
           <button type="button" class="chip" aria-pressed="false">worried about a friend</button>
-          <button type="button" class="chip" aria-pressed="false">curious about it</button>
-          
-          <button type="button" class="chip" aria-pressed="false" >I use and want to cut back</button>
-          <button type="button" class="chip" aria-pressed="false">trouble sleeping</button>
+          <button type="button" class="chip" aria-pressed="false">someone at home uses</button>
+          <button type="button" class="chip" aria-pressed="false">I use and want to cut back</button>
+          <button type="button" class="chip" aria-pressed="false">using it to sleep or calm down</button>
           <button type="button" class="chip" aria-pressed="false">said no</button>
           <button type="button" class="chip" aria-pressed="false">talked to someone</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
@@ -762,14 +816,14 @@
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😬 Felt pressure</button>
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-cut" aria-pressed="false"><span >🛑 I want to cut back</span></button>
-          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">🤔 Just thinking it over</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about my choices</button>
+        <h3>Which is closest to where you are?</h3>
+        <p class="ci-hint">Pick one.</p>
+        <div class="paths" role="group" aria-label="Where you are right now">
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Feeling pressure</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-cut" aria-pressed="false">I want to cut back</button>
+          <button type="button" class="choice" data-path="p-curious" aria-pressed="false">Thinking it over</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling steady</button>
         </div>
 
         <div class="path-panel" id="p-pressure" hidden>
@@ -777,9 +831,9 @@
           <p>Pressure is real, and saying no can feel awkward. It gets easier each time.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Have a short line ready: "I'm good."</li>
-            <li><span class="e" aria-hidden="true">🙅</span>Saying No Without Losing Your Friends has more ideas.</li>
-            <li><span class="e" aria-hidden="true">👥</span>Stick near friends who don't push.</li>
+            <li>Have a short, true line ready: "It makes me paranoid."</li>
+            <li>Saying No Without Losing Your Friends has more ideas.</li>
+            <li>Stick near friends who don't push.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-friend" hidden>
@@ -787,19 +841,19 @@
           <p>You can't make someone stop, but you can be honest that you care.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Tell them what you've noticed, without lecturing.</li>
-            <li><span class="e" aria-hidden="true">📚</span>Share one fact from this lesson that surprised you.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If you're worried about their safety, tell a trusted adult.</li>
+            <li>Tell them what you've noticed, privately and without a lecture.</li>
+            <li>Share one finding from this lesson that surprised you.</li>
+            <li>If you're worried about their safety or mental health, tell a trusted adult.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-cut" hidden>
           <h4>What this might mean</h4>
-          <p><span >Wanting to cut back is a big step. Plenty of people do it, and it's easier with support.</span></p>
+          <p>Wanting to cut back is a real step. Plenty of people do it, and it's easier with a plan and support.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔍</span>Notice when and where you think about it most.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor or nurse about a plan.</li>
-            <li><span class="e" aria-hidden="true">😴</span>Expect sleep to be rough at first. It gets better.</li>
+            <li>Notice when and where you use most, and change one of those.</li>
+            <li>Talk to a counselor or nurse about a plan.</li>
+            <li>Expect sleep to be rough at first. It gets better within a few weeks.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-curious" hidden>
@@ -807,19 +861,19 @@
           <p>Curiosity is normal. Good questions lead to better decisions.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📖</span>Look back at the screen that surprised you most.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk it over with an adult you trust.</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Ask yourself what you'd want it to do for you, and what else could.</li>
+            <li>Look back at the finding that surprised you most.</li>
+            <li>Talk it over with an adult you trust.</li>
+            <li>Ask what you'd want it to do for you, and what else could.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>That's worth noticing. Steady days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">💪</span>Keep your go-to line ready.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Look out for a friend who might be struggling.</li>
+            <li>Notice what's helping.</li>
+            <li>Keep your line ready.</li>
+            <li>Look out for a friend who might be struggling.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -844,10 +898,10 @@
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
-        <p class="ci-hint">The smallest version counts.</p>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One thing you'll do in the next day or two?</label>
+        <p class="ci-hint">Small and specific counts: "No cart on school nights this week."</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you'd be to a friend figuring this out. You can choose what comes next, and you don't have to do it alone.</p>
+        <p class="closing">Be as fair to yourself as you would be to a friend figuring this out. You can choose what comes next, and you don't have to do it alone.</p>
       </div>
     </div>
     </div>

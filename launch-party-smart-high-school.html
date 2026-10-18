@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
+
+  .drinks { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:12px 0 0; }
+  .drinks div { background:#fff; border-radius:14px; padding:12px 10px; text-align:center; }
+  .drinks b { display:block; font-size:1.15rem; }
+  .drinks span { font-size:.85rem; color:var(--ink-soft); line-height:1.35; display:block; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🎉 High School · Launch Ready</div>
+  <div class="eyebrow">High School · Launch Ready</div>
   <h1>Party Smart</h1>
-  <p class="tagline">Because your choices are about to be yours, and so is looking out for everyone around you.</p>
+  <p class="tagline">What alcohol does to your blood and brain over a night, the numbers college students get wrong, and how to be the one who knows what to do.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +463,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,65 +480,80 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Substance use: yours and everyone around you</h2>
+    <h2 id="h-understand">What's actually happening in your body at a party</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Your call now. Here's how to stay safe.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">New place, new people, your call.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>For a lot of you, college is the first time these decisions are completely yours. No parent down the hall. No curfew.</li>
-        <li>You'll be at parties where you don't know most people, still trying to find your crowd.</li>
-        <li>Some people drink or use a lot. Plenty don't. Both are normal at college.</li>
-        <li>Whatever you decide for yourself, you'll be around people who are using.</li>
+        <li>Next fall you could be at a party where you know almost nobody, with no parent down the hall and no curfew.</li>
+        <li>Someone hands you a cup and you have no idea what's in it, or how much.</li>
+        <li>You've watched a friend go from fun to sloppy faster than seemed possible.</li>
+        <li>You don't plan to drink much, or at all, and wonder whether that will make college lonely.</li>
       </ul>
-      <p style="margin:0">This lesson won't tell you what to choose. It's about staying safe, and keeping the people around you safe, whatever you choose.</p>
+      <p style="margin:0">This lesson won't tell you what to choose. Families, faiths, and cultures see alcohol very differently, and you'll bring your own values with you. It's about understanding what alcohol and other drugs do, so you can keep yourself and the people around you safe.</p>
       </div>
     </details>
 
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">The curve that catches people</h3>
+    <p>Alcohol moves from your stomach and small intestine into your blood over time. So your blood alcohol concentration (BAC) can keep climbing after your last drink, and even after someone passes out. The government's alcohol research institute, NIAAA, puts that front and center in its overdose warnings.</p>
+    <figure class="fig">
+<svg viewBox="0 0 400 268" role="img" aria-labelledby="bac-t bac-d" xmlns="http://www.w3.org/2000/svg"><title id="bac-t">Blood alcohol over one night</title><desc id="bac-d">Five drinks between 9 and 11pm. Blood alcohol keeps rising for a while after the last drink, peaks, then falls slowly at a steady pace. The peak is above the 0.08 legal driving limit for adults.</desc><defs><marker id="bac-ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#C0392B"/></marker></defs><line x1="44" y1="210" x2="388" y2="210" stroke="#C7C7CC" stroke-width="1.5"/><line x1="44" y1="30" x2="44" y2="210" stroke="#C7C7CC" stroke-width="1.5"/><line x1="60" y1="210" x2="60" y2="215" stroke="#C7C7CC"/><text x="60" y="229" font-size="11" fill="#6E6E73" text-anchor="middle">9pm</text><line x1="120" y1="210" x2="120" y2="215" stroke="#C7C7CC"/><text x="120" y="229" font-size="11" fill="#6E6E73" text-anchor="middle">10</text><line x1="180" y1="210" x2="180" y2="215" stroke="#C7C7CC"/><text x="180" y="229" font-size="11" fill="#6E6E73" text-anchor="middle">11</text><line x1="240" y1="210" x2="240" y2="215" stroke="#C7C7CC"/><text x="240" y="229" font-size="11" fill="#6E6E73" text-anchor="middle">12am</text><line x1="300" y1="210" x2="300" y2="215" stroke="#C7C7CC"/><text x="300" y="229" font-size="11" fill="#6E6E73" text-anchor="middle">1</text><line x1="360" y1="210" x2="360" y2="215" stroke="#C7C7CC"/><text x="360" y="229" font-size="11" fill="#6E6E73" text-anchor="middle">2</text><line x1="44" y1="122" x2="388" y2="122" stroke="#6E6E73" stroke-width="1.2" stroke-dasharray="5 4"/><text x="52" y="100" font-size="11.5" font-weight="700" fill="#1D1D1F">0.08</text><text x="52" y="114" font-size="11" fill="#6E6E73">legal limit to drive</text><line x1="180" y1="44" x2="180" y2="210" stroke="#2E6DB4" stroke-width="1.2" stroke-dasharray="3 3"/><text x="176" y="40" font-size="11.5" font-weight="700" fill="#245A96" text-anchor="end">last drink</text><path d="M60 206 C92 196 132 140 170 102 C190 84 200 72 216 70 C236 70 262 94 388 170" fill="none" stroke="#1D1D1F" stroke-width="2.6"/><path d="M180 92 C192 80 202 72 214 70" fill="none" stroke="#C0392B" stroke-width="5" stroke-linecap="round"/><line x1="184" y1="52" x2="212" y2="52" stroke="#C0392B" stroke-width="1.6" marker-end="url(#bac-ah)"/><text x="186" y="45" font-size="11.5" font-weight="700" fill="#A3301F">still rising</text><circle cx="216" cy="70" r="4.5" fill="#C0392B"/><text x="240" y="66" font-size="11.5" font-weight="700" fill="#A3301F">peak</text><text x="384" y="196" font-size="11" fill="#6E6E73" text-anchor="end">falls at a steady pace</text><rect x="56" y="197" width="8" height="11" rx="2" fill="#2E6DB4"/><rect x="86" y="197" width="8" height="11" rx="2" fill="#2E6DB4"/><rect x="116" y="197" width="8" height="11" rx="2" fill="#2E6DB4"/><rect x="146" y="197" width="8" height="11" rx="2" fill="#2E6DB4"/><rect x="176" y="197" width="8" height="11" rx="2" fill="#2E6DB4"/><text x="188" y="207" font-size="11" font-weight="700" fill="#245A96">5 drinks</text><text transform="translate(30 120) rotate(-90)" font-size="12" fill="#1D1D1F" text-anchor="middle">Blood alcohol</text><text x="216" y="250" font-size="12" fill="#1D1D1F" text-anchor="middle">Time &#8594;</text></svg>
+      <figcaption>An illustrative shape for one person, not a calculator. How high the peak goes depends on body size, sex, food, pace, sleep, and medications, so no chart can tell you your number.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Rising: you feel fine, then you don't</strong><p>Early drinks are still being absorbed while you pour the next one. By the time you feel it, more is already on the way.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Peak: after you stop</strong><p>The highest point usually comes after the last drink. That's why "they seemed okay when they went to bed" is such a dangerous sentence.</p></div></div>
+      <div class="region"><span class="dot" style="background:#6E6E73"></span><div><strong>Falling: on your liver's schedule</strong><p>Your liver clears alcohol at a fairly steady pace. Coffee, a cold shower, or a greasy meal afterward don't speed it up. Only time does.</p></div></div>
+    </div>
+
+    <h3 style="margin-top:28px">One drink is smaller than the cup</h3>
+    <p>A U.S. standard drink is 14 grams of alcohol. That's about:</p>
+    <div class="drinks">
+      <div><b>12 oz</b><span>beer at about 5%</span></div>
+      <div><b>5 oz</b><span>wine at about 12%</span></div>
+      <div><b>1.5 oz</b><span>liquor at about 40%</span></div>
+    </div>
+    <p class="stat">When Duke researchers had college students free-pour drinks, the students poured more than a standard drink every time, and the bigger the cup, the bigger the overpour. A party cup of punch can hold several drinks.</p>
+    </div>
+
     <details class="fold ">
-      <summary><span class="fold-label">The real risks</span><span class="sticker">Alcohol: most common, most underestimated.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">The numbers students get wrong.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🍺 Alcohol is the big one.</dt>
-        <dd>It's the most common substance on campus, and the most underestimated.</dd>
-        <dt>⚖️ Same drinks, different results.</dt>
-        <dd>Body size, food, sleep, medications, and tolerance all change how alcohol hits. What's fine for one person can be dangerous for another.</dd>
-        <dt>🧭 Limits are hard to know when you're new.</dt>
-        <dd>If you haven't been drinking much, you don't yet know how you react, and the warning signs come late.</dd>
-        <dt>👥 Pressure is strongest early.</dt>
-        <dd>When you're still finding your people, saying no or leaving can feel like a social risk.</dd>
-        <dt>🌀 Everyone's inhibitions drop.</dt>
-        <dd>Substances lower judgment for everyone in the room, including the people around you.</dd>
+        <dt>Everyone isn't drinking that much.</dt>
+        <dd>Across dozens of studies, college students consistently overestimate how much their peers drink and how fine their peers are with heavy drinking. Plenty of students drink lightly or not at all.</dd>
+        <dt>Blackouts are common.</dt>
+        <dd>In a survey of 772 Duke undergraduates, 51% of students who had ever had alcohol reported at least one blackout, and 40% had one in the past year. During a blackout, people still walk, talk, text, and make decisions they won't remember.</dd>
+        <dt>Energy drinks hide it.</dt>
+        <dd>In a 2008 study, college students who mixed alcohol with energy drinks reported more alcohol-related injuries and other serious consequences than students who drank alcohol alone. You feel less drunk than you are.</dd>
+        <dt>The worst outcomes are mostly accidents.</dt>
+        <dd>Researchers estimated that about 1,825 U.S. college students aged 18 to 24 died from alcohol-related unintentional injuries in 2005, most of them in traffic crashes.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">One drink is smaller than you think</span><span class="sticker">A party cup is rarely one drink.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Pills, powders, edibles</span><span class="sticker">If it's not from a pharmacy, you don't know.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 520 235" role="img" aria-label="A 12 ounce beer, 5 ounces of wine, and a 1.5 ounce shot each hold about the same alcohol. A mixed drink in a party cup can hold two to four." style="width:100%;max-width:600px;height:auto;display:block"><g transform="translate(20 0)"><rect x="22" y="70" width="46" height="100" rx="8" fill="var(--school)"/><rect x="22" y="62" width="46" height="12" rx="4" fill="var(--ink-soft)"/><text x="45" y="200" font-size="15" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Beer</text><text x="45" y="220" font-size="13" text-anchor="middle" fill="var(--ink-soft)">12 oz, about 5%</text></g><g transform="translate(130 0)"><path d="M20 60 L70 60 C70 100 55 112 45 112 C35 112 20 100 20 60Z" fill="none" stroke="var(--ink-soft)" stroke-width="3"/><path d="M24 78 L66 78 C64 100 54 108 45 108 C36 108 26 100 24 78Z" fill="var(--school)"/><line x1="45" y1="112" x2="45" y2="160" stroke="var(--ink-soft)" stroke-width="3"/><line x1="28" y1="168" x2="62" y2="168" stroke="var(--ink-soft)" stroke-width="3"/><text x="45" y="200" font-size="15" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Wine</text><text x="45" y="220" font-size="13" text-anchor="middle" fill="var(--ink-soft)">5 oz, about 12%</text></g><g transform="translate(240 0)"><path d="M28 125 L62 125 L58 170 L32 170Z" fill="none" stroke="var(--ink-soft)" stroke-width="3"/><path d="M30 138 L60 138 L58 168 L32 168Z" fill="var(--school)"/><text x="45" y="200" font-size="15" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Liquor</text><text x="45" y="220" font-size="13" text-anchor="middle" fill="var(--ink-soft)">1.5 oz shot, 40%</text></g><text x="362" y="120" font-size="34" font-weight="800" fill="var(--school-accent)" text-anchor="middle">≠</text><g transform="translate(405 0)"><path d="M14 50 L76 50 L66 170 L24 170Z" fill="#c8332f"/><path d="M15 62 L75 62" stroke="#fff" stroke-width="3" opacity=".6"/><text x="45" y="200" font-size="15" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Party cup</text><text x="45" y="220" font-size="13" text-anchor="middle" fill="var(--ink-soft)">often 2 to 4 drinks</text></g><text x="185" y="30" font-size="15" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">each one = 1 drink</text><line x1="20" y1="40" x2="345" y2="40" stroke="var(--line)" stroke-width="2"/></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">At a party, nobody's measuring. A cup of punch or a mixed drink can easily be two to four standard drinks.</figcaption>
-      </figure>
+      <dl class="helps">
+        <dt>Fake pills.</dt>
+        <dd>The DEA has warned that counterfeit pills pressed to look like Xanax, Percocet, oxycodone, or Adderall often contain fentanyl or methamphetamine. In DEA lab testing, two in five fake pills with fentanyl held a potentially lethal dose. Your friend can't see fentanyl either.</dd>
+        <dt>Mixing slows breathing.</dt>
+        <dd>Alcohol plus opioids, benzodiazepines like Xanax, or sleep medicine each slow breathing, and together they hit much harder.</dd>
+        <dt>Edibles are slow.</dt>
+        <dd>They take much longer to kick in than smoking. Taking more because "it isn't working" is the classic mistake.</dd>
+        <dt>Testing and Narcan.</dt>
+        <dd>Many campuses and health departments give out fentanyl test strips and naloxone (Narcan) for free. Narcan has been sold over the counter since 2023. It reverses an opioid overdose and won't harm someone who isn't having one.</dd>
+      </dl>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">It keeps rising after you stop</span><span class="sticker">The last drink isn't the peak.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Alcohol poisoning</span><span class="sticker">Nobody should "sleep it off" alone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 420 280" role="img" aria-label="Blood alcohol keeps rising for a while after the last drink, then falls slowly." style="width:100%;max-width:560px;height:auto;display:block"><line x1="40" y1="230" x2="400" y2="230" stroke="var(--ink-soft)" stroke-width="2"/><line x1="40" y1="230" x2="40" y2="30" stroke="var(--ink-soft)" stroke-width="2"/><text x="46" y="26" font-size="13" fill="var(--ink-soft)">alcohol in your blood</text><text x="40" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">0h</text><text x="125" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">1h</text><text x="210" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">2h</text><text x="295" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">3h</text><text x="380" y="250" font-size="12" text-anchor="middle" fill="var(--ink-soft)">4h</text><rect x="125" y="40" width="75" height="190" fill="var(--school-accent)" opacity=".15"/><path d="M40 228 C70 215 105 150 135 112 C158 85 180 76 198 76 C235 77 300 128 395 200" fill="none" stroke="var(--school)" stroke-width="5" stroke-linecap="round"/><line x1="125" y1="40" x2="125" y2="230" stroke="var(--ink-soft)" stroke-dasharray="5 5" stroke-width="2"/><text x="120" y="56" font-size="13" font-weight="700" text-anchor="end" font-family="inherit" fill="var(--ink)">last drink</text><text x="205" y="58" font-size="13" font-weight="700" font-family="inherit" fill="var(--ink)">still rising</text><text x="215" y="178" font-size="13" font-family="inherit" fill="var(--ink)"><tspan x="215">then it drops, about</tspan><tspan x="215" dy="17">one drink per hour</tspan></text><rect x="52" y="236" width="10" height="16" rx="2" fill="var(--school-accent)"/><rect x="80" y="236" width="10" height="16" rx="2" fill="var(--school-accent)"/><rect x="108" y="236" width="10" height="16" rx="2" fill="var(--school-accent)"/><text x="40" y="272" font-size="12" fill="var(--ink-soft)">three drinks in the first hour</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">Blood alcohol keeps climbing for 30 to 90 minutes after the last drink. Your liver clears about one drink an hour. Coffee, food, and showers don't speed it up.</figcaption>
-      </figure>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Pills and powders aren't what they seem</span><span class="sticker">If it's not from a pharmacy, you don't know.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 560 250" role="img" aria-label="Five out of ten pills marked as containing a potentially deadly dose. Beside them, two milligrams shown as a few grains next to a penny." style="width:100%;max-width:600px;height:auto;display:block"><ellipse cx="40" cy="50" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="98" cy="50" rx="24" ry="14" fill="var(--line)"/><ellipse cx="156" cy="50" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="214" cy="50" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="272" cy="50" rx="24" ry="14" fill="var(--line)"/><ellipse cx="40" cy="100" rx="24" ry="14" fill="var(--line)"/><ellipse cx="98" cy="100" rx="24" ry="14" fill="var(--alert)"/><ellipse cx="156" cy="100" rx="24" ry="14" fill="var(--line)"/><ellipse cx="214" cy="100" rx="24" ry="14" fill="var(--line)"/><ellipse cx="272" cy="100" rx="24" ry="14" fill="var(--alert)"/><text x="10" y="172" font-size="44" font-weight="800" fill="var(--alert)">5 in 10</text><text x="12" y="198" font-size="14" font-family="inherit" fill="var(--ink)"><tspan x="12">fake pills tested by the DEA in 2024</tspan><tspan x="12" dy="18">had a potentially deadly dose</tspan></text><circle cx="410" cy="80" r="48" fill="#c98a55" stroke="#a86b3a" stroke-width="3"/><text x="410" y="86" font-size="14" text-anchor="middle" fill="#5a3415">penny</text><circle cx="406" cy="152" r="1.8" fill="var(--ink)"/><circle cx="410" cy="150" r="1.8" fill="var(--ink)"/><circle cx="413" cy="153" r="1.8" fill="var(--ink)"/><circle cx="409" cy="155" r="1.8" fill="var(--ink)"/><circle cx="404" cy="156" r="1.8" fill="var(--ink)"/><line x1="420" y1="152" x2="450" y2="152" stroke="var(--ink-soft)"/><text x="345" y="190" font-size="14" font-family="inherit" fill="var(--ink)"><tspan x="345" font-weight="700">2 milligrams of fentanyl:</tspan><tspan x="345" dy="18">about the size of a few</tspan><tspan x="345" dy="18">grains of salt</tspan></text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">Fentanyl turns up in fake pills (Xanax, Percocet, Adderall) and in powders like cocaine. If it didn't come from a pharmacy with your name on it, you don't know what's in it.</figcaption>
-      </figure>
+      <p>Alcohol poisoning is when there's enough alcohol in the blood that the brain areas running breathing, heart rate, and temperature start to shut down. Warning signs include confusion, trouble staying awake, vomiting, seizures, slow or irregular breathing, clammy or bluish skin, and no gag reflex.</p>
+      <p class="worst">Because BAC can keep rising while someone is unconscious, putting them to bed and walking away is the most dangerous thing you can do.</p>
       </div>
     </details>
   </div>
@@ -477,97 +563,59 @@
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
     <h2 id="h-practice">Staying safe, whatever you choose</h2>
-    <details class="fold ">
-      <summary><span class="fold-label">If you choose to drink</span><span class="sticker">Set your number before you go.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>📏 Decide your number before you go.</dt>
-        <dd>It's much easier to stick to a limit you set sober.</dd>
-        <dt>🍕 Eat first, and alternate with water.</dt>
-        <dd>Food slows absorption. Water in between paces you.</dd>
-        <dt>⏱ Go slow.</dt>
-        <dd>Roughly one drink an hour lets your liver keep up. Remember, the peak comes later.</dd>
-        <dt>🥤 Pour your own, keep it with you.</dt>
-        <dd>Don't accept drinks you didn't see made, and don't leave yours unattended. If you set it down, get a new one.</dd>
-        <dt>🚫 Don't mix.</dt>
-        <dd>Alcohol plus pills (benzos, opioids, sleep meds) or plus weed hits much harder. Mixing with energy drinks hides how drunk you are.</dd>
-      </dl>
+    <div class="card">
+      <div class="fold-label">If you choose to drink</div>
+      <h3 class="sticker">Decide the night before the night decides for you.</h3>
+      <div class="levers">
+        <div class="lever"><b>Set your number sober</b><span>A limit you pick in your room is much easier to keep than one you pick at midnight.</span></div>
+        <div class="lever"><b>Eat first, water between</b><span>Food slows absorption. A water between drinks paces you without anyone noticing.</span></div>
+        <div class="lever"><b>Pour your own, keep it with you</b><span>You know what's in it. If you set it down and lose track, get a new one.</span></div>
+        <div class="lever"><b>Don't mix</b><span>No pills, no energy drinks, and be careful with weed on top. Each one changes the curve.</span></div>
       </div>
-    </details>
+    </div>
 
-    <details class="fold ">
-      <summary><span class="fold-label">Whatever you choose</span><span class="sticker">Arrive together. Leave together.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>👯 Arrive together, leave together.</dt>
-        <dd>Make a plan with your people. Check in with each other during the night. Nobody walks home alone.</dd>
-        <dt>🚗 Have a ride plan.</dt>
-        <dd>Save the campus safe-ride number. Never get in a car with someone who's been drinking or using.</dd>
-        <dt>💬 Practice your "No thanks."</dt>
-        <dd>"I'm good." "I've got an early practice." Holding a cup of water ends most offers.</dd>
-        <dt>🌿 Edibles: start low, wait two hours.</dt>
-        <dd>They take a long time to kick in. Doubling up is the classic mistake.</dd>
-        <dt>💊 Carry Narcan. Know about test strips.</dt>
-        <dd>Many campuses give out naloxone and fentanyl test strips for free. Narcan can reverse an opioid overdose and can't hurt someone who isn't overdosing.</dd>
-        <dt>🆘 Call. Every time.</dt>
-        <dd>Most colleges have medical amnesty policies that protect students who call for help. Find yours before you need it.</dd>
-      </dl>
-      </div>
-    </details>
+    <div class="card">
+      <div class="fold-label">If someone is in trouble</div>
+      <h3 class="sticker">Know CUPS. Call every time.</h3>
+      <p>Call 911 or campus safety if you see any of these: <b>C</b>old, clammy, pale, or bluish skin. <b>U</b>nresponsive, can't be woken. <b>P</b>uking while passed out. <b>S</b>low or irregular breathing.</p>
+      <p class="tap-hint">Then, step by step:</p>
+        <details class="row"><summary><span class="num">1</span> Roll them on their side.<span class="row-cue" aria-hidden="true"></span></summary><p>The recovery position keeps the airway clear if they vomit. Never leave someone on their back.</p></details>
+        <details class="row"><summary><span class="num">2</span> Stay with them.<span class="row-cue" aria-hidden="true"></span></summary><p>Until help arrives. If you have to leave, hand off to a specific person.</p></details>
+        <details class="row"><summary><span class="num">3</span> Give Narcan if pills or powder might be involved.<span class="row-cue" aria-hidden="true"></span></summary><p>Blue lips, tiny pupils, or gurgling breathing after a pill or powder can mean an opioid overdose. One spray in a nostril. It can't hurt them if it isn't.</p></details>
+        <details class="row"><summary><span class="num">4</span> Don't let fear of trouble stop you.<span class="row-cue" aria-hidden="true"></span></summary><p>Massachusetts' Good Samaritan law protects people who seek help for a drug overdose, and the person overdosing, from possession charges. For alcohol, most colleges have a medical amnesty policy. Look up your school's before you need it.</p></details>
+    </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Know CUPS. Call every time.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three nights. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Call 911 or campus safety if you see any of these:</p>
-      <ul class="tight">
-        <li><strong>C</strong>old, clammy, pale, or bluish skin</li>
-        <li><strong>U</strong>nresponsive: can't be woken</li>
-        <li><strong>P</strong>uking while passed out</li>
-        <li><strong>S</strong>low or irregular breathing</li>
-      </ul>
-      <p style="margin:0">Then roll them on their side, stay with them, and if opioids might be involved, give Narcan.</p>
+      <p>Pick a move. There may be more than one reasonable one.</p>
+      <div class="scenario">
+        <p>First weekend of college. Tasha's roommate is on the bathroom floor, hard to wake, breathing slowly. Two friends say to put her to bed and let her sleep it off.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Hard to wake and slow breathing are CUPS signs. Her BAC may still be rising.">Call 911 or campus safety, roll her on her side, and stay</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This is the most dangerous option. BAC can keep rising while she's unconscious.">Put her to bed and check on her in the morning</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Neither one lowers BAC, and waking her up isn't the same as her being okay. She needs medical help.">Coffee and a cold shower to wake her up</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Two parties. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 20 minutes · no materials needed</p>
-      <ol class="tight" style="padding-left:1.3em">
-        <li>Read each story out loud.</li>
-        <li>Talk through the questions in small groups or as a class.</li>
-        <li>Then tap to see moves that tend to help.</li>
-      </ol>
+      <div class="scenario" style="margin-top:18px">
+        <p>Andre doesn't drink. At a party, people keep pushing cups at him.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A cup in hand ends most offers, and a short line works better than a speech.">Hold a seltzer, say "I'm good," and stick with his people</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="He's allowed to, but he doesn't owe anyone a reason. Short is easier.">Explain all his reasons for not drinking</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="He'd be overriding his own decision to make other people comfortable. The people worth knowing won't care.">Drink one to get them off his back</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Coleen and Malik · 1 of 2</span><span class="sticker">Coleen</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.1rem">It's the third Friday of the semester and Coleen is at a party in an upperclass dorm. She's had two drinks, already more than she's used to. A guy from her orientation group keeps refilling her cup without asking. It feels rude to say something. An hour later she feels much more drunk than she expected. She finds a corner and checks her phone, hoping to look busy. She doesn't know anyone well enough to say "I think I need to leave," and her roommate texted that she's already asleep.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Coleen can switch to water, use the safe-ride or safe-walk number, call or video-call someone she trusts, or ask an RA or friendly-looking person for help getting home. Anyone who notices the refills can step in: "Hey, want to grab some water with me?" Politeness can wait. Safety can't.</p></details>
+      <div class="scenario" style="margin-top:18px">
+        <p>Priya notices an older student refilling a first-year's cup over and over, then steering her toward the stairs. The first-year looks unsteady.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. A distraction is low drama and it works. Then get the first-year's friends, or a host or RA.">Step in with a distraction: "Hey, come get water with me," then find her friends</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Worth doing, and tomorrow is too late for tonight. Step in now, then report it.">Mention it to an RA tomorrow</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Someone who's that drunk can't consent to anything. Noticing and acting is exactly how these situations get interrupted.">It's none of her business</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Coleen and Malik · 2 of 2</span><span class="sticker">Sarah and Malik</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.1rem">Sarah's friend Malik has been drinking since before the party. Now he's slurring, stumbling, laughing too loud at nothing. Malik gets annoyed when anyone tries to slow him down, and last week he told Sarah to "relax." She doesn't want to embarrass him or get him in trouble. Maybe she's overreacting; everyone drinks in college, right? Then Malik tries to climb a flight of stairs and has to grab the railing with both hands.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Sarah doesn't need to win an argument. She can get him water, get him sitting down, bring in a friend he listens to, and get him home safely. If he shows any CUPS signs, she calls 911 or campus safety, every time. Being annoyed with her tomorrow beats the alternative.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li>What would you do if you saw what was happening to Coleen?</li>
-        <li>What if Malik were a close friend? Someone you barely know?</li>
-        <li>What makes stepping in feel hard? What would make it easier?</li>
-      </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Encourage everyone to see themselves as a helper, guys included: stepping in is a strength. If students aren't drinking at a party, their awareness is even more valuable. Know your school's medical amnesty language if students ask.</p></details>
       </div>
     </details>
 
@@ -576,23 +624,39 @@
       <div class="fold-body">
       <p>Look up your college's version of each one now, and put the numbers in your phone before move-in.</p>
       <label class="prompt" for="cc-0" style="margin-top:8px;font-size:1rem">Counseling center (location, walk-in hours, after-hours line)</label><textarea id="cc-0" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
-      <label class="prompt" for="cc-1" style="margin-top:8px;font-size:1rem">Health services</label><textarea id="cc-1" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
+      <label class="prompt" for="cc-1" style="margin-top:8px;font-size:1rem">Health services, and where to get free Narcan</label><textarea id="cc-1" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-2" style="margin-top:8px;font-size:1rem">Campus safety, and safe-ride or safe-walk</label><textarea id="cc-2" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-3" style="margin-top:8px;font-size:1rem">Title IX coordinator</label><textarea id="cc-3" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
-      <label class="prompt" for="cc-4" style="margin-top:8px;font-size:1rem">My RA or residence director</label><textarea id="cc-4" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
+      <label class="prompt" for="cc-4" style="margin-top:8px;font-size:1rem">My RA or residence director, and the medical amnesty policy</label><textarea id="cc-4" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-5" style="margin-top:8px;font-size:1rem">My 2 a.m. person</label><textarea id="cc-5" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🙊 Staying quiet to be polite.<span class="row-cue" aria-hidden="true"></span></summary><p>Embarrassment fades. Some mistakes don't.</p></details>
-        <details class="row"><summary>😴 "Let them sleep it off."<span class="row-cue" aria-hidden="true"></span></summary><p>Blood alcohol can keep rising while someone sleeps.</p></details>
-        <details class="row"><summary>🧃 Pregaming hard.<span class="row-cue" aria-hidden="true"></span></summary><p>Drinking a lot fast before you go is how people end up way past their limit before the party starts.</p></details>
-        <details class="row"><summary>💊 Trusting a friend's pill.<span class="row-cue" aria-hidden="true"></span></summary><p>Your friend can't see fentanyl either.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Coffee or a shower sobers you up.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You end up awake and drunk. Only time lowers BAC.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> They'll be fine if they sleep it off.</span><span class="row-cue" aria-hidden="true"></span></summary><p>BAC can keep climbing while they sleep. That's when choking and stopped breathing happen.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I feel fine, so I'm fine to drive.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Feeling fine and being under the limit are different things, and you may not have peaked yet.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Everyone drinks a lot in college.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Students consistently overestimate how much their peers drink. Plenty drink little or nothing.</p></details>
       </div>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">For advisory or class</span><span class="sticker">Coleen and Malik.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">About 20 minutes. Read each story out loud, talk through the questions, then open the moves that help.</p>
+      <p>Third Friday of the semester. Coleen has had two drinks, already more than she's used to, and a guy from her orientation group keeps refilling her cup without asking. An hour later she feels much drunker than expected. Her roommate is asleep, and she doesn't know anyone well enough to say "I need to leave."</p>
+      <p>Across the room, Sarah's friend Malik has been drinking since before the party. He's slurring, and he gets annoyed when anyone slows him down. Then he has to grab the stair railing with both hands.</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>What would you do in each situation?</li>
+        <li>What makes it harder at college than at home?</li>
+        <li>Who or what resources would help?</li>
+      </ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Coleen can switch to water, use safe-ride or safe-walk, video-call someone she trusts, or ask an RA for help getting home. Anyone who notices the refills can step in: "Want to grab some water with me?" Sarah doesn't need to win an argument. Water, a seat, a friend he listens to, and a safe way home. Any CUPS sign means calling 911 or campus safety.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Encourage everyone to see themselves as a helper, guys included. Students who don't drink are often the most useful people at a party. Know your school's medical amnesty language if students ask.</p></details>
       </div>
     </details>
 
@@ -601,11 +665,27 @@
       <ul class="tight">
         <li>Can't be woken, or has slow or irregular breathing.</li>
         <li>Has cold, clammy, bluish skin, or vomits while passed out.</li>
-        <li>Has blue lips or tiny pupils after taking a pill or powder (give Narcan).</li>
+        <li>Has blue lips or tiny pupils after taking a pill or powder. Give Narcan.</li>
         <li>Has a seizure or chest pain.</li>
       </ul>
-      <p style="margin:0">Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Poison Control is <strong>1-800-222-1222</strong>, any time. If a friend is in emotional crisis rather than a medical one, call or text <strong>988</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>National Institute on Alcohol Abuse and Alcoholism. Understanding the dangers of alcohol overdose; What is a standard drink?</li>
+        <li>White, A., Kraus, C., &amp; Swartzwelder, H. (2003). Do college students drink more than they think? <i>Alcoholism: Clinical and Experimental Research</i>.</li>
+        <li>White, A., Jamieson-Drake, D., &amp; Swartzwelder, H. (2002). Prevalence and correlates of alcohol-induced blackouts among college students. <i>Journal of American College Health</i>.</li>
+        <li>Borsari, B., &amp; Carey, K. (2003). Descriptive and injunctive norms in college drinking: A meta-analytic integration. <i>Journal of Studies on Alcohol</i>.</li>
+        <li>O'Brien, M. C., et al. (2008). Caffeinated cocktails: Energy drink consumption, high-risk drinking, and alcohol-related consequences among college students. <i>Academic Emergency Medicine</i>.</li>
+        <li>Hingson, R., Zha, W., &amp; Weitzman, E. (2009). Magnitude of and trends in alcohol-related mortality and morbidity among U.S. college students ages 18 to 24, 1998 to 2005. <i>Journal of Studies on Alcohol and Drugs</i>.</li>
+        <li>U.S. Drug Enforcement Administration (2021). Public safety alert on fake prescription pills containing fentanyl and meth.</li>
+        <li>U.S. Food and Drug Administration (2023). FDA approves first over-the-counter naloxone nasal spray. Massachusetts General Laws, Chapter 94C, Section 34A.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -616,26 +696,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">My plan for a first party: who I go with, how I get home</label>
+      <label class="prompt" for="tx-1">My plan for a first party: who I go with, my number if I drink, how I get home</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">My "no thanks" line</label>
+      <label class="prompt" for="tx-2">My "no thanks" line, in words I'd actually say</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd do if a friend showed CUPS signs</label>
+      <label class="prompt" for="tx-3">What I'd do, step by step, if a friend showed CUPS signs</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What would make me step in when something looks wrong</label>
+      <label class="prompt" for="tx-4">What would make it hard for me to step in, and what would make it easier</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Things I like to do on a weekend that don't involve partying</label>
+      <label class="prompt" for="tx-5">What my family or culture taught me about alcohol, and what I want to keep</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You get to decide what college looks like for you. The best nights are the ones you remember, with people who'd look out for you.</p>
+      <p>You get to decide what college looks like for you. Knowing the curve, the signs, and the numbers makes you the person others are lucky to have around.</p>
     </div>
     </div>
   </div>
@@ -681,15 +761,15 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😬 Feeling pressure</button>
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-plan" aria-pressed="false">🧭 Making a plan</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling ready</button>
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Feeling pressure</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-plan" aria-pressed="false">Making a plan</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling ready</button>
         </div>
 
         <div class="path-panel" id="p-pressure" hidden>
           <h4>What this might mean</h4>
-          <p>Wanting to fit in is real, especially early. Plenty of college students drink little or not at all.</p>
+          <p>Wanting to fit in is real, especially early. Students overestimate how much their peers drink, and plenty drink little or not at all.</p>
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">💬</span>Practice your line out loud.</li>
@@ -714,7 +794,7 @@
           <ul>
             <li><span class="e" aria-hidden="true">📇</span>Save safe-ride and campus safety numbers.</li>
             <li><span class="e" aria-hidden="true">👯</span>Pick your arrive-together, leave-together people.</li>
-            <li><span class="e" aria-hidden="true">💊</span>Find out where to get Narcan on campus.</li>
+            <li><span class="e" aria-hidden="true">💊</span>Find out where to get free Narcan and test strips on campus, and read the medical amnesty policy.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>

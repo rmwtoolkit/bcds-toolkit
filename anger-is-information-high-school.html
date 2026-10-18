@@ -362,6 +362,72 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .src { font-size:.82rem; color:var(--ink-soft); }
 </style>
 </head>
 
@@ -381,9 +447,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">😤 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>Anger Is Information</h1>
-  <p class="tagline">Because anger is a signal, not a character flaw.</p>
+  <p class="tagline">What your brain does in the first seconds of anger, why the popular fixes backfire, and how to use anger without letting it drive.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,52 +475,95 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What anger is telling you</h2>
+    <h2 id="h-understand">Anger is a threat response with an opinion</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Felt the heat rise? You're not alone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Right about the problem. Wrong about the response.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>Something small set you off and you weren't sure why.</li>
-        
-        <li >You snapped at your parents, then went to your room and stewed for an hour.</li>
-        <li>Someone was unfair to you or a friend and you could feel the heat rising.</li>
-        <li>You said something in anger that you can't take back.</li>
-        <li>You keep anger bottled up until it explodes.</li>
-        <li>People tell you to "calm down," which only makes it worse.</li>
+        <li>A teacher marked you late when you weren't, and your voice came out louder than you meant it to.</li>
+        <li>You sent a reply in the group chat in 40 seconds and spent two days cleaning it up.</li>
+        <li>A parent said "watch your tone," and now the argument is about your tone instead of the curfew.</li>
+        <li>A clip built to make people furious worked on you. For an hour.</li>
+        <li>You stay calm with everyone at school, then come apart at home.</li>
       </ul>
-      <p style="margin:0">Anger is a normal, healthy emotion. It's not bad to feel it. What matters is what you do with it.</p>
+      <p style="margin:0">You already know anger is normal. This goes further: what your brain does in the first seconds, why some popular advice makes anger worse, and how to turn it into something useful.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What anger is trying to tell you</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🚧</span><strong>A line got crossed</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Someone disrespected you, broke a promise, or ignored a boundary. Anger is your alarm saying "that's not okay."</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">⚖️</span><strong>Something's unfair</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Anger often shows up when you or someone else is being treated unjustly. That's worth paying attention to.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧊</span><strong>Something's underneath</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Anger is often the tip of an iceberg. Under it can be hurt, fear, embarrassment, sadness, or exhaustion.</p></details>
+    <h3 style="margin-top:28px">A fast alarm, and a slower set of brakes</h3>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 270" role="img" aria-labelledby="ang-t ang-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="ang-t">The brain's threat system and its brakes, side view</title>
+  <desc id="ang-d">The amygdala sits deep in the temporal lobe. It connects to the hypothalamus just above it, which connects to the periaqueductal gray in the midbrain at the top of the brainstem. The orbital and ventromedial prefrontal cortex, at the lower front of the brain, regulates this circuit.</desc>
+  <defs>
+    <marker id="ang-ah" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#1D1D1F"/></marker>
+    <marker id="ang-bar" viewBox="0 0 4 10" refX="2" refY="5" markerWidth="4" markerHeight="8" orient="auto"><path d="M2 0 L2 10" stroke="#1D1D1F" stroke-width="2.2"/></marker>
+  </defs>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M262 160 C272 154 282 158 292 152"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <ellipse cx="216" cy="140" rx="20" ry="12" fill="#ECE3D8" stroke="#B5A897" stroke-width="1.2"/>
+  <path d="M72 152 C70 134 80 120 98 116 C118 113 134 124 142 142 C146 156 138 170 124 176 C110 181 94 180 82 172 C77 166 73 160 72 152 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <ellipse cx="200" cy="163" rx="11" ry="7" fill="#D9822B"/>
+  <ellipse cx="179" cy="181" rx="10" ry="7" fill="#C0392B"/>
+  <circle cx="240" cy="182" r="6.5" fill="#7A4FB5"/><circle cx="240" cy="182" r="2" fill="#F4EEE6"/>
+  <g fill="none" stroke="#1D1D1F" stroke-width="1.6">
+    <path d="M186 175 L192 169" marker-end="url(#ang-ah)"/>
+    <path d="M211 165 Q224 168 232 177" marker-end="url(#ang-ah)"/>
+    <path d="M143 160 Q156 170 166 177" marker-end="url(#ang-bar)"/>
+  </g>
+  <g font-size="13" font-weight="700">
+    <line x1="100" y1="146" x2="46" y2="44" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="100" cy="146" r="3" fill="#fff"/>
+    <text x="8" y="22" fill="#245A96">Prefrontal cortex</text>
+    <text x="8" y="37" fill="#245A96" font-size="11" font-weight="500">orbital and ventromedial</text>
+    <line x1="200" y1="160" x2="290" y2="34" stroke="#B8691C" stroke-width="1.5"/>
+    <text x="252" y="26" fill="#9A5714">Hypothalamus</text>
+    <line x1="244" y1="186" x2="288" y2="228" stroke="#7A4FB5" stroke-width="1.5"/>
+    <text x="274" y="242" fill="#5E3B8F">Periaqueductal</text>
+    <text x="274" y="257" fill="#5E3B8F">gray (PAG)</text>
+    <line x1="177" y1="186" x2="152" y2="244" stroke="#C0392B" stroke-width="1.5"/>
+    <text x="118" y="258" fill="#A3301F">Amygdala</text>
+  </g>
+  <text x="8" y="262" font-size="11" fill="#6B6156">&#8592; face</text>
+</svg>
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. Arrows show the alarm path. The bar shows the brakes. Simplified: these regions work as a network.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: spots the provocation</strong><p>An insult, a threat, something unfair. It flags these fast, often before you have consciously sorted out what happened.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Hypothalamus: turns it into a body state</strong><p>It kicks off the stress response: adrenaline, a faster heart, heat in your face, tight muscles.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Periaqueductal gray: readies the response</strong><p>A small area in the midbrain that organizes defensive action: brace, lean in, strike back. It gets more involved the closer and more immediate a threat feels. Neuroscientist James Blair (2012) calls these three areas the brain's "basic threat system" and links it to both anger and reactive aggression.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: the brakes</strong><p>Its orbital and ventromedial areas read context: is this a real threat, and what will reacting cost me? They can turn the alarm down. They are still maturing into your mid-20s, and they work worse when you are tired, hungry, or already flooded.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it can take over</span><span class="sticker">Hot face, pounding heart. Your brain hits the alarm.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">The most popular anger advice is wrong.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your body gears up to fight.</dt>
-        <dd>Anger triggers fight-or-flight: heart pounding, face hot, fists tight. In that state, the thinking part of your brain has less say.</dd>
-        <dt>Teen brains feel emotions strongly.</dt>
-        <dd>The emotional centers of your brain are very active during the teen years, while the brakes are still developing. Feelings can come on fast and big.</dd>
-        <dt>Stress, hunger, and tiredness lower your fuse.</dt>
-        <dd>You're much more likely to blow up when you're running on empty.</dd>
+        <dt>Venting feeds it.</dt>
+        <dd>In a classic experiment, angry college students who hit a punching bag while thinking about the person who angered them ended up angrier and more aggressive than students who did nothing at all (Bushman, 2002).</dd>
+        <dt>Calming down beats burning it off.</dt>
+        <dd>A 2024 review of 154 studies found that activities that lower your arousal, like slow breathing, muscle relaxation, mindfulness, slow yoga, or a time-out, reduced anger. Activities that raise it, like running or boxing, generally did not, and sometimes made it worse (Kjærvik &amp; Bushman). Exercise is great for you. It just isn't the best tool in the heated moment.</dd>
+        <dt>Your fuse changes day to day.</dt>
+        <dd>Short sleep, hunger, pain, and stress all make the alarm easier to trip. If you are snapping at everyone, check the basics before you decide something is wrong with you.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Anger online</span><span class="sticker">Screenshots last longer than the anger.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Who gets read as angry</span><span class="sticker">The same anger doesn't land the same way for everyone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Comment sections, group chats, and videos built to make people mad (sometimes called rage bait) can keep you angry for hours. And typing in anger is fast: it's easy to fire off something you'd never say in person.</p>
-      <p class="worst">The worst part: angry messages and posts don't disappear when you cool down. Screenshots last a lot longer than the feeling.</p>
+      <p>Families and cultures have different rules about anger. In some homes, raised voices are normal and blow over in minutes. In others, showing anger to an elder crosses a serious line. Many people switch between rule sets at home, at school, and with friends. None of these is the "right" one.</p>
+      <p>Bias plays a part too. In a 2003 study, white participants with more implicit racial bias were quicker to see anger in Black faces than in white faces (Hugenberg &amp; Bodenhausen). If you have been called "aggressive" when you were being firm, that may be part of why. It isn't fair, and it is worth talking through with someone you trust.</p>
+      <p class="worst">What are the anger rules in your family? Which ones do you want to keep?</p>
       </div>
     </details>
   </div>
@@ -463,49 +572,71 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Use the signal, drain the surge</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Catch it at a 4, not a 9.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🌡 Notice the early signs.<span class="row-cue" aria-hidden="true"></span></summary><p>Hot face, tight jaw, clenched fists, fast heartbeat. Catching anger at a 4 is much easier than at a 9.</p></details>
-        <details class="row"><summary>⏸ Pause before you act.<span class="row-cue" aria-hidden="true"></span></summary><p>Walk away, count to ten, get water. Say "I need a minute." Giving your body time to cool down gives your thinking brain time to catch up.</p></details>
-        <details class="row"><summary>🏃 Move it out.<span class="row-cue" aria-hidden="true"></span></summary><p>A walk, a run, shooting hoops, punching a pillow, loud music. Anger is energy, and moving helps burn it off.</p></details>
-        <details class="row"><summary>🧊 Look under the iceberg.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask yourself: am I really angry, or also hurt? Embarrassed? Scared? Tired?</p></details>
-        <details class="row"><summary>🗣 Say it, don't spray it.<span class="row-cue" aria-hidden="true"></span></summary><p>Once you're calmer, say what's wrong: "I felt disrespected when you read my texts. I need you to ask first." That's assertive, not aggressive.</p></details>
-        <details class="row"><summary>✍️ Write it out.<span class="row-cue" aria-hidden="true"></span></summary><p>Write everything you're mad about, uncensored. Then decide what, if anything, you want to actually say.</p></details>
+      <div class="fold-label">The core skill</div>
+      <h3 class="sticker">Two things arrive at once. Handle them in order.</h3>
+      <p>Anger brings information (a line got crossed) and energy (a body ready to fight). Let the energy drop first. Then act on the information.</p>
+      <div class="levers">
+        <div class="lever"><b>1. Catch it early</b><span>Know your first signs: jaw, shoulders, heat in your face, typing faster. At a 4 out of 10 you still have options. At a 9 you mostly don't.</span></div>
+        <div class="lever"><b>2. Bring arousal down</b><span>Long exhales, cold water, a slow walk, stepping out of the room. Lower the revs. Don't add more.</span></div>
+        <div class="lever"><b>3. Zoom out</b><span>Replay the moment as if watching from across the room. People who looked back on an angering memory from this "fly on the wall" view felt less angry than people who relived it from the inside (Kross, Ayduk &amp; Mischel, 2005).</span></div>
+        <div class="lever"><b>4. Then decide</b><span>Once you're back to a 3 or 4: what line got crossed, what do I want, and is it worth raising? Sometimes you let it go. Sometimes you speak up.</span></div>
+      </div>
+      <p class="tap-hint">Tools for the moment. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Call the time-out out loud.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm too heated to talk well. Give me 20 minutes and I'll come back." Coming back is what makes it a time-out instead of a walkout.</p></details>
+        <details class="row"><summary><span class="num">2</span> Draft it. Don't send it.<span class="row-cue" aria-hidden="true"></span></summary><p>Write the angry message in your notes app, not the chat. Read it after a walk or a night's sleep. Most drafts never need sending.</p></details>
+        <details class="row"><summary><span class="num">3</span> Name what's under it.<span class="row-cue" aria-hidden="true"></span></summary><p>Anger often sits on top of hurt, embarrassment, fear, or exhaustion. The second feeling usually tells you what you need.</p></details>
+        <details class="row"><summary><span class="num">4</span> Say it straight, once you're calm.<span class="row-cue" aria-hidden="true"></span></summary><p>What happened, how it landed, what you want: "You told the group what I said to you privately. That felt like a betrayal. I need you to keep that between us."</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">What was hiding under your last blowup?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">What was under your last blowup?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think about the last time you got really angry. Check anything else that might have been going on underneath.</p>
+      <p>Think about the last time you got really angry. Check anything else that was going on underneath.</p>
       <div class="checklist iceberg" role="group" aria-label="Feelings under anger">
         <label><input type="checkbox"> Hurt</label>
-        <label><input type="checkbox"> Embarrassed</label>
+        <label><input type="checkbox"> Embarrassed or exposed</label>
         <label><input type="checkbox"> Scared or worried</label>
         <label><input type="checkbox"> Left out</label>
         <label><input type="checkbox"> Disrespected</label>
-        <label><input type="checkbox"> Powerless</label>
-        <label><input type="checkbox"> Exhausted or hungry</label>
+        <label><input type="checkbox"> Controlled or powerless</label>
+        <label><input type="checkbox"> Treated unfairly</label>
+        <label><input type="checkbox"> Exhausted, hungry, or in pain</label>
         <label><input type="checkbox"> Jealous</label>
-        <label><input type="checkbox"> Sad</label>
+        <label><input type="checkbox"> Guilty</label>
       </div>
       <p id="ice-msg" class="feedback" aria-live="polite"></p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. Can you stand up without blowing up?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three situations. Stand up without blowing up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Which response stands up for you without making things worse?</p>
-      
-      <div class="scenario" >
-        <p>A teammate keeps making comments about your playing in front of the coach.</p>
+      <div class="scenario">
+        <p>Your manager at your weekend job schedules you for a shift you asked off weeks ago, then says, "You should have reminded me."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="It might feel good for a second, but it puts you in trouble and turns it into a bigger fight.">Fire back with an insult in front of everyone</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Private, direct, and clear. Strong move.">Pull them aside: "The comments in front of coach need to stop. If you've got feedback, tell me directly."</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Everyone knows who it's about, and it rarely fixes anything.">Post something vague about fake teammates</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="You'd lose the job and the reference over a fixable problem. The anger is right. The timing isn't.">Quit by text, right now</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Specific, calm, and aimed at a fix. Bring the date. Facts do the work so your tone doesn't have to.">Cool off, then: &quot;I requested this day off on the 3rd. Can we find someone to cover?&quot;</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Sometimes that's the right call. If it keeps happening, resentment builds. Raise it once, calmly.">Work the shift and say nothing</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>In a class discussion, a classmate makes a comment about your neighborhood and a few people laugh.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Short and firm, and you stay in control of the room. You can still talk to the teacher afterward.">Say evenly, &quot;That's not accurate, and it's not funny,&quot; and keep going</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Also strong, especially if you didn't want to respond in the moment. A teacher can address it in ways a student can't.">Talk to the teacher after class</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="It can feel like justice, but it moves the fight somewhere you can't control, and the screenshot outlasts your point.">Post about it later and tag them</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>You find out a parent has been reading your messages without asking. You are furious.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="It feels protective, but it usually escalates, and you lose the chance to negotiate.">Lock them out of everything and stop talking to them</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Strong move. Families differ a lot on privacy, so start by asking what they are worried about, then say what you need. You may land on a deal neither of you started with.">Cool down, then ask for a real conversation about privacy and trust</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Honest, but the yelling becomes the topic and the privacy issue gets lost.">Yell now, apologize later</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -514,13 +645,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">Bottling it or blowing up. Neither works.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🍾 Bottling it up.<span class="row-cue" aria-hidden="true"></span></summary><p>Anger that's ignored tends to build and come out sideways, or all at once.</p></details>
-        <details class="row"><summary>💥 Exploding at people.<span class="row-cue" aria-hidden="true"></span></summary><p>Yelling, breaking things, or hurting someone causes new problems, even when your anger is justified.</p></details>
-        <details class="row"><summary>📱 Typing while hot.<span class="row-cue" aria-hidden="true"></span></summary><p>Angry texts and posts last forever. Wait until you've cooled off.</p></details>
-        <details class="row"><summary>🔁 Replaying it over and over.<span class="row-cue" aria-hidden="true"></span></summary><p>Some thinking helps. Constantly reliving it keeps you angry.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Getting it out is healthy.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Hitting things, screaming into a pillow, or a rage room keeps your arousal high and your attention on the person who made you mad. That is the recipe for staying angry.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Anger means I'm right.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Anger tells you something matters to you. It doesn't tell you the facts are what you think. Check them before you act.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Holding it in is the mature move.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Choosing when to speak is a skill. Hiding every feeling all the time has costs. In one study, people who suppressed their emotions during a conversation came across as less responsive, and their partners formed more negative impressions of them. That cost was smaller for people with more Asian cultural values, where restraint is expected (Butler, Lee &amp; Gross, 2007). Culture shapes what works.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Some people just have anger issues.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Anger control is a set of skills, and skills improve with practice, sleep, and support.</p></details>
       </div>
       </div>
     </details>
@@ -529,12 +660,26 @@
       <h3>When anger is a sign you need more help</h3>
       <ul class="tight">
         <li>You feel angry most of the time, or it comes out of nowhere.</li>
-        <li>You've hurt someone, broken things, or hurt yourself when angry.</li>
-        <li>Anger is damaging friendships, family relationships, or school.</li>
-        <li>Someone else's anger makes you feel unsafe at home or school.</li>
+        <li>You have hurt someone, broken things, or hurt yourself when angry.</li>
+        <li>Anger is damaging your friendships, relationships, job, or family.</li>
+        <li>Someone else's anger makes you feel unsafe at home, in a relationship, or at school. That is not yours to handle alone.</li>
       </ul>
-      <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can help you sort out what is going on, without judgment. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Blair, R. J. R. (2012). Considering anger from a cognitive neuroscience perspective. <i>WIREs Cognitive Science</i>.</li>
+        <li>Bushman, B. J. (2002). Does venting anger feed or extinguish the flame? Catharsis, rumination, distraction, anger, and aggressive responding. <i>Personality and Social Psychology Bulletin</i>.</li>
+        <li>Kjærvik, S. L., &amp; Bushman, B. J. (2024). A meta-analytic review of anger management activities that increase or decrease arousal: What fuels or douses rage? <i>Clinical Psychology Review</i>.</li>
+        <li>Kross, E., Ayduk, O., &amp; Mischel, W. (2005). When asking "why" does not hurt: Distinguishing rumination from reflective processing of negative emotions. <i>Psychological Science</i>.</li>
+        <li>Hugenberg, K., &amp; Bodenhausen, G. V. (2003). Facing prejudice: Implicit prejudice and the perception of facial threat. <i>Psychological Science</i>.</li>
+        <li>Butler, E. A., Lee, T. L., &amp; Gross, J. J. (2007). Emotion regulation and culture: Are the social consequences of emotion suppression culture-specific? <i>Emotion</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -545,26 +690,28 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">The last time I got really angry, and what happened</label>
+      <label class="prompt" for="tx-1">A recent time I got angry. What line got crossed?</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Where I feel anger in my body first</label>
+      <label class="prompt" for="tx-2">My early warning signs, in my body and in what I do</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What was probably underneath the anger</label>
+      <label class="prompt" for="tx-3">What was probably under the anger</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">One thing that helps me cool down</label>
+      <label class="prompt" for="tx-4">The anger rules in my family or culture, and which ones I want to keep</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Something I'm angry about that might be worth speaking up about</label>
+      <label class="prompt" for="tx-5">Something I'm angry about that might be worth raising, and who I would raise it with</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Feeling angry doesn't make you a bad person. It means something matters to you. Learning to listen to anger, without letting it drive, is a real strength.</p>
+      <p>Anger is information about what matters to you. You don't have to obey it, and you don't have to bury it. You decide what to do with it.</p>
     </div>
     </div>
   </div>
@@ -579,7 +726,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with anger today?</h3>
+        <h3 id="ci-1">How much is anger running things today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -593,14 +740,14 @@
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
           <button type="button" class="chip" aria-pressed="false">someone was unfair</button>
+          <button type="button" class="chip" aria-pressed="false">felt disrespected</button>
           <button type="button" class="chip" aria-pressed="false">snapped at someone</button>
           <button type="button" class="chip" aria-pressed="false">family stuff</button>
-          <button type="button" class="chip" aria-pressed="false">friend drama</button>
-          <button type="button" class="chip" aria-pressed="false">felt disrespected</button>
-          <button type="button" class="chip" aria-pressed="false">frustrated with school</button>
-          <button type="button" class="chip" aria-pressed="false">angry at myself</button>
-          <button type="button" class="chip" aria-pressed="false">something online made me mad</button>
-          <button type="button" class="chip" aria-pressed="false">kept it bottled up</button>
+          <button type="button" class="chip" aria-pressed="false">a friendship or relationship</button>
+          <button type="button" class="chip" aria-pressed="false">a teacher or coach</button>
+          <button type="button" class="chip" aria-pressed="false">work or a boss</button>
+          <button type="button" class="chip" aria-pressed="false">something online or in the news</button>
+          <button type="button" class="chip" aria-pressed="false">kept it all in</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
@@ -610,61 +757,61 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-hot" aria-pressed="false">🔥 Really angry right now</button>
-          <button type="button" class="choice" data-path="p-hurt" aria-pressed="false">💔 Angry, but hurt underneath</button>
-          <button type="button" class="choice" data-path="p-unfair" aria-pressed="false">⚖️ Angry because it's unfair</button>
-          <button type="button" class="choice" data-path="p-self" aria-pressed="false">😞 Angry at myself</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Calmer today</button>
+          <button type="button" class="choice" data-path="p-hot" aria-pressed="false">Heated right now</button>
+          <button type="button" class="choice" data-path="p-hurt" aria-pressed="false">Angry, with hurt underneath</button>
+          <button type="button" class="choice" data-path="p-unfair" aria-pressed="false">Angry about something unfair</button>
+          <button type="button" class="choice" data-path="p-self" aria-pressed="false">Angry at myself</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Calmer today</button>
         </div>
 
         <div class="path-panel" id="p-hot" hidden>
           <h4>What this might mean</h4>
-          <p>Your body is in fight mode. That's not the time to make decisions or send messages.</p>
+          <p>Your threat system is in charge. Nothing important should get decided or sent from here.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏸</span>Step away from the person or the phone.</li>
-            <li><span class="e" aria-hidden="true">🏃</span>Move: walk, run, do push-ups, anything physical.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, until your heart slows down.</li>
+            <li><span class="e" aria-hidden="true"></span>Put distance between you and the person or the phone.</li>
+            <li><span class="e" aria-hidden="true"></span>Breathe in for 4 and out for 6 until your heart slows.</li>
+            <li><span class="e" aria-hidden="true"></span>Give it time before you respond to anything.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-hurt" hidden>
           <h4>What this might mean</h4>
-          <p>Hurt often hides behind anger because anger feels stronger. Both are real.</p>
+          <p>Anger often stands guard over hurt, because it feels less exposed. Both are real.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧊</span>Try the iceberg check above.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell someone you trust what really hurt.</li>
-            <li><span class="e" aria-hidden="true">✍️</span>Write about the hurt part, not just the angry part.</li>
+            <li><span class="e" aria-hidden="true"></span>Use the under-the-anger check above.</li>
+            <li><span class="e" aria-hidden="true"></span>Tell one person you trust what actually hurt.</li>
+            <li><span class="e" aria-hidden="true"></span>Write about the hurt part, not only the angry part.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unfair" hidden>
           <h4>What this might mean</h4>
-          <p>Anger at unfairness can be fuel for speaking up. Channel it.</p>
+          <p>Anger at unfairness can drive real change when you aim it.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Write down exactly what happened and what you want to change.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to an adult who can actually help fix it.</li>
-            <li><span class="e" aria-hidden="true">🙋</span>Speaking Up has ideas for standing up for yourself and others.</li>
+            <li><span class="e" aria-hidden="true"></span>Write down what happened: dates, words, who saw it.</li>
+            <li><span class="e" aria-hidden="true"></span>Bring it to an adult who has the power to act on it.</li>
+            <li><span class="e" aria-hidden="true"></span>Speaking Up has ways to stand up for yourself and others.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-self" hidden>
           <h4>What this might mean</h4>
-          <p>Being hard on yourself is a heavy kind of anger. Mistakes are how everyone learns.</p>
+          <p>Anger turned inward hurts, and it rarely helps you do better next time.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🫶</span>Talk to yourself the way you'd talk to a friend who messed up.</li>
-            <li><span class="e" aria-hidden="true">🧰</span>If you hurt someone, The Repair Kit can help you make it right.</li>
-            <li><span class="e" aria-hidden="true">🗯</span>The Inner Critic can help with that harsh voice.</li>
+            <li><span class="e" aria-hidden="true"></span>Say what you would say to a friend in the same spot.</li>
+            <li><span class="e" aria-hidden="true"></span>If you hurt someone, The Repair Kit can help you make it right.</li>
+            <li><span class="e" aria-hidden="true"></span>The Inner Critic has tools for that harsh voice.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>You found your way back down. Better days don't have to be perfect days to count.</p>
+          <p>You came back down. Notice how you did it.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped you cool off.</li>
-            <li><span class="e" aria-hidden="true">🧰</span>Keep that strategy ready for next time.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Give yourself credit.</li>
+            <li><span class="e" aria-hidden="true"></span>What helped you cool off?</li>
+            <li><span class="e" aria-hidden="true"></span>Keep that tool ready for next time.</li>
+            <li><span class="e" aria-hidden="true"></span>Give yourself credit.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -692,7 +839,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who's angry. You wouldn't tell them they're a bad person. You'd help them figure out what's wrong.</p>
+        <p class="closing">Treat yourself the way you would treat a friend who is furious: take them seriously, and help them cool down before they act.</p>
       </div>
     </div>
     </div>

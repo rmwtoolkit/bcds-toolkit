@@ -362,6 +362,77 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure (relationship series) ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .finding { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; line-height:1.5; }
+  .finding b { color:var(--ink); }
+
+  .dual .qt { font-size:17px; font-weight:700; fill:#1D1D1F; }
+  .dual .qs { font-size:14px; fill:#48484A; }
+  .dual .ax { font-size:12px; font-weight:600; fill:#6E6E73; }
 </style>
 </head>
 
@@ -381,9 +452,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🧭 High School · Happiness and well-being</div>
+  <div class="eyebrow">High School · Happiness and well-being</div>
   <h1>What Does Healthy Look Like?</h1>
-  <p class="tagline">Because it's hard to steer toward something you've never seen.</p>
+  <p class="tagline">Healthy isn't the absence of problems. What psychologists actually measure, and how to steer toward it.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +462,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,128 +479,97 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Picturing the trail</h2>
+    <h2 id="h-understand">What healthy actually is</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know what you want to stop. But what do you want instead?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You know what to stop. What are you aiming for?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You can list exactly what you want to stop: the arguing, the worrying, the 2 a.m. scrolling.</li>
-        <li>Someone asked what you want instead, and you weren't sure what to say.</li>
-        
-        <li >Your friend group runs on drama, and a calm week almost feels boring.</li>
-        <li>You think healthy people are happy all the time and never fight.</li>
-        <li>Saying no to someone made you feel selfish, even though it was the right call.</li>
-        <li>You've never really seen what a healthy friendship, or a healthy way to handle a bad day, looks like up close.</li>
+        <li>You can list what's wrong with you in detail. Asked what's going well, you go blank.</li>
+        <li>You figure that if you're not depressed or anxious, you're fine. But fine feels flat.</li>
+        <li>Your friend group runs on drama, and a quiet week makes you restless.</li>
+        <li>You assume healthy people don't fight, don't cry, and don't need help.</li>
+        <li>Nobody has really shown you, up close, what handling hard things well looks like.</li>
       </ul>
-      <p style="margin:0">Most people know what they want to stop. Hardly anyone gets shown a picture of what to aim for. That's what this lesson is for.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">🚵 Look where you want to go</span><span class="sticker">Look at the trail, not the rock.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Mountain bikers, skiers, and skateboarders all learn the same rule. Stare at the rock you're scared of and you'll hit it. Look at the line you want to ride, and you follow your eyes.</p>
-      <p style="margin:0">Life works a lot like that. If all you can picture is what you're trying to avoid, it's hard to steer anywhere else.</p>
-      <p class="worst">The good part: you can learn to picture the trail, even if nobody ever showed it to you.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">What healthy is not</span><span class="sticker">Healthy doesn't mean happy all the time.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>Myth: happy all the time.</dt>
-        <dd>Healthy people feel the full range: sad, mad, worried. And they come back.</dd>
-        <dt>Myth: no fights.</dt>
-        <dd>Healthy friends still argue. Then they repair it.</dd>
-        <dt>Myth: never needs help.</dt>
-        <dd>Healthy means knowing when to ask.</dd>
-        <dt>Myth: always calm.</dt>
-        <dd>Everyone gets knocked off balance. Healthy people recover a little sooner.</dd>
-        <dt>Myth: has it all figured out.</dt>
-        <dd>Healthy means staying curious and willing to change your mind.</dd>
-      </dl>
+      <p style="margin:0">Most advice is about what to stop. This lesson is about what to aim for, and what research says healthy looks like when you get close enough to see it.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Healthy is a range, not a spot.</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔥</span><strong>Too much</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Racing, flooded, snapping at people. Your body is on high alert.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">↕️</span><strong>The window</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">You can feel it and still think. Psychiatrist Dan Siegel calls this your window of tolerance.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧊</span><strong>Too little</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Numb, flat, checked out. Your body hit the brakes.</p></details>
+    <h3 style="margin-top:28px">Two separate scales, not one</h3>
+    <figure class="fig">
+<svg class="dual" viewBox="0 0 400 306" role="img" aria-label="Two-axis chart. Left to right: fewer to more symptoms of mental illness. Top to bottom: higher to lower well-being. Four zones. Top left, flourishing: few symptoms and a life that feels engaged and meaningful. Top right, coping and growing: real symptoms, and still connected with purpose. Bottom left, languishing: no diagnosis, but flat and on autopilot. Bottom right, struggling: symptoms and low well-being." xmlns="http://www.w3.org/2000/svg">
+  <text class="ax" x="200" y="15" text-anchor="middle">Higher well-being ↑</text>
+  <rect x="8" y="24" width="190" height="116" rx="14" fill="#E9F6EC"/><text class="qt" x="22" y="54">Flourishing</text><text class="qs" x="22" y="78">Few symptoms. Life</text><text class="qs" x="22" y="96">feels engaged and</text><text class="qs" x="22" y="114">meaningful.</text>
+  <rect x="202" y="24" width="190" height="116" rx="14" fill="#EAF1FA"/><text class="qt" x="216" y="54">Coping, growing</text><text class="qs" x="216" y="78">Real symptoms, and</text><text class="qs" x="216" y="96">still connected and</text><text class="qs" x="216" y="114">purposeful.</text>
+  <rect x="8" y="144" width="190" height="116" rx="14" fill="#FFF6E5"/><text class="qt" x="22" y="174">Languishing</text><text class="qs" x="22" y="198">No diagnosis, but</text><text class="qs" x="22" y="216">flat, stuck, on</text><text class="qs" x="22" y="234">autopilot.</text>
+  <rect x="202" y="144" width="190" height="116" rx="14" fill="#FFF0F1"/><text class="qt" x="216" y="174">Struggling</text><text class="qs" x="216" y="198">Symptoms, and</text><text class="qs" x="216" y="216">well-being is low</text><text class="qs" x="216" y="234">too.</text>
+  <line x1="200" y1="22" x2="200" y2="262" stroke="#1D1D1F" stroke-width="1.6"/>
+  <line x1="6" y1="142" x2="394" y2="142" stroke="#1D1D1F" stroke-width="1.6"/>
+  <text class="ax" x="200" y="278" text-anchor="middle">Lower well-being ↓</text>
+  <text class="ax" x="8" y="300">← Fewer symptoms</text>
+  <text class="ax" x="392" y="300" text-anchor="end">More symptoms →</text>
+</svg>
+      <figcaption>Based on sociologist Corey Keyes's two-continua model: the absence of mental illness and the presence of mental health are measured separately.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1E7B34"></span><div><strong>Flourishing</strong><p>Not happy all the time. Mostly engaged: you feel a sense of purpose, you belong somewhere, and you're growing. In a national sample of 1,234 people ages 12 to 18, flourishing was the most common category for 12 to 14 year olds.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Languishing</strong><p>No diagnosis, but life feels hollow. It matters: in Keyes's study of 3,032 adults, people who were languishing were nearly six times as likely as flourishing people to have a major depressive episode.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Coping and growing</strong><p>You can have anxiety, depression, or ADHD and still build real well-being. Treatment and a good life aren't either-or.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D70015"></span><div><strong>Struggling</strong><p>Symptoms are high and life feels low. This is the clearest signal to get support. See <a href="#help">Get help</a>.</p></div></div>
     </div>
+    <p class="finding">By ages 15 to 18 in Keyes's youth study, "moderately healthy" had overtaken flourishing as the most common result. As well-being went up, depression symptoms and problems like skipping school went down, and closeness to others went up. High school is when this starts to need attention on purpose.</p>
     </div>
 
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Look where you want to go</span><span class="sticker">You steer toward what you look at.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Mountain bikers learn it the hard way: stare at the rock and you hit it. Look at the line you want, and the bike follows your eyes. Driving research backs this up. In a 1994 study, drivers looked at a specific point on the inside of each curve one to two seconds before they turned into it. Where they looked came first. Steering followed.</p>
+      <p class="worst">If all you can picture is what you're trying to avoid, it's hard to steer anywhere else. So picture the trail.</p>
+      </div>
+    </details>
+
     <details class="fold ">
-      <summary><span class="fold-label">What a healthy mind tends to do</span><span class="sticker">Healthy looks more ordinary than you'd think.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What healthy minds tend to do</span><span class="sticker">It looks more ordinary than you'd think.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🎨 Feels the whole range.</dt>
-        <dd>Can name a feeling without being run by it.</dd>
-        <dt>🌿 Bends.</dt>
-        <dd>Changes plans or opinions when life calls for it. Psychologists call it flexibility.</dd>
-        <dt>🤝 Connects.</dt>
-        <dd>Can lean on people and still stand on their own.</dd>
-        <dt>🔧 Repairs.</dt>
-        <dd>Goes back after a rough moment and fixes what's fixable.</dd>
-        <dt>🧭 Lives by values.</dt>
-        <dd>Knows what matters to them, and lets that steer.</dd>
-        <dt>💛 Is kind inward.</dt>
-        <dd>Talks to themselves the way a good friend would.</dd>
+        <dt>They bend.</dt>
+        <dd>Psychologists Todd Kashdan and Jonathan Rottenberg argue that flexibility, shifting strategies when one stops working and acting on your values even when it's uncomfortable, is central to health. Rigid is the risk, not sad.</dd>
+        <dt>They name feelings precisely.</dt>
+        <dd>People who can tell "disappointed" from "embarrassed" from "resentful" are less likely to turn to binge drinking, aggression, or self-harm when they're upset, according to a 2015 research review. Precise words point to precise fixes.</dd>
+        <dt>They talk to themselves like a friend would.</dt>
+        <dd>A 2018 analysis of 19 studies with 7,049 people ages 10 to 19 found a strong link between self-compassion and lower anxiety, depression, and stress. The studies show a link, not proof of cause, but it's one of the more consistent findings in teen research.</dd>
+        <dt>They repair.</dt>
+        <dd>Healthy friendships still have fights. Someone goes back, names what happened, and fixes what's fixable.</dd>
       </dl>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What healthy friendships look like</span><span class="sticker">Healthy friends still fight. Then they repair.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>Fights stay about the issue.</dt>
-        <dd>Not about who you are as a person.</dd>
-        <dt>Hard things can be said.</dt>
-        <dd>Nobody is walking on eggshells.</dd>
-        <dt>Give and take.</dt>
-        <dd>Roughly even over time. Nobody's keeping score.</dd>
-        <dt>Closeness and freedom.</dt>
-        <dd >You can be close and still have your own friends, plans, and space.</dd>
-        <dt>Someone goes back.</dt>
-        <dd>After a blowup, someone reaches out and repairs it, instead of going silent.</dd>
-      </dl>
-      </div>
-    </details>
-
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">Boundaries: build a gate, not a wall.</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧱</span><strong>A wall</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Nobody gets in. It feels safe, and it gets lonely.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🚪</span><strong>A gate</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >You decide who comes in, and when. "Yes" and "not right now" both feel okay to say, without a long explanation.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌾</span><strong>No fence</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Anyone walks through, any time. It's exhausting.</p></details>
+    <div class="card" style="margin-top:28px">
+    <div class="fold-label">The window of tolerance</div>
+    <h3 class="sticker">Healthy is a range, not a spot.</h3>
+    <p>Psychiatrist Dan Siegel calls it the window of tolerance: the zone where you can feel something strongly and still think.</p>
+    <div class="levers">
+      <div class="lever"><b>Above the window</b><span>Racing, flooded, snapping at people. Your body is on high alert.</span></div>
+      <div class="lever"><b>In the window</b><span>You feel it, and you can still choose what to do next.</span></div>
+      <div class="lever"><b>Below the window</b><span>Numb, flat, checked out. Your body hit the brakes.</span></div>
+    </div>
+    </div>
+    <div class="card">
+    <div class="fold-label">Boundaries</div>
+    <h3 class="sticker">Build a gate, not a wall.</h3>
+    <div class="levers">
+      <div class="lever"><b>A wall</b><span>Nobody gets in. It feels safe, and it gets lonely.</span></div>
+      <div class="lever"><b>A gate</b><span>You decide who comes in, and when. "Yes" and "not right now" both feel okay to say.</span></div>
+      <div class="lever"><b>No fence</b><span>Anyone walks through, any time. It's exhausting.</span></div>
     </div>
     </div>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🏠 Why healthy can feel strange</span><span class="sticker">Strange isn't the same as unsafe.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Healthy across cultures</span><span class="sticker">Healthy isn't one family's version.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>If you're used to a lot of drama, yelling, or silence, in your friend group, online, or at home, your brain learns that as normal. Then calm can feel boring. Kindness can feel suspicious. A good week can feel like the setup for a bad one.</p>
-      <p class="worst">Remember: strange isn't the same as unsafe. Often it means you're somewhere new.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 What feeds teach about healthy</span><span class="sticker">Drama gets clicks. That doesn't make it normal.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>A lot of what you see online is a picture of healthy that nobody actually lives:</p>
-      <ul class="tight">
-        <li>Accounts where everyone looks happy, calm, and put together all the time.</li>
-        <li>Relationship drama clips that make jealousy and fighting look normal, or even romantic.</li>
-        
-        <li >Group chats that expect an answer at any hour, so there's never a gate.</li>
-        <li>Comment sections where being harsh gets the most likes.</li>
-      </ul>
-      <p class="worst">The worst part: drama gets clicks, so your feed shows you a lot more rocks than trails.</p>
+      <p>Families and cultures differ in how much they share, how loud disagreements get, how much privacy is normal, and how much you're expected to put family first. None of those is automatically healthier than another. A close family that eats dinner together every night can be just as healthy as one where everyone does their own thing.</p>
+      <p>A more useful test works anywhere: can people disagree and stay connected? Can you say what you need and be heard, in whatever way your family does that?</p>
+      <p class="worst">If calm feels strange because you're used to yelling or silence, strange isn't the same as unsafe. Often it means you're somewhere new.</p>
       </div>
     </details>
   </div>
@@ -541,21 +580,26 @@
     <div class="eyebrow">Part 2 · Practice the skills</div>
     <h2 id="h-practice">Steering toward it</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Small turns, long trail.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🪨 Name the rock, then name the trail.<span class="row-cue" aria-hidden="true"></span></summary><p>Write down what you want to stop. Then turn it into something you can do instead.</p></details>
-        <details class="row"><summary>📅 Make your picture boring.<span class="row-cue" aria-hidden="true"></span></summary><p>Skip "I'd be happy." Try "I'd eat breakfast before I check my phone." Ordinary details are easier to steer toward.</p></details>
-        <details class="row"><summary>↪️ Take small turns.<span class="row-cue" aria-hidden="true"></span></summary><p>Change is lots of tiny turns over a long distance. A big swerve tends to put you in the ditch.</p></details>
-        <details class="row"><summary>👀 Borrow a picture.<span class="row-cue" aria-hidden="true"></span></summary><p >Think of someone who handles hard moments in a way you respect: a coach, a teacher, a grandparent, a friend. Watch how they disagree and make up.</p></details>
-        <details class="row"><summary>🧍 Stay with strange.<span class="row-cue" aria-hidden="true"></span></summary><p>When calm feels weird, stay in it a little longer than feels comfortable.</p></details>
-        <details class="row"><summary>🔁 Missed a turn? Turn again.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to start over. Look up, find the trail, and turn again.</p></details>
+      <div class="fold-label">Measure the right thing</div>
+      <h3 class="sticker">Track what you want more of, not only what you want less of.</h3>
+      <p>Keyes measures well-being in three parts. Ask yourself one question for each.</p>
+      <div class="levers">
+        <div class="lever"><b>Emotional</b><span>How often this week did I feel interested, calm, or glad to be where I was?</span></div>
+        <div class="lever"><b>Psychological</b><span>Am I getting better at something, and does what I do feel like it means something?</span></div>
+        <div class="lever"><b>Social</b><span>Do I belong somewhere, and do I add something to it?</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">Ways to steer. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Name the rock, then the trail.<span class="row-cue" aria-hidden="true"></span></summary><p>Write what you want to stop. Then turn it into something you can do instead.</p></details>
+        <details class="row"><summary><span class="num">2</span> Make your picture boring.<span class="row-cue" aria-hidden="true"></span></summary><p>Skip "I'd be happy." Try "I'd eat breakfast before I check my phone." Ordinary details are easier to steer toward.</p></details>
+        <details class="row"><summary><span class="num">3</span> Take small turns.<span class="row-cue" aria-hidden="true"></span></summary><p>Change is a lot of one-degree turns over a long distance. A big swerve tends to put you in the ditch.</p></details>
+        <details class="row"><summary><span class="num">4</span> Borrow a picture.<span class="row-cue" aria-hidden="true"></span></summary><p>Think of someone who handles hard moments in a way you respect: a coach, a teacher, a grandparent, a friend. Watch how they disagree and make up.</p></details>
+        <details class="row"><summary><span class="num">5</span> Missed a turn? Turn again.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to start over. Look up, find the trail, and turn again.</p></details>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Turn "stop doing that" into "try this."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Most goals start as a rock, something you want to stop. Turn each one into a trail you can actually do this week.</p>
+      <p>Most goals start as a rock. Turn one into a trail you can actually do this week.</p>
       <div ><dl class="helps"><dt>"Stop procrastinating."</dt><dd>Start each assignment for five minutes the day I get it.</dd><dt>"Stop worrying so much."</dt><dd>Do one thing today that worry tells me not to do.</dd><dt>"Stop hanging out with people who drain me."</dt><dd>Notice who feels steady, and spend more time there.</dd></dl></div>
       <label class="prompt" for="tx-1">My rock, and the trail I'll try instead:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
@@ -563,29 +607,45 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Picture a boring, good day. Then steer there.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Picture an ordinary good day. Then steer there.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Imagine an ordinary school day, three months from now, when things are going well. Pick one area and make it specific: body (sleep, food, movement), people (who's there, how you talk), mind (your self-talk after a hard moment), or purpose (what you're proud of).</p>
+      <p>Imagine a normal school day three months from now, when things are going well. Pick one of the three parts above (emotional, psychological, social) and make it specific.</p>
       <label class="prompt" for="tx-2">An ordinary good day looks like:</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="I'd wake up, eat breakfast before checking my phone, and..."></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Fights, calm weeks, and saying no. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Four situations. What's the healthy move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the healthy move.</p>
+      <p>Pick what you think, and see why.</p>
       <div class="scenario">
-        <p>You and a friend had a fight yesterday. It's awkward today and neither of you has said anything.</p>
+        <p>Lena and her friend argued yesterday. Today the friend texts, "we good?" Lena is still annoyed.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="okay" data-msg="Maybe they will. Someone has to, and it can be you.">Wait for them to go first</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's repair. Healthy friends still fight. They just find their way back.">"Hey, yesterday was rough. Can we talk?"</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That turns one problem into two, and everyone gets pulled in.">Post something vague about fake friends</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Keeps the peace for now, but the annoyance usually comes back later.">Reply "yeah" and drop it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That's repair. Honest, and it keeps the door open.">Reply "Mostly. Can we talk about what happened?"</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Silence turns one problem into two.">Leave it on read</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      
-      <div class="scenario" >
+      <div class="scenario" style="margin-top:18px">
+        <p>Omar's family expects him home for dinner most nights. His friends tease him about it.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Not necessarily. Family closeness is healthy in lots of cultures. What matters is how it works for him.">Unhealthy. He should push back</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Healthy looks different across families. The question is whether he can speak up when he needs something different.">Depends on him. If it works for him and he has some say, it's a gate he chose</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Chloe isn't sad and isn't anxious. Nothing is wrong, exactly. Nothing feels interesting either.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="That's the bottom-left box: languishing. It's worth taking seriously.">No symptoms, so she's fine</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Join one thing, call one person, finish one project. Well-being gets built, it doesn't just show up.">That could be languishing. One small step toward purpose or connection</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Sometimes it passes. Often it lifts faster with one small push.">Wait it out</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
         <p>A friend keeps asking to copy your homework. You said no, and now you feel selfish.</p>
         <div class="choices" role="group" aria-label="Choose a response">
           <button class="choice" type="button" data-fb="nope" data-msg="That opens the fence all the way. The pressure usually comes back.">Give in this time so they aren't mad</button>
@@ -599,30 +659,15 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These keep your eyes on the rock.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths about healthy</span><span class="sticker">What people assume, and what's true.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🎯 Aiming for perfect.<span class="row-cue" aria-hidden="true"></span></summary><p>Nobody lives in the "happy all the time, never fights" column. Aiming there makes healthy feel impossible.</p></details>
-        <details class="row"><summary>🪨 Staring at the rock.<span class="row-cue" aria-hidden="true"></span></summary><p>Replaying what went wrong over and over keeps your eyes on exactly what you want to avoid.</p></details>
-        <details class="row"><summary>💥 The big swerve.<span class="row-cue" aria-hidden="true"></span></summary><p>Trying to change everything at once usually ends in the ditch. Small turns stick.</p></details>
-        <details class="row"><summary>🌀 Going back to drama because it's familiar.<span class="row-cue" aria-hidden="true"></span></summary><p>The old way has a pull. That doesn't mean it's good for you.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Healthy means happy all the time.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Healthy people feel the full range, including sad, mad, and worried. They come back to the window sooner.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> No diagnosis means I'm fine.</span><span class="row-cue" aria-hidden="true"></span></summary><p>That's only one of the two scales. Languishing is real and worth fixing.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Healthy friends don't fight.</span><span class="row-cue" aria-hidden="true"></span></summary><p>They fight about the issue, not each other's character, and then they repair.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Needing help means I'm not healthy.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Knowing when to ask is part of the definition.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> My feed shows what normal looks like.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Drama and perfection get clicks, so feeds show more rocks than trails. Research on social media and well-being is mixed, so the useful question is personal: how do you feel after?</p></details>
       </div>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">You don't owe anyone a reply at midnight.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>🧭 Follow some trails.</dt>
-        <dd>Look for accounts that show ordinary, real life: hobbies, skills, people being kind.</dd>
-        <dt>🚪 Put a gate on your phone.</dt>
-        <dd>Do Not Disturb at night is a boundary. You don't owe anyone a reply at midnight.</dd>
-        <dt>🌀 Notice the drama pull.</dt>
-        <dd>If you keep opening a chat to see what's going on, ask whether it's adding anything.</dd>
-        <dt>🧘 Notice the after-feeling.</dt>
-        <dd>If an app leaves you feeling worse most times, that's information. Try a set time to check instead of all day.</dd>
-      </dl>
       </div>
     </details>
 
@@ -636,6 +681,21 @@
       <p>Tell a counselor or a trusted adult right away. You can also call or text <strong>988</strong>, any time, day or night.</p>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Keyes, C. L. M. (2002). The mental health continuum: From languishing to flourishing in life. <i>Journal of Health and Social Behavior</i>.</li>
+        <li>Keyes, C. L. M. (2006). Mental health in adolescence: Is America's youth flourishing? <i>American Journal of Orthopsychiatry</i>.</li>
+        <li>Land, M. F., &amp; Lee, D. N. (1994). Where we look when we steer. <i>Nature</i>.</li>
+        <li>Kashdan, T. B., &amp; Rottenberg, J. (2010). Psychological flexibility as a fundamental aspect of health. <i>Clinical Psychology Review</i>.</li>
+        <li>Kashdan, T. B., Barrett, L. F., &amp; McKnight, P. E. (2015). Unpacking emotion differentiation: Transforming unpleasant experience by perceiving distinctions in negativity. <i>Current Directions in Psychological Science</i>.</li>
+        <li>Marsh, I. C., Chan, S. W. Y., &amp; MacBeth, A. (2018). Self-compassion and psychological distress in adolescents: A meta-analysis. <i>Mindfulness</i>.</li>
+        <li>Siegel, D. J. (1999). <i>The developing mind</i>. Guilford Press.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -646,13 +706,13 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-3">Something I want to stop, and the trail I'd rather be on</label>
+      <label class="prompt" for="tx-3">Where I am on the two scales right now, honestly</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">Someone whose way of handling hard moments I respect, and what they do</label>
+      <label class="prompt" for="tx-4">Someone whose way of handling hard moments I respect, and what they actually do</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-5">What an ordinary good day would look like for me</label>
+      <label class="prompt" for="tx-5">What healthy looked like in my family growing up, what I want to keep, and what I want to do differently</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
       <label class="prompt" for="tx-6">A time healthy felt strange, and what I did</label>
@@ -665,7 +725,7 @@
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You're allowed to aim for something you've never seen. Most people were never shown what healthy looks like. You can still learn to see it, and steer.</p>
+      <p>You're allowed to aim for something you've never seen up close. Most people were never shown what healthy looks like. You can still learn to see it, and steer.</p>
     </div>
     </div>
   </div>
@@ -698,7 +758,7 @@
           <button type="button" class="chip" aria-pressed="false">someone else's mood</button>
           <button type="button" class="chip" aria-pressed="false">comparing myself</button>
           <button type="button" class="chip" aria-pressed="false">school stress</button>
-          <button type="button" class="chip" aria-pressed="false">old habits</button>
+          <button type="button" class="chip" aria-pressed="false">flat, nothing feels interesting</button>
           <button type="button" class="chip" aria-pressed="false">drama in the group chat</button>
           <button type="button" class="chip" aria-pressed="false">a good moment I didn't trust</button>
           <button type="button" class="chip" aria-pressed="false">said no kindly</button>
@@ -712,11 +772,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-rock" aria-pressed="false">🪨 Eyes on the rock</button>
-          <button type="button" class="choice" data-path="p-strange" aria-pressed="false">🌱 Healthy felt strange</button>
-          <button type="button" class="choice" data-path="p-pulled" aria-pressed="false">🌀 Pulled back into old stuff</button>
-          <button type="button" class="choice" data-path="p-trail" aria-pressed="false">🧭 On the trail</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Pretty good today</button>
+          <button type="button" class="choice" data-path="p-rock" aria-pressed="false">Eyes on the rock</button>
+          <button type="button" class="choice" data-path="p-strange" aria-pressed="false">Healthy felt strange</button>
+          <button type="button" class="choice" data-path="p-pulled" aria-pressed="false">Pulled back into old stuff</button>
+          <button type="button" class="choice" data-path="p-trail" aria-pressed="false">On the trail</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Pretty good today</button>
         </div>
 
         <div class="path-panel" id="p-rock" hidden>
@@ -755,7 +815,7 @@
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">🔍</span>What made it possible: sleep, a person, a plan? That's your recipe.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Tell someone, or write it down. Healthy moments are easy to forget.</li>
+            <li><span class="e" aria-hidden="true">💬</span>Tell someone, or write it down. Good days are easy to forget.</li>
             <li><span class="e" aria-hidden="true">🗓</span>Do one piece of it again tomorrow, on purpose.</li>
           </ul>
         </div>

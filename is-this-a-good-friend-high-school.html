@@ -362,6 +362,74 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .fig svg.chart text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:20px 0; }
+  .research .fold-label { margin-bottom:4px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -381,9 +449,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🔋 High School · Friends and belonging</div>
+  <div class="eyebrow">High School · Friends and belonging</div>
   <h1>Is This a Good Friend?</h1>
-  <p class="tagline">Because some friendships charge you up, and some quietly drain you.</p>
+  <p class="tagline">How to tell what a friendship is doing to you, using what researchers actually measure.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,71 +477,108 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Friendships that drain you</h2>
+    <h2 id="h-understand">What a good friendship actually does</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Drained after hanging out? That's worth noticing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Not toxic, exactly. Just costing you something.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You feel tired, anxious, or bad about yourself after hanging out with someone, and you're not sure why.</li>
-        <li>A friend makes "jokes" about you that don't feel like jokes.</li>
-        <li>You're careful about what you say so they won't get mad.</li>
-        
-        <li >A friend gets weird or cold when you spend time with other people.</li>
-        <li>They're really fun sometimes and really mean other times, and you never know which you'll get.</li>
-        <li>You're always the one who reaches out, plans, and apologizes.</li>
+        <li>You leave hangouts more tired than when you arrived, and you can't say why.</li>
+        <li>A friend's "jokes" about your grades, your body, or your family land a little too hard, a little too often.</li>
+        <li>You told a friend your good news and within a minute it was about them.</li>
+        <li>You and your closest friend can talk about your problems for hours, and you both end up feeling worse.</li>
+        <li>With this group, you do things you wouldn't choose on your own: in the car, at parties, in the group chat.</li>
       </ul>
-      <p style="margin:0">Noticing that a friendship drains you doesn't make you a bad friend. It means you're paying attention.</p>
+      <p style="margin:0">You probably learned the red flags years ago. This is the next layer: what research says separates friendships that help you from ones that cost you, including the gray areas where it's both.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Three kinds of friendship that wear you down</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎢</span><strong>The rollercoaster</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Super close one day, ice cold the next. You spend a lot of energy trying to figure out where you stand.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>The put-down</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Teasing that always seems to land on you, "just kidding" after something hurtful, or making fun of you in front of others.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔒</span><strong>The controller</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Getting jealous of your other friends, guilt-tripping you about your time, or using secrets or screenshots to keep you in line.</p></details>
+    <h3 style="margin-top:28px">The good-news test</h3>
+    <p>Most people judge a friend by how they show up when things go wrong. Psychologist Shelly Gable and her colleagues found that how people respond when things go <i>right</i> may matter at least as much.</p>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 400 330" role="img" aria-labelledby="ac-t ac-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="ac-t">Four ways to respond to a friend's good news</title>
+  <desc id="ac-d">A two by two grid. Columns: active and passive. Rows: constructive and destructive. The friend says: I got the hospital internship this summer. Active constructive: That's huge, how did you find out, what will you do there. Passive constructive: Nice, said while still looking at a phone. Active destructive: Won't that wreck your whole summer, sounds stressful. Passive destructive: Anyway, guess what happened to me. Only the active constructive response is linked with stronger relationships.</desc>
+  <text x="200" y="18" font-size="13" fill="#6E6E73" text-anchor="middle">Your friend: "I got the hospital internship this summer."</text>
+  <text x="114" y="46" font-size="13" font-weight="700" fill="#1D1D1F" text-anchor="middle">Active</text>
+  <text x="300" y="46" font-size="13" font-weight="700" fill="#1D1D1F" text-anchor="middle">Passive</text>
+  <text x="16" y="117" font-size="13" font-weight="700" fill="#1D1D1F" text-anchor="middle" transform="rotate(-90 16 117)">Constructive</text>
+  <text x="16" y="245" font-size="13" font-weight="700" fill="#1D1D1F" text-anchor="middle" transform="rotate(-90 16 245)">Destructive</text>
+  <rect x="30" y="58" width="166" height="118" rx="12" fill="#E3F1E7"/>
+  <text x="42" y="82" font-size="13" font-weight="700" fill="#1E7A3E">Builds it up</text>
+  <text x="42" y="106" font-size="13" fill="#1D1D1F">"That's huge! How</text>
+  <text x="42" y="124" font-size="13" fill="#1D1D1F">did you find out?</text>
+  <text x="42" y="142" font-size="13" fill="#1D1D1F">What will you do?"</text>
+  <rect x="216" y="58" width="166" height="118" rx="12" fill="#F2F2F5"/>
+  <text x="228" y="82" font-size="13" font-weight="700" fill="#6E6E73">Shrugs</text>
+  <text x="228" y="106" font-size="13" fill="#1D1D1F">"Nice."</text>
+  <text x="228" y="124" font-size="13" fill="#1D1D1F">(still looking at</text>
+  <text x="228" y="142" font-size="13" fill="#1D1D1F">their phone)</text>
+  <rect x="30" y="186" width="166" height="118" rx="12" fill="#F2F2F5"/>
+  <text x="42" y="210" font-size="13" font-weight="700" fill="#B23A2A">Pokes holes</text>
+  <text x="42" y="234" font-size="13" fill="#1D1D1F">"Won't that wreck</text>
+  <text x="42" y="252" font-size="13" fill="#1D1D1F">your whole summer?</text>
+  <text x="42" y="270" font-size="13" fill="#1D1D1F">Sounds stressful."</text>
+  <rect x="216" y="186" width="166" height="118" rx="12" fill="#F2F2F5"/>
+  <text x="228" y="210" font-size="13" font-weight="700" fill="#B23A2A">Changes the subject</text>
+  <text x="228" y="234" font-size="13" fill="#1D1D1F">"Anyway, guess</text>
+  <text x="228" y="252" font-size="13" fill="#1D1D1F">what happened</text>
+  <text x="228" y="270" font-size="13" fill="#1D1D1F">to me."</text>
+  <rect x="30" y="58" width="166" height="118" rx="12" fill="none" stroke="#1E7A3E" stroke-width="2"/>
+  <text x="200" y="324" font-size="12" fill="#6E6E73" text-anchor="middle">Only the top-left response predicted stronger relationships.</text>
+</svg>
+      <figcaption>Based on Gable and colleagues (2006). Their studies were with dating couples. The pattern is widely applied to friendships, but it hasn't been tested as much there.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1E7A3E"></span><div><strong>What they found</strong><p>Couples whose partners responded to good news with real interest and questions were more satisfied and less likely to break up two months later. Shrugging, poking holes, or changing the subject went with dissatisfaction.</p></div></div>
+      <div class="region"><span class="dot" style="background:#6E6E73"></span><div><strong>Why it's a useful test</strong><p>Bad news can pull support out of almost anyone. Being glad for you, without competing, is harder. Notice which box your friends usually land in, and which box you usually land in.</p></div></div>
     </div>
     </div>
 
+    <div class="research">
+      <div class="fold-label">Research</div>
+      <p>In a study at Brigham Young University, adults talked about a stressful event with a friend. Talking with an ambivalent friend, someone who is sometimes supportive and sometimes hurtful, raised their blood pressure more than talking with a supportive friend. Their resting heart rates were higher too. The researchers suggested people can't fully relax around a friend they can't predict.</p>
+    </div>
+
     <details class="fold ">
-      <summary><span class="fold-label">Why it's hard to see</span><span class="sticker">Good parts can hide the bad parts.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The gray areas</span><span class="sticker">Close isn't automatically healthy.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>They're not all bad.</dt>
-        <dd>Draining friends often have great qualities too. The good parts make it confusing to admit the bad parts are a problem.</dd>
-        <dt>History is sticky.</dt>
-        <dd>If you've been friends since you were little, it can feel impossible to step back, even when the friendship has changed.</dd>
-        <dt>You might worry it's you.</dt>
-        <dd>If someone keeps telling you you're too sensitive, you can start to believe your feelings aren't reliable.</dd>
-        <dt>Losing them feels scary.</dt>
-        <dd>Even a hard friendship can feel better than being alone. That fear is real, and it's worth talking through.</dd>
+        <dt>Talking it to death.</dt>
+        <dd>Psychologist Amanda Rose studied "co-rumination": friends going over the same problems again and again. It was linked with closer, higher-quality friendships and with more anxiety and depression. A friendship can feel deeply supportive and still be keeping both of you stuck.</dd>
+        <dt>The audience effect.</dt>
+        <dd>In a driving video game, teenagers took more risks when friends were watching than when they played alone. The effect was much smaller in adults. Good friends can still make it harder to say no, especially in a car.</dd>
+        <dt>A friend nearby helps.</dt>
+        <dd>In a study of fifth and sixth graders, bad experiences raised the stress hormone cortisol and lowered self-worth less when a best friend was there. A good friend changes how stress hits you, in real time.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🔋 The battery check</span><span class="sticker">Do they charge you up or drain you?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Patterns that wear you down</span><span class="sticker">The problem is the pattern, not one bad day.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>A simple way to think about it: after time with this person, do you usually feel more charged or more drained? Every friendship has off days. A pattern of feeling drained is worth noticing.</p>
-      <p class="worst">The worst part: draining friendships can make you shrink. You get quieter, more careful, more worried. Good friendships help you feel more like yourself, not less.</p>
+      <dl class="helps">
+        <dt>The rollercoaster.</dt>
+        <dd>Warm one week, cold the next. Unpredictable warmth keeps you working to earn it back, which is part of why these friendships are hard to leave.</dd>
+        <dt>The put-down.</dt>
+        <dd>Teasing that always lands on the same sore spots, followed by "relax, it's a joke." If you've said it hurts and it continues, it isn't a joke.</dd>
+        <dt>The controller.</dt>
+        <dd>Jealousy about your other friends, guilt trips about your time, keeping track of where you are, or holding screenshots and secrets over you.</dd>
+      </dl>
+      <p class="worst">The cost often shows up as shrinking. You get quieter, more careful, more worried. A good friendship tends to leave you more like yourself, not less.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 When it shows up on social media</span><span class="sticker">A controlling friend can follow you everywhere.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Online</span><span class="sticker">A controlling friend can follow you everywhere.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Draining friendships often show up online too:</p>
       <ul class="tight">
-        
-        <li >They get mad when you don't respond fast, or ask why you were online and didn't answer.</li>
-        <li>They post things about you as "jokes" or tag you in embarrassing stuff.</li>
-        
-        <li >They watch your Snap Map, your followers, or who likes your posts.</li>
-        <li>They threaten to share screenshots or private messages.</li>
-        <li>They're nice in person and different online, or the other way around.</li>
+        <li>They get upset when you don't answer fast, or ask why you were online and didn't reply.</li>
+        <li>They want your location on all the time, and punish you for turning it off.</li>
+        <li>They post or forward things about you as "jokes."</li>
+        <li>They threaten to share screenshots, private messages, or photos.</li>
       </ul>
-      <p class="worst">The worst part: online, a controlling friend can be in your pocket all day. It's hard to get a break from someone who's always there.</p>
+      <p class="worst">Online, a controlling friend is in your pocket all day. That makes it harder to get the distance you need to see the pattern clearly.</p>
       </div>
     </details>
   </div>
@@ -482,32 +587,32 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Assess it, then adjust it</h2>
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Think of one friend. What pattern do you see?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think about one friend. Check the ones that are usually true. There's no score, just a pattern to notice.</p>
+      <p>Think about one friend over the last few months, not just the last week. Check the ones that are usually true.</p>
       <div class="grid-2">
         <div>
-          <h3 style="font-size:1rem">💚 Green flags</h3>
+          <h3 style="font-size:1rem">Green flags</h3>
           <div class="checklist flags" role="group" aria-label="Green flags" data-kind="green">
-            <label><input type="checkbox"> I can be myself around them.</label>
-            <label><input type="checkbox"> They're happy when good things happen to me.</label>
-            <label><input type="checkbox"> They keep my secrets.</label>
-            <label><input type="checkbox"> We can disagree and still be okay.</label>
-            <label><input type="checkbox"> They're fine with me having other friends.</label>
-            <label><input type="checkbox"> They apologize when they mess up, and things change.</label>
+            <label><input type="checkbox"> I can be myself, including the parts I don't post.</label>
+            <label><input type="checkbox"> They get excited about my good news and ask about it.</label>
+            <label><input type="checkbox"> They keep private things private.</label>
+            <label><input type="checkbox"> We can disagree and be fine the next day.</label>
+            <label><input type="checkbox"> They're glad I have other friends.</label>
+            <label><input type="checkbox"> When they mess up, they own it and something changes.</label>
           </div>
         </div>
         <div>
-          <h3 style="font-size:1rem">🚩 Red flags</h3>
+          <h3 style="font-size:1rem">Red flags</h3>
           <div class="checklist flags" role="group" aria-label="Red flags" data-kind="red">
-            <label><input type="checkbox"> I feel worse about myself after we hang out.</label>
-            <label><input type="checkbox"> I'm careful about what I say so they won't get mad.</label>
-            <label><input type="checkbox"> Their "jokes" about me hurt.</label>
-            <label><input type="checkbox"> They get upset when I spend time with others.</label>
-            <label><input type="checkbox"> They share my private stuff or threaten to.</label>
-            <label><input type="checkbox"> I'm always the one who has to fix things.</label>
+            <label><input type="checkbox"> I usually feel worse about myself after we hang out.</label>
+            <label><input type="checkbox"> I edit what I say so they won't get mad.</label>
+            <label><input type="checkbox"> Their "jokes" keep hitting the same sore spots.</label>
+            <label><input type="checkbox"> They go cold when I spend time with other people.</label>
+            <label><input type="checkbox"> They track me, check my phone, or hold screenshots over me.</label>
+            <label><input type="checkbox"> I do things with them I wouldn't choose on my own.</label>
           </div>
         </div>
       </div>
@@ -519,33 +624,46 @@
       <div class="fold-label">What actually helps</div>
       <h3 class="sticker">You can change a friendship without ending it.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>👀 Notice the pattern.<span class="row-cue" aria-hidden="true"></span></summary><p>One bad day isn't a pattern. Feeling drained, nervous, or put down most of the time is.</p></details>
-        <details class="row"><summary>🗣 Say something once, clearly.<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes people don't realize how they're coming across. "When you joke about my grades in front of people, it really bothers me. Can you stop?"</p></details>
-        <details class="row"><summary>📏 Set a boundary.<span class="row-cue" aria-hidden="true"></span></summary><p>A boundary is what you will do, not what they have to do. "If the jokes keep going, I'm going to leave." Then follow through.</p></details>
-        <details class="row"><summary>🔉 Turn the volume down.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to end a friendship to change it. You can spend less time together, share less, and put more energy into people who charge you up.</p></details>
-        <details class="row"><summary>💬 Get an outside view.<span class="row-cue" aria-hidden="true"></span></summary><p>A parent, counselor, or friend outside the situation can help you see what's going on.</p></details>
+        <details class="row"><summary><span class="num">1</span> Judge over months, not moments.<span class="row-cue" aria-hidden="true"></span></summary><p>Everyone has bad weeks. Look at the last few months. What's the usual pattern?</p></details>
+        <details class="row"><summary><span class="num">2</span> Say it once, clearly.<span class="row-cue" aria-hidden="true"></span></summary><p>People don't always know how they come across. "When you joke about my grades in front of people, it gets to me. Can you drop it?" How they react tells you a lot.</p></details>
+        <details class="row"><summary><span class="num">3</span> Set a boundary you control.<span class="row-cue" aria-hidden="true"></span></summary><p>A boundary is what you will do, not what they have to do. "If you keep checking my location, I'm turning it off." Then follow through.</p></details>
+        <details class="row"><summary><span class="num">4</span> Change the loop.<span class="row-cue" aria-hidden="true"></span></summary><p>If you co-ruminate, put a limit on it: "Let's talk about it for ten minutes, then go do something." Talking still helps. Endless replaying doesn't.</p></details>
+        <details class="row"><summary><span class="num">5</span> Turn the volume down.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to end a friendship to change it. Spend less time together, share less, and put more energy into people who leave you better off.</p></details>
+        <details class="row"><summary><span class="num">6</span> Get an outside view.<span class="row-cue" aria-hidden="true"></span></summary><p>A parent, an older sibling, a counselor, a friend outside the group. Someone without a stake in it can see the pattern faster.</p></details>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">It depends where you're from</div>
+      <p style="margin:0">What counts as a good friend varies. In some families and cultures, close friends are treated like family: constant contact, showing up without asking, sharing almost everything. In others, more privacy and independence is normal. Neither is wrong. The real questions are whether the friendship respects you and fits the values you and your family hold. What does a good friend look like where you come from? Does this friendship fit that?</p>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. Okay, or not okay?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Green flag, red flag, or gray area?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <p>What do you think?</p>
-      
-      
-      <div class="scenario" >
-        <p>Your friend goes through your phone and gets mad about who you've been texting.</p>
+      <div class="scenario">
+        <p>Dev wants your location shared all the time "so I know you're safe," and gets upset for a day whenever you turn it off.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Caring doesn't look like checking up on you. Going through your phone is a control move, in friendships and in dating.">They just care a lot</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Your phone and your other friendships are yours. This is worth talking to someone about.">That's a red flag</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Wanting to know you got home is care. Punishing you for privacy is control.">It's care. He worries about me.</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The upset is the signal. You can offer something specific, like texting when you get home, and keep the rest of your location private.">Red flag. Worth a boundary.</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It avoids the fight for now. It also teaches you to hide, which doesn't solve the control.">Leave it on and just don't go places he'd mind</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>Your friend tells you, kindly, that something you said hurt someone else in the group.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Imani tells you privately that a joke you made in the group chat about someone's accent came across as mean.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Telling you something hard, kindly and privately, is usually a sign they trust you to handle it.">They're starting drama</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Good friends can tell you hard things. It's honesty, not drama.">That's a green flag</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="She told you one on one, not in front of the group. That's the opposite of drama.">She's starting drama</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Telling you a hard truth, privately and kindly, is something good friends do. It's uncomfortable and a strong sign.">Green flag</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your friends cheer when Luis takes the back roads way too fast with five people in the car. You're usually one of them.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Good. Peer presence pushes everyone toward risk, so one voice changes the room. Plan a ride you control, and if you can, say it once: &quot;I'm not doing the back roads.&quot;">Line up another ride, and say something once</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Could be right eventually. These may be good friends with one risky habit. Changing the ride may be enough.">Drop the whole group</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Everyone is affected by the audience, including the driver. Saying nothing makes it easier to keep happening.">Say nothing. It's his car.</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -554,29 +672,29 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🤐 Hoping it'll fix itself.<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes it does. Usually, patterns keep going unless something changes.</p></details>
-        <details class="row"><summary>🎭 Becoming who they want you to be.<span class="row-cue" aria-hidden="true"></span></summary><p>Changing yourself to keep the peace can work for a while. It costs you a lot over time.</p></details>
-        <details class="row"><summary>💣 Blowing it up publicly.<span class="row-cue" aria-hidden="true"></span></summary><p>Calling them out in front of everyone usually turns into a big fight with sides. Stepping back quietly tends to go better.</p></details>
-        <details class="row"><summary>🙈 Ignoring how you feel.<span class="row-cue" aria-hidden="true"></span></summary><p>Your feelings are information. If something keeps feeling bad, take it seriously.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A real friend would never hurt me.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Good friends hurt each other sometimes. What matters is whether they notice, own it, and change.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> The closer we are, the healthier it is.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Closeness and co-rumination can go together. A friendship can be very close and still keep both people stuck.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It's not all bad, so I should stay.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Mixed friendships can cost more than you'd think, because you can't fully relax. That doesn't mean you have to end it. It means it's worth adjusting.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Setting a boundary is mean.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A clear boundary is information. It gives the friendship a chance to work. A good friend can handle it.</p></details>
       </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">Mute, restrict, block. That's a boundary, not a war.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Online, right now</span><span class="sticker">Mute, restrict, block. That's a boundary, not a war.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>📍 Your location is yours.</dt>
-        <dd>You don't have to share it with anyone. Turning on Ghost Mode is not a betrayal.</dd>
-        <dt>⏱ You don't owe instant replies.</dt>
-        <dd>Good friends understand you have a life. Answering later is fine.</dd>
-        <dt>🧾 Save evidence.</dt>
-        <dd>If someone threatens to share your stuff, screenshot it and tell an adult.</dd>
-        <dt>🔇 Use mute, restrict, or block.</dt>
-        <dd>These tools exist for a reason. Using them is setting a boundary, not starting a war.</dd>
+        <dt>Your location is yours.</dt>
+        <dd>You don't owe anyone a live map of where you are. Turning it off is not betrayal.</dd>
+        <dt>You don't owe instant replies.</dt>
+        <dd>Friends who respect you understand that you have a life.</dd>
+        <dt>Save evidence.</dt>
+        <dd>If someone threatens to share your messages or photos, screenshot the threat and tell an adult. For images of anyone under 18, the free Take It Down tool from the National Center for Missing &amp; Exploited Children can help get them removed.</dd>
+        <dt>Use mute, restrict, or block.</dt>
+        <dd>These tools exist for a reason. Using them is setting a boundary.</dd>
       </dl>
       </div>
     </details>
@@ -592,6 +710,19 @@
       </ul>
       <p style="margin:0">That's not a friendship problem you have to fix alone. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Gable, S. L., Gonzaga, G. C., &amp; Strachman, A. (2006). Will you be there for me when things go right? Supportive responses to positive event disclosures. <i>Journal of Personality and Social Psychology</i>, 91(5), 904&ndash;917.</li>
+        <li>Holt-Lunstad, J., Uchino, B. N., Smith, T. W., &amp; Hicks, A. (2007). On the importance of relationship quality: The impact of ambivalence in friendships on cardiovascular functioning. <i>Annals of Behavioral Medicine</i>, 33(3), 278&ndash;290.</li>
+        <li>Rose, A. J. (2002). Co-rumination in the friendships of girls and boys. <i>Child Development</i>, 73(6), 1830&ndash;1843.</li>
+        <li>Gardner, M., &amp; Steinberg, L. (2005). Peer influence on risk taking, risk preference, and risky decision making in adolescence and adulthood: An experimental study. <i>Developmental Psychology</i>, 41(4), 625&ndash;635.</li>
+        <li>Adams, R. E., Santo, J. B., &amp; Bukowski, W. M. (2011). The presence of a best friend buffers the effects of negative experiences. <i>Developmental Psychology</i>, 47(6), 1786&ndash;1791.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -602,26 +733,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">How I usually feel after time with this friend</label>
+      <label class="prompt" for="tx-1">How I usually feel after time with this friend, looking back over a few months</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">What I like about this friendship, and what wears me down</label>
+      <label class="prompt" for="tx-2">Which box they usually land in when I share good news. Which box I land in for them.</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">One thing I could say or do differently</label>
+      <label class="prompt" for="tx-3">One thing I could say once, clearly, or one boundary I could set</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">A friend who charges my battery, and what they do that helps</label>
+      <label class="prompt" for="tx-4">A friend who leaves me more like myself, and what they do that helps</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I want in a friend, in my own words</label>
+      <label class="prompt" for="tx-5">What a good friend looks like in my family or culture, and what I'd add</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You deserve friends who are glad you're around. Wanting that isn't asking for too much.</p>
+      <p>A good friend is glad when things go right for you, and you can relax around them. Wanting that is a reasonable standard, not asking for too much.</p>
     </div>
     </div>
   </div>
@@ -668,11 +799,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-drained" aria-pressed="false">🪫 Drained and tired of it</button>
-          <button type="button" class="choice" data-path="p-guilty" aria-pressed="false">😞 Guilty for even thinking this</button>
-          <button type="button" class="choice" data-path="p-scared" aria-pressed="false">😟 Scared of what happens if I step back</button>
-          <button type="button" class="choice" data-path="p-confused" aria-pressed="false">🤷 Confused, it's good and bad</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling clearer today</button>
+          <button type="button" class="choice" data-path="p-drained" aria-pressed="false">Drained and tired of it</button>
+          <button type="button" class="choice" data-path="p-guilty" aria-pressed="false">Guilty for even thinking this</button>
+          <button type="button" class="choice" data-path="p-scared" aria-pressed="false">Scared of what happens if I step back</button>
+          <button type="button" class="choice" data-path="p-confused" aria-pressed="false">Confused, it's good and bad</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling clearer today</button>
         </div>
 
         <div class="path-panel" id="p-drained" hidden>
@@ -680,9 +811,9 @@
           <p>Feeling drained a lot is a signal worth listening to. It doesn't make you dramatic or mean.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔉</span>Spend a little less time together this week and notice how you feel.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Make time for someone who charges you up.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell someone you trust what's been going on.</li>
+            <li>Spend a little less time together this week and notice how you feel.</li>
+            <li>Make time for someone who charges you up.</li>
+            <li>Tell someone you trust what's been going on.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-guilty" hidden>
@@ -690,9 +821,9 @@
           <p>You can care about someone and still need things to change. Wanting a healthier friendship isn't betrayal.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⚖️</span>Look at the green and red flags above. What pattern do you see?</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write down what you'd want to be different.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk it through with a counselor or trusted adult.</li>
+            <li>Look at the green and red flags above. What pattern do you see?</li>
+            <li>Write down what you'd want to be different.</li>
+            <li>Talk it through with a counselor or trusted adult.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-scared" hidden>
@@ -700,9 +831,9 @@
           <p>That fear makes sense, especially if this person is a big part of your social life. You don't have to make a big move all at once.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔉</span>Turning the volume down slowly is an option, not just ending it.</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Start building one other friendship. Finding Your People can help.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If you're worried they'll retaliate, tell an adult before you step back.</li>
+            <li>Turning the volume down slowly is an option, not just ending it.</li>
+            <li>Start building one other friendship. Finding Your People can help.</li>
+            <li>If you're worried they'll retaliate, tell an adult before you step back.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-confused" hidden>
@@ -710,9 +841,9 @@
           <p>Most friendships are a mix. The question is whether the good outweighs the hard, most of the time.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔋</span>Do a battery check after the next few times you hang out.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Try saying one thing that bothers you and see how they respond.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write down three good moments and three hard ones from this month.</li>
+            <li>After the next few hangouts, notice whether you leave more drained or more like yourself.</li>
+            <li>Try saying one thing that bothers you and see how they respond.</li>
+            <li>Write down three good moments and three hard ones from this month.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -720,9 +851,9 @@
           <p>Getting clearer about what you want in friendships is real progress.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped you see it.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Spend time with people who feel good to be around.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>If a friend is in a draining friendship, you know what to look for now.</li>
+            <li>Notice what helped you see it.</li>
+            <li>Spend time with people who feel good to be around.</li>
+            <li>If a friend is in a draining friendship, you know what to look for now.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>

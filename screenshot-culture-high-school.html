@@ -362,6 +362,69 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  .fig svg.spread { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +444,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">📸 High School · Digital life</div>
+  <div class="eyebrow">High School · Digital life</div>
   <h1>Screenshot Culture</h1>
-  <p class="tagline">Because what you send can travel farther, and last longer, than you planned.</p>
+  <p class="tagline">Why private stops being private, who ends up looking, and how to protect yourself and other people.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +472,197 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">How things get shared</h2>
+    <h2 id="h-understand">Every message is a copy you don't control</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Private chats don't always stay private.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You said it in one chat. It showed up in another.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>Something you said in a private chat ended up in front of people it wasn't meant for.</li>
-        <li>You screenshotted something funny and sent it around, then realized it might hurt someone.</li>
-        
-        <li >An old post of yours resurfaced, and you cringed.</li>
-        <li>You posted something in the moment and regretted it later.</li>
-        <li>Your location was on, and people knew where you were.</li>
-        <li>You've wondered what a coach, teacher, or future school might find if they searched your name.</li>
+        <li>A screenshot of your group chat landed in a different group chat, with a new caption.</li>
+        <li>Someone filmed a moment at a party, and it was on three stories before you got home.</li>
+        <li>You typed something furious, stared at it, and deleted it. Or you didn't.</li>
+        <li>A job, team, or program asked for your social handles, and you went back through years of posts.</li>
+        <li>You got added to a "close friends" story and saw something you wish you hadn't.</li>
       </ul>
-      <p style="margin:0">Almost everything you do online can be saved, copied, and shared. That's not a reason to panic. It's a reason to be thoughtful.</p>
+      <p style="margin:0">You already know screenshots exist. The harder part is how fast copies multiply, why people post things online they'd never say out loud, and what's at stake when you're 17 instead of 12.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">How things travel</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">📸</span><strong>Screenshots</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Disappearing messages don't really disappear. Anyone can screenshot, screen record, or photograph another screen.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔁</span><strong>Forwarding</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Something sent to one person can reach hundreds in minutes. Once it's out, you can't pull it back.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🗄</span><strong>Your footprint</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Posts, comments, tags, and likes add up to a picture of you that can last for years.</p></details>
+    <h3 style="margin-top:28px">How one screenshot spreads</h3>
+    <figure class="fig">
+<svg class="spread" viewBox="0 0 400 300" role="img" aria-label="Illustration of one screenshot spreading. You send it to three people. If each person shows it to three more, it reaches 9, then 27, then 81. After four rounds of sharing, 121 people have seen it, and only the first send was your choice." xmlns="http://www.w3.org/2000/svg">
+    <circle cx="34" cy="120" r="9" fill="#1D1D1F"/>
+    <line x1="34" y1="120" x2="104" y2="70" stroke="#D2D2D7" stroke-width="1.2"/>
+    <line x1="34" y1="120" x2="104" y2="120" stroke="#D2D2D7" stroke-width="1.2"/>
+    <line x1="34" y1="120" x2="104" y2="170" stroke="#D2D2D7" stroke-width="1.2"/>
+    <line x1="104" y1="70" x2="170" y2="30.0" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="70" x2="170" y2="52.5" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="70" x2="170" y2="75.0" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="120" x2="170" y2="97.5" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="120" x2="170" y2="120.0" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="120" x2="170" y2="142.5" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="170" x2="170" y2="165.0" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="170" x2="170" y2="187.5" stroke="#E5E5EA" stroke-width="1"/>
+    <line x1="104" y1="170" x2="170" y2="210.0" stroke="#E5E5EA" stroke-width="1"/>
+    <circle cx="104" cy="70" r="7" fill="#3A3A3C"/>
+    <circle cx="104" cy="120" r="7" fill="#3A3A3C"/>
+    <circle cx="104" cy="170" r="7" fill="#3A3A3C"/>
+    <circle cx="170" cy="30.0" r="5" fill="#636366"/>
+    <circle cx="170" cy="52.5" r="5" fill="#636366"/>
+    <circle cx="170" cy="75.0" r="5" fill="#636366"/>
+    <circle cx="170" cy="97.5" r="5" fill="#636366"/>
+    <circle cx="170" cy="120.0" r="5" fill="#636366"/>
+    <circle cx="170" cy="142.5" r="5" fill="#636366"/>
+    <circle cx="170" cy="165.0" r="5" fill="#636366"/>
+    <circle cx="170" cy="187.5" r="5" fill="#636366"/>
+    <circle cx="170" cy="210.0" r="5" fill="#636366"/>
+    <circle cx="224" cy="30.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="52.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="75.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="97.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="120.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="142.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="165.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="187.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="224" cy="210.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="30.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="52.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="75.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="97.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="120.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="142.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="165.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="187.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="236" cy="210.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="30.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="52.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="75.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="97.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="120.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="142.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="165.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="187.5" r="3.6" fill="#8E8E93"/>
+    <circle cx="248" cy="210.0" r="3.6" fill="#8E8E93"/>
+    <circle cx="298" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="298" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.35"/>
+    <circle cx="307" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="307" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.42"/>
+    <circle cx="316" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="316" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.49"/>
+    <circle cx="325" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="325" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.56"/>
+    <circle cx="334" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="334" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.63"/>
+    <circle cx="343" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="343" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.70"/>
+    <circle cx="352" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="352" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.77"/>
+    <circle cx="361" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="361" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.84"/>
+    <circle cx="370" cy="84" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="93" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="102" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="111" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="120" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="129" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="138" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="147" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+    <circle cx="370" cy="156" r="2.6" fill="#C0392B" fill-opacity="0.91"/>
+  <g font-size="13" text-anchor="middle" fill="#1D1D1F" font-weight="700">
+    <text x="34" y="262">You</text><text x="104" y="262">3</text><text x="170" y="262">9</text><text x="236" y="262">27</text><text x="334" y="262">81</text>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#6E6E73">
+    <text x="34" y="280">1</text><text x="104" y="280">4</text><text x="170" y="280">13</text><text x="236" y="280">40</text><text x="334" y="280">121 total</text>
+  </g>
+  <line x1="12" y1="244" x2="388" y2="244" stroke="#E5E5EA"/>
+  <text x="334" y="70" text-anchor="middle" font-size="12" fill="#C0392B" font-weight="700">not your choice</text>
+  <text x="4" y="162" font-size="12" fill="#1D1D1F" font-weight="700">your choice</text>
+</svg>
+      <figcaption>Illustration, not data: if each person shows a screenshot to three others, four rounds of sharing reach 121 people. In a big group chat it can happen in minutes. You made one choice. Everyone after you made the rest.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Copies, not messages</strong><p>Disappearing messages, private stories and "close friends" control who sees the original. They can't control screenshots, screen recordings, or another phone pointed at the screen.</p></div></div>
+      <div class="region"><span class="dot" style="background:#636366"></span><div><strong>Context collapse</strong><p>Researchers Alice Marwick and danah boyd described how social media squeezes all your audiences into one: friends, family, teachers, strangers. A joke built for five people reads differently to five hundred.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Online disinhibition</strong><p>Psychologist John Suler described why people say things online they'd never say face to face: no faces to read, no tone of voice, and a feeling that it doesn't quite count. It counts.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it matters</span><span class="sticker">Anyone can hit screenshot.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">How common this is, in numbers.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Private isn't always private.</dt>
-        <dd>"Close friends," private accounts, and disappearing messages all depend on everyone else choosing not to share.</dd>
-        <dt>Context gets lost.</dt>
-        <dd>A joke between friends can look very different to people who weren't there.</dd>
-        <dt>Some sharing hurts people.</dt>
-        <dd>Passing around someone's private message, embarrassing photo, or secret can do real harm, even if it seemed funny.</dd>
-        <dt>Some sharing breaks the law.</dt>
-        <dd >Creating, having, or sharing sexual images of anyone under 18 can be a crime, even if everyone in them agreed. Never forward them.</dd>
+        <dt>Nearly half of teens have been on the receiving end.</dt>
+        <dd>In a 2022 Pew Research Center survey of 1,316 US teens, 46% had experienced at least one form of cyberbullying. 22% had false rumors spread about them online, and 7% had explicit images of them shared without their consent.</dd>
+        <dt>Forwarding private images is not rare.</dt>
+        <dd>A 2018 review in <i>JAMA Pediatrics</i> pooled 39 studies of more than 110,000 young people. About 12% said they had forwarded a sext without the sender's consent, and about 8% said one of theirs had been forwarded.</dd>
+        <dt>Most people who get exposed didn't do anything unusual.</dt>
+        <dd>They trusted someone. The person who breaks that trust is the one who did something wrong.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🔒 Your footprint can work for you too</span><span class="sticker">Post things you'll be proud of later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Who ends up looking</span><span class="sticker">Colleges, employers, teams. Sometimes.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Your online presence isn't only a risk. Sharing your art, your sports highlights, a cause you care about, or kindness toward others can build a footprint you're proud of.</p>
-      <p class="worst">The worst part: the post you make when you're angriest, saddest, or trying hardest to be funny is often the one you'll most want back.</p>
+      <p>In Kaplan's 2023 survey of college admissions officers, 67% said applicants' social media is fair game, though only 28% said they had actually checked.</p>
+      <p>In 2017, Harvard rescinded admission offers to at least ten incoming students over offensive memes they shared in what they thought was a private group chat. Someone screenshotted it.</p>
+      <p class="worst">The post you make when you're angriest, or trying hardest to be funny, is usually the one you'll most want back.</p>
       </div>
     </details>
   </div>
@@ -465,51 +671,78 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Think like the people who'll see it</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Pause first. Post second.</h3>
+      <div class="fold-label">The four-audience test</div>
+      <h3 class="sticker">Picture who else might read it.</h3>
+      <p>Before you send or post something you're unsure about, run it past four imagined readers. If any of them would be a problem, rewrite it or wait.</p>
+      <div class="levers">
+        <div class="lever"><b>Your family</b><span>Whoever raised you, or the relative whose opinion you care about most. Families differ on what's okay to share. Use yours.</span></div>
+        <div class="lever"><b>A stranger with power</b><span>An admissions officer, a manager, a coach deciding on captain.</span></div>
+        <div class="lever"><b>The person in it</b><span>If it's about someone else, picture them reading it with everyone watching.</span></div>
+        <div class="lever"><b>You, in five years</b><span>You'll keep changing. The internet keeps the old version.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">Habits that protect you</div>
+      <h3 class="sticker">Small moves, big difference.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>⏸ Pause before you post or send.<span class="row-cue" aria-hidden="true"></span></summary><p>Take ten seconds. If you're upset, take ten minutes, or until tomorrow.</p></details>
-        <details class="row"><summary>👵 Use the billboard test.<span class="row-cue" aria-hidden="true"></span></summary><p>Would you be okay with this on a billboard outside school, with your name on it? If not, don't post it.</p></details>
-        <details class="row"><summary>🙅 Don't share what isn't yours.<span class="row-cue" aria-hidden="true"></span></summary><p>Someone else's private message, photo, or secret isn't yours to pass on. Ask first, or don't share.</p></details>
-        <details class="row"><summary>⚙️ Check your settings.<span class="row-cue" aria-hidden="true"></span></summary><p>Make accounts private, turn off location sharing (or use Ghost Mode), and review who can tag you.</p></details>
-        <details class="row"><summary>🧹 Clean up old posts.<span class="row-cue" aria-hidden="true"></span></summary><p>Look back through your accounts and archive or delete anything you wouldn't post today.</p></details>
-        <details class="row"><summary>📸 If it's about you, document it.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone shares something harmful about you, screenshot it for evidence, then report it and tell an adult.</p></details>
+        <details class="row"><summary><span class="num">1</span> If you're angry, wait until morning.<span class="row-cue" aria-hidden="true"></span></summary><p>Write it in your notes app, not in the chat. Strong emotion is when disinhibition is highest and judgment is lowest. If it still feels right after sleep, you can decide then.</p></details>
+        <details class="row"><summary><span class="num">2</span> Someone else's message isn't yours to share.<span class="row-cue" aria-hidden="true"></span></summary><p>A private message, photo, or secret belongs to the person who trusted you with it. Ask first, or don't share.</p></details>
+        <details class="row"><summary><span class="num">3</span> Audit your settings twice a year.<span class="row-cue" aria-hidden="true"></span></summary><p>Who can tag you, who can see your location, which old accounts are still public. Ghost mode and tag approval exist for a reason.</p></details>
+        <details class="row"><summary><span class="num">4</span> Clean up what you'd rewrite today.<span class="row-cue" aria-hidden="true"></span></summary><p>Archive or delete posts that don't reflect who you are now. It won't erase screenshots, but it removes the easy version.</p></details>
+        <details class="row"><summary><span class="num">5</span> If it's about you, document before you report.<span class="row-cue" aria-hidden="true"></span></summary><p>Screenshot the post, the account name, and the time. Then report it. Evidence helps adults and platforms act.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Would you put it on a billboard?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Got something ready to send? Run the test.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Got something you're thinking about posting or sending? Run it through these questions. Nothing is saved.</p>
+      <p>Type it here and check the boxes. Nothing is saved.</p>
       <label class="prompt" for="tx-1">What I'm thinking of posting or sending:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <div class="checklist" role="group" aria-label="Before you post questions">
-        <label><input type="checkbox"> I'd be okay if this got screenshotted and shown to the whole school.</label>
-        <label><input type="checkbox"> I'd be okay with my family, coach, or teacher seeing it.</label>
-        <label><input type="checkbox"> Everyone in it would be okay with me sharing it.</label>
-        <label><input type="checkbox"> I'm not posting this because I'm angry or upset.</label>
-        <label><input type="checkbox"> It doesn't share anyone's location, secrets, or private info.</label>
+      <div class="checklist" role="group" aria-label="Before you send questions">
+        <label><input type="checkbox"> I'd be fine if this got screenshotted into a chat I'm not in.</label>
+        <label><input type="checkbox"> My family, a coach, or a future employer could read it without it being a problem.</label>
+        <label><input type="checkbox"> Anyone in it, or mentioned in it, would be okay with me sharing it.</label>
+        <label><input type="checkbox"> I'm not writing this while I'm angry, hurt, or trying to get a reaction.</label>
+        <label><input type="checkbox"> It doesn't reveal anyone's location, secrets, health, or private images.</label>
       </div>
       <p id="test-tally" class="feedback" aria-live="polite"></p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">It lands in your chat. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real situations. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      
-      <div class="scenario" >
-        <p>Someone shares a nude photo of a classmate in a group chat you're in.</p>
+      <div class="scenario">
+        <p>In the junior class group chat, someone posts a screenshot of a classmate's private message about her eating disorder, with laughing emojis.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Don't save it. Having it can be illegal, even if you didn't ask for it.">Save it in case you need it later</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Exactly right. This protects your classmate and you. Adults can help get it taken down.">Don't open or forward it, leave the chat, and tell a trusted adult</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Speaking up is good. Also leave, don't save it, and tell an adult. This is serious.">Reply that it's not cool, then keep scrolling</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Every forward is another copy, and another person who now knows something she told one person in confidence.">Screenshot it to show a friend how messed up it is</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Saying something matters. Pair it with action: a private check-in with her, and a report or a word with an adult.">Reply "not okay" and keep scrolling</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Not adding fuel, checking on the person, and getting someone with power involved. That&#x27;s what she&#x27;d want from you.">Don't react or forward, message her privately, and report it or tell an adult</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>At a party, someone films Theo throwing up and posts it to their story. People are laughing.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Fast and direct. Asking for it to come down while it has few views stops the spread early. If Theo is very drunk or hard to wake, his safety comes first: get an adult or call for help.">Ask them to take it down now, and check that Theo is okay</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than reposting. Theo still needs someone looking out for him, both online and in the room.">Don't watch it</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Reposting makes you one of the 121. It&#x27;s funny for a night. For Theo, it&#x27;s searchable.">Repost it, everyone already saw</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Nia got benched and wrote a post about her coach. It's typed and ready, and she's still shaking.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Vague posts get decoded fast, and the fallout lands on her too.">Post it without his name so it isn't technically about him</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Venting to one person is healthier than posting. A message to a friend can still be screenshotted, so keep it to what she&#x27;d stand behind.">Send it to one friend instead</button>
+          <button class="choice" type="button" data-fb="good" data-msg="The feeling is real. A draft keeps it, and a conversation with the coach tomorrow has a chance of changing something.">Save it as a draft and ask the coach for a conversation tomorrow</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one decent answer. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
@@ -517,24 +750,24 @@
       <summary><span class="fold-label">If something of yours gets shared</span><span class="sticker">It's not your fault. You don't have to handle it alone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ol class="steps-list">
-        <li><strong>Breathe.</strong> It feels huge right now. Most things blow over faster than you think.</li>
-        <li><strong>Document it.</strong> Screenshot where it's posted, who shared it, and when.</li>
-        <li><strong>Report it.</strong> Every major app has a way to report content. Use it.</li>
-        <li><strong>Tell an adult.</strong> A parent, counselor, or teacher can help, especially if it's harassment or a private image.</li>
-        <li><strong>Get support.</strong> Lean on friends who have your back.</li>
+        <li><strong>Document it.</strong> Screenshot where it's posted, the account names, and the time.</li>
+        <li><strong>Report it</strong> on every app where it shows up.</li>
+        <li><strong>Tell an adult you trust.</strong> A parent or relative, a counselor, a coach. Harassment and private images are things schools and families can act on.</li>
+        <li><strong>Get it taken down.</strong> If you were under 18 in an intimate image, NCMEC's free <strong>Take It Down</strong> service helps remove it from participating sites. If you're 18 or older, <strong>StopNCII.org</strong> does something similar. Since May 2026, a federal law, the TAKE IT DOWN Act, requires covered platforms to remove reported intimate images shared without consent within 48 hours.</li>
+        <li><strong>Lean on people.</strong> Being exposed feels unbearable in the first days. It gets smaller with support.</li>
       </ol>
-      <p style="margin:0">If a sexual image of you (under 18) was shared, NCMEC's free <strong>Take It Down</strong> service can help remove it from participating sites. A trusted adult can help you use it.</p>
+      <p style="margin:0"><b>The law in Massachusetts.</b> Since 2024, sharing someone's intimate images without consent is a crime here, including AI-generated fakes. Sexual images of anyone under 18 are illegal to create, keep, or share even when everyone agreed. The same 2024 law created an education-based diversion program for teens caught sexting, instead of prosecution, but it is still treated as serious.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that make it worse</span><span class="sticker">What actually happens.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>👻 Trusting disappearing messages.<span class="row-cue" aria-hidden="true"></span></summary><p>Screenshots exist. Assume anything you send could be saved.</p></details>
-        <details class="row"><summary>🔥 Posting while angry.<span class="row-cue" aria-hidden="true"></span></summary><p>Angry posts often become the ones you regret most.</p></details>
-        <details class="row"><summary>🤐 Hiding it when something goes wrong.<span class="row-cue" aria-hidden="true"></span></summary><p>Asking for help early makes things easier to fix.</p></details>
-        <details class="row"><summary>😱 Panicking about your whole footprint.<span class="row-cue" aria-hidden="true"></span></summary><p>Everyone has posted something cringey. Clean up what you can and be thoughtful going forward.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Disappearing means gone.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It means the app deletes its copy. Every screenshot, recording, or second phone is a copy the app can't touch.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> My account is private, so it's safe.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Private limits who sees the original. It depends on every follower choosing not to share.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Deleting it fixes it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Deleting helps, and you should do it. Assume anything that was up for a while may have been saved.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If it's true, it's fair to share.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Something being true doesn't make it yours to spread. A secret someone told you is still theirs.</p></details>
       </div>
       </div>
     </details>
@@ -544,10 +777,25 @@
       <ul class="tight">
         <li>Someone shares, or threatens to share, private or sexual images of you.</li>
         <li>Someone is using screenshots or information to blackmail or threaten you.</li>
-        <li>You're being harassed or targeted online.</li>
+        <li>You're being harassed or targeted online, and it's not stopping.</li>
       </ul>
       <p style="margin:0">This is not your fault, and you don't have to handle it alone. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Marwick, A. E., &amp; boyd, d. (2011). I tweet honestly, I tweet passionately: Twitter users, context collapse, and the imagined audience. <i>New Media &amp; Society</i>, 13(1), 114&ndash;133.</li>
+        <li>Suler, J. (2004). The online disinhibition effect. <i>CyberPsychology &amp; Behavior</i>, 7(3), 321&ndash;326.</li>
+        <li>Vogels, E. A. (2022). <i>Teens and Cyberbullying 2022</i>. Pew Research Center.</li>
+        <li>Madigan, S., Ly, A., Rash, C. L., Van Ouytsel, J., &amp; Temple, J. R. (2018). Prevalence of multiple forms of sexting behavior among youth: A systematic review and meta-analysis. <i>JAMA Pediatrics</i>, 172(4), 327&ndash;335.</li>
+        <li>Kaplan. (2024). Kaplan survey: College admissions officers think it's OK to visit applicants' social media, but most don't. Press release.</li>
+        <li>WBUR and Associated Press. (2017, June 5). News reports on Harvard withdrawing admission offers over memes in a private group chat, first reported by <i>The Harvard Crimson</i>.</li>
+        <li>Massachusetts Acts of 2024, Chapter 118: An Act to prevent abuse and exploitation. TAKE IT DOWN Act (federal law, signed May 19, 2025).</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -558,26 +806,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-2">Something I posted or sent that I'd do differently now</label>
+      <label class="prompt" for="tx-2">Something I posted or sent that I'd handle differently now, and what I'd change</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-3">What I'd want someone to find if they searched my name</label>
+      <label class="prompt" for="tx-3">What I'd want a college, coach, or employer to find if they searched my name</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-4">A time I saw something shared that shouldn't have been, and what I did</label>
+      <label class="prompt" for="tx-4">A time I saw something shared that shouldn't have been. What did I do, and what would I do now?</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">One setting or post I'll check this week</label>
+      <label class="prompt" for="tx-5">One setting, account, or old post I'll deal with this week</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">How I'd want a friend to handle something private of mine</label>
+      <label class="prompt" for="tx-6">The rule I want my friends and me to follow with each other's private stuff</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You're allowed to grow and change. Being thoughtful online now protects the person you're becoming.</p>
+      <p>You're allowed to outgrow who you were at 14. Being careful now protects the person you're still becoming, and the people who trust you.</p>
     </div>
     </div>
   </div>
@@ -592,8 +840,8 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with online sharing today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How much is online sharing weighing on you today?</h3>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -609,10 +857,10 @@
           <button type="button" class="chip" aria-pressed="false">regret something I posted</button>
           <button type="button" class="chip" aria-pressed="false">worried about a screenshot</button>
           <button type="button" class="chip" aria-pressed="false">saw something shared that wasn't okay</button>
-          <button type="button" class="chip" aria-pressed="false">someone asked me to share something</button>
+          <button type="button" class="chip" aria-pressed="false">pressured to send something</button>
+          <button type="button" class="chip" aria-pressed="false">a fight that moved online</button>
           <button type="button" class="chip" aria-pressed="false">cleaned up old posts</button>
           <button type="button" class="chip" aria-pressed="false">checked my privacy settings</button>
-          <button type="button" class="chip" aria-pressed="false">location stuff</button>
           <button type="button" class="chip" aria-pressed="false">stood up for someone online</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
@@ -621,63 +869,63 @@
 
       <div class="ci-step">
         <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <p class="ci-hint">Pick the one closest to today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-exposed" aria-pressed="false">😳 Something of mine got shared</button>
-          <button type="button" class="choice" data-path="p-regret" aria-pressed="false">😬 Regretting something I posted</button>
-          <button type="button" class="choice" data-path="p-witness" aria-pressed="false">👀 Saw something that wasn't okay</button>
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😟 Pressured to share or send something</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling good about my online life</button>
+          <button type="button" class="choice" data-path="p-exposed" aria-pressed="false">Something of mine got shared</button>
+          <button type="button" class="choice" data-path="p-regret" aria-pressed="false">Regretting something I posted</button>
+          <button type="button" class="choice" data-path="p-witness" aria-pressed="false">Saw something that wasn't okay</button>
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Pressured to share or send something</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling good about my online life</button>
         </div>
 
         <div class="path-panel" id="p-exposed" hidden>
           <h4>What this might mean</h4>
-          <p>That feels awful, and it's not your fault that someone shared it.</p>
+          <p>That feels awful, and the person who shared it is the one who broke trust. Not you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📸</span>Screenshot it for evidence.</li>
-            <li><span class="e" aria-hidden="true">🚩</span>Report it on the app.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a trusted adult today, especially if it's private or sexual.</li>
+            <li>Screenshot it for evidence before anything gets deleted.</li>
+            <li>Report it on the app.</li>
+            <li>Tell a trusted adult today, especially if it's private or sexual. Take It Down can help with images.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-regret" hidden>
           <h4>What this might mean</h4>
-          <p>Everyone posts something they wish they hadn't. You can fix a lot of it.</p>
+          <p>Almost everyone has a post they'd take back. Most of it is fixable.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗑</span>Delete or archive it.</li>
-            <li><span class="e" aria-hidden="true">🧰</span>If it hurt someone, apologize directly. The Repair Kit can help.</li>
-            <li><span class="e" aria-hidden="true">🫶</span>Be kind to yourself. You're learning.</li>
+            <li>Delete or archive it now.</li>
+            <li>If it hurt someone, apologize to them directly, not publicly. The Repair Kit can help.</li>
+            <li>Decide what you'll do differently next time, then let it go.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-witness" hidden>
           <h4>What this might mean</h4>
-          <p>Seeing someone else's private stuff spread is hard, especially when you don't know what to do.</p>
+          <p>Watching someone else get exposed is hard, especially when you're not sure what to do.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🙅</span>Don't forward or save it.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Check on the person: "saw that, you okay?"</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell an adult. That's looking out, not snitching.</li>
+            <li>Don't forward or save it.</li>
+            <li>Check on the person: "saw that, you okay?"</li>
+            <li>Tell an adult or report it. That's looking out, not snitching.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-pressure" hidden>
           <h4>What this might mean</h4>
-          <p>You never have to send or share anything you're not comfortable with.</p>
+          <p>You never have to send or share anything you're not comfortable with. No is a full answer.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🛑</span>No is a complete answer.</li>
-            <li><span class="e" aria-hidden="true">📷</span>If it's about photos, When Someone Asks for a Photo can help.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Tell someone you trust about the pressure.</li>
+            <li>Say no, or don't answer.</li>
+            <li>If it's about photos, When Someone Asks for a Photo can help.</li>
+            <li>Tell someone you trust about the pressure.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>That's worth noticing. A better day doesn't have to be a perfect one.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what's working.</li>
-            <li><span class="e" aria-hidden="true">🌟</span>Share something you're proud of.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Help a friend check their settings.</li>
+            <li>Notice what's working.</li>
+            <li>Post something you're proud of.</li>
+            <li>Help a friend check their settings.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -705,7 +953,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who posted something they regret. You'd help them fix it, not shame them.</p>
+        <p class="closing">If a friend posted something they regretted, you'd help them fix it and move on. You can do that for yourself too.</p>
       </div>
     </div>
     </div>

@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ----- lesson figure + callouts ----- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.97rem; line-height:1.5; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:16px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🙅 High School · Friends and belonging</div>
+  <div class="eyebrow">High School · Friends and belonging</div>
   <h1>Saying No Without Losing Your Friends</h1>
-  <p class="tagline">Because you can say no to the thing and still keep the friends.</p>
+  <p class="tagline">What peers do to the teenage brain, and how to hold a line without losing your people.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,71 +476,91 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why pressure is so powerful</h2>
+    <h2 id="h-understand">Why no is harder with friends watching</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Pressure isn't always loud.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Nobody pushed. It still felt like a test.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Someone wants you to send them your answers for the take-home test.</li>
-        
-        <li >Your friends are passing around a vape and it's your turn.</li>
-        
-        <li >There's drinking at a party and people keep handing you a cup.</li>
-        
-        <li >The person driving has been drinking, and everyone's piling in.</li>
-        <li>You said yes to something you didn't want to do, and you felt bad about it after.</li>
-        <li>Nobody actually pressured you out loud. You just felt like you had to.</li>
+        <li>A friend who got their license last month offers to drive five of you to the beach.</li>
+        <li>Someone wants your take-home essay "just to see how you set it up."</li>
+        <li>At a party, the person hosting keeps refilling your cup before you've decided anything.</li>
+        <li>Your manager asks you to cover a shift the night before a big test.</li>
+        <li>Everyone's going to a party you'd rather skip, and you're the one with the car.</li>
+        <li>Nobody said a word. You just felt like no would cost you something.</li>
       </ul>
-      <p style="margin:0">Pressure doesn't always look like someone pushing you. A lot of the time, it's the quiet feeling that saying no will cost you.</p>
+      <p style="margin:0">You've heard "just say no" since you were small. This is the next layer: what peers actually do to the brain, why your guesses about everyone else are usually off, and why the skill is about planning more than willpower.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">The different kinds of pressure</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">📣</span><strong>Out loud</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"Come on, just do it." "Don't be lame." Direct pushing, teasing, or daring.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌫</span><strong>Unspoken</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Nobody says anything, but everyone's doing it, and you can feel the expectation.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🪞</span><strong>Inside your own head</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"They'll think I'm weird. They won't invite me again." Sometimes the loudest pressure comes from your own worries.</p></details>
+    <h3 style="margin-top:28px">Friends turn up the gas. They don't cut the brakes.</h3>
+    <p>In a 2011 brain-imaging study at Temple University, teens, young adults, and adults played a driving game, once alone and once while they believed friends were watching from the next room. Only the teens took more chances with friends watching, and only the teens' reward regions lit up more.</p>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 300" role="img" aria-labelledby="sn-t sn-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="sn-t">Side view of the brain showing three regions involved in peer influence</title>
+  <desc id="sn-d">The lateral prefrontal cortex sits on the outer surface of the frontal lobe, behind the forehead. The orbitofrontal cortex is on the underside of the frontal lobe, just above the eyes. The ventral striatum sits deep inside the brain, beneath the front of the cortex, drawn as if the brain were see-through.</desc>
+  <!-- cerebellum + brainstem -->
+  <path d="M236 196 C240 220 244 244 250 266 L270 266 C266 244 266 220 266 202 Z" fill="#E8E8ED" stroke="#8E8E93" stroke-width="1.5"/>
+  <ellipse cx="298" cy="206" rx="40" ry="24" fill="#EFEFF4" stroke="#8E8E93" stroke-width="1.5"/>
+  <g fill="none" stroke="#C7C7CC" stroke-width="1.1"><path d="M266 202 C284 196 308 196 330 204"/><path d="M266 212 C286 206 310 208 332 216"/></g>
+  <!-- cerebrum -->
+  <path d="M74 156 C62 104 102 54 174 46 C244 38 316 64 334 118 C344 148 330 176 304 186 C288 192 270 190 256 196 L218 200 C194 203 178 211 160 209 C128 206 104 198 90 184 C80 174 76 166 74 156 Z" fill="#F5F5F7" stroke="#8E8E93" stroke-width="2"/>
+  <!-- sulci: central, lateral (Sylvian), a few others -->
+  <g fill="none" stroke="#C7C7CC" stroke-width="1.6" stroke-linecap="round">
+    <path d="M214 50 C206 74 214 92 200 114 C194 124 196 134 190 142"/>
+    <path d="M118 158 C150 150 182 144 214 146 C236 147 254 140 270 128"/>
+    <path d="M152 70 C150 86 140 96 146 112"/><path d="M262 64 C254 82 266 94 258 112"/><path d="M300 98 C288 110 296 124 284 134"/>
+    <path d="M180 178 C206 172 232 176 258 168"/>
+  </g>
+  <!-- lateral prefrontal cortex -->
+  <path d="M96 106 C104 82 128 64 160 58 C166 74 168 90 160 108 C146 120 124 126 104 128 C98 122 95 114 96 106 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <!-- orbitofrontal cortex (underside of frontal lobe) -->
+  <path d="M76 160 C82 172 92 182 108 186 C124 188 140 182 150 172 C134 168 116 166 100 160 C90 158 82 158 76 160 Z" fill="#D9822B" fill-opacity=".9"/>
+  <!-- ventral striatum (deep, see-through) -->
+  <ellipse cx="166" cy="150" rx="15" ry="10" fill="#C0392B" fill-opacity=".9" stroke="#fff" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <!-- labels -->
+  <g font-size="13" font-weight="700">
+    <line x1="126" y1="92" x2="70" y2="26" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="126" cy="92" r="3" fill="#2E6DB4"/>
+    <text x="6" y="20" fill="#245A96">Lateral prefrontal cortex</text>
+    <line x1="108" y1="178" x2="60" y2="236" stroke="#B8691C" stroke-width="1.5"/><circle cx="108" cy="178" r="3" fill="#B8691C"/>
+    <text x="6" y="252" fill="#9A5714">Orbitofrontal cortex</text>
+    <line x1="166" y1="150" x2="140" y2="262" stroke="#C0392B" stroke-width="1.5"/><circle cx="166" cy="150" r="3" fill="#C0392B"/>
+    <text x="60" y="278" fill="#A3301F">Ventral striatum (deep)</text>
+  </g>
+  <text x="394" y="296" font-size="11" fill="#6E6E73" text-anchor="end">front of head on the left</text>
+</svg>
+      <figcaption>Side view. The ventral striatum is deep inside the brain and is drawn as if the brain were see-through. Simplified: each area works as part of a network.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Ventral striatum: the reward signal</strong><p>It responds to anything that might pay off: a laugh, a nod, being in on it. With peers watching, it fired harder in teens, and the harder it fired, the more risks they took next.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Orbitofrontal cortex: the price tag</strong><p>It puts a value on each option. In the same study it also ramped up with peers around, so the payoff of the risky choice looked bigger.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Lateral prefrontal cortex: the brakes</strong><p>It holds your plans and rules. Teens used it less than adults overall, but it didn't get weaker with friends around. Your judgment is still there. It's just outvoted in the moment.</p></div></div>
     </div>
+    <p class="stat"><b>The practical upshot:</b> decide before you're in the room. A choice you made at home, calm and alone, is one your brakes already own.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's so hard to say no</span><span class="sticker">Your brain really cares what friends think.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">You're probably wrong about what everyone else wants.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain is extra tuned to friends right now.</dt>
-        <dd>Research shows teens take more risks when friends are watching than when they're alone. The reward system in a teenage brain reacts strongly to peer approval. That's normal brain development, not a character flaw.</dd>
-        <dt>Belonging feels like survival.</dt>
-        <dd>Being part of the group matters a lot, so anything that might risk it feels huge.</dd>
-        <dt>Decisions happen fast.</dt>
-        <dd>Pressure moments usually happen quickly, with no time to think. That's why having a plan ahead of time helps so much.</dd>
+        <dt>Peers change the math, especially before your mid-20s.</dt>
+        <dd>In a 2005 study of 306 people, those randomly assigned to work with two same-age peers took more risks and focused more on the benefits than the costs. The effect was strongest for ages 13 to 16 and 18 to 22, and weakest for adults 24 and older.</dd>
+        <dt>Most people are privately less into it than they look.</dt>
+        <dd>Princeton researchers found students believed they were more uncomfortable with campus drinking than the average student was. Most of them felt that way, so the "average student" they imagined barely existed. Psychologists call this pluralistic ignorance.</dd>
+        <dt>Fewer people are doing it than your feed suggests.</dt>
+        <dd>In the CDC's 2021 national survey, about 29% of U.S. high school students reported current alcohol use, marijuana use, or misuse of prescription opioids. That means about 7 in 10 had done none of those in the past month. Posts show who went out. They don't show who stayed home.</dd>
+        <dt>A no lands softer than you think.</dt>
+        <dd>In five experiments with more than 2,000 people, those turning down an invitation expected the inviter to be far more upset, and far less likely to ask again, than inviters actually were. The researchers note limits: the reason for saying no was held constant, and results may differ across cultures.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🤝 Most people respect a no more than you'd think</span><span class="sticker">Real friends can handle a no.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In the car</span><span class="sticker">Every extra passenger raises the risk.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>People often overestimate how much others are doing something, and how much a no will cost them. In most friend groups, a calm, confident no barely registers. Real friends stick around.</p>
-      <p class="worst">The worst part: saying yes to something you didn't want can leave you feeling worse than any awkward moment of saying no.</p>
-      </div>
-    </details>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 When the pressure is online</span><span class="sticker">You're only seeing who posted.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Pressure doesn't need everyone in the same room:</p>
-      <ul class="tight">
-        
-        <li >Viral challenges, or friends daring you on camera.</li>
-        <li>Being pushed to post something, like or comment on something mean, or join in on a pile-on.</li>
-        
-        <li >Pressure to send a photo, or to share someone else's.</li>
-        <li>Seeing everyone else's posts from the party and feeling like you missed out by saying no.</li>
-      </ul>
-      <p class="worst">The worst part: online, it can feel like everyone is doing it. You're seeing the people who posted, not all the people who said no.</p>
+      <p>A national study in <i>JAMA</i> found that a 17-year-old driver's risk of dying per trip was about 1.5 times higher with one passenger, 2.6 times higher with two, and about 3 times higher with three or more, compared with driving alone. The pattern held for 16-year-olds too.</p>
+      <p>That's why Massachusetts limits new drivers. For the first six months with a junior operator license, a driver can't carry passengers under 18 who aren't immediate family, unless a licensed driver 21 or older with at least a year of experience sits beside them.</p>
+      <p class="worst">The hard line: never ride with someone who has been drinking or using, no matter how short the drive.</p>
       </div>
     </details>
   </div>
@@ -482,17 +569,18 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Hold the line, keep the friend</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Short, calm, and decided ahead of time.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🧭 Know your lines ahead of time.<span class="row-cue" aria-hidden="true"></span></summary><p>Decide now what you won't do, so you're not deciding in the moment with everyone watching.</p></details>
-        <details class="row"><summary>🗣 Keep it short.<span class="row-cue" aria-hidden="true"></span></summary><p>"Nah, I'm good." You don't owe a speech or a reason. The longer you explain, the more there is to argue with.</p></details>
-        <details class="row"><summary>🔁 Say it again.<span class="row-cue" aria-hidden="true"></span></summary><p>If they push, repeat it the same way. Calm and boring is hard to argue with.</p></details>
-        <details class="row"><summary>🔀 Offer something else.<span class="row-cue" aria-hidden="true"></span></summary><p>"Nah, but let's go get food." Changing the plan lets everyone save face.</p></details>
-        <details class="row"><summary>👫 Find your ally.<span class="row-cue" aria-hidden="true"></span></summary><p>There's usually at least one other person who doesn't want to either. Saying no is easier with two.</p></details>
-        <details class="row"><summary>🚪 Leave.<span class="row-cue" aria-hidden="true"></span></summary><p>You're always allowed to walk away, go home, or call for a ride.</p></details>
+      <div class="fold-label">The core skill</div>
+      <h3 class="sticker">Make the call before the moment.</h3>
+      <p>The pull is strongest when people are watching, so the decision has to happen earlier. These are the pieces.</p>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Know your lines now.<span class="row-cue" aria-hidden="true"></span></summary><p>Decide what you won't do, and what you'd need to see before you'd change your mind. Write it down if that helps. It's a decision you make once instead of every Saturday.</p></details>
+        <details class="row"><summary><span class="num">2</span> Keep it short.<span class="row-cue" aria-hidden="true"></span></summary><p>"Nah, I'm good." You don't owe a speech. Long explanations give people something to argue with.</p></details>
+        <details class="row"><summary><span class="num">3</span> Repeat, same words.<span class="row-cue" aria-hidden="true"></span></summary><p>If they push, say it again the same way, same tone. Calm and a little boring is very hard to argue with.</p></details>
+        <details class="row"><summary><span class="num">4</span> Offer a swap.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'll pass, but I'm down for food after." Changing the plan lets everyone save face, including you.</p></details>
+        <details class="row"><summary><span class="num">5</span> Bring a second.<span class="row-cue" aria-hidden="true"></span></summary><p>Peer effects run both ways. One friend who says "same, I'm good" makes the next no easier for everyone. Agree on it before you go.</p></details>
+        <details class="row"><summary><span class="num">6</span> Have an exit.<span class="row-cue" aria-hidden="true"></span></summary><p>You can always leave, go home, or call for a ride. Set up the code word below so leaving is one text away.</p></details>
     </div>
 
     <details class="fold ">
@@ -502,22 +590,23 @@
         <div>
           <h3 style="font-size:1rem">Simple</h3>
           <div class="script">"Nah, I'm good."</div>
-          <div class="script">"Not my thing."</div>
+          <div class="script">"Not tonight."</div>
           <div class="script">"I'll pass."</div>
         </div>
         <div>
-          <h3 style="font-size:1rem">With an out</h3>
-<div ><div class="script">"I'm driving later."</div><div class="script">"I have a game tomorrow."</div><div class="script">"I have work early tomorrow."</div></div>
+          <h3 style="font-size:1rem">With a reason</h3>
+<div ><div class="script">"I'm driving."</div><div class="script">"I have a game in the morning."</div><div class="script">"I open at work tomorrow."</div></div>
         </div>
       </div>
-      <p style="margin:10px 0 0">Blaming a parent, a coach, or a schedule is completely fine. It's a tool, not a lie you need to feel bad about.</p>
+      <p style="margin:10px 0 0">Using a parent, a coach, a job, or your faith as the reason is fine. In a lot of families, "my parents would never be okay with that" is simply true, and saying so isn't weak. Use whatever reason fits your actual life.</p>
       </div>
     </details>
 
     <details class="fold ">
       <summary><span class="fold-label">Make a code word plan</span><span class="sticker">One text, and you've got a way out.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Set up a code word or emoji with a parent or trusted adult. If you text it, they call you with an "emergency" and come get you, no questions asked in the moment. You get out, and nobody has to know why.</p>
+      <p>Set up a code word or emoji with an adult you trust. If you text it, they call with an "emergency" and come get you, with the questions saved for later or skipped. You get out, and nobody has to know why.</p>
+      <p>It doesn't have to be a parent. If home wouldn't be a calm place to make that call, pick an older sibling or cousin, an aunt or uncle, a family friend, or a coach. Some families would want to talk it through the next day. Agree on that part ahead of time too.</p>
       <label class="prompt" for="tx-1">My code word or emoji:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-2">Who I'll set it up with:</label>
@@ -526,57 +615,65 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What would you say?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the response you'd use.</p>
-      
-      
+      <p>Pick the response you'd actually use.</p>
       <div class="scenario" >
-        <p>You're at a party. Someone hands you a vape and says "just hit it once."</p>
+        <p>Ayesha got her license two months ago. She offers to drive you and three friends into Boston for a concert.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Nicotine is highly addictive for developing brains, and &quot;just once&quot; is how a lot of people start. It's also usually not as weird to say no as it feels.">Take one hit so it's not weird</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Perfect. No explanation, no lecture, and the moment passes.">"Nah, I'm good," and keep talking</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Also great. An out like that is quick and nobody pushes back much.">"I have a game tomorrow," and pass it on</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Three teen passengers roughly triples a new driver's risk of a fatal crash, and in Massachusetts it isn't legal in her first six months unless a licensed adult 21 or older is in the front seat.">Pile in, it's not that far</button>
+          <button class="choice" type="button" data-fb="good" data-msg="This keeps the night and drops the risk. Splitting up, a parent driving, or the train all work. Nobody has to make Ayesha the bad guy.">"Let's take the train in, or ask someone's parent to drive"</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Fewer passengers is safer, but unless you're her family, any passenger under 18 is still against her license rules for now. Is there another way in?">Just you ride with her, the others find another way</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
       <div class="scenario" >
         <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>The person who drove you to the party has been drinking. Everyone's getting in the car.</p>
+        <p>You're at a party. Someone keeps topping off your cup, and you've decided you're done.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Never ride with someone who has been drinking or using. Even a short drive can be deadly.">Get in, it's a short drive</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Exactly right. This is what the code word plan is for. Any adult who cares about you would rather get that call.">Text your code word or call for a ride</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Good instinct, and worth trying. Make sure you get yourself a safe ride either way.">Try to convince everyone not to go</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That puts their pace in charge of your night. You already made the decision, at home. Trust that version of you.">Keep drinking so they stop asking</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Short, calm, and it ends the conversation. Holding a cup of something else stops most refills before they start.">"I'm good," and switch to water or soda</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Also strong. Leaving is always allowed, and the code word means you don't have to explain anything tonight.">Find your friend, or text your code word and head out</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">The best no is the one you can actually say in the moment. Practicing it now makes it easier later.</p>
+      <div class="scenario" >
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Dev, a good friend, texts: "can you send your history essay? just want to see how you structured it."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Once it's sent, you don't control what happens to it. If his ends up too close to yours, both of you can face an academic integrity case.">Send it, he said he won't copy</button>
+          <button class="choice" type="button" data-fb="good" data-msg="You help him for real and keep your work yours. He gets the structure, and nobody's essay is in anyone else's inbox.">"Can't send it, but I'll walk you through my outline on a call"</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It avoids the problem, but leaving a friend on read feels like a no without the respect. A clear, kind answer is better for the friendship.">Leave it on read and hope he forgets</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">The best no is one you can actually say. Saying it out loud once now makes it easier later.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it harder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually make it harder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>📜 Over-explaining.<span class="row-cue" aria-hidden="true"></span></summary><p>Long reasons give people more to argue with. Short is stronger.</p></details>
-        <details class="row"><summary>🧑‍⚖️ Lecturing your friends.<span class="row-cue" aria-hidden="true"></span></summary><p>"That's so dumb, you guys are going to get caught." It puts people on the defensive. Saying what you will do works better than judging them.</p></details>
-        <details class="row"><summary>🎲 Deciding in the moment.<span class="row-cue" aria-hidden="true"></span></summary><p>That's exactly when pressure is strongest. Decide ahead of time.</p></details>
-        <details class="row"><summary>🤫 Keeping it to yourself when something's dangerous.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone could get hurt, telling an adult isn't snitching. It's looking out.</p></details>
+        <details class="row"><summary>Over-explaining.<span class="row-cue" aria-hidden="true"></span></summary><p>Every reason you give is something to argue with. Short is stronger.</p></details>
+        <details class="row"><summary>Lecturing your friends.<span class="row-cue" aria-hidden="true"></span></summary><p>"You guys are going to get caught" puts people on the defensive. Saying what <em>you'll</em> do works better than judging them.</p></details>
+        <details class="row"><summary>Deciding in the moment.<span class="row-cue" aria-hidden="true"></span></summary><p>That's exactly when your reward system is loudest. Decide ahead of time.</p></details>
+        <details class="row"><summary>Staying silent when something's dangerous.<span class="row-cue" aria-hidden="true"></span></summary><p>If someone could get hurt, getting help isn't snitching. It's looking out.</p></details>
       </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">Silence is a no. So is not sending.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">When the pressure is online</span><span class="sticker">Silence is a no. So is not sending.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🛑 You can just not respond.</dt>
+        <dt>You can just not respond.</dt>
         <dd>A dare in the chat doesn't need an answer. Silence is a no.</dd>
-        <dt>📵 Nothing gets posted or sent without you.</dt>
-        <dd>If you're unsure, don't. Once it's out, you can't take it back.</dd>
-        <dt>🙋 Tell an adult about dangerous challenges.</dt>
-        <dd>If a challenge could hurt someone, telling an adult is looking out.</dd>
-        <dt>📷 Photos are a hard line.</dt>
+        <dt>Nothing gets posted or sent without you.</dt>
+        <dd>If you're unsure, don't. Once it's out, you can't pull it back.</dd>
+        <dt>Dangerous challenges are worth reporting.</dt>
+        <dd>If a trend could hurt someone, telling an adult is looking out.</dd>
+        <dt>Photos are a hard line.</dt>
         <dd>If anyone asks for a nude or sexual photo, the answer is no, and you can tell an adult. See When Someone Asks for a Photo.</dd>
       </dl>
       </div>
@@ -585,13 +682,29 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Get help right away if</h3>
       <ul class="tight">
-        <li>Someone is in danger, passed out, or can't be woken up: call <a href="tel:911">911</a>.</li>
+        <li>Someone is passed out, can't be woken up, or is breathing very slowly: call <a href="tel:911">911</a> and stay with them.</li>
         <li>You're being pressured into anything sexual, or to send photos.</li>
         <li>Someone is threatening you if you say no.</li>
-        <li>A friend is in trouble with substances and you're worried about them.</li>
+        <li>A friend is in trouble with alcohol or drugs and you're worried about them.</li>
       </ul>
-      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
+      <p>Massachusetts' Good Samaritan law protects a person who calls for help during a drug overdose, and the person who overdosed, from drug possession charges. Whatever the situation, a life matters more than getting in trouble.</p>
+      <p style="margin:0">A counselor can help you sort out the rest. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Chein, J., Albert, D., O'Brien, L., Uckert, K., &amp; Steinberg, L. (2011). Peers increase adolescent risk taking by enhancing activity in the brain's reward circuitry. <i>Developmental Science, 14</i>(2), F1&ndash;F10.</li>
+        <li>Gardner, M., &amp; Steinberg, L. (2005). Peer influence on risk taking, risk preference, and risky decision making in adolescence and adulthood: An experimental study. <i>Developmental Psychology, 41</i>(4), 625&ndash;635.</li>
+        <li>Prentice, D. A., &amp; Miller, D. T. (1993). Pluralistic ignorance and alcohol use on campus: Some consequences of misperceiving the social norm. <i>Journal of Personality and Social Psychology, 64</i>(2), 243&ndash;256.</li>
+        <li>Hoots, B. E., et al. (2023). Alcohol and other substance use before and during the COVID-19 pandemic among high school students: Youth Risk Behavior Survey, United States, 2021. <i>MMWR Supplements, 72</i>(1), 84&ndash;92.</li>
+        <li>Givi, J., &amp; Kirk, C. P. (2024). Saying no: The negative ramifications from invitation declines are less severe than we think. <i>Journal of Personality and Social Psychology, 126</i>(6), 1103&ndash;1115.</li>
+        <li>Chen, L.-H., Baker, S. P., Braver, E. R., &amp; Li, G. (2000). Carrying passengers as a risk factor for crashes fatal to 16- and 17-year-old drivers. <i>JAMA, 283</i>(12), 1578&ndash;1582.</li>
+        <li>Massachusetts General Laws c. 90, &sect; 8 (junior operator passenger restriction); c. 94C, &sect; 34A (Good Samaritan protection for drug overdose).</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -602,26 +715,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-3">A time I said yes when I wanted to say no, and how it felt after</label>
+      <label class="prompt" for="tx-3">A time I said yes when I meant no. What was I afraid it would cost me?</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">My lines, the things I've already decided I won't do</label>
+      <label class="prompt" for="tx-4">My lines, decided now, while nobody is watching</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-5">My go-to way to say no, in words that sound like me</label>
+      <label class="prompt" for="tx-5">My go-to no, in words that sound like me</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">A friend who would back me up</label>
+      <label class="prompt" for="tx-6">The friend I'd ask to be my second, and what I'd say to set that up</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">How I'd want a friend to respond if they said no to me</label>
+      <label class="prompt" for="tx-7">How I react when a friend tells me no. Do I make it easy for them?</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Saying no to something isn't saying no to your friends. The people worth keeping will still be there.</p>
+      <p>Your judgment doesn't disappear around friends. It just gets outvoted in the moment. Decide early, keep it short, and the people worth keeping will still be there.</p>
     </div>
     </div>
   </div>
@@ -636,7 +749,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with peer pressure today?</h3>
+        <h3 id="ci-1">How much is pressure from people around you on your mind today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -669,11 +782,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-regret" aria-pressed="false">😞 Regretting a yes</button>
-          <button type="button" class="choice" data-path="p-worried" aria-pressed="false">😟 Worried about what's coming</button>
-          <button type="button" class="choice" data-path="p-left" aria-pressed="false">🫥 Left out for saying no</button>
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😰 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-proud" aria-pressed="false">💪 Proud I said no</button>
+          <button type="button" class="choice" data-path="p-regret" aria-pressed="false">Regretting a yes</button>
+          <button type="button" class="choice" data-path="p-worried" aria-pressed="false">Worried about what's coming</button>
+          <button type="button" class="choice" data-path="p-left" aria-pressed="false">Left out for saying no</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-proud" aria-pressed="false">Proud I said no</button>
         </div>
 
         <div class="path-panel" id="p-regret" hidden>
@@ -714,7 +827,7 @@
           <ul>
             <li><span class="e" aria-hidden="true">🗣</span>Tell them you're worried, privately and without a lecture.</li>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult. That's looking out, not snitching.</li>
-            <li><span class="e" aria-hidden="true">🚨</span>If they're in danger right now, call 911.</li>
+            <li><span class="e" aria-hidden="true">🚨</span>If they're in danger right now, call 911. If it's about their mental health, 988 can help too.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-proud" hidden>

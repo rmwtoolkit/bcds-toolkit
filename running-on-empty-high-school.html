@@ -362,6 +362,70 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure: sleep brain */
+  .fig svg.sleepbrain { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +445,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">😴 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>Running on Empty</h1>
-  <p class="tagline">Because your brain needs sleep, and your teenage clock makes it complicated.</p>
+  <p class="tagline">Your body clock moved later. School didn&#39;t. What that does to your brain, and the parts you can actually control.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +473,97 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Sleep and the teenage brain</h2>
+    <h2 id="h-understand">What short sleep does to a teenage brain</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Tired all day. Wide awake at 11.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Wired at midnight. Wrecked at 7.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You're exhausted all day, then wide awake at 11 at night.</li>
-        <li>Your alarm feels like a personal attack.</li>
-        
-        <li >You've nodded off in class, or felt foggy while driving.</li>
-        <li>You stayed up late on your phone and regretted it in the morning.</li>
-        <li>You sleep until noon on weekends and still feel tired Monday.</li>
-        <li>Small things make you cry or snap when you haven't slept enough.</li>
+        <li>You get home from practice or a shift at 9, start homework at 10, and feel most awake around midnight.</li>
+        <li>You've caught yourself drifting on the drive to school.</li>
+        <li>Coffee or an energy drink is part of your morning, then part of your afternoon too.</li>
+        <li>You sleep until 1 on Saturday, and Monday still feels like jet lag.</li>
+        <li>Small things set you off, and later you can't say why.</li>
       </ul>
-      <p style="margin:0">Teen sleep problems are incredibly common, and a lot of it is biology, not bad choices.</p>
+      <p style="margin:0">You've heard "teens need more sleep" plenty of times. Here's what's actually going on inside your head, and what you can change even when your schedule isn't fully yours.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">What's going on with teen sleep</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🕰</span><strong>Your clock shifted</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">During puberty, your body starts releasing the sleep hormone melatonin later at night. That's why you're not sleepy at 9 anymore.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">⏰</span><strong>School starts early</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Your body wants to sleep later, but school doesn't move. The gap leaves a lot of teens short on sleep every night.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📱</span><strong>Screens keep you up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Phones are engaging by design, and late-night light can push sleepiness back even further.</p></details>
+    <h3 style="margin-top:28px">Your sleep runs on a clock inside your brain</h3>
+    <figure class="fig">
+<svg class="sleepbrain" viewBox="0 0 400 272" role="img" aria-labelledby="sb-t sb-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="sb-t">Side view of the brain showing the sleep system</title>
+  <desc id="sb-d">Light enters the eye and travels along the underside of the brain to the master clock, the suprachiasmatic nucleus, in the hypothalamus. The pineal gland sits deep near the back and releases melatonin. The hippocampus and amygdala sit low in the temporal lobe. The prefrontal cortex is at the front.</desc>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <!-- eye and light path -->
+  <path d="M22 170 C30 160 46 160 54 170 C46 180 30 180 22 170 Z" fill="#fff" stroke="#8A7F72" stroke-width="1.6"/>
+  <circle cx="40" cy="170" r="5.5" fill="#6E6E73"/>
+  <path d="M56 170 C96 178 150 176 188 168" fill="none" stroke="#D9822B" stroke-width="2" stroke-dasharray="5 4"/>
+  <!-- prefrontal cortex -->
+  <path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <!-- hippocampus -->
+  <path d="M214 182 C228 176 244 170 258 158" fill="none" stroke="#1A8F6E" stroke-width="9" stroke-linecap="round"/>
+  <!-- amygdala -->
+  <ellipse cx="204" cy="184" rx="9" ry="6.5" fill="#C0392B"/>
+  <!-- SCN in hypothalamus -->
+  <circle cx="192" cy="166" r="6.5" fill="#D9822B"/>
+  <!-- pineal gland -->
+  <ellipse cx="264" cy="140" rx="6" ry="4.5" fill="#7A4FB5"/>
+  <g font-family="inherit" font-size="13" font-weight="700">
+    <line x1="92" y1="112" x2="56" y2="36" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="92" cy="112" r="3" fill="#2E6DB4"/>
+    <text x="8" y="28" fill="#245A96">Prefrontal cortex</text>
+    <line x1="264" y1="140" x2="330" y2="36" stroke="#7A4FB5" stroke-width="1.5"/><circle cx="264" cy="140" r="3" fill="#7A4FB5"/>
+    <text x="392" y="28" fill="#5E3B8F" text-anchor="end">Pineal gland</text>
+    <line x1="192" y1="166" x2="112" y2="236" stroke="#B8691C" stroke-width="1.5"/><circle cx="192" cy="166" r="3" fill="#B8691C"/>
+    <text x="8" y="252" fill="#9A5714">Master clock (SCN)</text>
+    <line x1="204" y1="184" x2="196" y2="246" stroke="#C0392B" stroke-width="1.5"/>
+    <text x="196" y="264" fill="#A3301F" text-anchor="middle">Amygdala</text>
+    <line x1="246" y1="168" x2="340" y2="236" stroke="#1A8F6E" stroke-width="1.5"/><circle cx="246" cy="168" r="3" fill="#1A8F6E"/>
+    <text x="392" y="252" fill="#146B53" text-anchor="end">Hippocampus</text>
+    <text x="38" y="198" fill="#9A5714" text-anchor="middle" font-size="12">Light</text>
+  </g>
+</svg>
+      <figcaption>Side view, face on the left, with deeper structures drawn as if the brain were see-through. The dashed line is the route light takes from your eyes to your master clock. Simplified.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Master clock (SCN): sets the time</strong><p>A tiny cluster of cells in the hypothalamus that runs your daily rhythm. It sets itself mostly by light coming in through your eyes. Morning light pulls it earlier. Bright screens and rooms late at night push it later.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Pineal gland: sends the "night" signal</strong><p>When the clock says evening, it releases melatonin, the hormone that makes you sleepy. During puberty that release starts later at night. That's a big reason you're not tired at 10 anymore.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1A8F6E"></span><div><strong>Hippocampus: files what you learned</strong><p>During sleep it replays the day and moves it into long-term memory. In a Harvard sleep lab study, people kept awake all night were up to 40% worse at forming new memories the next day, and their hippocampus was less active.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: gets louder</strong><p>Your threat detector. After a night without sleep, it reacted about 60% more strongly to upsetting images, and its connection to the prefrontal cortex weakened. Tired brains overreact.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: first to fade</strong><p>Judgment, focus, patience, and impulse control live here. It's one of the first systems to slip when you're short on sleep. That's why a tired day feels like a shorter fuse.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Less sleep makes everything harder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">This is biology, not bad habits.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>You need more sleep than you think.</dt>
-        <dd>Sleep experts recommend 8 to 10 hours a night for teens. Many students get much less.</dd>
-        <dt>Sleep affects everything.</dt>
-        <dd>Mood, memory, focus, patience, athletic performance, how often you get sick. Short sleep makes all of them harder.</dd>
-        <dt>You can't fully catch up on weekends.</dt>
-        <dd>Sleeping until noon shifts your clock later again, which makes Sunday night and Monday morning even harder. Some call it social jet lag.</dd>
-        <dt>Being tired feels like being sad or anxious.</dt>
-        <dd>Not enough sleep can make emotions bigger and harder to manage. Sometimes the fix for a bad mood is a good night's sleep.</dd>
+        <dt>Your clock really did move.</dt>
+        <dd>In a 1998 study, sleep researcher Mary Carskadon's team tested 10th graders whose school started at 7:20. On morning nap tests, 12 of 25 fell straight into dream (REM) sleep, a pattern sleep doctors usually see in narcolepsy. Their brains thought it was still the middle of the night.</dd>
+        <dt>You need 8 to 10 hours. Most people your age get less.</dt>
+        <dd>That's the American Academy of Sleep Medicine's recommendation for ages 13 to 18. In the CDC's 2023 national survey, about 77% of high school students got less than 8 hours on a typical school night.</dd>
+        <dt>Later start times work.</dt>
+        <dd>When Seattle moved high school start times from 7:50 to 8:45, students got about 34 more minutes of sleep a night, and median grades rose 4.5%. It was one district and not a randomized trial, but it's one of the clearest real-world tests so far.</dd>
+        <dt>You stop noticing the damage.</dt>
+        <dd>In a classic lab study, adults who slept 6 hours a night for two weeks kept getting worse on attention and memory tests. Their sense of how sleepy they were leveled off after a few days. They felt "used to it." Their performance said otherwise.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Your phone and your sleep</span><span class="sticker">The group chat can wait till morning.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Driving tired</span><span class="sticker">Four hours of sleep, four times the crash rate.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Late-night scrolling, group chats, and gaming keep your brain switched on. Notifications can wake you up even when you're asleep. And it's hard to put down a phone when your friends are still awake and talking.</p>
-      <p class="worst">The worst part: when everyone's up late in the group chat, logging off can feel like missing out. But sleep is what makes the next day feel okay.</p>
+      <p>A AAA Foundation study of more than 4,500 crashes found that drivers who'd slept 4 to 5 hours in the past day had about 4 times the crash rate of drivers who slept 7 or more. Under 4 hours, it was about 11 times.</p>
+      <p class="worst">Windows down and loud music don't fix drowsiness. If you're drifting, pull over somewhere safe, call someone, or take a ride. That's the adult call, not the dramatic one.</p>
       </div>
     </details>
   </div>
@@ -465,54 +572,79 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Run your own sleep system</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Small changes, better nights.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>📵 Phone out of the bedroom.<span class="row-cue" aria-hidden="true"></span></summary><p>Or at least across the room, on Do Not Disturb. This one change helps a lot of people.</p></details>
-        <details class="row"><summary>🕘 A consistent wake-up time.<span class="row-cue" aria-hidden="true"></span></summary><p>Waking up at about the same time every day, even weekends (within an hour or two), helps your clock settle.</p></details>
-        <details class="row"><summary>🌙 A wind-down routine.<span class="row-cue" aria-hidden="true"></span></summary><p>Same few steps every night: shower, dim lights, read, music. It tells your brain sleep is coming.</p></details>
-        <details class="row"><summary>☀️ Morning light.<span class="row-cue" aria-hidden="true"></span></summary><p>Getting outside or near a window soon after waking helps reset your clock earlier.</p></details>
-        <details class="row"><summary>☕ Watch the caffeine.<span class="row-cue" aria-hidden="true"></span></summary><p>Caffeine can stay in your system for hours. Energy drinks or coffee after lunch can make it harder to fall asleep.</p></details>
-        <details class="row"><summary>😴 Nap smart.<span class="row-cue" aria-hidden="true"></span></summary><p>If you nap, keep it short (about 20 minutes) and before late afternoon, so it doesn't steal your nighttime sleep.</p></details>
+      <div class="fold-label">The levers</div>
+      <h3 class="sticker">What you control, even when your schedule doesn't bend.</h3>
+      <div class="levers">
+        <div class="lever"><b>Light</b><span>Get bright light, outside if you can, in the first hour after you wake up. Dim screens and lights in the last hour before bed. This is how you move the clock.</span></div>
+        <div class="lever"><b>A wake-up anchor</b><span>Keep weekend wake-ups within about two hours of school days. Sleeping until 1pm is like flying a few time zones west every Saturday.</span></div>
+        <div class="lever"><b>A caffeine cutoff</b><span>In a sleep lab study, caffeine taken 6 hours before bed still cost people about an hour of sleep, and they didn't notice. Set your cutoff by early afternoon.</span></div>
+        <div class="lever"><b>The phone's bedtime</b><span>Charge it outside your room. If it's your alarm or you share a room, put it across the room on Do Not Disturb.</span></div>
+      </div>
+      <p style="margin:14px 0 0">Not every household runs on the same clock. Late family dinners, a shared bedroom, someone working nights, younger siblings to get to bed: you may not control when the house goes quiet. Start with what you do control, and if something at home is costing you sleep, it's fair to talk about it with your family. What does a school night look like at your place?</p>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">More tools</div>
+      <h3 class="sticker">For the nights that go sideways.</h3>
+      <p class="tap-hint">Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Protect the night before a test.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep is part of studying. Your hippocampus does its filing overnight. Thirty minutes on the most important material, then sleep, usually beats three more hours of cramming.</p></details>
+        <details class="row"><summary><span class="num">2</span> Can't fall asleep? Get up.<span class="row-cue" aria-hidden="true"></span></summary><p>If you've been lying awake for what feels like 20 minutes, get up, do something boring in dim light, and go back when you're sleepy. Lying there trying teaches your brain that bed is for worrying.</p></details>
+        <details class="row"><summary><span class="num">3</span> Nap with a plan.<span class="row-cue" aria-hidden="true"></span></summary><p>About 20 minutes, before mid-afternoon. Longer or later naps steal from tonight.</p></details>
+        <details class="row"><summary><span class="num">4</span> Ask for the schedule change.<span class="row-cue" aria-hidden="true"></span></summary><p>Coaches, managers, and teachers adjust things more often than students expect. "I'm closing three school nights a week and it's wrecking my sleep. Could I end at 9 on Mondays?" is a reasonable ask.</p></details>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Work backward from your alarm.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick when you need to wake up. This shows when you'd need to be asleep to get 9 hours, and when to start winding down.</p>
+      <p>Put in when you need to be up. You'll see when you'd need to be asleep, and when to start winding down.</p>
       <div class="tool-row" style="align-items:center"><label for="wake-time" style="font-weight:600">I need to wake up at:</label> <input id="wake-time" type="time" value="06:30" autocomplete="off" style="padding:8px;border:1px solid var(--line);border-radius:10px;font:inherit"></div>
       <div id="sleep-out" class="feedback good" aria-live="polite" style="margin-top:12px"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Late night choices. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three tired students. What's the smart move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      
-      <div class="scenario" >
-        <p>You have a test tomorrow and still have a lot to study at midnight.</p>
+      <div class="scenario">
+        <p>Dev works at a grocery store until 10 three nights a week. He starts homework after his shift and is usually up until 1.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Sleep is when your brain locks in what you studied. Skipping it often means remembering less.">Pull an all-nighter</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Smart. Prioritize, then let sleep do its job.">Study 30 more minutes on the most important stuff, then sleep</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="It might keep you awake, but you'll be foggy tomorrow and it can wreck tomorrow night's sleep too.">Energy drink and keep going</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. He can't stretch the night, so he moves the work and shortens the late nights. A lot of managers will adjust a student's hours if asked.">Move the hard homework before his shift and ask to end earlier on school nights</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Caffeine that late can cost him an hour of sleep he won't even notice losing. Tomorrow gets harder, not easier.">An energy drink at 10:30 so he stays sharp</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Some extra sleep helps. Shifting his wake time by four or five hours pushes his clock later and makes Monday worse. An hour or two extra is the safer range.">Sleep until noon on weekends to make it up</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Amara has a calc test at 8am. It's 12:30am and she still has two units to review.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Sleep is when her brain locks in what she already studied. Cutting it trades memory for more material she won't keep.">Review the unit most likely to be on the test for 20 minutes, then sleep</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="An all-nighter means taking the test with a brain that forms and retrieves memories worse, and a louder stress response.">Stay up and cover both units</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than all night, as long as she still gets most of her sleep. It's still a trade, so keep the morning session short.">Sleep now, set an alarm for 5:30 to finish</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Luis slept five hours before a 6am lift. On the drive over, he caught himself drifting at a red light.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. At five hours of sleep, crash risk is well above normal. Asking for a ride, or skipping one early session, is the smart call.">Tell his coach and get a ride on short-sleep mornings</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Those tricks don't touch drowsiness. If he's drifting, he isn't safe to drive.">Roll the windows down and turn the music up</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Caffeine helps a little and takes a while to kick in. It doesn't make a drowsy driver safe on the way there.">Grab coffee on the way</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These quick fixes usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths about sleep</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🛌 Sleeping in until noon on weekends.<span class="row-cue" aria-hidden="true"></span></summary><p>A little extra is okay. Way later shifts your clock and makes Monday rough.</p></details>
-        <details class="row"><summary>⚡ Energy drinks to get through.<span class="row-cue" aria-hidden="true"></span></summary><p>They borrow energy from later and can make sleep worse.</p></details>
-        <details class="row"><summary>📱 Scrolling in bed until you're tired.<span class="row-cue" aria-hidden="true"></span></summary><p>The phone usually keeps you awake longer, not shorter.</p></details>
-        <details class="row"><summary>🌀 Lying awake stressing about not sleeping.<span class="row-cue" aria-hidden="true"></span></summary><p>If you can't sleep after a while, get up, do something calm in dim light, and try again.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I've trained myself to need less.</span><span class="row-cue" aria-hidden="true"></span></summary><p>You've trained yourself to feel used to it. In the lab, people on 6 hours a night stopped feeling sleepier after a few days while their test scores kept dropping.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Melatonin gummies fix it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Melatonin is a timing signal, not a knockout pill. Supplements also aren't regulated like medicine: a 2023 JAMA study found gummies held anywhere from 74% to 347% of the dose on the label. Talk to a doctor before using it regularly.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'll catch up on the weekend.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A little extra helps. Sleeping until the afternoon shifts your clock later and sets up a rough Sunday night.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Scrolling helps me wind down.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Feeds are built to keep you going, and bright light late at night pushes your clock back. A show on a TV across the room is a better bet than a phone in your hand.</p></details>
       </div>
       </div>
     </details>
@@ -520,13 +652,32 @@
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>When to get more help</h3>
       <ul class="tight">
-        <li>You have trouble falling or staying asleep most nights for weeks.</li>
-        <li>You're exhausted even after a full night's sleep.</li>
-        <li>Worry or sad thoughts keep you up at night.</li>
-        <li>You've felt drowsy while driving. Never drive drowsy: pull over or get a ride.</li>
+        <li>Trouble falling or staying asleep most nights for weeks.</li>
+        <li>Exhausted even after a full night's sleep.</li>
+        <li>Worry, sadness, or racing thoughts keep you up.</li>
+        <li>Loud snoring or gasping in your sleep (someone else may notice first).</li>
+        <li>You've nodded off while driving. Don't drive drowsy: pull over or get a ride.</li>
       </ul>
-      <p style="margin:0">A counselor, school nurse, or doctor can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor, the school nurse, or a doctor can help. Long-running insomnia has a well-tested treatment that doesn't involve medicine. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Carskadon, M., Wolfson, A., Acebo, C., Tzischinsky, O., &amp; Seifer, R. (1998). Adolescent sleep patterns, circadian timing, and sleepiness at a transition to early school days. <i>Sleep</i>.</li>
+        <li>Paruthi, S., et al. (2016). Recommended amount of sleep for pediatric populations: A consensus statement of the American Academy of Sleep Medicine. <i>Journal of Clinical Sleep Medicine</i>.</li>
+        <li>Centers for Disease Control and Prevention. (2024). Youth Risk Behavior Survey: Data summary and trends report, 2013 to 2023.</li>
+        <li>Dunster, G., et al. (2018). Sleepmore in Seattle: Later school start times are associated with more sleep and better performance in high school students. <i>Science Advances</i>.</li>
+        <li>Yoo, S., Hu, P., Gujar, N., Jolesz, F., &amp; Walker, M. (2007). A deficit in the ability to form new human memories without sleep. <i>Nature Neuroscience</i>.</li>
+        <li>Yoo, S., Gujar, N., Hu, P., Jolesz, F., &amp; Walker, M. (2007). The human emotional brain without sleep: A prefrontal amygdala disconnect. <i>Current Biology</i>.</li>
+        <li>Van Dongen, H., Maislin, G., Mullington, J., &amp; Dinges, D. (2003). The cumulative cost of additional wakefulness. <i>Sleep</i>.</li>
+        <li>Drake, C., Roehrs, T., Shambroom, J., &amp; Roth, T. (2013). Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. <i>Journal of Clinical Sleep Medicine</i>.</li>
+        <li>Tefft, B. (2018). Acute sleep deprivation and culpable motor vehicle crash involvement. <i>Sleep</i>.</li>
+        <li>Cohen, P., Avula, B., Wang, Y., Katragunta, K., &amp; Khan, I. (2023). Quantity of melatonin and CBD in melatonin gummies sold in the US. <i>JAMA</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -537,26 +688,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">How much sleep I actually get on a school night, honestly</label>
+      <label class="prompt" for="tx-1">My real school-night sleep, averaged over the last week</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">What keeps me up most</label>
+      <label class="prompt" for="tx-2">What eats my sleep: schedule, phone, worry, work, caffeine, or something else</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">How I feel on a day after good sleep versus bad sleep</label>
+      <label class="prompt" for="tx-3">How I'm different on 6 hours versus 8: mood, focus, patience</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">One change I'm willing to try this week</label>
+      <label class="prompt" for="tx-4">One lever I'll pull this week, and exactly how</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What my ideal wind-down routine would look like</label>
+      <label class="prompt" for="tx-5">What I'd need from someone else (family, a coach, a manager, a teacher) to protect my sleep</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Being tired isn't a personal failing. Your body is asking for something it really needs. Listening to it is one of the best things you can do for your mood, your grades, and yourself.</p>
+      <p>Sleep isn't the thing you cut to make room for everything else. It's what makes everything else work. Guard it the way you'd guard anything that matters to you.</p>
     </div>
     </div>
   </div>
@@ -571,7 +722,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with sleep today?</h3>
+        <h3 id="ci-1">Where's your sleep at today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -584,16 +735,16 @@
         <h3>What's been most present today?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">exhausted</button>
+          <button type="button" class="chip" aria-pressed="false">5 hours or less</button>
           <button type="button" class="chip" aria-pressed="false">couldn't fall asleep</button>
           <button type="button" class="chip" aria-pressed="false">woke up a lot</button>
           <button type="button" class="chip" aria-pressed="false">up late on my phone</button>
-          <button type="button" class="chip" aria-pressed="false">stayed up studying</button>
-          <button type="button" class="chip" aria-pressed="false">too much caffeine</button>
-          <button type="button" class="chip" aria-pressed="false">worried thoughts kept me up</button>
-          <button type="button" class="chip" aria-pressed="false">slept through my alarm</button>
-          <button type="button" class="chip" aria-pressed="false">got a good night's sleep</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">worked late</button>
+          <button type="button" class="chip" aria-pressed="false">studied late</button>
+          <button type="button" class="chip" aria-pressed="false">caffeine after lunch</button>
+          <button type="button" class="chip" aria-pressed="false">racing thoughts</button>
+          <button type="button" class="chip" aria-pressed="false">drowsy behind the wheel</button>
+          <button type="button" class="chip" aria-pressed="false">slept well</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
       </div>
@@ -602,61 +753,62 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-tired" aria-pressed="false">😴 Exhausted, running on fumes</button>
-          <button type="button" class="choice" data-path="p-wired" aria-pressed="false">🌀 Tired but wired at night</button>
-          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">😟 Worry keeps me up</button>
-          <button type="button" class="choice" data-path="p-phone" aria-pressed="false">📱 Can't put the phone down</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Slept well</button>
+          <button type="button" class="choice" data-path="p-tired" aria-pressed="false">Running on fumes</button>
+          <button type="button" class="choice" data-path="p-wired" aria-pressed="false">Tired but wired at night</button>
+          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">Worry keeps me up</button>
+          <button type="button" class="choice" data-path="p-phone" aria-pressed="false">Can't put the phone down</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Slept well</button>
         </div>
 
         <div class="path-panel" id="p-tired" hidden>
           <h4>What this might mean</h4>
-          <p>Your body is low on fuel. Everything feels harder on low sleep, and that's not your fault.</p>
+          <p>Your prefrontal cortex is low on fuel, so patience and focus are too. That's physiology, not character.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🛌</span>Make tonight an early night. Even 30 minutes earlier helps.</li>
-            <li><span class="e" aria-hidden="true">☀️</span>Get some daylight this morning to help you wake up.</li>
-            <li><span class="e" aria-hidden="true">😴</span>If you need a nap, keep it to 20 minutes before late afternoon.</li>
+            <li>Get bright light in the first hour of your day.</li>
+            <li>If you nap, keep it to about 20 minutes and before mid-afternoon.</li>
+            <li>Don't drive drowsy. Get a ride if you need one.</li>
+            <li>Aim for 30 minutes earlier tonight.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-wired" hidden>
           <h4>What this might mean</h4>
-          <p>Your clock is running late, and maybe your brain is busy too. That's a really common teen combo.</p>
+          <p>Your clock is running late, and light at night pushes it later still.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📵</span>Phone across the room tonight.</li>
-            <li><span class="e" aria-hidden="true">🌙</span>Start a 20-minute wind-down: dim lights, something calm.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write tomorrow's to-do list before bed so your brain can let go.</li>
+            <li>Dim lights and screens for the last hour.</li>
+            <li>Get morning light tomorrow, as early as you can.</li>
+            <li>Keep tomorrow's wake time the same, even if tonight runs late.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-worry" hidden>
           <h4>What this might mean</h4>
-          <p>Racing thoughts at night are hard. Sometimes the quiet makes worries louder.</p>
+          <p>Quiet rooms make worries louder, and lying awake can turn bed into the place where you worry.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">✍️</span>Write the worries down and tell yourself you'll deal with them tomorrow.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, ten times.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>If this happens a lot, talk to a counselor. Worry is very treatable.</li>
+            <li>Write a to-do list or a worry list before bed so your brain doesn't have to hold it.</li>
+            <li>Awake a long time? Get up, keep the light dim, do something boring, go back when sleepy.</li>
+            <li>If this is most nights, talk to a counselor. It's very treatable.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-phone" hidden>
           <h4>What this might mean</h4>
-          <p>Apps are designed to keep you up. You're up against professionals.</p>
+          <p>Apps are built by professionals to keep you on them. Willpower at midnight is a weak plan.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏰</span>Set a phone bedtime alarm 30 minutes before sleep.</li>
-            <li><span class="e" aria-hidden="true">🔌</span>Charge it outside your room.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Tell your friends your phone bedtime. They might join you.</li>
+            <li>Charge it outside your room, or across the room.</li>
+            <li>Set downtime or app limits that start an hour before bed.</li>
+            <li>Tell your group chat your cutoff. Someone else probably wants one too.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>Notice how today feels. Better days don't have to be perfect days to count.</p>
+          <p>Notice what made it work, so you can do it on purpose.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped you sleep.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Try to repeat it tonight.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Enjoy having the energy.</li>
+            <li>What was different: wake time, caffeine, phone, stress?</li>
+            <li>Repeat it tonight.</li>
+            <li>Use the energy on something you've been putting off.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -684,7 +836,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who's exhausted. You'd tell them to get some rest. You deserve that too.</p>
+        <p class="closing">You'd tell a friend running on four hours to get some sleep. Give yourself the same advice, and take it.</p>
       </div>
     </div>
     </div>

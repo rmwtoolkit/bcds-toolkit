@@ -362,6 +362,72 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .src { font-size:.82rem; color:var(--ink-soft); }
 </style>
 </head>
 
@@ -381,9 +447,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🎯 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>Perfect Is a Trap</h1>
-  <p class="tagline">Because trying your best and needing to be perfect aren't the same thing.</p>
+  <p class="tagline">High standards aren't the problem. Here's the part of perfectionism that is, and what to do about it.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +475,83 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What perfectionism really is</h2>
+    <h2 id="h-understand">Two kinds of perfectionism</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">A 94 shouldn't feel like failing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">A 94 still feels like a loss.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You got a 94 and all you could think about was the 6 points you missed.</li>
-        <li>You redid an assignment three times and it still didn't feel good enough.</li>
-        <li>You didn't try out, raise your hand, or turn something in because it might not be perfect.</li>
-        
-        <li >You feel like everything counts toward college, so nothing can be less than great.</li>
-        <li>Mistakes feel like proof that something is wrong with you.</li>
-        <li>People call you a high achiever, but inside it feels more like fear.</li>
+        <li>You spent four hours on a discussion post worth 2% of your grade.</li>
+        <li>You haven't started the college essay, because the first draft has to be the good one.</li>
+        <li>A good grade brings relief, not happiness.</li>
+        <li>You quit things you aren't good at right away.</li>
+        <li>It feels like every grade, game, and activity goes on a permanent record someone is reading.</li>
       </ul>
-      <p style="margin:0">Wanting to do well is great. Needing everything to be perfect is exhausting, and it usually gets in the way of doing well.</p>
+      <p style="margin:0">You know perfectionism is exhausting. Here's the next layer: researchers split it into two parts. One is mostly harmless. The other does most of the damage. Knowing which is which changes what you work on.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">How perfectionism shows up</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔁</span><strong>Overdoing it</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Spending hours on things that are already good. Rewriting, re-checking, never feeling finished.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🙈</span><strong>Avoiding it</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Not starting, not trying, not turning it in, because if you don't try, you can't fail.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🗡</span><strong>Beating yourself up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Every mistake replays in your head. Good results don't feel good, they just feel like relief.</p></details>
+    <h3 style="margin-top:28px">The 2x2 of perfectionism</h3>
+    <figure class="fig">
+<svg viewBox="0 0 400 310" role="img" aria-labelledby="pf-t pf-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="pf-t">The 2 by 2 model of perfectionism</title>
+  <desc id="pf-d">A grid. The vertical axis is perfectionistic strivings, meaning high personal standards, from low to high. The horizontal axis is perfectionistic concerns, meaning fear of mistakes and judgment, from low to high. High standards with low fear is pure personal standards, the healthiest pattern. High on both is mixed. Low standards with high fear is pure evaluative concerns, the pattern most linked to distress. Low on both is non-perfectionism.</desc>
+  <rect x="66" y="8" width="156" height="116" rx="12" fill="#DDF0E4"/>
+  <text x="78" y="34" font-size="16" font-weight="700" fill="#1F6B41">Pure personal</text>
+  <text x="78" y="52" font-size="16" font-weight="700" fill="#1F6B41">standards</text>
+  <text x="78" y="78" font-size="13.5" fill="#1F6B41">High standards,</text>
+  <text x="78" y="95" font-size="13.5" fill="#1F6B41">low fear.</text>
+  <text x="78" y="112" font-size="13.5" fill="#1F6B41">Healthiest pattern.</text>
+  <rect x="228" y="8" width="156" height="116" rx="12" fill="#FCEBD8"/>
+  <text x="240" y="34" font-size="16" font-weight="700" fill="#8A4B0F">Mixed</text>
+  <text x="240" y="60" font-size="13.5" fill="#8A4B0F">High standards,</text>
+  <text x="240" y="77" font-size="13.5" fill="#8A4B0F">high fear.</text>
+  <text x="240" y="94" font-size="13.5" fill="#8A4B0F">In between.</text>
+  <rect x="66" y="130" width="156" height="116" rx="12" fill="#F2F2F7"/>
+  <text x="78" y="156" font-size="16" font-weight="700" fill="#3A3A3C">Non-</text>
+  <text x="78" y="174" font-size="16" font-weight="700" fill="#3A3A3C">perfectionism</text>
+  <text x="78" y="200" font-size="13.5" fill="#3A3A3C">Low on both.</text>
+  <rect x="228" y="130" width="156" height="116" rx="12" fill="#FBE3E1"/>
+  <text x="240" y="156" font-size="16" font-weight="700" fill="#A3301F">Pure evaluative</text>
+  <text x="240" y="174" font-size="16" font-weight="700" fill="#A3301F">concerns</text>
+  <text x="240" y="200" font-size="13.5" fill="#A3301F">Lower standards,</text>
+  <text x="240" y="217" font-size="13.5" fill="#A3301F">high fear. Most</text>
+  <text x="240" y="234" font-size="13.5" fill="#A3301F">linked to distress.</text>
+  <g stroke="#6E6E73" stroke-width="1.5" fill="none"><path d="M56 248 V10"/><path d="M56 256 H384"/><path d="M50 18 L56 8 L62 18"/><path d="M374 250 L384 256 L374 262"/></g>
+  <text x="22" y="128" font-size="13" font-weight="700" fill="#1D1D1F" text-anchor="middle" transform="rotate(-90 22 128)">Strivings: high standards</text>
+  <text x="40" y="128" font-size="11" fill="#6E6E73" text-anchor="middle" transform="rotate(-90 40 128)">low to high</text>
+  <text x="220" y="280" font-size="13" font-weight="700" fill="#1D1D1F" text-anchor="middle">Concerns: fear of mistakes and judgment</text>
+  <text x="220" y="298" font-size="11" fill="#6E6E73" text-anchor="middle">low to high</text>
+</svg>
+      <figcaption>Based on Gaudreau and Thompson's 2x2 model (2010). Later studies support parts of it, not all of it. Treat it as a map, not a label.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#2E8B57"></span><div><strong>Strivings: the standards</strong><p>Setting high goals and working hard toward them. On their own, high personal standards tend to go with motivation and good outcomes (Stoeber &amp; Otto, 2006).</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Concerns: the fear</strong><p>Fear of mistakes, constant doubt about whether your work is good enough, and the sense that people will only accept you if you're flawless. This side is tied most closely to anxiety, low mood, burnout, and avoidance.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Socially prescribed perfectionism</strong><p>The belief that other people demand perfection from you. Psychologists Paul Hewitt and Gordon Flett (1991) named it as one of three types, along with perfectionism aimed at yourself and at others.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's so hard to let go</span><span class="sticker">It feels like it's working. Until it isn't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">It's rising, and it isn't only about you.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>It feels like it's working.</dt>
-        <dd>Perfectionism can get results, so it feels necessary. But the cost (stress, sleep, joy) keeps climbing.</dd>
-        <dt>It's often about fear.</dt>
-        <dd>Under perfectionism is usually a fear: of disappointing people, of not being good enough, of being found out.</dd>
-        <dt>Everyone's highlight reel is visible.</dt>
-        <dd>Seeing other people's achievements, online and at school, can make it feel like everyone is doing more and doing it better.</dd>
-        <dt>Research shows it's increasing.</dt>
-        <dd>Studies have found perfectionism has risen among young people over recent decades. If you feel this pressure, you're far from alone.</dd>
+        <dt>It has been climbing for decades.</dt>
+        <dd>Across 41,641 college students in the U.S., Canada, and the U.K. from 1989 to 2016, all three types of perfectionism rose. The sense that others demand perfection rose most, by about 33% (Curran &amp; Hill, 2019).</dd>
+        <dt>So has perceived pressure from parents.</dt>
+        <dd>Students' sense of their parents' expectations and criticism also rose over those decades, and it tracked with perfectionism. The authors point to more competitive, higher-stakes environments. It's a correlation, not proof that parents cause it (Curran &amp; Hill, 2022).</dd>
+        <dt>The costs are real.</dt>
+        <dd>A review of 284 studies linked perfectionism to depression, anxiety, OCD, eating disorders, and self-harm, which is why therapists treat it as a risk factor across many problems (Limburg et al., 2017).</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Perfect online</span><span class="sticker">Your everyday vs. their highlight reel.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Pressure has a context</span><span class="sticker">Expectations can be love and weight at once.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Feeds are full of perfect photos, perfect grades, perfect college acceptances. Filters and editing make it worse. It can feel like everyone else has it together and you're the only one struggling.</p>
-      <p class="worst">The worst part: you're comparing your messy, everyday life to everyone else's best moments, carefully chosen and edited.</p>
+      <p>For some students, a grade carries more than a grade: a family's sacrifices, being the first to go to college, representing your community, or being one of the only people like you in an advanced class. Those expectations often come from love and real hope. They can also be heavy.</p>
+      <p>You can honor where they come from and still talk about how much you're carrying.</p>
+      <p class="worst">What does success mean in your family? What does it mean to you?</p>
       </div>
     </details>
   </div>
@@ -465,44 +560,64 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Keep the standards. Lose the fear.</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Good enough is usually great.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>✅ Aim for good enough.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask: what would an A-minus version look like? Or a B version? Often it's the same quality in half the time.</p></details>
-        <details class="row"><summary>⏲ Set a time limit.<span class="row-cue" aria-hidden="true"></span></summary><p>Decide how long something deserves before you start. When time's up, you're done.</p></details>
-        <details class="row"><summary>🧪 Try a small imperfection on purpose.<span class="row-cue" aria-hidden="true"></span></summary><p>Send the text with a typo. Turn in the assignment without the extra round of edits. Notice that nothing terrible happens.</p></details>
-        <details class="row"><summary>🗣 Talk back to the all-or-nothing voice.<span class="row-cue" aria-hidden="true"></span></summary><p>"If it's not perfect, it's a failure" isn't true. Most things land somewhere in between, and that's fine.</p></details>
-        <details class="row"><summary>🎉 Notice what went right.<span class="row-cue" aria-hidden="true"></span></summary><p>After a test or game, name two things that went well before you look at what didn't.</p></details>
-        <details class="row"><summary>🫶 Treat yourself like a friend.<span class="row-cue" aria-hidden="true"></span></summary><p>Research on self-compassion shows that being kind to yourself after mistakes helps you bounce back and try again.</p></details>
+      <div class="fold-label">The core skill</div>
+      <h3 class="sticker">Aim for excellent, not flawless.</h3>
+      <p>The goal is moving from the right side of the grid to the left: same standards, less fear.</p>
+      <div class="levers">
+        <div class="lever"><b>Set a done line</b><span>Before you start, decide what finished looks like and how much time it deserves. A 2% discussion post doesn't get a college-essay budget.</span></div>
+        <div class="lever"><b>Find the 90% point</b><span>Notice when another hour adds almost nothing. Spend that hour on sleep, friends, or the thing you've been avoiding.</span></div>
+        <div class="lever"><b>Run a mistake experiment</b><span>Send the email after one read. Turn in the draft without the fifth pass. Predict what will happen, then check.</span></div>
+        <div class="lever"><b>Grade the process</b><span>Did I prepare, ask for help, give it a real try? Those are in your control. The exact score often isn't.</span></div>
+      </div>
+      <p class="tap-hint">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Show rough work early.<span class="row-cue" aria-hidden="true"></span></summary><p>Perfectionists hide work until it's flawless. A rough draft shared early gets better feedback, at lower stakes.</p></details>
+        <details class="row"><summary><span class="num">2</span> Watch the all-or-nothing words.<span class="row-cue" aria-hidden="true"></span></summary><p>"Ruined," "failed," "always," "never." Swap in what's true: "This section didn't work yet."</p></details>
+        <details class="row"><summary><span class="num">3</span> Separate your worth from the result.<span class="row-cue" aria-hidden="true"></span></summary><p>A grade measures one piece of work on one day. It isn't a ruling on you.</p></details>
+        <details class="row"><summary><span class="num">4</span> Schedule rest like it counts.<span class="row-cue" aria-hidden="true"></span></summary><p>Because it does. Sleep is when your brain consolidates what you studied.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">What would good enough look like?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Set a done line.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think of something you're working on and can't seem to finish.</p>
-      <label class="prompt" for="tx-1">What I'm working on:</label>
+      <p>Pick something you're working on and can't seem to finish.</p>
+      <label class="prompt" for="tx-1">What I'm working on, and what it's actually worth (grade weight, real stakes):</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">What "perfect" would look like:</label>
+      <label class="prompt" for="tx-2">What "perfect" would cost me (hours, sleep, other things):</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">What "good enough" would look like:</label>
+      <label class="prompt" for="tx-3">My done line: what finished looks like, and my time limit:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-4">What I'd do with the extra time if I stopped at good enough:</label>
+      <label class="prompt" for="tx-4">A small mistake experiment I could try, and what I predict will happen:</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two thoughts. Which one is the trap?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three situations. Which thought is the trap?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Which thought is the perfectionism trap talking?</p>
-      
-      <div class="scenario" >
-        <p>Your college essay draft isn't perfect, and it's due in a week.</p>
+      <div class="scenario">
+        <p>You're applying for a summer internship. The application asks for a short paragraph about yourself. You've rewritten it nine times, and it's due tonight.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="That's the trap. More rewrites past a point usually don't make it better, just more stressful.">"I'll keep rewriting until it's perfect, even if I'm up every night."</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Healthy striving. Good enough with feedback beats perfect and exhausted.">"I'll get feedback from one person, make a few changes, and call it done."</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That is the avoidance side of perfectionism. A good paragraph that gets submitted beats a perfect one that never exists.">&quot;If it isn't great, it'll hurt my chances. I'll skip this one.&quot;</button>
+          <button class="choice" type="button" data-fb="good" data-msg="A done line plus feedback. That is healthy striving.">&quot;One person reads it, I make their top two changes, and I submit.&quot;</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>You studied hard for a chemistry test and got a B+.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="One grade turned into an identity. That is the fear side talking.">&quot;I'm just not a science person. I should drop down a level.&quot;</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Keeps the high standard and drops the verdict.">&quot;Disappointing. What kinds of questions did I miss? Is office hours worth it?&quot;</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Fine for perspective. You can also look at what to adjust.">&quot;At least it isn't a C.&quot;</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>The night before a group project is due, a partner sends their section with typos and a weak conclusion.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Reasonable care, reasonable limits. You can flag the conclusion and still sleep.">Fix the obvious typos and send one suggestion about the conclusion</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That is perfectionism aimed at others. It costs your sleep and can strain the partnership.">Stay up rewriting their whole section</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -511,13 +626,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">More pressure won't make it better.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep you stuck</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🔁 Endless redoing.<span class="row-cue" aria-hidden="true"></span></summary><p>There's a point where more effort stops making things better and only makes you more tired.</p></details>
-        <details class="row"><summary>🙈 Not trying.<span class="row-cue" aria-hidden="true"></span></summary><p>Avoiding things so you can't fail also means you can't succeed, learn, or have fun.</p></details>
-        <details class="row"><summary>📏 Comparing yourself to everyone.<span class="row-cue" aria-hidden="true"></span></summary><p>There will always be someone who seems to be doing more. Comparison keeps the bar moving.</p></details>
-        <details class="row"><summary>🗡 Harsh self-talk.<span class="row-cue" aria-hidden="true"></span></summary><p>Being mean to yourself doesn't make you better. It makes you more afraid to try.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Perfectionism is why I'm successful.</span><span class="row-cue" aria-hidden="true"></span></summary><p>High standards help. Fear of mistakes mostly doesn't. Plenty of people succeed despite the fear, not because of it.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Lowering the bar means I don't care.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A done line isn't a lower bar. It's putting your effort where it pays off.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Everyone else has it together.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Perfectionism has been rising for decades. Many people who look effortless are working hard to look that way.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I ease up, I'll fall behind.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Burnout, sleep loss, and avoidance cost more grades than a slightly less polished assignment.</p></details>
       </div>
       </div>
     </details>
@@ -527,10 +642,25 @@
       <ul class="tight">
         <li>Fear of mistakes is keeping you from sleeping, eating, or enjoying anything.</li>
         <li>You feel like a failure most of the time, even when things go well.</li>
-        <li>You're having thoughts about hurting yourself when things aren't perfect.</li>
+        <li>You're restricting food, over-exercising, or hurting yourself when things aren't perfect.</li>
+        <li>You're having thoughts about not wanting to be here.</li>
       </ul>
-      <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can help, and can also help you talk with family about pressure if you want that. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Gaudreau, P., &amp; Thompson, A. (2010). Testing a 2 x 2 model of dispositional perfectionism. <i>Personality and Individual Differences</i>.</li>
+        <li>Stoeber, J., &amp; Otto, K. (2006). Positive conceptions of perfectionism: Approaches, evidence, challenges. <i>Personality and Social Psychology Review</i>.</li>
+        <li>Hewitt, P. L., &amp; Flett, G. L. (1991). Perfectionism in the self and social contexts: Conceptualization, assessment, and association with psychopathology. <i>Journal of Personality and Social Psychology</i>.</li>
+        <li>Curran, T., &amp; Hill, A. P. (2019). Perfectionism is increasing over time: A meta-analysis of birth cohort differences from 1989 to 2016. <i>Psychological Bulletin</i>.</li>
+        <li>Curran, T., &amp; Hill, A. P. (2022). Young people's perceptions of their parents' expectations and criticism are increasing over time: Implications for perfectionism. <i>Psychological Bulletin</i>.</li>
+        <li>Limburg, K., Watson, H. J., Hagger, M. S., &amp; Egan, S. J. (2017). The relationship between perfectionism and psychopathology: A meta-analysis. <i>Journal of Clinical Psychology</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -541,26 +671,28 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-5">Where perfectionism shows up most in my life</label>
+      <label class="prompt" for="tx-5">Where my standards help me, and where the fear takes over</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">What I'm afraid would happen if something wasn't perfect</label>
+      <label class="prompt" for="tx-6">What I'm afraid would happen if I made a visible mistake</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-7">A time something wasn't perfect and it turned out okay</label>
+      <label class="prompt" for="tx-7">Whose expectations I'm carrying, and which ones I've chosen for myself</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">What I'd tell a friend who felt this way</label>
+      <label class="prompt" for="tx-8">A time something was good enough, and it was fine</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-9">One thing I could do "good enough" this week</label>
+      <label class="prompt" for="tx-9">One done line I'll set this week</label>
       <textarea id="tx-9" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You don't have to be perfect to be worthy. Mistakes don't make you less. They make you human, like everyone you admire.</p>
+      <p>You can keep high standards and still put down the fear. Your worth was never on the scoreboard.</p>
     </div>
     </div>
   </div>
@@ -575,7 +707,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with the pressure to be perfect today?</h3>
+        <h3 id="ci-1">How much is the pressure to be perfect running things today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -589,13 +721,13 @@
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
           <button type="button" class="chip" aria-pressed="false">redid something over and over</button>
-          <button type="button" class="chip" aria-pressed="false">avoided something in case I failed</button>
+          <button type="button" class="chip" aria-pressed="false">avoided starting in case it isn't good</button>
           <button type="button" class="chip" aria-pressed="false">replaying a mistake</button>
           <button type="button" class="chip" aria-pressed="false">a grade that felt like not enough</button>
           <button type="button" class="chip" aria-pressed="false">comparing myself to others</button>
-          <button type="button" class="chip" aria-pressed="false">worried about disappointing someone</button>
-          <button type="button" class="chip" aria-pressed="false">stayed up late perfecting something</button>
-          <button type="button" class="chip" aria-pressed="false">saw perfect posts online</button>
+          <button type="button" class="chip" aria-pressed="false">carrying someone's expectations</button>
+          <button type="button" class="chip" aria-pressed="false">stayed up too late on something</button>
+          <button type="button" class="chip" aria-pressed="false">college or application pressure</button>
           <button type="button" class="chip" aria-pressed="false">let something be good enough</button>
           <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
         </div>
@@ -606,51 +738,51 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-over" aria-pressed="false">🔁 Stuck redoing things</button>
-          <button type="button" class="choice" data-path="p-avoid" aria-pressed="false">🙈 Avoiding because it might not be good enough</button>
-          <button type="button" class="choice" data-path="p-critic" aria-pressed="false">🗡 Beating myself up</button>
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😰 Under a lot of pressure</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Let something be good enough</button>
+          <button type="button" class="choice" data-path="p-over" aria-pressed="false">Stuck redoing things</button>
+          <button type="button" class="choice" data-path="p-avoid" aria-pressed="false">Avoiding because it might not be good enough</button>
+          <button type="button" class="choice" data-path="p-critic" aria-pressed="false">Beating myself up</button>
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Under a lot of pressure</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Let something be good enough</button>
         </div>
 
         <div class="path-panel" id="p-over" hidden>
           <h4>What this might mean</h4>
-          <p>Your brain is saying it's not done, even when it probably is.</p>
+          <p>Your brain says it isn't done, even when it probably is.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏲</span>Set a 15-minute limit for one last pass, then stop.</li>
-            <li><span class="e" aria-hidden="true">👀</span>Ask someone else if it's ready. They'll likely say yes.</li>
-            <li><span class="e" aria-hidden="true">✅</span>Turn it in. Notice how you feel an hour later.</li>
+            <li><span class="e" aria-hidden="true"></span>Set a 15-minute limit for one last pass, then stop.</li>
+            <li><span class="e" aria-hidden="true"></span>Ask someone else if it's ready. They'll likely say yes.</li>
+            <li><span class="e" aria-hidden="true"></span>Turn it in. Notice how you feel an hour later.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-avoid" hidden>
           <h4>What this might mean</h4>
-          <p>Not trying protects you from failing, and from everything else too.</p>
+          <p>Not starting protects you from failing, and from everything else too.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🪜</span>Do a rough, imperfect first step on purpose.</li>
-            <li><span class="e" aria-hidden="true">🚀</span>Why You Can't Start has tools for this.</li>
-            <li><span class="e" aria-hidden="true">🫶</span>Remind yourself: a messy start is still a start.</li>
+            <li><span class="e" aria-hidden="true"></span>Do a rough first step on purpose.</li>
+            <li><span class="e" aria-hidden="true"></span>Why You Can't Start has tools for this.</li>
+            <li><span class="e" aria-hidden="true"></span>A messy start is still a start.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-critic" hidden>
           <h4>What this might mean</h4>
-          <p>That inner voice is loud today. It's not telling the truth.</p>
+          <p>That inner voice is loud today. It isn't telling the whole truth.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">✍️</span>Write down what the voice says, then write what a kind friend would say back.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Name two things you did well today.</li>
-            <li><span class="e" aria-hidden="true">🗯</span>The Inner Critic can help with that voice.</li>
+            <li><span class="e" aria-hidden="true"></span>Write what the voice says, then what a fair coach would say back.</li>
+            <li><span class="e" aria-hidden="true"></span>Name two things you did well today.</li>
+            <li><span class="e" aria-hidden="true"></span>The Inner Critic can help with that voice.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-pressure" hidden>
           <h4>What this might mean</h4>
-          <p>Some pressure comes from inside, some from outside. Both are real and heavy.</p>
+          <p>Some pressure comes from inside, some from outside. Both are real, and both are heavy.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk to someone about where the pressure is coming from.</li>
-            <li><span class="e" aria-hidden="true">📋</span>Decide what really matters most this week, and what can be good enough.</li>
-            <li><span class="e" aria-hidden="true">😴</span>Protect your sleep. It makes everything more manageable.</li>
+            <li><span class="e" aria-hidden="true"></span>Talk to someone about where the pressure is coming from.</li>
+            <li><span class="e" aria-hidden="true"></span>Decide what matters most this week, and what can be good enough.</li>
+            <li><span class="e" aria-hidden="true"></span>Protect your sleep. It makes everything else more manageable.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -658,9 +790,9 @@
           <p>That's a big deal. Better days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice that it turned out okay.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Try it again with something else.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Celebrate the progress, not the perfection.</li>
+            <li><span class="e" aria-hidden="true"></span>Notice that it turned out okay.</li>
+            <li><span class="e" aria-hidden="true"></span>Try it again with something else.</li>
+            <li><span class="e" aria-hidden="true"></span>Celebrate the progress, not the perfection.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -688,7 +820,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who made a mistake. You'd tell them it's okay. It's okay for you too.</p>
+        <p class="closing">Hold yourself to high standards, and to the same kindness you would give a friend who made a mistake.</p>
       </div>
     </div>
     </div>

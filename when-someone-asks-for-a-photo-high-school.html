@@ -362,6 +362,69 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  .fig svg.scamflow { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +444,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">📷 High School · Relationships and dating</div>
+  <div class="eyebrow">High School · Relationships and dating</div>
   <h1>When Someone Asks for a Photo</h1>
-  <p class="tagline">Because you never owe anyone a picture, and help is there if something already happened.</p>
+  <p class="tagline">Pressure, trust, sextortion and the law. What to do before you send, and exactly what to do if something already happened.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,55 +472,90 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">When someone asks for a photo</h2>
+    <h2 id="h-understand">Pressure, scams, and what's really at stake</h2>
     <details class="fold ">
       <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You never owe anyone a picture.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Someone you're talking to, or dating, asked for a nude or a revealing photo.</li>
-        <li>Someone said "it'll disappear" or "I'll delete it right away."</li>
-        <li>Someone sent you a photo first, and now you feel like you owe them one.</li>
-        
-        <li >Someone you met online who seemed really into you started asking for photos, then money.</li>
-        <li>You heard about someone at school whose photo got passed around.</li>
-        <li>You already sent something, and now you're worried.</li>
+        <li>Someone you're dating said "if you trusted me, you would."</li>
+        <li>They sent one first, and now it feels like you owe them.</li>
+        <li>Someone you'd never met followed you, flirted hard, and asked for a photo within the hour.</li>
+        <li>A photo of someone in your grade is going around, and people keep asking if you've seen it.</li>
+        <li>You already sent something, and now you can't stop thinking about where it is.</li>
       </ul>
-      <p style="margin:0">Being asked for a photo can feel flattering, confusing, scary, or all three. You always get to say no, and if something already happened, there is help.</p>
+      <p style="margin:0">There are two different situations here. One is pressure from someone you know. The other is a scam run by strangers, often from overseas, built to get one image and then money. Both are someone else doing something wrong. Both have a way out.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">How the pressure works</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">💬</span><strong>Flattery</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">"You're so pretty." "I've never felt this way." Compliments that make it hard to say no.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">⏳</span><strong>Persistence and guilt</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Asking over and over, getting upset, or saying "if you liked me, you would."</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎣</span><strong>Trickery</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Fake profiles pretending to be your age, sending a photo first, or promising it'll disappear.</p></details>
+    <h3 style="margin-top:28px">How a sextortion scam runs</h3>
+    <figure class="fig">
+<svg class="scamflow" viewBox="0 0 400 340" role="img" aria-label="How a sextortion scam usually runs, in five steps: contact from a new, flattering account; fast closeness, often moving to a private app and sending a photo first; the ask for your photo; the threat, often with screenshots of your followers and family; and the demand for money, gift cards, or more photos. At any step you can break the script: stop, save the evidence, block, and tell an adult." xmlns="http://www.w3.org/2000/svg">
+  <circle cx="34" cy="40" r="13" fill="#1D1D1F"/>
+  <text x="34" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1</text>
+  <text x="58" y="36" font-size="14" font-weight="700" fill="#1D1D1F">Contact</text>
+  <text x="58" y="54" font-size="12" fill="#6E6E73">new account, flattering, fast</text>
+  <line x1="34" y1="55" x2="34" y2="87" stroke="#D2D2D7" stroke-width="2"/>
+  <circle cx="34" cy="102" r="13" fill="#1D1D1F"/>
+  <text x="34" y="107" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2</text>
+  <text x="58" y="98" font-size="14" font-weight="700" fill="#1D1D1F">Fast closeness</text>
+  <text x="58" y="116" font-size="12" fill="#6E6E73">private app, sends a photo first</text>
+  <line x1="34" y1="117" x2="34" y2="149" stroke="#D2D2D7" stroke-width="2"/>
+  <circle cx="34" cy="164" r="13" fill="#1D1D1F"/>
+  <text x="34" y="169" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3</text>
+  <text x="58" y="160" font-size="14" font-weight="700" fill="#1D1D1F">The ask</text>
+  <text x="58" y="178" font-size="12" fill="#6E6E73">"your turn"</text>
+  <line x1="34" y1="179" x2="34" y2="211" stroke="#D2D2D7" stroke-width="2"/>
+  <circle cx="34" cy="226" r="13" fill="#C0392B"/>
+  <text x="34" y="231" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4</text>
+  <text x="58" y="222" font-size="14" font-weight="700" fill="#1D1D1F">The threat</text>
+  <text x="58" y="240" font-size="12" fill="#6E6E73">screenshots of your followers</text>
+  <line x1="34" y1="241" x2="34" y2="273" stroke="#D2D2D7" stroke-width="2"/>
+  <circle cx="34" cy="288" r="13" fill="#C0392B"/>
+  <text x="34" y="293" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">5</text>
+  <text x="58" y="284" font-size="14" font-weight="700" fill="#1D1D1F">The demand</text>
+  <text x="58" y="302" font-size="12" fill="#6E6E73">money, gift cards, more photos</text>
+  <rect x="294" y="20" width="96" height="290" rx="14" fill="#E8F5EC" stroke="#1E8E3E" stroke-width="1.4"/>
+  <text x="342" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#1E6B33">Break the</text>
+  <text x="342" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#1E6B33">script</text>
+  <text x="342" y="80" text-anchor="middle" font-size="12" fill="#1E6B33">at any step</text>
+  <g font-size="14" font-weight="700" fill="#1E6B33" text-anchor="middle">
+    <text x="342" y="112">Stop</text><text x="342" y="166">Save</text><text x="342" y="220">Block</text><text x="342" y="274">Tell</text>
+  </g>
+  <g stroke="#1E8E3E" stroke-width="1.2"><line x1="314" y1="130" x2="370" y2="130"/><line x1="314" y1="184" x2="370" y2="184"/><line x1="314" y1="238" x2="370" y2="238"/></g>
+</svg>
+      <figcaption>The pattern the FBI and the National Center for Missing &amp; Exploited Children (NCMEC) describe in reports from young people. Scammers follow a script. Knowing it lets you spot it early.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Steps 1 to 3: the setup</strong><p>The account often looks like someone your age, often a girl if the target is a guy. The photo they send first is usually stolen. Speed is a red flag: real people rarely go from hello to nudes in an hour.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Steps 4 and 5: the trap</strong><p>Once they have an image, the tone flips. They show screenshots of your followers, family, or school and demand payment. Paying almost never ends it. It tells them you'll pay again.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1E8E3E"></span><div><strong>The exit: stop, save, block, tell</strong><p>Stop responding. Save the messages and the account name. Block and report. Tell an adult you trust. The FBI's guidance is the same: get help before you send money or anything else.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">What to know</span><span class="sticker">Once it's sent, it's out of your hands.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">What the numbers show.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Once it's sent, you lose control of it.</dt>
-        <dd>Screenshots, screen recordings, and other phones mean a photo can be saved and shared, even on "disappearing" apps.</dd>
-        <dt>Sextortion is real.</dt>
-        <dd>Some people ask for photos, then threaten to share them unless you send more or pay money. This targets teens of all genders, especially boys, and it's a crime.</dd>
-        <dt>It's against the law.</dt>
-        <dd>Creating, asking for, having, or sharing sexual images of anyone under 18 is illegal, even if the person in the photo agreed. The person who pressured or shared is the one who did wrong.</dd>
-        <dt>It's never your fault if you're pressured, tricked, or threatened.</dt>
-        <dd>Adults are trained to help, and getting help is about protecting you, not punishing you.</dd>
+        <dt>Sextortion is mostly aimed at teen boys.</dt>
+        <dd>Between October 2021 and March 2023, the FBI and Homeland Security Investigations received more than 13,000 reports of financial sextortion of minors, involving at least 12,600 victims, mostly boys. From August 2022 to August 2023, NCMEC received an average of 812 sextortion reports a week, most of them financial and mostly involving boys 14 to 17. By 2025 it was getting about 137 financial sextortion reports a day.</dd>
+        <dt>Sending is less common than people think.</dt>
+        <dd>A 2018 review of 39 studies with more than 110,000 young people found about 15% had sent a sext and about 27% had received one. "Everyone does it" is not true.</dd>
+        <dt>Trust breaks a lot.</dt>
+        <dd>Elizabeth Englander and Meghan McCoy at Bridgewater State surveyed 1,320 Massachusetts students. In 2015, almost half of those who had sent a sexual image said it had been passed on without their consent.</dd>
+        <dt>Pressure is common.</dt>
+        <dd>In Englander's 2015 survey of college students, most who had sexted reported at least some pressure or coercion. Pressure doesn't make it your fault. It makes it the other person's responsibility.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🛡 If you already sent something</span><span class="sticker">You're not in trouble. Telling takes their power away.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The law, plainly</span><span class="sticker">What's illegal, and who's protected.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>You are not in trouble for being pressured or tricked. If someone is threatening you, <strong>do not pay and do not send more</strong>. Stop responding, save the messages, block, and tell a trusted adult right away. It's fixable, and you don't have to fix it alone.</p>
-      <p class="worst">The worst part: the person threatening you wants you to feel too ashamed to tell anyone. Telling is exactly what takes their power away.</p>
+      <p><b>Under 18.</b> Sexual images of anyone under 18 are illegal under federal and Massachusetts law to create, ask for, keep, or share, even when everyone agreed. That includes a photo of yourself.</p>
+      <p><b>Massachusetts since 2024.</b> A state law signed in June 2024 made it a crime to share someone's intimate images without consent, including AI-generated fakes, and named coercive control as a form of abuse. For teens caught sexting, it created an education-based diversion program instead of prosecution under child pornography laws.</p>
+      <p><b>Federal, since 2025.</b> The TAKE IT DOWN Act made publishing intimate images without consent a federal crime. Since May 2026, covered platforms must remove reported images within 48 hours.</p>
+      <p class="worst">If you're being threatened, the law treats you as the victim. The person threatening you is the one committing a crime.</p>
       </div>
     </details>
   </div>
@@ -466,85 +564,101 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Before you send, and if you already did</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">No is a complete answer.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🛑 Say no, no explanation needed.<span class="row-cue" aria-hidden="true"></span></summary><p>"No." "I don't do that." "Not happening." You don't owe anyone a picture.</p></details>
-        <details class="row"><summary>😂 Use a deflection.<span class="row-cue" aria-hidden="true"></span></summary><p>Some people send a funny meme, a picture of a pet, or a GIF instead. Humor can get you out of an awkward moment.</p></details>
-        <details class="row"><summary>🚪 Notice how they react.<span class="row-cue" aria-hidden="true"></span></summary><p>Someone who respects you will accept no. Someone who keeps pushing, guilting, or threatening is showing you who they are.</p></details>
-        <details class="row"><summary>🔒 Block and report.<span class="row-cue" aria-hidden="true"></span></summary><p>Every major app lets you block and report. Use it if someone keeps asking or makes you uncomfortable.</p></details>
-        <details class="row"><summary>🧑‍🏫 Tell a trusted adult.<span class="row-cue" aria-hidden="true"></span></summary><p>A parent, counselor, or teacher can help, especially if someone is threatening you.</p></details>
-        <details class="row"><summary>🙅 Never forward someone else's photo.<span class="row-cue" aria-hidden="true"></span></summary><p>If you receive a photo of someone else, don't save or share it. Tell an adult.</p></details>
+      <div class="fold-label">Read the pressure</div>
+      <h3 class="sticker">How someone takes no tells you who they are.</h3>
+      <p>Someone who respects you hears no once. Pressure usually shows up in one of four forms.</p>
+      <div class="levers">
+        <div class="lever"><b>Trust as a test</b><span>"If you trusted me, you would." Trust doesn't require handing someone something they could use against you.</span></div>
+        <div class="lever"><b>Owed</b><span>"I sent one, your turn." A photo you didn't ask for creates no debt.</span></div>
+        <div class="lever"><b>Wearing you down</b><span>Asking again and again until yes feels easier than no. That's pressure, not interest.</span></div>
+        <div class="lever"><b>Promises</b><span>"I'll delete it." "It disappears." Neither is something they can guarantee.</span></div>
+      </div>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Pick the no you'd actually use.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick one that sounds like you, or write your own. Nothing is saved.</p>
+      <p>Pick the ones that sound like you, or write your own. Nothing is saved.</p>
       <div class="checklist" role="group" aria-label="Ways to say no">
-        <label><input type="checkbox"> "Nope. Not doing that."</label>
-        <label><input type="checkbox"> "I don't send pictures like that."</label>
-        <label><input type="checkbox"> "If you respected me, you'd stop asking."</label>
-        <label><input type="checkbox"> (Send a meme, a pet photo, or a GIF instead.)</label>
+        <label><input type="checkbox"> "No. I don't send those."</label>
+        <label><input type="checkbox"> "I like you. Still no."</label>
+        <label><input type="checkbox"> "I've said no. If you ask again, I'm done talking."</label>
+        <label><input type="checkbox"> (Change the subject, or send something unrelated.)</label>
         <label><input type="checkbox"> (Block and report.)</label>
       </div>
-      <p id="test-tally" class="feedback" aria-live="polite" data-done="All of those work. Pick the one you'd actually use." data-partial="Good. {n} ready. Even one is enough."></p>
+      <p id="test-tally" class="feedback" aria-live="polite" data-done="All of those work. Pick the one you'd actually say." data-partial="Good. {n} ready. One is enough."></p>
       <label class="prompt" for="tx-1">My own way to say no:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">If something you sent is being shared or used against you</span><span class="sticker">Don't pay. Don't send more. Tell someone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">If something you sent is being used against you</span><span class="sticker">Don't pay. Don't send more. Tell someone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ol class="steps-list">
-        <li><strong>Stop responding.</strong> Don't send more, and don't pay. Paying usually leads to more demands.</li>
-        <li><strong>Save evidence.</strong> Screenshot the messages and the account name before you block.</li>
+        <li><strong>Stop responding.</strong> Don't negotiate, don't send more, and don't pay. Paying usually leads to more demands.</li>
+        <li><strong>Save evidence.</strong> Screenshot the messages, the account name, and any payment details before you block.</li>
         <li><strong>Block and report</strong> the account on the app.</li>
-        <li><strong>Tell a trusted adult</strong> right away. You are not in trouble.</li>
-        <li><strong>Get the image taken down.</strong> NCMEC's free <strong>Take It Down</strong> service helps remove images of people under 18 from participating sites. Report threats to the <strong>NCMEC CyberTipline</strong> at 1-800-843-5678.</li>
+        <li><strong>Tell an adult you trust, today.</strong> A parent or relative, counselor, school nurse, or coach. If home isn't the right place for this conversation, school staff can help. You are not in trouble.</li>
+        <li><strong>Report it.</strong> NCMEC's CyberTipline takes reports at report.cybertip.org or <strong>1-800-843-5678</strong>.</li>
+        <li><strong>Get it taken down.</strong> NCMEC's free <strong>Take It Down</strong> service helps remove images of people under 18 from participating sites, without you having to send the image to anyone.</li>
       </ol>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Four real situations. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      
-      <div class="scenario" >
-        <p>Someone you've been talking to sends a revealing photo and says, "Your turn."</p>
+      <div class="scenario">
+        <p>Your girlfriend or boyfriend of two months says, "If you trusted me, you'd send one."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="You don't owe anyone a photo because they sent one. And sending can lose you control of it forever.">Send one so it's even</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Clear and respectful of you both. If they pressure you, that tells you a lot.">"Not my thing" and don't save theirs</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Sharing someone's private photo can hurt them and is illegal if they're under 18.">Screenshot theirs to show friends</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Trust doesn&#x27;t mean giving up control of something permanent. And it isn&#x27;t trust if it&#x27;s being used as leverage.">Send one to prove it</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Clear and kind. How they react to this tells you a lot about the relationship.">"I do trust you. I'm still not sending that."</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="A deflection can get you out of the moment. If the asking keeps coming back, a clear no and a conversation will be needed.">Laugh it off and change the subject</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>Someone threatens to post a photo you sent unless you send $200.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>An account you don't know follows you, flirts hard, sends a photo, and asks for one back. It's been 40 minutes.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Paying almost always leads to more demands. Don't pay.">Pay so it goes away</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. This is a crime, and adults and NCMEC can help. You're not in trouble.">Stop responding, save evidence, block, and tell an adult now</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="That gives them more power. Stop, save, block, tell.">Send another photo to calm them down</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This matches the scam script almost step for step. The photo they sent is probably stolen.">Send one back, she sent first</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than sending, but video can be faked or recorded. The speed alone is the red flag.">Ask for a video call first to check they're real</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Spotting the script and stepping out early is the strongest move there is.">Don't send, block, and report the account</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>You sent a photo. Now the account is threatening to send it to your followers unless you pay $300 in gift cards.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Paying almost always leads to more demands. It tells them you&#x27;ll pay again.">Pay so it goes away</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That gives them more to threaten you with.">Send another photo to calm them down</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. This is a crime against you, and adults and NCMEC can help. You&#x27;re not in trouble.">Stop responding, save evidence, block, and tell an adult now</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>A friend shows you a nude of a girl in your grade that's been going around.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Every share is another copy, and having it can be illegal.">Ask him to send it to you</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Not taking it, getting an adult involved, and checking on her if you know her. That&#x27;s what protecting someone looks like.">Don't look or take it, tell a trusted adult, and check on her if you know her</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than spreading it. It&#x27;s still circulating, and she may need help getting it taken down.">Tell him that's messed up and walk away</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's usually more than one decent answer. The best one is the one you'll actually do.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it worse, not better.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths that keep people stuck</span><span class="sticker">What actually happens.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>👻 Trusting "it'll disappear."<span class="row-cue" aria-hidden="true"></span></summary><p>Screenshots and screen recordings exist.</p></details>
-        <details class="row"><summary>💸 Paying or sending more.<span class="row-cue" aria-hidden="true"></span></summary><p>It almost never makes threats stop.</p></details>
-        <details class="row"><summary>🤐 Handling it alone out of shame.<span class="row-cue" aria-hidden="true"></span></summary><p>The person threatening you is counting on silence.</p></details>
-        <details class="row"><summary>🔁 Forwarding photos of others.<span class="row-cue" aria-hidden="true"></span></summary><p>It hurts them and can get you in serious legal trouble.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I pay, it ends.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Payment usually leads to a bigger demand. The FBI's advice is to stop and get help before paying anything.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I tell, I'll get in trouble.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Being pressured or tricked isn't a crime. Adults, schools, NCMEC and police treat the person being threatened as the victim.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> This only happens to girls.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Financial sextortion mostly targets teen boys. Anyone can be targeted.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A disappearing app keeps it safe.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Screenshots and screen recordings exist. Once it's sent, you can't control where it goes.</p></details>
       </div>
       </div>
     </details>
@@ -555,11 +669,26 @@
         <li>Someone is threatening to share a photo of you.</li>
         <li>Someone is asking for money, more photos, or anything else in exchange for not sharing.</li>
         <li>An adult is asking you for photos.</li>
-        <li>You feel hopeless or like you can't get out of it.</li>
+        <li>You feel hopeless or like there's no way out.</li>
       </ul>
-      <p>This is not your fault, and it can be fixed. Tell a trusted adult. NCMEC CyberTipline: <strong>1-800-843-5678</strong>.</p>
+      <p>This is not your fault, and it can be handled. Tell a trusted adult. NCMEC CyberTipline: <strong>1-800-843-5678</strong>.</p>
       <p style="margin:0">If you're thinking about hurting yourself, call or text <strong>988</strong> now. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the research?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Federal Bureau of Investigation. (2024). Public safety alert on financial sextortion of minors (FBI and Homeland Security Investigations data, October 2021 to March 2023).</li>
+        <li>Thorn &amp; National Center for Missing &amp; Exploited Children. (2024). <i>Trends in Financial Sextortion: An Investigation of Sextortion Reports in NCMEC CyberTipline Data</i>.</li>
+        <li>Madigan, S., Ly, A., Rash, C. L., Van Ouytsel, J., &amp; Temple, J. R. (2018). Prevalence of multiple forms of sexting behavior among youth: A systematic review and meta-analysis. <i>JAMA Pediatrics</i>, 172(4), 327&ndash;335.</li>
+        <li>Englander, E., &amp; McCoy, M. (2017). Pressured sexting and revenge porn in a sample of Massachusetts adolescents. <i>International Journal of Technoethics</i>, 8(2), 16&ndash;25.</li>
+        <li>Englander, E. (2015). Coerced sexting and revenge porn among teens. <i>Bullying, Teen Aggression &amp; Social Media</i>.</li>
+        <li>National Center for Missing &amp; Exploited Children. CyberTipline data (2025 financial sextortion reports).</li>
+        <li>Massachusetts Acts of 2024, Chapter 118: An Act to prevent abuse and exploitation. TAKE IT DOWN Act (federal law, signed May 19, 2025).</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -570,26 +699,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-2">What I'd say if someone asked me for a photo</label>
+      <label class="prompt" for="tx-2">What I'd actually say if someone I liked asked me for a photo</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-3">How I'd know someone online might not be who they say</label>
+      <label class="prompt" for="tx-3">The red flags that would tell me an account isn't who it says it is</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-4">Who I'd tell if someone was pressuring or threatening me</label>
+      <label class="prompt" for="tx-4">The adult I'd go to if I were being threatened, and a backup if they weren't available</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I'd do if I got someone else's private photo</label>
+      <label class="prompt" for="tx-5">What I'd do if someone else's private photo landed on my phone</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">What I'd tell a friend who was scared because they'd sent something</label>
+      <label class="prompt" for="tx-6">What I'd say to a friend who was scared because they'd sent something</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You never owe anyone a picture. And if something already happened, you deserve help, not shame.</p>
+      <p>You never owe anyone a picture. If something already happened, you deserve help, not shame, and there is a way through it.</p>
     </div>
     </div>
   </div>
@@ -605,7 +734,7 @@
     <div class="card" id="checkin-card">
       <div class="ci-step">
         <h3 id="ci-1">Where are you with this today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <p class="ci-hint">Not in general. Just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
           <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
@@ -633,23 +762,23 @@
 
       <div class="ci-step">
         <h3>What does it feel like right now?</h3>
-        <p class="ci-hint">Pick the one that sounds most like today.</p>
+        <p class="ci-hint">Pick the one closest to today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-asked" aria-pressed="false">📷 Someone asked for a photo</button>
-          <button type="button" class="choice" data-path="p-sent" aria-pressed="false">😰 I already sent something</button>
-          <button type="button" class="choice" data-path="p-threat" aria-pressed="false">🚨 Someone is threatening me</button>
-          <button type="button" class="choice" data-path="p-received" aria-pressed="false">📩 I got someone else's photo</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling in control</button>
+          <button type="button" class="choice" data-path="p-asked" aria-pressed="false">Someone asked for a photo</button>
+          <button type="button" class="choice" data-path="p-sent" aria-pressed="false">I already sent something</button>
+          <button type="button" class="choice" data-path="p-threat" aria-pressed="false">Someone is threatening me</button>
+          <button type="button" class="choice" data-path="p-received" aria-pressed="false">I got someone else's photo</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling in control</button>
         </div>
 
         <div class="path-panel" id="p-asked" hidden>
           <h4>What this might mean</h4>
-          <p>Being asked can feel flattering or uncomfortable. You get to decide, and no is always okay.</p>
+          <p>Being asked can feel flattering, awkward, or uncomfortable. You get to decide, and no is always okay.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🛑</span>Pick a way to say no from the list above.</li>
-            <li><span class="e" aria-hidden="true">🔒</span>If they keep asking, block and report.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell an adult if it's someone you don't know in person.</li>
+            <li>Use the no you picked above.</li>
+            <li>If they keep asking, block and report.</li>
+            <li>If it's someone you've never met in person, treat it as a red flag.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-sent" hidden>
@@ -657,19 +786,19 @@
           <p>You're not in trouble for this. It can feel scary, and you don't have to handle it alone.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a trusted adult.</li>
-            <li><span class="e" aria-hidden="true">🛡</span>Use Take It Down to help remove it if it's shared.</li>
-            <li><span class="e" aria-hidden="true">🫶</span>Be gentle with yourself. Lots of people have been here.</li>
+            <li>Tell a trusted adult.</li>
+            <li>If it gets shared, Take It Down can help remove it.</li>
+            <li>Be gentle with yourself. A lot of people have been here.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-threat" hidden>
           <h4>What this might mean</h4>
-          <p>This is a crime, and it is not your fault. You can get out of this.</p>
+          <p>This is a crime against you, and it is not your fault. You can get out of this.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🛑</span>Don't pay and don't send more.</li>
-            <li><span class="e" aria-hidden="true">📸</span>Save evidence, then block.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell an adult now. NCMEC: 1-800-843-5678.</li>
+            <li>Don't pay and don't send more.</li>
+            <li>Save evidence, then block.</li>
+            <li>Tell an adult now. NCMEC: 1-800-843-5678.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-received" hidden>
@@ -677,19 +806,19 @@
           <p>It's not your fault someone sent it. What you do next matters.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🙅</span>Don't save or forward it.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a trusted adult.</li>
-            <li><span class="e" aria-hidden="true">💬</span>If you know the person in it, check on them.</li>
+            <li>Don't save or forward it.</li>
+            <li>Tell a trusted adult.</li>
+            <li>If you know the person in it, check on them.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>That's worth noticing. A better day doesn't have to be a perfect one.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped you feel safe.</li>
-            <li><span class="e" aria-hidden="true">🛑</span>Keep your no ready.</li>
-            <li><span class="e" aria-hidden="true">🤲</span>Share what you know with a friend.</li>
+            <li>Notice what helped you feel safe.</li>
+            <li>Keep your no ready.</li>
+            <li>Share what you know with a friend.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>

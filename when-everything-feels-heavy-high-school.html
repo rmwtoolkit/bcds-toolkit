@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure: depression brain + stat card */
+  .fig svg.depbrain { width:100%; height:auto; display:block; }
+  .bigstat { display:grid; grid-template-columns:auto 1fr; gap:6px 18px; align-items:center; }
+  .bigstat b { font-size:3.2rem; font-weight:700; letter-spacing:-.03em; line-height:1; }
+  .bigstat span { color:var(--ink-soft); font-size:.95rem; line-height:1.45; }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🌧 High School · Stress, sleep, and big feelings</div>
+  <div class="eyebrow">High School · Stress, sleep, and big feelings</div>
   <h1>When Everything Feels Heavy</h1>
-  <p class="tagline">Because depression lies about how things will always be, and there are real ways out.</p>
+  <p class="tagline">What depression is, what it changes in the brain, and how people climb out of it.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -411,78 +478,103 @@
     <div class="eyebrow">Part 1 · Understand it</div>
     <h2 id="h-understand">What depression is, and how it works</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">If this sounds familiar, you're not alone.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Like someone turned the volume down on everything.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Things you used to love, like your sport, your shows, your friends, feel flat.</li>
-        <li>You're tired all the time, even after a full night's sleep.</li>
-        
-        <li >You're irritable with everyone and don't totally know why.</li>
-        
-        <li >Assignments you could knock out before now feel like climbing a mountain.</li>
-        
-        <li >You've been bailing on plans, then feeling lonely because you bailed.</li>
-        
-        <li >You feel numb more than sad, like the volume on everything got turned down.</li>
+        <li>Your sport, your music, your friends: all of it feels muted.</li>
+        <li>You sleep ten hours and wake up tired, or you're awake at 3am for no reason.</li>
+        <li>You're snapping at people you actually like.</li>
+        <li>Work that used to take an hour now takes the whole night, if it happens at all.</li>
+        <li>You cancel plans, then feel lonely because you canceled.</li>
       </ul>
-      <p style="margin:0">Everyone has days like this. When they stack up for weeks, it might be depression. Depression is common, it's nobody's fault, and it gets better with help.</p>
+      <p style="margin:0">Everyone has stretches like this. When they stack up for two weeks or more and get in the way of your life, it may be depression. It's common, it's nobody's fault, and it's one of the most treatable conditions there is.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">You're far from the only one</span><span class="sticker">About 4 in 10 high schoolers have felt this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 570 290" role="img" aria-label="About 40 out of 100 high school students felt sad or hopeless almost every day for two weeks or more." style="width:100%;max-width:560px;height:auto;display:block"><circle cx="20" cy="20" r="11" fill="var(--school)"/><circle cx="48" cy="20" r="11" fill="var(--school)"/><circle cx="76" cy="20" r="11" fill="var(--school)"/><circle cx="104" cy="20" r="11" fill="var(--school)"/><circle cx="132" cy="20" r="11" fill="var(--school)"/><circle cx="160" cy="20" r="11" fill="var(--school)"/><circle cx="188" cy="20" r="11" fill="var(--school)"/><circle cx="216" cy="20" r="11" fill="var(--school)"/><circle cx="244" cy="20" r="11" fill="var(--school)"/><circle cx="272" cy="20" r="11" fill="var(--school)"/><circle cx="20" cy="48" r="11" fill="var(--school)"/><circle cx="48" cy="48" r="11" fill="var(--school)"/><circle cx="76" cy="48" r="11" fill="var(--school)"/><circle cx="104" cy="48" r="11" fill="var(--school)"/><circle cx="132" cy="48" r="11" fill="var(--school)"/><circle cx="160" cy="48" r="11" fill="var(--school)"/><circle cx="188" cy="48" r="11" fill="var(--school)"/><circle cx="216" cy="48" r="11" fill="var(--school)"/><circle cx="244" cy="48" r="11" fill="var(--school)"/><circle cx="272" cy="48" r="11" fill="var(--school)"/><circle cx="20" cy="76" r="11" fill="var(--school)"/><circle cx="48" cy="76" r="11" fill="var(--school)"/><circle cx="76" cy="76" r="11" fill="var(--school)"/><circle cx="104" cy="76" r="11" fill="var(--school)"/><circle cx="132" cy="76" r="11" fill="var(--school)"/><circle cx="160" cy="76" r="11" fill="var(--school)"/><circle cx="188" cy="76" r="11" fill="var(--school)"/><circle cx="216" cy="76" r="11" fill="var(--school)"/><circle cx="244" cy="76" r="11" fill="var(--school)"/><circle cx="272" cy="76" r="11" fill="var(--school)"/><circle cx="20" cy="104" r="11" fill="var(--school)"/><circle cx="48" cy="104" r="11" fill="var(--school)"/><circle cx="76" cy="104" r="11" fill="var(--school)"/><circle cx="104" cy="104" r="11" fill="var(--school)"/><circle cx="132" cy="104" r="11" fill="var(--school)"/><circle cx="160" cy="104" r="11" fill="var(--school)"/><circle cx="188" cy="104" r="11" fill="var(--school)"/><circle cx="216" cy="104" r="11" fill="var(--school)"/><circle cx="244" cy="104" r="11" fill="var(--school)"/><circle cx="272" cy="104" r="11" fill="var(--school)"/><circle cx="20" cy="132" r="11" fill="var(--line)"/><circle cx="48" cy="132" r="11" fill="var(--line)"/><circle cx="76" cy="132" r="11" fill="var(--line)"/><circle cx="104" cy="132" r="11" fill="var(--line)"/><circle cx="132" cy="132" r="11" fill="var(--line)"/><circle cx="160" cy="132" r="11" fill="var(--line)"/><circle cx="188" cy="132" r="11" fill="var(--line)"/><circle cx="216" cy="132" r="11" fill="var(--line)"/><circle cx="244" cy="132" r="11" fill="var(--line)"/><circle cx="272" cy="132" r="11" fill="var(--line)"/><circle cx="20" cy="160" r="11" fill="var(--line)"/><circle cx="48" cy="160" r="11" fill="var(--line)"/><circle cx="76" cy="160" r="11" fill="var(--line)"/><circle cx="104" cy="160" r="11" fill="var(--line)"/><circle cx="132" cy="160" r="11" fill="var(--line)"/><circle cx="160" cy="160" r="11" fill="var(--line)"/><circle cx="188" cy="160" r="11" fill="var(--line)"/><circle cx="216" cy="160" r="11" fill="var(--line)"/><circle cx="244" cy="160" r="11" fill="var(--line)"/><circle cx="272" cy="160" r="11" fill="var(--line)"/><circle cx="20" cy="188" r="11" fill="var(--line)"/><circle cx="48" cy="188" r="11" fill="var(--line)"/><circle cx="76" cy="188" r="11" fill="var(--line)"/><circle cx="104" cy="188" r="11" fill="var(--line)"/><circle cx="132" cy="188" r="11" fill="var(--line)"/><circle cx="160" cy="188" r="11" fill="var(--line)"/><circle cx="188" cy="188" r="11" fill="var(--line)"/><circle cx="216" cy="188" r="11" fill="var(--line)"/><circle cx="244" cy="188" r="11" fill="var(--line)"/><circle cx="272" cy="188" r="11" fill="var(--line)"/><circle cx="20" cy="216" r="11" fill="var(--line)"/><circle cx="48" cy="216" r="11" fill="var(--line)"/><circle cx="76" cy="216" r="11" fill="var(--line)"/><circle cx="104" cy="216" r="11" fill="var(--line)"/><circle cx="132" cy="216" r="11" fill="var(--line)"/><circle cx="160" cy="216" r="11" fill="var(--line)"/><circle cx="188" cy="216" r="11" fill="var(--line)"/><circle cx="216" cy="216" r="11" fill="var(--line)"/><circle cx="244" cy="216" r="11" fill="var(--line)"/><circle cx="272" cy="216" r="11" fill="var(--line)"/><circle cx="20" cy="244" r="11" fill="var(--line)"/><circle cx="48" cy="244" r="11" fill="var(--line)"/><circle cx="76" cy="244" r="11" fill="var(--line)"/><circle cx="104" cy="244" r="11" fill="var(--line)"/><circle cx="132" cy="244" r="11" fill="var(--line)"/><circle cx="160" cy="244" r="11" fill="var(--line)"/><circle cx="188" cy="244" r="11" fill="var(--line)"/><circle cx="216" cy="244" r="11" fill="var(--line)"/><circle cx="244" cy="244" r="11" fill="var(--line)"/><circle cx="272" cy="244" r="11" fill="var(--line)"/><circle cx="20" cy="272" r="11" fill="var(--line)"/><circle cx="48" cy="272" r="11" fill="var(--line)"/><circle cx="76" cy="272" r="11" fill="var(--line)"/><circle cx="104" cy="272" r="11" fill="var(--line)"/><circle cx="132" cy="272" r="11" fill="var(--line)"/><circle cx="160" cy="272" r="11" fill="var(--line)"/><circle cx="188" cy="272" r="11" fill="var(--line)"/><circle cx="216" cy="272" r="11" fill="var(--line)"/><circle cx="244" cy="272" r="11" fill="var(--line)"/><circle cx="272" cy="272" r="11" fill="var(--line)"/><text x="300" y="110" font-size="64" font-weight="800" fill="var(--school)">40</text><text x="302" y="140" font-size="20" font-weight="700" font-family="inherit" fill="var(--ink)">out of 100</text><text x="302" y="176" font-size="18" fill="var(--ink-soft)"><tspan x="302" dy="0">high school students felt</tspan><tspan x="302" dy="23">sad or hopeless almost</tspan><tspan x="302" dy="23">every day for 2+ weeks</tspan></text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >In the CDC's 2023 national survey, about 4 in 10 high school students said they'd felt so sad or hopeless, almost every day for two weeks or more, that they stopped doing some usual activities. That was more than half of girls and more than 1 in 4 boys. About 1 in 6 teens has a full episode of depression in a given year.</span></figcaption>
-      </figure>
-      </div>
-    </details>
+    <div class="card">
+      <div class="fold-label">You're far from the only one</div>
+      <div class="bigstat" style="margin-top:10px"><b>40%</b><span>of U.S. high school students in the CDC's 2023 survey felt so sad or hopeless, almost every day for two weeks or more, that they stopped some usual activities. Among girls it was 53%.</span></div>
+      <p style="margin:14px 0 0">A separate federal survey found about 18% of 12- to 17-year-olds, nearly 1 in 5, had a full episode of major depression in the past year. Look around a classroom. You're not the only one carrying this.</p>
+    </div>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">What depression changes in the brain</h3>
+    <figure class="fig">
+<svg class="depbrain" viewBox="0 0 400 272" role="img" aria-labelledby="db-t db-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="db-t">Side view of the brain showing areas linked to depression</title>
+  <desc id="db-d">The prefrontal cortex is at the front. The subgenual cingulate sits just under the front bend of the corpus callosum. The striatum sits deep in the middle. The amygdala and hippocampus sit low in the temporal lobe.</desc>
+  <defs>
+    <marker id="ah-lert" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#6E6E73"/></marker>
+    <marker id="ah-school" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#6E6E73"/></marker>
+  </defs>
+  <path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/>
+  <ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g>
+  <path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/>
+  <g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round">
+    <path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/>
+    <path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/>
+    <path d="M232 160 C246 152 262 158 276 150"/>
+  </g>
+  <path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/>
+  <path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/>
+  <ellipse cx="178" cy="146" rx="15" ry="9" fill="#D9822B"/>
+  <ellipse cx="144" cy="140" rx="7" ry="6" fill="#7A4FB5"/>
+  <path d="M212 180 C226 174 242 168 256 156" fill="none" stroke="#1A8F6E" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="202" cy="182" rx="9" ry="6.5" fill="#C0392B"/>
+  <g font-family="inherit" font-size="13" font-weight="700">
+    <line x1="92" y1="112" x2="56" y2="36" stroke="#2E6DB4" stroke-width="1.5"/><circle cx="92" cy="112" r="3" fill="#2E6DB4"/>
+    <text x="8" y="28" fill="#245A96">Prefrontal cortex</text>
+    <line x1="144" y1="140" x2="252" y2="22" stroke="#7A4FB5" stroke-width="1.5"/><circle cx="144" cy="140" r="3" fill="#fff"/>
+    <text x="392" y="16" fill="#5E3B8F" text-anchor="end">Subgenual cingulate</text>
+    <line x1="178" y1="146" x2="72" y2="226" stroke="#B8691C" stroke-width="1.5"/><circle cx="178" cy="146" r="3" fill="#fff"/>
+    <text x="8" y="242" fill="#9A5714">Striatum</text>
+    <line x1="202" y1="182" x2="190" y2="248" stroke="#C0392B" stroke-width="1.5"/>
+    <text x="190" y="264" fill="#A3301F" text-anchor="middle">Amygdala</text>
+    <line x1="244" y1="166" x2="336" y2="236" stroke="#1A8F6E" stroke-width="1.5"/><circle cx="244" cy="166" r="3" fill="#fff"/>
+    <text x="392" y="252" fill="#146B53" text-anchor="end">Hippocampus</text>
+  </g>
+</svg>
+      <figcaption>Side view, face on the left, with deeper structures drawn as if the brain were see-through. These are patterns found across groups of people. No brain scan can diagnose depression in one person.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Striatum: the fun gets turned down</strong><p>In a study of teens with depression, this reward area responded less when they won money. The weaker the response, the less positive they felt in daily life, measured by check-ins on their phones. Doctors call this anhedonia.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Amygdala: tilts toward the negative</strong><p>Many studies find it reacts more to sad or threatening faces and words during depression. Your attention gets pulled to what's wrong, which is part of why the bad stuff feels like the whole story.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Subgenual cingulate: a mood hub</strong><p>A small area under the front of the brain's midline. It's often overactive in depression. It's also a target in experimental treatments for the most severe, hard-to-treat cases, with mixed results so far.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1A8F6E"></span><div><strong>Hippocampus: memory and stress</strong><p>A study pooling scans from nearly 9,000 people found it was slightly smaller, on average, in people with repeated episodes or depression that began by age 21. People in a first episode didn't differ. One more reason to get help early.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: focus slows down</strong><p>Planning, concentrating, and deciding all get harder. That's why grades often slip. It isn't laziness. The system you'd use to push through is one of the things affected.</p></div></div>
+    </div>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">A bad week, or depression?</span><span class="sticker">Sad comes and goes. Depression sticks around.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">A bad week, or depression?</span><span class="sticker">Sad comes and goes. Depression sticks.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>😢 Sadness</dt>
-        <dd >Usually a reaction to something real: a loss, a fight, a rejection. It comes in waves, and in between you can still enjoy things.</dd>
-        <dt>🌧 Depression</dt>
-        <dd >Low mood or lost interest most of the day, nearly every day, for at least two weeks, along with changes in sleep, appetite, energy, focus, or how you see yourself. It can show up with no obvious reason.</dd>
-        <dt>😠 It doesn't always look sad.</dt>
-        <dd >In teens, depression often shows up as irritability, anger, or "I don't care" more than tears. Doctors count an irritable mood as a sign of depression for people your age.</dd>
-        <dt>🎭 It can hide.</dt>
-        <dd>Lots of people with depression still go to school, crack jokes at lunch, and post like everything's fine. Then they get home and crash.</dd>
+        <dt>Sadness</dt>
+        <dd>Usually a response to something real: a loss, a breakup, a rejection. It comes in waves, and in between you can still enjoy things.</dd>
+        <dt>Depression</dt>
+        <dd>Low mood or lost interest most of the day, nearly every day, for at least two weeks, plus other changes: sleep, appetite, energy, focus, guilt, or how you see yourself. It can show up with no obvious cause.</dd>
+        <dt>In teens it often looks like irritability.</dt>
+        <dd>Short temper, "I don't care," anger more than tears. Doctors count an irritable mood as a core sign of depression in people your age.</dd>
+        <dt>It can hide well.</dt>
+        <dd>Plenty of people with depression keep their grades up, joke at lunch, and post like everything's fine. Then they get home and crash. Looking okay and being okay aren't the same.</dd>
       </dl>
       </div>
     </details>
 
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">What depression does</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔋</span><strong>Drains your battery</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Everything takes more energy, even showering or answering a text.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎮</span><strong>Turns down the fun</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >Doctors call this anhedonia: the things that used to light you up don't anymore.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🌫</span><strong>Fogs your thinking</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Focusing, remembering, and making decisions get harder. Grades often slip.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">😴</span><strong>Messes with sleep and appetite</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Some people sleep way more, some can't sleep. Some eat more, some barely eat.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🗯</span><strong>Changes the story</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0" >It tells you "Nobody cares," "I'm a burden," "Nothing will change." Those thoughts feel like facts. They're symptoms.</p></details>
-    </div>
-    </div>
-
-    <details class="fold fold-callout">
-      <summary><span class="fold-label">🧬 Why it happens</span><span class="sticker">Not weakness. Not laziness. Not your fault.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold ">
+      <summary><span class="fold-label">Why it happens</span><span class="sticker">Not weakness. Not a choice.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div ><p>There's usually no single cause. Genes, ongoing stress, loss, bullying, loneliness, poor sleep, hormones, other health conditions, and substance use can all play a part, and sometimes it shows up with no clear trigger at all. It isn't weakness or laziness, and it isn't a choice.</p></div>
-      <p class="worst">The good news: depression is one of the most treatable health conditions there is.</p>
+      <p>There's rarely one cause. Genes, long-running stress, loss, bullying, discrimination, loneliness, poor sleep, hormones, other health conditions, and substance use can all add to the load. Sometimes it shows up with no clear trigger.</p>
+      <p style="margin:0">Weed deserves a specific mention, since some people use it to cope. A review pooling 11 long-term studies found teens who used cannabis had about 37% higher odds of depression as young adults, even after accounting for earlier depression. That's a link, not proof of cause, and the individual risk is modest. It's still the opposite of a treatment.</p>
       </div>
     </details>
 
-    <details class="fold ">
+    <details class="fold fold-callout">
       <summary><span class="fold-label">The downward spiral</span><span class="sticker">Waiting to feel like it keeps you stuck.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 600 300" role="img" aria-label="A loop: feel low, do less, less fun and fewer people, feel even lower, and around again." style="width:100%;max-width:600px;height:auto;display:block"><defs><marker id="ah-lert" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ink-soft)"/></marker></defs><path d="M385 70 C440 85 465 105 470 118" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-lert)"/><path d="M470 182 C460 210 430 228 392 236" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-lert)"/><path d="M208 236 C170 228 140 210 130 182" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-lert)"/><path d="M130 118 C140 100 165 82 215 70" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-lert)"/><rect x="215" y="26" width="170" height="48" rx="14" fill="var(--card)" stroke="var(--alert)" stroke-width="3"/><text x="300" y="56" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Feel low</text><rect x="395" y="126" width="170" height="48" rx="14" fill="var(--card)" stroke="var(--alert)" stroke-width="3"/><text x="480" y="156" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Do less</text><rect x="215" y="216" width="170" height="68" rx="14" fill="var(--card)" stroke="var(--alert)" stroke-width="3"/><text x="300" y="246" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Less fun,</text><text x="300" y="266" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">fewer people</text><rect x="35" y="126" width="170" height="48" rx="14" fill="var(--card)" stroke="var(--alert)" stroke-width="3"/><text x="120" y="156" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Feel even lower</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Depression says, "Wait until you feel like doing it." So you skip practice, stop texting back, stay in your room. Fewer good moments and fewer people means a lower mood, which means doing even less. The loop feeds itself.</span></figcaption>
-      </figure>
+      <p>Depression says, "Wait until you feel like it." So you skip practice, stop texting back, stay in your room. Fewer good moments and fewer people means a lower mood, which means doing even less.</p>
+      <p class="worst">The loop runs on its own. The way out runs the other direction: action first, mood later.</p>
       </div>
     </details>
   </div>
@@ -492,95 +584,77 @@
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
     <h2 id="h-practice">Climbing out, one small step at a time</h2>
-    <details class="fold ">
-      <summary><span class="fold-label">Action comes first</span><span class="sticker">Motivation shows up after you start.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 600 300" role="img" aria-label="A loop: do one small thing, a small lift, a little more energy, do the next small thing." style="width:100%;max-width:600px;height:auto;display:block"><defs><marker id="ah-school" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ink-soft)"/></marker></defs><path d="M385 70 C440 85 465 105 470 118" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-school)"/><path d="M470 182 C460 210 430 228 392 236" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-school)"/><path d="M208 236 C170 228 140 210 130 182" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-school)"/><path d="M130 118 C140 100 165 82 215 70" fill="none" stroke="var(--ink-soft)" stroke-width="3" marker-end="url(#ah-school)"/><rect x="215" y="16" width="170" height="68" rx="14" fill="var(--card)" stroke="var(--school)" stroke-width="3"/><text x="300" y="46" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Do one</text><text x="300" y="66" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">small thing</text><rect x="395" y="126" width="170" height="48" rx="14" fill="var(--card)" stroke="var(--school)" stroke-width="3"/><text x="480" y="156" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">A small lift</text><rect x="215" y="216" width="170" height="68" rx="14" fill="var(--card)" stroke="var(--school)" stroke-width="3"/><text x="300" y="246" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">A little more</text><text x="300" y="266" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">energy</text><rect x="35" y="116" width="170" height="68" rx="14" fill="var(--card)" stroke="var(--school)" stroke-width="3"/><text x="120" y="146" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">Do the next</text><text x="120" y="166" font-size="16" font-weight="700" text-anchor="middle" font-family="inherit" fill="var(--ink)">small thing</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Motivation usually shows up after you start, not before. Therapists call this behavioral activation: you schedule small, doable actions before the mood catches up. It's one of the best-tested ways to ease depression.</span></figcaption>
-      </figure>
-      </div>
-    </details>
-
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Small steps beat big plans.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🪜 Do it before you feel like it.<span class="row-cue" aria-hidden="true"></span></summary><p>Shrink the task until it's almost silly: put on your shoes, open the doc, reply to one text. Then let yourself stop or keep going.</p></details>
-        <details class="row"><summary>🚶 Move your body.<span class="row-cue" aria-hidden="true"></span></summary><p >A 2024 review of more than 200 studies found walking, running, yoga, and strength training all helped ease depression. Ten minutes outside counts.</p></details>
-        <details class="row"><summary>🤝 Stay connected, even a little.<span class="row-cue" aria-hidden="true"></span></summary><p>Depression wants you to hide. Send one text. Sit with people at lunch, even if you don't say much.</p></details>
-        <details class="row"><summary>☀️ Keep a steady wake-up time.<span class="row-cue" aria-hidden="true"></span></summary><p>Get up around the same time every day, and get some daylight in the morning. Sleep and mood are tightly linked. Running on Empty has more.</p></details>
-        <details class="row"><summary>🗣 Tell one adult.<span class="row-cue" aria-hidden="true"></span></summary><p>A counselor, a parent, a coach, a teacher. You don't need the perfect words. "I haven't felt like myself for a while" is enough.</p></details>
-        <details class="row"><summary>🕵 Catch the story.<span class="row-cue" aria-hidden="true"></span></summary><p >Notice the thoughts depression hands you, like "There's no point" or "I always mess up." Ask: Is that a fact, or a symptom? The Inner Critic has more on talking back.</p></details>
-        <details class="row"><summary>✅ Count small wins.<span class="row-cue" aria-hidden="true"></span></summary><p>Write down one thing you did each day, even tiny ones. Depression erases wins. A list keeps them.</p></details>
+      <div class="fold-label">Behavioral activation</div>
+      <h3 class="sticker">Action first. Mood follows.</h3>
+      <p>Therapists call it behavioral activation: you schedule small, doable things before you feel like doing them, and let the mood catch up. A review of 26 trials found a solid, moderate benefit compared with control groups.</p>
+      <div class="levers">
+        <div class="lever"><b>Move</b><span>A 2024 review of 218 trials (mostly adults) found walking or jogging, yoga, and strength training eased depression, more so at higher effort. Ten minutes outside counts as a start.</span></div>
+        <div class="lever"><b>Stay near people</b><span>Depression pushes you to hide. Sit with people at lunch even if you're quiet. Answer one text.</span></div>
+        <div class="lever"><b>Anchor your mornings</b><span>Same wake time every day and daylight early. Sleep and mood move together. Running on Empty has more.</span></div>
+        <div class="lever"><b>Count small wins</b><span>Write down one thing you did each day. Depression erases wins. A list keeps the record straight.</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Shrink the task until it's almost silly.<span class="row-cue" aria-hidden="true"></span></summary><p>Not "do the essay." Open the doc. Put on your shoes. Reply to one message. Then you're allowed to stop. Often you won't.</p></details>
+        <details class="row"><summary><span class="num">2</span> Tell one adult, imperfectly.<span class="row-cue" aria-hidden="true"></span></summary><p>A counselor, a parent, a coach, a doctor, a faith leader. "I haven't felt like myself for a while" is enough. Families talk about mental health in different ways. If yours doesn't use words like "depression," you can start with sleep, energy, or stress.</p></details>
+        <details class="row"><summary><span class="num">3</span> Treat the story as a symptom.<span class="row-cue" aria-hidden="true"></span></summary><p>"Nobody cares." "Nothing will change." "I'm a burden." These feel like facts. They're one of the most predictable symptoms of the illness. The Inner Critic has more on talking back.</p></details>
+        <details class="row"><summary><span class="num">4</span> Ask about treatment.<span class="row-cue" aria-hidden="true"></span></summary><p>Therapy (especially CBT or behavioral activation), and for some people medicine, help most teens. It's normal to need a few tries to find the right fit.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Make a menu for the hard days.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Build a menu for the hard days.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Write one tiny thing for each line. When you're stuck, pick one and do just that, for five minutes.</p>
+      <p>Write one tiny thing for each line, while you're able to think clearly. On a stuck day, pick one and do it for five minutes. Nothing here is saved.</p>
       <label class="prompt" for="tx-1">Something that moves my body:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       <label class="prompt" for="tx-2">Something with another person:</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">Something I used to enjoy:</label>
+      <label class="prompt" for="tx-3">Something I used to enjoy, even if it won't feel the same yet:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-4">Something that gets one thing done:</label>
+      <label class="prompt" for="tx-4">One small thing that gets something done:</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <p style="margin:0">Five minutes counts. You can stop after, and lots of times you won't want to.</p>
+      <p style="margin:0">Five minutes counts. You can stop after. A lot of the time you won't want to.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Myth or real? Vote.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Myth or real? Vote first, then check the research.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 15 minutes · no materials</p>
       <ol class="tight" style="padding-left:1.3em">
         <li>Read each statement out loud.</li>
-        <li>Everyone votes: agree, disagree, or not sure. Stand up, raise hands, or point to a corner.</li>
-        <li>Tap to see what the research says, then talk about it.</li>
+        <li>Everyone votes: agree, disagree, or not sure.</li>
+        <li>Open what the research says, then talk about it.</li>
       </ol>
+      <div class="scenario">
+        <p><b>1 of 5.</b> If you can keep your grades up, you can't be depressed.</p>
+        <p class="tap-hint" style="margin:4px 0 8px">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Disagree. Depression can hide behind a normal-looking day, including good grades. What matters is how someone is doing on the inside, and for how long.</p></details>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 A bad week, or something more? · 1 of 4</span><span class="sticker">If you can still laugh with your friends, you can't be depressed.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Disagree. Plenty of people with depression laugh at lunch and crash at home. Depression can hide behind a normal-looking day.</p></details>
+      <div class="scenario" style="margin-top:18px">
+        <p><b>2 of 5.</b> In teens, depression often looks like being irritable or angry.</p>
+        <p class="tap-hint" style="margin:4px 0 8px">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Agree. It's common enough that doctors count irritability as a core sign for people under 18.</p></details>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 A bad week, or something more? · 2 of 4</span><span class="sticker">Depression in teens often looks like being cranky or angry.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Agree. Irritability is one of the most common signs in teens, so common that doctors count it as a symptom for people your age.</p></details>
+      <div class="scenario" style="margin-top:18px">
+        <p><b>3 of 5.</b> Asking a friend directly about suicide could put the idea in their head.</p>
+        <p class="tap-hint" style="margin:4px 0 8px">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Disagree. In a study of more than 2,300 New York high school students, being asked about suicide didn't raise distress or suicidal thinking. The most at-risk students seemed less distressed afterward. Asking can be a relief.</p></details>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 A bad week, or something more? · 3 of 4</span><span class="sticker">Asking a friend if they're thinking about suicide could put the idea in their head.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Disagree. Research shows asking directly does not raise the risk, and it often brings relief. If they say yes, tell an adult right away.</p></details>
+      <div class="scenario" style="margin-top:18px">
+        <p><b>4 of 5.</b> Most teens with depression get better with treatment.</p>
+        <p class="tap-hint" style="margin:4px 0 8px">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Agree. In a large federally funded trial, about 8 in 10 teens with depression responded after nine months of therapy, medicine, or both, and combining the two worked fastest.</p></details>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 A bad week, or something more? · 4 of 4</span><span class="sticker">Most teens with depression get better with treatment.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p >Agree. In a large study of teens with depression, more than 8 in 10 were much better after about nine months of treatment (therapy, medicine, or both).</p></details>
+      <div class="scenario" style="margin-top:18px">
+        <p><b>5 of 5.</b> Weed helps with depression.</p>
+        <p class="tap-hint" style="margin:4px 0 8px">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Disagree. It can numb a bad night. Long-term studies link teen cannabis use with higher odds of depression later, not lower.</p></details>
       </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
+      <h3 style="margin-top:22px">Talk it over</h3>
       <ul class="tight">
-        <li>What makes it hard for someone our age to say "I'm not okay"?</li>
-        <li>If a friend seemed off for a few weeks, what's one thing you could say to them?</li>
+        <li>Why is "I'm not okay" so hard to say at our age?</li>
+        <li>If a friend seemed off for a few weeks, what's one thing you could say?</li>
         <li>Who at our school could a student go to if they were struggling?</li>
       </ul>
       <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Assume some students in the room are dealing with depression right now. Don't ask anyone to share their own experience. Let students know a counselor is available afterward, and if anyone mentions self-harm or suicide, check in with them privately and follow your school's procedures.</p></details>
@@ -590,40 +664,44 @@
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      
-      <div class="scenario" >
-        <p>You've skipped practice three times. Your coach emails to ask what's going on.</p>
+      <div class="scenario">
+        <p>Andre left the team group chat, skipped two practices, and told you, "I'm just tired of everything."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Avoiding it adds a new worry and cuts off someone who might help.">Ignore the email</button>
-          <button class="choice" type="button" data-fb="good" data-msg="You don't owe details. Letting a coach know opens the door to support.">Reply honestly: "I've been having a hard time. Can we talk?"</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Ask privately and directly, including about suicide. Asking doesn't plant the idea. If he says yes, or you're not sure, bring in an adult today, even if he asks you not to.">Ask him privately how he's really doing, including whether he's thinking about hurting himself</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Respecting space is kind, and depression makes reaching out hard. Saying 'I noticed, and I'm here' doesn't push him. Silence can feel like nobody noticed.">Give him space. He'll talk when he's ready.</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Humor can connect people, but this statement deserves a real question. Take it seriously first.">Joke about it to lighten the mood</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>A friend posts late at night: "honestly what's even the point anymore."</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>You've felt flat for a month. When you mention it, a parent says, "Everyone gets sad. You just need to get out more."</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="This could be a sign your friend is in real pain. It's worth checking.">Like it and move on</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Asking directly is caring, and it doesn't put the idea in their head.">Message them: "I saw your post. Are you okay? Are you thinking about hurting yourself?"</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Even if your friend is upset with you, getting help is the caring move. When a Friend Tells You Something Scary has more.">Tell a trusted adult, or call 988 if you're worried right now</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Good move. Being specific helps: how long, how often, what's changed. Some families hear 'doctor' more easily than 'therapist.' Either is a real start.">Be specific: "It's been most days for a month. Can I see a doctor or counselor?"</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Also a good move. You don't need permission to talk with a school counselor, and they can help you figure out how to bring your family in.">Go to the school counselor on your own</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Depression is very treatable, and handling it alone usually makes it last longer. Try one of the other moves.">Drop it and deal with it yourself</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Late at night you see a post from someone in your grade: "won't be a problem much longer."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. This is a warning sign. Call or text 988 for guidance, or wake a trusted adult. If you think they're in danger right now, call 911. You don't have to be sure to act.">Tell a trusted adult or call 988 now, even though it's late</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Reaching out is caring. Do it alongside telling an adult or calling 988, not instead of it. This is too big for one person to hold.">Message them to check in</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Spreading it can hurt them and doesn't get them help. Bring it to an adult or 988 instead.">Screenshot it to the group chat</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it heavier.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually make it heavier.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>⏳ Waiting until you feel motivated.<span class="row-cue" aria-hidden="true"></span></summary><p>With depression, motivation usually comes after action, not before.</p></details>
-        <details class="row"><summary>🛏 Hiding in your room all day.<span class="row-cue" aria-hidden="true"></span></summary><p>Rest is good. Hours alone with your thoughts usually make them darker.</p></details>
-        <details class="row"><summary>📱 Endless scrolling.<span class="row-cue" aria-hidden="true"></span></summary><p >It fills time without giving anything back, and late-night scrolling wrecks the sleep your mood depends on.</p></details>
-        <details class="row"><summary>🙂 "Just think positive."<span class="row-cue" aria-hidden="true"></span></summary><p>Depression isn't a bad attitude. Telling yourself to cheer up usually adds guilt.</p></details>
-        <details class="row"><summary><span >🍺 Drinking or using weed to feel better.</span><span class="row-cue" aria-hidden="true"></span></summary><p >Alcohol is a depressant, and teens who use weed regularly have a higher risk of depression. Both can numb it for a night and deepen it after.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'll start once I feel motivated.</span><span class="row-cue" aria-hidden="true"></span></summary><p>With depression, motivation usually comes after action. Waiting is the spiral.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Hours alone will help me reset.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Rest is good. Whole days alone with your thoughts usually make them darker.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I just need to think positive.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Depression isn't an attitude problem. Ordering yourself to cheer up mostly adds guilt.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A drink or a hit takes the edge off.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Alcohol is a depressant, and teen cannabis use is linked to more depression later. Both can numb one night and deepen the next week.</p></details>
       </div>
       </div>
     </details>
@@ -636,7 +714,7 @@
         <li>Is giving away things they care about, or saying goodbye.</li>
         <li>Feels completely hopeless or trapped.</li>
       </ul>
-      <p style="margin:0">Call or text <strong>988</strong> any time, or text <strong>HOME</strong> to <strong>741741</strong>. Call <strong>911</strong> if someone is in danger right now. Tell a trusted adult today. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Call or text <strong>988</strong> any time, or text <strong>HOME</strong> to <strong>741741</strong>. In Massachusetts, the Behavioral Health Help Line (<strong>833-773-2445</strong>, call or text, any time) can send a mobile crisis team. Tell a trusted adult today, or go to an emergency room. Call <strong>911</strong> if someone is in danger right now. See <a href="#help">Get help</a> below.</p>
     </div>
 
     <div class="card" style="border-left:5px solid var(--alert)">
@@ -647,8 +725,26 @@
         <li>Sleep, eating, or schoolwork has really changed.</li>
         <li>You're using vapes, weed, alcohol, or pills to cope.</li>
       </ul>
-      <p style="margin:0">Depression is very treatable. Therapy, and sometimes medicine, help most teens feel like themselves again. A counselor is a great first stop.</p>
+      <p style="margin:0">Depression is very treatable. A counselor is a good first stop.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Centers for Disease Control and Prevention. (2024). Youth Risk Behavior Survey: Data summary and trends report, 2013 to 2023.</li>
+        <li>Substance Abuse and Mental Health Services Administration. (2024). Key substance use and mental health indicators in the United States: Results from the 2023 National Survey on Drug Use and Health.</li>
+        <li>Forbes, E., et al. (2009). Altered striatal activation predicting real-world positive affect in adolescent major depressive disorder. <i>American Journal of Psychiatry</i>.</li>
+        <li>Mayberg, H., et al. (2005). Deep brain stimulation for treatment-resistant depression. <i>Neuron</i>.</li>
+        <li>Schmaal, L., et al. (2016). Subcortical brain alterations in major depressive disorder: Findings from the ENIGMA Major Depressive Disorder working group. <i>Molecular Psychiatry</i>.</li>
+        <li>Gobbi, G., et al. (2019). Association of cannabis use in adolescence and risk of depression, anxiety, and suicidality in young adulthood. <i>JAMA Psychiatry</i>.</li>
+        <li>Ekers, D., et al. (2014). Behavioural activation for depression: An update of meta-analysis of effectiveness and sub group analysis. <i>PLoS ONE</i>.</li>
+        <li>Noetel, M., et al. (2024). Effect of exercise for depression: Systematic review and network meta-analysis of randomised controlled trials. <i>BMJ</i>.</li>
+        <li>Gould, M., et al. (2005). Evaluating iatrogenic risk of youth suicide screening programs. <i>JAMA</i>.</li>
+        <li>March, J., et al. (2007). The Treatment for Adolescents With Depression Study (TADS): Long-term effectiveness and safety outcomes. <i>Archives of General Psychiatry</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -659,16 +755,16 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-5">How I can tell when I'm starting to slide</label>
+      <label class="prompt" for="tx-5">My early warning signs that I'm starting to slide</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">One tiny thing that usually helps, even a little</label>
+      <label class="prompt" for="tx-6">One small thing that usually helps, even a little</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-7">Someone I could tell if I wasn't okay</label>
+      <label class="prompt" for="tx-7">The person I'd tell if I wasn't okay, and what I'd say first</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Something depression tells me that might not be true</label>
+      <label class="prompt" for="tx-8">Something depression tells me that I'd argue with if a friend said it about themselves</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
       <label class="prompt" for="tx-9">Something I'm looking forward to, even something small</label>
@@ -678,7 +774,7 @@
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Depression makes it feel like it will always be this way. It won't. Small steps and the right people help you climb out.</p>
+      <p>Depression tells you it will always feel this way. That's a symptom talking, not a forecast. Most people get better, and small steps with the right people around you are how it starts.</p>
     </div>
     </div>
   </div>
@@ -711,8 +807,7 @@
           <button type="button" class="chip" aria-pressed="false">nothing sounds fun</button>
           <button type="button" class="chip" aria-pressed="false">irritable</button>
           <button type="button" class="chip" aria-pressed="false">lonely</button>
-          
-          <button type="button" class="chip" aria-pressed="false" >sad for no reason</button>
+          <button type="button" class="chip" aria-pressed="false">sad for no clear reason</button>
           <button type="button" class="chip" aria-pressed="false">stayed in bed</button>
           <button type="button" class="chip" aria-pressed="false">skipped something</button>
           <button type="button" class="chip" aria-pressed="false">did one small thing</button>
@@ -725,11 +820,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-heavy" aria-pressed="false">🌧 Heavy and tired</button>
-          <button type="button" class="choice" data-path="p-numb" aria-pressed="false">😶 Numb or flat</button>
-          <button type="button" class="choice" data-path="p-irritable" aria-pressed="false">😤 Irritable</button>
-          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">🫥 Alone</button>
-          <button type="button" class="choice" data-path="p-lighter" aria-pressed="false">🌤 A little lighter today</button>
+          <button type="button" class="choice" data-path="p-heavy" aria-pressed="false">Heavy and tired</button>
+          <button type="button" class="choice" data-path="p-numb" aria-pressed="false">Numb or flat</button>
+          <button type="button" class="choice" data-path="p-irritable" aria-pressed="false">Irritable</button>
+          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">Alone</button>
+          <button type="button" class="choice" data-path="p-lighter" aria-pressed="false">A little lighter today</button>
         </div>
 
         <div class="path-panel" id="p-heavy" hidden>
@@ -737,29 +832,29 @@
           <p>Heavy days are hard, and it makes sense that you're worn out.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🪜</span>Pick the tiniest step from your menu. Five minutes.</li>
-            <li><span class="e" aria-hidden="true">🚿</span>A shower, a glass of water, something to eat. Basics count.</li>
-            <li><span class="e" aria-hidden="true">☀️</span>Get outside for ten minutes, even just to walk around the block.</li>
+            <li>Pick the smallest item on your menu. Five minutes.</li>
+            <li>A shower, water, something to eat. Basics count.</li>
+            <li>Ten minutes outside, even just around the block.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-numb" hidden>
           <h4>What this might mean</h4>
-          <p>Feeling nothing can be as hard as feeling too much. It's a common part of depression.</p>
+          <p>Feeling nothing can be as hard as feeling too much. It's a common part of depression, not a sign you're broken.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🎵</span>Put on music that used to move you, even if it doesn't right now.</li>
-            <li><span class="e" aria-hidden="true">🚶</span>Move your body. Feelings often follow movement.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If it's been weeks, tell a counselor.</li>
+            <li>Put on music that used to move you, even if it doesn't yet.</li>
+            <li>Move your body. Feelings often follow movement.</li>
+            <li>If it's been two weeks or more, tell a counselor.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-irritable" hidden>
           <h4>What this might mean</h4>
-          <p>Snapping at everything can be a sign you're running on empty, not that you're a bad person.</p>
+          <p>Snapping at everything can be depression or exhaustion showing up, not proof you're a bad person.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🏃</span>Burn some of it off: run, lift, walk fast.</li>
-            <li><span class="e" aria-hidden="true">😴</span>Check your sleep. Being tired turns up irritability.</li>
-            <li><span class="e" aria-hidden="true">📖</span>Anger Is Information has more ideas.</li>
+            <li>Burn some of it off: run, lift, walk fast.</li>
+            <li>Check your sleep. Short sleep turns irritability up.</li>
+            <li>Anger Is Information has more ideas.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-alone" hidden>
@@ -767,9 +862,9 @@
           <p>Depression tells you to pull away, and then the loneliness makes it worse.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>Send one text: "Hey, want to hang out this week?"</li>
-            <li><span class="e" aria-hidden="true">🍽</span>Sit with people at lunch, even if you're quiet.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Stop by the counseling office. That's what it's there for.</li>
+            <li>Send one text: "Want to get food this week?"</li>
+            <li>Sit with people at lunch, even if you're quiet.</li>
+            <li>Stop by the counseling office. That's what it's for.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-lighter" hidden>
@@ -777,9 +872,9 @@
           <p>Lighter days count. Notice what helped.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>What was different today? Do more of that.</li>
-            <li><span class="e" aria-hidden="true">✅</span>Write down one win.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Give yourself credit for getting here.</li>
+            <li>What was different today? Do more of that.</li>
+            <li>Write down one win.</li>
+            <li>Give yourself credit for getting here.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -807,7 +902,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be patient with yourself. Climbing out happens in small steps, and you don't have to climb alone.</p>
+        <p class="closing">Be patient with yourself. Climbing out happens in small steps, and you don't have to do it alone.</p>
       </div>
     </div>
     </div>

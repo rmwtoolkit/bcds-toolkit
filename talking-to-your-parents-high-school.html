@@ -362,6 +362,70 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure: trust loop / worry loop */
+  .fig svg.loops { width:100%; height:auto; display:block; }
 </style>
 </head>
 
@@ -381,9 +445,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🗣 High School · Home and family</div>
+  <div class="eyebrow">High School · Home and family</div>
   <h1>Talking to Your Parents (So They Actually Listen)</h1>
-  <p class="tagline">Because you have things to say, and you deserve to be heard.</p>
+  <p class="tagline">How trust and freedom actually get negotiated, what&#39;s going on in both your heads, and how to make your case.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,54 +473,87 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why talking with parents can be hard</h2>
+    <h2 id="h-understand">Why it gets harder, and why it matters more</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You tried to explain. It turned into a fight.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">You asked about one weekend. It turned into a fight about everything.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You tried to explain something and it turned into an argument.</li>
-        
-        <li >You asked for more independence (a later curfew, a car, a trip) and it went badly.</li>
-        <li>You wanted to tell them something hard but didn't know how to start.</li>
-        <li>They gave advice when you just wanted them to listen.</li>
-        <li>You felt like they don't get what being a kid is like now, especially online.</li>
-        <li>You said nothing at all because it seemed easier.</li>
+        <li>You asked about a trip with friends, and somehow ended up arguing about something from last year.</li>
+        <li>They can see your location, and you can't tell if that's care or control.</li>
+        <li>You want to tell them something serious (a relationship, a mistake, how you're really doing) and the moment never seems right.</li>
+        <li>You and your parents grew up in different worlds, maybe different countries or languages, and some things don't translate.</li>
+        <li>Anything about college, money, or the future gets tense fast.</li>
       </ul>
-      <p style="margin:0">In this module, "parents" means whoever is raising you: parents, guardians, grandparents, or other family. Talking with them is a skill, and skills get better with practice.</p>
+      <p style="margin:0">Here, "parents" means whoever is raising you: parents, grandparents, guardians, aunts or uncles, foster parents, older siblings. Families differ a lot in how much teens are expected to speak up, negotiate, or defer. Keep yours in mind as you read.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Why conversations go sideways</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">⏰</span><strong>Bad timing</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Asking right when they walk in the door, are driving, or are stressed almost never goes well.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔥</span><strong>Big feelings on both sides</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">When you're upset, it's hard to explain. When they're worried, it's hard for them to listen.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧩</span><strong>Different goals</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">You want freedom or understanding. They want you safe. Both can be true at the same time.</p></details>
+    <h3 style="margin-top:28px">Freedom runs on information</h3>
+    <figure class="fig">
+<svg class="loops" viewBox="0 0 400 420" role="img" aria-labelledby="lp-t lp-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="lp-t">The trust loop and the worry loop</title>
+  <desc id="lp-d">Two cycles. The trust loop: you share more, they know more, they worry less, you get more freedom, and you share more again. The worry loop: you share less, they fill in the gaps, they add more rules, you hide more, and you share even less.</desc>
+  <defs>
+    <marker id="lp-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#1A8F6E"/></marker>
+    <marker id="lp-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#C0392B"/></marker>
+  </defs>
+  <text x="8" y="18" font-size="14" font-weight="700" fill="#146B53">The trust loop</text>
+  <path d="M272 50 C300 50 310 64 310 89" fill="none" stroke="#1A8F6E" stroke-width="2" marker-end="url(#lp-g)"/>
+  <path d="M310 131 C310 156 300 170 272 170" fill="none" stroke="#1A8F6E" stroke-width="2" marker-end="url(#lp-g)"/>
+  <path d="M128 170 C100 170 90 156 90 131" fill="none" stroke="#1A8F6E" stroke-width="2" marker-end="url(#lp-g)"/>
+  <path d="M90 89 C90 64 100 50 128 50" fill="none" stroke="#1A8F6E" stroke-width="2" marker-end="url(#lp-g)"/>
+  <rect x="130" y="33" width="140" height="34" rx="17" fill="#fff" stroke="#1A8F6E" stroke-width="1.6"/>
+  <text x="200" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#146B53">You share more</text>
+  <rect x="240" y="93" width="140" height="34" rx="17" fill="#fff" stroke="#1A8F6E" stroke-width="1.6"/>
+  <text x="310" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#146B53">They know more</text>
+  <rect x="130" y="153" width="140" height="34" rx="17" fill="#fff" stroke="#1A8F6E" stroke-width="1.6"/>
+  <text x="200" y="175" text-anchor="middle" font-size="13" font-weight="700" fill="#146B53">They worry less</text>
+  <rect x="20" y="93" width="140" height="34" rx="17" fill="#fff" stroke="#1A8F6E" stroke-width="1.6"/>
+  <text x="90" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#146B53">More freedom</text>
+  <text x="200" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1A8F6E" opacity=".75">Trust</text>
+  <text x="8" y="228" font-size="14" font-weight="700" fill="#A3301F">The worry loop</text>
+  <path d="M272 260 C300 260 310 274 310 299" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#lp-r)"/>
+  <path d="M310 341 C310 366 300 380 272 380" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#lp-r)"/>
+  <path d="M128 380 C100 380 90 366 90 341" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#lp-r)"/>
+  <path d="M90 299 C90 274 100 260 128 260" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#lp-r)"/>
+  <rect x="130" y="243" width="140" height="34" rx="17" fill="#fff" stroke="#C0392B" stroke-width="1.6"/>
+  <text x="200" y="265" text-anchor="middle" font-size="13" font-weight="700" fill="#A3301F">You share less</text>
+  <rect x="240" y="303" width="140" height="34" rx="17" fill="#fff" stroke="#C0392B" stroke-width="1.6"/>
+  <text x="310" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#A3301F">They fill the gaps</text>
+  <rect x="130" y="363" width="140" height="34" rx="17" fill="#fff" stroke="#C0392B" stroke-width="1.6"/>
+  <text x="200" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#A3301F">More rules</text>
+  <rect x="20" y="303" width="140" height="34" rx="17" fill="#fff" stroke="#C0392B" stroke-width="1.6"/>
+  <text x="90" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#A3301F">You hide more</text>
+  <text x="200" y="326" text-anchor="middle" font-size="15" font-weight="700" fill="#C0392B" opacity=".75">Worry</text>
+</svg>
+      <figcaption>Two loops most families move between. Based on research on how parents come to know what's going on in teens' lives. Simplified: real families move back and forth.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1A8F6E"></span><div><strong>The trust loop</strong><p>Researchers Margaret Kerr and Håkan Stattin studied more than 1,000 14-year-olds in Sweden. What parents actually knew about their teens' lives came mostly from what teens chose to tell them, not from rules or checking up. That's leverage, and it's yours.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>The worry loop</strong><p>When parents don't know, many fill the gap with worst cases and tighter rules. That doesn't mean you owe them every detail. Privacy is normal at your age. It means the things you do share buy trust.</p></div></div>
     </div>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it's harder at your age</span><span class="sticker">You want freedom. They want you safe.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">What's going on in both your heads.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>You're growing more independent.</dt>
-        <dd>That's healthy and normal. It also means more moments where you and your parents see things differently.</dd>
-        <dt>Your brain and theirs are wired differently right now.</dt>
-        <dd>Teen brains are tuned toward friends and new experiences. Parent brains are often tuned toward worry.</dd>
-        <dt>Their world was different.</dt>
-        <dd>Group chats, Snap Map, and social media weren't part of growing up for most parents. That can make them more worried, or just confused.</dd>
-        <dt>Most parents want to understand.</dt>
-        <dd>Even when it doesn't look like it, most parents want to know what's going on with you. They just don't always know how to ask.</dd>
+        <dt>Fewer fights, bigger feelings.</dt>
+        <dd>A review of dozens of studies by Brett Laursen and colleagues found that the number of conflicts with parents drops across the teen years, while the emotional intensity rises from early to mid-adolescence. If arguments feel bigger lately, that's a common pattern, not a sign something is broken.</dd>
+        <dt>Criticism makes it harder to think.</dt>
+        <dd>In a brain imaging study, teens listening to recordings of their own mothers criticizing them showed more activity in emotional areas and less in areas for self-control and for understanding another person's point of view. In the middle of a heated moment, a pause is a strategy, not a retreat.</dd>
+        <dt>Every kind of family negotiates this.</dt>
+        <dd>Andrew Fuligni studied teens from Mexican, Chinese, Filipino, and European backgrounds. Their beliefs about parents' authority differed, but their levels of conflict and closeness with parents were similar. The style changes. The negotiation is universal.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">💬 They're learning too</span><span class="sticker">Talking more can earn you more freedom.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Location sharing</span><span class="sticker">Make it a deal, not a secret.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Most parents are figuring out how to parent a kid your age for the first time, even if you have older siblings. They'll get it wrong sometimes, and so will you. That's how families learn.</p>
-      <p class="worst">The worst part: the less you talk, the more they worry, and the more they worry, the more they say no. Talking can actually earn you more freedom.</p>
+      <p>Location sharing can be a safety tool or a source of constant questions. It works better as something you agree on together: when it's on, what it's for, and what happens if they see something unexpected.</p>
+      <p class="worst">Turning it off without a conversation usually reads as hiding, and that's a fast trip into the worry loop.</p>
       </div>
     </details>
   </div>
@@ -465,62 +562,82 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Make your case like an adult</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Right moment, clear ask, calm voice.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🕰 Pick your moment.<span class="row-cue" aria-hidden="true"></span></summary><p>Car rides, walks, or cooking together often work better than sitting face to face. Ask, "Is now a good time to talk about something?"</p></details>
-        <details class="row"><summary>🎯 Know what you want.<span class="row-cue" aria-hidden="true"></span></summary><p>Before you start, decide: do you want advice, help, permission, or just someone to listen? Then say it. "I don't need you to fix it, I just want to vent."</p></details>
-        <details class="row"><summary>🧊 Stay calm(ish).<span class="row-cue" aria-hidden="true"></span></summary><p>If you feel yourself getting heated, say, "Can we take a break and come back to this?" Then actually come back.</p></details>
-        <details class="row"><summary>👂 Show you heard them.<span class="row-cue" aria-hidden="true"></span></summary><p>"I get that you're worried about..." goes a long way, even if you disagree.</p></details>
-        <details class="row"><summary>🤝 Offer a plan.<span class="row-cue" aria-hidden="true"></span></summary><p>Instead of "Can I go?" try "Can I go if I text you when I get there and I'm home by 10?" Plans show you've thought it through.</p></details>
-        <details class="row"><summary>✉️ Write it down if talking is hard.<span class="row-cue" aria-hidden="true"></span></summary><p>A text or note can help you say something hard without getting interrupted or flustered.</p></details>
+      <div class="fold-label">Before you start</div>
+      <h3 class="sticker">Clear ask, right moment, a plan for their worry.</h3>
+      <div class="levers">
+        <div class="lever"><b>Know your ask</b><span>Advice, help, permission, or just listening? Say which up front: "I don't need you to fix this. I just want you to know."</span></div>
+        <div class="lever"><b>Pick your moment</b><span>Side by side (driving, cooking, walking) often beats face to face. Not the minute they walk in the door.</span></div>
+        <div class="lever"><b>Lead with their worry</b><span>"I know you're worried about who's driving. Here's my plan for that." It shows you've thought past yourself.</span></div>
+        <div class="lever"><b>Offer checkpoints</b><span>"If I text when I get there and I'm home by 11, can I go? If it goes well, can we talk about midnight next time?"</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Call a timeout with a return time.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm getting heated. Can we pick this up after dinner?" Then actually come back. Walking off with no plan reads as shutting down.</p></details>
+        <details class="row"><summary><span class="num">2</span> Write it if saying it is hard.<span class="row-cue" aria-hidden="true"></span></summary><p>A text, an email, or a note lets you say the whole thing without being interrupted. Follow up in person when you can.</p></details>
+        <details class="row"><summary><span class="num">3</span> Bring in a bridge.<span class="row-cue" aria-hidden="true"></span></summary><p>An aunt, a grandparent, a coach, a counselor, or a faith leader can help translate between generations, or between cultures when you grew up somewhere your parents didn't.</p></details>
+        <details class="row"><summary><span class="num">4</span> Know privacy from secrecy.<span class="row-cue" aria-hidden="true"></span></summary><p>Keeping your group chat or journal private is normal. Keeping safety things secret is different: you or a friend in danger, someone hurting you, substances. Those need an adult in the loop, even if it isn't a parent.</p></details>
+      <p style="margin:16px 0 0">Some families expect teens to speak up and negotiate. In others, arguing back reads as disrespect, and asks go better through tone, timing, or a trusted relative. Neither is wrong. What works in yours?</p>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Plan it before you start it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Plan the conversation before you start it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Think of something you want to talk to a parent about. Fill this in to get ready. Nothing is saved.</p>
+      <p>Pick something you want to bring up. Nothing here is saved.</p>
       <label class="prompt" for="tx-1">What I want to talk about:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">What I want from the conversation (advice, permission, help, or just listening):</label>
+      <label class="prompt" for="tx-2">What I want from it (advice, permission, help, or just listening):</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">What they might be worried about:</label>
+      <label class="prompt" for="tx-3">What they're likely to worry about, honestly:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-4">How I'll start:</label>
-      <textarea id="tx-4" autocomplete="off" spellcheck="false" placeholder="Hey, is now a good time? I want to talk about something."></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-5"><span >A compromise I could offer:</span></label>
+      <label class="prompt" for="tx-4">My opening line, and when and where I'll say it:</label>
+      <textarea id="tx-4" autocomplete="off" spellcheck="false" placeholder="On the drive Saturday: Hey, can I run something by you? I've thought it through."></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-5">The plan or checkpoint I can offer:</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Which line actually gets heard?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three conversations. Which move gets you further?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the line most likely to be heard.</p>
-      
-      <div class="scenario" >
-        <p>You're stressed about a class and your parent keeps saying, "Just study harder."</p>
+      <div class="scenario">
+        <p>Tariq wants to go to a concert two hours away with friends. His parents say no before he finishes the sentence.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Understandable, but they won't learn what's really going on.">Roll your eyes and walk away</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Clear and calm. It tells them exactly how to help.">"I'm already studying a lot. What I need is help figuring out what's not working."</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="It ends the conversation, but the stress stays. Try again when you're less frustrated.">"Fine, whatever."</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A fast no is often fear talking. Coming back calm with answers to their worries gives them a reason to say yes.">Ask when they can talk, then come back with a plan: driver, timing, check-ins</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Sometimes another adult in the family is a fair person to involve. Going around a no, without the first parent knowing, usually backfires.">Ask a different adult in the family instead</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="If it goes wrong or they find out, he's deep in the worry loop, and every future ask gets harder.">Go anyway and say he's at a friend's house</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Priya's mom texts: "Why are you at Jordan's? You said the library."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Owning the change and offering a fix is how you stay in the trust loop.">"We moved to Jordan's to study. I should've told you. I'll text when plans change."</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="True, maybe, but the tone tells her the problem is her. Add the part where you own the change.">"We're studying, relax"</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That answers the question with a bigger worry. Expect a much longer conversation later.">Turn off location sharing</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Diego has felt really low for weeks. He wants to tell his dad, who usually jumps straight to fixing things.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Naming what he needs first gives his dad a job he can actually do: listen.">Start with what he needs: "Can you just listen first? I've been really down."</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Writing it is a real way in, especially for hard topics. Plan to follow up in person.">Text him so he doesn't have to see his reaction</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Weeks of feeling low is worth bringing up now. If his dad can't hear it, a counselor is another good first step.">Wait until it gets bad enough that his dad notices</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually lead to a no.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually lead to a no.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>📢 Yelling or slamming doors.<span class="row-cue" aria-hidden="true"></span></summary><p>It's a sign the feeling is huge, but it makes parents focus on the yelling instead of what you need.</p></details>
-        <details class="row"><summary>🙊 Shutting down completely.<span class="row-cue" aria-hidden="true"></span></summary><p>Silence often makes parents worry more and push harder.</p></details>
-        <details class="row"><summary>🎭 "Everyone else" arguments.<span class="row-cue" aria-hidden="true"></span></summary><p>Parents tend to care about you, not everyone else. Talk about your situation.</p></details>
-        <details class="row"><summary>🕳 Hiding things.<span class="row-cue" aria-hidden="true"></span></summary><p>Secrets that come out later damage trust, and trust is what earns freedom.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Louder means they'll finally get it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The conversation becomes about the yelling. Your actual point disappears.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Saying nothing keeps the peace.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Silence usually makes parents worry more and ask harder questions.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> "Everyone else gets to."</span><span class="row-cue" aria-hidden="true"></span></summary><p>They're responsible for you, not everyone else. Make the case about your situation and your track record.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> What they don't know won't hurt.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Secrets that come out later cost trust, and trust is the currency freedom runs on.</p></details>
       </div>
       </div>
     </details>
@@ -529,11 +646,24 @@
       <h3>When to talk to another adult</h3>
       <ul class="tight">
         <li>You don't feel safe talking to your parents, or at home.</li>
-        <li>Conversations at home often end in threats or someone getting hurt.</li>
+        <li>Arguments at home end in threats, or someone gets hurt.</li>
         <li>You need help with something you can't bring to them yet.</li>
       </ul>
-      <p style="margin:0">A counselor can listen and help you figure out next steps. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">A counselor can listen and help you figure out next steps. If you're unsafe at home, you can call or text Childhelp at <strong>1-800-422-4453</strong> any time, or call <strong>911</strong> in an emergency. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Kerr, M., &amp; Stattin, H. (2000). What parents know, how they know it, and several forms of adolescent adjustment: Further support for a reinterpretation of monitoring. <i>Developmental Psychology</i>.</li>
+        <li>Stattin, H., &amp; Kerr, M. (2000). Parental monitoring: A reinterpretation. <i>Child Development</i>.</li>
+        <li>Laursen, B., Coy, K., &amp; Collins, W. A. (1998). Reconsidering changes in parent-child conflict across adolescence: A meta-analysis. <i>Child Development</i>.</li>
+        <li>Lee, K., Siegle, G., Dahl, R., Hooley, J., &amp; Silk, J. (2015). Neural responses to maternal criticism in healthy youth. <i>Social Cognitive and Affective Neuroscience</i>.</li>
+        <li>Fuligni, A. (1998). Authority, autonomy, and parent-adolescent conflict and cohesion: A study of adolescents from Mexican, Chinese, Filipino, and European backgrounds. <i>Developmental Psychology</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -544,26 +674,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-6">A conversation with a parent that went well, and why</label>
+      <label class="prompt" for="tx-6">A conversation with a parent that went well, and what made it work</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">A conversation that went badly, and what I'd change</label>
+      <label class="prompt" for="tx-7">One that went badly, and the moment it turned</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-8">Something I wish my parents understood about me</label>
+      <label class="prompt" for="tx-8">Something I wish they understood about my life right now</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-9">What I think my parents worry about most</label>
+      <label class="prompt" for="tx-9">What I think they worry about most, if I'm being fair</label>
       <textarea id="tx-9" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-10">When and where talking with them works best</label>
+      <label class="prompt" for="tx-10">One thing I could share that would move us toward the trust loop</label>
       <textarea id="tx-10" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You don't have to agree on everything to understand each other. Every honest conversation builds a little more trust.</p>
+      <p>You don't have to agree on everything to understand each other. Every honest conversation is a deposit, and trust is what freedom is built on.</p>
     </div>
     </div>
   </div>
@@ -578,7 +708,7 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">How are things with your parents today?</h3>
+        <h3 id="ci-1">How much is stuff with your parents on your mind today?</h3>
         <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
@@ -595,12 +725,12 @@
           <button type="button" class="chip" aria-pressed="false">they didn't listen</button>
           <button type="button" class="chip" aria-pressed="false">I didn't say what I meant</button>
           <button type="button" class="chip" aria-pressed="false">they said no</button>
-          <button type="button" class="chip" aria-pressed="false">they don't get my online life</button>
-          <button type="button" class="chip" aria-pressed="false">I'm keeping something to myself</button>
-          <button type="button" class="chip" aria-pressed="false">we had a good talk</button>
-          <button type="button" class="chip" aria-pressed="false">we worked out a compromise</button>
-          <button type="button" class="chip" aria-pressed="false">I apologized</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">they're tracking me</button>
+          <button type="button" class="chip" aria-pressed="false">keeping something from them</button>
+          <button type="button" class="chip" aria-pressed="false">culture or language gap</button>
+          <button type="button" class="chip" aria-pressed="false">talked and it went okay</button>
+          <button type="button" class="chip" aria-pressed="false">they surprised me</button>
+          <button type="button" class="chip" aria-pressed="false">calmer today</button>
         </div>
         <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
       </div>
@@ -609,61 +739,61 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-argue" aria-pressed="false">😤 We had a fight</button>
-          <button type="button" class="choice" data-path="p-unheard" aria-pressed="false">🙉 They didn't listen</button>
-          <button type="button" class="choice" data-path="p-secret" aria-pressed="false">🤐 Keeping something from them</button>
-          <button type="button" class="choice" data-path="p-unsafe" aria-pressed="false">🚨 Home doesn't feel safe</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 We talked and it went okay</button>
+          <button type="button" class="choice" data-path="p-argue" aria-pressed="false">We had a fight</button>
+          <button type="button" class="choice" data-path="p-unheard" aria-pressed="false">They didn't listen</button>
+          <button type="button" class="choice" data-path="p-secret" aria-pressed="false">Keeping something from them</button>
+          <button type="button" class="choice" data-path="p-unsafe" aria-pressed="false">Home doesn't feel safe</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">We talked and it went okay</button>
         </div>
 
         <div class="path-panel" id="p-argue" hidden>
           <h4>What this might mean</h4>
-          <p>Fights with parents can feel huge. Most families repair after them.</p>
+          <p>Bigger feelings in the teen years are common, on both sides. One fight doesn't define the relationship.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧊</span>Give it a little time to cool down.</li>
-            <li><span class="e" aria-hidden="true">🧰</span>The Repair Kit works with family too.</li>
-            <li><span class="e" aria-hidden="true">✉️</span>If talking feels hard, try a text or note.</li>
+            <li>Give it a few hours before trying again.</li>
+            <li>Open with one line that owns your part, if you had one.</li>
+            <li>Then make one clear ask.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unheard" hidden>
           <h4>What this might mean</h4>
-          <p>Not being heard is frustrating. It doesn't mean they don't care.</p>
+          <p>Feeling unheard is frustrating, especially when you've tried.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🕰</span>Try again at a calmer time.</li>
-            <li><span class="e" aria-hidden="true">🎯</span>Start by saying what you want: advice, help, or listening.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>A counselor can help you plan what to say.</li>
+            <li>Try a different moment: driving, cooking, a walk.</li>
+            <li>Say what you need first: "Can you just listen?"</li>
+            <li>Write it down if talking keeps going sideways.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-secret" hidden>
           <h4>What this might mean</h4>
-          <p>Some things are hard to bring up. You get to choose when and how.</p>
+          <p>Holding something big is heavy. Privacy is normal, and some things are too big to carry alone.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Use the planner above to get ready.</li>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Talk to a counselor first if it feels big.</li>
-            <li><span class="e" aria-hidden="true">🛟</span>If it's about safety, tell an adult today.</li>
+            <li>Ask yourself: is this privacy, or a safety issue?</li>
+            <li>If it's about safety, tell a trusted adult today, even if it isn't a parent.</li>
+            <li>A counselor can help you plan how to bring it up.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unsafe" hidden>
           <h4>What this might mean</h4>
-          <p>Everyone deserves to feel safe at home. This is not your fault.</p>
+          <p>Feeling unsafe at home is serious, and it's not your fault. You deserve help right away.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor or trusted adult at school.</li>
-            <li><span class="e" aria-hidden="true">🏠</span>When Home Feels Tense has more help.</li>
-            <li><span class="e" aria-hidden="true">📞</span>If you're in danger right now, call 911.</li>
+            <li>If you're in danger right now, get somewhere safe and call 911.</li>
+            <li>Tell a school counselor or trusted adult today.</li>
+            <li>Call or text Childhelp, 1-800-422-4453, any time.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
           <h4>What this might mean</h4>
-          <p>That's worth noticing. Better days don't have to be perfect days to count.</p>
+          <p>Notice what worked. That's your playbook.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what made it work.</li>
-            <li><span class="e" aria-hidden="true">🙏</span>Say thanks. Parents like hearing it too.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Use the same approach next time.</li>
+            <li>What made it go well: timing, tone, the ask?</li>
+            <li>Thank them. It builds trust.</li>
+            <li>Use the same approach next time.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
@@ -691,7 +821,7 @@
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as patient with yourself as you would be with a friend learning a new skill. Talking with parents gets easier the more you do it.</p>
+        <p class="closing">Be as patient with yourself as you'd be with a friend learning a new skill. This one gets easier with reps.</p>
       </div>
     </div>
     </div>

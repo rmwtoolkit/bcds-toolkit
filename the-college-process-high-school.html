@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🎓 High School · Transitions</div>
+  <div class="eyebrow">High School · Transitions</div>
   <h1>The College Process Without Losing Your Mind</h1>
-  <p class="tagline">Because your future matters, and so does who you are right now.</p>
+  <p class="tagline">What the data says about admissions, what actually shapes life after college, and how to make the decision yours.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +458,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,56 +475,58 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why the college process feels so heavy</h2>
+    <h2 id="h-understand">What the college process really is</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Everyone's asking. You don't have to know yet.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Everyone has an opinion about your future.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Everyone keeps asking "Where are you applying?" and you don't know yet.</li>
-        
-        <li >You feel like every grade, activity, and summer has to look good on an application.</li>
-        <li>You're picking classes or activities based on what looks impressive instead of what you like.</li>
-        
-        <li >You saw someone post their acceptance and felt your stomach drop.</li>
-        <li>You and your family don't agree on what you should do after high school.</li>
-        <li>You're not sure college is the right next step for you, and you don't know how to say that.</li>
+        <li>A relative asks where you're applying, then tells you where you should be applying.</li>
+        <li>Your feed in December is all early acceptances, and you're still waiting.</li>
+        <li>You signed up for a fourth AP because it "looks good," and you're exhausted.</li>
+        <li>You love a school you're not sure your family can afford, and nobody has said the number out loud.</li>
+        <li>Part of you isn't sure a four-year college right away is the right move, and you haven't said that out loud either.</li>
       </ul>
-      <p style="margin:0">Thinking about the future is normal. When it starts running your whole life, it's time to turn the volume down.</p>
+      <p style="margin:0">You've heard "there's no single right school." This lesson gives you the evidence behind that, including the places where the honest answer is more complicated.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">Where the pressure comes from</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🗣</span><strong>Everyone talking</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Family, friends, teachers, and other parents all have opinions. The questions start early and don't stop.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📱</span><strong>What you see online</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Decision day posts, "what I got into" videos, and stats threads make it look like everyone is winning except you.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>Your own head</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The voice that says one decision decides your whole future, and that it has to be perfect.</p></details>
-    </div>
+    <h3 style="margin-top:28px">What you see online vs. the whole picture</h3>
+    <p>Decision-day posts come mostly from a small group of very selective schools. There are far more four-year colleges than that. A 2019 Pew Research Center analysis of federal data looked at 1,364 of them.</p>
+    <figure class="fig">
+<svg viewBox="0 0 350 236" role="img" aria-labelledby="ad-t ad-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="ad-t">How selective are U.S. four-year colleges?</title>
+  <desc id="ad-d">Of 1,364 four-year colleges in 2017, 53.3 percent admitted two-thirds or more of applicants, 43.3 percent admitted between 20 percent and two-thirds, and 3.4 percent admitted fewer than 20 percent.</desc>
+  <g font-size="14"><text x="20" y="28" font-size="13" font-weight="600" fill="#1D1D1F">Admit two-thirds or more of applicants</text><rect x="20" y="36" width="266.5" height="28" rx="6" fill="#0071E3"/><text x="276.5" y="55" text-anchor="end" fill="#fff" font-weight="700">53.3%</text><text x="20" y="94" font-size="13" font-weight="600" fill="#1D1D1F">Admit between 20% and two-thirds</text><rect x="20" y="102" width="216.5" height="28" rx="6" fill="#8E8E93"/><text x="226.5" y="121" text-anchor="end" fill="#fff" font-weight="700">43.3%</text><text x="20" y="160" font-size="13" font-weight="600" fill="#1D1D1F">Admit fewer than 20%</text><rect x="20" y="168" width="17.0" height="28" rx="6" fill="#1D1D1F"/><text x="45.0" y="187" fill="#1D1D1F" font-weight="700">3.4%</text>
+  </g>
+  <text x="20" y="226" font-size="12" fill="#6E6E73">Share of 1,364 four-year colleges, 2017.</text>
+</svg>
+      <figcaption>Source: Pew Research Center analysis of U.S. Department of Education data (DeSilver, 2019). Only 17 of these schools admitted fewer than 10%. The middle figure is what remains after Pew's two reported shares.</figcaption>
+    </figure>
+    <p>Most colleges admit most of the people who apply. The stress you feel is real, but it's shaped by a narrow slice of schools that get most of the attention.</p>
     </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">What's actually true</span><span class="sticker">There's no single right school.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Does a more selective school pay off?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>There's no single right school.</dt>
-        <dd>There are thousands of colleges, and many paths that aren't a four-year college at all. Lots of people end up happy somewhere they didn't expect.</dd>
-        <dt>Where you go matters less than people think.</dt>
-        <dd>Research on college outcomes suggests that what you do once you get somewhere tends to matter more than the name on the sweatshirt.</dd>
-        <dt>You're more than a list of stats.</dt>
-        <dd>Grades and scores are part of the picture. So are your curiosity, effort, kindness, and what you care about.</dd>
-        <dt><span >It's okay not to know.</span></dt>
-        <dd >Plenty of people apply without a clear major or plan. Figuring it out is part of the process.</dd>
+        <dt>For most students, less than people think.</dt>
+        <dd>Economists Stacy Dale and Alan Krueger compared students who got into similar schools but chose differently. Once they accounted for where students applied and were admitted, the average earnings boost from attending the more selective school mostly disappeared.</dd>
+        <dt>But not for everyone equally.</dt>
+        <dd>The same research found a real benefit for Black and Hispanic students and for students whose parents had less formal education. Selective schools can open networks that some families already have and others don't.</dd>
+        <dt>At the very top, there's an effect.</dt>
+        <dd>A 2023 study by Raj Chetty, David Deming, and John Friedman found that attending an Ivy-Plus college, compared with a selective public flagship, raised the chances of reaching the top 1% of earners and of landing jobs at elite firms. Effects on average earnings were much smaller. Both things can be true: a few schools offer specific advantages, and most people do well at many kinds of schools.</dd>
+        <dt>What you do there matters a lot.</dt>
+        <dd>A 2014 Gallup and Purdue survey of about 30,000 graduates found that the type of college mattered little for later well-being and work engagement. What mattered was experience: graduates who had a professor who cared about them, made them excited to learn, and encouraged their goals had more than double the odds of thriving.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🎢 The stress is real, and it's manageable</span><span class="sticker">It's a match, not a measure of you.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The pressure itself</span><span class="sticker">Pushing harder has a cost.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>The college process can feel like a test of your worth. It isn't. It's a matching process between you and places that fit. The goal is a good fit, not a perfect brand name.</p>
-      <p class="worst">The worst part: when everyone seems to be talking about college, it can feel like your whole future is being decided right now, by things you can't control.</p>
+      <p>Psychologist Suniya Luthar has spent years studying students at high-achieving schools. Her research finds higher rates of anxiety, depression, and substance use than many people expect, tied partly to constant pressure to excel. Her work also points to what protects students: close, accepting relationships with adults and friends who value them apart from their achievements.</p>
+      <p class="worst">The goal isn't to stop caring. It's to keep the process from becoming the only thing you're allowed to care about.</p>
       </div>
     </details>
   </div>
@@ -467,48 +535,75 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Make the decision yours</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Put your energy where you have control.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🎯 Focus on what you can control.<span class="row-cue" aria-hidden="true"></span></summary><p>Your effort, your curiosity, how you treat people. Not admission rates, not other people's results.</p></details>
-        <details class="row"><summary>❤️ Choose things you actually like.<span class="row-cue" aria-hidden="true"></span></summary><p >Activities you care about tell a better story than a long list of things you did to look good.</p></details>
-        <details class="row"><summary>🗓 Break it into small steps.<span class="row-cue" aria-hidden="true"></span></summary><p >Use a calendar with deadlines broken into small tasks. A little each week beats a panic in November.</p></details>
-        <details class="row"><summary>🚪 Set boundaries on the talk.<span class="row-cue" aria-hidden="true"></span></summary><p>It's okay to say, "I'm not ready to talk about that today." Or set a weekly time to talk about college with your family, and keep it out of dinner.</p></details>
-        <details class="row"><summary>📵 Limit comparison.<span class="row-cue" aria-hidden="true"></span></summary><p>Mute decision day posts or college stats accounts if they make you feel worse.</p></details>
-        <details class="row"><summary>🌙 Keep the rest of your life.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, friends, and fun aren't distractions from the process. They keep you going.</p></details>
+      <div class="fold-label">Build a list on purpose</div>
+      <h3 class="sticker">Fit has four parts. Prestige is not one of them.</h3>
+      <div class="levers">
+        <div class="lever"><b>Academic fit</b><span>Do they teach what you want to learn, in a way you learn well? Class size, advising, research or co-op options.</span></div>
+        <div class="lever"><b>Financial fit</b><span>Use each school's net price calculator. The sticker price and what families actually pay can be very different. Talk numbers early.</span></div>
+        <div class="lever"><b>Life fit</b><span>Distance from home, size, setting, whether you'll find your people, how students like you describe it.</span></div>
+        <div class="lever"><b>Odds</b><span>A balanced list includes schools where you're likely to be admitted and would be glad to go. Those aren't backups. They're choices.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">More than one road</div>
+      <h3 class="sticker">Paths that work, and that people rarely mention.</h3>
+      <p class="tap-hint">Tap one to see more.</p>
+        <details class="row"><summary><span class="num">1</span> Community college, then transfer.<span class="row-cue" aria-hidden="true"></span></summary><p>As of 2024, Massachusetts residents without a bachelor's degree can attend community college tuition-free through MassEducate. MassTransfer then offers credit transfer, and for qualifying grades, guaranteed admission and tuition credit at UMass and state universities in approved programs. Check current terms with a transfer counselor.</p></details>
+        <details class="row"><summary><span class="num">2</span> A gap year with a plan.<span class="row-cue" aria-hidden="true"></span></summary><p>Work, service, or caring for family, with a clear next step. Many colleges let admitted students defer.</p></details>
+        <details class="row"><summary><span class="num">3</span> Trades, apprenticeships, the military.<span class="row-cue" aria-hidden="true"></span></summary><p>Skilled trades and registered apprenticeships pay while you train. These are real careers, not consolation prizes.</p></details>
+        <details class="row"><summary><span class="num">4</span> Staying close to home.<span class="row-cue" aria-hidden="true"></span></summary><p>For some students, commuting saves money or keeps them connected to family responsibilities they value. Going far away isn't the only version of growing up.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">What's actually yours to control?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Sort what's yours from what isn't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick what's actually in your control. Notice where your worry is going.</p>
+      <p>Check the ones you can actually influence. Notice where most of your worry has been going.</p>
       <div class="checklist" role="group" aria-label="Things in my control">
-        <label><input type="checkbox"> How much effort I put into my classes.</label>
-        <label><input type="checkbox"> Which activities I choose to spend time on.</label>
-        <label><input type="checkbox"> Asking for help when I'm stuck.</label>
-        <label><input type="checkbox"> How much I scroll other people's results.</label>
-        <label><input type="checkbox"> Getting enough sleep.</label>
+        <label><input type="checkbox"> What I learn and how hard I work in my classes.</label>
+        <label><input type="checkbox"> Which activities I commit to, and why.</label>
+        <label><input type="checkbox"> Whether my list includes schools my family can afford and I'd be glad to attend.</label>
+        <label><input type="checkbox"> How much of other people's results I look at.</label>
+        <label><input type="checkbox"> Whether I ask for help with essays, aid forms, and deadlines.</label>
       </div>
-      <p id="test-tally" class="feedback" aria-live="polite" data-done="All five are yours. That's where your energy can go." data-partial="Every one of these is actually in your control. Try checking the rest."></p>
-      <p>Not in your control: other people's choices, admission rates, what a school decides. Those are worth letting go of.</p>
-      <label class="prompt" for="tx-1">One worry I'll try to let go of:</label>
+      <p id="test-tally" class="feedback" aria-live="polite" data-done="All five are yours. That's where your energy can go." data-partial="Every one of these is something you can influence. Look again at the ones you left blank."></p>
+      <p>Not yours: admission rates, what a committee decides in a given year, who else applies, what other people post. Worry about those doesn't change them.</p>
+      <label class="prompt" for="tx-1">One thing outside my control I'll stop checking, and what I'll do instead:</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">College talk moments. What helps most?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three real moments. What would help most?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the most helpful move.</p>
-      
-      <div class="scenario" >
-        <p>A friend posts that they got into a school you were also hoping for, and you didn't hear back yet.</p>
+      <div class="scenario">
+        <p>Camila was deferred from her early decision school the same night her close friend got in. Her friend wants to celebrate together this weekend.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="That keeps your stress high and doesn't change the answer.">Check the portal every ten minutes</button>
-          <button class="choice" type="button" data-fb="good" data-msg="You can be happy for them and still protect your own head.">Congratulate them, then do something that takes your mind off it</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="That's a fair way to take care of yourself. It doesn't mean you're a bad friend.">Mute their posts for a while</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That's honest and kind to both of them. Being happy for a friend and disappointed for yourself can happen in the same week.">Congratulate her, say she needs a day, then celebrate when she's ready</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="A deferral isn't a rejection, and refreshing doesn't change it. It keeps the stress at full volume.">Reread the decision letter and check the portal every night</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Muting for a while is a fair way to protect your head. Pair it with talking to her directly so the friendship doesn't take the hit.">Mute her posts and say nothing</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Darnell wants to go to school three states away. His parents want him to commute to a state university to save money and stay close. Every conversation turns into an argument.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. Real net prices turn a fight about values into a conversation about options. A counselor can help both sides hear each other, and what families expect about distance and money varies a lot.">Run net price calculators together and set up a meeting with his counselor</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Applying in secret usually ends in a harder conversation later, often with a deadline attached.">Apply anyway and tell them in April</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="He may decide to compromise, and that can be a good choice. It works best after he's been heard and has seen the real numbers.">Give up and do what they say</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario">
+        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+        <p>Hana is a junior with four APs, two varsity sports, and a job. She's sleeping five hours a night and dropped the art class she loved because it "doesn't count."</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Admissions readers see depth, not a pile. Sleep and something she loves aren't extras. They keep her functioning for two more years of this.">Drop one commitment, protect sleep, and bring back something she enjoys</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This is the pattern Luthar's research flags. Pushing harder on five hours of sleep tends to make things worse.">Push through until applications are in</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="A counselor is a great idea. Bring a specific question: which of these actually matters for what she wants?">Ask her counselor what colleges want to see</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
@@ -517,13 +612,13 @@
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These just turn the stress up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths about admissions</span><span class="sticker">What the evidence says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🏆 Treating it as a ranking of your worth.<span class="row-cue" aria-hidden="true"></span></summary><p>An admissions decision is about a school's needs. It's not a grade on you as a person.</p></details>
-        <details class="row"><summary>🧮 Comparing stats with friends.<span class="row-cue" aria-hidden="true"></span></summary><p>It rarely makes anyone feel better and can strain friendships.</p></details>
-        <details class="row"><summary>🔥 Doing everything at once.<span class="row-cue" aria-hidden="true"></span></summary><p>Overloading your schedule to look impressive leads to burnout.</p></details>
-        <details class="row"><summary>🤐 Keeping it all inside.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors, advisors, and trusted adults help people with this every year.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It's nearly impossible to get in anywhere.</span><span class="row-cue" aria-hidden="true"></span></summary><p>More than half of four-year colleges admit at least two-thirds of applicants. It's hard to get into a small number of schools.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> The name decides your future.</span><span class="row-cue" aria-hidden="true"></span></summary><p>For most students, what they do in college predicts more than where they went. The exceptions are real, and worth knowing, but they're narrower than the hype.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> More activities always look better.</span><span class="row-cue" aria-hidden="true"></span></summary><p>A few commitments you care about and can talk about honestly usually say more than a long list you did for the list.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Talking about money is rude.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Money is one of the biggest parts of fit. Families handle these talks differently, but having the conversation early protects everyone from heartbreak in April.</p></details>
       </div>
       </div>
     </details>
@@ -533,10 +628,25 @@
       <ul class="tight">
         <li>Worry about the future is affecting your sleep, eating, or mood most days.</li>
         <li>You feel like your life is over because of one grade, score, or decision.</li>
-        <li>Pressure at home about college is causing big conflict.</li>
+        <li>Pressure at home about college is causing serious conflict, or you feel you can't be honest about what you want.</li>
       </ul>
-      <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Your counselor can help with both sides: the logistics and the stress. If you'd be the first in your family to apply, ask about programs and fee waivers built for that. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>DeSilver, D. (2019). A majority of U.S. colleges admit most students who apply. <i>Pew Research Center</i>.</li>
+        <li>Dale, S., &amp; Krueger, A. (2002). Estimating the payoff to attending a more selective college. <i>Quarterly Journal of Economics</i>.</li>
+        <li>Dale, S., &amp; Krueger, A. (2014). Estimating the effects of college characteristics over the career using administrative earnings data. <i>Journal of Human Resources</i>.</li>
+        <li>Chetty, R., Deming, D., &amp; Friedman, J. (2023). Diversifying society's leaders? The determinants and causal effects of admission to highly selective private colleges. <i>NBER Working Paper</i>.</li>
+        <li>Gallup &amp; Purdue University (2014). <i>Great jobs, great lives: The Gallup-Purdue Index report</i>.</li>
+        <li>Luthar, S., Kumar, N., &amp; Zillmer, N. (2020). High-achieving schools connote risks for adolescents: Problems documented, processes implicated, and directions for interventions. <i>American Psychologist</i>.</li>
+        <li>Massachusetts Department of Higher Education. MassTransfer and MassEducate program information (mass.edu).</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -547,26 +657,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-2">What I've heard about college that stresses me out most</label>
+      <label class="prompt" for="tx-2">The belief about college that stresses me most, and what the evidence on this page says about it</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-3">What I actually enjoy learning or doing, apart from how it looks</label>
+      <label class="prompt" for="tx-3">What I'd want to study or do if nobody were grading the choice</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-4">What a good fit for me might look like, not just a name</label>
+      <label class="prompt" for="tx-4">My fit, in four parts: academic, financial, life, and odds</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Who I can talk to when the pressure gets loud</label>
+      <label class="prompt" for="tx-5">What my family hopes for my future, what I hope for, and where those overlap</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-6">How I want to treat my friends during this process</label>
+      <label class="prompt" for="tx-6">How I want to treat my friends, and myself, when decisions come out</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your future is bigger than any one school. Where you end up matters less than who you keep becoming.</p>
+      <p>The research is clear on this much: for most people, what you do once you get somewhere shapes your life more than the name of the place. Choose a place where you can do that.</p>
     </div>
     </div>
   </div>
@@ -612,11 +722,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">😰 Feeling the pressure</button>
-          <button type="button" class="choice" data-path="p-compare" aria-pressed="false">📏 Comparing myself to others</button>
-          <button type="button" class="choice" data-path="p-family" aria-pressed="false">🏠 Pressure from home</button>
-          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">🤷 Not sure what I want</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling calmer about it</button>
+          <button type="button" class="choice" data-path="p-pressure" aria-pressed="false">Feeling the pressure</button>
+          <button type="button" class="choice" data-path="p-compare" aria-pressed="false">Comparing myself to others</button>
+          <button type="button" class="choice" data-path="p-family" aria-pressed="false">Pressure from home</button>
+          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">Not sure what I want</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling calmer about it</button>
         </div>
 
         <div class="path-panel" id="p-pressure" hidden>

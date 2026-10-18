@@ -362,6 +362,73 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg { width:100%; height:auto; display:block; }
+  .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
+  .stat b { color:var(--ink); }
 </style>
 </head>
 
@@ -381,9 +448,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">⚡ High School · Substance use</div>
+  <div class="eyebrow">High School · Substance use</div>
   <h1>Study Drugs and Your Brain</h1>
-  <p class="tagline">Because feeling smarter and doing better aren't the same thing.</p>
+  <p class="tagline">What Adderall and Ritalin do in a brain with and without ADHD, and why the research keeps finding that feeling sharper isn't scoring higher.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +458,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -409,77 +475,78 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What stimulants do to a brain without ADHD</h2>
+    <h2 id="h-understand">Why a borrowed pill feels like it's working</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">The pressure's real. So is the science.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">The pressure is real. So is the data.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        
-        <li >Kids talk about taking someone's Adderall to get through finals or the SAT.</li>
-        
-        <li >You have a prescription, and people have asked you for a few.</li>
-        <li>You've felt so behind that a shortcut sounded really good.</li>
-        
-        <li >You've seen people online call Adderall the secret to getting everything done.</li>
-        <li>You've wondered whether you might have ADHD yourself.</li>
+        <li>It's finals week and someone in a group chat is selling "addy."</li>
+        <li>You have a prescription, and a teammate asked for two before the SAT.</li>
+        <li>You're taking three APs, working weekends, and sleeping six hours. A shortcut sounds reasonable.</li>
+        <li>You've wondered whether your focus problems are ADHD or just too much on your plate.</li>
       </ul>
-      <p style="margin:0">School pressure is real. Here's what these pills actually do in a brain, and what works better.</p>
+      <p style="margin:0">Those are fair pressures. Here's what these pills do in the brain, and what the research says happens to grades.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">How many students actually take them</span><span class="sticker">Almost nobody's actually doing this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 570 290" role="img" aria-label="98 out of 100 twelfth graders did not use Adderall without a prescription in the past year." style="width:100%;max-width:560px;height:auto;display:block"><circle cx="20" cy="20" r="11" fill="var(--school)"/><circle cx="48" cy="20" r="11" fill="var(--school)"/><circle cx="76" cy="20" r="11" fill="var(--school)"/><circle cx="104" cy="20" r="11" fill="var(--school)"/><circle cx="132" cy="20" r="11" fill="var(--school)"/><circle cx="160" cy="20" r="11" fill="var(--school)"/><circle cx="188" cy="20" r="11" fill="var(--school)"/><circle cx="216" cy="20" r="11" fill="var(--school)"/><circle cx="244" cy="20" r="11" fill="var(--school)"/><circle cx="272" cy="20" r="11" fill="var(--school)"/><circle cx="20" cy="48" r="11" fill="var(--school)"/><circle cx="48" cy="48" r="11" fill="var(--school)"/><circle cx="76" cy="48" r="11" fill="var(--school)"/><circle cx="104" cy="48" r="11" fill="var(--school)"/><circle cx="132" cy="48" r="11" fill="var(--school)"/><circle cx="160" cy="48" r="11" fill="var(--school)"/><circle cx="188" cy="48" r="11" fill="var(--school)"/><circle cx="216" cy="48" r="11" fill="var(--school)"/><circle cx="244" cy="48" r="11" fill="var(--school)"/><circle cx="272" cy="48" r="11" fill="var(--school)"/><circle cx="20" cy="76" r="11" fill="var(--school)"/><circle cx="48" cy="76" r="11" fill="var(--school)"/><circle cx="76" cy="76" r="11" fill="var(--school)"/><circle cx="104" cy="76" r="11" fill="var(--school)"/><circle cx="132" cy="76" r="11" fill="var(--school)"/><circle cx="160" cy="76" r="11" fill="var(--school)"/><circle cx="188" cy="76" r="11" fill="var(--school)"/><circle cx="216" cy="76" r="11" fill="var(--school)"/><circle cx="244" cy="76" r="11" fill="var(--school)"/><circle cx="272" cy="76" r="11" fill="var(--school)"/><circle cx="20" cy="104" r="11" fill="var(--school)"/><circle cx="48" cy="104" r="11" fill="var(--school)"/><circle cx="76" cy="104" r="11" fill="var(--school)"/><circle cx="104" cy="104" r="11" fill="var(--school)"/><circle cx="132" cy="104" r="11" fill="var(--school)"/><circle cx="160" cy="104" r="11" fill="var(--school)"/><circle cx="188" cy="104" r="11" fill="var(--school)"/><circle cx="216" cy="104" r="11" fill="var(--school)"/><circle cx="244" cy="104" r="11" fill="var(--school)"/><circle cx="272" cy="104" r="11" fill="var(--school)"/><circle cx="20" cy="132" r="11" fill="var(--school)"/><circle cx="48" cy="132" r="11" fill="var(--school)"/><circle cx="76" cy="132" r="11" fill="var(--school)"/><circle cx="104" cy="132" r="11" fill="var(--school)"/><circle cx="132" cy="132" r="11" fill="var(--school)"/><circle cx="160" cy="132" r="11" fill="var(--school)"/><circle cx="188" cy="132" r="11" fill="var(--school)"/><circle cx="216" cy="132" r="11" fill="var(--school)"/><circle cx="244" cy="132" r="11" fill="var(--school)"/><circle cx="272" cy="132" r="11" fill="var(--school)"/><circle cx="20" cy="160" r="11" fill="var(--school)"/><circle cx="48" cy="160" r="11" fill="var(--school)"/><circle cx="76" cy="160" r="11" fill="var(--school)"/><circle cx="104" cy="160" r="11" fill="var(--school)"/><circle cx="132" cy="160" r="11" fill="var(--school)"/><circle cx="160" cy="160" r="11" fill="var(--school)"/><circle cx="188" cy="160" r="11" fill="var(--school)"/><circle cx="216" cy="160" r="11" fill="var(--school)"/><circle cx="244" cy="160" r="11" fill="var(--school)"/><circle cx="272" cy="160" r="11" fill="var(--school)"/><circle cx="20" cy="188" r="11" fill="var(--school)"/><circle cx="48" cy="188" r="11" fill="var(--school)"/><circle cx="76" cy="188" r="11" fill="var(--school)"/><circle cx="104" cy="188" r="11" fill="var(--school)"/><circle cx="132" cy="188" r="11" fill="var(--school)"/><circle cx="160" cy="188" r="11" fill="var(--school)"/><circle cx="188" cy="188" r="11" fill="var(--school)"/><circle cx="216" cy="188" r="11" fill="var(--school)"/><circle cx="244" cy="188" r="11" fill="var(--school)"/><circle cx="272" cy="188" r="11" fill="var(--school)"/><circle cx="20" cy="216" r="11" fill="var(--school)"/><circle cx="48" cy="216" r="11" fill="var(--school)"/><circle cx="76" cy="216" r="11" fill="var(--school)"/><circle cx="104" cy="216" r="11" fill="var(--school)"/><circle cx="132" cy="216" r="11" fill="var(--school)"/><circle cx="160" cy="216" r="11" fill="var(--school)"/><circle cx="188" cy="216" r="11" fill="var(--school)"/><circle cx="216" cy="216" r="11" fill="var(--school)"/><circle cx="244" cy="216" r="11" fill="var(--school)"/><circle cx="272" cy="216" r="11" fill="var(--school)"/><circle cx="20" cy="244" r="11" fill="var(--school)"/><circle cx="48" cy="244" r="11" fill="var(--school)"/><circle cx="76" cy="244" r="11" fill="var(--school)"/><circle cx="104" cy="244" r="11" fill="var(--school)"/><circle cx="132" cy="244" r="11" fill="var(--school)"/><circle cx="160" cy="244" r="11" fill="var(--school)"/><circle cx="188" cy="244" r="11" fill="var(--school)"/><circle cx="216" cy="244" r="11" fill="var(--school)"/><circle cx="244" cy="244" r="11" fill="var(--school)"/><circle cx="272" cy="244" r="11" fill="var(--school)"/><circle cx="20" cy="272" r="11" fill="var(--school)"/><circle cx="48" cy="272" r="11" fill="var(--school)"/><circle cx="76" cy="272" r="11" fill="var(--school)"/><circle cx="104" cy="272" r="11" fill="var(--school)"/><circle cx="132" cy="272" r="11" fill="var(--school)"/><circle cx="160" cy="272" r="11" fill="var(--school)"/><circle cx="188" cy="272" r="11" fill="var(--school)"/><circle cx="216" cy="272" r="11" fill="var(--school)"/><circle cx="244" cy="272" r="11" fill="var(--line)"/><circle cx="272" cy="272" r="11" fill="var(--line)"/><text x="300" y="110" font-size="64" font-weight="800" fill="var(--school)">98</text><text x="302" y="140" font-size="20" font-weight="700" font-family="inherit" fill="var(--ink)">out of 100</text><text x="302" y="176" font-size="18" fill="var(--ink-soft)"><tspan x="302" dy="0">seniors who did NOT</tspan><tspan x="302" dy="23">misuse Adderall</tspan><tspan x="302" dy="23">in the past year</tspan></text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)">From the 2025 Monitoring the Future survey. It can sound like everyone's doing it during finals. About 2 in 100 seniors are.</figcaption>
-      </figure>
-      </div>
-    </details>
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">The circuit stimulants push on</h3>
+    <p>Adderall (amphetamine) and Ritalin or Concerta (methylphenidate) raise two chemical signals, dopamine and norepinephrine, by increasing how much is released or slowing how fast it gets cleared away. Here is where those signals start and where they go.</p>
+    <figure class="fig">
+<svg class="brain" viewBox="0 0 400 300" role="img" aria-labelledby="stim-t stim-d" xmlns="http://www.w3.org/2000/svg"><title id="stim-t">Side view of the brain: where stimulants act</title><desc id="stim-d">Dopamine comes from the ventral tegmental area in the midbrain and travels to the striatum and the prefrontal cortex. Norepinephrine comes from the locus coeruleus in the brainstem and travels forward to the prefrontal cortex.</desc><g transform="translate(20 22) scale(0.9)"><path d="M232 190 C236 214 240 236 246 258 L266 258 C262 236 262 214 262 196 Z" fill="#E3D8CA" stroke="#8A7F72" stroke-width="1.6"/><ellipse cx="294" cy="200" rx="40" ry="24" fill="#EADFD2" stroke="#8A7F72" stroke-width="1.6"/><g fill="none" stroke="#C9BDAE" stroke-width="1.2"><path d="M262 196 C280 190 304 190 326 198"/><path d="M262 206 C282 200 306 202 328 210"/></g><path d="M70 150 C58 98 98 48 170 40 C240 32 312 58 330 112 C340 142 326 170 300 180 C284 186 266 184 252 190 L214 194 C190 197 174 205 156 203 C124 200 100 192 86 178 C76 168 72 160 70 150 Z" fill="#F4EEE6" stroke="#8A7F72" stroke-width="2"/><g fill="none" stroke="#C9BDAE" stroke-width="1.6" stroke-linecap="round"><path d="M110 80 C122 92 120 104 132 112"/><path d="M150 56 C156 70 150 82 160 94"/><path d="M196 46 C198 62 192 74 202 86"/><path d="M240 50 C236 66 246 76 240 92"/><path d="M282 70 C274 84 286 94 278 110"/><path d="M314 112 C300 118 304 132 292 140"/><path d="M232 160 C246 152 262 158 276 150"/></g><path d="M138 128 C162 100 236 98 262 126 C252 118 244 122 236 116 C210 104 176 106 150 126 Z" fill="#E3D8CA" stroke="#B5A897" stroke-width="1.2"/><path d="M70 150 C58 98 98 48 160 41 L168 72 C150 82 136 100 128 118 C116 134 104 150 96 172 C88 168 76 162 70 150 Z" fill="#2E6DB4" fill-opacity=".85"/><ellipse cx="158" cy="146" rx="15" ry="9" fill="#D9822B"/><g fill="none" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 4"><path d="M238 189 C214 182 188 162 170 151" stroke="#C0392B"/><path d="M238 189 C196 188 150 176 108 140" stroke="#C0392B"/><path d="M254 210 C250 160 222 96 118 92" stroke="#1F8A70"/></g><ellipse cx="240" cy="190" rx="8" ry="5.5" fill="#C0392B"/><ellipse cx="255" cy="211" rx="6" ry="4.5" fill="#1F8A70"/></g><line x1="113.6" y1="115.6" x2="60" y2="26" stroke="#245A96" stroke-width="1.4"/><circle cx="113.6" cy="115.6" r="3" fill="#245A96"/><text x="8" y="22" fill="#245A96" font-size="13" font-weight="700" text-anchor="start">Prefrontal cortex</text><line x1="162.2" y1="153.4" x2="36" y2="262" stroke="#9A5714" stroke-width="1.4"/><circle cx="162.2" cy="153.4" r="3" fill="#9A5714"/><text x="8" y="272" fill="#9A5714" font-size="13" font-weight="700" text-anchor="start">Striatum</text><line x1="236.0" y1="193.0" x2="162" y2="281" stroke="#A3301F" stroke-width="1.4"/><circle cx="236.0" cy="193.0" r="3" fill="#A3301F"/><text x="150" y="292" fill="#A3301F" font-size="13" font-weight="700" text-anchor="start">VTA</text><line x1="249.5" y1="211.9" x2="350" y2="262" stroke="#17694F" stroke-width="1.4"/><circle cx="249.5" cy="211.9" r="3" fill="#17694F"/><text x="392" y="272" fill="#17694F" font-size="13" font-weight="700" text-anchor="end">Locus coeruleus</text><g font-size="11" fill="#6E6E73"><line x1="272" y1="18" x2="294" y2="18" stroke="#C0392B" stroke-width="2.4" stroke-dasharray="5 4"/><text x="300" y="22">dopamine</text><line x1="272" y1="36" x2="294" y2="36" stroke="#1F8A70" stroke-width="2.4" stroke-dasharray="5 4"/><text x="300" y="40">norepinephrine</text></g></svg>
+      <figcaption>Side view, with deeper structures drawn as if the brain were see-through. Dashed lines show the main pathways, simplified.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Prefrontal cortex: holds the plan</strong><p>Keeps your goal and the instructions in mind and blocks distractions. It works best in a middle zone of dopamine and norepinephrine. Too little or too much, and it gets worse.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Striatum: makes it feel worth doing</strong><p>Part of the reward system. Stimulants turn it up, so dull work feels more interesting. That's the "I could study for hours" feeling. It's real even when the studying isn't any better.</p></div></div>
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>VTA: the dopamine source</strong><p>The ventral tegmental area, a small cluster in the midbrain that sends dopamine forward to the striatum and the prefrontal cortex.</p></div></div>
+      <div class="region"><span class="dot" style="background:#1F8A70"></span><div><strong>Locus coeruleus: the alertness source</strong><p>A tiny spot in the brainstem that supplies norepinephrine. Stimulants push it up, so you feel wired. The same chemical acts on your body, which is why your heart rate climbs.</p></div></div>
+    </div>
+
+    <h3 style="margin-top:28px">Why more isn't better</h3>
+    <figure class="fig">
+<svg viewBox="0 0 400 300" role="img" aria-labelledby="iu-t iu-d" xmlns="http://www.w3.org/2000/svg"><title id="iu-t">The inverted U: focus versus stimulant signal</title><desc id="iu-d">Performance rises as dopamine and norepinephrine signaling increases, peaks in the middle, then falls. A brain with ADHD starts low on the curve, and the right dose moves it up toward the peak. A typical brain starts near the peak, and a stimulant pushes it past the top and down the other side.</desc><defs><marker id="ah-b" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2E6DB4"/></marker><marker id="ah-r" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#C0392B"/></marker></defs><rect x="176" y="30" width="72" height="176" fill="#F5F5F7"/><text x="212" y="24" font-size="11" fill="#6E6E73" text-anchor="middle">best zone</text><line x1="40" y1="206" x2="388" y2="206" stroke="#C7C7CC" stroke-width="1.5"/><line x1="40" y1="30" x2="40" y2="206" stroke="#C7C7CC" stroke-width="1.5"/><path d="M48 196 C118 196 150 44 212 44 C274 44 306 196 376 196" fill="none" stroke="#1D1D1F" stroke-width="2.5"/><path d="M108 156.4 L112 151.1 L116 145.5 L120 139.7 L124 133.8 L128 127.7 L132 121.6 L136 115.3 L140 109.1 L144 103.0 L148 97.0 L152 91.1 L156 85.4 L160 80.0 L164 74.9 L168 70.1 L172 65.6 L176 61.6" fill="none" stroke="#2E6DB4" stroke-width="5" stroke-linecap="round" marker-end="url(#ah-b)"/><path d="M244 57.9 L248 61.6 L252 65.6 L256 70.1 L260 74.9 L264 80.0 L268 85.4 L272 91.1 L276 97.0 L280 103.0 L284 109.1 L288 115.3 L292 121.6 L296 127.7 L300 133.8 L304 139.7" fill="none" stroke="#C0392B" stroke-width="5" stroke-linecap="round" marker-end="url(#ah-r)"/><circle cx="96" cy="170.6" r="10" fill="#2E6DB4" stroke="#fff" stroke-width="2"/><text x="96" y="175.1" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">1</text><circle cx="190" cy="50.5" r="10" fill="#2E6DB4" stroke="#fff" stroke-width="2"/><text x="190" y="55.0" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">2</text><circle cx="232" cy="49.4" r="10" fill="#C0392B" stroke="#fff" stroke-width="2"/><text x="232" y="53.9" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">3</text><circle cx="318" cy="159.0" r="10" fill="#C0392B" stroke="#fff" stroke-width="2"/><text x="318" y="163.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">4</text><text x="214" y="226" font-size="12" fill="#1D1D1F" text-anchor="middle">Dopamine and norepinephrine signal &#8594;</text><text x="44" y="226" font-size="11" fill="#6E6E73">low</text><text x="386" y="226" font-size="11" fill="#6E6E73" text-anchor="end">high</text><text transform="translate(26 118) rotate(-90)" font-size="12" fill="#1D1D1F" text-anchor="middle">Focus and performance</text><g font-size="12.5"><circle cx="20" cy="252" r="4" fill="#2E6DB4"/><text x="30" y="256" fill="#1D1D1F"><tspan font-weight="700" fill="#245A96">1 to 2</tspan>  ADHD: the right dose moves focus up</text><circle cx="20" cy="276" r="4" fill="#C0392B"/><text x="30" y="280" fill="#1D1D1F"><tspan font-weight="700" fill="#A3301F">3 to 4</tspan>  No ADHD: extra pushes it past the peak</text></g></svg>
+      <figcaption>A model, not a measurement. Brain research describes dopamine's effect on focus as an upside-down U. A brain with ADHD often starts low on the curve, and the right dose moves it up. A brain without ADHD usually starts near the top, so extra pushes it over the hump.</figcaption>
+    </figure>
+    </div>
 
     <details class="fold ">
-      <summary><span class="fold-label">What stimulants do in your brain</span><span class="sticker">Built for ADHD brains.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 640 285" role="img" aria-label="Brain diagram: stimulants act on focus in the prefrontal cortex, dopamine in the reward system, and heart rate and sleep." style="width:100%;max-width:720px;height:auto;display:block"><path d="M60 150 C40 80 120 25 210 30 C300 32 365 80 360 145 C357 190 320 205 280 200 L140 205 C95 205 68 185 60 150Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M120 70 C150 90 140 120 170 130 M210 45 C200 80 230 95 220 125 M285 60 C270 90 300 110 290 140 M330 110 C310 120 320 150 300 165 M95 160 C120 150 140 170 170 165" fill="none" stroke="var(--line)" stroke-width="3" stroke-linecap="round"/><ellipse cx="296" cy="222" rx="46" ry="26" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><path d="M290 214 C300 210 312 214 322 222 M275 228 C290 222 305 226 318 234" fill="none" stroke="var(--line)" stroke-width="3"/><path d="M222 200 L252 200 L246 272 L230 272Z" fill="var(--tint)" stroke="var(--ink-soft)" stroke-width="2.5"/><text x="40" y="30" font-size="13" fill="var(--ink-soft)">front</text><circle cx="100" cy="115" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="100" y="120" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><circle cx="420" cy="85" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="90" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">1</text><text x="442" y="91" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">focus (for ADHD brains)</text><circle cx="170" cy="160" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="170" y="165" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><circle cx="420" cy="123" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="128" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">2</text><text x="442" y="129" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">dopamine boost</text><circle cx="238" cy="238" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="238" y="243" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><circle cx="420" cy="161" r="13" fill="var(--school-accent)" stroke="#fff" stroke-width="2"/><text x="420" y="166" font-size="14" font-weight="800" text-anchor="middle" fill="#fff">3</text><text x="442" y="167" font-size="17" font-weight="700" font-family="inherit" fill="var(--ink)">heart rate, sleep</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >Adderall, Vyvanse, and Ritalin raise dopamine and norepinephrine. In a brain with ADHD, which runs low on that signal, the right dose helps focus land closer to typical. In a brain without ADHD, it pushes an already-working system past its best point. Psychologists call this an upside-down U: too little and too much both hurt performance.</span></figcaption>
-      </figure>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">More effort. Worse results.</span><span class="sticker">Tried harder. Scored worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <figure style="margin:0">
-      <svg viewBox="0 0 560 160" role="img" aria-label="In a 2023 study, people without ADHD on methylphenidate took about 50 percent longer than placebo on a hard problem, and were less accurate." style="width:100%;max-width:600px;height:auto;display:block"><text x="0" y="24" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">Placebo</text><rect x="0" y="34" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="34" width="325" height="22" rx="11" fill="var(--school)"/><text x="335" y="51" font-size="15" font-weight="700" font-family="inherit" fill="var(--ink)">normal time</text><text x="0" y="94" font-size="16" font-weight="700" font-family="inherit" fill="var(--ink)">Stimulant (Ritalin-type)</text><rect x="0" y="104" width="520" height="22" rx="11" fill="var(--tint)"/><rect x="0" y="104" width="488" height="22" rx="11" fill="var(--school)"/><text x="520" y="94" font-size="15" font-weight="700" text-anchor="end" font-family="inherit" fill="var(--ink)">50% longer</text></svg>
-      <figcaption style="margin-top:10px;color:var(--ink-soft)"><span >In a 2023 Science Advances study, adults without ADHD solved a hard real-world-style problem on a stimulant or a placebo, without knowing which. On stimulants, they put in much more effort, took longer (about 50% longer on methylphenidate), and were less accurate. People who did best on placebo dropped the most.</span></figcaption>
-      </figure>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">What the research shows</span><span class="sticker">Feels smarter. Scores the same.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Feels smarter. Scores the same, or worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>✨ It changes how you feel more than how you do.</dt>
-        <dd>Students without ADHD usually report feeling sharper and more confident. Their actual test scores barely move.</dd>
-        <dt>😴 It steals sleep.</dt>
-        <dd >Stimulants last for hours, and sleep is when the brain locks in what you studied. Losing a night of sleep can erase the gains of a night of cramming.</dd>
-        <dt>💓 The body pays.</dt>
-        <dd>Racing heart, shaky hands, no appetite, anxiety, irritability, and a crash when it wears off.</dd>
-        <dt>🪝 It can become a habit.</dt>
-        <dd >Misusing stimulants, especially in big doses or by snorting them, can lead to dependence. Mixing them with alcohol is risky too: you feel less drunk than you are.</dd>
-        <dt>⚖️ Sharing is illegal.</dt>
-        <dd>Giving away or selling your prescription is a crime, even to a friend, even one pill.</dd>
+        <dt>You feel enhanced. You mostly aren't.</dt>
+        <dd>In a 2013 double-blind study, healthy young adults took Adderall or a placebo and did 13 tests of memory, reasoning, and creativity. Overall, the drug didn't improve any of them. People still believed they had done better on it.</dd>
+        <dt>More effort, lower quality.</dt>
+        <dd>In a 2023 study in <i>Science Advances</i>, 40 adults without ADHD worked on a hard planning puzzle after taking methylphenidate, amphetamine, modafinil, or a placebo, without knowing which. On the drugs they worked longer and made more moves, and the quality of their answers dropped. Many people who did best on placebo fell below average on a stimulant.</dd>
+        <dt>Students who use them don't come out ahead.</dt>
+        <dd>A 2008 study of 1,253 college first-years found students using stimulants without a prescription skipped more classes, studied less, and had lower GPAs by the end of the year. The pill tends to be a patch on a bigger problem.</dd>
+        <dt>Fewer people do this than you'd guess.</dt>
+        <dd>Lifetime nonmedical stimulant use among 8th, 10th, and 12th graders fell from about 10% in 2005 to under 5% in 2023, in a 2025 analysis of the Monitoring the Future survey.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">What it costs</span><span class="sticker">The body pays even when the grade doesn't move.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt>Sleep.</dt>
+        <dd>Stimulants last for hours. Sleep is when your brain stores what you studied, so a pill that keeps you up until 3am works against the test it was meant to help.</dd>
+        <dt>Heart and nerves.</dt>
+        <dd>Racing heart, higher blood pressure, shaky hands, no appetite, anxiety, irritability, and a crash when it wears off. A prescriber checks for heart problems first. A friend can't.</dd>
+        <dt>Dependence.</dt>
+        <dd>Misuse, especially high doses or snorting, can lead to addiction. Mixed with alcohol, stimulants hide how drunk you are.</dd>
+        <dt>The law.</dt>
+        <dd>Adderall, Vyvanse, and Ritalin are controlled substances. Selling or giving away even one pill counts as distribution.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">⚠️ Fake "Adderall" is out there</span><span class="sticker">Fake Adderall can be meth or fentanyl.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Fake pills</span><span class="sticker">A pill that looks like Adderall may be meth or fentanyl.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pills sold as Adderall have been found to contain meth or fentanyl. They look exactly like the real thing. If it didn't come from a pharmacy with your name on the label, you don't know what's in it.</p>
-      <p class="worst">The worst part: the person handing it to you probably doesn't know either. See Pills Aren't Always What They Seem.</p>
+      <p>The DEA has warned that counterfeit pills are pressed to look like Adderall and other prescriptions, and that they increasingly contain methamphetamine or fentanyl. They are often sold through social media. In DEA lab testing, two in five fake pills with fentanyl held a potentially lethal dose.</p>
+      <p class="worst">If it didn't come from a pharmacy with your name on the label, nobody in the chain knows what's in it, including the person handing it to you.</p>
       </div>
     </details>
   </div>
@@ -488,157 +555,124 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">What actually works</h2>
+    <h2 id="h-practice">What actually raises scores</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Sleep is the real study drug.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>😴 Sleep is the real study drug.<span class="row-cue" aria-hidden="true"></span></summary><p>Seven to nine hours after studying helps your brain store it. An all-nighter mostly helps you forget.</p></details>
-        <details class="row"><summary>🧠 Quiz yourself, and spread it out.<span class="row-cue" aria-hidden="true"></span></summary><p>Practice tests and short sessions over several days beat rereading and cramming. Study Smarter, Not Longer has the how.</p></details>
-        <details class="row"><summary>📅 Get help before the crunch.<span class="row-cue" aria-hidden="true"></span></summary><p>Talk to a teacher or learning support early when the load is too much. Extensions and plans are easier to get before the night before.</p></details>
-        <details class="row"><summary>🔎 Wondering about ADHD?<span class="row-cue" aria-hidden="true"></span></summary><p>If focus has been hard for years, not just finals week, ask a counselor or doctor about an evaluation. A real diagnosis gets the right dose and the right support.</p></details>
-        <details class="row"><summary>💊 Got a prescription? Keep it yours.<span class="row-cue" aria-hidden="true"></span></summary><p >Keep it private and locked up. A line that works: "My parents count them." You never owe anyone your medicine.</p></details>
-        <details class="row"><summary>🧑‍🏫 Talk to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>Counselors help students with school pressure, focus, and this exact question all the time.</p></details>
+      <div class="fold-label">The real performance stack</div>
+      <h3 class="sticker">Four things with strong evidence and no side effects.</h3>
+      <div class="levers">
+        <div class="lever"><b>Quiz yourself</b><span>In a classic 2006 study, students who practiced recalling a passage remembered more a week later than students who reread it, even though rereading made them more confident.</span></div>
+        <div class="lever"><b>Spread it out</b><span>Several short sessions across a week beat one long cram of the same total time. Forgetting a little between sessions makes the next recall stick harder.</span></div>
+        <div class="lever"><b>Protect sleep</b><span>Sleep after studying is when memories get locked in. An all-nighter trades the storing for more reading.</span></div>
+        <div class="lever"><b>Ask early</b><span>Extensions, extra help, and learning support are easier to get a week out than the night before.</span></div>
+      </div>
     </div>
 
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Smart pills? Let's check.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <div class="card">
+      <div class="fold-label">If you have a prescription</div>
+      <h3 class="sticker">Your medicine is yours.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Keep it private.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't owe anyone a reason you take it, or proof that you do.</p></details>
+        <details class="row"><summary><span class="num">2</span> Have a line ready.<span class="row-cue" aria-hidden="true"></span></summary><p>"They're counted." "It's dosed for me, not you." "Not happening, but I'll quiz you." Short works.</p></details>
+        <details class="row"><summary><span class="num">3</span> Store it out of reach.<span class="row-cue" aria-hidden="true"></span></summary><p>Not in your backpack or locker. If you take a dose during the day, the school nurse can hold it.</p></details>
+        <details class="row"><summary><span class="num">4</span> Tell someone if it doesn't stop.<span class="row-cue" aria-hidden="true"></span></summary><p>If people keep pressuring you, or you hear pills are being sold, a counselor can help without making you the story.</p></details>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Wondering about ADHD?</span><span class="sticker">Years, not just finals week.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Tap an answer for each one.</p>
-      <div class="scenario"><p>Adderall makes anyone smarter.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Without ADHD, it mostly makes people feel smarter. In studies, their actual scores barely change, and on hard problems can get worse.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Without ADHD, it mostly makes people feel smarter. In studies, their actual scores barely change, and on hard problems can get worse.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>For people with ADHD, the right dose of a stimulant can really help.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a fact. For a brain with ADHD, prescribed stimulants are a well-studied treatment.">Myth</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Fact. For a brain with ADHD, prescribed stimulants are a well-studied treatment.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>Pulling an all-nighter before a test helps you remember more.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Sleep is when memories get saved. Skipping it means you keep less.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Sleep is when memories get saved. Skipping it means you keep less.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>It's okay to share your prescription with a friend if it's just one pill.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. It's illegal, and the dose that's right for you could be wrong for them.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. It's illegal, and the dose that's right for you could be wrong for them.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
-      <div class="scenario"><p>A pill that looks like Adderall is Adderall.</p><div class="choices" role="group" aria-label="Myth or fact">
-        <button class="choice" type="button" data-fb="good" data-msg="Myth. Fake pills can contain meth or fentanyl and look identical.">Myth</button>
-        <button class="choice" type="button" data-fb="nope" data-msg="Actually a myth. Fake pills can contain meth or fentanyl and look identical.">Fact</button>
-      </div><div class="feedback" aria-live="polite"></div></div>
+      <p>ADHD is diagnosed when attention or impulse problems started in childhood, show up in more than one setting, and get in the way of life. A stressful semester, too little sleep, or a phone next to you can look similar, and they're worth ruling out.</p>
+      <p>A pill working doesn't diagnose anything. Stimulants make most people feel more focused, ADHD or not. A real evaluation finds the actual reason and the right support, which might be medication, accommodations, coaching, or a mix.</p>
+      <p style="margin:0">Families see ADHD and medication differently. Some see a medical question, some see a matter of effort or faith, some worry about labels. If you want an evaluation, a counselor can help you raise it at home in a way that fits your family.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Finals hacks: you be the judge.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three situations. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 15 minutes · no materials needed</p>
-      <ol class="tight" style="padding-left:1.3em">
-        <li>Read each finals-week "hack" out loud.</li>
-        <li>Everyone votes with fingers: 1 for helps, 2 for hurts, 3 for meh.</li>
-        <li>Ask a couple of people why. Then tap to see what the research says.</li>
-        <li>After the last one, rank them as a group from best to worst.</li>
-      </ol>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Helps, hurts, or meh? · 1 of 4</span><span class="sticker">Rereading your notes three times</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Helps, hurts, or meh?</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Helps</li><li>Hurts</li><li>Meh</li></ol>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Meh. It feels productive because the words look familiar. Quizzing yourself works much better.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Helps, hurts, or meh? · 2 of 4</span><span class="sticker">Taking a friend's Adderall</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Helps, hurts, or meh?</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Helps</li><li>Hurts</li><li>Meh</li></ol>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Hurts, or meh at best. You feel sharper, but scores barely move, sleep tanks, and it's illegal and risky.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Helps, hurts, or meh? · 3 of 4</span><span class="sticker">Practice tests, spread over a few days</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Helps, hurts, or meh?</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Helps</li><li>Hurts</li><li>Meh</li></ol>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Helps, a lot. Retrieval practice and spacing are two of the best-studied learning methods there are.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Helps, hurts, or meh? · 4 of 4</span><span class="sticker">An all-nighter before the test</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p style="font-size:1.25rem">Helps, hurts, or meh?</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Helps</li><li>Hurts</li><li>Meh</li></ol>
-      <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Hurts. Sleep is when your brain saves what you learned. You walk in with less.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li>Which result surprised you most?</li>
-        <li>Why do you think the hacks that feel productive aren't always the ones that work?</li>
-        <li><span >What could our school do to make finals week less of a pressure cooker?</span></li>
-        <li>What's one study habit you'd actually try this month?</li>
-      </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Keep it about study habits in general. Students with ADHD prescriptions are in the room, so be clear that prescribed medicine for ADHD is legitimate treatment. The point is that borrowed pills don't do what people think.</p></details>
-      </div>
-    </details>
-
-    <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Real moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>Pick a move. There may be more than one good one.</p>
-      
-      
-      <div class="scenario" >
-        <p>A week before finals, a friend offers you one of their Adderall: "It's literally a prescription, it's fine."</p>
+      <p>Pick a move. There may be more than one reasonable one.</p>
+      <div class="scenario">
+        <p>At 11pm, Nadia's friend texts: "I have an extra Vyvanse. Want it for the chem test tomorrow?" Nadia hasn't finished the review.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="About 2 in 100 seniors actually do. And it mostly makes you feel smarter, not score higher.">Take it, everyone does</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Studying together and sleeping will do more for both your grades.">"I'm good" and suggest quizzing each other instead</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="It would likely keep her up past 3am and make her feel sharp without making her score higher.">Take it and power through the night</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. Sleep stores tonight's studying, and a short burst of self-testing in the morning does more than three extra hours of rereading.">Say no, sleep by midnight, and do 20 minutes of practice problems before school</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than a pill, but too much caffeine late wrecks the same sleep.">Skip the pill, drink two energy drinks instead</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="scenario" >
-        <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
-        <p>You have a prescription, and your friend asks to buy a few for the SAT.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Theo has a prescription. A teammate offers him $20 for five pills before the SAT.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Selling a prescription is a crime, and it could hurt them.">Sell them a few, they're your friend</button>
-          <button class="choice" type="button" data-fb="good" data-msg="That's being a good friend and protecting yourself.">"Not happening, but I'll quiz you this week"</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That's distribution, a crime. And he'd be handing a drug dosed for his body to someone whose heart nobody checked.">Sell them. It's just five.</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Free is still distribution, and still the same health risk.">Give him one for free instead</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Right. A clear no plus an alternative keeps the friendship and keeps Theo out of it.">"Not happening. Want to do a practice section together?"</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Since middle school, Jae has lost assignments, started projects he doesn't finish, and zoned out in class. His grades swing a lot.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Yes. A pattern that's lasted years is exactly what an evaluation is for.">Ask a counselor or doctor about an evaluation</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="A borrowed pill helping wouldn't prove anything. Stimulants make most people feel more focused.">Borrow a friend's pills to see if it's ADHD</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Effort matters, but if it's been years, effort isn't the missing piece. Find out what is.">Just try harder this year</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Myths</span><span class="sticker">What the research says instead.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🌙 Cramming all night.<span class="row-cue" aria-hidden="true"></span></summary><p>You trade the sleep your memory needs for hours of rereading.</p></details>
-        <details class="row"><summary>☕ Stacking energy drinks.<span class="row-cue" aria-hidden="true"></span></summary><p>Too much caffeine causes jitters, a racing heart, and the same lost sleep.</p></details>
-        <details class="row"><summary>💊 Borrowing a prescription.<span class="row-cue" aria-hidden="true"></span></summary><p>It's illegal, risky, and in studies doesn't raise scores for people without ADHD.</p></details>
-        <details class="row"><summary>🤐 Hiding how behind you are.<span class="row-cue" aria-hidden="true"></span></summary><p>Teachers can help more the earlier they know.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> It's a prescription drug, so it's safe.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It's safe for the person it was prescribed to, at their dose, after a doctor checked their heart and history. That's the part a borrowed pill skips.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Everyone's doing it during finals.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Fewer than 1 in 20 teens have ever used one without a prescription, and that number has been falling for almost 20 years.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I feel focused, it's working.</span><span class="row-cue" aria-hidden="true"></span></summary><p>In one blinded study, feeling enhanced and actually scoring higher came apart. In another, more effort produced worse answers. The feeling comes from the drug. The score comes from you.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> One pill is no big deal.</span><span class="row-cue" aria-hidden="true"></span></summary><p>One fake pill can contain fentanyl. One real pill can still cost you a night of sleep.</p></details>
       </div>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">For advisory or class</span><span class="sticker">Helps, hurts, or meh?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p class="tap-hint" style="margin-top:0">About 15 minutes. Read each finals-week habit, vote with fingers (1 helps, 2 hurts, 3 meh), then open the research.</p>
+      <details class="row"><summary>Rereading your notes three times<span class="row-cue" aria-hidden="true"></span></summary><p>Meh. Familiar words feel like knowledge. Self-testing works much better.</p></details>
+      <details class="row"><summary>Taking a friend's Adderall<span class="row-cue" aria-hidden="true"></span></summary><p>Hurts, or meh at best. You feel sharper, scores barely move, sleep drops, and it's illegal.</p></details>
+      <details class="row"><summary>Practice tests spread over a week<span class="row-cue" aria-hidden="true"></span></summary><p>Helps, a lot. Retrieval practice and spacing are two of the best-studied methods there are.</p></details>
+      <details class="row"><summary>An all-nighter before the test<span class="row-cue" aria-hidden="true"></span></summary><p>Hurts. You walk in having stored less.</p></details>
+      <ul class="tight" style="margin-top:12px">
+        <li>Why do the habits that feel productive so often lose to the ones that don't?</li>
+        <li>What could our school change to make finals week less of a pressure cooker?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Students with ADHD prescriptions are in the room. Be clear that prescribed medication for ADHD is legitimate treatment. The point is that borrowed pills don't do what people think.</p></details>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
       <h3>Get help right away if someone</h3>
       <ul class="tight">
-        <li>Has chest pain, a racing or pounding heart that won't slow, or faints.</li>
+        <li>Has chest pain, a pounding heart that won't slow down, or faints.</li>
         <li>Has a seizure, a very high temperature, or is confused.</li>
         <li>Is extremely panicky or paranoid after taking a stimulant.</li>
-        <li>Took a pill that didn't come from a pharmacy and is very sleepy or hard to wake. That could be fentanyl.</li>
+        <li>Took a pill that didn't come from a pharmacy and is very sleepy or hard to wake. That could be fentanyl. Give naloxone (Narcan) if you have it.</li>
       </ul>
-      <p style="margin:0">Call <strong>911</strong> for an emergency. Poison Control is <strong>1-800-222-1222</strong>. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Call <strong>911</strong> in an emergency. Poison Control is <strong>1-800-222-1222</strong>, any time. If school stress has you feeling hopeless, call or text <strong>988</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Cools, R., &amp; D'Esposito, M. (2011). Inverted-U-shaped dopamine actions on human working memory and cognitive control. <i>Biological Psychiatry</i>.</li>
+        <li>Ilieva, I., Boland, J., &amp; Farah, M. (2013). Objective and subjective cognitive enhancing effects of mixed amphetamine salts in healthy people. <i>Neuropharmacology</i>.</li>
+        <li>Bowman, E., Coghill, D., Murawski, C., &amp; Bossaerts, P. (2023). Not so smart? "Smart" drugs increase the level but decrease the quality of cognitive effort. <i>Science Advances</i>.</li>
+        <li>Arria, A., et al. (2008). Nonmedical use of prescription stimulants and analgesics: Associations with social and academic behaviors among college students. <i>Journal of Drug Issues</i>.</li>
+        <li>McCabe, S. E., et al. (2025). Medical and nonmedical use of prescription stimulants among U.S. adolescents, 2005 to 2023 (research letter). <i>JAMA</i>.</li>
+        <li>Roediger, H., &amp; Karpicke, J. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <i>Psychological Science</i>.</li>
+        <li>U.S. Drug Enforcement Administration (2021). Public safety alert: Sharp increase in fake prescription pills containing fentanyl and meth.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -649,26 +683,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">What I'd heard about study drugs, and what surprised me here</label>
+      <label class="prompt" for="tx-1">What I'd heard about study drugs, and which finding changed my mind</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">When school stress gets highest for me, and what I usually do</label>
+      <label class="prompt" for="tx-2">When the load gets heaviest for me, and what I give up first (sleep, friends, meals)</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">One study habit I'll try instead of cramming</label>
+      <label class="prompt" for="tx-3">My plan for the next big test: when I'll quiz myself, and when I'll sleep</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I'd say if someone offered me a pill to study</label>
+      <label class="prompt" for="tx-4">What I'd say if someone offered or asked for a pill, in my own words</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">An adult I could talk to when the load gets too heavy</label>
+      <label class="prompt" for="tx-5">An adult I could talk to about the load, or about whether it might be ADHD</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Feeling behind is temporary. Your brain is built to learn, and sleep, practice, and a little help work better than any borrowed pill.</p>
+      <p>A pill can change how studying feels. Sleep, self-testing, and asking for help early change what you actually know.</p>
     </div>
     </div>
   </div>
@@ -714,11 +748,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">📚 Feeling behind</button>
-          <button type="button" class="choice" data-path="p-offer" aria-pressed="false">💊 Someone offered pills</button>
-          <button type="button" class="choice" data-path="p-meds" aria-pressed="false">🔒 People keep asking for my meds</button>
-          <button type="button" class="choice" data-path="p-focus" aria-pressed="false">🔎 Focus has been hard for a long time</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling okay about it</button>
+          <button type="button" class="choice" data-path="p-behind" aria-pressed="false">Feeling behind</button>
+          <button type="button" class="choice" data-path="p-offer" aria-pressed="false">Someone offered pills</button>
+          <button type="button" class="choice" data-path="p-meds" aria-pressed="false">People keep asking for my meds</button>
+          <button type="button" class="choice" data-path="p-focus" aria-pressed="false">Focus has been hard for a long time</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Feeling okay about it</button>
         </div>
 
         <div class="path-panel" id="p-behind" hidden>
@@ -737,7 +771,7 @@
           <h4>What might help right now</h4>
           <ul>
             <li><span class="e" aria-hidden="true">💬</span>Have a line ready: "I'm good, but I'll quiz you."</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Remember: pharmacy, your name, or nothing.</li>
+            <li><span class="e" aria-hidden="true">🧭</span>Remember the rule: a pharmacy label with your name on it, or nothing.</li>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell an adult if pills are being sold at school.</li>
           </ul>
         </div>
@@ -746,7 +780,7 @@
           <p>That's a lot of pressure for something that's just your medicine.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">💬</span>"My parents count them" ends most conversations.</li>
+            <li><span class="e" aria-hidden="true">💬</span>"They're counted" or "It's dosed for me" ends most conversations.</li>
             <li><span class="e" aria-hidden="true">🏥</span>Ask if the nurse can keep your dose at school.</li>
             <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a counselor if someone won't drop it.</li>
           </ul>
@@ -756,7 +790,7 @@
           <p>If it's been years, not just this week, that's worth looking into.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Ask a counselor or doctor about an evaluation.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Ask a counselor or doctor about an evaluation. Bring examples from more than one year.</li>
             <li><span class="e" aria-hidden="true">📖</span>Running the Show has strategies for planning and focus.</li>
             <li><span class="e" aria-hidden="true">💛</span>Struggling to focus says nothing about how smart you are.</li>
           </ul>

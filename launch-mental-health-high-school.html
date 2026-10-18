@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure + research notes (same palette) */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .rn { background:#fff; border-radius:14px; padding:14px 16px; margin:14px 0; font-size:.95rem; line-height:1.5; }
+  .rn > span:first-child { display:block; font-size:.72rem; font-weight:700; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:4px; text-transform:uppercase; }
+  .card .rn, .fold-body .rn { background:var(--paper); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:6px 0 10px; }
+  .stat { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .stat b { display:block; font-size:1.7rem; letter-spacing:-.02em; line-height:1.05; }
+  .stat span { display:block; margin-top:6px; font-size:.88rem; color:var(--ink-soft); line-height:1.4; }
+  .ways details.tile > summary strong { font-size:1.02rem; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🛟 High School · Launch Ready</div>
+  <div class="eyebrow">High School · Launch Ready</div>
   <h1>Mental Health Without a Safety Net</h1>
-  <p class="tagline">Because at home, someone always noticed. At college, that someone is you.</p>
+  <p class="tagline">At home, people noticed when you weren't okay. At college, you build the system that notices. Start before move-in.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +463,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -411,24 +482,63 @@
     <div class="eyebrow">Part 1 · Understand it</div>
     <h2 id="h-understand">What changes when you leave home</h2>
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🌙 Who do you call at 2 a.m.?</span><span class="sticker">Who do you call at 2 a.m.?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The 2 a.m. question</span><span class="sticker">Who do you call at 2 a.m.?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Do you have that person yet? Someone at school, not just at home, who would pick up, walk over, or notice you didn't come back?</p>
-      <p style="margin:0">If the answer is "not yet," that's normal in the first weeks. It's also the thing to work on first.</p>
+      <p>Someone at school, not only at home, who would pick up, walk over, or notice you didn't come back.</p>
+      <p style="margin:0">If the answer is "not yet," that's normal in the first weeks. It's also the first thing to work on.</p>
       <p class="worst">Everything in this series comes back to this question.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">At home, someone always noticed.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Someone always noticed. Soon, nobody will by default.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>At home, someone noticed when you skipped dinner or stayed in your room all weekend.</li>
-        <li>Your parents, teachers, coaches, and counselors knew you, and they checked in without you asking.</li>
-        <li>You've never had to find a doctor, book an appointment, or refill a prescription on your own.</li>
+        <li>At home, somebody noticed when you skipped dinner or stayed in your room all weekend.</li>
+        <li>A parent made your appointments, picked up your prescriptions, and filled out the forms.</li>
+        <li>Teachers, coaches, and counselors knew you well enough to say, "You seem off."</li>
         <li>You're excited to leave, and a little worried about who you'll be without the people who know you.</li>
       </ul>
-      <p style="margin:0">At home, someone always noticed. At college, you're the first line of defense, for yourself and for the people around you.</p>
+      <p style="margin:0">College replaces all of that with a system you have to operate yourself. The good news: you can set most of it up before you go.</p>
+      </div>
+    </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Why the timing matters</h3>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 360 240" role="img" aria-label="Line chart of the share of people with a mental health condition whose first symptoms started by each age. About 35 percent by age 14, 48 percent by 18, 63 percent by 25, and 75 percent by 34. Ages 18 to 22 are shaded as the typical college years." xmlns="http://www.w3.org/2000/svg">
+  <g font-family="inherit">
+    <rect x="179.0" y="24" width="30.0" height="176" fill="#2E6DB4" fill-opacity=".10"/>
+    <text x="194.0" y="16" text-anchor="middle" font-size="12" font-weight="600" fill="#245A96">college years</text>
+    <line x1="44" y1="200.0" x2="344" y2="200.0" stroke="#E5E5EA" stroke-width="1"/><text x="38" y="204.0" text-anchor="end" font-size="12" fill="#6E6E73">0%</text><line x1="44" y1="156.0" x2="344" y2="156.0" stroke="#E5E5EA" stroke-width="1"/><text x="38" y="160.0" text-anchor="end" font-size="12" fill="#6E6E73">25%</text><line x1="44" y1="112.0" x2="344" y2="112.0" stroke="#E5E5EA" stroke-width="1"/><text x="38" y="116.0" text-anchor="end" font-size="12" fill="#6E6E73">50%</text><line x1="44" y1="68.0" x2="344" y2="68.0" stroke="#E5E5EA" stroke-width="1"/><text x="38" y="72.0" text-anchor="end" font-size="12" fill="#6E6E73">75%</text><line x1="44" y1="24.0" x2="344" y2="24.0" stroke="#E5E5EA" stroke-width="1"/><text x="38" y="28.0" text-anchor="end" font-size="12" fill="#6E6E73">100%</text><text x="44.0" y="218" text-anchor="middle" font-size="12" fill="#6E6E73">0</text><text x="119.0" y="218" text-anchor="middle" font-size="12" fill="#6E6E73">10</text><text x="194.0" y="218" text-anchor="middle" font-size="12" fill="#6E6E73">20</text><text x="269.0" y="218" text-anchor="middle" font-size="12" fill="#6E6E73">30</text><text x="344.0" y="218" text-anchor="middle" font-size="12" fill="#6E6E73">40</text>
+    <text x="344" y="236" text-anchor="end" font-size="12" fill="#6E6E73">age</text>
+    <polyline points="126.5,156.0 149.0,139.1 179.0,114.8 231.5,90.0 299.0,68.0" fill="none" stroke="#1D1D1F" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="149.0" cy="139.1" r="5" fill="#D9822B"/>
+    <circle cx="179.0" cy="114.8" r="5" fill="#2E6DB4"/>
+    <circle cx="231.5" cy="90.0" r="5" fill="#7A4FB5"/>
+    <text x="157.0" y="157.1" font-size="13" font-weight="700" fill="#A85F17">35% by 14</text>
+    <text x="187.0" y="132.8" font-size="13" font-weight="700" fill="#245A96">48% by 18</text>
+    <text x="239.5" y="108.0" font-size="13" font-weight="700" fill="#5E3A92">63% by 25</text>
+  </g>
+</svg>
+      <figcaption>Of people who ever have a mental health condition, the share whose first symptoms began by each age. Pooled from 192 studies and more than 700,000 people (Solmi and colleagues, 2022). Line drawn between reported points.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Many conditions start early</strong><p>About a third of people who will ever have a mental health condition already have symptoms by 14. If you've dealt with anxiety, depression, ADHD, or an eating problem in high school, you're far from alone, and your plan should travel with you.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>The college years are prime time</strong><p>The peak age of onset is mid-adolescence, and new cases keep appearing through the late teens and early 20s. That's exactly when you're changing where you live, who you know, and how you sleep.</p></div></div>
+      <div class="region"><span class="dot" style="background:#7A4FB5"></span><div><strong>Don't wait for proof</strong><p>Close to two-thirds of conditions have started by 25. Problems are usually easier to turn around when they're caught early, which is the case for booking the appointment before you're sure it's "bad enough."</p></div></div>
+    </div>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">What the data shows</span><span class="sticker">Struggling is common. Staying stuck is the signal.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="stats">
+        <div class="stat"><b>35%</b><span>of first-year students across 19 colleges in 8 countries screened positive for a lifetime mental health condition. 31% had one in the past year.</span></div>
+        <div class="stat"><b>37%</b><span>of U.S. college students had moderate to severe depression symptoms in 2024 to 2025. 32% had moderate to severe anxiety.</span></div>
+        <div class="stat"><b>52%</b><span>reported high loneliness. That number, like depression and anxiety, has improved since 2022.</span></div>
+      </div>
+      <p style="margin:0">Sources: the WHO World Mental Health International College Student Project (Auerbach and colleagues, 2018) and the Healthy Minds Study, 2024 to 2025 report. These are screening surveys, not diagnoses, so they measure symptoms, not who has a condition.</p>
       </div>
     </details>
 
@@ -436,29 +546,27 @@
       <summary><span class="fold-label">What changes</span><span class="sticker">Help exists. You have to go get it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🏫 Help exists, but you have to go get it.</dt>
-        <dd>Campus counseling centers are real and usually free. Nobody will sign you up. You have to find them and ask.</dd>
-        <dt>🌧 First semester is hard for almost everyone.</dt>
-        <dd>Homesickness, anxiety, and low mood are extremely common in the first months. Feeling off is normal. Staying stuck there is the thing to watch.</dd>
-        <dt>😴 Small things add up fast.</dt>
-        <dd>Less sleep, irregular meals, and being alone a lot can turn a rough week into a rough month.</dd>
-        <dt>🤐 Most people white-knuckle it.</dt>
-        <dd>Lots of students wait until things are really bad before asking for help. Stigma is real, and so is the cost of waiting.</dd>
-        <dt>👀 You might be the one who notices.</dt>
-        <dd>Without parents around, a roommate or floormate is often the first person to see that someone's struggling.</dd>
+        <dt>Help is opt-in.</dt>
+        <dd>Campus counseling and health services are real and often free or low-cost. Nobody signs you up. Many centers have wait times in busy weeks, which is one more reason to find them early.</dd>
+        <dt>Structure disappears.</dt>
+        <dd>No bells, no curfew, no one making dinner. In a review of college sleep research, about half of students reported daytime sleepiness and most weren't getting enough sleep, which is tied to lower grades and worse mood (Hershner and Chervin, 2014).</dd>
+        <dt>Your health information becomes yours.</dt>
+        <dd>At 18, doctors and counselors generally can't share your health information with your parents without your permission, even if you're on their insurance. Grades and records work similarly. Decide with your family what you want shared, and sign release forms if you want them involved.</dd>
+        <dt>Your care might not travel.</dt>
+        <dd>A therapist or doctor licensed in your home state may not be able to keep seeing you once you live in another state. Ask now, before you need it.</dd>
+        <dt>You might be the one who notices.</dt>
+        <dd>Without parents around, a roommate or floormate is often the first to see that someone is struggling.</dd>
       </dl>
       </div>
     </details>
 
-    <div class="unit unit-one">
     <h3 style="margin-top:28px">Warning signs, in you or someone else</h3>
     <p class="tap-hint">Tap each one.</p>
     <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🛏</span><strong>Pulling back</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Skipping classes, meals, or plans. Staying in the room most of the day.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎭</span><strong>"Everything's great"</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Telling family it's fine while things are slipping.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">⚡</span><strong>Big changes</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Sleeping way more or way less, drinking more, losing interest in things they used to love.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🕳</span><strong>"What's the point"</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Hopeless talk, giving things away, saying people would be better off without them. That one means act now.</p></details>
-    </div>
+      <details class="tile"><summary><strong>Pulling back</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Skipping classes, meals, or plans. Staying in the room most of the day.</p></details>
+      <details class="tile"><summary><strong>"Everything's great"</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Telling family it's fine while grades, sleep, or friendships are slipping.</p></details>
+      <details class="tile"><summary><strong>Big changes</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Sleeping far more or less, drinking more, losing interest in things you used to care about.</p></details>
+      <details class="tile"><summary><strong>"What's the point"</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Hopeless talk, giving things away, saying people would be better off without them. That one means act now.</p></details>
     </div>
   </div>
 </section>
@@ -466,25 +574,27 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Building your own safety net</h2>
+    <h2 id="h-practice">Build the safety net before you need it</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Know your resources before you need them.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>📇 Know your resources before move-in.<span class="row-cue" aria-hidden="true"></span></summary><p>Knowing where the counseling center is before you need it is a form of self-care.</p></details>
-        <details class="row"><summary>🧭 Keep a few anchors.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep, real meals, moving your body, and one thing that feels like you. They protect your mood more than people expect.</p></details>
-        <details class="row"><summary>🗓 Make an appointment, not a decision.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to know if it's "bad enough." Book one session and let a professional help you sort it out.</p></details>
-        <details class="row"><summary>📞 Tell the truth on the Sunday call.<span class="row-cue" aria-hidden="true"></span></summary><p>Your family would rather know. "It's been harder than I expected" is a full sentence.</p></details>
-        <details class="row"><summary>🤝 Check on people, even if it's awkward.<span class="row-cue" aria-hidden="true"></span></summary><p>"Hey, you've seemed off lately. Want to grab food?" Being a little awkward beats saying nothing.</p></details>
-        <details class="row"><summary>🧑‍💼 Use your RA.<span class="row-cue" aria-hidden="true"></span></summary><p>Noticing a floormate struggling and telling an RA is a way of helping. RAs are trained for exactly this.</p></details>
+      <div class="fold-label">The summer before</div>
+      <h3 class="sticker">Six things to set up before move-in.</h3>
+      <p class="tap-hint">Tap each one.</p>
+        <details class="row"><summary><span class="num">1</span> Plan the handoff.<span class="row-cue" aria-hidden="true"></span></summary><p>If you see a therapist or take medication, ask your provider now: Can you keep seeing me from another state? Who takes over at school? How do refills work there? Bring a short written history so you don't start from zero.</p></details>
+        <details class="row"><summary><span class="num">2</span> Find the counseling center.<span class="row-cue" aria-hidden="true"></span></summary><p>Location, walk-in hours, how to book, and the after-hours number. Put it in your phone tonight.</p></details>
+        <details class="row"><summary><span class="num">3</span> Decide what your family can see.<span class="row-cue" aria-hidden="true"></span></summary><p>Families differ a lot here. Some expect to know everything; some never talk about mental health. Talk it through, then decide whether to sign a release for health information, a health care proxy for emergencies, or both.</p></details>
+        <details class="row"><summary><span class="num">4</span> Pick two anchors.<span class="row-cue" aria-hidden="true"></span></summary><p>A regular bedtime, real breakfast, a run, a weekly call home, a place of worship, a club. Protect two of them hardest in the first month.</p></details>
+        <details class="row"><summary><span class="num">5</span> Make an appointment, not a decision.<span class="row-cue" aria-hidden="true"></span></summary><p>You don't have to know if it's "bad enough." Book one session and let a professional help you sort it out.</p></details>
+        <details class="row"><summary><span class="num">6</span> Tell the truth on the call home.<span class="row-cue" aria-hidden="true"></span></summary><p>"It's been harder than I expected" is a full sentence. Most families would rather know.</p></details>
     </div>
+
+    <div class="rn"><span>Research</span>How you read a bad first month matters. In a Stanford study, first-year students read that worries about belonging are common at first and fade with time. Over the next three years, Black students who got that message earned higher grades, cutting the racial achievement gap roughly in half, and reported better health and fewer doctor visits (Walton and Cohen, 2011). It was one small study at one school, so read it as a strong hint: a rough start is usually a phase, not a verdict.</div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Save these numbers before move-in.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Look up your college's version of each one now, and put the numbers in your phone before move-in.</p>
+      <p>Look up your college's version of each one now, and put the numbers in your phone. Nothing you type here is saved.</p>
       <label class="prompt" for="cc-0" style="margin-top:8px;font-size:1rem">Counseling center (location, walk-in hours, after-hours line)</label><textarea id="cc-0" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
-      <label class="prompt" for="cc-1" style="margin-top:8px;font-size:1rem">Health services</label><textarea id="cc-1" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
+      <label class="prompt" for="cc-1" style="margin-top:8px;font-size:1rem">Health services, and where refills go</label><textarea id="cc-1" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-2" style="margin-top:8px;font-size:1rem">Campus safety, and safe-ride or safe-walk</label><textarea id="cc-2" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-3" style="margin-top:8px;font-size:1rem">Title IX coordinator</label><textarea id="cc-3" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
       <label class="prompt" for="cc-4" style="margin-top:8px;font-size:1rem">My RA or residence director</label><textarea id="cc-4" rows="1" autocomplete="off" spellcheck="false" style="min-height:42px;height:42px"></textarea>
@@ -493,9 +603,9 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Two stories. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Two stories. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 20 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 20 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
         <li>Read each story out loud, slowly.</li>
         <li>Talk through the questions in small groups or as a class.</li>
@@ -505,43 +615,43 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Maya and Tomás · 1 of 2</span><span class="sticker">Maya</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Story 1 of 2</span><span class="sticker">Imani</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem">Maya is four weeks into her first semester. She was a strong student in high school: involved, social, on top of everything. About two weeks after move-in, something shifted. She stopped going to her 8 a.m. lecture, then her Thursday seminar. She's in her room most of the day, sometimes not eating until late at night. Her parents call every Sunday and she says things are great, partly because they sacrificed a lot to get her here. Nothing dramatic happened. She's just not okay, and she doesn't know who to tell or whether it even counts as a real problem.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>It counts. Maya could walk into the counseling center or book a first appointment, tell one person the truth (a parent, an RA, a friend from home), email one professor, and rebuild one anchor: a real breakfast, a walk, one class. She doesn't have to fix everything this week.</p></details>
+      <p style="font-size:1.1rem">Imani is the first in her family to go to college, four hours from home. Her parents work long shifts and talk about her at church like she's already graduated. Five weeks in, she's stopped going to her 9 a.m. chemistry lecture and eats one real meal a day. On the Sunday call she says everything's great, because she doesn't want them to worry or think the sacrifice was wasted. In her family, you handle problems yourself or you pray about them. Therapy feels like something other people do.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What's making it hard for Imani to ask for help?</li><li>What makes this harder at college than at home?</li><li>What's one step that fits who she is?</li></ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>It counts, and she doesn't have to choose between her family's values and getting support. She could go to the counseling center, a first-generation student office, or a campus chaplain if faith is how she makes sense of things. She could email her chemistry professor before she falls further behind, and tell one person the truth. Rebuilding one anchor, like breakfast, is a real start.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Maya and Tomás · 2 of 2</span><span class="sticker">Jake and Tomás</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Story 2 of 2</span><span class="sticker">Wes and Arjun</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem">Jake's roommate Tomás has been off for a while: quiet, skipping meals, in bed past noon. They're not close, and Jake doesn't want to make it weird. He invites Tomás to dinner a few times. Tomás always says no. One night Jake comes home and Tomás is sitting in the dark, clearly crying. Tomás says he's fine and turns toward the wall. Jake doesn't know if this is a "tell someone" situation or if he'd be overstepping.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Jake can sit down and say, "I'm not trying to pry. You don't seem fine, and I'm around if you want to talk." He can mention the counseling center, keep inviting, and tell their RA he's worried. If Tomás ever says anything about not wanting to be here, Jake tells the RA or calls 988 right away. Telling isn't betrayal. It's how people get help.</p></details>
+      <p style="font-size:1.1rem">Wes and his roommate Arjun get along but aren't close. Arjun was diagnosed with depression in high school and stopped his medication when his prescription ran out in September. He didn't know how to get it refilled at school and figured he'd be fine. Lately he's in bed past noon, has missed two exams, and last night told Wes, "Honestly, I don't know why I'm here." Wes isn't sure if that means college or something worse.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do if you were Wes?</li><li>What could Arjun have set up before move-in?</li><li>Who on campus would help?</li></ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Wes can ask directly: "When you said you don't know why you're here, did you mean you're thinking about killing yourself?" If yes, or if he's unsure, he calls 988 or campus safety now and tells the RA. Either way, he can offer to walk Arjun to health services about the medication. Stopping some medications suddenly can make people feel worse, so that visit matters.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>If you were Tomás, what would you want Jake to do?</li>
-        <li>What gets in the way of asking for help, for you or people you know?</li>
-        <li>What's one thing you'll set up before you leave so you're not starting from zero?</li>
+        <li>How does your family talk about mental health, or not? How might that shape what you do at college?</li>
+        <li>What would you want a roommate to do if they were worried about you?</li>
+        <li>What's one thing you'll set up this summer so you're not starting from zero?</li>
       </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Pause on the 2 a.m. question before you start, and let the silence work. Remind students they can always call their parents, and that a counselor here is available after the session.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Pause on the 2 a.m. question before you start, and let the silence work. Avoid treating one family's approach as the right one. Remind students a counselor here is available after the session.</p></details>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🙂 "Things are great!"<span class="row-cue" aria-hidden="true"></span></summary><p>Pretending on the phone keeps the people who love you from helping.</p></details>
-        <details class="row"><summary>⏳ Waiting until it's bad enough.<span class="row-cue" aria-hidden="true"></span></summary><p>There's no bar to clear. Earlier is easier.</p></details>
-        <details class="row"><summary>🍺 Drinking or smoking to cope.<span class="row-cue" aria-hidden="true"></span></summary><p>It numbs things for a night and makes mood and sleep worse over time.</p></details>
-        <details class="row"><summary>🚪 Staying in the room.<span class="row-cue" aria-hidden="true"></span></summary><p>Isolation makes everything heavier. One meal with people helps.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'll wait until it's bad enough.</span><span class="row-cue" aria-hidden="true"></span></summary><p>There's no bar to clear. Earlier is easier, and counseling centers would rather see you in week three than week ten.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Telling home it's great protects them.</span><span class="row-cue" aria-hidden="true"></span></summary><p>It keeps the people who love you from helping. You can choose how much to share without pretending.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A few drinks help me sleep and relax.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Alcohol can knock you out, but it breaks up sleep later in the night and tends to worsen mood and anxiety over time.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> I'm fine off my meds now.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Maybe, but make that call with a prescriber, not because a refill got complicated.</p></details>
       </div>
       </div>
     </details>
@@ -553,8 +663,21 @@
         <li>Is giving things away or saying goodbye.</li>
         <li>Can't get out of bed for days, or stops eating.</li>
       </ul>
-      <p style="margin:0">Call or text <strong>988</strong>, call campus safety, or <strong>911</strong> in an emergency. Tell an RA. See <a href="#help">Get help</a> below.</p>
+      <p style="margin:0">Call or text <strong>988</strong>, use your campus counseling after-hours line, tell an RA, or call campus safety or <strong>911</strong> in an emergency. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Solmi, M., et al. (2022). Age at onset of mental disorders worldwide: Large-scale meta-analysis of 192 epidemiological studies. <i>Molecular Psychiatry</i>.</li>
+        <li>Auerbach, R. P., et al. (2018). WHO World Mental Health Surveys International College Student Project: Prevalence and distribution of mental disorders. <i>Journal of Abnormal Psychology</i>.</li>
+        <li>Healthy Minds Network (2025). <i>The Healthy Minds Study: 2024 to 2025 Data Report</i>.</li>
+        <li>Hershner, S. D., &amp; Chervin, R. D. (2014). Causes and consequences of sleepiness among college students. <i>Nature and Science of Sleep</i>.</li>
+        <li>Walton, G. M., &amp; Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. <i>Science</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -565,26 +688,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">Who is my 2 a.m. person right now? Who could it be at college?</label>
+      <label class="prompt" for="tx-1">My 2 a.m. person now, and how I'll find one at college</label>
       <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">The early signs that tell me I'm not okay</label>
+      <label class="prompt" for="tx-2">My early warning signs, the ones I'd notice before anyone else would</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">Anchors that keep me steady: sleep, food, movement, people</label>
+      <label class="prompt" for="tx-3">The two anchors I'll protect hardest in the first month</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">What I'd want a roommate to do if I was struggling</label>
+      <label class="prompt" for="tx-4">What I want my family to know if I'm struggling, and what I'd rather handle myself</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I already know about myself that will help</label>
+      <label class="prompt" for="tx-5">What has helped me through hard stretches before, including anything from my faith, culture, or family</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Asking for help at college is a skill, not a weakness. The students who do best usually aren't the ones who never struggle. They're the ones who reach out early.</p>
+      <p>The students who do best usually aren't the ones who never struggle. They're the ones who set up their net early and use it before they hit the ground.</p>
     </div>
     </div>
   </div>
@@ -630,10 +753,10 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-nervous" aria-pressed="false">😬 Nervous about going</button>
-          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">🌙 Worried about being alone</button>
-          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">😟 Worried about a friend</button>
-          <button type="button" class="choice" data-path="p-ready" aria-pressed="false">🌤 Feeling ready</button>
+          <button type="button" class="choice" data-path="p-nervous" aria-pressed="false">Nervous about going</button>
+          <button type="button" class="choice" data-path="p-alone" aria-pressed="false">Worried about being alone</button>
+          <button type="button" class="choice" data-path="p-friend" aria-pressed="false">Worried about a friend</button>
+          <button type="button" class="choice" data-path="p-ready" aria-pressed="false">Feeling ready</button>
         </div>
 
         <div class="path-panel" id="p-nervous" hidden>
@@ -643,7 +766,7 @@
           <ul>
             <li><span class="e" aria-hidden="true">📇</span>Look up your college's counseling center tonight.</li>
             <li><span class="e" aria-hidden="true">🗣</span>Talk to a counselor here before you go.</li>
-            <li><span class="e" aria-hidden="true">🧭</span>Pick two anchors you'll protect in the first month.</li>
+            <li><span class="e" aria-hidden="true">🧭</span>If you're in treatment, ask your provider about the handoff this week.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-alone" hidden>

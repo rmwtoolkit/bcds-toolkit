@@ -362,6 +362,78 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* lesson figure + research notes (same palette) */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .rn { background:#fff; border-radius:14px; padding:14px 16px; margin:14px 0; font-size:.95rem; line-height:1.5; }
+  .rn > span:first-child { display:block; font-size:.72rem; font-weight:700; letter-spacing:.08em; color:var(--ink-soft); margin-bottom:4px; text-transform:uppercase; }
+  .card .rn, .fold-body .rn { background:var(--paper); }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:6px 0 10px; }
+  .stat { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .stat b { display:block; font-size:1.7rem; letter-spacing:-.02em; line-height:1.05; }
+  .stat span { display:block; margin-top:6px; font-size:.88rem; color:var(--ink-soft); line-height:1.4; }
+  .ways details.tile > summary strong { font-size:1.02rem; }
 </style>
 </head>
 
@@ -381,9 +453,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🛏 High School · Launch Ready</div>
+  <div class="eyebrow">High School · Launch Ready</div>
   <h1>Living With a Stranger</h1>
-  <p class="tagline">Because the hardest part of sharing a room is starting the conversation.</p>
+  <p class="tagline">What research says about roommates, the five ways people handle conflict, and the first sentence that keeps a small problem small.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -391,7 +463,6 @@
   </div>
 
   <div class="privacy"><span aria-hidden="true">🔒</span><div><strong>Private.</strong> Nothing you type or tap here is saved or sent. Close the page and it's gone.</div></div>
-  
 </div>
 
 <nav class="steps" aria-label="Sections">
@@ -411,43 +482,77 @@
     <div class="eyebrow">Part 1 · Understand it</div>
     <h2 id="h-understand">Why roommate stuff goes sideways</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Most roommate problems are preventable.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Fine on paper. Untested in real life.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You've never shared a bedroom, or not since you were little.</li>
-        <li>You and your future roommate have texted a few times and seem fine on paper.</li>
-        <li>You hate conflict and would rather put up with something than make it awkward.</li>
-        <li>You have strong feelings about sleep, noise, cleanliness, or guests, and haven't said them out loud yet.</li>
+        <li>You haven't shared a bedroom since you were little, or you've always shared one with siblings and have your own rules.</li>
+        <li>You and your future roommate have followed each other and texted a few times. You seem fine on paper.</li>
+        <li>You'd rather put up with almost anything than make it awkward.</li>
+        <li>You have strong feelings about sleep, noise, guests, or cleanliness that you've never had to say out loud.</li>
       </ul>
-      <p style="margin:0">Roommate conflict is one of the most common reasons first-years struggle, and one of the most preventable.</p>
+      <p style="margin:0">Roommate conflict is one of the most common problems first-years run into, and one of the most preventable.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">Why it goes sideways</span><span class="sticker">Nobody starts the conversation.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">The research</span><span class="sticker">Your roommate shapes more than your room.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>🤐 Nobody starts the conversation.</dt>
-        <dd>The problem is rarely that people can't get along. It's that nobody knows how to bring things up.</dd>
-        <dt>⏳ Waiting makes it worse.</dt>
-        <dd>Small annoyances turn into resentment fast. A talk in week one is easy. A talk in week eight is a fight.</dd>
-        <dt>🤝 You don't have to be best friends.</dt>
-        <dd>You do have to share a small space. Livable is the goal.</dd>
-        <dt>⚖️ Being right isn't the point.</dt>
-        <dd>Compromise is about making the room work for both of you.</dd>
+        <dt>Roommates rub off on each other.</dt>
+        <dd>Dartmouth assigns first-year roommates at random, which makes it a natural experiment. Students' grades moved with their roommates' grades, and roommates influenced whether each other joined fraternities (Sacerdote, 2001).</dd>
+        <dt>Habits travel, too.</dt>
+        <dd>At another school with random assignment, men who were placed with a roommate who drank often before college ended up with GPAs about a quarter point lower. Women's grades weren't affected (Kremer and Levy, 2008).</dd>
+        <dt>Relationship quality matters for well-being.</dt>
+        <dd>A review of the research ties the quality of your roommate relationship to how well you adjust to college and to your mental health (Erb and colleagues, 2014).</dd>
+        <dt>Different backgrounds take more work, and pay off.</dt>
+        <dd>In a study of randomly assigned first-years, white students living with a Black roommate reported less satisfaction early on. By the end of the term, their anxiety about interacting across race had dropped and their attitudes had improved (Shook and Fazio, 2008).</dd>
       </dl>
+      <p style="margin:0">None of this means you need a best friend. It means the room is worth some effort.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">The big four to talk about</h3>
+    <h3 style="margin-top:28px">Five ways people handle conflict</h3>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 360 296" role="img" aria-label="The Thomas-Kilmann model of conflict. The vertical axis is assertiveness, how much you push for your own needs. The horizontal axis is cooperativeness, how much you care about the other person's needs. Competing is high assertive, low cooperative. Collaborating is high on both. Compromising is in the middle. Avoiding is low on both. Accommodating is low assertive, high cooperative." xmlns="http://www.w3.org/2000/svg">
+  <defs><marker id="rm-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1D1D1F"/></marker></defs>
+  <g font-family="inherit">
+    <rect x="56" y="10" width="292" height="242" rx="12" fill="#F5F5F7"/>
+    <line x1="56" y1="252" x2="56" y2="12" stroke="#1D1D1F" stroke-width="1.6" marker-end="url(#rm-arr)"/>
+    <line x1="56" y1="252" x2="346" y2="252" stroke="#1D1D1F" stroke-width="1.6" marker-end="url(#rm-arr)"/>
+    <text transform="translate(26 132) rotate(-90)" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1D1D1F">Assertive: pushing for my needs</text>
+    <text x="202" y="276" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1D1D1F">Cooperative: caring about their needs</text>
+    <text x="60" y="290" font-size="11" fill="#8E8E93">low</text><text x="346" y="290" text-anchor="end" font-size="11" fill="#8E8E93">high</text>
+<rect x="60" y="27" width="120" height="34" rx="17" fill="#FDECEA"/><text x="120" y="49" text-anchor="middle" font-size="13.5" font-weight="700" fill="#A3271B">Competing</text><text x="120" y="78" text-anchor="middle" font-size="12" fill="#6E6E73">my way</text><rect x="226" y="27" width="120" height="34" rx="17" fill="#E6F4EA"/><text x="286" y="49" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E6B30">Collaborating</text><text x="286" y="78" text-anchor="middle" font-size="12" fill="#6E6E73">solve it together</text><rect x="142" y="107" width="120" height="34" rx="17" fill="#FFF4E0"/><text x="202" y="129" text-anchor="middle" font-size="13.5" font-weight="700" fill="#8A5200">Compromising</text><text x="202" y="158" text-anchor="middle" font-size="12" fill="#6E6E73">meet halfway</text><rect x="60" y="187" width="120" height="34" rx="17" fill="#E8E8ED"/><text x="120" y="209" text-anchor="middle" font-size="13.5" font-weight="700" fill="#3A3A3C">Avoiding</text><text x="120" y="238" text-anchor="middle" font-size="12" fill="#6E6E73">not now, or never</text><rect x="226" y="187" width="120" height="34" rx="17" fill="#EAF1FA"/><text x="286" y="209" text-anchor="middle" font-size="13.5" font-weight="700" fill="#245A96">Accommodating</text><text x="286" y="238" text-anchor="middle" font-size="12" fill="#6E6E73">your way</text>
+  </g>
+</svg>
+      <figcaption>The Thomas-Kilmann model maps conflict styles on two dimensions. Most people have a default. Each style fits some situations.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#C0392B"></span><div><strong>Competing</strong><p>"Lights off at 11. That's it." Useful when something is non-negotiable, like safety. Used for everything, it turns the room into a standoff.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E8B45"></span><div><strong>Collaborating</strong><p>"You study late, I have 8 a.m.s. What if you use a desk lamp after midnight and I get a sleep mask?" Takes the most time. Works best for things you'll live with all year.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D9822B"></span><div><strong>Compromising</strong><p>"Guests until midnight on weeknights, later on weekends." Fast and fair enough. Fine for small stuff.</p></div></div>
+      <div class="region"><span class="dot" style="background:#8E8E93"></span><div><strong>Avoiding</strong><p>Earbuds in, say nothing. Fine for a one-time annoyance. For anything that repeats, it builds resentment until it comes out sideways.</p></div></div>
+      <div class="region"><span class="dot" style="background:#2E6DB4"></span><div><strong>Accommodating</strong><p>"No, it's fine, have them over." Generous when it really doesn't matter to you. A problem when it does, and you're the one who always gives.</p></div></div>
+    </div>
+    </div>
+
+    <details class="fold fold-callout">
+      <summary><span class="fold-label">Where your style comes from</span><span class="sticker">Families and cultures teach different rules.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>In some families, you say what bothers you right away and it's over in five minutes. In others, raising a complaint directly is rude, and people hint, wait, or go through someone else. Some households share everything; in others, touching someone's stuff without asking is a serious line. Neither is wrong. Your roommate may have learned the opposite rules.</p>
+      <p class="worst">Think about it: how did your family handle disagreements? Which style did you learn, and which one do you want to use?</p>
+      </div>
+    </details>
+
+    <h3 style="margin-top:28px">The big topics to cover early</h3>
     <p class="tap-hint">Tap each one.</p>
     <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">😴</span><strong>Sleep</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">When lights go off, alarms, early classes.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">👥</span><strong>Guests</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Friends over on school nights? Overnight guests? How much notice?</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧽</span><strong>Clean</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Food, trash, dishes, shared stuff.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📚</span><strong>Study</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Quiet hours, music, headphones, where each of you works best.</p></details>
-    </div>
+      <details class="tile"><summary><strong>Sleep</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Lights out, alarms, early classes, naps, phone calls in bed.</p></details>
+      <details class="tile"><summary><strong>Guests</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Friends on school nights, overnight guests, partners, and how much notice.</p></details>
+      <details class="tile"><summary><strong>Clean and stuff</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Dishes, trash, food, and what's shared versus off-limits.</p></details>
+      <details class="tile"><summary><strong>Study and quiet</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Quiet hours, music, calls home, where each of you works best.</p></details>
+      <details class="tile"><summary><strong>Values</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Alcohol or weed in the room, prayer or religious practice, what's private. You don't have to agree. You do have to know.</p></details>
     </div>
   </div>
 </section>
@@ -457,34 +562,39 @@
     <div class="eyebrow">Part 2 · Practice the skills</div>
     <h2 id="h-practice">Having the conversation</h2>
     <div class="card">
-      <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Talk early. Talk small.</h3>
-      <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>📝 Make a roommate agreement.<span class="row-cue" aria-hidden="true"></span></summary><p>It sounds awkward. It actually works. Most RAs will help you write one in the first week.</p></details>
-        <details class="row"><summary>🗣 Bring it up early and small.<span class="row-cue" aria-hidden="true"></span></summary><p>"Hey, can we figure out a lights-out time? I have an 8 a.m. every day."</p></details>
-        <details class="row"><summary>🙋 Use "I" and be specific.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm having trouble sleeping when the lights are on past midnight" lands better than "You're so inconsiderate."</p></details>
-        <details class="row"><summary>🔁 Check in again.<span class="row-cue" aria-hidden="true"></span></summary><p>A quick "How's the room working for you?" every few weeks keeps small things small.</p></details>
-        <details class="row"><summary>🧑‍💼 Your RA exists for this.<span class="row-cue" aria-hidden="true"></span></summary><p>Using them isn't weakness or snitching. Mediating roommate stuff is literally their job.</p></details>
-        <details class="row"><summary>💛 Notice more than the mess.<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes a roommate who's withdrawn is struggling, not rude. If something seems really wrong, tell an RA.</p></details>
+      <div class="fold-label">The first sentence</div>
+      <h3 class="sticker">How you start predicts how it ends.</h3>
+      <p>In a study of 124 newlywed couples, how the first three minutes of a disagreement went predicted which couples would divorce over the next six years. Couples who opened with criticism of the person, instead of a specific complaint, did worse (Carr&egrave;re and Gottman, 1999). Different relationship, same lesson: start soft and specific.</p>
+      <div class="levers">
+        <div class="lever"><b>1. What I notice</b><span>"When the lights are on after 1 a.m...."</span></div>
+        <div class="lever"><b>2. How it affects me</b><span>"...I can't fall asleep, and I have an 8 a.m. every day."</span></div>
+        <div class="lever"><b>3. What I'm asking</b><span>"Could we try lights out at 12:30 on weeknights, and you use a desk lamp?"</span></div>
+      </div>
+      <p class="tap-hint" style="margin-top:16px">More tools. Tap to see how.</p>
+        <details class="row"><summary><span class="num">1</span> Write a roommate agreement.<span class="row-cue" aria-hidden="true"></span></summary><p>It feels formal. It works because you settle things before anyone is annoyed. Most RAs will help in the first week.</p></details>
+        <details class="row"><summary><span class="num">2</span> Bring it up early and small.<span class="row-cue" aria-hidden="true"></span></summary><p>A talk in week one is a conversation. A talk in week eight is a fight.</p></details>
+        <details class="row"><summary><span class="num">3</span> Ask, then listen.<span class="row-cue" aria-hidden="true"></span></summary><p>"Is there anything I do that bugs you?" makes it two-way, and you'll learn things.</p></details>
+        <details class="row"><summary><span class="num">4</span> Check in again.<span class="row-cue" aria-hidden="true"></span></summary><p>"How's the room working for you?" every few weeks keeps small things small.</p></details>
+        <details class="row"><summary><span class="num">5</span> Use your RA.<span class="row-cue" aria-hidden="true"></span></summary><p>Mediating roommate problems is part of their job. Asking isn't snitching.</p></details>
     </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Write your first sentence.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Write how you'd start each conversation. Keep it short, specific, and kind.</p>
-      <label class="prompt" for="tx-1">Your roommate has friends over until 1 a.m. on school nights:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">Their food has been on the desk for three days:</label>
+      <p>Use notice, effect, ask. Keep it short and specific. Nothing you type here is saved.</p>
+      <label class="prompt" for="tx-1">Your roommate's partner has slept over four nights this week:</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="When ... I ... Could we ..."></textarea><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">They've been using your food and your charger without asking:</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">You need the room quiet to study for a big exam:</label>
+      <label class="prompt" for="tx-3">You need the room quiet the night before a big exam, and they planned a pregame:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Two rooms. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">In a group</span><span class="sticker">Two rooms. What would you do?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p class="tap-hint" style="margin-top:0">👥 For advisory or class · about 20 minutes · no materials needed</p>
+      <p class="tap-hint" style="margin-top:0">For advisory or class · about 20 minutes · no materials needed</p>
       <ol class="tight" style="padding-left:1.3em">
         <li>Read each story out loud.</li>
         <li>Talk through the questions in small groups or as a class.</li>
@@ -494,43 +604,57 @@
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Aliyah and Chris · 1 of 2</span><span class="sticker">Aliyah and Kay</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Story 1 of 2</span><span class="sticker">Rosa and Hannah</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem">Aliyah and Kay looked like a good match on paper: same major, similar music, both from the Northeast. Three weeks in, Aliyah is exhausted. Kay stays up until 2 a.m. with the lights on, has friends over on school nights, and leaves food out until it smells. Aliyah is a light sleeper with an 8 a.m. every day. She hasn't said anything because she doesn't want to be the difficult roommate. Last night she lay awake for two hours and realized she dreads coming back to her room.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Aliyah can pick a calm moment and say, "Hey, can we talk about a few room things? I have 8 a.m.s and I've been really tired." Then suggest specifics: a lights-out time, a heads-up before guests, food in a bin. If it doesn't change, the RA can help them write an agreement.</p></details>
+      <p style="font-size:1.1rem">Rosa calls home every night on speaker, usually around 10, often with her grandmother and little brothers on the line. It's how her family stays close, and it's in Spanish, which Hannah doesn't speak. Hannah grew up as an only child in a quiet house and goes to bed at 10:30. She hasn't said anything, but she's started sighing loudly and putting her headphones on hard. Rosa has noticed and thinks Hannah doesn't like her family, or doesn't like her.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What style is each of them using right now?</li><li>What might each of them be assuming?</li><li>What would a collaborating version sound like?</li></ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>Hannah can name the specific thing without judging the calls: "I love that your family is so close. The volume at 10 is hard for me because I'm trying to sleep by 10:30. Could we figure something out?" Options: earbuds, an earlier call, the lounge on some nights. Rosa can also open it herself: "Are my calls bothering you? I'd rather know."</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Aliyah and Chris · 2 of 2</span><span class="sticker">Chris and Dan</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Story 2 of 2</span><span class="sticker">Kwame and Luke</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p style="font-size:1.1rem">Chris's roommate Dan seemed fine the first few weeks: quiet, reserved, nothing unusual. Lately Dan has barely left the room in five days. He doesn't shower much and has stopped going to class. Chris overheard him on the phone saying he "doesn't see the point." Chris doesn't know Dan well enough to know if this is normal for him. Telling an RA feels like going behind Dan's back, but Chris keeps thinking about that phone call and whether he's the only one who heard it.</p>
-      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>What would you do in this situation?</li><li>What makes this harder in college than at home?</li><li>Who or what resources would help?</li></ol>
-      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>This is a safety situation, not a roommate problem. Chris can check in directly ("You've seemed really down. I'm worried about you.") and tell the RA today. If Dan says anything about not wanting to live, call 988 or campus safety right away. Telling someone isn't betrayal. It might be what helps.</p></details>
+      <p style="font-size:1.1rem">For the first month, Kwame's main complaint about Luke was the mess. Lately it's different. Luke has barely left the room in five days, isn't showering, and has stopped going to class. Kwame overheard him on the phone saying he "doesn't see the point." They aren't close. Telling the RA feels like going behind Luke's back, but Kwame keeps thinking about that call and wondering if he's the only one who heard it.</p>
+      <ol class="tight" style="padding-left:1.3em;font-size:1.2rem"><li>Is this still a roommate problem?</li><li>What would you say to Luke?</li><li>Who should Kwame tell, and when?</li></ol>
+      <details class="row"><summary>Moves that help<span class="row-cue" aria-hidden="true"></span></summary><p>This is a safety situation, not a roommate problem. Kwame can check in directly ("You've seemed really down. I'm worried about you. Are you thinking about hurting yourself?") and tell the RA today. If Luke says anything about not wanting to live, Kwame calls 988 or campus safety right away. Telling isn't betrayal. It might be what helps.</p></details>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>What exactly would Aliyah say? Try the first sentence out loud.</li>
-        <li>When does a roommate problem stop being about the room and become about safety?</li>
-        <li>What would you want your roommate to do if they were worried about you?</li>
+        <li>Say Hannah's first sentence out loud. Then try Rosa's.</li>
+        <li>When does a roommate problem stop being about the room and start being about safety?</li>
+        <li>Which conflict style did your family teach you? When does it help, and when does it get in the way?</li>
       </ul>
-      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>For Chris's story, remind students they can always call their parents too, and that telling an RA about a roommate who "doesn't see the point" is the right call.</p></details>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>In Rosa and Hannah's story, steer away from deciding who's right. Both habits are reasonable. For Kwame's story, remind students that telling an RA about a roommate who "doesn't see the point" is the right call, and that they can always call home too.</p></details>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Harder than the dishes</span><span class="sticker">Values, identity, and where the line is.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <dl class="helps">
+        <dt>Different values, same room.</dt>
+        <dd>One of you drinks and one doesn't. One prays five times a day, one has never been religious. You don't have to share beliefs. You do need an agreement about what happens in the shared space.</dd>
+        <dt>Identity isn't a preference to negotiate.</dt>
+        <dd>A roommate's race, religion, sexual orientation, gender identity, or disability isn't a "conflict." Slurs, mocking, or treating someone as less than isn't a style difference. Tell the RA or use your school's bias reporting system.</dd>
+        <dt>Room changes exist.</dt>
+        <dd>If you've tried in good faith and it's still not livable, or if you ever feel unsafe, ask about a room change. It isn't failing.</dd>
+      </dl>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">What doesn't help</span><span class="sticker">These usually make it worse.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <div class="rows">
-        <details class="row"><summary>🎧 Earbuds and silence.<span class="row-cue" aria-hidden="true"></span></summary><p>Avoiding the conversation always makes it worse.</p></details>
-        <details class="row"><summary>📱 Venting in the group chat.<span class="row-cue" aria-hidden="true"></span></summary><p>Roommates find out, and then it's a much bigger problem.</p></details>
-        <details class="row"><summary>📝 Passive-aggressive notes.<span class="row-cue" aria-hidden="true"></span></summary><p>They start fights. Talk instead.</p></details>
-        <details class="row"><summary>💥 Saving it all up.<span class="row-cue" aria-hidden="true"></span></summary><p>One big blowup after weeks of silence is hard to repair.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> If I say nothing, it'll pass.</span><span class="row-cue" aria-hidden="true"></span></summary><p>For something that repeats, avoiding just stores it up. It usually comes out later, bigger.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Venting in the group chat is harmless.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Roommates find out. Then you have the original problem plus a trust problem.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> A note avoids the awkward talk.</span><span class="row-cue" aria-hidden="true"></span></summary><p>Passive-aggressive notes read as criticism with no tone of voice. Talk instead.</p></details>
+        <details class="row"><summary><span class="myth"><em>MYTH</em> Being right settles it.</span><span class="row-cue" aria-hidden="true"></span></summary><p>The goal is a room that works for both of you, not a verdict.</p></details>
       </div>
       </div>
     </details>
@@ -540,10 +664,24 @@
       <ul class="tight">
         <li>A roommate talks about not wanting to live, or not seeing the point.</li>
         <li>You feel unsafe in your room.</li>
-        <li>A roommate is very drunk or high and can't be woken.</li>
+        <li>A roommate is very drunk or high and can't be woken, or is breathing strangely.</li>
       </ul>
       <p style="margin:0">Tell an RA, call campus safety or <strong>911</strong>, or call or text <strong>988</strong>. See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Sacerdote, B. (2001). Peer effects with random assignment: Results for Dartmouth roommates. <i>Quarterly Journal of Economics</i>.</li>
+        <li>Kremer, M., &amp; Levy, D. (2008). Peer effects and alcohol use among college students. <i>Journal of Economic Perspectives</i>.</li>
+        <li>Erb, S. E., Renshaw, K. D., Short, J. L., &amp; Pollard, J. W. (2014). The importance of college roommate relationships: A review and systemic conceptualization. <i>Journal of Student Affairs Research and Practice</i>.</li>
+        <li>Shook, N. J., &amp; Fazio, R. H. (2008). Interracial roommate relationships: An experimental field test of the contact hypothesis. <i>Psychological Science</i>.</li>
+        <li>Carr&egrave;re, S., &amp; Gottman, J. M. (1999). Predicting divorce among newlyweds from the first three minutes of a marital conflict discussion. <i>Family Process</i>.</li>
+        <li>Thomas, K. W., &amp; Kilmann, R. H. (1974). <i>Thomas-Kilmann Conflict Mode Instrument</i>.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -554,26 +692,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">My non-negotiables for sharing a room</label>
+      <label class="prompt" for="tx-4">My non-negotiables for sharing a room, and where I can flex</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Things I do that a roommate might find hard</label>
+      <label class="prompt" for="tx-5">Things I do that a roommate might find hard, honestly</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">How I usually handle conflict, and how I want to handle it</label>
+      <label class="prompt" for="tx-6">My default conflict style, where I learned it, and when it doesn't serve me</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">The first sentence I'd use to bring up a problem</label>
+      <label class="prompt" for="tx-7">A notice, effect, ask sentence I could use in week one</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">What I'd do if a roommate seemed really not okay</label>
+      <label class="prompt" for="tx-8">What I'd do if a roommate seemed really not okay, and who I'd tell</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>You don't need a perfect roommate. You need a few honest conversations early, and the courage to have them.</p>
+      <p>You don't need a perfect roommate or a best friend. You need a few honest conversations early, started softly, and a plan for checking in.</p>
     </div>
     </div>
   </div>
@@ -619,9 +757,9 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-conflict" aria-pressed="false">😬 I hate conflict</button>
-          <button type="button" class="choice" data-path="p-nervous" aria-pressed="false">😟 Nervous about sharing</button>
-          <button type="button" class="choice" data-path="p-ready" aria-pressed="false">🌤 Feeling ready</button>
+          <button type="button" class="choice" data-path="p-conflict" aria-pressed="false">I hate conflict</button>
+          <button type="button" class="choice" data-path="p-nervous" aria-pressed="false">Nervous about sharing</button>
+          <button type="button" class="choice" data-path="p-ready" aria-pressed="false">Feeling ready</button>
         </div>
 
         <div class="path-panel" id="p-conflict" hidden>
@@ -629,7 +767,7 @@
           <p>Lots of people do. Small, early conversations are the easiest kind.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗣</span>Practice your first sentence out loud.</li>
+            <li><span class="e" aria-hidden="true">🗣</span>Practice a notice, effect, ask sentence out loud.</li>
             <li><span class="e" aria-hidden="true">📝</span>Suggest a roommate agreement in week one.</li>
             <li><span class="e" aria-hidden="true">🧑‍💼</span>Remember your RA can help.</li>
           </ul>
@@ -639,7 +777,7 @@
           <p>Totally normal. Most roommate pairs work out fine, especially with a plan.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">👥</span>Talk about the big four: sleep, guests, clean, study.</li>
+            <li><span class="e" aria-hidden="true">👥</span>Cover the big topics early: sleep, guests, stuff, study, values.</li>
             <li><span class="e" aria-hidden="true">🔁</span>Plan to check in every few weeks.</li>
             <li><span class="e" aria-hidden="true">💛</span>Give it a little time.</li>
           </ul>

@@ -362,6 +362,74 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* ===== High school edition: clean, product-page look, distinct from middle school ===== */
+  body.band-us { --paper:#F5F5F7; --card:#FFFFFF; --ink:#1D1D1F; --ink-soft:#6E6E73; --line:#E5E5EA; --tint:#F5F5F7; --radius:18px;
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  body.band-us h1, body.band-us h2, body.band-us h3, body.band-us .sticker { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  body.band-us .hero { background:#000; color:#F5F5F7; max-width:none; padding:56px 20px 36px; margin:0; text-align:left; }
+  body.band-us .hero > * { max-width:720px; margin-left:auto; margin-right:auto; }
+  body.band-us .fold-cue { background:#E8E8ED; color:var(--ink); font-weight:600; }
+  body.band-us details[open] > summary .fold-cue { background:var(--ink); color:#fff; }
+  body.band-us .path-panel li { padding-left:0; }
+  body.band-us .path-panel li .e { display:none; }
+  body.band-us .path-panel { border-radius:14px; background:var(--paper); }
+  body.band-us .closing { color:var(--ink); }
+  @media (max-width:480px) { .formula { grid-template-columns:1fr; text-align:center; } }
+  body.band-us .hero h1 { color:#F5F5F7; font-weight:700; font-size:clamp(2.2rem,8vw,3.4rem); line-height:1.05; letter-spacing:-.025em; }
+  body.band-us .hero .tagline { color:#A1A1A6; font-style:normal; font-size:clamp(1.1rem,4vw,1.35rem); line-height:1.4; margin-top:12px; }
+  body.band-us .hero .eyebrow { color:#A1A1A6; letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us .hero .privacy { background:#1C1C1E; color:#D1D1D6; border:0; border-radius:14px; }
+  body.band-us .hero .welcome { background:#1C1C1E; color:#F5F5F7; border-left:0; border-radius:14px; box-shadow:none; }
+  body.band-us .hero .welcome small { color:#8E8E93; }
+  body.band-us nav.steps { background:rgba(245,245,247,.82); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--line); }
+  body.band-us nav.steps a { color:var(--ink); font-weight:500; }
+  body.band-us section.part { padding-top:48px; }
+  body.band-us section.part > .wrap > .eyebrow { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; font-size:.95rem; }
+  body.band-us h2 { font-weight:700; font-size:clamp(1.8rem,6.5vw,2.4rem); line-height:1.1; letter-spacing:-.02em; }
+  body.band-us h3 { letter-spacing:-.01em; }
+  body.band-us .card, body.band-us details.fold, body.band-us details.fold-try, body.band-us .ways details.tile { border-radius:18px; box-shadow:none; border:0; background:var(--card); }
+  body.band-us details.fold-callout { border:0; border-radius:18px; background:#FFF8EC; }
+  body.band-us details.fold > summary:hover { background:transparent; }
+  body.band-us .fold-label { color:var(--ink-soft); letter-spacing:.02em; text-transform:none; font-weight:600; }
+  body.band-us .sticker { font-weight:700; letter-spacing:-.015em; color:var(--ink); }
+  body.band-us .row-cue { border-radius:50%; background:#E8E8ED; color:var(--ink); }
+  body.band-us details.row { border-top:1px solid var(--line); }
+  body.band-us .reminder { background:#000; color:#F5F5F7; border-radius:18px; }
+  body.band-us .reminder h3 { color:#A1A1A6; }
+  body.band-us .chip, body.band-us .choice { border-radius:12px; border-width:1.5px; }
+  body.band-us .btn { border-radius:980px; }
+  body.band-us .privacy { border-radius:14px; }
+  .num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; flex:none; margin-right:4px; }
+  .fig { background:#fff; border-radius:18px; padding:18px 14px 8px; margin:18px 0; }
+  .fig svg.brain { width:100%; height:auto; display:block; }
+  .fig figcaption { font-size:.82rem; color:var(--ink-soft); margin:8px 4px 6px; }
+  .regions { display:grid; gap:2px; margin:14px 0 0; background:var(--line); border-radius:18px; overflow:hidden; }
+  .region { display:grid; grid-template-columns:12px 1fr; gap:4px 14px; align-items:start; background:#fff; padding:16px 18px; }
+  .region .dot { width:12px; height:12px; border-radius:50%; margin-top:6px; }
+  .region strong { display:block; font-size:1.02rem; }
+  .region p { margin:4px 0 0; color:var(--ink-soft); font-size:.95rem; line-height:1.5; }
+  .formula { display:grid; grid-template-columns:auto 1fr; gap:6px 16px; align-items:center; background:#000; color:#F5F5F7; border-radius:18px; padding:24px 20px; margin:16px 0; }
+  .formula .lhs { font-weight:700; font-size:1.1rem; }
+  .formula .frac { display:grid; text-align:center; font-weight:600; font-size:1.02rem; }
+  .formula .frac span:first-child { border-bottom:1.5px solid #6E6E73; padding-bottom:8px; }
+  .formula .frac span:last-child { padding-top:8px; color:#D1D1D6; }
+  .levers { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+  .lever { background:var(--paper); border-radius:14px; padding:14px 16px; }
+  .lever b { display:block; margin-bottom:2px; }
+  .lever span { font-size:.92rem; color:var(--ink-soft); line-height:1.45; }
+  .myth { display:flex; gap:10px; align-items:baseline; }
+  .myth em { font-style:normal; font-weight:700; color:#D70015; font-size:.72rem; letter-spacing:.08em; }
+  .refs { font-size:.85rem; color:var(--ink-soft); padding-left:18px; margin:6px 0 0; }
+  .refs li { margin:5px 0; }
+
+  /* ---- lesson figure ---- */
+  .fig svg.chart { width:100%; height:auto; display:block; }
+  .fig svg.chart text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .research { border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:20px 0; }
+  .research .fold-label { margin-bottom:4px; }
+  .research p { margin:0; }
 </style>
 </head>
 
@@ -381,9 +449,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🧰 High School · Friends and belonging</div>
+  <div class="eyebrow">High School · Friends and belonging</div>
   <h1>The Repair Kit</h1>
-  <p class="tagline">Because every real friendship has fights, and most of them can be fixed.</p>
+  <p class="tagline">What research says about apologies, cooling down, and seeing the other side, for the fights that matter.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -409,69 +477,84 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Why fights happen, and why repair matters</h2>
+    <h2 id="h-understand">Repair is a skill</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Every real friendship hits a rough patch.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Something broke. You're not sure how to fix it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You said something in the heat of the moment that you can't stop thinking about.</li>
-        <li>A friend said something that really hurt, and now things are weird.</li>
-        
-        <li >A fight started over text and blew up before anyone talked in person.</li>
-        <li>Neither of you has said sorry, and every day it gets more awkward.</li>
-        <li>Someone apologized, but it didn't feel like a real apology.</li>
-        
-        <li >You shared something that was told to you in confidence.</li>
+        <li>You said something in the group chat at midnight that looks a lot worse in daylight.</li>
+        <li>A friend apologized with "sorry you feel that way," and it made things worse.</li>
+        <li>You shared something you were told in confidence, and now you don't know how to come back from it.</li>
+        <li>You and a teammate haven't really talked since a blowup at practice, and the season isn't over.</li>
+        <li>The fight is with someone you can't avoid: a sibling, a coworker, a lab partner.</li>
       </ul>
-      <p style="margin:0">Fights happen in every real friendship. What matters most is what happens after.</p>
+      <p style="margin:0">You know how to say sorry. This is the next level: which parts of an apology actually matter, why apologizing is harder than it should be, and how to repair things with people you can't just walk away from. That's most of adult life.</p>
       </div>
     </details>
 
     <div class="unit unit-one">
-    <h3 style="margin-top:28px">The different kinds of fights</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">⚡</span><strong>The flare-up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">A fast argument over something small, usually when someone's tired, stressed, or hungry. Often easy to fix if someone goes first.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧊</span><strong>The cold war</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Nobody's yelling. Nobody's talking either. Silence can do more damage than the fight did.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🪨</span><strong>The real hurt</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Something broke trust: a secret shared, a betrayal, something said behind someone's back. Takes more than "sorry" to fix.</p></details>
+    <h3 style="margin-top:28px">What makes an apology work</h3>
+    <p>Roy Lewicki and colleagues at Ohio State had 755 people rate apologies built from six possible parts. Apologies with more parts worked better, but the parts weren't equal.</p>
+    <figure class="fig">
+<svg class="chart" viewBox="0 0 400 340" role="img" aria-labelledby="ap-t ap-d" xmlns="http://www.w3.org/2000/svg">
+  <title id="ap-t">The six parts of an apology, ranked by importance</title>
+  <desc id="ap-d">Ranked bars. First: acknowledge responsibility. Second: offer to repair. Tied for third: express regret, explain what happened, and promise to change. Last: ask for forgiveness.</desc>
+  <text x="46" y="20" font-size="12" font-weight="600" fill="#6E6E73">Most important</text>
+  <text x="8" y="58" font-size="12" font-weight="600" fill="#6E6E73">1st</text><rect x="46" y="34" width="340" height="40" rx="8" fill="#1D1D1F"/><text x="58" y="51" font-size="13" font-weight="700" fill="#FFFFFF">Acknowledge responsibility</text><text x="58" y="67" font-size="12" fill="#D1D1D6">"That was on me."</text>
+  <text x="8" y="104" font-size="12" font-weight="600" fill="#6E6E73">2nd</text><rect x="46" y="80" width="300" height="40" rx="8" fill="#3A3A3C"/><text x="58" y="97" font-size="13" font-weight="700" fill="#FFFFFF">Offer to repair</text><text x="58" y="113" font-size="12" fill="#D1D1D6">"Here's how I'll make it right."</text>
+  <text x="8" y="150" font-size="12" font-weight="600" fill="#6E6E73">tied</text><rect x="46" y="126" width="240" height="40" rx="8" fill="#8E8E93"/><text x="58" y="143" font-size="13" font-weight="700" fill="#FFFFFF">Express regret</text><text x="58" y="159" font-size="12" fill="#F2F2F7">"I'm sorry."</text>
+  <text x="8" y="196" font-size="12" font-weight="600" fill="#6E6E73">tied</text><rect x="46" y="172" width="240" height="40" rx="8" fill="#8E8E93"/><text x="58" y="189" font-size="13" font-weight="700" fill="#FFFFFF">Explain what happened</text><text x="58" y="205" font-size="12" fill="#F2F2F7">"Here's what I was thinking."</text>
+  <text x="8" y="242" font-size="12" font-weight="600" fill="#6E6E73">tied</text><rect x="46" y="218" width="240" height="40" rx="8" fill="#8E8E93"/><text x="58" y="235" font-size="13" font-weight="700" fill="#FFFFFF">Promise to change</text><text x="58" y="251" font-size="12" fill="#F2F2F7">"It won't happen again."</text>
+  <text x="8" y="288" font-size="12" font-weight="600" fill="#6E6E73">last</text><rect x="46" y="264" width="170" height="40" rx="8" fill="#E5E5EA"/><text x="58" y="281" font-size="13" font-weight="700" fill="#1D1D1F">Ask for forgiveness</text><text x="58" y="297" font-size="12" fill="#6E6E73">"Please forgive me."</text>
+  <text x="46" y="330" font-size="11" fill="#6E6E73">Bar length shows rank order, not exact scores. Lewicki et al. (2016).</text>
+</svg>
+      <figcaption>The studies were with adults. The ranking lines up with what most people feel when they get a weak apology: "sorry" alone doesn't land.</figcaption>
+    </figure>
+    <div class="regions">
+      <div class="region"><span class="dot" style="background:#1D1D1F"></span><div><strong>Taking responsibility comes first</strong><p>Naming what you did, specifically, with no "if" and no "but." This mattered most.</p></div></div>
+      <div class="region"><span class="dot" style="background:#3A3A3C"></span><div><strong>Then an offer to fix it</strong><p>Deleting the post, telling the group it was your fault, paying for what broke. It turns words into action.</p></div></div>
+      <div class="region"><span class="dot" style="background:#8E8E93"></span><div><strong>"I'm sorry" is in the middle</strong><p>Regret, explanation, and a promise to change all help, roughly equally. None of them carries an apology alone.</p></div></div>
+      <div class="region"><span class="dot" style="background:#D1D1D6"></span><div><strong>Asking for forgiveness matters least</strong><p>It can come across as pressure. If you leave one part out, the researchers said, leave out this one.</p></div></div>
     </div>
     </div>
 
+    <div class="research">
+      <div class="fold-label">Research</div>
+      <p>Across four studies, psychologists Karina Schumann and Carol Dweck found that people who believe personality can change were more likely to take responsibility after hurting someone. If you see a mistake as something you can grow from, owning it feels less like a verdict on who you are.</p>
+    </div>
+
     <details class="fold ">
-      <summary><span class="fold-label">Why repair is so hard</span><span class="sticker">Going first feels like losing. It isn't.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Why it's so hard</span><span class="sticker">Refusing to apologize can feel good. That's the trap.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>Your brain wants to be right.</dt>
-        <dd>When you feel attacked, your brain goes into defense mode. It's hard to see the other person's side when part of you is still in the fight.</dd>
+        <dt>Not apologizing gives a short-term boost.</dt>
+        <dd>In a 2013 study, people who wrote a message refusing to apologize for something they'd done felt more powerful and had higher self-esteem afterward than people who didn't. The researchers weren't recommending it. They were explaining why "sorry" can be so hard to say. The boost does nothing for the relationship.</dd>
+        <dt>Defense mode.</dt>
+        <dd>When you feel attacked, your attention narrows to protecting yourself. It's hard to see the other side while part of you is still in the fight.</dd>
         <dt>Going first feels like losing.</dt>
-        <dd>Many people wait for the other person to apologize first. Meanwhile, the friendship stays stuck.</dd>
-        <dt>Apologies feel risky.</dt>
-        <dd>What if they don't accept it? What if they use it against you? Being the one who reaches out takes guts.</dd>
+        <dd>Both people wait for the other one. Meanwhile, the silence becomes its own problem, and the first message gets harder to send every day.</dd>
       </dl>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">🧰 Repair is a skill, not a personality trait</span><span class="sticker">Nobody's born good at fixing fights.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Solomon's paradox</span><span class="sticker">You give better advice to friends than to yourself.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Nobody is born knowing how to fix a fight. It's something you get better at with practice. Research on relationships shows it's often not whether people fight, but how they repair afterward, that keeps relationships strong.</p>
-      <p class="worst">The worst part: waiting. The longer a fight sits, the bigger it tends to feel, and the harder that first message becomes.</p>
+      <p>Psychologists Igor Grossmann and Ethan Kross found that people reason more wisely about a friend's relationship conflict than their own: they consider other viewpoints, admit what they don't know, and look for compromise. When people thought about their own conflict from a distance, for example in the third person, the gap disappeared.</p>
+      <p class="worst">Try it: "Why is Jae so angry at Sam?" works better than "Why is Sam so angry at me?" Same facts, clearer head.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 When the fight is online</span><span class="sticker">Online fights come with an audience.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Online</span><span class="sticker">Online fights come with an audience and a record.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>A lot of fights start, or get worse, online:</p>
       <ul class="tight">
         <li>An argument in the group chat that everyone watched.</li>
-        <li>A comment or post that felt like it was aimed at you.</li>
+        <li>A post that felt aimed at you, or one of yours that was.</li>
         <li>Screenshots of the fight getting passed around.</li>
-        
-        <li >Getting left on opened after you tried to apologize.</li>
-        <li>Being unfollowed or blocked in the middle of it.</li>
+        <li>Being left on read after you apologized.</li>
       </ul>
-      <p class="worst">The worst part: online fights have an audience and a record. People pick sides from screenshots without hearing the whole story.</p>
+      <p class="worst">People pick sides from screenshots without the whole story. And no tone, no faces, means everything reads harsher than it was meant.</p>
       </div>
     </details>
   </div>
@@ -480,110 +563,99 @@
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">How to fix things</h2>
-    <details class="fold ">
-      <summary><span class="fold-label">Step 1: Cool down first</span><span class="sticker">You can't fix it while you're still hot.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>You can't repair while you're still hot. Give it time: an hour, a night, sometimes a few days. Signs you're ready:</p>
-      <ul class="tight">
-        <li>You can think about it without your heart racing.</li>
-        <li>You're curious about their side, not just waiting to argue.</li>
-        <li>You want the friendship back more than you want to win.</li>
-      </ul>
-      </div>
-    </details>
+    <h2 id="h-practice">How to fix it</h2>
+    <div class="card">
+      <div class="fold-label">The repair sequence</div>
+      <h3 class="sticker">Cool down, own it, make it right, listen.</h3>
+      <p class="tap-hint">Tap each step.</p>
+        <details class="row"><summary><span class="num">1</span> Cool down first.<span class="row-cue" aria-hidden="true"></span></summary><p>An hour, a night, sometimes a few days. You're ready when you can think about it without your heart racing, you're curious about their side, and you want the friendship back more than you want to win.</p></details>
+        <details class="row"><summary><span class="num">2</span> Step back from it.<span class="row-cue" aria-hidden="true"></span></summary><p>Think about the fight in the third person, or ask what you'd tell a friend in your position. It's the fastest way past Solomon's paradox.</p></details>
+        <details class="row"><summary><span class="num">3</span> Lead with responsibility.<span class="row-cue" aria-hidden="true"></span></summary><p>Specific, not vague. "I shouldn't have posted your message. That was private, and I made it public." Not "sorry for whatever happened."</p></details>
+        <details class="row"><summary><span class="num">4</span> Offer to repair, and do it.<span class="row-cue" aria-hidden="true"></span></summary><p>"I deleted it, and I told the group it was on me." Action is the second most important part, and it's the one people skip.</p></details>
+        <details class="row"><summary><span class="num">5</span> Drop the "but."<span class="row-cue" aria-hidden="true"></span></summary><p>"I'm sorry, but you started it" cancels the apology. Your side matters. Save it for a later conversation.</p></details>
+        <details class="row"><summary><span class="num">6</span> Listen to understand.<span class="row-cue" aria-hidden="true"></span></summary><p>"What was it like from your side?" Then listen without planning your comeback. You can disagree about what happened and both still feel heard.</p></details>
+    </div>
 
-    <details class="fold ">
-      <summary><span class="fold-label">Step 2: A real apology has four parts</span><span class="sticker">Sorry, but... isn't sorry.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ol class="steps-list">
-        <li><strong>Name what you did.</strong> Specific, not vague. "I'm sorry I told everyone about your crush," not "sorry for whatever."</li>
-        <li><strong>Say how it might have affected them.</strong> "That probably felt embarrassing and like you couldn't trust me."</li>
-        <li><strong>Skip the "but."</strong> "I'm sorry, but you started it" cancels the apology. Save your side for later.</li>
-        <li><strong>Say what you'll do differently.</strong> "I won't share stuff you tell me again."</li>
-      </ol>
-      <p style="margin:0">Apologizing for your part doesn't mean everything was your fault. It means you're taking care of your side of the street.</p>
-      </div>
-    </details>
+    <div class="card">
+      <div class="fold-label">If you were the one who got hurt</div>
+      <ul class="tight">
+        <li>Say it once, simply: "When you ___, I felt ___." One thing, not a list.</li>
+        <li>Let them answer. They may not have known how it landed.</li>
+        <li>Forgiving isn't forgetting. You can accept an apology and still need time to trust again.</li>
+        <li>You don't have to accept every apology. "Sorry" without change, again and again, isn't repair.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="fold-label">Repair looks different in different families</div>
+      <p style="margin:0">In some families and cultures, a direct "I was wrong" is expected. In others, repair mostly happens through action: showing up, doing a favor, cooking for someone, acting normal again, or having an older relative step in. Some families rarely say sorry out loud at all. Both can be real repair. If a friend's way is different from yours, their apology may be there in a form you weren't looking for. How does your family usually make things right?</p>
+    </div>
 
     <details class="fold fold-try">
       <summary><span class="fold-label">Try it</span><span class="sticker">Four apologies. Which one actually lands?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Which of these actually works? Tap each one to see why.</p>
+      <p>Tap each one to see why.</p>
       <div class="scenario">
-        <p>Your friend is upset that you made fun of their outfit in front of people.</p>
+        <p>You posted a screenshot of your friend Mei's message in the group chat as a joke. She's furious and hasn't answered you since.</p>
         <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="This is a non-apology. It puts the problem on their feelings, not on what you did.">"Sorry you feel that way."</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="The &quot;but&quot; erases the sorry, and calling them sensitive makes it worse.">"Sorry, but it was just a joke. You're being sensitive."</button>
-          <button class="choice" type="button" data-fb="good" data-msg="This one has it all: what you did, how it landed, no excuses, and what changes.">"I'm sorry I made fun of your outfit in front of everyone. That was embarrassing, and it wasn't okay. I won't do that again."</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Better than nothing, but it sounds forced. Specific apologies land better.">"OK fine, sorry!!"</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="This puts the problem on her feelings, not on what you did. It has no responsibility in it at all.">"Sorry you feel that way."</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="The &quot;but&quot; erases the apology, and calling her sensitive makes it worse.">"Sorry, but it was obviously a joke."</button>
+          <button class="choice" type="button" data-fb="good" data-msg="This one works. It takes responsibility, names the specific harm, shows repair already done, and points to the future. No &quot;but,&quot; and no pressure to forgive.">"I shouldn't have posted that. It was your private message and I made it public. I deleted it and told the group it was on me. I won't do that again."</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It's something, but it's vague and rushed. She can't tell what you think you did wrong.">"omg ok I'm sorry!!"</button>
         </div>
         <div class="feedback" aria-live="polite"></div>
       </div>
-      <p style="margin-top:14px;font-size:.95rem">A good apology is specific, has no "but," and points to the future.</p>
+      <div class="scenario" style="margin-top:18px">
+        <p>Andre apologized to you for mocking your accent in front of the team. A week later, he did it again and said "sorry" again.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Right. The apology didn't include change, so it wasn't repair. You can say it once, clearly, and step back if it keeps happening. If it's part of a pattern on the team, a coach or counselor should know.">Tell him the apology doesn't count without change</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Being generous is fine. Accepting the same apology for the same thing, again and again, teaches both of you that sorry is enough.">Accept it again to keep the peace</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Getting even usually makes the fight bigger and harder to fix.">Make fun of something about him in front of the team</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
       </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Step 3: Listen to their side</span><span class="sticker">Listen to understand, not to win.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <p>After you apologize, or if you're the one who was hurt, the next move is listening. Try:</p>
-      <div class="script">"Can you tell me what it was like from your side?"</div>
-      <div class="script">"What would help make this better?"</div>
-      <p style="margin:10px 0 0">Listen to understand, not to plan your comeback. You can disagree about what happened and still both feel heard.</p>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Step 4: If you were the one who got hurt</span><span class="sticker">Your hurt counts too. Say it simply.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <ul class="tight">
-        <li><strong>Say it simply.</strong> "When you ___, I felt ___." Stick to one thing, not a list of every problem.</li>
-        <li><strong>Let them answer.</strong> They may not have known how it landed.</li>
-        <li><strong>Forgiving isn't forgetting.</strong> You can accept an apology and still need time to trust again.</li>
-        <li><strong>You don't have to accept every apology.</strong> If something keeps happening, sorry without change isn't enough.</li>
-      </ul>
-      </div>
-    </details>
-
-    <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually make the fight bigger.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>📱 Fighting over text.<span class="row-cue" aria-hidden="true"></span></summary><p>No tone, no faces, and screenshots. If it's a real conversation, do it in person or on a call.</p></details>
-        <details class="row"><summary>👥 Recruiting a team.<span class="row-cue" aria-hidden="true"></span></summary><p>Getting everyone on your side makes the fight bigger and makes it harder for anyone to back down.</p></details>
-        <details class="row"><summary>📜 Bringing up everything ever.<span class="row-cue" aria-hidden="true"></span></summary><p>"And another thing, in fourth grade..." Stick to what happened this time.</p></details>
-        <details class="row"><summary>🙊 Acting like it never happened.<span class="row-cue" aria-hidden="true"></span></summary><p>Sometimes small stuff can just pass. But skipping repair on something big usually means it comes back later.</p></details>
-      </div>
+      <p style="margin-top:14px;font-size:.95rem">A good apology is specific, has no "but," and shows what you'll do about it.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Write it messy first. Then make it real.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Draft it messy. Then check it against the research.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Write a first draft. It stays on this page. Read it back before deciding what to actually say.</p>
-      <label class="prompt" for="tx-1">What I did (specific):</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="I told people what you said about..."></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">How it might have felt for them:</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <p>Write a first draft. It stays on this page. Read it back before you decide what to actually say.</p>
+      <label class="prompt" for="tx-1">What I did, specifically, with no "but":</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false" placeholder="I told people what you said about your parents' divorce."></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">How I'll make it right:</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false" placeholder="I'll tell them I shouldn't have repeated it."></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <label class="prompt" for="tx-3">What I'll do differently:</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
-      <p style="margin-top:12px">Check it: is there a "but" in there? Is it about what you did, not what they did? If yes and yes, you're ready.</p>
+      <p style="margin-top:12px">Check it: Does it start with what you did? Does it offer repair? Is there a "but," an "if," or a request for forgiveness you could drop? Then say it in person or on a call if you can.</p>
       </div>
     </details>
 
     <details class="fold ">
-      <summary><span class="fold-label">What to do about social media right now</span><span class="sticker">Take it offline. Real repair happens face to face.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">What makes it bigger</span><span class="sticker">These usually grow the fight.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <div class="rows">
+        <details class="row"><summary>Fighting over text.<span class="row-cue" aria-hidden="true"></span></summary><p>No tone, no faces, and a permanent record. For a real conversation, meet in person or call.</p></details>
+        <details class="row"><summary>Recruiting a team.<span class="row-cue" aria-hidden="true"></span></summary><p>Getting people on your side makes it harder for anyone to back down without losing face.</p></details>
+        <details class="row"><summary>Bringing up everything ever.<span class="row-cue" aria-hidden="true"></span></summary><p>Stick to what happened this time. A list makes the other person defend instead of listen.</p></details>
+        <details class="row"><summary>Acting like it never happened.<span class="row-cue" aria-hidden="true"></span></summary><p>Small things can pass on their own. Big things you skip repairing tend to come back later, bigger.</p></details>
+      </div>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Online, right now</span><span class="sticker">Take it offline. Repair works better face to face.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <dl class="helps">
-        <dt>📞 Move it offline.</dt>
-        <dd>Real repair goes better in person or on a call. Text: "can we talk tomorrow?" and stop there.</dd>
-        <dt>🧹 Clean up what you posted.</dt>
+        <dt>Move it offline.</dt>
+        <dd>Text "can we talk tomorrow?" and stop there.</dd>
+        <dt>Clean up what you posted.</dt>
         <dd>If you posted something in the heat of it, delete it. That's part of the repair.</dd>
-        <dt>🚫 Don't screenshot and share.</dt>
+        <dt>Don't screenshot and share.</dt>
         <dd>Even if you're right. Sharing the fight makes it bigger and harder to fix.</dd>
-        <dt>⏳ Give "read" some grace.</dt>
-        <dd>No reply to an apology can mean they're still thinking. Give it a day before deciding it means no.</dd>
+        <dt>Give "read" some grace.</dt>
+        <dd>No reply to an apology can mean they're still thinking. Give it a day or two before deciding it means no.</dd>
       </dl>
       </div>
     </details>
@@ -594,11 +666,23 @@
       <ul class="tight">
         <li>Someone is threatening you or anyone else.</li>
         <li>The fight is turning into a pile-on, online or at school.</li>
-        <li>A friend keeps hurting you and apologizing, over and over.</li>
+        <li>Someone keeps hurting you and apologizing, over and over.</li>
         <li>Something happened that made you feel unsafe.</li>
       </ul>
       <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Sources</span><span class="sticker">Want to read the studies?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="refs">
+        <li>Lewicki, R. J., Polin, B., &amp; Lount, R. B., Jr. (2016). An exploration of the structure of effective apologies. <i>Negotiation and Conflict Management Research</i>, 9(2), 177&ndash;196.</li>
+        <li>Schumann, K., &amp; Dweck, C. S. (2014). Who accepts responsibility for their transgressions? <i>Personality and Social Psychology Bulletin</i>, 40(12), 1598&ndash;1610.</li>
+        <li>Okimoto, T. G., Wenzel, M., &amp; Hedrick, K. (2013). Refusing to apologize can have psychological benefits (and we issue no mea culpa for this research finding). <i>European Journal of Social Psychology</i>, 43(1), 22&ndash;31.</li>
+        <li>Grossmann, I., &amp; Kross, E. (2014). Exploring Solomon's paradox: Self-distancing eliminates the self-other asymmetry in wise reasoning about close relationships in younger and older adults. <i>Psychological Science</i>, 25(8), 1571&ndash;1580.</li>
+      </ul>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -609,26 +693,26 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">The fight, in my own words, including my part</label>
+      <label class="prompt" for="tx-4">The fight, told in the third person, including my part</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
 
       <label class="prompt" for="tx-5">What I think it felt like from their side</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">What I'd want to hear from them, and what they might want to hear from me</label>
+      <label class="prompt" for="tx-6">What responsibility I can take, and what repair I can offer</label>
       <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">A time I fixed things with someone before, and what helped</label>
+      <label class="prompt" for="tx-7">How my family usually makes things right, and what I want to keep or change about that</label>
       <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">Whether I want to repair this friendship, and why</label>
+      <label class="prompt" for="tx-8">Whether I want to repair this, and what I'd need from them to trust it again</label>
       <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>A friendship that has made it through a fight and a real repair is often stronger than one that never had a fight at all.</p>
+      <p>Owning a mistake isn't a verdict on who you are. It's a skill, and people who see themselves as able to grow find it easier. Most fights between people who care about each other can be repaired.</p>
     </div>
     </div>
   </div>
@@ -676,11 +760,11 @@
         <h3>What does it feel like right now?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
         <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">😤 Still angry</button>
-          <button type="button" class="choice" data-path="p-nervous" aria-pressed="false">😬 Want to fix it, but nervous</button>
-          <button type="button" class="choice" data-path="p-hurt" aria-pressed="false">💔 Hurt, and waiting for them</button>
-          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">🤷 Not sure if it's fixable</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Things are getting better</button>
+          <button type="button" class="choice" data-path="p-angry" aria-pressed="false">Still angry</button>
+          <button type="button" class="choice" data-path="p-nervous" aria-pressed="false">Want to fix it, but nervous</button>
+          <button type="button" class="choice" data-path="p-hurt" aria-pressed="false">Hurt, and waiting for them</button>
+          <button type="button" class="choice" data-path="p-unsure" aria-pressed="false">Not sure if it's fixable</button>
+          <button type="button" class="choice" data-path="p-better" aria-pressed="false">Things are getting better</button>
         </div>
 
         <div class="path-panel" id="p-angry" hidden>
@@ -688,10 +772,10 @@
           <p>You're not ready to repair yet, and that's okay. Trying while you're still hot usually makes it worse.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏳</span>Give it more time. Sleep on it.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write out everything you're mad about, then put it away.</li>
-            <li><span class="e" aria-hidden="true">🏃</span>Move: a walk, practice, anything that gets the energy out.</li>
-            <li><span class="e" aria-hidden="true">🙅</span>Don't text them yet.</li>
+            <li>Give it more time. Sleep on it.</li>
+            <li>Write out everything you're mad about, then put it away.</li>
+            <li>Move: a walk, practice, anything that gets the energy out.</li>
+            <li>Don't text them yet.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-nervous" hidden>
@@ -699,10 +783,10 @@
           <p>Nervous means you care about the friendship. Going first is brave, and it usually works better than people expect.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📝</span>Use the repair message draft above.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Practice saying it out loud, or to someone you trust.</li>
-            <li><span class="e" aria-hidden="true">👋</span>Pick a calm, private moment. "Hey, can we talk for a sec?" is enough to start.</li>
-            <li><span class="e" aria-hidden="true">🎯</span>Keep it short. You don't have to fix everything in one conversation.</li>
+            <li>Use the apology draft in Part 2, and check it against the ranking.</li>
+            <li>Practice saying it out loud, or to someone you trust.</li>
+            <li>Pick a calm, private moment. "Hey, can we talk for a sec?" is enough to start.</li>
+            <li>Keep it short. You don't have to fix everything in one conversation.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-hurt" hidden>
@@ -710,9 +794,9 @@
           <p>Waiting for an apology can feel endless. It's okay to tell them how you feel, even if they haven't made the first move.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🗣</span>Say it simply: "When you ___, I felt ___."</li>
-            <li><span class="e" aria-hidden="true">💬</span>Talk to someone outside the fight about it.</li>
-            <li><span class="e" aria-hidden="true">🕰</span>Decide how long you're willing to wait before you reach out or let it go.</li>
+            <li>Say it simply: "When you ___, I felt ___."</li>
+            <li>Talk to someone outside the fight about it.</li>
+            <li>Decide how long you're willing to wait before you reach out or let it go.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-unsure" hidden>
@@ -720,9 +804,9 @@
           <p>Some friendships come back stronger after a fight. Some don't. You don't have to know yet.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⚖️</span>Ask yourself: is this a one-time thing or a pattern?</li>
-            <li><span class="e" aria-hidden="true">🔋</span>Is This a Good Friend? can help you think it through.</li>
-            <li><span class="e" aria-hidden="true">💔</span>If it is over, Friendship Breakups can help with what comes next.</li>
+            <li>Ask yourself: is this a one-time thing or a pattern?</li>
+            <li>Is This a Good Friend? can help you think it through.</li>
+            <li>If it is over, Friendship Breakups can help with what comes next.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-better" hidden>
@@ -730,9 +814,9 @@
           <p>Repair is working, or time is helping. Better days don't have to be perfect days to count.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped, so you can use it next time.</li>
-            <li><span class="e" aria-hidden="true">🤝</span>Do something normal together, to rebuild the easy feeling.</li>
-            <li><span class="e" aria-hidden="true">💛</span>Give yourself credit for working through something hard.</li>
+            <li>Notice what helped, so you can use it next time.</li>
+            <li>Do something normal together, to rebuild the easy feeling.</li>
+            <li>Give yourself credit for working through something hard.</li>
           </ul>
         </div>
         <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
