@@ -362,6 +362,25 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -654,7 +673,31 @@
       <p>You deserve to know what's really in something before you decide. Asking questions is a strength.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Long before Galaxy Gas, stories warned about shiny things with a hidden cost. A few of these you might remember from when you were little.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">The Lorax <span class="ow-by">· Dr. Seuss, 1971</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">The Once-ler's sales line: "A Thneed's a Fine-Something-That-All-People-Need!" Read it like a label detective. What is he leaving out?</p></div>
+      <div class="ow-pick"><p class="ow-title">The Toothpaste Millionaire <span class="ow-by">· Jean Merrill, 1972</span></p><p class="ow-why">Sixth grader Rufus Mayflower thinks the toothpaste at the store costs way too much, so he figures out what's really in it and makes his own. Reading past the marketing, in action.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Zootopia <span class="ow-by">· Disney, 2016</span></p><p class="ow-why">The trouble in the city comes from Night Howlers, a pretty flower that turns gentle animals savage. Natural doesn't mean safe. Rated PG.</p></div>
+      <div class="ow-pick"><p class="ow-title">Pinocchio <span class="ow-by">· Disney, 1940</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Honest John sells Pinocchio on a free trip to Pleasure Island. It looks like fun. The boys who go start turning into donkeys. Rated G.</p><p class="ow-cn">Heads up: The boys on Pleasure Island smoke and drink, and it goes badly for them.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Poor Unfortunate Souls <span class="ow-by">· Howard Ashman and Alan Menken, 1989</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Ursula's big sales pitch in The Little Mermaid. Ariel trades her voice for a deal that sounds great and leaves out the catch.</p></div>
+    </div>
+    <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
+      <div class="ow-pick"><p class="ow-title">Campbell's Soup Cans <span class="ow-by">· Andy Warhol, 1962</span></p><p class="ow-why">Thirty-two paintings of soup labels, hanging in a museum. Warhol made people stare at packaging. Try it with the next bright package you see at a counter.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Redesign a Galaxy Gas tank or a gas station shot with an honest label. Use the "Legal vs. tested" chart from the lesson: is it FDA reviewed, is the dose accurate, who's selling it? Draw the label the company would never print.</p></div>
+  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

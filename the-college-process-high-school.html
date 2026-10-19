@@ -429,6 +429,25 @@
   .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
   .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
   .stat b { color:var(--ink); }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -679,7 +698,27 @@
       <p>The research is clear on this much: for most people, what you do once you get somewhere shapes your life more than the name of the place. Choose a place where you can do that.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Plenty of people have written about getting into college, and about what matters once you're there. One of these you probably sang along to.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">Where You Go Is Not Who You'll Be <span class="ow-by">· Frank Bruni, 2015</span></p><p class="ow-why">A New York Times columnist uses data and life stories to argue that lots of kinds of colleges are good launching points. It's the Dale and Krueger finding, at book length.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">High School Musical 3: Senior Year <span class="ow-by">· Disney, 2008</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Troy is pulled between basketball and theater, and between what his dad wants and what he wants. He finds a school that lets him do both. Rated G.</p></div>
+      <div class="ow-pick"><p class="ow-title">Monsters University <span class="ow-by">· Pixar, 2013</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Mike and Sulley get expelled and still end up on the scare floor, by way of the mailroom. What you do once you get somewhere matters more. Rated G.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Wide Open Spaces <span class="ow-by">· The Chicks, 1998</span></p><p class="ow-why">A girl leaves home while her parents worry at the door. She needs room to make big mistakes. Susan Gibson wrote it after leaving home for college in Montana.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Make two lists on one page. Left side: the schools people expect you to talk about. Right side: what you want a place to have, like a professor who knows your name or a cost your family can handle. Circle which list is yours.</p></div>
+  <p class="ow-foot">Picks and ratings checked October 2026.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

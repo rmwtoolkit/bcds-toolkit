@@ -429,6 +429,25 @@
   .bigstat { display:grid; grid-template-columns:auto 1fr; gap:6px 18px; align-items:center; }
   .bigstat b { font-size:3.2rem; font-weight:700; letter-spacing:-.03em; line-height:1; }
   .bigstat span { color:var(--ink-soft); font-size:.95rem; line-height:1.45; }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -777,7 +796,30 @@
       <p>Depression tells you it will always feel this way. That's a symptom talking, not a forecast. Most people get better, and small steps with the right people around you are how it starts.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Writers and artists have been describing the gray stretch, and the way out of it, for a long time. These are the gentle ones.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">The Boy, the Mole, the Fox and the Horse <span class="ow-by">· Charlie Mackesy, 2019</span></p><p class="ow-why">The boy asks the horse the bravest thing he's ever said. The horse says, "Help." That's the tell-one-adult step, in one word.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Inside Out <span class="ow-by">· Pixar, 2015</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Watch it again knowing about anhedonia. Riley's islands go dark one by one, and she starts to feel nothing at all. She gets better when the hard feeling finally gets said out loud. Rated PG.</p><p class="ow-cn">Heads up: Riley tries to run away from home before she turns back.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Fix You <span class="ow-by">· Coldplay, 2005</span></p><p class="ow-why">Chris Martin wrote it for someone in grief. It's a song from the person sitting beside you, saying they'll stay while you get through it.</p></div>
+      <div class="ow-pick"><p class="ow-title">Rise Up <span class="ow-by">· Andra Day, 2015</span></p><p class="ow-why">Day wrote it after a close friend got a cancer diagnosis and called it a kind of prayer. Slow and steady, one more step.</p></div>
+    </div>
+    <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
+      <div class="ow-pick"><p class="ow-title">The Red Tree <span class="ow-by">· Shaun Tan, 2001</span></p><p class="ow-why">A picture book drawn from the feeling of depression: a girl moves through gray, strange days. A small red leaf hides in every page, and at the end it has grown into a tree in her room. Look for it.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Draw your own red leaf. Make one small square for each day this week, and in each one sketch the small win you'd add to your list. Depression erases wins. The drawing keeps them.</p></div>
+  <p class="ow-foot">Picks and ratings checked October 2026.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

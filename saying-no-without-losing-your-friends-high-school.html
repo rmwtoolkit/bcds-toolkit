@@ -429,6 +429,25 @@
   .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
   .stat { font-size:.97rem; line-height:1.5; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 14px; margin:16px 0; }
   .stat b { color:var(--ink); }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -737,7 +756,28 @@
       <p>Your judgment doesn't disappear around friends. It just gets outvoted in the moment. Decide early, keep it short, and the people worth keeping will still be there.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Holding a line with everyone watching is one of the oldest plots there is. Two of these go back to when you were small.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">The Emperor's New Clothes <span class="ow-by">· Hans Christian Andersen, 1837</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Every adult in town privately sees nothing and says nothing, because they think everyone else sees it. That's pluralistic ignorance. One kid says it out loud.</p></div>
+      <div class="ow-pick"><p class="ow-title">Twelve Angry Men <span class="ow-by">· Reginald Rose, 1954</span></p><p class="ow-why">Eleven jurors want to vote guilty and go home. One says no. Watch how many of the others were privately unsure the whole time.</p><p class="ow-cn">Heads up: It's a murder trial, though the crime itself is never shown.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Remember the Titans <span class="ow-by">· Boaz Yakin, 2000</span></p><p class="ow-why">Gerry tells his best friend Ray that if he keeps missing blocks on purpose against a Black teammate, he's off the team. Saying no to a friend, and keeping the team. Rated PG.</p><p class="ow-cn">Heads up: Includes racial slurs and a car crash that leaves a player badly injured.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">What Do You Do with the Mad That You Feel? <span class="ow-by">· Fred Rogers, 1968</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Mister Rogers wrote it for kids with big feelings. It's about being able to stop yourself before you act. He recited it to the U.S. Senate in 1969.</p></div>
+      <div class="ow-pick"><p class="ow-title">I Won't Back Down <span class="ow-by">· Tom Petty, 1989</span></p><p class="ow-why">Short, calm, and repeated. That's how the lesson says to hold a line, too.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Write your lines now, while nobody is watching. Put them in your phone's notes under a boring title. Add the name of the friend you'd ask to be your second.</p></div>
+  <p class="ow-foot">Picks and ratings checked October 2026.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

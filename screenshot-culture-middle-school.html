@@ -362,6 +362,25 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -579,7 +598,30 @@
       <p>You're allowed to grow and change. Being thoughtful online now protects the person you're becoming.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Long before screenshots, people were finding out that private words don't always stay private. These stories get it.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">Harriet the Spy <span class="ow-by">· Louise Fitzhugh, 1964</span></p><p class="ow-why">Harriet writes brutally honest notes about her classmates in a private notebook. Then she loses it, and they read every word. A good one for the billboard test.</p><p class="ow-cn">Heads up: Her classmates gang up on her for a while, and the family's nanny leaves.</p></div>
+      <div class="ow-pick"><p class="ow-title">Lilly's Purple Plastic Purse <span class="ow-by">· Kevin Henkes, 1996</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Lilly gets mad at her teacher and slips a mean drawing of him into his bag. Then she wishes she could take it back. The post you make when you're angriest, picture-book edition.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Ralph Breaks the Internet <span class="ow-by">· Disney, 2018</span></p><p class="ow-why">Ralph's videos go viral, and then he reads the comments. Watch what one mean line does to him, and how fast things spread online. Rated PG.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Stand by You <span class="ow-by">· Rachel Platten, 2015</span></p><p class="ow-why">A promise to stick with someone when things get rough. Think of the friend whose private message got passed around, and what "I've got you" would mean to them.</p></div>
+    </div>
+    <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
+      <div class="ow-pick"><p class="ow-title">Invisible Emmie <span class="ow-by">· Terri Libenson, 2017</span></p><p class="ow-why">Shy Emmie writes a sappy love note as a joke, drops it, and the class clown shows it to everyone. Told half in comics, half in text.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Draw the billboard outside your school with your name on it. Put something on it you'd be proud of: your art, a highlight, something kind you did. That's the footprint working for you.</p></div>
+  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

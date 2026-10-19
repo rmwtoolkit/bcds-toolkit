@@ -362,6 +362,25 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -574,7 +593,28 @@
       <p>Studying smarter isn't about being smarter. It's about using methods that work with your brain instead of against it.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Sometimes a story or a song says it better. A couple of these you might remember from when you were little.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">Your Fantastic Elastic Brain <span class="ow-by">· JoAnn Deak, illustrated by Sarah Ackerley, 2010</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">A picture book about how your brain grows when you stretch it, and why mistakes are part of how it learns. That's the lesson's "hard is good" idea, drawn for little kids.</p></div>
+      <div class="ow-pick"><p class="ow-title">Fish in a Tree <span class="ow-by">· Lynda Mullaly Hunt, 2015</span></p><p class="ow-why">Ally hides that reading is hard for her until a new teacher figures out she has dyslexia and finds a way of learning that works for her brain. It's the lesson's "when to ask for more help" part, as a story.</p><p class="ow-cn">Heads up: A mean classmate picks on Ally, and some boys push around her friend Albert.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Akeelah and the Bee <span class="ow-by">· Doug Atchison, 2006</span></p><p class="ow-why">Akeelah gets thousands of flashcards to learn. She skips rope while she spells, and half her neighborhood ends up quizzing her. That's retrieval practice with a whole team behind it. Rated PG.</p></div>
+      <div class="ow-pick"><p class="ow-title">Inside Out <span class="ow-by">· Pixar, 2015</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Every night while Riley sleeps, the day's memories get sent off to long-term memory. The lesson says the same thing: a night of sleep is part of studying. Rated PG.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Try Everything <span class="ow-by">· Shakira, 2016</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">The Zootopia song. Keep making mistakes, keep trying. Testing yourself feels worse than rereading, and that's the point.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Make five flashcards for something you're studying right now. Question on the front, answer on the back. Quiz yourself today, then again in two days, and put a check on each card you get without peeking.</p></div>
+  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

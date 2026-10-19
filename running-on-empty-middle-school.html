@@ -362,6 +362,25 @@
   .more-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -559,7 +578,31 @@
       <p>Being tired isn't a personal failing. Your body is asking for something it really needs. Listening to it is one of the best things you can do for your mood, your grades, and yourself.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">People have been writing about sleep for a long time. A few of these are from bedtime when you were little.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">Goodnight Moon <span class="ow-by">· Margaret Wise Brown, 1947</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">A bunny says goodnight to everything in the room, one thing at a time. That's a wind-down routine. You've known one since you were small.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Bluey: Sleepytime <span class="ow-by">· Ludo Studio, 2020</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Bingo wants to sleep the whole night in her own bed, and dreams she's floating through space. Seven minutes long, and lovely.</p></div>
+      <div class="ow-pick"><p class="ow-title">Headspace Guide to Sleep <span class="ow-by">· Netflix, 2021</span></p><p class="ow-why">Short animated episodes on sleep science: phones at bedtime, why you can't fall asleep, dreams. Each one ends with a wind-down exercise. Rated TV-G.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Somewhere Over the Rainbow / What a Wonderful World <span class="ow-by">· Israel Kamakawiwoʻole, 1993</span></p><p class="ow-why">One voice and a ukulele. Quiet enough for a wind-down routine.</p></div>
+      <div class="ow-pick"><p class="ow-title">Weightless <span class="ow-by">· Marconi Union, 2011</span></p><p class="ow-why">An eight-minute track made with sound therapists to help people relax. Try it with the phone across the room.</p></div>
+    </div>
+    <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
+      <div class="ow-pick"><p class="ow-title">Little Nemo in Slumberland <span class="ow-by">· Winsor McCay, 1905</span></p><p class="ow-why">A comic strip more than a hundred years old. Every week Nemo has a wild dream, and in the last panel he wakes up in bed, sometimes on the floor.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Use "Work backward from your alarm" to find your wind-down time. Then draw your routine as a comic strip, like Little Nemo, one panel per step, ending in bed.</p></div>
+  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">

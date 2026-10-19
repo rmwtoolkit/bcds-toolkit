@@ -429,6 +429,25 @@
   .fig svg text { font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Helvetica Neue", Arial, sans-serif; }
   .stat { font-size:.95rem; color:var(--ink-soft); border-left:3px solid var(--ink); padding:2px 0 2px 12px; margin:14px 0; }
   .stat b { color:var(--ink); }
+
+  /* Other ways in */
+  .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
+  .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
+  .ow-lede{font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 12px;}
+  .ow-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+  @media(min-width:560px){.ow-grid{grid-template-columns:1fr 1fr;}}
+  .ow-tile{background:var(--card);border-radius:10px;padding:12px 14px;border-left:4px solid var(--vc);}
+  .ow-tile.blue{--vc:#2f6fb5}.ow-tile.coral{--vc:#d4654a}.ow-tile.teal{--vc:#1f8a83}.ow-tile.amber{--vc:#c58a12}
+  .ow-kind{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;}
+  .ow-pick{margin:0 0 10px;}.ow-pick:last-child{margin-bottom:0;}
+  .ow-title{font-size:.95rem;font-weight:700;color:var(--ink);line-height:1.3;margin:0;}
+  .ow-by{font-weight:400;color:var(--ink-soft);}
+  .ow-tb{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#fdf3df;color:#8a5a00;border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:2px;}
+  .ow-why{font-size:.87rem;color:var(--ink-soft);line-height:1.4;margin:3px 0 0;}
+  .ow-cn{font-size:.8rem;color:#7a4a1e;margin:4px 0 0;}
+  .ow-make{background:var(--card);border-radius:10px;padding:12px 14px;margin-top:10px;border:1px dashed #6b41c4;}
+  .ow-make .ow-why{color:var(--ink);font-size:.92rem;}
+  .ow-foot{font-size:.78rem;color:var(--ink-soft);margin:10px 0 0;}
 </style>
 </head>
 
@@ -705,7 +724,28 @@
       <p>A pill can change how studying feels. Sleep, self-testing, and asking for help early change what you actually know.</p>
     </div>
     </div>
+  <div class="unit unit-ow">
+<div class="ow" id="other-ways-in">
+  <p class="ow-label">Other ways in</p>
+  <p class="ow-lede">Pressure, shortcuts, and the real performance stack. A couple of these you grew up with.</p>
+  <div class="ow-grid">
+    <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
+      <div class="ow-pick"><p class="ow-title">Flowers for Algernon <span class="ow-by">· Daniel Keyes, 1966</span></p><p class="ow-why">Charlie gets an operation that makes him brilliant, fast. It doesn't last, and the cost is high. A shortcut to smarter has been a warning story for a long time.</p><p class="ow-cn">Heads up: The lab mouse dies, and Charlie's mind declines. There's some sexual content. Often taught in high school.</p></div>
+    </div>
+    <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
+      <div class="ow-pick"><p class="ow-title">Inside Out 2 <span class="ow-by">· Pixar, 2024</span></p><p class="ow-why">At hockey camp, Anxiety takes the console and runs Riley ragged: no sleep, sneaking a look at the coach's notes, pushing harder until she panics. The pill-as-a-patch problem, drawn as a cartoon. Rated PG.</p></div>
+      <div class="ow-pick"><p class="ow-title">SpongeBob SquarePants, "Procrastination" <span class="ow-by">· Stephen Hillenburg, 2001</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">SpongeBob has one night to write 800 words on what not to do at a stoplight, and does everything else instead. It turns out Mrs. Puff cancelled the assignment, but the night he had is the reason the lesson says to ask early. Rated TV-Y7.</p></div>
+    </div>
+    <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
+      <div class="ow-pick"><p class="ow-title">Vienna <span class="ow-by">· Billy Joel, 1977</span></p><p class="ow-why">"Slow down, you crazy child, you're so ambitious for a juvenile." A song about not rushing through your life. It fits finals week too.</p></div>
+      <div class="ow-pick"><p class="ow-title">Surface Pressure <span class="ow-by">· Jessica Darrow, written by Lin-Manuel Miranda, 2021</span></p><p class="ow-why">Luisa carries everyone's expectations, and she's cracking. Miranda said it came from his sister. The lesson asks what you'd drop before you'd borrow a pill.</p></div>
+    </div>
   </div>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Draw the inverted U from the lesson. Mark where you think you are this week. Then write the four things in the real performance stack under the peak, and circle the one you'll try first.</p></div>
+  <p class="ow-foot">Picks and ratings checked October 2026.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="part" id="checkin" aria-labelledby="h-checkin">
