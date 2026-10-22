@@ -775,25 +775,6 @@
       </div>
 
       <div class="ci-step">
-        <h3 id="ci-safe">Is any of this making you feel hopeless, unsafe, or like you might hurt yourself?</h3>
-        <div class="chips" role="radiogroup" aria-labelledby="ci-safe" id="ci-safety">
-          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="no">No</button>
-          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="unsure">Not sure</button>
-          <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false" data-safe="yes">Yes</button>
-        </div>
-        <div class="safety-panel" id="safety-panel" hidden aria-live="polite">
-          <p><strong>Thank you for being honest. Please don't carry this alone.</strong> Feeling hopeless or unsafe is a reason to talk to someone today.</p>
-          <ul class="tight">
-            <li><strong>Call or text <a href="tel:988">988</a></strong>, the Suicide and Crisis Lifeline, any time.</li>
-            <li><strong>Text HOME to <a href="sms:741741">741741</a></strong>, the Crisis Text Line.</li>
-            <li>Tell a counselor, teacher, coach, parent or caregiver, or another adult you trust today. You can show them this screen.</li>
-            <li>If you might act on thoughts of hurting yourself, call <a href="tel:911">911</a>, go to an emergency room, or call <a href="tel:988">988</a> and ask for a mobile crisis team.</li>
-            <li><strong>LGBTQ+?</strong> The Trevor Project: call <a href="tel:18664887386">1-866-488-7386</a> or text <b>START</b> to <a href="sms:678678">678-678</a>, any time.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="ci-step">
         <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
@@ -1002,7 +983,7 @@ const SCHOOL = {
     $$(".choice, .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
     safeBtns.forEach(x => x.setAttribute("aria-checked", "false"));
     $$(".path-panel").forEach(p => p.hidden = true);
-    validate.hidden = true; safetyPanel.hidden = true;
+    validate.hidden = true; if (safetyPanel) safetyPanel.hidden = true;
     $$(".feedback").forEach(f => { f.textContent = ""; f.className = "feedback"; });
     $$(".reveal").forEach(r => r.hidden = true);
     if (typeof extraReset === "function") extraReset();
