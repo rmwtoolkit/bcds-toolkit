@@ -211,8 +211,9 @@ details.sec:not([open]) > summary h2 { margin-bottom:6px; }
     clipBox._next = () => { if (k < segs.length - 1) { k++; go(); } else { moving = true; cmd("pauseVideo"); part.textContent = "End of the clip"; setTimeout(clipClose, 1500); } };
     clipBox._time = (t) => { if (moving) return; if (t >= segs[k][1] - 0.15) clipBox._next(); else if (t < segs[k][0] - 3) go(); };
     const o = /^https?:/.test(location.origin) ? "&origin=" + encodeURIComponent(location.origin) : "";
-    clipBox.querySelector(".cbox").innerHTML = '<iframe allow="autoplay; fullscreen; encrypted-media" allowfullscreen src="https://www.youtube.com/embed/' + id + '?enablejsapi=1&autoplay=1&rel=0&playsinline=1&start=' + segs[0][0] + o + '"></iframe>';
+    clipBox.querySelector(".cbox").innerHTML = '<iframe allow="autoplay; fullscreen; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/' + id + '?enablejsapi=1&autoplay=1&rel=0&playsinline=1&start=' + segs[0][0] + o + '"></iframe>';
     frame = clipBox.querySelector("iframe"); label();
+    // YouTube refuses to play (error 153) without knowing which site embeds it, so the frame sends our address even though the page itself sends none.
     // Ask the player to report its playing time (several times while it loads), then keep asking.
     const listen = () => frame && frame.contentWindow && frame.contentWindow.postMessage(JSON.stringify({ event: "listening", id: 1, channel: "widget" }), "*");
     frame.addEventListener("load", listen); clearInterval(tick); tick = setInterval(listen, 1000);
