@@ -6,7 +6,7 @@
 <!-- Privacy lock: this page cannot load or send anything over the network. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Why You Can't Start (and How to Start Anyway) · Middle School</title>
+<title>The After-School Plan · Middle School</title>
 
 <!--
   ==========================================================
@@ -363,6 +363,18 @@
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
 
+  /* Grid and pieces */
+  .uc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0 8px; }
+  .uc-cell { border-radius:14px; padding:12px; background:#F5F5F7; }
+  .uc-cell .uc-e { font-size:1.5rem; display:block; }
+  .uc-cell b { display:block; margin:2px 0; }
+  .uc-cell span:last-child { display:block; font-size:.9rem; color:var(--ink-soft); }
+  .uc-cell.c1 { background:#F5F5F7; } .uc-cell.c2 { background:#FDF3E3; } .uc-cell.c3 { background:#EAF1FB; } .uc-cell.c4 { background:#EAF5EE; }
+  .uc-pieces { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; padding:0; list-style:none; }
+  .uc-pieces li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.95rem; }
+  .uc-note { font-size:.9rem; color:var(--ink-soft); }
+  @media (max-width:360px) { .uc-grid { grid-template-columns:1fr; } }
+
   /* Other ways in */
   .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
   .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
@@ -448,9 +460,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">🚀 Middle School · Getting things done</div>
-  <h1>Why You Can't Start (and How to Start Anyway)</h1>
-  <p class="tagline">Because putting things off is about feelings, not laziness.</p>
+  <div class="eyebrow">📋 Middle School · Getting things done</div>
+  <h1>The After-School Plan</h1>
+  <p class="tagline">You get home, and somehow it's 9:00 and the homework isn't done. Here's how to start, keep track of it all, and still have an afternoon.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -475,127 +487,171 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">What's really going on when you can't start</h2>
+    <h2 id="h-understand">Where the afternoon goes</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">It's not laziness. It's a feeling.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"I was going to do it. Then it was dinner."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You opened your laptop to start an essay and somehow ended up reorganizing your desk.</li>
-        <li>You said "I'll start after one more video" four videos ago.</li>
-        <li >You waited until Sunday night to start the worksheet that was assigned Monday.</li>
-        
-        <li>The longer you put it off, the worse you felt, and the harder it got to start.</li>
-        <li>You actually wanted to do it. You just couldn't make yourself begin.</li>
+        <li>You sat down to do homework and somehow ended up watching videos for an hour.</li>
+        <li>You forgot about an assignment until a friend mentioned it at 10 PM.</li>
+        <li>Your backpack has crumpled papers you've never seen before.</li>
+        <li>You have practice, then dinner, then homework, then it's late.</li>
+        <li>A big project feels so big that you don't know what to do first.</li>
+        <li>Your parent asks "Do you have homework?" and you honestly aren't sure.</li>
       </ul>
-      <p style="margin:0">Procrastination isn't laziness. Most of the time, it's a way of avoiding a feeling.</p>
-      </div>
-    </details>
-
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">The usual reasons you can't start</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">😬</span><strong>It feels bad</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">The task feels boring, confusing, or stressful, so your brain goes looking for something that feels better right now.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🏔</span><strong>It feels too big</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">When you can't see the first step, the whole thing looks like a mountain. Your brain freezes.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>It has to be perfect</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">If you're worried it won't be good enough, not starting protects you from finding out. For a while.</p></details>
-    </div>
-    </div>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Your brain picks relief now over later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>Your brain picks now over later.</dt>
-        <dd>The relief of avoiding the task happens now. The consequences happen later. Brains, especially teen brains, weigh "now" much more heavily.</dd>
-        <dt>Avoidance feeds itself.</dt>
-        <dd>Every time you avoid the task, you feel a little relief, which teaches your brain that avoiding works. Then the task gets scarier.</dd>
-        <dt>Guilt makes it worse.</dt>
-        <dd>Feeling bad about procrastinating adds another bad feeling to the task, which makes you want to avoid it even more.</dd>
-        <dt>Some starts take more.</dt>
-        <dd>If you're working in your second language, have ADHD or a learning difference, or don't have a quiet spot or your own computer at home, starting can be harder. That's not laziness. It's okay to ask for what you need.</dd>
-      </dl>
+      <p style="margin:0">If that sounds like you, you're right on time. Middle school asks you to run your own schedule, and the part of your brain that does that is still learning the job.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Your phone is the perfect escape hatch</span><span class="sticker">Your phone is always the easiest way out.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">🧠 Your brain's planner is still in training</span><span class="sticker">This is a skill that grows.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>When a task feels hard, your phone offers instant relief: a feed that never ends, messages, games. It's not that you're weak. Apps are designed to be the easiest thing to reach for.</p>
-      <p class="worst">The worst part: an hour of scrolling to avoid 20 minutes of work leaves you more tired and more stressed, with the task still waiting.</p>
+      <p>The front part of your brain handles planning, remembering what's due, and getting yourself to start. It's one of the last parts of the brain to finish growing, and it keeps developing into your twenties.</p>
+      <p>Lots of students see their grades dip in the first year of middle school. Researchers have seen this pattern for decades. It usually isn't about being smart. It's the jump from one teacher who kept track of things to many teachers who expect you to.</p>
+      <p class="worst">You're not lazy or bad at school. You're learning a new skill, and tools help while your brain catches up.</p>
       </div>
     </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Four afternoon traps</h3>
+    <p>Which one gets you most?</p>
+    <div class="uc-grid">
+      <div class="uc-cell c1"><span class="uc-e" aria-hidden="true">🛋</span><b>The couch</b><span>"I'll just rest for a minute." Then it's two hours.</span></div>
+      <div class="uc-cell c2"><span class="uc-e" aria-hidden="true">📱</span><b>The phone</b><span>"One video." Then twelve.</span></div>
+      <div class="uc-cell c3"><span class="uc-e" aria-hidden="true">🎒</span><b>The backpack</b><span>Papers go in. Nothing comes out.</span></div>
+      <div class="uc-cell c4"><span class="uc-e" aria-hidden="true">🏔</span><b>The mountain</b><span>The project is so big you can't find the first step.</span></div>
+    </div>
+    <p class="uc-note">Everyone has at least one. Pick yours, and fix that one first.</p>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Why starting is the hardest part</span><span class="sticker">Starting feels worse than doing.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Most homework is less painful once you're in it. The worst part is the minute before you start, when your brain is busy imagining how boring or hard it'll be.</p>
+      <p style="margin:0">So make starting small. Take out the worksheet and write your name. That's it. Most of the time you'll keep going once you're moving.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Your busy family schedule</span><span class="sticker">Not every afternoon looks the same.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Some kids go straight to practice. Some take care of a younger brother or sister. Some go to a grandparent's house, a job a parent works, or a religious school after regular school. Some families eat at 5 and some at 8.</p>
+      <p style="margin:0">A plan that works for a friend might not work for you. Build yours around the real things in your week, then fit homework into the spaces that are actually there.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">When it might be more than a habit</span><span class="sticker">Some brains have to work harder at this.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>For some people, keeping track of things and getting started is much harder than it is for others, even when they try really hard. Sometimes that's ADHD or another learning difference.</p>
+      <p style="margin:0">That has nothing to do with being smart. If this sounds like you, talk to a parent, a teacher, or a counselor. There are good tools and supports.</p>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Build your afternoon</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Make the first step almost too small.</h3>
+      <h3 class="sticker">Small tools that do a lot.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🔍 Name the feeling.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask yourself: what feels bad about this? Boring? Confusing? Scary? Naming it shrinks it.</p></details>
-        <details class="row"><summary>🪜 Find the tiniest first step.<span class="row-cue" aria-hidden="true"></span></summary><p>Not "write the essay." Just "open the doc and type the title." Make it so small it feels silly.</p></details>
-        <details class="row"><summary>⏲ Use the 10-minute deal.<span class="row-cue" aria-hidden="true"></span></summary><p>Tell yourself you only have to work for 10 minutes. After that, you can stop. Most of the time you'll keep going, because starting was the hard part.</p></details>
-        <details class="row"><summary>📵 Make the escape harder.<span class="row-cue" aria-hidden="true"></span></summary><p>Phone in another room, or in a drawer. Every step between you and the distraction helps.</p></details>
-        <details class="row"><summary>✅ Aim for done, not perfect.<span class="row-cue" aria-hidden="true"></span></summary><p>A rough first draft is much easier to fix than a blank page. Permission to be messy is permission to start.</p></details>
-        <details class="row"><summary>🤝 Body double.<span class="row-cue" aria-hidden="true"></span></summary><p>Work next to someone else who's working, at a library, a kitchen table, or on a video call. Having company makes it easier to begin.</p></details>
+        <details class="row"><summary>✍️ Write it down before you leave class.<span class="row-cue" aria-hidden="true"></span></summary><p>Every assignment, in one planner or one notes app. Not "I'll remember."</p></details>
+        <details class="row"><summary>🍎 Snack, move, start.<span class="row-cue" aria-hidden="true"></span></summary><p>Home, a snack, five minutes of moving around, then sit down. Same order every day so you don't have to decide.</p></details>
+        <details class="row"><summary>1️⃣ First this, then that.<span class="row-cue" aria-hidden="true"></span></summary><p>"First the math worksheet, then 15 minutes of my show." The fun part waits for the start.</p></details>
+        <details class="row"><summary>🪜 Turn the mountain into stairs.<span class="row-cue" aria-hidden="true"></span></summary><p>Ask: what's the very first step? "Pick a topic" is a step. "Do the project" isn't.</p></details>
+        <details class="row"><summary>🎒 Backpack dump on Fridays.<span class="row-cue" aria-hidden="true"></span></summary><p>Everything out. Throw away, file, or bring to a teacher. Five minutes.</p></details>
+        <details class="row"><summary>🙋 Ask early, not the night before.<span class="row-cue" aria-hidden="true"></span></summary><p>If you're confused, ask the teacher the next day. Waiting makes it bigger.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Just 10 minutes. Starting is the hard part.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the thing you've been avoiding, find the tiniest step, and start a 10-minute timer right here. Nothing is saved.</p>
-      <label class="prompt" for="tx-1">What I've been avoiding:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">What feels bad about it (boring, confusing, scary, too big):</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">The tiniest first step:</label>
-      <textarea id="tx-3" autocomplete="off" spellcheck="false" placeholder="open the doc and type my name"></textarea><div class="write-lines"></div>
-      <div class="tool-row" style="align-items:center"><button class="btn" type="button" id="launch-go">Start 10 minutes</button><button class="btn ghost" type="button" id="launch-reset">Reset</button><span id="launch-time" style="font-size:1.6rem;font-weight:800;color:var(--school);margin-left:8px" aria-live="polite">10:00</span></div>
-      <p id="launch-msg" class="feedback" aria-live="polite"></p>
+      <p>Pick what you'd actually do.</p>
+      <div class="scenario">
+        <p>You get home at 3:30. You have math homework and a reading log. Your show just dropped a new episode.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="It&#x27;s easy for one episode to become three. Then the homework happens tired.">Watch the episode first, then start</button>
+          <button class="choice" type="button" data-fb="good" data-msg="First this, then that. The show is a reward and waits for you.">Snack, then the math worksheet, then the episode</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Some people can. Most get it done slower and with more mistakes. Try it once without and compare.">Do homework with the show on in the background</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your teacher assigns a project due in two weeks. It feels huge.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="okay" data-msg="That usually means the weekend before it&#x27;s due, which is stressful for everybody at home.">Wait until it feels more urgent</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Turning the mountain into stairs. Now you know what to do tonight.">Write down three small steps and put each one on a day</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="One giant day is easy to dread and easy to lose.">Tell yourself you'll do it all Saturday</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>At 9 PM a friend texts: "did u do the science thing?" You've never heard of the science thing.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Staying up late makes tomorrow harder. A short message to the teacher can help more.">Panic and stay up until midnight</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Teachers respect students who own it. And now you know to write it down before you leave class.">Do what you can tonight, then tell the teacher tomorrow and ask how to keep track</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="That gets it done tonight and leaves you lost on the test. It can also get you both in trouble.">Copy your friend's answers</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">Nobody has a perfect afternoon every day. The goal is a plan that works most days and gets you back on track on the days it doesn't.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two stuck students. What's really stopping them?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a corner. Then see what the research says.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Guess the real reason someone can't start.</p>
-      <div class="scenario" >
-        <p>Maya keeps putting off her book report. She hasn't finished the book and is afraid she won't understand it.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Almost never the real reason. Maya's avoiding a feeling.">She's lazy</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Right. Her first tiny step might be reading one chapter, or asking the teacher what to focus on.">It feels confusing and scary</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="If she didn't care, she wouldn't be stressed about it.">She doesn't care</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <p class="tap-hint" style="margin-top:0">👥 For advisory, homeroom or class · about 15 minutes · no materials needed</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>The leader reads a statement. Students move or point to a corner of the room: agree, disagree, not sure, or it depends.</li>
+        <li>Ask one or two people from different corners to explain why. No one has to share.</li>
+        <li>After each one, the leader taps it to show what research says.</li>
+      </ol>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These usually keep you stuck longer.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 1 of 2</span><span class="sticker">"Kids who stay organized were just born that way."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>⏳ Waiting to feel motivated.<span class="row-cue" aria-hidden="true"></span></summary><p>Motivation usually shows up after you start, not before. Action comes first.</p></details>
-        <details class="row"><summary>🗡 Beating yourself up.<span class="row-cue" aria-hidden="true"></span></summary><p>Research suggests that forgiving yourself for procrastinating makes you less likely to do it next time. Guilt feeds the cycle.</p></details>
-        <details class="row"><summary>📅 Planning to do it all at once.<span class="row-cue" aria-hidden="true"></span></summary><p>"I'll do the whole thing Saturday" sets up a giant, scary block. Smaller pieces are easier to start.</p></details>
-        <details class="row"><summary>🔀 Productive procrastination.<span class="row-cue" aria-hidden="true"></span></summary><p>Cleaning your room or doing an easier assignment feels useful, but it's still avoiding the hard thing.</p></details>
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>No. Organizing is a skill. The part of the brain that handles it keeps growing well past middle school, and tools like planners and routines help everyone.</p></details>
       </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 2 of 2</span><span class="sticker">"You should wait until you feel motivated to start homework."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Usually the other way around. For most people, the feeling of wanting to do it shows up after they start, not before.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>What does your afternoon usually look like after school?</li>
+        <li>Which trap gets you most: the couch, the phone, the backpack, or the mountain?</li>
+        <li>What's one small thing that helps you start?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Afternoons look very different from home to home: jobs, siblings, long commutes, shared rooms. Keep it about tools, not about what families should do. Offer a quiet place at school for anyone who needs one.</p></details>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>When to get more help</h3>
+      <h3>When it's more than a messy week</h3>
       <ul class="tight">
-        <li>You can't start things no matter what you try, across most of your classes.</li>
-        <li>Avoiding work is making you feel anxious or hopeless.</li>
-        <li>You're falling far behind and don't know how to catch up.</li>
+        <li>You're falling behind in most of your classes, not just one.</li>
+        <li>You try every tool and still can't get started.</li>
+        <li>You're up very late most nights trying to catch up.</li>
+        <li>School stress is making you feel hopeless or like you want to hurt yourself.</li>
       </ul>
-      <p style="margin:0">A counselor can help you figure out what's getting in the way, including whether something like anxiety, ADHD, or a learning difference is part of it. See <a href="#help">Get help</a> below.</p>
+      <p>Talk to a counselor, a teacher, or a parent. Sometimes there's something that makes this harder, and there's help. You can also call or text 988, any time.</p>
+      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
   </div>
 </section>
@@ -607,49 +663,49 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">What I put off most, and the feeling underneath it</label>
-      <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-1">My real afternoon, from the bell to bedtime</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What I usually do instead of starting</label>
-      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">The trap that gets me most</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">A time I started something hard, and what helped me begin</label>
-      <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">My first-this-then-that for tomorrow</label>
+      <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">My go-to tiniest first step for schoolwork</label>
-      <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-4">One big thing I could turn into stairs</label>
+      <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">What I'd say to a friend who can't start something</label>
-      <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-5">Who I could ask for help keeping track</label>
+      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Not being able to start doesn't mean you don't care. It usually means you care a lot. Be patient with yourself, and start small.</p>
+      <p>You're learning to run your own schedule. That's a big new job, and nobody gets it right right away.</p>
     </div>
     </div>
   <div class="unit unit-ow">
 <div class="ow" id="other-ways-in">
   <p class="ow-label">Other ways in</p>
-  <p class="ow-lede">Lots of stories are about putting things off. A few of these you might remember from when you were little.</p>
+  <p class="ow-lede">Lots of stories are about kids who put things off and figure out how to get going.</p>
   <div class="ow-grid">
     <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
-      <div class="ow-pick"><p class="ow-title">The Most Magnificent Thing <span class="ow-by">· Ashley Spires, 2014</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">A girl tries to build something perfect, and every try comes out wrong until she gets so mad she quits. A walk with her dog helps her start again. That's "aim for done, not perfect."</p></div>
+      <div class="ow-pick"><p class="ow-title">The Homework Machine <span class="ow-by">· Dan Gutman, 2006</span></p><p class="ow-why">Four 5th graders build a machine to do their homework for them. It goes badly wrong in ways you won't expect.</p></div>
+      <div class="ow-pick"><p class="ow-title">Diary of a Wimpy Kid <span class="ow-by">· Jeff Kinney, 2007</span></p><p class="ow-why">Greg Heffley has a plan for avoiding work in almost every book. Watch how the plans go.</p></div>
     </div>
     <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
-      <div class="ow-pick"><p class="ow-title">SpongeBob SquarePants: "Procrastination" <span class="ow-by">· Nickelodeon, 2001</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">SpongeBob has an 800-word essay for boating school. He does almost anything else all night, then writes it with five minutes left. Rated TV-Y7.</p></div>
+      <div class="ow-pick"><p class="ow-title">Ratatouille <span class="ow-by">· Pixar, 2007</span></p><p class="ow-why">A kitchen runs on everyone knowing their station and the order things happen in. Watch how Remy learns the system. Rated G.</p></div>
     </div>
     <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
-      <div class="ow-pick"><p class="ow-title">One Step at a Time <span class="ow-by">· Jordin Sparks, 2008</span></p><p class="ow-why">Sparks didn't make it the first time she tried out for American Idol, so she tried again. The title is the lesson's tiniest first step.</p></div>
-      <div class="ow-pick"><p class="ow-title">Do-Re-Mi <span class="ow-by">· Rodgers &amp; Hammerstein, 1959</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">From The Sound of Music. "Let's start at the very beginning, a very good place to start." Maria teaches a whole song by starting with one note.</p></div>
+      <div class="ow-pick"><p class="ow-title">Eye of the Tiger <span class="ow-by">· Survivor, 1982</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">The training song from Rocky III. Ask a grown-up to play it, then try starting your homework before the song ends.</p></div>
     </div>
     <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
-      <div class="ow-pick"><p class="ow-title">Calvin and Hobbes <span class="ow-by">· Bill Watterson, 1992</span></p><p class="ow-why">In one strip, Calvin says you can't turn creativity on like a faucet. You have to be in the right mood. Which mood? Last-minute panic.</p></div>
+      <div class="ow-pick"><p class="ow-title">Children's Games <span class="ow-by">· Pieter Bruegel the Elder, 1560</span></p><p class="ow-why">Hundreds of kids playing at once, more than 80 different games. Play matters. A plan is what makes room for it.</p></div>
     </div>
   </div>
-  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Draw the mountain from the lesson, the one a big task turns into. Then draw the first step at the bottom, so small it looks silly. Write it on the step and set your 10-minute timer.</p></div>
-  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Draw your afternoon as a map, from the school bell to bed. Mark where the time disappears.</p></div>
+  <p class="ow-foot">Ratings checked October 2026.</p>
 </div>
 </div>
 </div>
@@ -664,102 +720,102 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with getting started today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How on top of things do you feel today?</h3>
+        <p class="ci-hint">Not in general. Just today.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
-          <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
+          <div class="slider-ends"><span>on top of it</span><span>totally buried</span></div>
           <div class="slider-read" id="ci-read" aria-live="polite"></div>
         </div>
       </div>
 
       <div class="ci-step">
-        <h3>What's been most present today?</h3>
+        <h3>What's going on?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">put something off again</button>
-          <button type="button" class="chip" aria-pressed="false">scrolled instead of working</button>
-          <button type="button" class="chip" aria-pressed="false">the task feels too big</button>
-          <button type="button" class="chip" aria-pressed="false">don't understand the assignment</button>
-          <button type="button" class="chip" aria-pressed="false">worried it won't be good enough</button>
-          <button type="button" class="chip" aria-pressed="false">stressed about a deadline</button>
-          <button type="button" class="chip" aria-pressed="false">felt guilty about procrastinating</button>
-          <button type="button" class="chip" aria-pressed="false">did the easy stuff, avoided the hard stuff</button>
-          <button type="button" class="chip" aria-pressed="false">started something hard</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">a big project</button>
+          <button type="button" class="chip" aria-pressed="false">I forgot an assignment</button>
+          <button type="button" class="chip" aria-pressed="false">I can't get started</button>
+          <button type="button" class="chip" aria-pressed="false">my phone ate my afternoon</button>
+          <button type="button" class="chip" aria-pressed="false">busy after school</button>
+          <button type="button" class="chip" aria-pressed="false">taking care of a sibling</button>
+          <button type="button" class="chip" aria-pressed="false">my backpack is a mess</button>
+          <button type="button" class="chip" aria-pressed="false">a lot of tests</button>
+          <button type="button" class="chip" aria-pressed="false">I started early this time</button>
+          <button type="button" class="chip" aria-pressed="false">I used a planner</button>
         </div>
-        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
+        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's on your mind.</p>
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
+        <h3>Which sounds most like today?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">🧱 Stuck, can't make myself start</button>
-          <button type="button" class="choice" data-path="p-guilt" aria-pressed="false">😞 Guilty and down on myself</button>
-          <button type="button" class="choice" data-path="p-panic" aria-pressed="false">😰 Panicking about a deadline</button>
-          <button type="button" class="choice" data-path="p-confused" aria-pressed="false">❓ Confused about what to do</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 I got started</button>
+        <div class="paths" role="group" aria-label="Which sounds most like today?">
+          <button type="button" class="choice" data-path="p-start" aria-pressed="false">🛋 I can't get started</button>
+          <button type="button" class="choice" data-path="p-forgot" aria-pressed="false">🎒 I keep forgetting things</button>
+          <button type="button" class="choice" data-path="p-big" aria-pressed="false">🏔 Something feels too big</button>
+          <button type="button" class="choice" data-path="p-busy" aria-pressed="false">⏰ No time after school</button>
+          <button type="button" class="choice" data-path="p-good" aria-pressed="false">✅ I'm on top of it</button>
         </div>
 
-        <div class="path-panel" id="p-stuck" hidden>
+        <div class="path-panel" id="p-start" hidden>
           <h4>What this might mean</h4>
-          <p>Your brain is protecting you from a bad feeling. The way through is making the start so small it doesn't trigger that feeling.</p>
+          <p>That's the hardest part for almost everyone. The minute before is worse than the doing.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🪜</span>Write down the tiniest first step. Then do just that.</li>
-            <li><span class="e" aria-hidden="true">⏲</span>Use the 10-minute launch above.</li>
-            <li><span class="e" aria-hidden="true">🤝</span>Find someone to work beside, in person or on a call.</li>
+            <li><span class="e" aria-hidden="true">✍️</span>Write your name on the worksheet. That's the start.</li>
+            <li><span class="e" aria-hidden="true">1️⃣</span>First this, then that.</li>
+            <li><span class="e" aria-hidden="true">⏲️</span>Do just ten minutes.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-guilt" hidden>
+        <div class="path-panel" id="p-forgot" hidden>
           <h4>What this might mean</h4>
-          <p>Guilt makes the cycle worse. Forgiving yourself is a real strategy, not letting yourself off the hook.</p>
+          <p>Your brain's planner is still in training. Give it a tool.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🫶</span>Say to yourself what you'd say to a friend: "It's okay, let's start now."</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write down one thing you can do in the next 10 minutes.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Take five slow breaths before you begin.</li>
+            <li><span class="e" aria-hidden="true">✍️</span>Write it down before you leave class.</li>
+            <li><span class="e" aria-hidden="true">🎒</span>Backpack dump on Friday.</li>
+            <li><span class="e" aria-hidden="true">👀</span>Look at the week every Sunday.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-panic" hidden>
+        <div class="path-panel" id="p-big" hidden>
           <h4>What this might mean</h4>
-          <p>Deadline panic is stressful, and it can actually help you focus if you aim it at one small step.</p>
+          <p>Big things are just a lot of small things stacked up.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📋</span>List exactly what's left, then pick the most important piece.</li>
-            <li><span class="e" aria-hidden="true">📨</span>If it's truly not possible, email the teacher now. Asking early goes better than asking late.</li>
-            <li><span class="e" aria-hidden="true">📵</span>Phone away until the first chunk is done.</li>
+            <li><span class="e" aria-hidden="true">🪜</span>What's the very first step?</li>
+            <li><span class="e" aria-hidden="true">📅</span>Put each step on a day.</li>
+            <li><span class="e" aria-hidden="true">🙋</span>Ask the teacher if you're stuck.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-confused" hidden>
+        <div class="path-panel" id="p-busy" hidden>
           <h4>What this might mean</h4>
-          <p>Confusion is one of the most common reasons people can't start. It's fixable.</p>
+          <p>Some afternoons are packed. That's real.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🙋</span>Ask the teacher or a classmate one specific question.</li>
-            <li><span class="e" aria-hidden="true">📖</span>Reread the instructions and highlight what's actually being asked.</li>
-            <li><span class="e" aria-hidden="true">✍️</span>Write down what you do understand. It's usually more than you think.</li>
+            <li><span class="e" aria-hidden="true">🗺</span>Find the spaces you actually have.</li>
+            <li><span class="e" aria-hidden="true">🚌</span>A short task fits a car ride or a wait.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell a teacher if your schedule makes deadlines hard.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-better" hidden>
+        <div class="path-panel" id="p-good" hidden>
           <h4>What this might mean</h4>
-          <p>That's the hardest part, done. Better days don't have to be perfect days to count.</p>
+          <p>Nice. Notice what's working.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped you start.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Use the same trick tomorrow.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Celebrate starting, not just finishing.</li>
+            <li><span class="e" aria-hidden="true">📝</span>What did you do differently?</li>
+            <li><span class="e" aria-hidden="true">🔁</span>Keep the routine going.</li>
+            <li><span class="e" aria-hidden="true">🤝</span>Share your trick with a friend.</li>
           </ul>
         </div>
-        <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
+        <p class="validate" id="ci-high" hidden>Feeling buried is heavy. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try this week?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who's stuck. You wouldn't call them lazy. You'd help them find a small first step.</p>
+        <p class="closing">You don't need a perfect plan. You need a first step, written down, and a time to take it.</p>
       </div>
     </div>
     </div>
@@ -789,8 +845,8 @@
           <p class="crisis-line"><strong>988 Suicide and Crisis Lifeline</strong>Call or text <a href="tel:988">988</a></p>
           <p class="crisis-line"><strong>Crisis Text Line</strong>Text <b>HOME</b> to <a href="sms:741741">741741</a></p>
           <p class="crisis-line"><strong>The Trevor Project</strong>For LGBTQ+ young people. Call <a href="tel:18664887386">1-866-488-7386</a> or text <b>START</b> to <a href="sms:678678">678-678</a></p>
-          <p class="crisis-line"><strong>ANAD Eating Disorders Helpline</strong>Call <a href="tel:18883757767">1-888-375-7767</a>, weekdays 9am to 9pm Central.</p>
-          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>. You can also call 988, which can send a crisis team instead of police, or go to an emergency room.</p>
+          <p class="crisis-line"><strong>Trans Lifeline</strong>Call <a href="tel:18775658860">877-565-8860</a>, run by trans people</p>
+          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>, or call 988 and ask for a mobile crisis team.</p>
         </div>
       </div>
     </div>
@@ -799,10 +855,10 @@
       <h3>If you want to understand more</h3>
       <p>Other Student Toolkit modules that go with this one:</p>
       <ul class="more-list">
-        <li><span class="e" aria-hidden="true">🧠</span><div><strong>Running the Show</strong><br>How your brain manages planning, focus, and follow-through.</div></li>
-        <li><span class="e" aria-hidden="true">🎯</span><div><strong>Perfect Is a Trap</strong><br>Perfectionism.</div></li>
-        <li><span class="e" aria-hidden="true">⏰</span><div><strong>Where Did the Afternoon Go?</strong><br>Time blindness and planning.</div></li>
-        <li><span class="e" aria-hidden="true">📱</span><div><strong>Doomscroll</strong><br>When the feed takes more than it gives.</div></li>
+        <li><span class="e" aria-hidden="true">🗂</span><div><strong>How to Study (Nobody Teaches This)</strong><br>Studying that sticks, and what to do when you blank.</div></li>
+        <li><span class="e" aria-hidden="true">📱</span><div><strong>Your First Phone</strong><br>Setting up your phone before it runs your afternoon.</div></li>
+        <li><span class="e" aria-hidden="true">🌙</span><div><strong>Sleep Is When You Grow</strong><br>Why sleep matters more right now.</div></li>
+        <li><span class="e" aria-hidden="true">🦋</span><div><strong>Butterflies Mean Get Ready</strong><br>Using nerves before a test, game, or solo.</div></li>
       </ul>
     </div>
 
@@ -817,9 +873,10 @@
 <footer>
   <div class="wrap">
     <div class="disclaimer">
-      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to an emergency room.
+      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to the nearest emergency room.
     </div>
-    <div>Student Toolkit · Middle School · Getting things done · Why You Can't Start (and How to Start Anyway)</div>
+    <span hidden>Student Toolkit · Middle School · Getting things done · Why You Can't Start (and How to Start Anyway)</span>
+    <div>Student Toolkit · Middle School · Getting things done · The After-School Plan</div>
   </div>
 </footer>
 
@@ -836,6 +893,7 @@ const SCHOOL = {
   welcome: "Welcome from the BCDS counseling team. We are glad you're here.",  // "" to hide
   welcomeSignature: "BCDS Counseling Team",
   gradeBand: "ms",
+  hideTopics: [],                            // optional: ["gender"] hides the gender section
   help: {
     title: "BCDS Middle School Support",
     where: "Counseling Office (location to be confirmed)",
@@ -871,6 +929,9 @@ const SCHOOL = {
   setText("local-hours", SCHOOL.help.hours);
   setText("local-book", SCHOOL.help.book);
   setText("local-after", SCHOOL.help.afterHours);
+
+  /* ---- Optional topics a school can hide: SCHOOL.hideTopics = ["gender"] ---- */
+  (SCHOOL.hideTopics || []).forEach(t => document.querySelectorAll('[data-topic="' + t + '"]').forEach(el => el.remove()));
 
   /* ---- Grade band ---- */
   function setBand(b) {
@@ -922,28 +983,10 @@ const SCHOOL = {
     }));
   });
 
-  /* ---- 10-minute launch timer ---- */
-  const lgo = $("#launch-go"), lrs = $("#launch-reset"), ltime = $("#launch-time"), lmsg = $("#launch-msg");
-  let ltimer = null, lleft = 600;
-  function lshow() { ltime.textContent = Math.floor(lleft / 60) + ":" + String(lleft % 60).padStart(2, "0"); }
-  function lstop() { clearInterval(ltimer); ltimer = null; }
-  if (lgo) {
-    lgo.addEventListener("click", () => {
-      if (ltimer) return;
-      lmsg.className = "feedback okay"; lmsg.textContent = "Go. Just the tiny step. You can stop when the timer ends.";
-      ltimer = setInterval(() => {
-        lleft--; lshow();
-        if (lleft <= 0) { lstop(); lmsg.className = "feedback good"; lmsg.textContent = "Ten minutes done. You started. Keep going if you want, or take a break. Either is fine."; }
-      }, 1000);
-    });
-    lrs.addEventListener("click", () => { lstop(); lleft = 600; lshow(); lmsg.textContent = ""; lmsg.className = "feedback"; });
-  }
-  function extraReset() { if (lgo) { lstop(); lleft = 600; lshow(); } }
 
   /* ---- Check-in tool ---- */
   const slider = $("#ci-slider"), sliderRead = $("#ci-read"), high = $("#ci-high");
-  const READS = ["Barely on my mind", "Barely on my mind", "A little", "A little", "Some", "Some",
-                 "A lot", "A lot", "Most of my day", "Most of my day", "All I can think about"];
+  const READS = ["On top of it", "On top of it", "Pretty good", "Pretty good", "Okay", "Okay", "Behind", "Behind", "Way behind", "Way behind", "Totally buried"];
   let sliderTouched = false;
   function updateSlider() {
     sliderTouched = true;

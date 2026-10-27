@@ -6,7 +6,7 @@
 <!-- Privacy lock: this page cannot load or send anything over the network. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Doomscroll · Middle School</title>
+<title>Your First Phone · Middle School</title>
 
 <!--
   ==========================================================
@@ -363,6 +363,18 @@
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
 
+  /* Grid and pieces */
+  .uc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0 8px; }
+  .uc-cell { border-radius:14px; padding:12px; background:#F5F5F7; }
+  .uc-cell .uc-e { font-size:1.5rem; display:block; }
+  .uc-cell b { display:block; margin:2px 0; }
+  .uc-cell span:last-child { display:block; font-size:.9rem; color:var(--ink-soft); }
+  .uc-cell.c1 { background:#F5F5F7; } .uc-cell.c2 { background:#FDF3E3; } .uc-cell.c3 { background:#EAF1FB; } .uc-cell.c4 { background:#EAF5EE; }
+  .uc-pieces { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; padding:0; list-style:none; }
+  .uc-pieces li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.95rem; }
+  .uc-note { font-size:.9rem; color:var(--ink-soft); }
+  @media (max-width:360px) { .uc-grid { grid-template-columns:1fr; } }
+
   /* Other ways in */
   .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
   .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
@@ -449,8 +461,8 @@
 <main>
 <div class="wrap hero">
   <div class="eyebrow">📱 Middle School · Digital life</div>
-  <h1>Doomscroll</h1>
-  <p class="tagline">Because the feed is designed to never end, but your time does.</p>
+  <h1>Your First Phone</h1>
+  <p class="tagline">Getting a phone is a big deal. Here's how to set it up so it works for you, and what to do when something online goes wrong.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -475,129 +487,171 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">How the feed hooks you</h2>
+    <h2 id="h-understand">A new phone, a lot of new stuff</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Opened it for one thing. Looked up an hour later.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"Just five more minutes."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You opened an app to check one thing and looked up an hour later.</li>
-        <li>You reached for your phone without even deciding to.</li>
-        <li>You kept scrolling even though you weren't enjoying it anymore.</li>
-        <li >You stayed up late watching videos and were wrecked the next day.</li>
-        
-        <li>You saw scary or upsetting news and couldn't stop reading more.</li>
-        <li>You felt anxious or empty after a long scroll, but couldn't say why.</li>
+        <li>You finally got your own phone, or you're counting down until you do.</li>
+        <li>Your friends are in group chats until midnight.</li>
+        <li>Your parents have rules about the phone, and they don't match your friends' rules.</li>
+        <li>You wanted to check one thing and looked up and an hour was gone.</li>
+        <li>Someone you don't know messaged you.</li>
+        <li>You saw something online you wish you hadn't.</li>
       </ul>
-      <p style="margin:0">If it feels hard to put your phone down, that's not a willpower problem. Apps are designed by experts to keep you scrolling.</p>
-      </div>
-    </details>
-
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">How the feed keeps you hooked</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">♾</span><strong>No stopping points</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Infinite scroll and autoplay remove the natural end of a page or episode. There's never a moment that says "you're done."</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎰</span><strong>Surprise rewards</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">You never know if the next video will be amazing, so you keep swiping. Slot machines use the same trick.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🎯</span><strong>Made for you</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Algorithms learn exactly what keeps you watching, including stuff that makes you anxious or angry.</p></details>
-    </div>
-    </div>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why it takes more than it gives</span><span class="sticker">Those hours come from somewhere.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>It steals time from things that help.</dt>
-        <dd>Sleep, friends, homework, hobbies, moving your body. Hours of scrolling come from somewhere.</dd>
-        <dt>Bad news grabs attention.</dt>
-        <dd>Brains are wired to notice threats. Scary or upsetting content can pull you in and leave you more anxious. It can hit even harder when the news is about people who share your race, religion, home country, or identity.</dd>
-        <dt>It leaves you drained.</dt>
-        <dd>Lots of people feel tired, flat, or restless after a long scroll, even though it felt relaxing while it was happening.</dd>
-        <dt>It's not all bad.</dt>
-        <dd>Connecting with friends, learning, laughing, finding your people. For lots of kids, including LGBTQ+ kids and kids who feel different at school, online is where they find people like them. Phones can do a lot of good. The goal is choosing how you use it.</dd>
-      </dl>
+      <p style="margin:0">If that sounds familiar, you're figuring out something that didn't exist when your parents were your age. That's hard for everyone, including them.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 The scroll and your mood</span><span class="sticker">How you scroll matters more than how long.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">🧠 Why it's so hard to put down</span><span class="sticker">Apps are built to keep you on them.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Research on teens and social media is mixed. How you use it matters more than the hours alone. Actively connecting with friends tends to feel better than passively scrolling. Using it late at night, or to avoid feelings, tends to feel worse.</p>
-      <p class="worst">The worst part: when you feel down, scrolling feels like comfort. Then it often leaves you feeling more down, and the cycle repeats.</p>
+      <p>Most apps are made by teams of grown-ups whose job is to keep you watching. Videos play one after another. Streaks make you feel like you have to come back. Little red dots make you want to check.</p>
+      <p>None of that means you're weak. It means it's not a fair fight with willpower alone. The way you set up your phone does more than trying hard not to use it.</p>
+      <p class="worst">Your phone should work for you. You get to set it up that way.</p>
       </div>
     </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Four phone traps</h3>
+    <p>Which one gets you most?</p>
+    <div class="uc-grid">
+      <div class="uc-cell c1"><span class="uc-e" aria-hidden="true">🔥</span><b>Streaks</b><span>"I can't break it!"</span></div>
+      <div class="uc-cell c2"><span class="uc-e" aria-hidden="true">▶️</span><b>Autoplay</b><span>One video turns into twenty.</span></div>
+      <div class="uc-cell c3"><span class="uc-e" aria-hidden="true">🔴</span><b>Red dots</b><span>Something new to check, all day.</span></div>
+      <div class="uc-cell c4"><span class="uc-e" aria-hidden="true">🌙</span><b>Bedtime chats</b><span>Group chats that never end.</span></div>
+    </div>
+    <p class="uc-note">Every one of these can be turned off or changed.</p>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Apps have age rules for a reason</span><span class="sticker">Most social media is for 13 and up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Many social media apps say you have to be 13 to have an account. That rule comes from a US law about protecting kids' information online.</p>
+      <p style="margin:0">Lots of kids use apps before they're 13 anyway. If you do, the safety tools matter even more: private accounts, only friends you know in real life, and a grown-up who knows what you're on.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">When something goes wrong online</span><span class="sticker">You won't be in trouble for telling.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Someone you don't know messages you. Someone asks for a picture. You see something scary or gross. A group chat turns mean.</p>
+      <p style="margin:0">Don't answer, take a screenshot, block, and tell an adult you trust. Many kids don't tell because they're afraid they'll lose their phone. Most grown-ups would much rather know. You can even say it first: "I need help, and I'm worried you'll take my phone."</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Every family has different phone rules</span><span class="sticker">Yours might feel unfair.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Some kids get a phone at 9 and some at 14. Some families have no phones at the table, some share one family phone, some use phones to stay in touch with relatives in another country. Some families can't afford one at all.</p>
+      <p style="margin:0">Different rules don't mean your family is wrong. If you think a rule doesn't fit anymore, ask to talk about it calmly. Coming with a plan works better than arguing.</p>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Setting up your phone</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Change your setup, not just your willpower.</h3>
+      <h3 class="sticker">Try these this week.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🛑 Decide before you open.<span class="row-cue" aria-hidden="true"></span></summary><p>Before opening an app, decide what you're there for and how long. Set a timer if you need one.</p></details>
-        <details class="row"><summary>🧭 Notice the reach.<span class="row-cue" aria-hidden="true"></span></summary><p>Catch the moment you reach for your phone. Ask: what am I feeling right now? Bored? Anxious? Avoiding something?</p></details>
-        <details class="row"><summary>🏠 Move apps off your home screen.<span class="row-cue" aria-hidden="true"></span></summary><p>Put the most time-sucking apps in a folder on a back page. A few extra taps break the autopilot.</p></details>
-        <details class="row"><summary>🌙 Phone-free zones.<span class="row-cue" aria-hidden="true"></span></summary><p>Bed, meals, homework time. Pick one and keep the phone out of it.</p></details>
-        <details class="row"><summary>⏱ Use screen time tools.<span class="row-cue" aria-hidden="true"></span></summary><p>Most phones let you set daily limits for specific apps. They're easy to override, but the reminder helps.</p></details>
-        <details class="row"><summary>🧩 Have a replacement.<span class="row-cue" aria-hidden="true"></span></summary><p>Know what you'll do instead: music, a book, a walk, drawing, texting one friend.</p></details>
+        <details class="row"><summary>🛠 Set it up with a grown-up.<span class="row-cue" aria-hidden="true"></span></summary><p>Privacy settings, who can message you, who can see your stuff. Ten minutes together.</p></details>
+        <details class="row"><summary>🔥 Let a streak go.<span class="row-cue" aria-hidden="true"></span></summary><p>Try it once. The friendship will be fine.</p></details>
+        <details class="row"><summary>🍽 No phones at the table.<span class="row-cue" aria-hidden="true"></span></summary><p>Suggest it for everyone at home, grown-ups too.</p></details>
+        <details class="row"><summary>👀 Check what an app can see.<span class="row-cue" aria-hidden="true"></span></summary><p>Before you tap Allow, ask: does this game really need my location, my contacts, or my camera?</p></details>
+        <details class="row"><summary>🙋 Know your tell-someone person.<span class="row-cue" aria-hidden="true"></span></summary><p>Pick the adult you'd tell if something online went wrong, before anything goes wrong.</p></details>
+        <details class="row"><summary>🎨 Have a no-phone thing you love.<span class="row-cue" aria-hidden="true"></span></summary><p>Drawing, a sport, building, cooking, a book. Something you can do when you're bored.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Next time you grab your phone, ask why.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Next time you grab your phone without thinking, pause and pick what's going on. Notice patterns.</p>
-      <div class="scenario"><div class="choices" role="group" aria-label="Why I'm reaching for my phone" id="reach">
-        <button class="choice" type="button" data-fb="okay" data-msg="Boredom is the most common reason. Try having a go-to replacement ready, like music or a quick walk.">😐 Bored</button>
-        <button class="choice" type="button" data-fb="okay" data-msg="Phones are a fast escape from hard feelings. The feeling usually waits for you. Try naming it, or doing three slow breaths first.">😬 Anxious or stressed</button>
-        <button class="choice" type="button" data-fb="okay" data-msg="Avoiding a task? Why You Can't Start has tools for that. Try 10 minutes of the task first, then a phone break.">🙈 Avoiding something</button>
-        <button class="choice" type="button" data-fb="okay" data-msg="Loneliness is a real reason. Instead of scrolling, try texting or calling one specific person.">😔 Lonely</button>
-        <button class="choice" type="button" data-fb="good" data-msg="Great, that's using your phone on purpose. Do the thing, then put it down.">🎯 I actually need something specific</button>
+      <p>Pick what you'd actually do.</p>
+      <div class="scenario">
+        <p>Someone you don't know sends you a friendly message and asks how old you are.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="People online aren&#x27;t always who they say they are. Keep personal stuff private.">Answer, they seem nice</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That&#x27;s exactly right. You&#x27;re not in trouble.">Don't answer, block, and tell an adult</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than answering. Blocking and telling someone is even safer.">Ignore it</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
       </div>
-      <div class="feedback" aria-live="polite" id="reach-fb"></div></div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your parents set a rule: phones go in the kitchen at 9. Your friends are all still online.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="If they find out, you&#x27;ll probably lose more phone time, and trust takes a while to rebuild.">Sneak it back into your room</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="It&#x27;s okay to be annoyed. Complaining usually doesn&#x27;t change the rule.">Complain about it all week</button>
+          <button class="choice" type="button" data-fb="good" data-msg="&quot;Could it be 9:30 on Fridays if I follow it all week?&quot; Plans work better than arguments.">Follow it, and later ask to talk about it with a plan</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>In a group chat, someone shares a picture of a classmate that's really embarrassing.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="That spreads it further and hurts the person more.">Send it to a friend outside the chat</button>
+          <button class="choice" type="button" data-fb="good" data-msg="You&#x27;re protecting someone who isn&#x27;t there to protect themselves.">Don't share it, say "not cool," and tell an adult if it keeps going</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Fine to do. Telling someone is even better.">Leave the chat</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">Nobody gets it all right. Phones are new for everyone. What matters is telling someone when something goes wrong.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Late nights, bad news. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a corner. Then see what the research says.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      <div class="scenario" >
-        <p>It's 9:45 on a school night and you're on your 30th video.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="okay" data-msg="Autoplay makes &quot;one more&quot; really hard. A hard stop works better.">One more, then bed</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Yes. Distance beats willpower every time.">Plug the phone in across the room and go to bed</button>
-          <button class="choice" type="button" data-fb="nope" data-msg="Still scrolling, still awake. Tomorrow-you will feel it.">Turn the brightness down and keep going</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <p class="tap-hint" style="margin-top:0">👥 For advisory, homeroom or class · about 15 minutes · no materials needed</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>The leader reads a statement. Students move or point to a corner of the room: agree, disagree, not sure, or it depends.</li>
+        <li>Ask one or two people from different corners to explain why. No one has to share.</li>
+        <li>After each one, the leader taps it to show what research says.</li>
+      </ol>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These sound good but rarely stick.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 1 of 2</span><span class="sticker">"If something bad happens online, telling an adult will just get you in trouble."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>💪 Relying on willpower.<span class="row-cue" aria-hidden="true"></span></summary><p>You're up against teams of designers. Change your setup, not just your intentions.</p></details>
-        <details class="row"><summary>😔 Shaming yourself.<span class="row-cue" aria-hidden="true"></span></summary><p>Feeling bad about screen time can make you want to escape into your phone more.</p></details>
-        <details class="row"><summary>🛏 Phone in bed.<span class="row-cue" aria-hidden="true"></span></summary><p>It's the hardest place to stop, and it costs you sleep.</p></details>
-        <details class="row"><summary>🚫 Going cold turkey without a plan.<span class="row-cue" aria-hidden="true"></span></summary><p>If you take something away, put something in its place.</p></details>
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Usually not. Most adults would much rather know. And you can't get help with something nobody knows about.</p></details>
       </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 2 of 2</span><span class="sticker">"Having strict phone rules means your parents don't trust you."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Not usually. Most parents are trying to figure out phones too, and they set rules to keep you safe. Rules can change as you show you can handle more.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>What's one thing about having a phone that's harder than you expected?</li>
+        <li>Which trap gets you most: streaks, autoplay, red dots, or bedtime chats?</li>
+        <li>Who's an adult you'd tell if something went wrong online?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Not every student has a phone, and some families can't afford one or choose not to. Make sure students without phones aren't made to feel left out, and keep the talk about choices, not who has what.</p></details>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>When to get more help</h3>
+      <h3>When it's more than too much screen time</h3>
       <ul class="tight">
-        <li>You can't cut back even when you really want to.</li>
-        <li>Phone use is hurting your sleep, grades, or relationships.</li>
-        <li>You're using your phone to escape feelings that seem too big to handle.</li>
-        <li>Something you saw online is upsetting you and won't go away.</li>
+        <li>Someone online is asking you for pictures or to keep a secret.</li>
+        <li>Someone is threatening you or asking for money.</li>
+        <li>People are being mean to you online over and over.</li>
+        <li>Something online made you feel scared, hopeless, or like hurting yourself.</li>
       </ul>
-      <p style="margin:0">A counselor can help. See <a href="#help">Get help</a> below.</p>
+      <p>Tell a counselor or a trusted adult today. You won't be in trouble for telling. You can also call or text 988, any time.</p>
+      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
   </div>
 </section>
@@ -609,49 +663,49 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">When I scroll most, and what I'm usually feeling</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-1">How my phone helps me, and how it gets in the way</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">Apps that leave me feeling good, and apps that leave me feeling drained</label>
+      <label class="prompt" for="tx-2">The trap that gets me most</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">What I'd do with an extra hour a day</label>
+      <label class="prompt" for="tx-3">My tell-someone person</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">One phone-free zone I'll try this week</label>
+      <label class="prompt" for="tx-4">A family phone rule I think is fair, and one I'd like to talk about</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">Ways my phone actually helps my life</label>
+      <label class="prompt" for="tx-5">Something I love to do without a phone</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Your attention is valuable. That's why so many apps compete for it. You get to decide where it goes.</p>
+      <p>Your phone is a tool. You get to decide how to set it up, and who you tell when something goes wrong.</p>
     </div>
     </div>
   <div class="unit unit-ow">
 <div class="ow" id="other-ways-in">
   <p class="ow-label">Other ways in</p>
-  <p class="ow-lede">Sometimes a story or a song says it better. One of these you might remember from when you were little.</p>
+  <p class="ow-lede">Plenty of stories are about kids, screens, and the real world just beyond them.</p>
   <div class="ow-grid">
     <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
-      <div class="ow-pick"><p class="ow-title">Unplugged <span class="ow-by">· Gordon Korman, 2021</span></p><p class="ow-why">Jett's dad is a tech billionaire, and Jett gets sent to a camp in Arkansas where every device is banned. Watch what fills the time once the phone is gone.</p></div>
-      <div class="ow-pick"><p class="ow-title">The Berenstain Bears and Too Much TV <span class="ow-by">· Stan and Jan Berenstain, 1984</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">The whole family watches so much TV that everything else gets crowded out, so Mama Bear calls a week with no TV. Swap TV for your feed. It holds up.</p></div>
+      <div class="ow-pick"><p class="ow-title">Click <span class="ow-by">· Kayla Miller, 2019</span></p><p class="ow-why">A graphic novel about Olive, who's friends with everyone but can't find her place in the school variety show. A good read about connection.</p></div>
+      <div class="ow-pick"><p class="ow-title">The Wild Robot <span class="ow-by">· Peter Brown, 2016</span></p><p class="ow-why">A robot ends up on an island full of animals with no instructions, and figures out how to really be there. Good for thinking about tech and nature.</p></div>
     </div>
     <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
-      <div class="ow-pick"><p class="ow-title">The Mitchells vs. the Machines <span class="ow-by">· Sony Pictures Animation, 2021</span></p><p class="ow-why">Katie's dad wants tech-free family time and nobody else does. Then the phones and robots turn on everyone. Funny, and a good way into the question of who is running whom. Rated PG.</p></div>
+      <div class="ow-pick"><p class="ow-title">Ralph Breaks the Internet <span class="ow-by">· Disney, 2018</span></p><p class="ow-why">Ralph and Vanellope go inside the internet. Watch what happens to Ralph when he chases likes. Rated PG.</p></div>
     </div>
     <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
-      <div class="ow-pick"><p class="ow-title">Couch Potato <span class="ow-by">· "Weird Al" Yankovic, 2003</span></p><p class="ow-why">A parody of Eminem's "Lose Yourself" about a guy who can't stop watching TV. Same autopilot as the scroll, set to a beat.</p></div>
+      <div class="ow-pick"><p class="ow-title">Here Comes the Sun <span class="ow-by">· The Beatles, 1969</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Put the phone down and go look. Ask a grown-up to play it.</p></div>
     </div>
     <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
-      <div class="ow-pick"><p class="ow-title">Removed <span class="ow-by">· Eric Pickersgill, photo series</span></p><p class="ow-why">Everyday photos of people looking at their phones, with the phones taken out of their hands. You see the reach, the hunch, and the people next to them being ignored.</p></div>
+      <div class="ow-pick"><p class="ow-title">Nighthawks <span class="ow-by">· Edward Hopper, 1942</span></p><p class="ow-why">People sitting together in a late-night diner, each a little alone. Imagine it today. What would they be holding?</p></div>
     </div>
   </div>
-  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Make your replacement playlist from the lesson. Pick five songs you'll put on instead of opening the app, and name it after the feeling you usually scroll to escape.</p></div>
-  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Design your phone's home screen. What stays, what goes to a back page, and what gets deleted?</p></div>
+  <p class="ow-foot">Ratings checked October 2026.</p>
 </div>
 </div>
 </div>
@@ -666,102 +720,102 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with your phone today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How much did your phone run your day today?</h3>
+        <p class="ci-hint">Not in general. Just today.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
-          <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
+          <div class="slider-ends"><span>barely</span><span>all day</span></div>
           <div class="slider-read" id="ci-read" aria-live="polite"></div>
         </div>
       </div>
 
       <div class="ci-step">
-        <h3>What's been most present today?</h3>
+        <h3>What's going on?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">scrolled way longer than planned</button>
-          <button type="button" class="chip" aria-pressed="false">on my phone late at night</button>
-          <button type="button" class="chip" aria-pressed="false">reached for it without thinking</button>
-          <button type="button" class="chip" aria-pressed="false">upsetting news or videos</button>
-          <button type="button" class="chip" aria-pressed="false">felt drained after</button>
-          <button type="button" class="chip" aria-pressed="false">used it to avoid something</button>
-          <button type="button" class="chip" aria-pressed="false">used it to connect with friends</button>
-          <button type="button" class="chip" aria-pressed="false">set a limit</button>
-          <button type="button" class="chip" aria-pressed="false">had a phone-free stretch</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">I just got a phone</button>
+          <button type="button" class="chip" aria-pressed="false">a group chat</button>
+          <button type="button" class="chip" aria-pressed="false">streaks</button>
+          <button type="button" class="chip" aria-pressed="false">videos on autoplay</button>
+          <button type="button" class="chip" aria-pressed="false">gaming</button>
+          <button type="button" class="chip" aria-pressed="false">a fight about phone rules</button>
+          <button type="button" class="chip" aria-pressed="false">someone I don't know messaged me</button>
+          <button type="button" class="chip" aria-pressed="false">I saw something upsetting</button>
+          <button type="button" class="chip" aria-pressed="false">I put it away</button>
+          <button type="button" class="chip" aria-pressed="false">I don't have a phone yet</button>
         </div>
-        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
+        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's on your mind.</p>
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
+        <h3>Which sounds most like today?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-stuck" aria-pressed="false">♾ Can't stop scrolling</button>
-          <button type="button" class="choice" data-path="p-anxious" aria-pressed="false">😬 Anxious from what I saw</button>
-          <button type="button" class="choice" data-path="p-drained" aria-pressed="false">🪫 Drained and flat</button>
-          <button type="button" class="choice" data-path="p-sleep" aria-pressed="false">🌙 Up too late on my phone</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Used it on purpose today</button>
+        <div class="paths" role="group" aria-label="Which sounds most like today?">
+          <button type="button" class="choice" data-path="p-lost" aria-pressed="false">⏳ It ate my afternoon</button>
+          <button type="button" class="choice" data-path="p-rules" aria-pressed="false">😤 I'm mad about phone rules</button>
+          <button type="button" class="choice" data-path="p-bad" aria-pressed="false">😟 Something online upset me</button>
+          <button type="button" class="choice" data-path="p-none" aria-pressed="false">📵 I don't have a phone</button>
+          <button type="button" class="choice" data-path="p-good" aria-pressed="false">👍 It worked for me today</button>
         </div>
 
-        <div class="path-panel" id="p-stuck" hidden>
+        <div class="path-panel" id="p-lost" hidden>
           <h4>What this might mean</h4>
-          <p>The feed is designed so there's never a good place to stop. Make your own stopping point.</p>
+          <p>That's what it's built to do. It's not just you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔌</span>Put the phone in another room for 30 minutes.</li>
-            <li><span class="e" aria-hidden="true">⏱</span>Set an app limit for your biggest time sink.</li>
-            <li><span class="e" aria-hidden="true">🧩</span>Pick a replacement: music, a walk, a snack, a friend.</li>
+            <li><span class="e" aria-hidden="true">▶️</span>Pick a stopping point before you press play.</li>
+            <li><span class="e" aria-hidden="true">🔥</span>Let one streak go.</li>
+            <li><span class="e" aria-hidden="true">🎨</span>Have a no-phone thing ready.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-anxious" hidden>
+        <div class="path-panel" id="p-rules" hidden>
           <h4>What this might mean</h4>
-          <p>Upsetting content can stay with you. Your feelings make sense.</p>
+          <p>Rules can feel unfair, especially when friends' are different.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📵</span>Step away from the feed for the rest of the day.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, five times.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>Talk to someone about what you saw, especially if it's scary.</li>
+            <li><span class="e" aria-hidden="true">🧘</span>Wait until you're calm.</li>
+            <li><span class="e" aria-hidden="true">📋</span>Come with a plan, not an argument.</li>
+            <li><span class="e" aria-hidden="true">🤝</span>Show you can follow the rule first.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-drained" hidden>
+        <div class="path-panel" id="p-bad" hidden>
           <h4>What this might mean</h4>
-          <p>Long scrolls often leave people feeling empty. Your body and brain want something different.</p>
+          <p>You don't have to handle that alone.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🌳</span>Go outside, even for five minutes.</li>
-            <li><span class="e" aria-hidden="true">🏃</span>Move your body a little, however feels good.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Talk to someone in person or on a call.</li>
+            <li><span class="e" aria-hidden="true">📸</span>Screenshot, block, don't answer.</li>
+            <li><span class="e" aria-hidden="true">🙋</span>Tell your tell-someone person.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>A counselor can help too.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-sleep" hidden>
+        <div class="path-panel" id="p-none" hidden>
           <h4>What this might mean</h4>
-          <p>Late-night scrolling is one of the biggest sleep stealers for teens.</p>
+          <p>That can feel lonely when plans happen online.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔌</span>Charge your phone across the room, or outside your bedroom, tonight.</li>
-            <li><span class="e" aria-hidden="true">⏰</span>Set a phone bedtime alarm.</li>
-            <li><span class="e" aria-hidden="true">😴</span>Running on Empty has more on sleep.</li>
+            <li><span class="e" aria-hidden="true">💬</span>Ask a friend to text your parent's phone.</li>
+            <li><span class="e" aria-hidden="true">🗓</span>Make plans in person at school.</li>
+            <li><span class="e" aria-hidden="true">🎨</span>You get more time for the things you love.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-better" hidden>
+        <div class="path-panel" id="p-good" hidden>
           <h4>What this might mean</h4>
-          <p>That's the goal. Better days don't have to be perfect days to count.</p>
+          <p>Nice. Notice what helped.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Keep the setup that worked.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Enjoy the time you got back.</li>
+            <li><span class="e" aria-hidden="true">📝</span>What did you do differently?</li>
+            <li><span class="e" aria-hidden="true">🔁</span>Keep it going tomorrow.</li>
+            <li><span class="e" aria-hidden="true">🤝</span>Share your trick with a friend.</li>
           </ul>
         </div>
-        <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
+        <p class="validate" id="ci-high" hidden>When your phone or something online is taking over, it's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try this week?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who can't put their phone down. You'd help them, not shame them.</p>
+        <p class="closing">Your phone works for you. Set it up that way, and know who you'd tell.</p>
       </div>
     </div>
     </div>
@@ -791,8 +845,8 @@
           <p class="crisis-line"><strong>988 Suicide and Crisis Lifeline</strong>Call or text <a href="tel:988">988</a></p>
           <p class="crisis-line"><strong>Crisis Text Line</strong>Text <b>HOME</b> to <a href="sms:741741">741741</a></p>
           <p class="crisis-line"><strong>The Trevor Project</strong>For LGBTQ+ young people. Call <a href="tel:18664887386">1-866-488-7386</a> or text <b>START</b> to <a href="sms:678678">678-678</a></p>
-          <p class="crisis-line"><strong>ANAD Eating Disorders Helpline</strong>Call <a href="tel:18883757767">1-888-375-7767</a>, weekdays 9am to 9pm Central.</p>
-          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>. For a mental health crisis, 988 can also send a mobile crisis team, or you can go to an ER.</p>
+          <p class="crisis-line"><strong>Trans Lifeline</strong>Call <a href="tel:18775658860">877-565-8860</a>, run by trans people</p>
+          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>, or call 988 and ask for a mobile crisis team.</p>
         </div>
       </div>
     </div>
@@ -801,10 +855,10 @@
       <h3>If you want to understand more</h3>
       <p>Other Student Toolkit modules that go with this one:</p>
       <ul class="more-list">
-        <li><span class="e" aria-hidden="true">🪞</span><div><strong>The Comparison Trap</strong><br>Social media and self-image.</div></li>
-        <li><span class="e" aria-hidden="true">😴</span><div><strong>Running on Empty</strong><br>Sleep and the teenage brain.</div></li>
-        <li><span class="e" aria-hidden="true">⏰</span><div><strong>Where Did the Afternoon Go?</strong><br>Time blindness and planning.</div></li>
-        <li><span class="e" aria-hidden="true">📸</span><div><strong>Screenshot Culture</strong><br>Your digital footprint and what gets shared.</div></li>
+        <li><span class="e" aria-hidden="true">💬</span><div><strong>Group Chat Drama</strong><br>When things blow up online.</div></li>
+        <li><span class="e" aria-hidden="true">📸</span><div><strong>When Someone Asks for a Photo</strong><br>What to do, and who to tell.</div></li>
+        <li><span class="e" aria-hidden="true">🌙</span><div><strong>Sleep Is When You Grow</strong><br>Why sleep matters more right now.</div></li>
+        <li><span class="e" aria-hidden="true">📋</span><div><strong>The After-School Plan</strong><br>Getting homework done before it's late.</div></li>
       </ul>
     </div>
 
@@ -819,9 +873,10 @@
 <footer>
   <div class="wrap">
     <div class="disclaimer">
-      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or call 911 in an emergency (988 can also send a mobile crisis team).
+      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to the nearest emergency room.
     </div>
-    <div>Student Toolkit · Middle School · Digital life · Doomscroll</div>
+    <span hidden>Student Toolkit · Middle School · Digital life · Doomscroll</span>
+    <div>Student Toolkit · Middle School · Digital life · Your First Phone</div>
   </div>
 </footer>
 
@@ -838,6 +893,7 @@ const SCHOOL = {
   welcome: "Welcome from the BCDS counseling team. We are glad you're here.",  // "" to hide
   welcomeSignature: "BCDS Counseling Team",
   gradeBand: "ms",
+  hideTopics: [],                            // optional: ["gender"] hides the gender section
   help: {
     title: "BCDS Middle School Support",
     where: "Counseling Office (location to be confirmed)",
@@ -873,6 +929,9 @@ const SCHOOL = {
   setText("local-hours", SCHOOL.help.hours);
   setText("local-book", SCHOOL.help.book);
   setText("local-after", SCHOOL.help.afterHours);
+
+  /* ---- Optional topics a school can hide: SCHOOL.hideTopics = ["gender"] ---- */
+  (SCHOOL.hideTopics || []).forEach(t => document.querySelectorAll('[data-topic="' + t + '"]').forEach(el => el.remove()));
 
   /* ---- Grade band ---- */
   function setBand(b) {
@@ -927,8 +986,7 @@ const SCHOOL = {
 
   /* ---- Check-in tool ---- */
   const slider = $("#ci-slider"), sliderRead = $("#ci-read"), high = $("#ci-high");
-  const READS = ["Barely on my mind", "Barely on my mind", "A little", "A little", "Some", "Some",
-                 "A lot", "A lot", "Most of my day", "Most of my day", "All I can think about"];
+  const READS = ["Barely", "Barely", "A little", "A little", "Some", "Some", "A lot", "A lot", "Most of the day", "Most of the day", "All day"];
   let sliderTouched = false;
   function updateSlider() {
     sliderTouched = true;

@@ -6,7 +6,7 @@
 <!-- Privacy lock: this page cannot load or send anything over the network. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Running on Empty · Middle School</title>
+<title>Sleep Is When You Grow · Middle School</title>
 
 <!--
   ==========================================================
@@ -363,6 +363,18 @@
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
 
+  /* Grid and pieces */
+  .uc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0 8px; }
+  .uc-cell { border-radius:14px; padding:12px; background:#F5F5F7; }
+  .uc-cell .uc-e { font-size:1.5rem; display:block; }
+  .uc-cell b { display:block; margin:2px 0; }
+  .uc-cell span:last-child { display:block; font-size:.9rem; color:var(--ink-soft); }
+  .uc-cell.c1 { background:#F5F5F7; } .uc-cell.c2 { background:#FDF3E3; } .uc-cell.c3 { background:#EAF1FB; } .uc-cell.c4 { background:#EAF5EE; }
+  .uc-pieces { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; padding:0; list-style:none; }
+  .uc-pieces li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.95rem; }
+  .uc-note { font-size:.9rem; color:var(--ink-soft); }
+  @media (max-width:360px) { .uc-grid { grid-template-columns:1fr; } }
+
   /* Other ways in */
   .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
   .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
@@ -448,9 +460,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">😴 Middle School · Stress, sleep, and big feelings</div>
-  <h1>Running on Empty</h1>
-  <p class="tagline">Because your brain needs sleep, and your teenage clock makes it complicated.</p>
+  <div class="eyebrow">🌙 Middle School · Stress, sleep, and big feelings</div>
+  <h1>Sleep Is When You Grow</h1>
+  <p class="tagline">Your body does a lot of its building while you're asleep. Here's why you need more sleep than you think, and how to get it now that bedtime is more up to you.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -475,124 +487,171 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">Sleep and the teenage brain</h2>
+    <h2 id="h-understand">What happens while you sleep</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Tired all day. Wide awake at 11.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"I'm not tired." (Yawns.)</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You're exhausted all day, then wide awake at 11 at night.</li>
-        <li>Your alarm feels like a personal attack.</li>
-        <li >You fell asleep in class, or came close.</li>
-        
-        <li>You stayed up late on your phone and regretted it in the morning.</li>
-        <li>You sleep until noon on weekends and still feel tired Monday.</li>
-        <li>Small things make you cry or snap when you haven't slept enough.</li>
-        <li>Your sleep gets squeezed by things you can't skip: a shared room, helping at home, or a family schedule that runs late.</li>
+        <li>You used to fall asleep easily. Now you lie there for a long time.</li>
+        <li>You got your own phone and somehow it's always in bed with you.</li>
+        <li>Your parents used to set your bedtime. Now it's sort of up to you.</li>
+        <li>Mornings are a fight with your alarm.</li>
+        <li>You're starving, growing, sore, and tired, all at once.</li>
+        <li>You stay up late on weekends and Monday feels awful.</li>
       </ul>
-      <p style="margin:0">Teen sleep problems are incredibly common, and a lot of it is biology, not bad choices.</p>
-      </div>
-    </details>
-
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">What's going on with teen sleep</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🕰</span><strong>Your clock shifted</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">During puberty, your body starts releasing the sleep hormone melatonin later at night. That's why you're not sleepy at 9 anymore.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">⏰</span><strong>School starts early</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Your body wants to sleep later, but school doesn't move. The gap leaves a lot of teens short on sleep every night.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📱</span><strong>Screens keep you up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Phones are engaging by design, and late-night light can push sleepiness back even further.</p></details>
-    </div>
-    </div>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why it hits so hard</span><span class="sticker">Less sleep makes everything harder.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>You need more sleep than you think.</dt>
-        <dd>Sleep experts recommend 8 to 10 hours a night for teens. Many students get much less.</dd>
-        <dt>Sleep affects everything.</dt>
-        <dd>Mood, memory, focus, patience, athletic performance, how often you get sick. Short sleep makes all of them harder.</dd>
-        <dt>You can't fully catch up on weekends.</dt>
-        <dd>Sleeping until noon shifts your clock later again, which makes Sunday night and Monday morning even harder. Some call it social jet lag.</dd>
-        <dt>Being tired feels like being sad or anxious.</dt>
-        <dd>Not enough sleep can make emotions bigger and harder to manage. Sometimes the fix for a bad mood is a good night's sleep.</dd>
-      </dl>
+      <p style="margin:0">If that sounds familiar, your body is changing, and so are the rules at home. That's a lot to figure out at once.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Your phone and your sleep</span><span class="sticker">The group chat can wait till morning.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">🧠 Sleep is when your body builds</span><span class="sticker">It's not just rest.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Late-night scrolling, group chats, and gaming keep your brain switched on. Notifications can wake you up even when you're asleep. And it's hard to put down a phone when your friends are still awake and talking.</p>
-      <p class="worst">The worst part: when everyone's up late in the group chat, logging off can feel like missing out. But sleep is what makes the next day feel okay.</p>
+      <p>During deep sleep your body releases growth hormone, which helps you grow and repair muscles. Your brain also sorts what you learned that day and files it away.</p>
+      <p>Kids your age need about 9 to 12 hours a night, and teens need 8 to 10. In one study of young athletes in grades 7 to 12, those who slept less than 8 hours were about 1.7 times more likely to get hurt than those who slept more.</p>
+      <p class="worst">Sleep isn't wasted time. It's when a lot of the important stuff happens.</p>
       </div>
     </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Four sleep stealers</h3>
+    <p>Which one gets you most?</p>
+    <div class="uc-grid">
+      <div class="uc-cell c1"><span class="uc-e" aria-hidden="true">📱</span><b>The phone in bed</b><span>One more video, one more message.</span></div>
+      <div class="uc-cell c2"><span class="uc-e" aria-hidden="true">🧠</span><b>The busy brain</b><span>Lying there thinking about everything.</span></div>
+      <div class="uc-cell c3"><span class="uc-e" aria-hidden="true">🎮</span><b>The game that won't end</b><span>"After this level."</span></div>
+      <div class="uc-cell c4"><span class="uc-e" aria-hidden="true">🛏</span><b>The weekend sleep-in</b><span>Up late Saturday, wrecked Monday.</span></div>
+    </div>
+    <p class="uc-note">Pick the one that steals the most, and start there.</p>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Your body clock is shifting</span><span class="sticker">Feeling awake later is real.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Around puberty, your body starts feeling sleepy later at night. It isn't you being difficult. It's a real change in your body clock.</p>
+      <p style="margin:0">Your school start time probably didn't move, so you get squeezed. That's why the habits you build now matter. They can help your body clock without fighting it.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Phones and sleep</span><span class="sticker">The phone in your room keeps you up even when you're not on it.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>In one large study of 4th and 7th graders, kids who slept near a small screen like a phone got about 20 minutes less sleep a night and felt less rested.</p>
+      <p style="margin:0">Messages buzz, the screen lights up, and your brain stays a little on alert. Charging it in another room is one of the easiest changes you can make.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Every home sleeps differently</span><span class="sticker">Not everyone has a quiet room.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Some kids share a room with a brother, sister, or grandparent. Some families eat late, work late, or have a new baby. Some homes are loud at night.</p>
+      <p style="margin:0">You might not control all of that. You can still control a few things: what you do in the last half hour before bed, where your phone sleeps, and asking your family for help with what's in the way.</p>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Getting more sleep</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Small changes, better nights.</h3>
+      <h3 class="sticker">Small changes, more sleep.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>📵 Phone out of the bedroom.<span class="row-cue" aria-hidden="true"></span></summary><p>Or at least across the room, on Do Not Disturb. This one change helps a lot of people.</p></details>
-        <details class="row"><summary>🕘 A consistent wake-up time.<span class="row-cue" aria-hidden="true"></span></summary><p>Waking up at about the same time every day, even weekends (within an hour or two), helps your clock settle.</p></details>
-        <details class="row"><summary>🌙 A wind-down routine.<span class="row-cue" aria-hidden="true"></span></summary><p>Same few steps every night: shower, dim lights, read, music, a prayer, or whatever calms you. It tells your brain sleep is coming. Sharing a room or a loud home? Earplugs, a sleep mask, or a fan can help.</p></details>
-        <details class="row"><summary>☀️ Morning light.<span class="row-cue" aria-hidden="true"></span></summary><p>Getting outside or near a window soon after waking helps reset your clock earlier.</p></details>
-        <details class="row"><summary>☕ Watch the caffeine.<span class="row-cue" aria-hidden="true"></span></summary><p>Caffeine can stay in your system for hours. Energy drinks or coffee after lunch can make it harder to fall asleep.</p></details>
-        <details class="row"><summary>😴 Nap smart.<span class="row-cue" aria-hidden="true"></span></summary><p>If you nap, keep it short (about 20 minutes) and before late afternoon, so it doesn't steal your nighttime sleep.</p></details>
+        <details class="row"><summary>🔌 Build a family charging spot.<span class="row-cue" aria-hidden="true"></span></summary><p>One spot in the kitchen or living room where every phone sleeps, grown-ups' too. It's easier when it isn't just you.</p></details>
+        <details class="row"><summary>🌊 Same wind-down every night.<span class="row-cue" aria-hidden="true"></span></summary><p>Shower, pajamas, read a few pages. Doing the same thing tells your body sleep is coming.</p></details>
+        <details class="row"><summary>📝 Brain dump before bed.<span class="row-cue" aria-hidden="true"></span></summary><p>Write down what's bugging you or what's due tomorrow, then close the notebook.</p></details>
+        <details class="row"><summary>🎮 Set the stopping point before you start.<span class="row-cue" aria-hidden="true"></span></summary><p>"Two matches, then I'm done." Decide before the game starts, not in the middle.</p></details>
+        <details class="row"><summary>☀️ Get up at about the same time.<span class="row-cue" aria-hidden="true"></span></summary><p>Weekends too, within an hour or two. It keeps Monday from feeling like jet lag.</p></details>
+        <details class="row"><summary>🗣 Make a deal with your parents.<span class="row-cue" aria-hidden="true"></span></summary><p>Agree on a bedtime and a phone time together. You'll stick to a plan you helped make.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Work backward from your alarm.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick when you need to wake up. This shows when you'd need to be asleep to get 9 hours, and when to start winding down.</p>
-      <div class="tool-row" style="align-items:center"><label for="wake-time" style="font-weight:600">I need to wake up at:</label> <input id="wake-time" type="time" value="06:30" autocomplete="off" style="padding:8px;border:1px solid var(--line);border-radius:10px;font:inherit"></div>
-      <div id="sleep-out" class="feedback good" aria-live="polite" style="margin-top:12px"></div>
+      <p>Pick what you'd actually do.</p>
+      <div class="scenario">
+        <p>It's 10:30 on a school night. Your friends are still messaging in the group chat.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="They might not stop for an hour. Tomorrow you&#x27;ll feel it.">Keep reading until they stop</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Friends get it, and the chat will still be there in the morning.">"Gotta sleep, night!" and plug the phone in outside your room</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better. The screen still lights up, and it&#x27;s easy to check &quot;just once.&quot;">Put it on silent next to your bed</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>You're lying in bed and your brain won't stop thinking about tomorrow's presentation.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="okay" data-msg="The light and the content usually keep you up longer.">Scroll until you feel sleepy</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Getting it out of your head and onto paper helps a lot of people relax.">Turn on a dim light, write down what you're worried about, then lie back down</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Your brain rarely solves it at midnight. It needs sleep to do a good job tomorrow.">Keep running through it in your head all night</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>It's Saturday. You stayed up until 1 and could sleep until noon.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="It feels great today and makes Monday morning much harder.">Sleep until noon</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Better. A short nap early in the afternoon is fine. A long late one can make tonight harder.">Get up at 9 and nap later</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That keeps your clock close to school days.">Get up by 9 or 10, go outside for a bit, and go to bed earlier tonight</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">Nobody sleeps perfectly. Small changes in the same direction add up.</p>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Late night choices. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a corner. Then see what the research says.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick the best move.</p>
-      <div class="scenario" >
-        <p>It's 10:30. You're in bed but your friends are still texting in the group chat.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Group chats can go for hours. Tomorrow-you pays for it.">Keep chatting until it dies down</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Perfect. Short, normal, and your sleep wins.">Say "gotta sleep, night!" and put the phone across the room</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Better than chatting, but the phone light and the urge to reply still keep you up.">Read the messages but don't reply</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <p class="tap-hint" style="margin-top:0">👥 For advisory, homeroom or class · about 15 minutes · no materials needed</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>The leader reads a statement. Students move or point to a corner of the room: agree, disagree, not sure, or it depends.</li>
+        <li>Ask one or two people from different corners to explain why. No one has to share.</li>
+        <li>After each one, the leader taps it to show what research says.</li>
+      </ol>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These quick fixes usually backfire.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 1 of 2</span><span class="sticker">"Middle schoolers need less sleep than little kids."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>🛌 Sleeping in until noon on weekends.<span class="row-cue" aria-hidden="true"></span></summary><p>A little extra is okay. Way later shifts your clock and makes Monday rough.</p></details>
-        <details class="row"><summary>⚡ Energy drinks to get through.<span class="row-cue" aria-hidden="true"></span></summary><p>They borrow energy from later and can make sleep worse.</p></details>
-        <details class="row"><summary>📱 Scrolling in bed until you're tired.<span class="row-cue" aria-hidden="true"></span></summary><p>The phone usually keeps you awake longer, not shorter.</p></details>
-        <details class="row"><summary>🌀 Lying awake stressing about not sleeping.<span class="row-cue" aria-hidden="true"></span></summary><p>If you can't sleep after a while, get up, do something calm in dim light, and try again.</p></details>
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Not much less. Kids up to 12 need about 9 to 12 hours, and teens need 8 to 10. Your body is growing fast, and growth takes sleep.</p></details>
       </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 2 of 2</span><span class="sticker">"If your phone is on silent, it doesn't affect your sleep."</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>It still can. Kids who slept with a phone nearby got less sleep and felt less rested in a big study, even when they weren't using it.</p></details>
+      </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>What time do you usually fall asleep on a school night?</li>
+        <li>What's the biggest thing that keeps you up?</li>
+        <li>What's one change your whole family could try?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep at home depends on things kids don't control: shared rooms, work schedules, new babies, noise. Keep it about small things students can try, and avoid making anyone feel judged about their home.</p></details>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>When to get more help</h3>
+      <h3>When it's more than staying up late</h3>
       <ul class="tight">
-        <li>You have trouble falling or staying asleep most nights for weeks.</li>
-        <li>You're exhausted even after a full night's sleep.</li>
-        <li>Worry or sad thoughts keep you up at night.</li>
-        <li>You've felt drowsy while driving. Never drive drowsy: pull over or get a ride.</li>
+        <li>You can't fall asleep most nights, even when you're tired.</li>
+        <li>You're tired all day even after a full night of sleep.</li>
+        <li>Worry or sad feelings keep you up a lot.</li>
+        <li>You feel hopeless, or like you want to hurt yourself.</li>
       </ul>
-      <p style="margin:0">A counselor, school nurse, or doctor can help. See <a href="#help">Get help</a> below.</p>
+      <p>Talk to a counselor, a parent, or your doctor. Sleep problems are common and can be helped. You can also call or text 988, any time.</p>
+      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
   </div>
 </section>
@@ -604,50 +663,49 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-1">How much sleep I actually get on a school night, honestly</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-1">What time I usually fall asleep, honestly</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-2">What keeps me up most</label>
+      <label class="prompt" for="tx-2">The sleep stealer that gets me most</label>
       <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-3">How I feel on a day after good sleep versus bad sleep</label>
+      <label class="prompt" for="tx-3">Where my phone could sleep</label>
       <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-4">One change I'm willing to try this week</label>
+      <label class="prompt" for="tx-4">One thing at home that makes sleep hard</label>
       <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">What my ideal wind-down routine would look like</label>
+      <label class="prompt" for="tx-5">A deal I could make with my family about bedtime</label>
       <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Being tired isn't a personal failing. Your body is asking for something it really needs. Listening to it is one of the best things you can do for your mood, your grades, and yourself.</p>
+      <p>Your body does important work while you sleep. Giving it the time is one of the best things you can do for yourself.</p>
     </div>
     </div>
   <div class="unit unit-ow">
 <div class="ow" id="other-ways-in">
   <p class="ow-label">Other ways in</p>
-  <p class="ow-lede">People have been writing about sleep for a long time. A few of these are from bedtime when you were little.</p>
+  <p class="ow-lede">People have been writing and singing about sleep, and not sleeping, forever.</p>
   <div class="ow-grid">
     <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
-      <div class="ow-pick"><p class="ow-title">Goodnight Moon <span class="ow-by">· Margaret Wise Brown, 1947</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">A bunny says goodnight to everything in the room, one thing at a time. That's a wind-down routine. You've known one since you were small.</p></div>
+      <div class="ow-pick"><p class="ow-title">Sleep Is for Everyone <span class="ow-by">· Paul Showers, 1974</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">An old science picture book about what sleep does for people and animals. You probably saw it in elementary school. It still holds up.</p></div>
+      <div class="ow-pick"><p class="ow-title">The Girl Who Drank the Moon <span class="ow-by">· Kelly Barnhill, 2016</span></p><p class="ow-why">A witch, a baby, and a lot of moonlight. Good reading for winding down. A Newbery Medal winner.</p></div>
     </div>
     <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
-      <div class="ow-pick"><p class="ow-title">Bluey: Sleepytime <span class="ow-by">· Ludo Studio, 2020</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Bingo wants to sleep the whole night in her own bed, and dreams she's floating through space. Seven minutes long, and lovely.</p></div>
-      <div class="ow-pick"><p class="ow-title">Headspace Guide to Sleep <span class="ow-by">· Netflix, 2021</span></p><p class="ow-why">Short animated episodes on sleep science: phones at bedtime, why you can't fall asleep, dreams. Each one ends with a wind-down exercise. Rated TV-G.</p></div>
+      <div class="ow-pick"><p class="ow-title">Sleeping Beauty <span class="ow-by">· Disney, 1959</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">A whole kingdom falls asleep. Ever felt like that on Monday? Rated G.</p></div>
     </div>
     <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
-      <div class="ow-pick"><p class="ow-title">Somewhere Over the Rainbow / What a Wonderful World <span class="ow-by">· Israel Kamakawiwoʻole, 1993</span></p><p class="ow-why">One voice and a ukulele. Quiet enough for a wind-down routine.</p></div>
-      <div class="ow-pick"><p class="ow-title">Weightless <span class="ow-by">· Marconi Union, 2011</span></p><p class="ow-why">An eight-minute track made with sound therapists to help people relax. Try it with the phone across the room.</p></div>
+      <div class="ow-pick"><p class="ow-title">Brahms' Lullaby <span class="ow-by">· Johannes Brahms, 1868</span></p><p class="ow-why">One of the most famous lullabies ever written. Calm music with no words is good for winding down.</p></div>
     </div>
     <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
-      <div class="ow-pick"><p class="ow-title">Little Nemo in Slumberland <span class="ow-by">· Winsor McCay, 1905</span></p><p class="ow-why">A comic strip more than a hundred years old. Every week Nemo has a wild dream, and in the last panel he wakes up in bed, sometimes on the floor.</p></div>
+      <div class="ow-pick"><p class="ow-title">The Sleeping Gypsy <span class="ow-by">· Henri Rousseau, 1897</span></p><p class="ow-why">A traveler asleep in the desert while a lion sniffs at them. Look at how peaceful the sleeper is.</p></div>
     </div>
   </div>
-  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Use "Work backward from your alarm" to find your wind-down time. Then draw your routine as a comic strip, like Little Nemo, one panel per step, ending in bed.</p></div>
-  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Design your wind-down. Draw or list the last 30 minutes of your night the way you'd like them to go.</p></div>
+  <p class="ow-foot">Ratings checked October 2026.</p>
 </div>
 </div>
 </div>
@@ -662,102 +720,102 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with sleep today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How tired are you today?</h3>
+        <p class="ci-hint">Not in general. Just today.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
-          <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
+          <div class="slider-ends"><span>wide awake</span><span>running on empty</span></div>
           <div class="slider-read" id="ci-read" aria-live="polite"></div>
         </div>
       </div>
 
       <div class="ci-step">
-        <h3>What's been most present today?</h3>
+        <h3>What's going on?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">exhausted</button>
+          <button type="button" class="chip" aria-pressed="false">stayed up on my phone</button>
           <button type="button" class="chip" aria-pressed="false">couldn't fall asleep</button>
-          <button type="button" class="chip" aria-pressed="false">woke up a lot</button>
-          <button type="button" class="chip" aria-pressed="false">up late on my phone</button>
-          <button type="button" class="chip" aria-pressed="false">stayed up studying</button>
-          <button type="button" class="chip" aria-pressed="false">too much caffeine</button>
-          <button type="button" class="chip" aria-pressed="false">worried thoughts kept me up</button>
-          <button type="button" class="chip" aria-pressed="false">slept through my alarm</button>
-          <button type="button" class="chip" aria-pressed="false">got a good night's sleep</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">gaming</button>
+          <button type="button" class="chip" aria-pressed="false">homework late</button>
+          <button type="button" class="chip" aria-pressed="false">a loud house</button>
+          <button type="button" class="chip" aria-pressed="false">share a room</button>
+          <button type="button" class="chip" aria-pressed="false">worried about something</button>
+          <button type="button" class="chip" aria-pressed="false">early practice</button>
+          <button type="button" class="chip" aria-pressed="false">slept in on the weekend</button>
+          <button type="button" class="chip" aria-pressed="false">slept well</button>
         </div>
-        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
+        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that you feel it today.</p>
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
+        <h3>Which sounds most like today?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-tired" aria-pressed="false">😴 Exhausted, running on fumes</button>
-          <button type="button" class="choice" data-path="p-wired" aria-pressed="false">🌀 Tired but wired at night</button>
-          <button type="button" class="choice" data-path="p-worry" aria-pressed="false">😟 Worry keeps me up</button>
-          <button type="button" class="choice" data-path="p-phone" aria-pressed="false">📱 Can't put the phone down</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Slept well</button>
+        <div class="paths" role="group" aria-label="Which sounds most like today?">
+          <button type="button" class="choice" data-path="p-phone" aria-pressed="false">📱 My phone kept me up</button>
+          <button type="button" class="choice" data-path="p-brain" aria-pressed="false">🧠 My brain wouldn't stop</button>
+          <button type="button" class="choice" data-path="p-home" aria-pressed="false">🏠 Things at home kept me up</button>
+          <button type="button" class="choice" data-path="p-late" aria-pressed="false">📚 I was up late finishing work</button>
+          <button type="button" class="choice" data-path="p-good" aria-pressed="false">😴 I slept pretty well</button>
         </div>
 
-        <div class="path-panel" id="p-tired" hidden>
-          <h4>What this might mean</h4>
-          <p>Your body is low on fuel. Everything feels harder on low sleep, and that's not your fault.</p>
-          <h4>What might help right now</h4>
-          <ul>
-            <li><span class="e" aria-hidden="true">🛌</span>Make tonight an early night. Even 30 minutes earlier helps.</li>
-            <li><span class="e" aria-hidden="true">☀️</span>Get some daylight this morning to help you wake up.</li>
-            <li><span class="e" aria-hidden="true">😴</span>If you need a nap, keep it to 20 minutes before late afternoon.</li>
-          </ul>
-        </div>
-        <div class="path-panel" id="p-wired" hidden>
-          <h4>What this might mean</h4>
-          <p>Your clock is running late, and maybe your brain is busy too. That's a really common teen combo.</p>
-          <h4>What might help right now</h4>
-          <ul>
-            <li><span class="e" aria-hidden="true">📵</span>Phone across the room tonight.</li>
-            <li><span class="e" aria-hidden="true">🌙</span>Start a 20-minute wind-down: dim lights, something calm.</li>
-            <li><span class="e" aria-hidden="true">📝</span>Write tomorrow's to-do list before bed so your brain can let go.</li>
-          </ul>
-        </div>
-        <div class="path-panel" id="p-worry" hidden>
-          <h4>What this might mean</h4>
-          <p>Racing thoughts at night are hard. Sometimes the quiet makes worries louder.</p>
-          <h4>What might help right now</h4>
-          <ul>
-            <li><span class="e" aria-hidden="true">✍️</span>Write the worries down and tell yourself you'll deal with them tomorrow.</li>
-            <li><span class="e" aria-hidden="true">🌬</span>Breathe in for 4, out for 6, ten times.</li>
-            <li><span class="e" aria-hidden="true">🗣</span>If this happens a lot, talk to a counselor. Worry is very treatable.</li>
-          </ul>
-        </div>
         <div class="path-panel" id="p-phone" hidden>
           <h4>What this might mean</h4>
-          <p>Apps are designed to keep you up. You're up against professionals.</p>
+          <p>That's the most common sleep stealer for kids your age.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">⏰</span>Set a phone bedtime alarm 30 minutes before sleep.</li>
-            <li><span class="e" aria-hidden="true">🔌</span>Charge it across the room, or outside it if you can.</li>
-            <li><span class="e" aria-hidden="true">💬</span>Tell your friends your phone bedtime. They might join you.</li>
+            <li><span class="e" aria-hidden="true">🔌</span>Tonight, charge it outside your room.</li>
+            <li><span class="e" aria-hidden="true">💬</span>Tell friends you're off at a set time.</li>
+            <li><span class="e" aria-hidden="true">🗣</span>Ask your family to try it too.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-better" hidden>
+        <div class="path-panel" id="p-brain" hidden>
           <h4>What this might mean</h4>
-          <p>Notice how today feels. Better days don't have to be perfect days to count.</p>
+          <p>Busy brains at bedtime are really common.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what helped you sleep.</li>
-            <li><span class="e" aria-hidden="true">🔁</span>Try to repeat it tonight.</li>
-            <li><span class="e" aria-hidden="true">🎉</span>Enjoy having the energy.</li>
+            <li><span class="e" aria-hidden="true">📝</span>Write it down before bed.</li>
+            <li><span class="e" aria-hidden="true">🌊</span>Same wind-down every night.</li>
+            <li><span class="e" aria-hidden="true">🫁</span>Slow breaths out, longer than in.</li>
           </ul>
         </div>
-        <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
+        <div class="path-panel" id="p-home" hidden>
+          <h4>What this might mean</h4>
+          <p>That's real, and some of it isn't up to you.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">🎧</span>Earplugs or quiet music can help.</li>
+            <li><span class="e" aria-hidden="true">🗣</span>Tell a parent what's getting in the way.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If something at home is scary, tell a counselor.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-late" hidden>
+          <h4>What this might mean</h4>
+          <p>That happens. If it happens a lot, the plan needs help.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">📋</span>Start homework earlier tomorrow.</li>
+            <li><span class="e" aria-hidden="true">🙋</span>Tell a teacher if it's too much.</li>
+            <li><span class="e" aria-hidden="true">🛏</span>Sleep still beats one more hour of work.</li>
+          </ul>
+        </div>
+        <div class="path-panel" id="p-good" hidden>
+          <h4>What this might mean</h4>
+          <p>Nice. Notice what helped.</p>
+          <h4>What might help right now</h4>
+          <ul>
+            <li><span class="e" aria-hidden="true">📝</span>What did you do differently?</li>
+            <li><span class="e" aria-hidden="true">🔁</span>Try it again tonight.</li>
+            <li><span class="e" aria-hidden="true">🌙</span>Protect that bedtime.</li>
+          </ul>
+        </div>
+        <p class="validate" id="ci-high" hidden>Being exhausted is hard on everything. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try this week?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend who's exhausted. You'd tell them to get some rest. You deserve that too.</p>
+        <p class="closing">Your body builds while you sleep. Give it the time it needs.</p>
       </div>
     </div>
     </div>
@@ -787,8 +845,8 @@
           <p class="crisis-line"><strong>988 Suicide and Crisis Lifeline</strong>Call or text <a href="tel:988">988</a></p>
           <p class="crisis-line"><strong>Crisis Text Line</strong>Text <b>HOME</b> to <a href="sms:741741">741741</a></p>
           <p class="crisis-line"><strong>The Trevor Project</strong>For LGBTQ+ young people. Call <a href="tel:18664887386">1-866-488-7386</a> or text <b>START</b> to <a href="sms:678678">678-678</a></p>
-          <p class="crisis-line"><strong>ANAD Eating Disorders Helpline</strong>Call <a href="tel:18883757767">1-888-375-7767</a>, weekdays 9am to 9pm Central.</p>
-          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a> or go to an ER. 988 can also send a mobile crisis team.</p>
+          <p class="crisis-line"><strong>Trans Lifeline</strong>Call <a href="tel:18775658860">877-565-8860</a>, run by trans people</p>
+          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>, or call 988 and ask for a mobile crisis team.</p>
         </div>
       </div>
     </div>
@@ -797,10 +855,10 @@
       <h3>If you want to understand more</h3>
       <p>Other Student Toolkit modules that go with this one:</p>
       <ul class="more-list">
-        <li><span class="e" aria-hidden="true">📱</span><div><strong>Doomscroll</strong><br>When the feed takes more than it gives.</div></li>
-        <li><span class="e" aria-hidden="true">🧠</span><div><strong>Running the Show</strong><br>How your brain manages planning, focus, and follow-through.</div></li>
-        <li><span class="e" aria-hidden="true">📝</span><div><strong>When Your Mind Goes Blank</strong><br>Test anxiety.</div></li>
-        <li><span class="e" aria-hidden="true">😤</span><div><strong>Anger Is Information</strong><br>What anger is telling you.</div></li>
+        <li><span class="e" aria-hidden="true">🗂</span><div><strong>How to Study (Nobody Teaches This)</strong><br>Studying that sticks.</div></li>
+        <li><span class="e" aria-hidden="true">📱</span><div><strong>Your First Phone</strong><br>Setting up your phone so it works for you.</div></li>
+        <li><span class="e" aria-hidden="true">🦋</span><div><strong>Butterflies Mean Get Ready</strong><br>Using nerves before a test, game, or solo.</div></li>
+        <li><span class="e" aria-hidden="true">📋</span><div><strong>The After-School Plan</strong><br>Getting homework done before it's late.</div></li>
       </ul>
     </div>
 
@@ -815,9 +873,10 @@
 <footer>
   <div class="wrap">
     <div class="disclaimer">
-      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to an ER.
+      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to the nearest emergency room.
     </div>
-    <div>Student Toolkit · Middle School · Stress, sleep, and big feelings · Running on Empty</div>
+    <span hidden>Student Toolkit · Middle School · Stress, sleep, and big feelings · Running on Empty</span>
+    <div>Student Toolkit · Middle School · Stress, sleep, and big feelings · Sleep Is When You Grow</div>
   </div>
 </footer>
 
@@ -834,6 +893,7 @@ const SCHOOL = {
   welcome: "Welcome from the BCDS counseling team. We are glad you're here.",  // "" to hide
   welcomeSignature: "BCDS Counseling Team",
   gradeBand: "ms",
+  hideTopics: [],                            // optional: ["gender"] hides the gender section
   help: {
     title: "BCDS Middle School Support",
     where: "Counseling Office (location to be confirmed)",
@@ -869,6 +929,9 @@ const SCHOOL = {
   setText("local-hours", SCHOOL.help.hours);
   setText("local-book", SCHOOL.help.book);
   setText("local-after", SCHOOL.help.afterHours);
+
+  /* ---- Optional topics a school can hide: SCHOOL.hideTopics = ["gender"] ---- */
+  (SCHOOL.hideTopics || []).forEach(t => document.querySelectorAll('[data-topic="' + t + '"]').forEach(el => el.remove()));
 
   /* ---- Grade band ---- */
   function setBand(b) {
@@ -920,21 +983,10 @@ const SCHOOL = {
     }));
   });
 
-  /* ---- Bedtime finder ---- */
-  const wake = $("#wake-time"), sOut = $("#sleep-out");
-  function fmt(m) { m = ((m % 1440) + 1440) % 1440; let h = Math.floor(m / 60), mm = String(m % 60).padStart(2, "0"); const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12; return h + ":" + mm + " " + ap; }
-  function bed() {
-    if (!wake || !sOut) return;
-    const [h, m] = (wake.value || "06:30").split(":").map(Number), w = h * 60 + m;
-    sOut.className = "feedback good"; sOut.textContent = "For 9 hours of sleep, be asleep by " + fmt(w - 540) + ". Start winding down around " + fmt(w - 570) + ", and put your phone away by then. (8 hours: asleep by " + fmt(w - 480) + ".)";
-  }
-  if (wake) { wake.addEventListener("input", bed); bed(); }
-  function extraReset() { if (wake) { wake.value = "06:30"; bed(); } }
 
   /* ---- Check-in tool ---- */
   const slider = $("#ci-slider"), sliderRead = $("#ci-read"), high = $("#ci-high");
-  const READS = ["Barely on my mind", "Barely on my mind", "A little", "A little", "Some", "Some",
-                 "A lot", "A lot", "Most of my day", "Most of my day", "All I can think about"];
+  const READS = ["Wide awake", "Wide awake", "Pretty rested", "Pretty rested", "Okay", "Okay", "Tired", "Tired", "Really tired", "Really tired", "Running on empty"];
   let sliderTouched = false;
   function updateSlider() {
     sliderTouched = true;

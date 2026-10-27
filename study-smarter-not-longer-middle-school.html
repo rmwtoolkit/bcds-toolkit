@@ -6,7 +6,7 @@
 <!-- Privacy lock: this page cannot load or send anything over the network. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
-<title>Study Smarter, Not Longer · Middle School</title>
+<title>How to Study (Nobody Teaches This) · Middle School</title>
 
 <!--
   ==========================================================
@@ -363,6 +363,18 @@
   .more-list li { display: flex; gap: 12px; align-items: flex-start; }
   .more-list .e { font-size: 1.4rem; line-height: 1.2; }
 
+  /* Grid and pieces */
+  .uc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0 8px; }
+  .uc-cell { border-radius:14px; padding:12px; background:#F5F5F7; }
+  .uc-cell .uc-e { font-size:1.5rem; display:block; }
+  .uc-cell b { display:block; margin:2px 0; }
+  .uc-cell span:last-child { display:block; font-size:.9rem; color:var(--ink-soft); }
+  .uc-cell.c1 { background:#F5F5F7; } .uc-cell.c2 { background:#FDF3E3; } .uc-cell.c3 { background:#EAF1FB; } .uc-cell.c4 { background:#EAF5EE; }
+  .uc-pieces { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; padding:0; list-style:none; }
+  .uc-pieces li { background:var(--card); border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.95rem; }
+  .uc-note { font-size:.9rem; color:var(--ink-soft); }
+  @media (max-width:360px) { .uc-grid { grid-template-columns:1fr; } }
+
   /* Other ways in */
   .ow{margin:22px 0 0;border-radius:var(--radius);padding:18px 18px 16px;background:#f3eefc;border:1px solid #e2d8f7;}
   .ow-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a2d8a;margin:0 0 4px;}
@@ -448,9 +460,9 @@
 
 <main>
 <div class="wrap hero">
-  <div class="eyebrow">📚 Middle School · Getting things done</div>
-  <h1>Study Smarter, Not Longer</h1>
-  <p class="tagline">Because the way most people study isn't the way brains learn best.</p>
+  <div class="eyebrow">🗂 Middle School · Getting things done</div>
+  <h1>How to Study (Nobody Teaches This)</h1>
+  <p class="tagline">Teachers tell you to study. Almost nobody shows you how. Here's how, plus what to do when a test makes your stomach drop.</p>
 
   <div class="welcome" id="welcome-box">
     <span id="welcome-line">Welcome from your counseling team. We are glad you're here.</span>
@@ -475,139 +487,171 @@
 <section class="part" id="understand" aria-labelledby="h-understand">
   <div class="wrap">
     <div class="eyebrow">Part 1 · Understand it</div>
-    <h2 id="h-understand">How learning really works</h2>
+    <h2 id="h-understand">Studying is a skill you can learn</h2>
     <details class="fold ">
-      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">Studied for hours. Still blanked.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Sound familiar?</span><span class="sticker">"I studied. Why didn't it work?"</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
       <ul class="tight">
-        <li>You reread your notes three times, felt ready, and then blanked on the test.</li>
-        <li>You highlighted almost the entire page.</li>
-        <li >You studied for hours the night before and forgot most of it by the next week.</li>
-        
-        <li>Studying with friends turned into talking with friends.</li>
-        <li>You feel like you study more than other people and get less out of it.</li>
+        <li>You looked over your notes the night before and felt ready. Then the test felt like a different language.</li>
+        <li>Your teacher says "study for the quiz" and you're not sure what that actually means.</li>
+        <li>You have tests in three classes the same week, and you don't know where to start.</li>
+        <li>You make flashcards, and making them takes the whole night.</li>
+        <li>Your stomach drops when the test lands on your desk.</li>
+        <li>You knew the answer in the hallway after the test.</li>
       </ul>
-      <p style="margin:0">Most students were never taught how to study. The good news: the methods that work best are known, and they often take less time.</p>
-      </div>
-    </details>
-
-    <div class="unit unit-one">
-    <h3 style="margin-top:28px">What the research says works</h3>
-    <p class="tap-hint">Tap each one.</p>
-    <div class="ways">
-      <details class="tile"><summary><span class="e" aria-hidden="true">🧠</span><strong>Pulling it out</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Testing yourself, without looking, is one of the strongest ways to remember something. It's called retrieval practice.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">📆</span><strong>Spreading it out</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Short sessions over several days beat one long session. It's called spaced practice.</p></details>
-      <details class="tile"><summary><span class="e" aria-hidden="true">🔀</span><strong>Mixing it up</strong><span class="row-cue" aria-hidden="true"></span></summary><p style="margin:0">Practicing different types of problems together, instead of all of one kind, helps you learn when to use what.</p></details>
-    </div>
-    </div>
-
-    <details class="fold ">
-      <summary><span class="fold-label">Why the usual way doesn't work</span><span class="sticker">Familiar isn't the same as remembered.</span><span class="fold-cue" aria-hidden="true"></span></summary>
-      <div class="fold-body">
-      <dl class="helps">
-        <dt>Rereading feels like learning.</dt>
-        <dd>When you reread, things look familiar, so your brain says "I know this." But recognizing something isn't the same as being able to recall it on a test.</dd>
-        <dt>Highlighting is mostly coloring.</dt>
-        <dd>Research on highlighting finds it does little on its own. Deciding what's important helps a bit. Testing yourself on it helps a lot more.</dd>
-        <dt>Cramming fades fast.</dt>
-        <dd>Cramming can get you through tomorrow's quiz, but most of it is gone in a few days. That's why finals feel like learning it all over again.</dd>
-        <dt>Hard is good.</dt>
-        <dd>Testing yourself feels harder than rereading. That struggle is the feeling of your brain building stronger memories.</dd>
-      </dl>
+      <p style="margin:0">If any of that sounds like you, nothing is wrong with you. Elementary school mostly didn't ask you to study on your own. Middle school does, and nobody hands you the instructions.</p>
       </div>
     </details>
 
     <details class="fold fold-callout">
-      <summary><span class="fold-label">📱 Studying with your phone nearby</span><span class="sticker">Forty focused minutes beat two distracted hours.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">🧠 What studying actually is</span><span class="sticker">Practicing pulling it out of your head.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Texts and notifications break up study time into tiny pieces. Even quick checks pull your attention away, and it takes a while to get it back.</p>
-      <p class="worst">The worst part: two distracted hours can teach you less than 40 focused minutes, and they feel twice as exhausting.</p>
+      <p>Your brain gets better at whatever you practice. Looking at your notes practices looking at your notes. Pulling an answer out of your head, with the notes closed, practices the thing the test asks you to do.</p>
+      <p>Researchers tried this in a real middle school in Illinois. Teachers gave students short, low-stakes quizzes in class on some topics and not others. On the unit tests, students did noticeably better on the quizzed topics, often by about a full letter grade.</p>
+      <p class="worst">Studying should feel a little hard. If it feels easy, you're probably just looking, not practicing.</p>
       </div>
     </details>
+
+    <div class="unit unit-one">
+    <h3 style="margin-top:28px">Four ways people study</h3>
+    <p>Most people use the first two. The last two do most of the work.</p>
+    <div class="uc-grid">
+      <div class="uc-cell c1"><span class="uc-e" aria-hidden="true">👀</span><b>Looking it over</b><span>Reading your notes again. Feels good. Doesn't stick.</span></div>
+      <div class="uc-cell c2"><span class="uc-e" aria-hidden="true">🖍</span><b>Coloring it in</b><span>Highlighting everything. Pretty page, same result.</span></div>
+      <div class="uc-cell c3"><span class="uc-e" aria-hidden="true">🙈</span><b>Cover and say</b><span>Hide the answer, say it, then check.</span></div>
+      <div class="uc-cell c4"><span class="uc-e" aria-hidden="true">🧑‍🏫</span><b>Teach it</b><span>Explain it to someone, or to your dog.</span></div>
+    </div>
+    <p class="uc-note">If you only have twenty minutes, spend them covering and saying.</p>
+    </div>
+
+    <details class="fold ">
+      <summary><span class="fold-label">When your mind goes blank</span><span class="sticker">It's your body, not your brain giving up.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>A test can set off the same alarm as a near miss on your bike. Your heart speeds up, your hands get sweaty, and the thinking part of your brain gets crowded out for a minute. That's why the answer shows up later in the hallway.</p>
+      <p style="margin:0">The alarm passes. It usually takes a minute or two. You can help it along: put your pencil down, push your feet into the floor, and let your shoulders drop. Then find one question you know and start there.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">More teachers, more tests</span><span class="sticker">Middle school is a big jump.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>In elementary school you might have had one teacher who knew everything you had due. Now you might have six or seven, and none of them can see the others' tests.</p>
+      <p style="margin:0">That's why a calendar matters more now. Write every test and quiz in one place the day you hear about it, and look at the week ahead every Sunday.</p>
+      </div>
+    </details>
+
+    <details class="fold ">
+      <summary><span class="fold-label">Different homes, different ways to study</span><span class="sticker">There's no one right setup.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <p>Some kids study at a quiet desk. Some study at the kitchen table while a little brother watches TV and dinner is cooking. Some go to an aunt's house after school, or a library, or a program at their place of worship.</p>
+      <p style="margin:0">Some families quiz each other in another language. That counts. Explaining a science idea to your grandmother in the language you speak at home is one of the best ways to learn it, because you have to really understand it to translate it.</p>
+      </div>
+    </details>
+
   </div>
 </section>
 
 <section class="part" id="practice" aria-labelledby="h-practice">
   <div class="wrap">
     <div class="eyebrow">Part 2 · Practice the skills</div>
-    <h2 id="h-practice">Finding your way through it</h2>
+    <h2 id="h-practice">Studying that sticks</h2>
     <div class="card">
       <div class="fold-label">What actually helps</div>
-      <h3 class="sticker">Quiz yourself. Spread it out. Sleep.</h3>
+      <h3 class="sticker">Try these before the next test.</h3>
       <p class="tap-hint">Tap one to see how.</p>
-        <details class="row"><summary>🙈 Close the book and recall.<span class="row-cue" aria-hidden="true"></span></summary><p>Read a section, then close it and write or say everything you remember. Then check what you missed.</p></details>
-        <details class="row"><summary>🃏 Make practice questions.<span class="row-cue" aria-hidden="true"></span></summary><p>Turn notes into questions. Flashcards, practice tests, or just covering the answer and quizzing yourself.</p></details>
-        <details class="row"><summary>📆 Start a few days early.<span class="row-cue" aria-hidden="true"></span></summary><p>Three 20-minute sessions on different days beat one hour the night before.</p></details>
-        <details class="row"><summary>👩‍🏫 Teach it.<span class="row-cue" aria-hidden="true"></span></summary><p>Explain it out loud to a friend, a grandparent, a little sibling, or your dog, in any language you speak. If you can teach it, you know it.</p></details>
-        <details class="row"><summary>🔀 Mix your practice.<span class="row-cue" aria-hidden="true"></span></summary><p >Do a few of each kind of math problem instead of 20 of the same.</p></details>
-        <details class="row"><summary>😴 Sleep on it.<span class="row-cue" aria-hidden="true"></span></summary><p>Sleep is when your brain locks in what you learned. A night of sleep is part of studying.</p></details>
+        <details class="row"><summary>🙈 Cover and say.<span class="row-cue" aria-hidden="true"></span></summary><p>Cover the answer side of your notes or flashcards, say the answer out loud, then check. Out loud matters.</p></details>
+        <details class="row"><summary>🧑‍🏫 Teach it to someone.<span class="row-cue" aria-hidden="true"></span></summary><p>A parent, a sibling, a friend, a stuffed animal. If you get stuck explaining it, that's the part to study.</p></details>
+        <details class="row"><summary>📅 Write every test in one place.<span class="row-cue" aria-hidden="true"></span></summary><p>The day you hear about it. Then look at the week every Sunday so nothing sneaks up on you.</p></details>
+        <details class="row"><summary>🔢 Two short sessions beat one long one.<span class="row-cue" aria-hidden="true"></span></summary><p>Twenty minutes on Tuesday and twenty on Wednesday works better than forty minutes on Wednesday night.</p></details>
+        <details class="row"><summary>🙋 Ask what the test will look like.<span class="row-cue" aria-hidden="true"></span></summary><p>Multiple choice? Short answer? A map to label? Practice in that shape.</p></details>
+        <details class="row"><summary>🦶 If you blank, feet on the floor.<span class="row-cue" aria-hidden="true"></span></summary><p>Pencil down, press your feet down, drop your shoulders, breathe out slowly. Then start with a question you know.</p></details>
     </div>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Close the book. What do you remember?</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">Try it</span><span class="sticker">Three moments. What's your move?</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Pick something you're studying. Read it once, then hide it and write down everything you remember here. Then look back and see what you missed. That gap is what to study next.</p>
-      <label class="prompt" for="tx-1">Topic:</label>
-      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-      <label class="prompt" for="tx-2">Everything I remember, without looking:</label>
-      <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
-      <label class="prompt" for="tx-3">What I missed (check after):</label>
-      <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <p>Pick what you'd actually do.</p>
+      <div class="scenario">
+        <p>You have a science quiz tomorrow. You have 25 minutes before practice.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="okay" data-msg="Better than nothing. The trouble is it feels like you know it, and the quiz finds out you don&#x27;t.">Read your notes two more times</button>
+          <button class="choice" type="button" data-fb="good" data-msg="That&#x27;s the move. The ones you missed are what to study in the car.">Close the notes and try to say each answer, then check</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="Making them can eat the whole 25 minutes. Quick, ugly cards you actually use are better.">Make really nice flashcards with colors</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>A math test lands on your desk and your mind goes totally blank.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="nope" data-msg="Staring keeps the alarm going. Move on and come back.">Stare at question one until it comes back</button>
+          <button class="choice" type="button" data-fb="good" data-msg="Starting with something you can do settles the alarm. The blank ones often come back.">Pencil down, feet on the floor, slow breath out, then find a question you know</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Some teachers will say yes, and a short break can help. If not, use the feet-on-the-floor trick at your desk.">Raise your hand and ask to get water</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <div class="scenario" style="margin-top:18px">
+        <p>Your friend wants to study together for the history test.</p>
+        <div class="choices" role="group" aria-label="Choose a response">
+          <button class="choice" type="button" data-fb="good" data-msg="Writing questions and answering someone else&#x27;s both make you pull it out of your head.">Each write five test questions, then swap and answer them</button>
+          <button class="choice" type="button" data-fb="nope" data-msg="That&#x27;s two people reading in the same room.">Sit next to each other and read your own notes</button>
+          <button class="choice" type="button" data-fb="okay" data-msg="Useful, but you still have to test yourself on their part.">Split up the chapters and send each other summaries</button>
+        </div>
+        <div class="feedback" aria-live="polite"></div>
+      </div>
+      <p style="margin-top:14px;font-size:.95rem">There's no perfect way to study. The best way is the one where your notes are closed and your brain is doing the work.</p>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">Build a study plan</span><span class="sticker">Four short sessions beat one long night.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 In a group</span><span class="sticker">Pick a corner. Then see what the research says.</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Test coming up? Spread it out:</p>
-      <ol class="steps-list">
-        <li><strong>4 days before:</strong> Make practice questions from your notes. Try them.</li>
-        <li><strong>3 days before:</strong> Recall check on the hardest topics.</li>
-        <li><strong>2 days before:</strong> Practice test, mixed topics, no notes. Check answers.</li>
-        <li><strong>Night before:</strong> Short review of what you missed. Then sleep.</li>
+      <p class="tap-hint" style="margin-top:0">👥 For advisory, homeroom or class · about 15 minutes · no materials needed</p>
+      <ol class="tight" style="padding-left:1.3em">
+        <li>The leader reads a statement. Students move or point to a corner of the room: agree, disagree, not sure, or it depends.</li>
+        <li>Ask one or two people from different corners to explain why. No one has to share.</li>
+        <li>After each one, the leader taps it to show what research says.</li>
       </ol>
       </div>
     </details>
 
     <details class="fold fold-try">
-      <summary><span class="fold-label">Try it</span><span class="sticker">Two tests coming. Pick the method.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <summary><span class="fold-label">👥 Four corners · 1 of 2</span><span class="sticker">"If you read your notes enough times, you'll remember them."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <p>Which one would help most?</p>
-      <div class="scenario" >
-        <p>You have a vocab quiz Friday. It's Tuesday.</p>
-        <div class="choices" role="group" aria-label="Choose a response">
-          <button class="choice" type="button" data-fb="nope" data-msg="Rereading feels good but sticks less. And one session is less than three short ones.">Read the list over and over Thursday night</button>
-          <button class="choice" type="button" data-fb="good" data-msg="Testing yourself plus spreading it out. That's the best combo there is.">Flashcards for 10 minutes Tuesday, Wednesday, and Thursday</button>
-          <button class="choice" type="button" data-fb="okay" data-msg="Writing helps a little, but quizzing yourself helps much more.">Copy the list three times</button>
-        </div>
-        <div class="feedback" aria-live="polite"></div>
-      </div>
-      
-      <p style="margin-top:14px;font-size:.95rem">There's usually more than one good answer. The best one is the one you'll actually do.</p>
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>Mostly no. Rereading makes things feel familiar, which isn't the same as being able to pull them out on a test. Covering the answer and saying it does a lot more.</p></details>
       </div>
     </details>
 
-    <details class="fold ">
-      <summary><span class="fold-label">What doesn't actually help</span><span class="sticker">These feel like studying but don't stick.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Four corners · 2 of 2</span><span class="sticker">"Getting nervous before a test means you're going to do badly."</span><span class="fold-cue" aria-hidden="true"></span></summary>
       <div class="fold-body">
-      <div class="rows">
-        <details class="row"><summary>📖 Rereading as your main method.<span class="row-cue" aria-hidden="true"></span></summary><p>Fine as a first step. Not enough on its own.</p></details>
-        <details class="row"><summary>🖍 Highlighting everything.<span class="row-cue" aria-hidden="true"></span></summary><p>If everything is highlighted, nothing is.</p></details>
-        <details class="row"><summary>🌙 Cramming all night.<span class="row-cue" aria-hidden="true"></span></summary><p>Trading sleep for study time usually backfires. Sleep helps memory.</p></details>
-        <details class="row"><summary>📱 Studying with your phone face up.<span class="row-cue" aria-hidden="true"></span></summary><p>Every buzz costs you focus. Out of sight works better.</p></details>
+      <p style="font-size:1.25rem">Agree, disagree, or not sure? Vote first.</p>
+        <details class="row"><summary>What the research says<span class="row-cue" aria-hidden="true"></span></summary><p>No. Most people get nervous before tests, including people who do well. A little nervous energy can help you focus. It's only a problem when it takes over, and there are ways to turn it down.</p></details>
       </div>
+    </details>
+
+    <details class="fold fold-try">
+      <summary><span class="fold-label">👥 Talk about it</span><span class="sticker">Talk it over.</span><span class="fold-cue" aria-hidden="true"></span></summary>
+      <div class="fold-body">
+      <ul class="tight">
+        <li>What did studying look like in elementary school? What's different now?</li>
+        <li>What's one way you've studied that actually worked?</li>
+        <li>What helps you when a test makes you nervous?</li>
+      </ul>
+      <details class="row"><summary>Tip for the person leading<span class="row-cue" aria-hidden="true"></span></summary><p>Some students have quiet space and help at home, and some don't. Keep the talk about methods, not about who has what. Offer a time and place at school to study for anyone who wants one.</p></details>
       </div>
     </details>
 
     <div class="card" style="border-left:5px solid var(--alert)">
-      <h3>When to ask for more help</h3>
+      <h3>When it's more than test nerves</h3>
       <ul class="tight">
-        <li>You study hard and still struggle in a class.</li>
-        <li>Reading or focusing feels much harder for you than for others. Dyslexia, ADHD, and other learning differences are common, and support helps.</li>
-        <li>You're still learning English and the reading takes extra time.</li>
-        <li>School stress is taking over your evenings or your sleep.</li>
+        <li>You feel sick or can't sleep before most tests.</li>
+        <li>You try hard, and the grades don't match the work, again and again.</li>
+        <li>Reading or math feels a lot harder for you than it seems for others.</li>
+        <li>School stress is making you feel hopeless or like you want to hurt yourself.</li>
       </ul>
-      <p style="margin:0">Teachers, learning specialists, and counselors can help. See <a href="#help">Get help</a> below.</p>
+      <p>Talk to a counselor or a teacher you trust. Sometimes there's a learning difference that nobody has spotted yet, and help is out there. You can also call or text 988, any time.</p>
+      <p style="margin:0">See <a href="#help">Get help</a> below.</p>
     </div>
   </div>
 </section>
@@ -619,47 +663,49 @@
 <div class="unit">
     <p class="privacy" style="margin-bottom:12px"><span aria-hidden="true">🔒</span><span>What you write here stays only on your screen. Nothing is saved or sent anywhere.</span></p>
     <div class="card">
-      <label class="prompt" for="tx-4">How I usually study, honestly</label>
-      <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-1">One test or quiz coming up, and when I'll start studying</label>
+      <textarea id="tx-1" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-5">One method from this page I'll try for my next test</label>
-      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-2">The way I usually study, honestly</label>
+      <textarea id="tx-2" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       <details class="more-prompts"><summary>Want to write more? <span class="row-cue" aria-hidden="true"></span></summary>
-      <label class="prompt" for="tx-6">A class where studying feels hardest, and why</label>
-      <textarea id="tx-6" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-3">Someone I could teach this to</label>
+      <textarea id="tx-3" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-7">When and where I focus best</label>
-      <textarea id="tx-7" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-4">What my body does when a test starts</label>
+      <textarea id="tx-4" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
 
-      <label class="prompt" for="tx-8">How I'll know if the new method is working</label>
-      <textarea id="tx-8" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
+      <label class="prompt" for="tx-5">What I'd tell a 5th grader about studying in middle school</label>
+      <textarea id="tx-5" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div><div class="write-lines"></div>
       </details>
     </div>
 
     <div class="reminder">
       <h3>A reminder</h3>
-      <p>Studying smarter isn't about being smarter. It's about using methods that work with your brain instead of against it.</p>
+      <p>Nobody is born knowing how to study. It's a skill, and you're learning it right now.</p>
     </div>
     </div>
   <div class="unit unit-ow">
 <div class="ow" id="other-ways-in">
   <p class="ow-label">Other ways in</p>
-  <p class="ow-lede">Sometimes a story or a song says it better. A couple of these you might remember from when you were little.</p>
+  <p class="ow-lede">Plenty of stories are about kids figuring out how they learn.</p>
   <div class="ow-grid">
     <div class="ow-tile blue"><p class="ow-kind">📖 Read</p>
-      <div class="ow-pick"><p class="ow-title">Your Fantastic Elastic Brain <span class="ow-by">· JoAnn Deak, illustrated by Sarah Ackerley, 2010</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">A picture book about how your brain grows when you stretch it, and why mistakes are part of how it learns. That's the lesson's "hard is good" idea, drawn for little kids.</p></div>
-      <div class="ow-pick"><p class="ow-title">Fish in a Tree <span class="ow-by">· Lynda Mullaly Hunt, 2015</span></p><p class="ow-why">Ally hides that reading is hard for her until a new teacher figures out she has dyslexia and finds a way of learning that works for her brain. It's the lesson's "when to ask for more help" part, as a story.</p><p class="ow-cn">Heads up: A mean classmate picks on Ally, and some boys push around her friend Albert.</p></div>
+      <div class="ow-pick"><p class="ow-title">Front Desk <span class="ow-by">· Kelly Yang, 2018</span></p><p class="ow-why">Ten-year-old Mia runs the front desk of a motel while learning English, and practices her writing over and over until it gets good. Practice, mistakes, and practice again.</p></div>
+      <div class="ow-pick"><p class="ow-title">Hank Zipzer: Niagara Falls, or Does It? <span class="ow-by">· Henry Winkler and Lin Oliver, 2003</span></p><p class="ow-why">Hank is smart and funny and can't figure out why school is so hard. Turns out he learns differently. Written by an actor who had dyslexia.</p></div>
     </div>
     <div class="ow-tile coral"><p class="ow-kind">🎬 Watch</p>
-      <div class="ow-pick"><p class="ow-title">Akeelah and the Bee <span class="ow-by">· Doug Atchison, 2006</span></p><p class="ow-why">Akeelah gets thousands of flashcards to learn. She skips rope while she spells, and half her neighborhood ends up quizzing her. That's retrieval practice with a whole team behind it. Rated PG.</p></div>
-      <div class="ow-pick"><p class="ow-title">Inside Out <span class="ow-by">· Pixar, 2015</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Every night while Riley sleeps, the day's memories get sent off to long-term memory. The lesson says the same thing: a night of sleep is part of studying. Rated PG.</p></div>
+      <div class="ow-pick"><p class="ow-title">Kung Fu Panda <span class="ow-by">· DreamWorks, 2008</span></p><p class="ow-why">Po can't learn the way the others do until his teacher finds the way he actually learns. Rated PG.</p></div>
     </div>
     <div class="ow-tile teal"><p class="ow-kind">🎧 Listen</p>
-      <div class="ow-pick"><p class="ow-title">Try Everything <span class="ow-by">· Shakira, 2016</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">The Zootopia song. Keep making mistakes, keep trying. Testing yourself feels worse than rereading, and that's the point.</p></div>
+      <div class="ow-pick"><p class="ow-title">Schoolhouse Rock! <span class="ow-by">· ABC, 1973</span> <span class="ow-tb">Throwback</span></p><p class="ow-why">Songs that taught a generation multiplication and grammar. Ask a grown-up to sing "Conjunction Junction." Putting things to music is an old study trick.</p></div>
+    </div>
+    <div class="ow-tile amber"><p class="ow-kind">🖼️ Look</p>
+      <div class="ow-pick"><p class="ow-title">The Thinker <span class="ow-by">· Auguste Rodin, 1904</span></p><p class="ow-why">A man deep in thought. Notice how hard he's working with his whole body. Thinking is effort.</p></div>
     </div>
   </div>
-  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Make five flashcards for something you're studying right now. Question on the front, answer on the back. Quiz yourself today, then again in two days, and put a check on each card you get without peeking.</p></div>
-  <p class="ow-foot">Ratings checked October 2026. Not sure a pick is right for you? Ask a parent, a teacher, or your counselor.</p>
+  <div class="ow-make"><p class="ow-kind" style="color:#4a2d8a">✏️ Make your own</p><p class="ow-why">Make a one-page cheat sheet for your next test, then put it away and try to rewrite it from memory.</p></div>
+  <p class="ow-foot">Ratings checked October 2026.</p>
 </div>
 </div>
 </div>
@@ -674,102 +720,102 @@
 
     <div class="card" id="checkin-card">
       <div class="ci-step">
-        <h3 id="ci-1">Where are you with studying today?</h3>
-        <p class="ci-hint">How much is it sitting with you? Not in general, just today, right now.</p>
+        <h3 id="ci-1">How much is school stress on your mind today?</h3>
+        <p class="ci-hint">Not in general. Just today.</p>
         <div class="slider-wrap">
           <input type="range" id="ci-slider" min="0" max="10" step="1" value="0" aria-labelledby="ci-1" aria-describedby="ci-read" autocomplete="off">
-          <div class="slider-ends"><span>in the background</span><span>all I can think about</span></div>
+          <div class="slider-ends"><span>barely</span><span>all I can think about</span></div>
           <div class="slider-read" id="ci-read" aria-live="polite"></div>
         </div>
       </div>
 
       <div class="ci-step">
-        <h3>What's been most present today?</h3>
+        <h3>What's going on?</h3>
         <p class="ci-hint">Tap anything that fits.</p>
         <div class="chips" id="ci-chips">
-          <button type="button" class="chip" aria-pressed="false">test coming up</button>
-          <button type="button" class="chip" aria-pressed="false">studied but blanked</button>
-          <button type="button" class="chip" aria-pressed="false">don't know how to study for this class</button>
-          <button type="button" class="chip" aria-pressed="false">too much to study</button>
-          <button type="button" class="chip" aria-pressed="false">reread instead of quizzing</button>
-          <button type="button" class="chip" aria-pressed="false">phone kept distracting me</button>
-          <button type="button" class="chip" aria-pressed="false">stayed up late studying</button>
-          <button type="button" class="chip" aria-pressed="false">tried a new method</button>
-          <button type="button" class="chip" aria-pressed="false">felt prepared for once</button>
-          <button type="button" class="chip" aria-pressed="false">it's a little better today</button>
+          <button type="button" class="chip" aria-pressed="false">a test coming up</button>
+          <button type="button" class="chip" aria-pressed="false">a bunch of tests the same week</button>
+          <button type="button" class="chip" aria-pressed="false">I blanked on a test</button>
+          <button type="button" class="chip" aria-pressed="false">I don't know how to study for this</button>
+          <button type="button" class="chip" aria-pressed="false">a bad grade</button>
+          <button type="button" class="chip" aria-pressed="false">a good grade</button>
+          <button type="button" class="chip" aria-pressed="false">a class that feels too hard</button>
+          <button type="button" class="chip" aria-pressed="false">my family cares a lot about grades</button>
+          <button type="button" class="chip" aria-pressed="false">no quiet place to study</button>
+          <button type="button" class="chip" aria-pressed="false">I tried something new</button>
         </div>
-        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's with you today.</p>
+        <p class="validate" id="ci-validate" hidden>Whatever you tapped, it makes sense that it's on your mind.</p>
       </div>
 
       <div class="ci-step">
-        <h3>What does it feel like right now?</h3>
+        <h3>Which sounds most like today?</h3>
         <p class="ci-hint">Pick the one that sounds most like today.</p>
-        <div class="paths" role="group" aria-label="How it feels right now">
-          <button type="button" class="choice" data-path="p-over" aria-pressed="false">📚 Overwhelmed by how much there is</button>
-          <button type="button" class="choice" data-path="p-blank" aria-pressed="false">😶 Studied and still blanked</button>
-          <button type="button" class="choice" data-path="p-lost" aria-pressed="false">❓ Don't know how to study for this class</button>
-          <button type="button" class="choice" data-path="p-tired" aria-pressed="false">😴 Tired from studying late</button>
-          <button type="button" class="choice" data-path="p-better" aria-pressed="false">🌤 Feeling ready</button>
+        <div class="paths" role="group" aria-label="Which sounds most like today?">
+          <button type="button" class="choice" data-path="p-start" aria-pressed="false">🤷 I don't know where to start</button>
+          <button type="button" class="choice" data-path="p-blank" aria-pressed="false">😶 I blanked on a test</button>
+          <button type="button" class="choice" data-path="p-pile" aria-pressed="false">📚 Too many tests at once</button>
+          <button type="button" class="choice" data-path="p-grade" aria-pressed="false">📉 A grade I'm upset about</button>
+          <button type="button" class="choice" data-path="p-good" aria-pressed="false">🙂 I'm on top of it</button>
         </div>
 
-        <div class="path-panel" id="p-over" hidden>
+        <div class="path-panel" id="p-start" hidden>
           <h4>What this might mean</h4>
-          <p>A big pile of material feels impossible all at once. Spreading it out makes it doable.</p>
+          <p>That's really common in middle school. Nobody showed you yet.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">📆</span>Use the study plan above, starting today.</li>
-            <li><span class="e" aria-hidden="true">🎯</span>Ask the teacher what matters most on the test.</li>
-            <li><span class="e" aria-hidden="true">🧩</span>Break it into topics and do one per session.</li>
+            <li><span class="e" aria-hidden="true">📅</span>Write every test this week in one place.</li>
+            <li><span class="e" aria-hidden="true">🙈</span>Pick one. Cover and say for ten minutes.</li>
+            <li><span class="e" aria-hidden="true">🙋</span>Ask the teacher what the test will look like.</li>
           </ul>
         </div>
         <div class="path-panel" id="p-blank" hidden>
           <h4>What this might mean</h4>
-          <p>That's really frustrating. Usually it means the studying built recognition but not recall. That's fixable.</p>
+          <p>That's your alarm, not your brain giving up. It happens to almost everyone.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🙈</span>Next time, close the book and test yourself.</li>
-            <li><span class="e" aria-hidden="true">🃏</span>Make practice questions instead of rereading.</li>
-            <li><span class="e" aria-hidden="true">📝</span>When Your Mind Goes Blank has tips for test anxiety too.</li>
+            <li><span class="e" aria-hidden="true">🦶</span>Next time: feet on the floor, slow breath out.</li>
+            <li><span class="e" aria-hidden="true">✅</span>Start with a question you know.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Tell the teacher. Many will let you show what you know.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-lost" hidden>
+        <div class="path-panel" id="p-pile" hidden>
           <h4>What this might mean</h4>
-          <p>Every class is a little different. It's okay to ask what works.</p>
+          <p>That's a lot to carry. Breaking it up makes it smaller.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🙋</span>Ask the teacher how they'd study for their test.</li>
-            <li><span class="e" aria-hidden="true">👥</span>Find a classmate who does well and ask what they do.</li>
-            <li><span class="e" aria-hidden="true">🧠</span>Start with a recall check on one topic.</li>
+            <li><span class="e" aria-hidden="true">🔢</span>Twenty minutes a day on each, not one big night.</li>
+            <li><span class="e" aria-hidden="true">➡️</span>Start with the test that's first.</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>If two land the same day, it's okay to ask for help planning.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-tired" hidden>
+        <div class="path-panel" id="p-grade" hidden>
           <h4>What this might mean</h4>
-          <p>Late-night studying feels productive, but sleep is when memories lock in.</p>
+          <p>One grade is information, not a verdict on you.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🛌</span>Get to bed tonight, even if you're not done.</li>
-            <li><span class="e" aria-hidden="true">📆</span>Start earlier next time, in short sessions.</li>
-            <li><span class="e" aria-hidden="true">⏲</span>Use focused 25-minute blocks instead of long, foggy ones.</li>
+            <li><span class="e" aria-hidden="true">🔍</span>Look at what you missed. Is there a pattern?</li>
+            <li><span class="e" aria-hidden="true">🙋</span>Ask the teacher one question about it.</li>
+            <li><span class="e" aria-hidden="true">🫶</span>Talk to someone who's on your side.</li>
           </ul>
         </div>
-        <div class="path-panel" id="p-better" hidden>
+        <div class="path-panel" id="p-good" hidden>
           <h4>What this might mean</h4>
-          <p>Something's clicking. Better days don't have to be perfect days to count.</p>
+          <p>Nice. Notice what's working so you can do it again.</p>
           <h4>What might help right now</h4>
           <ul>
-            <li><span class="e" aria-hidden="true">🔎</span>Notice what worked so you can repeat it.</li>
-            <li><span class="e" aria-hidden="true">👩‍🏫</span>Try teaching it to someone to lock it in.</li>
-            <li><span class="e" aria-hidden="true">😴</span>Get good sleep before the test.</li>
+            <li><span class="e" aria-hidden="true">📝</span>What did you do differently?</li>
+            <li><span class="e" aria-hidden="true">🧑‍🏫</span>Could you teach it to a friend?</li>
+            <li><span class="e" aria-hidden="true">🔁</span>Keep the habit going this week.</li>
           </ul>
         </div>
-        <p class="validate" id="ci-high" hidden>This sounds like a lot to carry. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
+        <p class="validate" id="ci-high" hidden>School stress taking over is heavy. It's a good day to talk to someone at your counseling office. <a href="#help">Here's how to reach them.</a></p>
       </div>
 
       <div class="ci-step">
-        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try today?</label>
+        <label class="prompt" for="ci-small" style="margin-top:0;font-size:1.15rem">One small thing you'll try this week?</label>
         <p class="ci-hint">The smallest version counts.</p>
         <textarea id="ci-small" autocomplete="off" spellcheck="false"></textarea><div class="write-lines"></div>
-        <p class="closing">Be as kind to yourself as you would be to a friend stressed about a test. You'd remind them that one test isn't everything. Same goes for you.</p>
+        <p class="closing">Close the notes. Say it out loud. Check. That's studying.</p>
       </div>
     </div>
     </div>
@@ -799,8 +845,8 @@
           <p class="crisis-line"><strong>988 Suicide and Crisis Lifeline</strong>Call or text <a href="tel:988">988</a></p>
           <p class="crisis-line"><strong>Crisis Text Line</strong>Text <b>HOME</b> to <a href="sms:741741">741741</a></p>
           <p class="crisis-line"><strong>The Trevor Project</strong>For LGBTQ+ young people. Call <a href="tel:18664887386">1-866-488-7386</a> or text <b>START</b> to <a href="sms:678678">678-678</a></p>
-          <p class="crisis-line"><strong>ANAD Eating Disorders Helpline</strong>Call <a href="tel:18883757767">1-888-375-7767</a>, weekdays 9am to 9pm Central.</p>
-          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a> or go to an ER. 988 can also send a mobile crisis team.</p>
+          <p class="crisis-line"><strong>Trans Lifeline</strong>Call <a href="tel:18775658860">877-565-8860</a>, run by trans people</p>
+          <p style="margin:0;font-size:.95rem">Free and confidential. You don't have to be in a crisis to reach out. If someone is in immediate danger, call <a href="tel:911">911</a>, or call 988 and ask for a mobile crisis team.</p>
         </div>
       </div>
     </div>
@@ -809,10 +855,10 @@
       <h3>If you want to understand more</h3>
       <p>Other Student Toolkit modules that go with this one:</p>
       <ul class="more-list">
-        <li><span class="e" aria-hidden="true">📝</span><div><strong>When Your Mind Goes Blank</strong><br>Test anxiety.</div></li>
-        <li><span class="e" aria-hidden="true">🧠</span><div><strong>Running the Show</strong><br>How your brain manages planning, focus, and follow-through.</div></li>
-        <li><span class="e" aria-hidden="true">⏰</span><div><strong>Where Did the Afternoon Go?</strong><br>Time blindness and planning.</div></li>
-        <li><span class="e" aria-hidden="true">😴</span><div><strong>Running on Empty</strong><br>Sleep and the teenage brain.</div></li>
+        <li><span class="e" aria-hidden="true">📋</span><div><strong>The After-School Plan</strong><br>Getting started on homework and keeping track of it all.</div></li>
+        <li><span class="e" aria-hidden="true">🦋</span><div><strong>Butterflies Mean Get Ready</strong><br>Using nerves before a test, game, or solo.</div></li>
+        <li><span class="e" aria-hidden="true">🌙</span><div><strong>Sleep Is When You Grow</strong><br>Why sleep matters more right now.</div></li>
+        <li><span class="e" aria-hidden="true">🗯</span><div><strong>Mean Voice, Wrong Facts</strong><br>When the voice in your head is harsh after a mistake.</div></li>
       </ul>
     </div>
 
@@ -827,9 +873,10 @@
 <footer>
   <div class="wrap">
     <div class="disclaimer">
-      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to an ER.
+      <strong>For educational use.</strong> This page shares general information and skills for students. It is not therapy, counseling, or a diagnosis, and it doesn't replace talking with a school counselor, doctor, or other trusted adult. If you're worried about your safety or someone else's, reach out to an adult now, call or text 988, text HOME to 741741, or in an emergency call 911 or go to the nearest emergency room.
     </div>
-    <div>Student Toolkit · Middle School · Getting things done · Study Smarter, Not Longer</div>
+    <span hidden>Student Toolkit · Middle School · Getting things done · Study Smarter, Not Longer</span>
+    <div>Student Toolkit · Middle School · Getting things done · How to Study (Nobody Teaches This)</div>
   </div>
 </footer>
 
@@ -846,6 +893,7 @@ const SCHOOL = {
   welcome: "Welcome from the BCDS counseling team. We are glad you're here.",  // "" to hide
   welcomeSignature: "BCDS Counseling Team",
   gradeBand: "ms",
+  hideTopics: [],                            // optional: ["gender"] hides the gender section
   help: {
     title: "BCDS Middle School Support",
     where: "Counseling Office (location to be confirmed)",
@@ -881,6 +929,9 @@ const SCHOOL = {
   setText("local-hours", SCHOOL.help.hours);
   setText("local-book", SCHOOL.help.book);
   setText("local-after", SCHOOL.help.afterHours);
+
+  /* ---- Optional topics a school can hide: SCHOOL.hideTopics = ["gender"] ---- */
+  (SCHOOL.hideTopics || []).forEach(t => document.querySelectorAll('[data-topic="' + t + '"]').forEach(el => el.remove()));
 
   /* ---- Grade band ---- */
   function setBand(b) {
@@ -935,8 +986,7 @@ const SCHOOL = {
 
   /* ---- Check-in tool ---- */
   const slider = $("#ci-slider"), sliderRead = $("#ci-read"), high = $("#ci-high");
-  const READS = ["Barely on my mind", "Barely on my mind", "A little", "A little", "Some", "Some",
-                 "A lot", "A lot", "Most of my day", "Most of my day", "All I can think about"];
+  const READS = ["Barely", "Barely", "A little", "A little", "Some", "Some", "A lot", "A lot", "Most of the day", "Most of the day", "All I can think about"];
   let sliderTouched = false;
   function updateSlider() {
     sliderTouched = true;
