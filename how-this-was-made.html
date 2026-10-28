@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How This Toolkit Was Made</title>
+<style>
+:root { --bg:#f7f3ea; --card:#fffdf8; --ink:#1f1d1a; --soft:#5d5a54; --line:#d9d2c3; --accent:#0b2a55; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#16181c; --card:#1f2227; --ink:#ece8df; --soft:#b3ada2; --line:#3a3d44; --accent:#9cb8e6; } }
+:root[data-theme="dark"] { --bg:#16181c; --card:#1f2227; --ink:#ece8df; --soft:#b3ada2; --line:#3a3d44; --accent:#9cb8e6; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:400 1.05rem/1.6 Georgia, 'Times New Roman', serif; }
+main { max-width:680px; margin:0 auto; padding:40px 16px 56px; }
+.eyebrow { font:600 .74rem/1 system-ui, sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 10px; }
+h1 { font-size:2.1rem; line-height:1.15; margin:0 0 12px; }
+.lede { color:var(--soft); font-style:italic; margin:0 0 28px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0 0 28px; }
+@media (max-width:560px) { .grid { grid-template-columns:1fr; } }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 18px 8px; }
+.card h2 { font:600 .78rem/1.2 system-ui, sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); margin:0 0 10px; }
+.card ul { margin:0; padding-left:18px; } .card li { margin:0 0 10px; }
+h3 { font-size:1.2rem; margin:28px 0 6px; }
+p { margin:0 0 14px; }
+.promise { border-left:4px solid var(--accent); padding:4px 0 4px 16px; margin:0 0 24px; font-size:1.1rem; }
+.foot { margin-top:36px; border-top:1px solid var(--ink); padding-top:8px; display:flex; justify-content:space-between; font:500 .78rem/1.3 system-ui, sans-serif; color:var(--soft); }
+a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Faculty Toolkit</p>
+  <h1>How this toolkit was made</h1>
+  <p class="lede">Written by Dr. Rick Wilson, with AI-assisted drafting. Every lesson is reviewed and edited by Dr. Wilson.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>What Dr. Wilson does</h2>
+      <ul>
+        <li>Chooses every topic and the order they're taught in</li>
+        <li>Writes the stories, scenarios and talking points from his work with students</li>
+        <li>Makes the clinical calls: what's safe to teach in a group, what belongs with a counselor</li>
+        <li>Reviews and edits every slide and student page before it goes out</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>What AI helps with</h2>
+      <ul>
+        <li>First drafts of wording, which then get rewritten</li>
+        <li>Finding research to check</li>
+        <li>Building slide and page layouts</li>
+        <li>Drawing the cartoons</li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="promise">No student's name, record or story is ever typed into an AI tool.</p>
+
+  <h3>About the research</h3>
+  <p>Every fact in a lesson lists its source, so you can look it up yourself. If you find a number that's wrong or out of date, please tell Dr. Wilson and it gets fixed in every lesson that uses it.</p>
+
+  <h3>Why say any of this?</h3>
+  <p>We ask students to be honest about how they use AI in their work. The adults who made this toolkit should do the same.</p>
+
+  <h3>Questions</h3>
+  <p>Email Dr. Wilson at <a href="mailto:rwilson@bcdschool.org">rwilson@bcdschool.org</a> or stop by Office 119.</p>
+
+  <footer class="foot"><span>How this toolkit was made</span><span>Beaver Counseling</span></footer>
+</main>
+</body>
+</html>

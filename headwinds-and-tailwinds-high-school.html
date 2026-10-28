@@ -62,6 +62,18 @@ ul.ow .ow-tb { font:700 .62rem/1 'Sans', system-ui, sans-serif; letter-spacing:.
 ul.ow span.d { display:block; color:var(--soft); font-size:.98rem; }
 .ow-foot { font-size:.82rem; color:var(--soft); margin:6px 0 0; }
 @media print { #other-ways-in, #other-ways-in + .hint, ul.ow, .ow-foot { display:none; } }
+/* "Your move" (Don't Scroll Past, 10-27): tap a move on a short moment to see how it might go */
+.prac { display:grid; gap:12px; margin:0; }
+.pcard { border:1px solid var(--ink); background:#fffdf8; padding:12px 14px; }
+.pcard > b { font:700 .74rem/1.2 'Sans', system-ui, sans-serif; letter-spacing:.08em; text-transform:uppercase; color:var(--school); }
+.pcard > p { margin:4px 0 10px; }
+.pbtns { display:flex; flex-wrap:wrap; gap:8px; }
+.pbtn { font:700 .84rem/1 'Sans', system-ui, sans-serif; border:1.5px solid var(--school); background:transparent; color:var(--school); padding:9px 14px; cursor:pointer; }
+.pbtn[aria-pressed=true] { background:var(--school); color:#fff; }
+.pbtn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.pres { margin:10px 0 0; min-height:0; font-style:italic; }
+.pres:empty { display:none; }
+@media print { .pbtns, .pres { display:none; } .pcard { break-inside:avoid; padding:6px 10px; } .pcard > p { margin:2px 0 0; } }
 ul.skip { margin:0; padding:0; list-style:none; }
 ul.skip li { padding:6px 0; }
 ul.skip s { text-decoration-color:var(--accent); text-decoration-thickness:2px; font-weight:600; }
@@ -137,6 +149,7 @@ ul.skip span { display:block; color:var(--soft); font-size:.98rem; }
 <p class="small">For educational use. This is general information, not therapy or a diagnosis.</p></details>
 </main>
 <footer class="foot"><span>Headwinds and Tailwinds</span><span>Beaver Counseling</span></footer>
+<p class="small credit" style="margin-top:6px">Written by Dr. Rick Wilson, with AI-assisted drafting. Every lesson is reviewed and edited by Dr. Wilson.</p>
 </div>
 <script>
 
@@ -149,9 +162,16 @@ ul.skip span { display:block; color:var(--soft); font-size:.98rem; }
   r.addEventListener("input", () => out.textContent = READS[+r.value]);
   const picks = Array.from(document.querySelectorAll(".pick"));
   picks.forEach(p => p.addEventListener("click", () => p.setAttribute("aria-pressed", String(p.getAttribute("aria-pressed") !== "true"))));
+  const pbs = Array.from(document.querySelectorAll(".pbtn"));
+  pbs.forEach(b => b.addEventListener("click", () => {
+    const card = b.closest(".pcard");
+    card.querySelectorAll(".pbtn").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    card.querySelector(".pres").textContent = b.dataset.r;
+  }));
   document.getElementById("clear").addEventListener("click", () => {
     r.value = 0; out.textContent = ""; document.getElementById("small").value = "";
     picks.forEach(p => p.setAttribute("aria-pressed", "false"));
+    pbs.forEach(b => b.setAttribute("aria-pressed", "false")); document.querySelectorAll(".pres").forEach(x => x.textContent = "");
   });
 })();
 </script>
