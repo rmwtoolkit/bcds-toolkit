@@ -35,6 +35,10 @@ h1 { font:600 clamp(2.1rem, 7vw, 3.2rem)/1.05 'Serif', Georgia, serif; letter-sp
 .jump a { text-decoration:none; }
 h2 { font:700 .78rem/1.2 'Sans', system-ui, sans-serif; letter-spacing:.1em; text-transform:uppercase; color:var(--school); margin:36px 0 12px; display:flex; gap:10px; align-items:center; }
 h2::after { content:""; flex:1; border-top:1px solid var(--rule); }
+.doors { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin:20px 0 6px; }
+.door { background:#fff; border:1px solid var(--rule); border-top:5px solid var(--accent); padding:16px 18px; display:grid; gap:8px; align-content:start; }
+.door .lab { margin:0; } .door h3 { margin:0; font:600 1.3rem/1.25 'Serif', Georgia, serif; } .door p { margin:0; } .door .go { margin:4px 0 0; }
+@media (max-width:700px) { .doors { grid-template-columns:1fr; } }
 .prep { background:#fff; border:1px solid var(--rule); border-left:5px solid var(--accent); padding:16px 20px; margin:20px 0 0; }
 .prep p { margin:0; } .prep p + .lab { margin-top:14px; }
 .prep .lab { margin:0 0 4px; }
@@ -143,9 +147,13 @@ details.sec:not([open]) > summary h2 { margin-bottom:6px; }
 <main>
 <h1>Train Your Attention</h1>
 <p class="meta">Upper School  ·  45 minutes (20-minute advisory version below)  ·  Health class, advisory, or a counselor-led group</p>
+<div class="doors">
+<div class="door"><p class="lab">Following up after the talk?</p><h3>Have a conversation</h3><p>A few open questions and a short summary of the talk. No slides.</p><div class="go"><a class="btn" href="train-your-attention-conversation.html">Open the conversation guide</a></div></div>
+<div class="door"><p class="lab">Teaching it yourself?</p><h3>Use the slides</h3><p>The full lesson with speaker notes, plus a shorter advisory version.</p>
 <div class="go"><button type="button" class="btn" data-present>Present the slides</button>
-<a class="btn ghost" href="../decks/train-your-attention-lesson-v2.pptx" download>Download PowerPoint</a>
-<span class="keys">Arrow keys or a clicker to move &middot; N shows your notes &middot; F for full screen &middot; Esc to stop</span></div>
+<a class="btn ghost" href="../decks/train-your-attention-lesson-v2.pptx" download>Download PowerPoint</a></div></div>
+</div>
+<span class="keys" style="display:block;margin:0 0 4px">Arrow keys or a clicker to move &middot; N shows your notes &middot; F for full screen &middot; Esc to stop</span>
 <div class="prep"><p class="lab">Before you start</p><p>Students learn what mindfulness is and isn't, what the research honestly shows, and try one short practice of their choosing. Bring a timer, say before every practice that eyes can stay open and anyone can opt out, and offer an anchor other than the breath.</p><p class="lab">Every student in the room</p><p class="every">Many traditions already do this and some families will be wary, so keep it secular, credit the roots, and adjust any instruction that doesn't fit a student's body.</p><p class="lab">Short on time (20-minute advisory)</p><p>One minute of noticing (3), what it is and isn't (4), the brain research slide (5), try one practice (5), exit card (3). Share the practice links so students can pick their own.</p></div>
 <h2 id="slides">Slides and notes</h2>
 <p class="keys" style="margin:-4px 0 4px">Tap any slide to present from there.</p>
