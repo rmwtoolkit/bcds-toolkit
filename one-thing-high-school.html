@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Privacy lock: this page cannot load or send anything over the network. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; font-src data:; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="no-referrer">
+<title>One Thing · Beaver Upper School</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+:root {
+  --teal:#0f6e56;--teal-bg:#e8f7f2;--teal-text:#085041;
+  --amber:#8a5200;--amber-bg:#fdf3e0;--amber-text:#633806;
+  --blue:#185fa5;--blue-bg:#e8f1fb;--blue-text:#0c447c;
+  --coral:#993C1D;--coral-bg:#fdf0ed;--coral-text:#6b2310;
+  --body:#1a1a1a;--muted:#555;--line:#e3e1dc;--paper:#faf8f3;
+}
+html{scroll-behavior:smooth;}
+body{font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:1.65;color:var(--body);background:var(--paper);max-width:520px;margin:0 auto;padding:0 0 2rem;}
+.ot-top{padding:2.6rem 1.4rem 1.6rem;text-align:center;}
+.ot-top h1{font-family:Georgia,serif;font-size:2.6rem;line-height:1.05;font-weight:700;letter-spacing:-.01em;}
+.ot-top p{font-family:Georgia,serif;font-style:italic;color:var(--muted);font-size:1.05rem;margin-top:.5rem;text-wrap:balance;}
+.ot-privacy{margin:0 1.4rem 1.2rem;font-size:.82rem;line-height:1.5;color:var(--muted);text-align:center;}
+.ot-intro{padding:0 1.4rem 1.4rem;}
+.ot-intro p{font-size:1rem;margin-bottom:.8rem;}
+.ot-intro p.big{font-family:Georgia,serif;font-size:1.3rem;line-height:1.35;margin-bottom:0;}
+.ot-step{background:#fff;margin:0 .8rem 1rem;padding:1.3rem 1.1rem 1.2rem;border-radius:14px;border:1px solid var(--line);}
+.ot-n{display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem;}
+.ot-n span{flex:0 0 auto;width:2rem;height:2rem;border-radius:50%;background:var(--teal);color:#fff;font-family:Georgia,serif;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.ot-n h2{font-family:Georgia,serif;font-size:1.25rem;line-height:1.2;}
+.ot-hint{font-size:.88rem;color:var(--muted);margin:-.3rem 0 .8rem;}
+.ot-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.ot-tiles button{font:inherit;font-size:.93rem;font-weight:700;line-height:1.25;text-align:left;padding:.8rem .75rem;border:2px solid var(--line);border-radius:10px;background:var(--paper);color:var(--body);cursor:pointer;display:flex;gap:.5rem;align-items:center;min-height:3.6rem;}
+.ot-tiles button .ic{font-size:1.3rem;flex:0 0 auto;}
+.ot-tiles button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal-bg);color:var(--teal-text);}
+.ot-pick{margin-top:1rem;background:var(--teal-bg);border-radius:10px;padding:1rem;display:none;}
+.ot-pick.on{display:block;}
+.ot-pick .lab{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-text);}
+.ot-pick .what{font-family:Georgia,serif;font-size:1.25rem;line-height:1.3;margin:.2rem 0 .7rem;color:var(--body);}
+.ot-btn{font:inherit;font-size:.9rem;font-weight:700;padding:.55rem 1rem;border-radius:999px;border:2px solid var(--teal);background:#fff;color:var(--teal-text);cursor:pointer;}
+.ot-btn.solid{background:var(--teal);color:#fff;}
+.ot-btn:disabled{opacity:.45;cursor:default;}
+.ot-small-note{font-size:.84rem;color:var(--teal-text);margin-top:.6rem;}
+.ot-own{margin-top:.8rem;}
+.ot-own label,.ot-when-own label{font-size:.86rem;font-weight:700;display:block;margin-bottom:.3rem;}
+input.ot-in{width:100%;border:1px solid #ccc;border-radius:8px;padding:.6rem .75rem;font:inherit;font-size:.95rem;background:#fff;color:var(--body);}
+input.ot-in:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 2px rgba(15,110,86,.15);}
+.ot-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.ot-chips button{font:inherit;font-size:.88rem;font-weight:700;padding:.45rem .85rem;border:2px solid var(--line);border-radius:999px;background:var(--paper);color:var(--body);cursor:pointer;}
+.ot-chips button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal);color:#fff;}
+button:focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+.ot-when-own{margin-top:.7rem;}
+.ot-plan{margin-top:1rem;background:#1a1a1a;color:#fff;border-radius:10px;padding:1rem 1.1rem;}
+.ot-plan .lab{font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9fd8c6;}
+.ot-plan p{font-family:Georgia,serif;font-size:1.2rem;line-height:1.35;margin-top:.25rem;}
+.ot-slow{font-family:Georgia,serif;font-style:italic;font-size:1rem;color:var(--muted);margin-top:.9rem;}
+.ot-done{display:flex;gap:8px;flex-wrap:wrap;}
+.ot-done button{flex:1 1 30%;font:inherit;font-size:.92rem;font-weight:700;padding:.7rem .5rem;border-radius:10px;border:2px solid var(--line);background:var(--paper);color:var(--body);cursor:pointer;}
+.ot-done button[aria-pressed="true"]{border-color:var(--teal);background:var(--teal-bg);color:var(--teal-text);}
+.ot-reply{font-size:.95rem;margin-top:.8rem;min-height:1.4rem;}
+.ot-last{display:none;background:var(--amber-bg);color:var(--amber-text);border-radius:10px;padding:.8rem .9rem;font-size:.92rem;margin-bottom:.9rem;}
+.ot-last.on{display:block;}
+.ot-keep{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);}
+.ot-keep .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:.5rem;}
+.ot-keep input[type=time]{border:1px solid #ccc;border-radius:8px;padding:.4rem .5rem;font:inherit;font-size:.9rem;}
+.ot-keep .tiny{font-size:.8rem;margin-top:.4rem;min-height:1rem;}
+.ot-link{background:none;border:none;font:inherit;font-size:.8rem;color:var(--muted);text-decoration:underline;cursor:pointer;padding:0;}
+.ot-session{margin:0 .8rem 1.4rem;padding:1rem 1.1rem;border-left:4px solid var(--blue);background:var(--blue-bg);border-radius:0 10px 10px 0;font-size:.93rem;color:var(--blue-text);}
+.ot-session b{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.2rem;}
+.ot-more{padding:.4rem 1.4rem .6rem;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+details.ot-f{margin:0 .8rem .5rem;background:#fff;border:1px solid var(--line);border-radius:12px;}
+details.ot-f summary{list-style:none;cursor:pointer;padding:.9rem 1.1rem;font-weight:700;font-size:.98rem;display:flex;justify-content:space-between;gap:.8rem;align-items:center;}
+details.ot-f summary::-webkit-details-marker{display:none;}
+details.ot-f summary::after{content:"+";font-size:1.3rem;font-weight:400;color:var(--teal);line-height:1;}
+details.ot-f[open] summary::after{content:"\2212";}
+details.ot-f summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:12px;}
+.ot-fb{padding:0 1.1rem 1.1rem;font-size:.95rem;}
+.ot-fb p{margin-bottom:.7rem;}
+.ot-fb p:last-child{margin-bottom:0;}
+.ot-flow{display:flex;flex-direction:column;gap:0;margin:.4rem 0 .9rem;}
+.ot-flow div{padding:.45rem .8rem;border-radius:8px;font-size:.9rem;font-weight:700;}
+.ot-flow i{display:block;text-align:center;color:var(--muted);font-style:normal;font-size:.85rem;line-height:1.2;}
+.ot-flow .a{background:var(--amber-bg);color:var(--amber-text);}
+.ot-flow .c{background:var(--coral-bg);color:var(--coral-text);}
+.ot-flow .b{background:var(--blue-bg);color:var(--blue-text);}
+.ot-pairs{margin:.4rem 0 .9rem;border-top:1px solid var(--line);}
+.ot-pairs div{display:grid;grid-template-columns:1fr auto 1fr;gap:.5rem;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.88rem;align-items:center;}
+.ot-pairs .from{color:var(--coral-text);}
+.ot-pairs .to{color:var(--teal-text);font-weight:700;}
+.ot-pairs .ar{color:var(--muted);}
+.ot-list{margin:.3rem 0 .8rem 1.1rem;}
+.ot-list li{margin-bottom:.35rem;}
+.ot-five{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:.5rem 0 .8rem;text-align:center;}
+.ot-five div{background:var(--paper);border-radius:8px;padding:.5rem .2rem;font-size:.72rem;font-weight:700;line-height:1.2;}
+.ot-five span{display:block;font-size:1.3rem;margin-bottom:.2rem;}
+.ot-res{margin:.3rem 0 .6rem;}
+.ot-res div{padding:.55rem 0;border-top:1px solid var(--line);font-size:.9rem;line-height:1.45;}
+.ot-res b{display:block;font-size:.95rem;}
+.ot-res .note{color:var(--muted);font-size:.85rem;}
+.ot-reshead{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-text);margin:.8rem 0 .1rem;}
+.ot-help{margin:1.2rem .8rem 1rem;padding:1rem 1.1rem;background:var(--coral-bg);color:var(--coral-text);border-radius:12px;font-size:.92rem;line-height:1.55;}
+.ot-help b{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.25rem;}
+.ot-help p{margin-bottom:.4rem;}
+.ot-grace{text-align:center;font-family:Georgia,serif;font-size:1.35rem;padding:1.4rem 1.4rem .4rem;}
+.ot-end{text-align:center;font-family:Georgia,serif;font-style:italic;color:var(--muted);padding:0 1.4rem 1rem;font-size:1rem;}
+.ai-credit{max-width:680px;margin:1.75rem auto 2rem;padding:0 1.25rem;text-align:center;font-size:.8rem;line-height:1.5;opacity:.7}
+@media(max-width:360px){.ot-tiles{grid-template-columns:1fr;}.ot-five{grid-template-columns:repeat(3,1fr);}}
+
+.ot-bar{display:flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;background:#0b2d5b;color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.04em;}
+.ot-bar img,.ot-bar #school-mark{height:28px;width:auto;}
+.ot-bar #school-mark{display:inline-flex;align-items:center;justify-content:center;width:28px;border-radius:50%;background:#f47b20;color:#fff;}
+.ot-bar .r{margin-left:auto;font-weight:400;opacity:.85;}
+.ot-n span{background:#0b2d5b;}
+.ot-staff{margin:.4rem 0 .6rem;display:grid;grid-template-columns:auto 1fr;gap:.25rem .8rem;font-size:.9rem;}
+.ot-staff dt{font-weight:700;}
+.ot-staff dd{margin:0;}
+.ot-staff a,.ot-help a{color:inherit;}
+.ot-mon{font-size:.82rem;opacity:.9;margin-top:.5rem;}
+.ot-foot{display:flex;justify-content:space-between;padding:.8rem 1.4rem;font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);margin-top:1rem;}
+</style>
+</head>
+<body>
+<div class="ot-bar"><span id="school-mark">B</span><span>Beaver Upper School</span><span class="r">Counseling</span></div>
+
+<header class="ot-top">
+  <h1>One Thing</h1>
+  <p>For days when school, your room, and your own head are all too much.</p>
+</header>
+
+<p class="ot-privacy">🔒 Nothing you tap or type here is saved or sent. Close the page and it’s gone.</p>
+
+<section class="ot-intro">
+  <p>You know the feeling: five things are due, your room is a mess, and you end up on your bed scrolling.</p>
+  <p class="big">So today, pick one thing. Just one.</p>
+</section>
+
+<section class="ot-step" id="pick">
+  <div class="ot-n"><span>1</span><h2>Pick one thing</h2></div>
+  <p class="ot-hint">Whatever would help most, or whatever feels easiest. Both count.</p>
+  <div class="ot-tiles" role="group" aria-label="Pick one thing"><button type="button" data-k="spot" aria-pressed="false"><span class="ic" aria-hidden="true">🛏</span>One spot in my room</button><button type="button" data-k="work" aria-pressed="false"><span class="ic" aria-hidden="true">📚</span>One assignment</button><button type="button" data-k="teach" aria-pressed="false"><span class="ic" aria-hidden="true">✉</span>Email a teacher</button><button type="button" data-k="bag" aria-pressed="false"><span class="ic" aria-hidden="true">🎒</span>My backpack</button><button type="button" data-k="wash" aria-pressed="false"><span class="ic" aria-hidden="true">🧺</span>Laundry</button><button type="button" data-k="text" aria-pressed="false"><span class="ic" aria-hidden="true">💬</span>Answer one message</button><button type="button" data-k="sleep" aria-pressed="false"><span class="ic" aria-hidden="true">🌙</span>Phone off at night</button><button type="button" data-k="me" aria-pressed="false"><span class="ic" aria-hidden="true">🎧</span>One thing for me</button></div>
+  <div class="ot-pick" id="otPick" aria-live="polite">
+    <span class="lab">Your one thing</span>
+    <p class="what" id="otWhat"></p>
+    <button type="button" class="ot-btn" id="otSmaller">Still too big? Make it smaller</button>
+    <p class="ot-small-note" id="otSmallNote"></p>
+  </div>
+  <div class="ot-own"><label for="otOwn">Or write your own</label><input class="ot-in" id="otOwn" type="text" placeholder="for example, get my lab report signed"></div>
+</section>
+
+<section class="ot-step" id="when">
+  <div class="ot-n"><span>2</span><h2>Pick when</h2></div>
+  <p class="ot-hint">Tying it to something that already happens makes it much more likely to happen.</p>
+  <div class="ot-chips" role="group" aria-label="Pick when"><button type="button" aria-pressed="false" data-w="when I get home from school">When I get home from school</button><button type="button" aria-pressed="false" data-w="after practice">After practice</button><button type="button" aria-pressed="false" data-w="after dinner">After dinner</button><button type="button" aria-pressed="false" data-w="before I open my phone">Before I open my phone</button><button type="button" aria-pressed="false" data-w="right after I read this">Right after I read this</button></div>
+  <div class="ot-when-own"><label for="otWhenOwn">Or your own moment</label><input class="ot-in" id="otWhenOwn" type="text" placeholder="for example, during my free block"></div>
+  <div class="ot-plan" aria-live="polite"><span class="lab">Your plan</span><p id="otPlan">Pick one thing, then pick when.</p></div>
+  <p class="ot-slow">Slow is smooth, and smooth is fast. One small thing a day beats an all-nighter that wipes you out.</p>
+</section>
+
+<section class="ot-step" id="checkin">
+  <div class="ot-n"><span>3</span><h2>Later: did it happen?</h2></div>
+  <div class="ot-done" role="group" aria-label="Did it happen?">
+    <button type="button" aria-pressed="false" data-o="yes">Done</button>
+    <button type="button" aria-pressed="false" data-o="partly">Partly</button>
+    <button type="button" aria-pressed="false" data-o="no">Not today</button>
+  </div>
+  <p class="ot-reply" id="otReply" aria-live="polite"></p>
+</section>
+
+<div class="ot-session"><b>Talk it through</b>Want a hand with it? Your advisor, a teacher, or a counselor can help you pick a first step. You don’t have to have it figured out first.</div>
+
+<p class="ot-more">More, if you want it</p>
+<details class="ot-f"><summary>Why it’s so hard to start</summary><div class="ot-fb"><p>When everything is due, it all looks equally urgent. Your brain stalls on “which one first?” and grabs the nearest exit.</p><div class="ot-flow" role="img" aria-label="Everything is due, then You freeze, then Phone, bed, I just want to go home, then It piles up, then What’s wrong with me?, and around again."><div class="a">Everything is due</div><i>↓</i><div class="a">You freeze</div><i>↓</i><div class="c">Phone, bed, “I just want to go home”</div><i>↓</i><div class="c">It piles up</div><i>↓</i><div class="b">“What’s wrong with me?”</div><i>↺ and around again</i></div><p>The way out is to make the first step so small it feels almost silly. Doing comes first. Motivation usually shows up a few minutes in.</p></div></details><details class="ot-f"><summary>When you just want to go home</summary><div class="ot-fb"><p>At school, a sleepover, a trip, even a college visit: sometimes everything in you says, “I need to go home.” Home is where you feel safe, so of course you want to be there.</p><p>The tricky part: every time you leave early, the next time gets a little harder. Staying a little longer than you want to teaches your body that you can handle it.</p><div class="ot-pairs"><div><span class="from">Call to get picked up</span><span class="ar">→</span><span class="to">Wait ten minutes first</span></div><div><span class="from">Stay home from school</span><span class="ar">→</span><span class="to">Go for the first two classes</span></div><div><span class="from">Text home all day</span><span class="ar">→</span><span class="to">One check-in at lunch</span></div></div><p>A counselor can help you plan these, one small step at a time.</p></div></details><details class="ot-f"><summary>When you lock up</summary><div class="ot-fb"><p>Under stress, most of us get rigid. There’s one right way to do it, and if it can’t be done that way, it doesn’t get done at all.</p><p>Try asking: what’s the good-enough version?</p><div class="ot-pairs"><div><span class="from">Finish the whole essay</span><span class="ar">→</span><span class="to">Write one messy paragraph</span></div><div><span class="from">Clean my whole room</span><span class="ar">→</span><span class="to">Clear my bed</span></div><div><span class="from">Catch up on everything</span><span class="ar">→</span><span class="to">The one that’s due first</span></div><div><span class="from">The perfect study plan</span><span class="ar">→</span><span class="to">Twenty-five minutes on one subject</span></div></div><p>Done and good enough beats perfect and waiting.</p></div></details><details class="ot-f"><summary>When home is stressed too</summary><div class="ot-fb"><p>Sometimes the grown-ups at home are overwhelmed too. Maybe they’re short-tempered, or they’ve gone quiet.</p><p>Fixing that isn’t your job. You can still help with one small thing, the way anyone in a family does, and leave the grown-up stuff to the grown-ups.</p><p>If it feels like too much to carry, talk with a counselor or another adult you trust.</p></div></details><details class="ot-f"><summary>Grown-ups who can help</summary><div class="ot-fb"><p>Some things you can ask for:</p><ul class="ot-list"><li>A parent: “Can you sit with me while I start?” Working next to someone makes starting easier for a lot of people.</li><li>A parent: “Can you help me make the list, not do it for me?”</li><li>A teacher: “I’m behind. Can we figure out what matters most?”</li><li>Your advisor: “Can you check in with me Friday about how it went?”</li><li>Learning support, if you have a learning plan or think you might need one.</li></ul></div></details><details class="ot-f"><summary>Five things, any room</summary><div class="ot-fb"><p>A trick from KC Davis, a therapist who writes about ADHD and keeping a space livable. Every messy room has only five kinds of things in it:</p><div class="ot-five"><div><span>🗑</span>Trash</div><div><span>🍽</span>Dishes</div><div><span>🧺</span>Laundry</div><div><span>📦</span>Has a spot</div><div><span>❓</span>No spot yet</div></div><p>Pick one kind and do only that. A messy room says nothing about what kind of person you are.</p></div></details><details class="ot-f"><summary>Your family, your culture</summary><div class="ot-fb"><p>Every family has its own rules about chores, school and what “a clean room” means. Some families expect a lot of help at home. Some students care for siblings or work after school. Some split time between two homes.</p><p>What does your family expect? What do you wish they knew about how hard things feel right now?</p></div></details><details class="ot-f"><summary>Other ways in</summary><div class="ot-fb"><ul class="ot-list"><li><b>Watch:</b> <i>Inside Out 2</i> (Pixar, 2024). A teenager’s Anxiety takes over the control panel and tries to plan everything at once.</li><li><b>Read:</b> <i>Turtles All the Way Down</i>, John Green. A teen whose thoughts spiral, and the friends who stick around. Heads up: anxiety and intrusive thoughts.</li><li><b>Listen:</b> “Three Little Birds,” Bob Marley. Every little thing.</li><li><b>Look:</b> Kintsugi, the Japanese art of mending broken pottery with gold, so the repair becomes part of the beauty.</li><li><b>Make your own:</b> take a photo of your clear desk or bed, and keep it on your phone.</li></ul></div></details>
+
+<div class="ot-help">
+  <b>Beaver Upper School Support</b>
+  <dl class="ot-staff"><dt>Counselor</dt><dd>Ms. Garcia, Office 118, <a href="mailto:agarcia@bcdschool.org">agarcia@bcdschool.org</a></dd><dt>Counselor</dt><dd>Dr. Wilson, Office 119, <a href="mailto:rwilson@bcdschool.org">rwilson@bcdschool.org</a></dd><dt>Learning support</dt><dd>Ms. Moy, <a href="mailto:lmoy@bcdschool.org">lmoy@bcdschool.org</a></dd><dt>Health office</dt><dd>Ms. Ossowski, LPN, <a href="mailto:tossowski@bcdschool.org">tossowski@bcdschool.org</a></dd><dt>Hours</dt><dd>School days, 8:00am to 4:00pm</dd></dl>
+  <p>When school is closed, call or text <a href="tel:988"><strong>988</strong></a>, or text <strong>HOME</strong> to <a href="sms:741741"><strong>741741</strong></a>. LGBTQ+ young people can also reach The Trevor Project at <a href="tel:18664887386">1-866-488-7386</a>. In an emergency, call <a href="tel:911"><strong>911</strong></a>.</p>
+  <p class="ot-mon">This page isn't monitored. Nobody at school sees what you tap or type here, so if you need someone, reach out to them directly.</p>
+</div>
+
+<p class="ot-grace">One thing counts.</p>
+<p class="ot-end">Pick it, shrink it, tie it to a moment.</p>
+<footer class="ot-foot"><span>One Thing</span><span>Beaver Counseling</span></footer>
+<script>
+var OT={spot:['Clear my bed or my desk so it feels calm','Clear just the top of my bed','Put three things where they go'],work:['Do the assignment that’s due first','Work on one assignment for fifteen minutes','Open one assignment and write the first line'],teach:['Ask for help or more time on one thing','Write two sentences and send it','Open a new email and type their name'],bag:['Empty it and sort what’s inside','Pull out the loose papers','Find the one thing I need tomorrow'],wash:['Wash and dry one load','Put my clothes in the hamper','Pick up the clothes on the floor'],text:['Reply to the text I’ve been avoiding','Send “Sorry, I’m slow, I’ll answer tonight”','Open the chat and read it'],sleep:['Charge my phone outside my room tonight','Charge it across the room','Turn on Do Not Disturb at bedtime'],me:['Get outside and move for twenty minutes','Listen to one song with my eyes closed','Step outside and take three slow breaths']};
+(function(){
+var key=null,lvl=0,when='';
+var what=document.getElementById('otWhat'),pick=document.getElementById('otPick'),sm=document.getElementById('otSmaller'),note=document.getElementById('otSmallNote'),own=document.getElementById('otOwn'),wown=document.getElementById('otWhenOwn'),plan=document.getElementById('otPlan');
+function thing(){var o=own.value.trim();if(o)return o;return key?OT[key][lvl]:'';}
+function low(s){return s?s.charAt(0).toLowerCase()+s.slice(1):s;}
+function draw(){
+ if(key&&!own.value.trim()){pick.classList.add('on');what.textContent=OT[key][lvl];sm.disabled=lvl>=OT[key].length-1;
+  note.textContent=lvl>=OT[key].length-1?'That’s as small as it goes. Small is the point.':(lvl?'Smaller still counts.':'');}
+ else pick.classList.remove('on');
+ var t=thing(),w=wown.value.trim()||when;
+ plan.textContent=t&&w?w.charAt(0).toUpperCase()+w.slice(1)+', I’ll '+low(t)+'.':(t?'Now pick when you’ll '+low(t)+'.':'Pick one thing, then pick when.');
+}
+function setP(sel,attr,val){document.querySelectorAll(sel).forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute(attr)===val?'true':'false');});}
+document.querySelectorAll('.ot-tiles button').forEach(function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-k');key=(key===k)?null:k;lvl=0;own.value='';setP('.ot-tiles button','data-k',key);draw();});});
+sm.addEventListener('click',function(){if(key&&lvl<OT[key].length-1){lvl++;draw();}});
+own.addEventListener('input',function(){if(own.value.trim()){key=null;setP('.ot-tiles button','data-k','');}draw();});
+document.querySelectorAll('.ot-chips button').forEach(function(b){b.addEventListener('click',function(){var w=b.getAttribute('data-w');when=(when===w)?'':w;wown.value='';setP('.ot-chips button','data-w',when);draw();});});
+wown.addEventListener('input',function(){if(wown.value.trim()){when='';setP('.ot-chips button','data-w','');}draw();});
+var REPLY={yes:'You did it. Notice how that felt, even if it was small.',partly:'Partly counts. Some of it happened. What got in the way of the rest?',no:'Not today is honest. Tomorrow, try making it smaller, or pick an easier time.'};
+document.querySelectorAll('.ot-done button').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('data-o');document.querySelectorAll('.ot-done button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});document.getElementById('otReply').textContent=REPLY[o];});});
+const LOGO = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NiA5NiIgeG1sbnM6YzJwYT0iaHR0cDovL2MycGEub3JnL21hbmlmZXN0Ij48bWV0YWRhdGE+PGMycGE6bWFuaWZlc3Q+QUFBV2dtcDFiV0lBQUFBZWFuVnRaR015Y0dFQUVRQVFnQUFBcWdBNG0zRURZekp3WVFBQUFCWmNhblZ0WWdBQUFFZHFkVzFrWXpKdFlRQVJBQkNBQUFDcUFEaWJjUU4xY200Nll6SndZVG95TmpSbVlqZ3daUzFqTURSakxUUXlaakV0T1dVeE15MWxNRGM0TjJSak1HVmpORElBQUFBRGwycDFiV0lBQUFBcGFuVnRaR015WVhNQUVRQVFnQUFBcWdBNG0zRURZekp3WVM1aGMzTmxjblJwYjI1ekFBQUFBTHhxZFcxaUFBQUFSR3AxYldSalltOXlBQkVBRUlBQUFLb0FPSnR4RTJNeWNHRXVhVzVuY21Wa2FXVnVkQzUyTXdBQUFBQVlZekp6YUxWMFFPN08yLy9Gd01uQW03cnBUdHNBQUFCd1kySnZjcU5wWkdNNlptOXliV0YwYldsdFlXZGxMM04yWnl0NGJXeHFhVzV6ZEdGdVkyVkpSSGdzZUcxd09tbHBaRHBpTVRFM05UTTROUzFtT0dZNExUUmtZak10T0dJMlpTMWlaR1F5TkROaU1qRTFNRFZzY21Wc1lYUnBiMjV6YUdsd2FIQmhjbVZ1ZEU5bUFBQUI0bXAxYldJQUFBQkJhblZ0WkdOaWIzSUFFUUFRZ0FBQXFnQTRtM0VUWXpKd1lTNWhZM1JwYjI1ekxuWXlBQUFBQUJoak1uTm9lVXZESWVOV051ZWRyZ243amNNbjR3QUFBWmxqWW05eW9tZGhZM1JwYjI1emdxSm1ZV04wYVc5dWEyTXljR0V1YjNCbGJtVmthbkJoY21GdFpYUmxjbk9oYTJsdVozSmxaR2xsYm5SemdhSmpkWEpzZUMxelpXeG1JMnAxYldKbVBXTXljR0V1WVhOelpYSjBhVzl1Y3k5ak1uQmhMbWx1WjNKbFpHbGxiblF1ZGpOa2FHRnphRmdnaGR3bklnaEV3KzdRK3BmM1VSd2lDNVp1NHNvNGdUcmdxTUNtN0Q0TS9uaWtabUZqZEdsdmJuZ2RZMjl0TG1GdWRHaHliM0JwWXk1amJHRjFaR1V1Y0hKdmRtbGtaV1JxY0dGeVlXMWxkR1Z5YzZGNEgyTnZiUzVoYm5Sb2NtOXdhV011YjNKcFoybHVMV052Ym1acFpHVnVZMlZuZFc1cmJtOTNibXRrWlhOamNtbHdkR2x2Ym5obVEyeGhkV1JsSUhCeWIzWnBaR1ZrSUhSb2FYTWdabWxzWlNCaGRDQjBhR1VnY21WeGRXVnpkQ0J2WmlCaElIVnpaWElnWVc1a0lHMWhlU0JvWVhabElHTnlaV0YwWldRZ2IzSWdiVzlrYVdacFpXUWdkR2hsSUdacGJHVWdZMjl1ZEdWdWRITXViWE52Wm5SM1lYSmxRV2RsYm5TaFpHNWhiV1ZtUTJ4aGRXUmxjbUZzYkVGamRHbHZibk5KYm1Oc2RXUmxaUFVBQUFESWFuVnRZZ0FBQUVCcWRXMWtZMkp2Y2dBUkFCQ0FBQUNxQURpYmNSTmpNbkJoTG1oaGMyZ3VaR0YwWVFBQUFBQVlZekp6YUJVK3NMcEZJc0w0TXR3NE5rdVNJZ3dBQUFDQVkySnZjcVZqWVd4blpuTm9ZVEkxTm1Od1lXUk5BQUFBQUFBQUFBQUFBQUFBQUdSb1lYTm9XQ0RycjZUazFyOStZaEZyUlRmTFlwNnJndGMxb2g0TkVUVDRwWmNQVFhqK0pHUnVZVzFsYm1wMWJXSm1JRzFoYm1sbVpYTjBhbVY0WTJ4MWMybHZibk9Cb21WemRHRnlkQmg3Wm14bGJtZDBhQmtlQkFBQUFqNXFkVzFpQUFBQUoycDFiV1JqTW1Oc0FCRUFFSUFBQUtvQU9KdHhBMk15Y0dFdVkyeGhhVzB1ZGpJQUFBQUNEMk5pYjNLbFkyRnNaMlp6YUdFeU5UWnBjMmxuYm1GMGRYSmxlRTF6Wld4bUkycDFiV0ptUFM5ak1uQmhMM1Z5Ympwak1uQmhPakkyTkdaaU9EQmxMV013TkdNdE5ESm1NUzA1WlRFekxXVXdOemczWkdNd1pXTTBNaTlqTW5CaExuTnBaMjVoZEhWeVpXcHBibk4wWVc1alpVbEVlQ3g0YlhBNmFXbGtPakkzWkRaa016QXlMVFUyTlRRdE5HSmlaaTA0TUdJekxUSTFOV1ZpT1RWaVpXVmtPWEpqY21WaGRHVmtYMkZ6YzJWeWRHbHZibk9Eb21OMWNteDRMWE5sYkdZamFuVnRZbVk5WXpKd1lTNWhjM05sY25ScGIyNXpMMk15Y0dFdWFXNW5jbVZrYVdWdWRDNTJNMlJvWVhOb1dDQ0YzQ2NpQ0VURDd0RDZsL2RSSENJTGxtN2l5amlCT3VDb3dLYnNQZ3orZUtKamRYSnNlQ3B6Wld4bUkycDFiV0ptUFdNeWNHRXVZWE56WlhKMGFXOXVjeTlqTW5CaExtRmpkR2x2Ym5NdWRqSmthR0Z6YUZnZ0d1NmxVMUFHZThxNzQ2YVkvL0oxOG5oYVpTVTY0R2pGOWN3YUxzV0xKY09pWTNWeWJIZ3BjMlZzWmlOcWRXMWlaajFqTW5CaExtRnpjMlZ5ZEdsdmJuTXZZekp3WVM1b1lYTm9MbVJoZEdGa2FHRnphRmdnNEYzdW1LdGVsLzJ3K3ZGT0ZvbzFkUVVsa2JGWkptRGUvRjJieTJ4TnVuVjBZMnhoYVcxZloyVnVaWEpoZEc5eVgybHVabStqWkc1aGJXVnZRVzUwYUhKdmNHbGpJRVpwYkdWelozWmxjbk5wYjI1bE1TNHdMakJyYzNCbFkxWmxjbk5wYjI1bE1pNDBMakFBQUJBNGFuVnRZZ0FBQUNocWRXMWtZekpqY3dBUkFCQ0FBQUNxQURpYmNRTmpNbkJoTG5OcFoyNWhkSFZ5WlFBQUFCQUlZMkp2Y3RLRVdRSVNvZ0VtR0NGWkFnb3dnZ0lHTUlJQmphQURBZ0VDQWhSQTVhQUs3c0k1MEw2NGcvb0dRZ1U5WjFVVEFEQUtCZ2dxaGtqT1BRUURBekJKTVJjd0ZRWURWUVFLRXc1QmJuUm9jbTl3YVdNc0lGQkNRekV1TUN3R0ExVUVBeE1sUVc1MGFISnZjR2xqSUVOdmJuUmxiblFnUTNKbFpHVnVkR2xoYkhNZ1VtOXZkQ0JEUVRBZUZ3MHlOakE0TURjeE9EUXpOVFphRncweU9EQTRNRFl4T1RRek5UWmFNRVF4RnpBVkJnTlZCQW9URGtGdWRHaHliM0JwWXl3Z1VFSkRNU2t3SndZRFZRUURFeUJCYm5Sb2NtOXdhV01nUTJ4aGRXUmxJRU52Ym5SbGJuUWdVMmxuYm1sdVp6QlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJKaDZDbXZMVUJnRkZOVTB2VUtsT1Z0RTZkamQxN0w1U3V3WDBMZW1GaXNCTTNka2QvM2N5anhGQTNRbzVTNDZmWDAvaWhZMFZaN21mYjlLRjcwM3Q1T2pXREJXTUE0R0ExVWREd0VCL3dRRUF3SUhnREFWQmdOVkhTVUVEakFNQmdvckJnRUVBWVBvWGdJQk1Bd0dBMVVkRXdFQi93UUNNQUF3SHdZRFZSMGpCQmd3Rm9BVXpsSGlCSUZPWkZzaitPUEV6NW8rbk1IWFhNSXdDZ1lJS29aSXpqMEVBd01EWndBd1pBSXdNWE1kRko0QmV0TExWWTdPUnVFOW5vcWJiQVpPWm4vYUFyWHlUd0ZBWmZLclB6eEYydlBvSk5mMStVQ2RnMVhHQWpCd1gxemQ5V0dxWWtxbUw1U0ZxdzFReVNqcjF6SmZwSk05KzFyZER3U1BMTU9QT2pLdWlYam9VL3BVVWVHOVJ3bWhZM0JoWkZrTm5nQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBUFpZUUxaQ2hrNU9yWTU4UjdGbG5wZmNWMjJ3QUZOeU9yYzFvdkFRc09oTVVPMnp2Ymh6bWRtemh2WkJRQnZuYi9hc0luVWZSNlA3REpERkk4dTFmNWc5WHJnPTwvYzJwYTptYW5pZmVzdD48L21ldGFkYXRhPjxyZWN0IHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgZmlsbD0iIzBiMmQ1YiIvPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjM2IiBmaWxsPSIjZmZmZmZmIi8+PHRleHQgeD0iNDgiIHk9IjQ5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iODAwIiBmb250LXNpemU9IjQ2IiBmaWxsPSIjMGIyZDViIj5CPC90ZXh0Pjwvc3ZnPgo=";
+const mark = document.getElementById("school-mark");
+if (LOGO.startsWith("data:image/")) { const i = document.createElement("img"); i.src = LOGO; i.alt = "Beaver logo"; mark.replaceWith(i); }
+draw();
+})();
+</script>
+<p class="ai-credit">Written by Dr. Rick Wilson, with AI-assisted drafting. Every lesson is reviewed and edited by Dr. Wilson.</p>
+</body>
+</html>
