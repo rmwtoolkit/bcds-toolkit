@@ -1,0 +1,31 @@
+{
+  "name": "Put It on the Calendar",
+  "short_name": "Calendar Plan",
+  "description": "Plan one assignment at a time and put each sitting on your calendar.",
+  "display": "standalone",
+  "background_color": "#fbfcfe",
+  "theme_color": "#2a4fd6",
+  "scope": "put-it-on-the-calendar-high-school.html",
+  "icons": [
+    {
+      "src": "put-it-on-the-calendar-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "put-it-on-the-calendar-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "put-it-on-the-calendar-icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "put-it-on-the-calendar-high-school.html",
+  "id": "put-it-on-the-calendar-high-school.html"
+}
