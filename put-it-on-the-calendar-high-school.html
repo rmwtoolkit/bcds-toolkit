@@ -229,6 +229,7 @@ const S=[
    <span class="kicker">Last step</span>
    <h1>Add each sitting to your calendar.</h1>
    <p class="say">Each button opens Google Calendar with everything filled in. Tap <b>Save</b> there, then come back for the next one.</p>
+   <p class="note"><b>Want an email reminder too?</b> In Google Calendar, tap the event’s notification and pick Email.</p>
    <ol class="plan t${t.color}">${t.steps.map((s,i)=>{const k=t.name+i;return `<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(t.time)}</span></span><a class="go ${added.has(k)?"done":""}" data-k="${esc(k)}" href="${gcal(s)}" target="_blank" rel="noopener">${added.has(k)?"Added ✓":"Add"}</a></li>`}).join("")}</ol>
    <p class="note">Use Apple or Outlook? <button type="button" class="mini" id="ics">Get one calendar file</button> It adds all of them, each with a 10-minute heads-up.</p>
    <p class="say">Inside each event you’ll find your plan:</p>
