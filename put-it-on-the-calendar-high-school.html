@@ -50,7 +50,7 @@ h1{font:800 clamp(1.7rem,6.5vw,2.3rem)/1.08 var(--display);margin:0;text-wrap:ba
 .opt[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .opt[aria-pressed=true] small{color:var(--paper)}
 .opts.big .opt{flex:1 1 140px}
-input[type=text],input[type=time]{width:100%;border:2px solid var(--line);border-radius:14px;padding:14px;background:var(--paper);font-size:1.1rem}
+input[type=text],input[type=time],input[type=number]{width:100%;border:2px solid var(--line);border-radius:14px;padding:14px;background:var(--paper);font-size:1.1rem}
 .days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
 .day{border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:8px 0;cursor:pointer;text-align:center;line-height:1.1}
 .day small{display:block;font:400 .66rem var(--mono);text-transform:uppercase;color:var(--muted)}
@@ -128,6 +128,7 @@ const STEPS={
   Test:["Find your notes and the study guide","Practice questions, first half","Practice questions, second half","Quiz yourself on what you missed"],
   Paper:["Open the doc, write one rough sentence","Outline: your main point and three pieces","Rough draft","Fix it up and proofread"],
   Project:["List every piece of it","Gather what you need","Work on part one","Work on part two","Final check"],
+  Reading:["Read"],
   Homework:["Do it"],
   Other:["Get started","Finish it"]
 };
@@ -146,10 +147,27 @@ const $=s=>document.querySelector(s);
 
 let done=[];          // finished plans
 let t, added=new Set();
-function fresh(){t={name:"",kind:null,due:null,guess:null,cushion:null,steps:[],where:null,spot:"",time:null,color:done.length%5}}
+function fresh(){t={name:"",kind:null,due:null,guess:null,cushion:null,unit:"pages",from:"",to:"",rate:null,steps:[],where:null,spot:"",time:null,color:done.length%5}}
 fresh();
 
+const keyOf=()=>[t.kind,t.guess,t.cushion,t.unit,t.from,t.to,t.rate,t.due].join("|");
+const isRead=()=>t.kind==="Reading";
+function readLeft(){const a=parseInt(t.from,10),b=parseInt(t.to,10);return a>0&&b>=a?b-a+1:0}
+function buildReading(){
+  const left=readLeft(), pages=t.unit==="pages";
+  const due=parse(t.due); let days=Math.round((due-today)/864e5); if(days<1)days=1;
+  const minChunk=pages?10:1;
+  const n=Math.max(1,Math.min(days,Math.ceil(left/minChunk)));
+  const base=Math.floor(left/n), extra=left%n; let at=parseInt(t.from,10);
+  t.steps=[];
+  for(let i=0;i<n;i++){const k=base+(i<extra?1:0);const a=at,b=at+k-1;at=b+1;
+    const title=pages?`Read pp. ${a}–${b}`:(k===1?`Read chapter ${a}`:`Read chapters ${a}–${b}`);
+    const min=pages?Math.max(10,Math.round(k/t.rate*60/5)*5):k*t.rate;
+    t.steps.push({title,min,day:null});}
+}
 function buildSteps(){
+  t.builtKey=keyOf();
+  if(isRead())return buildReading();
   const total=Math.round(t.guess*(t.cushion?1.5:1));
   const names=STEPS[t.kind];t.builtKind=t.kind;
   t.steps=names.map(n=>({title:n,min:0,day:null}));
@@ -185,23 +203,43 @@ const S=[
    <div class="days">${[...Array(14)].map((_,i)=>{const d=addD(today,i),v=iso(d);return `<button type="button" class="day" data-v="${v}" aria-pressed="${v===t.due}" aria-label="${wd(d)} ${md(d)}"><small>${i===0?"today":wd(d)}</small><b>${d.getDate()}</b></button>`}).join("")}</div>
    <p class="note">Further out than two weeks? Pick the last day here and plan the first part now.</p>`},
    after(){document.querySelectorAll(".day").forEach(b=>b.onclick=()=>{const was=step;t.due=b.dataset.v;render();autoNext(was)})}},
- {id:"guess",auto:()=>1,ready:()=>t.guess,draw(){const L=[[30,"30 min"],[60,"1 hour"],[120,"2 hours"],[180,"3 hours"],[300,"5 hours or more"]];return `
+ {id:"reading",skip:()=>!isRead(),ready:()=>readLeft()>0,draw(){const P=t.unit==="pages";return `
+   <span class="kicker">Question 3</span>
+   <h1>How much is left to read?</h1>
+   ${opts([["pages","By pages"],["chapters","By chapters"]],t.unit,null,"big")}
+   <div class="opts" style="align-items:center">
+     <label class="say" for="rf">Start at ${P?"page":"chapter"}</label><input type="number" inputmode="numeric" min="1" id="rf" value="${esc(t.from)}" style="width:6.5em">
+     <label class="say" for="rt">read through ${P?"page":"chapter"}</label><input type="number" inputmode="numeric" min="1" id="rt" value="${esc(t.to)}" style="width:6.5em">
+   </div>
+   <p class="note" id="rleft">${readLeft()?`That’s ${readLeft()} ${P?"pages":(readLeft()===1?"chapter":"chapters")}.`:"Check the last page or chapter your teacher assigned."}</p>`},
+   after(){wire([["pages"],["chapters"]],v=>{if(t.unit!==v){t.unit=v;t.rate=null}});
+     const f=$("#rf"),g=$("#rt"),up=()=>{t.from=f.value;t.to=g.value;const L=readLeft(),P=t.unit==="pages";$("#rleft").textContent=L?`That’s ${L} ${P?"pages":(L===1?"chapter":"chapters")}.`:"Check the last page or chapter your teacher assigned.";navState()};
+     f.oninput=up;g.oninput=up;if(!t.from)f.focus()}},
+ {id:"speed",skip:()=>!isRead(),auto:()=>1,ready:()=>t.rate,draw(){const P=t.unit==="pages";
+   const L=P?[[20,"Slow and careful","about 20 pages an hour"],[30,"Steady","about 30 pages an hour"],[45,"Quick","about 45 pages an hour"]]
+            :[[15,"About 15 minutes"],[30,"About 30 minutes"],[45,"About 45 minutes"],[60,"An hour or more"]];return `
+   <span class="kicker">Question 4</span>
+   <h1>${P?"How fast do you read this kind of book?":"How long does one chapter take you?"}</h1>
+   <p class="say">Your best guess. Textbooks and old novels usually go slower than you think, so lean slow if you’re not sure.</p>
+   ${opts(L,t.rate,null,"big")}`},
+   after(){const P=t.unit==="pages";wire(P?[[20],[30],[45]]:[[15],[30],[45],[60]],v=>t.rate=v)}},
+ {id:"guess",skip:isRead,auto:()=>1,ready:()=>t.guess,draw(){const L=[[30,"30 min"],[60,"1 hour"],[120,"2 hours"],[180,"3 hours"],[300,"5 hours or more"]];return `
    <span class="kicker">Question 3</span>
    <h1>How long will it take, start to finish?</h1>
    <p class="say">Just your gut guess. No wrong answer.</p>
    ${opts(L,t.guess,null,"big")}`},
    after(){wire([[30],[60],[120],[180],[300]],v=>{t.guess=v;t.cushion=null})}},
- {id:"cushion",auto:()=>1,ready:()=>t.cushion!==null,draw(){const after=Math.round(t.guess*1.5);return `
+ {id:"cushion",skip:isRead,auto:()=>1,ready:()=>t.cushion!==null,draw(){const after=Math.round(t.guess*1.5);return `
    <span class="kicker">A quick tip</span>
    <h1>Most people guess low.</h1>
    <p class="say">Even on things they’ve done before. Adding half again usually lands closer to the real time. Your call.</p>
    <div class="bump"><div><span>Your guess</span><b>${fmtMin(t.guess)}</b></div><span aria-hidden="true">→</span><div class="after"><span>With a cushion</span><b>${fmtMin(after)}</b></div></div>
    ${opts([[true,"Add the cushion"],[false,"Keep my guess"]],t.cushion,null,"big")}`},
    after(){wire([[true],[false]],v=>{t.cushion=v;buildSteps()})}},
- {id:"break",ready:()=>true,next:"Looks good",draw(){if(t.builtKind!==t.kind)buildSteps();const tot=t.steps.reduce((a,s)=>a+s.min,0);return `
+ {id:"break",ready:()=>true,next:"Looks good",draw(){if(t.builtKey!==keyOf()){buildSteps();if(t.time)planBack()}const tot=t.steps.reduce((a,s)=>a+s.min,0);return `
    <span class="kicker">Here’s a plan</span>
-   <h1>${t.steps.length>1?`${t.steps.length} short sittings instead of one big one.`:"One sitting should do it."}</h1>
-   <p class="say">${t.steps.length>1?"Short sittings are easier to start, and spreading them out helps it stick. The first one is tiny on purpose. ":""}Tap any step to rename it.</p>
+   <h1>${isRead()?(t.steps.length>1?`About ${Math.round(readLeft()/t.steps.length)} ${t.unit==="pages"?"pages":(Math.round(readLeft()/t.steps.length)===1?"chapter":"chapters")} a day, ${t.steps.length} days.`:"One sitting should do it."):(t.steps.length>1?`${t.steps.length} short sittings instead of one big one.`:"One sitting should do it.")}</h1>
+   <p class="say">${isRead()?`That finishes the day before it’s due, with a little room to spare. `:t.steps.length>1?"Short sittings are easier to start, and spreading them out helps it stick. The first one is tiny on purpose. ":""}Tap any step to rename it.</p>
    <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><input type="text" data-i="${i}" value="${esc(s.title)}" aria-label="Step ${i+1}"><span class="w">${s.min}m${i===0&&TINY[t.kind]?'<span class="tiny">tiny</span>':""}</span></li>`).join("")}</ol>
    <p class="note">About ${fmtMin(tot)} in all.</p>`},
    after(){document.querySelectorAll(".plan input").forEach(n=>n.oninput=()=>t.steps[+n.dataset.i].title=n.value)}},
@@ -225,7 +263,7 @@ const S=[
    <p class="say">I counted back from <b>${wd(parse(t.due))} ${md(parse(t.due))}</b>, one sitting a day. Tap a day to move a sitting earlier or later.</p>
    <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(t.time)} · ${s.min}m</span></span><span style="display:flex;gap:4px"><button type="button" class="mini" data-i="${i}" data-d="-1" aria-label="A day earlier">◀</button><button type="button" class="mini" data-i="${i}" data-d="1" aria-label="A day later">▶</button></span></li>`).join("")}</ol>`},
    after(){document.querySelectorAll(".mini").forEach(b=>b.onclick=()=>{const s=t.steps[+b.dataset.i];let d=addD(parse(s.day),+b.dataset.d);if(d<today)d=today;if(d>parse(t.due))d=parse(t.due);s.day=iso(d);render()})}},
- {id:"send",ready:()=>true,next:"Next",draw(){const first=t.steps[0];return `
+ {id:"send",ready:()=>true,next:"I’ve added them",draw(){const first=t.steps[0];return `
    <span class="kicker">Last step</span>
    <h1>Add each sitting to your calendar.</h1>
    <p class="say">Each button opens Google Calendar with everything filled in. Tap <b>Save</b> there, then come back for the next one.</p>
@@ -239,7 +277,7 @@ const S=[
    <span class="kicker">Nice work</span>
    <h1>That’s on your calendar.</h1>
    <p class="say">Anything else coming up in the next two weeks?</p>
-   ${opts([["again","Plan another one"],["end","I’m done for now"]],null,null,"big")}
+   ${opts([["again","+ Add another assignment"],["end","I’m done for now"]],null,null,"big")}
    <p class="say" style="margin-top:6px"><b>Your next two weeks</b></p>
    <div class="agenda">${days.map(d=>{const v=iso(d);let h="";all.forEach(x=>x.steps.forEach(s=>{if(s.day===v)h+=`<span class="blk t${x.color}">${fmtTime(x.time)} ${esc(x.name)}</span>`}));all.forEach(x=>{if(x.due===v)h+=`<span class="flag">⚑ ${esc(x.name)} due</span>`});return `<div class="ag"><span class="d">${v===iso(today)?"today":wd(d)}<b>${d.getDate()}</b></span><span>${h||'<span class="note">open</span>'}</span></div>`}).join("")}</div>`},
    after(){wire([["again"],["end"]],v=>{if(v==="again"){done.push(t);fresh();step=1}else{step=S.length}})}},
@@ -249,7 +287,9 @@ S.push({id:"bye",ready:()=>true,next:null,draw(){return `
    <h1>Your calendar has it from here.</h1>
    <p class="say">When a reminder pops up, open it and read your plan. The first step is small on purpose. Just start that.</p>
    <p class="say">If you had to move things around a lot, or the week just doesn’t fit, that’s worth a conversation with your advisor.</p>
-   <p class="note">Close this page whenever you like. Nothing here was saved.</p>`}});
+   ${opts([["again","+ Add another assignment"],["over","Start over"]],null,null,"big")}
+   <p class="note">Close this page whenever you like. Nothing here was saved.</p>`},
+   after(){wire([["again"],["over"]],v=>{if(v==="again"){done.push(t);fresh();step=1}else{done=[];added.clear();fresh();step=0}})}});
 
 
 function icsAll(){
@@ -284,9 +324,9 @@ function render(){
 }
 $("#next").onclick=()=>{if(!S[step].ready())return;
   if(S[step].id==="time"||S[step].id==="cushion")planBackIf();
-  step++;render();window.scrollTo({top:0})};
+  step++;while(S[step]&&S[step].skip&&S[step].skip())step++;render();window.scrollTo({top:0})};
 function planBackIf(){if(t.time&&t.steps.length)planBack()}
-$("#back").onclick=()=>{if(step>0){step--;render()}};
+$("#back").onclick=()=>{if(step>0){step--;while(step>0&&S[step].skip&&S[step].skip())step--;render()}};
 render();
 })();
 </script>
