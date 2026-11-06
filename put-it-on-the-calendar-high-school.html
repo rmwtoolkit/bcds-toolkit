@@ -55,6 +55,8 @@ h1{font:800 clamp(1.7rem,6.5vw,2.3rem)/1.08 var(--display);margin:0;text-wrap:ba
 .opts.big .opt{flex:1 1 140px}
 input[type=text],input[type=time],input[type=number]{width:100%;border:2px solid var(--line);border-radius:14px;padding:14px;background:var(--paper);font-size:1.1rem}
 .days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.days.school{grid-template-columns:repeat(5,minmax(0,1fr))}
+#wkdue{white-space:normal;text-align:left}
 .day{border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:8px 0;cursor:pointer;text-align:center;line-height:1.1}
 .day small{display:block;font:400 .66rem var(--mono);text-transform:uppercase;color:var(--muted)}
 .day b{font:800 1.15rem var(--display)}
@@ -169,6 +171,7 @@ const pad=n=>String(n).padStart(2,"0");
 const iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
 const parse=s=>{const[a,b,c]=s.split("-").map(Number);return new Date(a,b-1,c)};
 const today=new Date();today.setHours(0,0,0,0);
+let showWk=false; // due-date picker shows school days unless the student opts in to weekends
 const addD=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
 const wd=d=>d.toLocaleDateString(undefined,{weekday:"short"});
 const md=d=>d.toLocaleDateString(undefined,{month:"short",day:"numeric"});
@@ -179,15 +182,15 @@ const $=s=>document.querySelector(s);
 
 let done=[];          // finished plans
 let t, added=new Set();
-function fresh(){t={name:"",kind:null,due:null,guess:null,cushion:null,unit:"pages",from:"",to:"",rate:null,steps:[],where:null,spot:"",time:null,color:done.length%5}}
+function fresh(){t={name:"",kind:null,due:null,guess:null,cushion:null,unit:"pages",from:"",to:"",rate:null,steps:[],where:null,spot:"",time:null,wtime:null,color:done.length%5}}
 fresh();
 
-const keyOf=()=>[t.kind,t.guess,t.cushion,t.unit,t.from,t.to,t.rate,t.due].join("|");
+const keyOf=()=>[t.kind,t.guess,t.cushion,t.unit,t.from,t.to,t.rate,t.due,isRead()&&t.wtime==="off"].join("|");
 const isRead=()=>t.kind==="Reading";
 function readLeft(){const a=parseInt(t.from,10),b=parseInt(t.to,10);return a>0&&b>=a?b-a+1:0}
 function buildReading(){
   const left=readLeft(), pages=t.unit==="pages";
-  const due=parse(t.due); let days=Math.round((due-today)/864e5); if(days<1)days=1;
+  const due=parse(t.due); let days=0; for(let d=new Date(today);d<due;d=addD(d,1))if(!(t.wtime==="off"&&wk(d)))days++; if(days<1)days=1;
   const minChunk=pages?10:1;
   const n=Math.max(1,Math.min(days,Math.ceil(left/minChunk)));
   const base=Math.floor(left/n), extra=left%n; let at=parseInt(t.from,10);
@@ -206,7 +209,14 @@ function buildSteps(){
   if(TINY[t.kind]&&names.length>1){t.steps[0].min=15;const r=Math.max(15,Math.round((total-15)/(names.length-1)/5)*5);t.steps.slice(1).forEach(s=>s.min=r)}
   else{const e=Math.max(15,Math.round(total/names.length/5)*5);t.steps.forEach(s=>s.min=e)}
 }
-function planBack(){let d=addD(parse(t.due),-1);for(let i=t.steps.length-1;i>=0;i--){if(d<today)d=new Date(today);t.steps[i].day=iso(d);d=addD(d,-1)}}
+const wk=d=>d.getDay()%6===0;
+// school days use t.time; Saturday and Sunday use t.wtime unless the student keeps weekends free
+const timeFor=(s,x=t)=>wk(parse(s.day))&&x.wtime&&x.wtime!=="off"?x.wtime:x.time;
+const hasWeekend=()=>{for(let d=new Date(today);d<parse(t.due);d=addD(d,1))if(wk(d))return true;return false};
+// counts back from the day before it's due, one sitting a day; with weekends free, school days go first
+function planBack(){const off=t.wtime==="off",all=[];for(let d=addD(parse(t.due),-1);d>=today;d=addD(d,-1))all.push(new Date(d));
+  const pick=(off?all.filter(d=>!wk(d)).concat(all.filter(wk)):all).slice(0,t.steps.length).sort((a,b)=>a-b).map(iso);
+  while(pick.length<t.steps.length)pick.unshift(iso(today));t.steps.forEach((s,i)=>s.day=pick[i])}
 const place=()=>t.where==="At school"?(t.spot.trim()||"school"):t.where.toLowerCase();
 
 function opts(list,cur,on,cls=""){
@@ -232,9 +242,12 @@ const S=[
  {id:"due",auto:()=>1,ready:()=>t.due,draw(){return `
    <span class="kicker">Question 2</span>
    <h1>When is ${esc(t.name||"it")} due?</h1>
-   <div class="days">${[...Array(14)].map((_,i)=>{const d=addD(today,i),v=iso(d);return `<button type="button" class="day" data-v="${v}" aria-pressed="${v===t.due}" aria-label="${wd(d)} ${md(d)}"><small>${i===0?"today":wd(d)}</small><b>${d.getDate()}</b></button>`}).join("")}</div>
+   <div class="days${showWk?"":" school"}">${(()=>{const ds=[...Array(showWk?14:15)].map((_,i)=>addD(today,i)).filter(d=>showWk||!wk(d));const pad=showWk||!ds.length?0:ds[0].getDay()-1;
+     return '<span aria-hidden="true"></span>'.repeat(pad)+ds.map(d=>{const v=iso(d);return `<button type="button" class="day" data-v="${v}" aria-pressed="${v===t.due}" aria-label="${wd(d)} ${md(d)}"><small>${v===iso(today)?"today":wd(d)}</small><b>${d.getDate()}</b></button>`}).join("")})()}</div>
+   <p class="note"><button type="button" class="mini" id="wkdue">${showWk?"Hide weekends":"Due on a weekend? Show Saturdays and Sundays"}</button></p>
    <p class="note">Further out than two weeks? Pick the last day here and plan the first part now.</p>`},
-   after(){document.querySelectorAll(".day").forEach(b=>b.onclick=()=>{const was=step;t.due=b.dataset.v;render();autoNext(was)})}},
+   after(){document.querySelectorAll(".day").forEach(b=>b.onclick=()=>{const was=step;t.due=b.dataset.v;render();autoNext(was)});
+     $("#wkdue").onclick=()=>{showWk=!showWk;if(!showWk&&t.due&&wk(parse(t.due)))t.due=null;render()}}},
  {id:"reading",skip:()=>!isRead(),ready:()=>readLeft()>0,draw(){const P=t.unit==="pages";return `
    <span class="kicker">Question 3</span>
    <h1>How much is left to read?</h1>
@@ -284,26 +297,33 @@ const S=[
    after(){wire([["Kitchen table"],["Library"],["My desk"],["At school"]],v=>t.where=v);const s=$("#spot");if(s){s.oninput=()=>{t.spot=s.value;navState()};if(!t.spot)s.focus()}}},
  {id:"time",auto:()=>1,ready:()=>t.time,draw(){const L=[["07:00","Before school","7:00am"],["15:30","After school","3:30pm"],["18:00","After practice","6:00pm"],["19:30","After dinner","7:30pm"]];const custom=t.time&&!L.some(x=>x[0]===t.time);return `
    <span class="kicker">Question 5</span>
-   <h1>What time usually works for you?</h1>
-   <p class="say">Practice, a job, family time, worship, a sibling to pick up: plan around those first. You can change any single day next.</p>
+   <h1>On school days, what time usually works?</h1>
+   <p class="say">Practice, a job, family time, worship, a sibling to pick up: plan around those first. Weekends come next.</p>
    ${opts(L.map(x=>[x[0],x[1],x[2]]),t.time,null,"big")}
    <p class="say">Or pick a time: <input type="time" id="tm" step="300" value="${custom?t.time:""}" style="width:auto;display:inline-block;padding:8px 10px" aria-label="Pick a time"></p>`},
    after(){wire([["07:00"],["15:30"],["18:00"],["19:30"]],v=>{t.time=v;planBack()});const m=$("#tm");m.onchange=()=>{if(m.value){t.time=m.value;planBack();render()}}}},
+ {id:"wtime",skip:()=>!hasWeekend(),auto:()=>1,ready:()=>t.wtime,draw(){const L=[["10:00","Morning","10:00am"],["13:00","Early afternoon","1:00pm"],["16:00","Late afternoon","4:00pm"],["19:00","Evening","7:00pm"],["off","Keep my weekends free","Only school days"]];const custom=t.wtime&&!L.some(x=>x[0]===t.wtime);return `
+   <span class="kicker">Weekends</span>
+   <h1>And on Saturday and Sunday?</h1>
+   <p class="say">Weekends run on a different clock: sleep, games, work, family, worship. Pick what fits yours.</p>
+   ${opts(L.map(x=>[x[0],x[1],x[2]]),t.wtime,null,"big")}
+   <p class="say">Or pick a time: <input type="time" id="wtm" step="300" value="${custom?t.wtime:""}" style="width:auto;display:inline-block;padding:8px 10px" aria-label="Pick a weekend time"></p>`},
+   after(){wire([["10:00"],["13:00"],["16:00"],["19:00"],["off"]],v=>{t.wtime=v;if(isRead())buildSteps();planBack()});const m=$("#wtm");m.onchange=()=>{if(m.value){t.wtime=m.value;if(isRead())buildSteps();planBack();render()}}}},
  {id:"days",ready:()=>true,next:"Looks good",draw(){return `
    <span class="kicker">Your plan</span>
    <h1>Done the day before it’s due.</h1>
    <p class="say">I counted back from <b>${wd(parse(t.due))} ${md(parse(t.due))}</b>, one sitting a day. Tap a day to move a sitting earlier or later.</p>
-   <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(t.time)} · ${s.min}m</span></span><span style="display:flex;gap:4px"><button type="button" class="mini" data-i="${i}" data-d="-1" aria-label="A day earlier">◀</button><button type="button" class="mini" data-i="${i}" data-d="1" aria-label="A day later">▶</button></span></li>`).join("")}</ol>`},
+   <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(timeFor(s))} · ${s.min}m</span></span><span style="display:flex;gap:4px"><button type="button" class="mini" data-i="${i}" data-d="-1" aria-label="A day earlier">◀</button><button type="button" class="mini" data-i="${i}" data-d="1" aria-label="A day later">▶</button></span></li>`).join("")}</ol>`},
    after(){document.querySelectorAll(".mini").forEach(b=>b.onclick=()=>{const s=t.steps[+b.dataset.i];let d=addD(parse(s.day),+b.dataset.d);if(d<today)d=today;if(d>parse(t.due))d=parse(t.due);s.day=iso(d);render()})}},
  {id:"send",ready:()=>true,next:"I’ve added them",draw(){const first=t.steps[0];return `
    <span class="kicker">Last step</span>
    <h1>Add each sitting to your calendar.</h1>
    <p class="say">Each button opens Google Calendar with everything filled in. Tap <b>Save</b> there, then come back for the next one.</p>
    <p class="note"><b>Want an email reminder too?</b> In Google Calendar, tap the event’s notification and pick Email.</p>
-   <ol class="plan t${t.color}">${t.steps.map((s,i)=>{const k=t.name+i;return `<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(t.time)}</span></span><a class="go ${added.has(k)?"done":""}" data-k="${esc(k)}" href="${gcal(s)}" target="_blank" rel="noopener">${added.has(k)?"Added ✓":"Add"}</a></li>`}).join("")}</ol>
+   <ol class="plan t${t.color}">${t.steps.map((s,i)=>{const k=t.name+i;return `<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(timeFor(s))}</span></span><a class="go ${added.has(k)?"done":""}" data-k="${esc(k)}" href="${gcal(s)}" target="_blank" rel="noopener">${added.has(k)?"Added ✓":"Add"}</a></li>`}).join("")}</ol>
    <p class="note">Use Apple or Outlook? <button type="button" class="mini" id="ics">Get one calendar file</button> It adds all of them, each with a 10-minute heads-up.</p>
    <p class="say">Inside each event you’ll find your plan:</p>
-   <div class="ifthen">“If it’s ${fmtTime(t.time)} and I’m at ${esc(place())}, I start with: ${esc(first.title.toLowerCase())}.”</div>`},
+   <div class="ifthen">“If it’s ${fmtTime(timeFor(first))} and I’m at ${esc(place())}, I start with: ${esc(first.title.toLowerCase())}.”</div>`},
    after(){document.querySelectorAll(".go").forEach(a=>a.onclick=()=>{added.add(a.dataset.k);setTimeout(render,60)});$("#ics").onclick=icsAll}},
  {id:"more",ready:()=>true,next:null,draw(){const all=[...done,t];const last=all.reduce((m,x)=>x.due>m?x.due:m,iso(addD(today,6)));const days=[];for(let d=new Date(today);iso(d)<=last;d=addD(d,1))days.push(new Date(d));return `
    <span class="kicker">Nice work</span>
@@ -335,10 +355,10 @@ function icsAll(){
   const a=document.createElement("a");a.href="data:text/calendar;charset=utf-8,"+encodeURIComponent(out.join("\r\n"));a.download="my-plan.ics";document.body.append(a);a.click();a.remove();
 }
 function gcal(s){
-  const [h,m]=t.time.split(":").map(Number);const st=parse(s.day);st.setHours(h,m);const en=new Date(st.getTime()+s.min*60000);
+  const [h,m]=timeFor(s).split(":").map(Number);const st=parse(s.day);st.setHours(h,m);const en=new Date(st.getTime()+s.min*60000);
   const f=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"T"+pad(d.getHours())+pad(d.getMinutes())+"00";
   const q=new URLSearchParams({action:"TEMPLATE",text:`${t.name}: ${s.title}`,dates:f(st)+"/"+f(en),
-    details:`If it's ${fmtTime(t.time)} and I'm at ${place()}, I start with: ${s.title}.\n\n${t.name} is due ${wd(parse(t.due))} ${md(parse(t.due))}.`,location:place()});
+    details:`If it's ${fmtTime(timeFor(s))} and I'm at ${place()}, I start with: ${s.title}.\n\n${t.name} is due ${wd(parse(t.due))} ${md(parse(t.due))}.`,location:place()});
   try{q.set("ctz",Intl.DateTimeFormat().resolvedOptions().timeZone)}catch(e){}
   return "https://calendar.google.com/calendar/render?"+q.toString();
 }
@@ -355,7 +375,7 @@ function render(){
   const nx=$("#next");nx.hidden=sc.next===null;nx.textContent=sc.next||"Next";navState();if(window.instShow)instShow(sc.id);
 }
 $("#next").onclick=()=>{if(!S[step].ready())return;
-  if(S[step].id==="time"||S[step].id==="cushion")planBackIf();
+  if(S[step].id==="time"||S[step].id==="wtime"||S[step].id==="cushion")planBackIf();
   step++;while(S[step]&&S[step].skip&&S[step].skip())step++;render();window.scrollTo({top:0})};
 function planBackIf(){if(t.time&&t.steps.length)planBack()}
 $("#back").onclick=()=>{if(step>0){step--;while(step>0&&S[step].skip&&S[step].skip())step--;render()}};
