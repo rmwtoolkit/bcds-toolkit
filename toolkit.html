@@ -123,6 +123,11 @@ ul.topics .when { display:block; font:700 .72rem/1 'Sans', system-ui, sans-serif
 .gpanel #gp-list li > .l { flex:1 0 100%; flex-wrap:wrap; padding-left:2.2rem; }
 .order { margin-left:auto; }
 .order { display:inline-flex; gap:6px; } .order button:disabled { opacity:.35; cursor:default; }
+.top button.edit-top { margin-left:auto; font:600 .74rem/1 'Sans', system-ui, sans-serif; letter-spacing:.06em; text-transform:uppercase; color:var(--school); background:#fff; border:1.5px solid var(--school); border-radius:999px; padding:7px 12px; cursor:pointer; white-space:nowrap; }
+.top button.edit-top[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+.top button.edit-top:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+.top button.edit-top + a { margin-left:14px; }
+@media (max-width:520px) { .top { flex-wrap:wrap; } .top > span:nth-of-type(2) { flex:1 1 auto; } .top button.edit-top + a { margin-left:auto; } }
 button.linkish { font:inherit; color:var(--soft); background:none; border:0; padding:0; text-decoration:underline; text-underline-offset:2px; cursor:pointer; }
 body.editing .gpanel { border-color:var(--accent); }
 .gpanel .empty { color:var(--soft); margin:8px 0; }
@@ -160,7 +165,7 @@ body.searching .hide-when-searching { display:none; }@media print { .searchbox, 
 </head>
 <body>
 <div class="wrap">
-<header class="top"><span id="school-mark">B</span><span>Beaver &middot; Counseling</span><a href="index.html">What students see &rarr;</a></header>
+<header class="top"><span id="school-mark">B</span><span>Beaver &middot; Counseling</span><button type="button" id="edit-toggle" class="edit-top">Edit grade lists</button><a href="index.html">What students see &rarr;</a></header>
 <main>
 <h1>Beaver Student Toolkit</h1>
 <p class="dek">Wellness and social-emotional learning lessons for Beaver classes, advisories and counselors. Search, pick your grade, or browse by topic.</p>
@@ -174,7 +179,6 @@ body.searching .hide-when-searching { display:none; }@media print { .searchbox, 
 <details class="more us"><summary>New here? How a lesson works</summary><div class="how"><div><span class="n">1</span><b>Pick a lesson.</b><span>From your grade, a topic, or a search.</span></div><div><span class="n">2</span><b>Open lesson.</b><span>Slides and teacher notes in your browser. Arrow keys or a clicker move the slides, and N shows your notes. Download PowerPoint if you&rsquo;d rather edit it.</span></div><div><span class="n">3</span><b>Share with student.</b><span>A link, text, email or QR code. Students don&rsquo;t log in, the link doesn&rsquo;t expire, and every page lists who to talk to.</span></div></div></details>
 <p class="foot">Student pages save and send nothing. Every lesson includes a teacher page on culture, family, identity, ability and money. <a href="how-this-was-made.html">How this toolkit was made</a></p>
 <p class="ask">Questions, or not sure which lesson fits? Talk to Dr. Wilson or Ms. Garcia.</p>
-<p class="foot"><button type="button" id="edit-toggle" class="linkish">Counselors: edit grade lists</button></p>
 </main></div>
 <dialog class="send" id="send" aria-labelledby="send-title">
 <h3 id="send-title">Share this page</h3>
@@ -2524,7 +2528,7 @@ const mk=(txt,cls,fn,label)=>{const x=document.createElement("button");x.type="b
 let openB=null;   // the lesson whose grade chooser is open
 function render(){
  document.body.classList.toggle("editing",EDIT);
- $("#edit-toggle").textContent=EDIT?"Done editing grade lists":"Counselors: edit grade lists";
+ $("#edit-toggle").textContent=EDIT?"Done editing":"Edit grade lists";$("#edit-toggle").setAttribute("aria-pressed",String(EDIT));
  $$(".gv button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.gv===grade)));
  const p=$("#gpanel");p.hidden=!grade;
  $$("#library button.pick, #library .chooser").forEach(x=>x.remove());
@@ -2555,7 +2559,7 @@ function render(){
 }
 $$(".gv button").forEach(x=>x.addEventListener("click",()=>{grade=grade===x.dataset.gv?null:x.dataset.gv;store.set("bcds-grade-pick",grade);render();
  if(grade)$("#gpanel").scrollIntoView({block:"nearest"});}));
-$("#edit-toggle").onclick=()=>{EDIT=!EDIT;store.set("bcds-edit",EDIT);if(!EDIT&&location.hash==="#counselor")history.replaceState(null,"",location.pathname+location.search);openB=null;render();if(EDIT&&!grade)$(".gv").scrollIntoView({block:"center"});};
+$("#edit-toggle").onclick=()=>{EDIT=!EDIT;store.set("bcds-edit",EDIT);if(!EDIT&&location.hash==="#counselor")history.replaceState(null,"",location.pathname+location.search);openB=null;render();if(EDIT)$(".gv").scrollIntoView({block:"center"});};
 $("#gp-reset").onclick=()=>{store.set("bcds-draft-"+grade,null);render();};
 $("#gp-send").onclick=async()=>{const txt=NAMES[grade]+" grade list, in order:\n"+listFor(grade).map(([b],i)=>(i+1)+". "+rowOf(b).querySelector("b").textContent+" ("+b+")").join("\n");
  let ok=false;try{await navigator.clipboard.writeText(txt);ok=true}catch(e){}
