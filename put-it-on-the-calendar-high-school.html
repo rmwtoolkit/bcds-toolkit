@@ -55,6 +55,14 @@ h1{font:800 clamp(1.7rem,6.5vw,2.3rem)/1.08 var(--display);margin:0;text-wrap:ba
 .opts.big .opt{flex:1 1 140px}
 input[type=text],input[type=time],input[type=number]{width:100%;border:2px solid var(--line);border-radius:14px;padding:14px;background:var(--paper);font-size:1.1rem}
 .days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.opt.parts{border-style:dashed}
+ol.parts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+ol.parts li{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--paper);display:grid;gap:8px}
+.chips{display:flex;gap:6px}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:7px 4px;font-weight:700;cursor:pointer;flex:1;min-width:0}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.total{margin-top:10px;font-size:1.05rem}
+.total b{font:800 1.4rem var(--display)}
 .days.school{grid-template-columns:repeat(5,minmax(0,1fr))}
 #wkdue{white-space:normal;text-align:left}
 .day{border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:8px 0;cursor:pointer;text-align:center;line-height:1.1}
@@ -158,14 +166,18 @@ details.sources ul{padding-left:1.2em;display:grid;gap:4px}
 
 <script>
 (function(){
+const KIND_WORD={Test:"test you studied for",Paper:"paper you wrote",Project:"project you did",Homework:"homework set",Other:"thing"};
 const STEPS={
   Test:["Find your notes and the study guide","Practice questions, first half","Practice questions, second half","Quiz yourself on what you missed"],
-  Paper:["Open the doc, write one rough sentence","Outline: your main point and three pieces","Rough draft","Fix it up and proofread"],
-  Project:["List every piece of it","Gather what you need","Work on part one","Work on part two","Final check"],
+  // a full paper (history research, English essay): the pieces teachers grade separately
+  Paper:["Read the prompt and rubric","Find evidence: sources or quotes","Thesis and outline","Draft the body paragraphs","Intro and conclusion","Revise: does it prove your thesis?","Proofread and cite"],
+  Project:["Map out the pieces","Gather what you need","Make the biggest piece","Make the other pieces","Check it against the rubric"],
   Reading:["Read"],
   Homework:["Do it"],
   Other:["Get started","Finish it"]
 };
+// a short paper (two hours or less, cushion included) keeps four pieces so no sitting is padded
+const PAPER_SHORT=["Open the doc, write one rough sentence","Outline: your main point and three pieces","Rough draft","Fix it up and proofread"];
 const TINY={Test:1,Paper:1,Project:1};
 const pad=n=>String(n).padStart(2,"0");
 const iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
@@ -182,10 +194,10 @@ const $=s=>document.querySelector(s);
 
 let done=[];          // finished plans
 let t, added=new Set();
-function fresh(){t={name:"",kind:null,due:null,guess:null,cushion:null,unit:"pages",from:"",to:"",rate:null,steps:[],where:null,spot:"",time:null,wtime:null,color:done.length%5}}
+function fresh(){t={name:"",kind:null,due:null,guess:null,cushion:null,unit:"pages",from:"",to:"",rate:null,steps:[],where:null,spot:"",other:"",time:null,wtime:null,byParts:false,partMins:[],partNames:[],color:done.length%5}}
 fresh();
 
-const keyOf=()=>[t.kind,t.guess,t.cushion,t.unit,t.from,t.to,t.rate,t.due,isRead()&&t.wtime==="off"].join("|");
+const keyOf=()=>[t.kind,t.guess,t.byParts&&t.partMins.join(","),t.byParts&&t.partNames.join("~"),t.cushion,t.unit,t.from,t.to,t.rate,t.due,isRead()&&t.wtime==="off"].join("|");
 const isRead=()=>t.kind==="Reading";
 function readLeft(){const a=parseInt(t.from,10),b=parseInt(t.to,10);return a>0&&b>=a?b-a+1:0}
 function buildReading(){
@@ -204,8 +216,11 @@ function buildSteps(){
   t.builtKey=keyOf();
   if(isRead())return buildReading();
   const total=Math.round(t.guess*(t.cushion?1.5:1));
-  const names=STEPS[t.kind];t.builtKind=t.kind;
+  const names=t.kind==="Paper"&&!t.byParts&&total<=120?PAPER_SHORT:STEPS[t.kind];t.builtKind=t.kind;
   t.steps=names.map(n=>({title:n,min:0,day:null}));
+  // part by part: each piece keeps its own estimate; a piece over 75 minutes becomes sittings of an hour or less
+  if(t.byParts&&t.partMins.length===names.length){t.steps=[];names.forEach((n0,i)=>{const n=(t.partNames[i]||"").trim()||n0;const m=Math.max(15,Math.round(t.partMins[i]*(t.cushion?1.5:1)/5)*5);
+    const k=m>75?Math.ceil(m/60):1;for(let j=0;j<k;j++)t.steps.push({title:k>1?`${n} (${j+1} of ${k})`:n,min:Math.max(15,Math.round(m/k/5)*5),day:null})});return}
   if(TINY[t.kind]&&names.length>1){t.steps[0].min=15;const r=Math.max(15,Math.round((total-15)/(names.length-1)/5)*5);t.steps.slice(1).forEach(s=>s.min=r)}
   else{const e=Math.max(15,Math.round(total/names.length/5)*5);t.steps.forEach(s=>s.min=e)}
 }
@@ -214,10 +229,14 @@ const wk=d=>d.getDay()%6===0;
 const timeFor=(s,x=t)=>wk(parse(s.day))&&x.wtime&&x.wtime!=="off"?x.wtime:x.time;
 const hasWeekend=()=>{for(let d=new Date(today);d<parse(t.due);d=addD(d,1))if(wk(d))return true;return false};
 // counts back from the day before it's due, one sitting a day; with weekends free, school days go first
+// more sittings than days left: join the two shortest neighbors until each day has one sitting
+function fit(n){while(t.steps.length>Math.max(1,n)){let bi=0,bm=1e9;for(let i=0;i<t.steps.length-1;i++){const m=t.steps[i].min+t.steps[i+1].min;if(m<bm){bm=m;bi=i}}
+  const a=t.steps[bi],b=t.steps[bi+1];t.steps.splice(bi,2,{title:a.title+" + "+b.title,min:a.min+b.min,day:null})}}
 function planBack(){const off=t.wtime==="off",all=[];for(let d=addD(parse(t.due),-1);d>=today;d=addD(d,-1))all.push(new Date(d));
+  fit(all.length);
   const pick=(off?all.filter(d=>!wk(d)).concat(all.filter(wk)):all).slice(0,t.steps.length).sort((a,b)=>a-b).map(iso);
   while(pick.length<t.steps.length)pick.unshift(iso(today));t.steps.forEach((s,i)=>s.day=pick[i])}
-const place=()=>t.where==="At school"?(t.spot.trim()||"school"):t.where.toLowerCase();
+const place=()=>t.where==="At school"?(t.spot.trim()||"school"):t.where==="Somewhere else"?(t.other.trim()||"my spot"):t.where.toLowerCase();
 
 function opts(list,cur,on,cls=""){
   return `<div class="opts ${cls}">`+list.map(([v,l,sub],i)=>`<button type="button" class="opt" data-i="${i}" aria-pressed="${v===cur}">${esc(l)}${sub?`<small>${esc(sub)}</small>`:""}</button>`).join("")+"</div>";
@@ -268,33 +287,48 @@ const S=[
    <p class="say">Your best guess. Textbooks and old novels usually go slower than you think, so lean slow if you’re not sure.</p>
    ${opts(L,t.rate,null,"big")}`},
    after(){const P=t.unit==="pages";wire(P?[[20],[30],[45]]:[[15],[30],[45],[60]],v=>t.rate=v)}},
- {id:"guess",skip:isRead,auto:()=>1,ready:()=>t.guess,draw(){const L=[[30,"30 min"],[60,"1 hour"],[120,"2 hours"],[180,"3 hours"],[300,"5 hours or more"]];return `
+ {id:"guess",skip:isRead,auto:()=>!t.byParts,ready:()=>t.guess||t.byParts,draw(){const L=[[30,"30 min"],[60,"1 hour"],[120,"2 hours"],[180,"3 hours"],[300,"5 hours or more"]];
+   const parts=STEPS[t.kind].length>1;return `
    <span class="kicker">Question 3</span>
    <h1>How long will it take, start to finish?</h1>
-   <p class="say">Just your gut guess. No wrong answer.</p>
-   ${opts(L,t.guess,null,"big")}`},
-   after(){wire([[30],[60],[120],[180],[300]],v=>{t.guess=v;t.cushion=null})}},
- {id:"cushion",skip:isRead,auto:()=>1,ready:()=>t.cushion!==null,draw(){const after=Math.round(t.guess*1.5);return `
+   <p class="say">Think of the last ${esc(KIND_WORD[t.kind]||"one")} like this. How long did it <b>really</b> take? Use that, not the best case. If your teacher said how long it should take, start there.</p>
+   ${opts(L,t.byParts?null:t.guess,null,"big")}
+   ${parts?`<div class="opts big"><button type="button" class="opt parts" id="byparts" aria-pressed="${t.byParts}">🧩 Not sure? Add it up part by part<small>Smaller pieces are easier to guess</small></button></div>`:""}`},
+   after(){wire([[30],[60],[120],[180],[300]],v=>{t.guess=v;t.byParts=false;t.cushion=null});
+     const b=$("#byparts");if(b)b.onclick=()=>{t.byParts=true;t.guess=null;t.cushion=null;if(t.partMins.length!==STEPS[t.kind].length||t.partKind!==t.kind){t.partMins=STEPS[t.kind].map(()=>0);t.partNames=[...STEPS[t.kind]];t.partKind=t.kind}render();$("#next").click()}}},
+ {id:"parts",skip:()=>isRead()||!t.byParts,ready:()=>t.partMins.length&&t.partMins.every(m=>m>0),next:"That’s my estimate",draw(){const C=[15,30,45,60,120];const sum=t.partMins.reduce((a,b)=>a+b,0);return `
+   <span class="kicker">Part by part</span>
+   <h1>How long for each piece?</h1>
+   <p class="say">Picture yourself doing each one, then tap a time. </p>
+   <p class="note">✏️ <b>Yours has different pieces?</b> Tap any name to change it.</p>
+   <ol class="parts">${t.partNames.map((n,i)=>`<li><input type="text" class="pname" data-i="${i}" value="${esc(n)}" aria-label="Piece ${i+1}"><span class="chips">${C.map(c=>`<button type="button" class="chip" data-i="${i}" data-m="${c}" aria-pressed="${t.partMins[i]===c}">${c<60?c+"m":c/60+"h"}</button>`).join("")}</span></li>`).join("")}</ol>
+   <div class="total">${sum?`Adds up to <b>${fmtMin(sum)}</b>`:"Your total shows up here"}</div>`},
+   after(){document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{t.partMins[+c.dataset.i]=+c.dataset.m;t.cushion=null;render()});
+     document.querySelectorAll(".pname").forEach(n=>n.oninput=()=>{t.partNames[+n.dataset.i]=n.value})}},
+ {id:"cushion",skip:()=>isRead()||(t.byParts&&!t.partMins.every(m=>m>0)),auto:()=>1,ready:()=>t.cushion!==null,draw(){const after=Math.round(t.guess*1.5);return `
    <span class="kicker">A quick tip</span>
    <h1>Most people guess low.</h1>
-   <p class="say">Even on things they’ve done before. Adding half again usually lands closer to the real time. Your call.</p>
+   <p class="say">${t.byParts?"Adding it up piece by piece already helps. Still, setup, breaks and getting stuck take time too.":"Even on things they’ve done before."} Adding half again usually lands closer to the real time. Your call.</p>
    <div class="bump"><div><span>Your guess</span><b>${fmtMin(t.guess)}</b></div><span aria-hidden="true">→</span><div class="after"><span>With a cushion</span><b>${fmtMin(after)}</b></div></div>
    ${opts([[true,"Add the cushion"],[false,"Keep my guess"]],t.cushion,null,"big")}`},
    after(){wire([[true],[false]],v=>{t.cushion=v;buildSteps()})}},
- {id:"break",ready:()=>true,next:"Looks good",draw(){if(t.builtKey!==keyOf()){buildSteps();if(t.time)planBack()}const tot=t.steps.reduce((a,s)=>a+s.min,0);return `
+ {id:"break",ready:()=>true,next:"Looks good",draw(){if(t.builtKey!==keyOf()){buildSteps();fit(Math.round((parse(t.due)-today)/864e5));if(t.time)planBack()}const tot=t.steps.reduce((a,s)=>a+s.min,0);return `
    <span class="kicker">Here’s a plan</span>
    <h1>${isRead()?(t.steps.length>1?`About ${Math.round(readLeft()/t.steps.length)} ${t.unit==="pages"?"pages":(Math.round(readLeft()/t.steps.length)===1?"chapter":"chapters")} a day, ${t.steps.length} days.`:"One sitting should do it."):(t.steps.length>1?`${t.steps.length} short sittings instead of one big one.`:"One sitting should do it.")}</h1>
-   <p class="say">${isRead()?`That finishes the day before it’s due, with a little room to spare. `:t.steps.length>1?"Short sittings are easier to start, and spreading them out helps it stick. The first one is tiny on purpose. ":""}Tap any step to rename it.</p>
-   <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><input type="text" data-i="${i}" value="${esc(s.title)}" aria-label="Step ${i+1}"><span class="w">${s.min}m${i===0&&TINY[t.kind]?'<span class="tiny">tiny</span>':""}</span></li>`).join("")}</ol>
+   <p class="say">${isRead()?`That finishes the day before it’s due, with a little room to spare. `:t.steps.length>1?"Short sittings are easier to start, and spreading them out helps it stick. The first one is tiny on purpose.":""}</p>
+   <p class="note">✏️ <b>Want different names?</b> Tap any step to rename it, like “Build the bridge model.”</p>
+   <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><input type="text" data-i="${i}" value="${esc(s.title)}" aria-label="Step ${i+1}"><span class="w">${s.min}m${i===0&&TINY[t.kind]&&!t.byParts?'<span class="tiny">tiny</span>':""}</span></li>`).join("")}</ol>
    <p class="note">About ${fmtMin(tot)} in all.</p>`},
    after(){document.querySelectorAll(".plan input").forEach(n=>n.oninput=()=>t.steps[+n.dataset.i].title=n.value)}},
- {id:"where",auto:()=>t.where!=="At school",ready:()=>t.where&&(t.where!=="At school"||t.spot.trim()),draw(){const L=[["Kitchen table","Kitchen table"],["Library","Library"],["My desk","My desk"],["At school","At school"]];return `
+ {id:"where",auto:()=>t.where!=="At school"&&t.where!=="Somewhere else",ready:()=>t.where&&(t.where!=="At school"||t.spot.trim())&&(t.where!=="Somewhere else"||t.other.trim()),draw(){const L=[["Kitchen table","Kitchen table"],["Library","Library"],["My desk","My desk"],["At school","At school"],["Somewhere else","Somewhere else"]];return `
    <span class="kicker">Question 4</span>
    <h1>Where will you do it?</h1>
    <p class="say">Picking a spot ahead of time means one less thing to decide when it’s time to start.</p>
    ${opts(L,t.where,null,"big")}
-   ${t.where==="At school"?`<p class="say"><b>Where and when at school?</b></p><input type="text" id="spot" placeholder="e.g. library during lunch or E block" value="${esc(t.spot)}">`:""}`},
-   after(){wire([["Kitchen table"],["Library"],["My desk"],["At school"]],v=>t.where=v);const s=$("#spot");if(s){s.oninput=()=>{t.spot=s.value;navState()};if(!t.spot)s.focus()}}},
+   ${t.where==="At school"?`<p class="say"><b>Where and when at school?</b></p><input type="text" id="spot" placeholder="e.g. library during lunch or E block" value="${esc(t.spot)}">`:""}
+   ${t.where==="Somewhere else"?`<p class="say"><b>Where?</b></p><input type="text" id="other" placeholder="e.g. the studio, a friend’s house, the coffee shop" value="${esc(t.other)}">`:""}`},
+   after(){wire([["Kitchen table"],["Library"],["My desk"],["At school"],["Somewhere else"]],v=>t.where=v);const s=$("#spot");if(s){s.oninput=()=>{t.spot=s.value;navState()};if(!t.spot)s.focus()}
+     const o=$("#other");if(o){o.oninput=()=>{t.other=o.value;navState()};if(!t.other)o.focus()}}},
  {id:"time",auto:()=>1,ready:()=>t.time,draw(){const L=[["07:00","Before school","7:00am"],["15:30","After school","3:30pm"],["18:00","After practice","6:00pm"],["19:30","After dinner","7:30pm"]];const custom=t.time&&!L.some(x=>x[0]===t.time);return `
    <span class="kicker">Question 5</span>
    <h1>On school days, what time usually works?</h1>
@@ -313,6 +347,7 @@ const S=[
    <span class="kicker">Your plan</span>
    <h1>Done the day before it’s due.</h1>
    <p class="say">I counted back from <b>${wd(parse(t.due))} ${md(parse(t.due))}</b>, one sitting a day. Tap a day to move a sitting earlier or later.</p>
+   ${t.steps.some(s=>s.min>90)?`<p class="note"><b>Some sittings are long</b> because there aren’t many days left. If that won’t work, check in with your teacher or advisor about the timeline.</p>`:""}
    <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><span><b>${esc(s.title)}</b><span class="w">${wd(parse(s.day))} ${md(parse(s.day))} · ${fmtTime(timeFor(s))} · ${s.min}m</span></span><span style="display:flex;gap:4px"><button type="button" class="mini" data-i="${i}" data-d="-1" aria-label="A day earlier">◀</button><button type="button" class="mini" data-i="${i}" data-d="1" aria-label="A day later">▶</button></span></li>`).join("")}</ol>`},
    after(){document.querySelectorAll(".mini").forEach(b=>b.onclick=()=>{const s=t.steps[+b.dataset.i];let d=addD(parse(s.day),+b.dataset.d);if(d<today)d=today;if(d>parse(t.due))d=parse(t.due);s.day=iso(d);render()})}},
  {id:"send",ready:()=>true,next:"I’ve added them",draw(){const first=t.steps[0];return `
@@ -338,19 +373,21 @@ S.push({id:"bye",ready:()=>true,next:null,draw(){return `
    <span class="kicker">All set</span>
    <h1>Your calendar has it from here.</h1>
    <p class="say">When a reminder pops up, open it and read your plan. The first step is small on purpose. Just start that.</p>
+   <p class="say">⏱ <b>One habit that helps:</b> start a timer when you sit down. Next time you plan, you’ll know how long things really take.</p>
    <p class="say">If you had to move things around a lot, or the week just doesn’t fit, that’s worth a conversation with your advisor.</p>
    ${opts([["again","+ Add another assignment"],["over","Start over"]],null,null,"big")}
    <p class="note">Close this page whenever you like. Nothing here was saved.</p>`},
    after(){wire([["again"],["over"]],v=>{if(v==="again"){done.push(t);fresh();step=1}else{done=[];added.clear();fresh();step=0}})}});
 
+const CALIBRATE=s=>"\n\nPlanned: "+fmtMin(s.min)+". Start a timer when you begin. When you stop, check how long it really took. That's your number for next time.";
 
 function icsAll(){
   const f=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"T"+pad(d.getHours())+pad(d.getMinutes())+"00";
   const e=x=>String(x).replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\;");
   const stamp=f(new Date());const out=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Student Toolkit//Put It on the Calendar//EN"];
-  t.steps.forEach((s,i)=>{const [h,m]=t.time.split(":").map(Number);const st=parse(s.day);st.setHours(h,m);const en=new Date(st.getTime()+s.min*60000);
+  t.steps.forEach((s,i)=>{const [h,m]=timeFor(s).split(":").map(Number);const st=parse(s.day);st.setHours(h,m);const en=new Date(st.getTime()+s.min*60000);
     out.push("BEGIN:VEVENT","UID:"+stamp+"-"+i+"@student-toolkit","DTSTAMP:"+stamp,"DTSTART:"+f(st),"DTEND:"+f(en),"SUMMARY:"+e(t.name+": "+s.title),"LOCATION:"+e(place()),
-      "DESCRIPTION:"+e("If it's "+fmtTime(t.time)+" and I'm at "+place()+", I start with: "+s.title+"."),"BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+e(s.title),"TRIGGER:-PT10M","END:VALARM","END:VEVENT")});
+      "DESCRIPTION:"+e("If it's "+fmtTime(timeFor(s))+" and I'm at "+place()+", I start with: "+s.title+"."+(typeof CALIBRATE!=="undefined"?CALIBRATE(s):"")),"BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+e(s.title),"TRIGGER:-PT10M","END:VALARM","END:VEVENT")});
   out.push("END:VCALENDAR");
   const a=document.createElement("a");a.href="data:text/calendar;charset=utf-8,"+encodeURIComponent(out.join("\r\n"));a.download="my-plan.ics";document.body.append(a);a.click();a.remove();
 }
@@ -358,7 +395,7 @@ function gcal(s){
   const [h,m]=timeFor(s).split(":").map(Number);const st=parse(s.day);st.setHours(h,m);const en=new Date(st.getTime()+s.min*60000);
   const f=d=>d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"T"+pad(d.getHours())+pad(d.getMinutes())+"00";
   const q=new URLSearchParams({action:"TEMPLATE",text:`${t.name}: ${s.title}`,dates:f(st)+"/"+f(en),
-    details:`If it's ${fmtTime(timeFor(s))} and I'm at ${place()}, I start with: ${s.title}.\n\n${t.name} is due ${wd(parse(t.due))} ${md(parse(t.due))}.`,location:place()});
+    details:`If it's ${fmtTime(timeFor(s))} and I'm at ${place()}, I start with: ${s.title}.${CALIBRATE(s)}\n\n${t.name} is due ${wd(parse(t.due))} ${md(parse(t.due))}.`,location:place()});
   try{q.set("ctz",Intl.DateTimeFormat().resolvedOptions().timeZone)}catch(e){}
   return "https://calendar.google.com/calendar/render?"+q.toString();
 }
@@ -375,6 +412,7 @@ function render(){
   const nx=$("#next");nx.hidden=sc.next===null;nx.textContent=sc.next||"Next";navState();if(window.instShow)instShow(sc.id);
 }
 $("#next").onclick=()=>{if(!S[step].ready())return;
+  if(S[step].id==="parts")t.guess=t.partMins.reduce((a,b)=>a+b,0);
   if(S[step].id==="time"||S[step].id==="wtime"||S[step].id==="cushion")planBackIf();
   step++;while(S[step]&&S[step].skip&&S[step].skip())step++;render();window.scrollTo({top:0})};
 function planBackIf(){if(t.time&&t.steps.length)planBack()}
