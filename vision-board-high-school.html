@@ -55,6 +55,21 @@ button{font:inherit;cursor:pointer}
 
 /* spoke chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px}
+.mebox{display:flex;flex-direction:column;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px}
+.mebox label{font-weight:700}
+.parts{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.parts li{display:inline-flex;align-items:center;gap:4px;padding:4px 6px 4px 12px;border-radius:999px;background:color-mix(in srgb,var(--gold) 22%,var(--card));border:1.5px solid var(--gold);font-weight:600}
+.parts li button{border:0;background:none;color:var(--soft);font-size:1.1rem;line-height:1;padding:0 4px;border-radius:6px}
+.wheel .ring{fill:none;stroke:var(--gold);stroke-width:26;opacity:.28}
+.wheel .ringtxt{font-family:var(--body);font-weight:700;font-size:13px;letter-spacing:.04em;fill:var(--ink)}
+.links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.links li{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1.5px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:8px 8px 8px 12px}
+.links li div{flex:1;min-width:0}.links li b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.links li span{font-family:var(--display);font-weight:600;overflow-wrap:anywhere}
+.links li button{border:0;background:none;color:var(--soft);font-size:1.3rem;line-height:1;padding:2px 6px;border-radius:6px}
+.lnk{fill:none;stroke:var(--gold);stroke-width:5;stroke-linecap:round;stroke-dasharray:1 11;opacity:.95}
+.lnkdot{fill:var(--gold)}
+.collage .strings{position:absolute;inset:0;width:100%;height:100%;z-index:-500;pointer-events:none;overflow:visible}
 .picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
 .chip.pick{border-radius:12px;padding:10px 12px;text-align:left;display:flex;flex-direction:column;gap:3px;font-size:15px;line-height:1.3}
 .chip.pick .pk{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;opacity:.85}
@@ -227,7 +242,7 @@ details[open] summary{margin-bottom:8px}
 .note{background:var(--wash);border-radius:12px;padding:12px 14px;font-size:14px}
 /* one step at a time */
 .stepbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0 8px;margin:0 -2px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--line)}
-.stepbar .segs{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.stepbar .segs{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .stepbar .segs button{height:22px;border:0;background:none;padding:0;position:relative;cursor:pointer}
 .stepbar .segs button::before{content:"";position:absolute;left:0;right:0;top:8px;height:6px;border-radius:3px;background:var(--line);transition:background .3s}
 .stepbar .segs button.done::before{background:var(--gold)}
@@ -278,7 +293,16 @@ section.step[data-state="open"]{animation:unfold .4s ease both}
   <section class="step" aria-labelledby="pick-h">
     <p class="n">First, build your wheel</p>
     <h2 id="pick-h">Pick the spokes that fit your life</h2>
-    <p class="small">Turn spokes on or off, or name your own. Six to eight is plenty.</p>
+    <div class="mebox">
+      <label for="mename">Start with you. What's your name?</label>
+      <input type="text" id="mename" maxlength="24" placeholder="The name you go by" autocomplete="off">
+      <label for="mepart">Parts of you that go everywhere you go <span class="small" style="font-weight:400">(optional)</span></label>
+      <p class="small" style="margin:0">Some people name their race or ethnicity, how they identify, a culture, a language, their faith. Name as many or as few as you want, in your own words. They ring the middle of your wheel because they touch every spoke.</p>
+      <div class="row"><input type="text" id="mepart" maxlength="28" style="flex:1;min-width:160px"><button class="btn" type="button" id="mepartadd">Add</button></div>
+      <details class="stuck"><summary>Stuck? See a few ideas</summary><ul><li>Your race or ethnicity</li><li>How you identify, in your own words</li><li>Your culture or heritage, or more than one</li><li>A language you speak at home</li><li>Your faith, or that you're figuring it out</li><li>A role you carry, like oldest sibling or caregiver</li><li>How your mind works, if that's part of you</li></ul><p class="small">You decide what goes here. Leave it empty if you'd rather.</p></details>
+      <ul class="parts" id="meparts"></ul>
+    </div>
+    <p class="small">Every wheel starts with three spokes. Add the ones that fit your life, or name your own.</p>
     <div class="chips" id="chips"></div>
   </section>
 
@@ -292,6 +316,17 @@ section.step[data-state="open"]{animation:unfold .4s ease both}
     <h2 id="fill-h">One thing you want from each spoke</h2>
     <div class="row" id="fillstart"><button class="btn" type="button" id="fillbtn">Fill in my wheel</button><span class="small">Or tap any spoke on the wheel.</span></div>
     <div id="spokecard"></div>
+  </section>
+
+  <section class="step" aria-labelledby="link-h">
+    <p class="n">Everything connects</p>
+    <h2 id="link-h">Which spokes touch each other?</h2>
+    <p class="small">The parts of your life aren't separate. Family can shape how you play, faith can show up at school, a team can be where your friends are. Pick two spokes, then say what links them. The parts of you in the middle touch all of them.</p>
+    <div class="chips" id="linkchips"></div>
+    <div class="row" id="linkrow" hidden><input type="text" id="linktext" maxlength="70"><button class="btn" id="linkadd" type="button">Connect them</button></div>
+    <details class="stuck"><summary>Stuck? See a few ideas</summary><ul><li>Family and Where I'm from: Sunday dinner at my grandma's is both</li><li>Friends and Sports: my team is where my people are</li><li>Mental health and Music: playing guitar clears my head</li><li>School and Family: I'm the first in my family to take this class</li></ul><p class="small">Let one spark your own. Yours will fit you better.</p></details>
+    <ul class="links" id="linklist"></ul>
+    <p class="small">Some spokes pull against each other, like a job and sleep. That's a connection too.</p>
   </section>
 
   <section class="step" aria-labelledby="start-h">
@@ -371,6 +406,7 @@ section.step[data-state="open"]{animation:unfold .4s ease both}
 
 <script>
 const SPOKES = {
+  family:{name:"Family",color:"#a33d5c",q:"The people you call family: parents, grandparents, siblings, cousins, guardians, chosen family. One thing you want with them this year.",ex:["Eat dinner with my family more","Call my grandparents every week","Do something just with my little brother","Help out more at home without being asked"]},
   school:{name:"School",color:"#3b6db3",q:"One thing you want from school this year. It doesn't have to be a grade.",ex:["Ask one question in class each week","Find out which subject I actually like","Get work in on time in math"]},
   play:{name:"Play",color:"#e07a2e",q:"Something you do just because it's fun.",ex:["Pickup basketball on Fridays","Game night with my cousins","Bake something on Sundays"]},
   grow:{name:"Grow",color:"#2e9a6a",q:"Something you want to get better at.",ex:["Learn to drive","Cook three dinners for my family","Go easier on myself after a bad game"]},
@@ -379,7 +415,7 @@ const SPOKES = {
   mind:{name:"Mental health",color:"#1f9aa8",q:"One way you want to take care of your head and heart.",ex:["Phone out of my room at night","Tell someone when I'm not okay","Ten minutes outside after school"]},
   people:{name:"Friends",color:"#d4568f",q:"Friends, a relationship, the people you want close. One thing you want with them this year.",ex:["Keep one friend from middle school close","Make one new friend outside my usual group","Be the friend who checks in","Fix things with someone I drifted from"]},
   body:{name:"Body and rest",color:"#6b8f2a",q:"Sleep, food, moving. Pick one.",ex:["In bed by 11 on school nights","Run a 5K with my uncle","Eat breakfast before first period"]},
-  roots:{name:"Where I'm from",color:"#b07a2a",q:"Your family, your culture, your faith, your language, the place you call home. One thing you want to keep close this year.",ex:["Learn one family recipe from my grandma","Speak my family's language more","Ask my parents what they were like at my age","Show up for my faith community"]},
+  roots:{name:"Where I'm from",color:"#b07a2a",q:"Your culture, your faith, your language, your neighborhood, the place you call home. One thing you want to keep close this year.",ex:["Learn one family recipe from my grandma","Speak my family's language more","Learn more about where my family comes from","Show up for my faith community"]},
   give:{name:"Give back",color:"#4a7fb0",q:"Someone or something you want to show up for.",ex:["Help my little brother with reading","Volunteer at the food pantry","Help out more at home"]},
   sports:{name:"Sports",color:"#2f7d4f",q:"A team, a game, a sport you love or want to try.",ex:["Make varsity","Get my mile time under 7 minutes","Try a new sport just for fun"]},
   theater:{name:"Theater",color:"#9b3d6e",q:"On stage, backstage, or in the audience.",ex:["Audition for the spring show","Learn to run the lights","See three plays this year"]},
@@ -387,9 +423,9 @@ const SPOKES = {
   art:{name:"Art",color:"#c2683a",q:"Drawing, painting, photos, making things with your hands.",ex:["Fill a sketchbook","Take a photo every day for a month","Show something in the art show"]},
   work:{name:"Work and money",color:"#5c6b7a",q:"A job, saving, or helping out with money.",ex:["Save for a car","Keep my weekend job","Help at the family business"]}
 };
-const DEFAULT_ON=["school","people","play","grow","stretch","just","mind","roots"];
+const DEFAULT_ON=["school","family","roots"];
 const KEY="bcds-vision-board";
-const FRESH=()=>({on:[...DEFAULT_ON],text:{},custom:{},open:null,start:null,block:"",ifs:"",thens:"",keep:false,tiles:{},extras:[],order:null,title:"",sel:null,words:[],star:null,ownwords:[],mode:"collage",bg:"cork",pos:{}});
+const FRESH=()=>({on:[...DEFAULT_ON],text:{},custom:{},open:null,start:null,block:"",ifs:"",thens:"",keep:false,tiles:{},extras:[],order:null,title:"",sel:null,words:[],star:null,ownwords:[],mode:"collage",bg:"cork",pos:{},links:[],name:"",parts:[]});
 let st=FRESH();
 try{const s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.keep)st=Object.assign(st,s);}catch(e){}
 
@@ -410,8 +446,17 @@ function drawWheel(svg,keys,opts){
     const col=filled?m.color:(opts.paper?"#b9c2cf":"var(--spoke)");
     h+=`<line class="spk${filled?' on':''}" x1="${Math.cos(a)*hubR}" y1="${Math.sin(a)*hubR}" x2="${x}" y2="${y}" style="stroke:${col}"/>`;
   });
-  h+=`<circle r="${hubR}" fill="${opts.paper?'#1f3a5f':'var(--hubfill)'}"/>
-  <text text-anchor="middle" dy="8" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="800" font-size="26" fill="${opts.paper?'#fff':'var(--hubtext)'}">${opts.paper?'Me':'You'}</text>`;
+  if(!opts.paper)(st.links||[]).forEach(l=>{const i=keys.indexOf(l.a),j=keys.indexOf(l.b);if(i<0||j<0)return;
+    const pt=q=>{const a=-Math.PI/2+q*2*Math.PI/n;return[Math.cos(a)*(R-46),Math.sin(a)*(R-46)];};const[p1,p2]=[pt(i),pt(j)];
+    const cx=(p1[0]+p2[0])*.22,cy=(p1[1]+p2[1])*.22;
+    h+=`<path class="lnk" d="M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}"/><circle class="lnkdot" cx="${p1[0].toFixed(1)}" cy="${p1[1].toFixed(1)}" r="7"/><circle class="lnkdot" cx="${p2[0].toFixed(1)}" cy="${p2[1].toFixed(1)}" r="7"/>`;});
+  const parts=opts.paper?[]:(st.parts||[]), nm=opts.paper?"":(st.name||"").trim();
+  if(opts.paper){h+=`<circle r="${hubR+22}" fill="none" stroke="#9aa4b1" stroke-width="1.5" stroke-dasharray="5 5"/><path id="pring" d="M0 ${hubR+11} A${hubR+11} ${hubR+11} 0 1 1 0.1 ${hubR+11}" fill="none"/><text font-family="system-ui, sans-serif" font-size="12" letter-spacing="2" fill="#5a6573"><textPath href="#pring" startOffset="50%" text-anchor="middle">PARTS OF ME</textPath></text>`;}
+  else if(parts.length){const rr=hubR+14, ring=parts.join("  ·  ")+"  ·  ", circ=2*Math.PI*rr, fs=Math.max(9,Math.min(13,circ/(ring.length*0.5)));
+    h+=`<circle class="ring" r="${rr}"/><path id="hring" d="M0 ${-rr} A${rr} ${rr} 0 1 1 -0.1 ${-rr}" fill="none"/><text class="ringtxt" style="font-size:${fs.toFixed(1)}px"><textPath href="#hring" textLength="${(circ-6).toFixed(0)}" lengthAdjust="spacing">${esc(ring.repeat(Math.max(1,Math.round(circ/(ring.length*fs*0.5)))))}</textPath></text>`;}
+  const hs=nm?Math.max(13,Math.min(26,180/Math.max(4,nm.length))):(opts.paper?12:16);
+  h+=`<circle r="${hubR}" fill="${opts.paper?'#fff':'var(--hubfill)'}" ${opts.paper?'stroke="#1f3a5f" stroke-width="3"':''}/>
+  <text text-anchor="middle" dy="${opts.paper?52:hs*.33}" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="${nm?800:600}" font-size="${hs.toFixed(1)}" fill="${opts.paper?'#5a6573':'var(--hubtext)'}" ${nm||opts.paper?'':'opacity=".8"'}>${opts.paper?'my name':nm?esc(nm):'your name'}</text>`;
   keys.forEach((k,i)=>{
     const a=-Math.PI/2+i*2*Math.PI/n, lr=R-18;
     const x=Math.cos(a)*lr, y=Math.sin(a)*lr;
@@ -456,7 +501,7 @@ function bindLbl(){document.querySelectorAll("#wheel .lbl").forEach(g=>{g.onclic
 
 function renderChips(){
   const c=document.getElementById("chips");
-  const all=[...Object.keys(SPOKES),...Object.keys(st.custom)];
+  const all=[...DEFAULT_ON,...Object.keys(SPOKES).filter(k=>!DEFAULT_ON.includes(k)),...Object.keys(st.custom)];
   c.innerHTML=all.map(k=>`<button type="button" class="chip" data-k="${k}" aria-pressed="${st.on.includes(k)}">${esc(meta(k).name)}</button>`).join("")+
    `<button type="button" class="chip add" id="addown">+ Name your own</button>`;
   c.querySelectorAll(".chip[data-k]").forEach(b=>b.addEventListener("click",()=>{
@@ -673,7 +718,7 @@ function renderBoard(){
   document.getElementById("vbhint").hidden=!col;
   document.getElementById("vbshuffle").textContent=col?"Scatter the tiles":"Shuffle the order";
   if(col)placeMissing(list,false);
-  let h=`<div class="vbhead">${esc(st.title||"My year")}</div><div class="vbgrid${col?" collage":""}">${col?boardStickers(T):""}`;
+  let h=`<div class="vbhead">${esc(st.title||defTitle())}</div><div class="vbgrid${col?" collage":""}">${col?boardStickers(T):""}`;
   if(!list.length) h+=`<div class="tile empty" style="grid-column:1/-1;${col?"position:absolute;inset:30% 10% auto;":""}"><span class="t">Fill in a spoke and it shows up here.</span></div>`;
   list.forEach((o,i)=>{
     const L=look(o), img=L==="photo"&&o.img, th=themedColors(o,T,i);
@@ -782,7 +827,7 @@ document.querySelectorAll("#vbadd [data-add]").forEach(b=>b.addEventListener("cl
   st.extras.push({id,type,text:"",big:type==="word",...(type==="gfx"?{gfx:"spark"}:{})});if(st.order)st.order.push(id);st.sel=id;save();renderBoard();
   if(type==="photo")pickFor(id);else setTimeout(()=>{const x=document.getElementById("xtext");x&&x.focus();},30);}));
 document.getElementById("vbshuffle").addEventListener("click",()=>{if(st.mode==="collage"){placeMissing(tileList(),true);st.stkSeed=Date.now();save();renderBoard();return;}const ids=tileList().map(o=>o.id);for(let i=ids.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]];}st.order=ids;save();renderBoard();});
-const vbt=document.getElementById("vbtitle");vbt.value=st.title||"";vbt.addEventListener("input",()=>{st.title=vbt.value;save();const h=document.querySelector(".vbhead");if(h)h.textContent=vbt.value||"My year";});
+const vbt=document.getElementById("vbtitle");vbt.value=st.title||"";vbt.addEventListener("input",()=>{st.title=vbt.value;save();const h=document.querySelector(".vbhead");if(h)h.textContent=vbt.value||defTitle();});
 const WORDS=["Brave","Curious","Steady","Kind","Bold","Present","Grateful","Open","Patient","Joy","Rest","Honest","Balance","Focus","Calm","Connect","Play","Create","Faith","Family","Roots","Gentle","Strong","Free","Try","Enough","Breathe","Explore","Hope","Trust","Real","Listen","Lead","Show up","Laugh","Grow"];
 function renderWords(){
   const bank=[...WORDS,...st.ownwords];
@@ -884,15 +929,15 @@ document.getElementById("savepng").onclick=async()=>{
 const keep=document.getElementById("keep");keep.checked=!!st.keep;
 keep.addEventListener("change",()=>{st.keep=keep.checked;save();});
 document.getElementById("erase").addEventListener("click",()=>{try{localStorage.removeItem(KEY);}catch(e){}
-  st=FRESH();keep.checked=false;document.getElementById("vbtitle").value="";
+  st=FRESH();keep.checked=false;document.getElementById("mename").value="";document.getElementById("vbtitle").value="";
   document.getElementById("if").value="";document.getElementById("then").value="";render();
   const m=document.getElementById("erasemsg");m.hidden=false;setTimeout(()=>m.hidden=true,3000);});
 document.getElementById("if").value=st.ifs||"";document.getElementById("then").value=st.thens||"";
 
-function meta(k){return SPOKES[k]||st.custom[k]||({b1:{name:"________"},b2:{name:"________"}})[k];}
+function meta(k){return SPOKES[k]||st.custom[k]||({b1:{name:"________"},b2:{name:"________"},b3:{name:"________"},b4:{name:"________"},b5:{name:"________"}})[k];}
 
 // ---- one step at a time ----
-const STEPS=["Build your wheel","Fill it in","One to start","What's in the way","Word for the year","Make it a board"];
+const STEPS=["Build your wheel","Fill it in","Everything connects","One to start","What's in the way","Word for the year","Make it a board"];
 const stepEls=[...document.querySelectorAll("#v-student section.step")];
 stepEls.forEach((sec,i)=>{
   sec.dataset.step=i;
@@ -906,8 +951,9 @@ stepEls.forEach((sec,i)=>{
 });
 function stepSummary(i){
   const filled=st.on.filter(k=>(st.text[k]||"").trim());
-  return [`${st.on.length} spokes: ${st.on.map(k=>meta(k).name).join(", ")}`,
+  return [`${(st.name||"").trim()?st.name.trim()+" · ":""}${st.on.length} spokes: ${st.on.map(k=>meta(k).name).join(", ")}`,
     filled.length?`${filled.length} of ${st.on.length} spokes filled`:"Not filled yet",
+    (st.links||[]).length?st.links.map(l=>`${meta(l.a)?.name} + ${meta(l.b)?.name}`).join(", "):"Skipped for now",
     st.start&&meta(st.start)?`${meta(st.start).name}: ${(st.text[st.start]||"").trim()}`:"Skipped for now",
     st.block?`${st.block}${st.ifs||st.thens?" · if-then planned":""}`:"Skipped for now",
     st.words.length?st.words.map(w=>w===st.star?"★ "+w:w).join(", "):"Skipped for now",""][i];
@@ -919,12 +965,38 @@ function applySteps(){
   const cur=st.step||0,reach=Math.max(st.reach||0,cur);
   stepEls.forEach((sec,i)=>{sec.dataset.state=i===cur?"open":i<cur||i<=reach?"done":"future";if(i!==cur&&i>cur&&i<=reach)sec.dataset.state="done";
     sec.querySelector(".sum span").textContent=stepSummary(i);});
-  document.getElementById("wheelbox").classList.toggle("off",cur>1);
+  document.getElementById("wheelbox").classList.toggle("off",cur>2);
   document.getElementById("stepwhere").innerHTML=`Step ${cur+1} of ${STEPS.length} · <b>${STEPS[cur]}</b>`;
   document.getElementById("stepsegs").innerHTML=STEPS.map((n,i)=>`<button type="button" class="${i===cur?"cur":i<=reach?"done":""}" aria-label="Step ${i+1}: ${n}"${i===cur?' aria-current="step"':""}${i>reach?" disabled":""}></button>`).join("");
   document.querySelectorAll("#stepsegs button").forEach((b,i)=>b.onclick=()=>goStep(i));
 }
-const _render=render;render=function(){_render();applySteps();};
+// ---- everything connects ----
+let linkSel=[];
+function renderLinks(){
+  st.links=st.links||[];st.links=st.links.filter(l=>st.on.includes(l.a)&&st.on.includes(l.b));
+  linkSel=linkSel.filter(k=>st.on.includes(k));
+  const c=document.getElementById("linkchips");
+  c.innerHTML=st.on.map(k=>`<button type="button" class="chip" data-k="${k}" aria-pressed="${linkSel.includes(k)}">${esc(meta(k).name)}</button>`).join("");
+  c.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{const k=b.dataset.k;linkSel=linkSel.includes(k)?linkSel.filter(x=>x!==k):[...linkSel,k].slice(-2);renderLinks();if(linkSel.length===2)document.getElementById("linktext").focus();});
+  const row=document.getElementById("linkrow");row.hidden=linkSel.length<2;
+  if(linkSel.length===2)document.getElementById("linktext").placeholder=`What links ${meta(linkSel[0]).name} and ${meta(linkSel[1]).name}?`;
+  document.getElementById("linklist").innerHTML=st.links.map((l,i)=>`<li><div><b>${esc(meta(l.a).name)} + ${esc(meta(l.b).name)}</b><span>${esc(l.t||"")}</span></div><button type="button" data-i="${i}" aria-label="Remove this connection">×</button></li>`).join("");
+  document.querySelectorAll("#linklist button").forEach(b=>b.onclick=()=>{st.links.splice(+b.dataset.i,1);save();render();});
+}
+function addLink(){const t=document.getElementById("linktext").value.trim();if(linkSel.length<2)return;
+  st.links=(st.links||[]).filter(l=>!((l.a===linkSel[0]&&l.b===linkSel[1])||(l.a===linkSel[1]&&l.b===linkSel[0])));
+  st.links.push({a:linkSel[0],b:linkSel[1],t:t.slice(0,70)});linkSel=[];document.getElementById("linktext").value="";save();render();}
+document.getElementById("linkadd").onclick=addLink;document.getElementById("linktext").addEventListener("keydown",e=>{if(e.key==="Enter")addLink();});
+// ---- you, in the middle ----
+function defTitle(){const n=(st.name||"").trim();return n?n+(/s$/i.test(n)?"' year":"'s year"):"My year";}
+function renderMe(){st.parts=st.parts||[];
+  document.getElementById("meparts").innerHTML=st.parts.map((x,i)=>`<li>${esc(x)}<button type="button" data-i="${i}" aria-label="Remove ${esc(x)}">×</button></li>`).join("");
+  document.querySelectorAll("#meparts button").forEach(b=>b.onclick=()=>{st.parts.splice(+b.dataset.i,1);save();render();});}
+const meName=document.getElementById("mename");meName.value=st.name||"";
+meName.addEventListener("input",()=>{st.name=meName.value;save();render();const h=document.querySelector(".vbhead");if(h&&!st.title)h.textContent=defTitle();});
+function addPart(){const i=document.getElementById("mepart"),v=i.value.trim();if(!v)return;st.parts=st.parts||[];if(!st.parts.some(p=>p.toLowerCase()===v.toLowerCase())&&st.parts.length<8)st.parts.push(v.slice(0,28));i.value="";save();render();i.focus();}
+document.getElementById("mepartadd").onclick=addPart;document.getElementById("mepart").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();addPart();}});
+const _render=render;render=function(){_render();renderMe();renderLinks();applySteps();};
 render();renderWords();
 </script>
 
