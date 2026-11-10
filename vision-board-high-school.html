@@ -251,9 +251,18 @@ details[open] summary{margin-bottom:8px}
     <p class="n">One to start</p>
     <h2 id="start-h">Pick one spoke to start this month</h2>
     <div class="chips" id="startchips"></div>
-    <div id="startbox" class="card" hidden>
-      <h3>What could get in the way?</h3>
+  </section>
+
+  <section class="step" aria-labelledby="way-h">
+    <p class="n">What's in the way</p>
+    <h2 id="way-h">What could get in the way?</h2>
+    <p class="small" id="wayhint">Pick a spoke to start first.</p>
+    <div id="startbox" hidden>
+      <p class="small">Everyone has something. Naming it ahead of time makes it easier to get around. Pick one, or name your own.</p>
       <div class="borrow" id="blocks"></div>
+      <div class="row"><input type="text" id="ownblock" placeholder="Name your own" maxlength="40" style="max-width:18em"></div>
+      <h3 style="margin-top:16px">Your first move</h3>
+      <p class="small">When that shows up, what will you do?</p>
       <div class="ifthen">
         <span>If</span><input type="text" id="if" placeholder="I get home tired and grab my phone">
         <span>then</span><input type="text" id="then" placeholder="I'll put it in the kitchen and play guitar for ten minutes">
@@ -417,7 +426,8 @@ function renderChips(){
   });
 }
 
-const BLOCKS=["Not enough time","Nerves","My phone","Other people's plans","Money or rides","I'll forget","Not sure yet"];
+const BLOCKS=["Not enough time","Nerves","My phone","Other people's plans","Money or rides","I'll forget","Feeling low","Not sure yet"];
+const IFS={"Not enough time":"my week fills up","Nerves":"I get nervous right before","My phone":"I get home tired and grab my phone","Other people's plans":"my friends want to do something else","Money or rides":"I can't get a ride","I'll forget":"it's Sunday night and I haven't done it","Feeling low":"I'm having a down day","Not sure yet":"I don't know where to begin"};
 function renderStart(){
   const c=document.getElementById("startchips");
   const ks=st.on.filter(k=>(st.text[k]||"").trim());
@@ -425,9 +435,13 @@ function renderStart(){
   c.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{st.start=b.dataset.k;save();renderStart();renderBoard();}));
   const box=document.getElementById("startbox");
   box.hidden=!(st.start&&ks.includes(st.start));
-  document.getElementById("blocks").innerHTML=BLOCKS.map(x=>`<button type="button" aria-pressed="${st.block===x}" style="${st.block===x?'outline:2px solid var(--gold)':''}">${x}</button>`).join("");
-  document.querySelectorAll("#blocks button").forEach(b=>b.addEventListener("click",()=>{st.block=b.textContent;save();renderStart();renderBoard();}));
+  document.getElementById("wayhint").hidden=!box.hidden;
+  document.getElementById("blocks").innerHTML=BLOCKS.map(x=>`<button type="button" aria-pressed="${st.block===x}" style="${st.block===x?'outline:2px solid var(--gold)':''}">${esc(x)}</button>`).join("");
+  document.querySelectorAll("#blocks button").forEach(b=>b.addEventListener("click",()=>{st.block=st.block===b.textContent?"":b.textContent;document.getElementById("ownblock").value="";save();renderStart();renderBoard();}));
+  const ob=document.getElementById("ownblock");if(document.activeElement!==ob)ob.value=BLOCKS.includes(st.block)?"":st.block;
+  document.getElementById("if").placeholder=IFS[st.block]||(st.block&&!BLOCKS.includes(st.block)?st.block.charAt(0).toLowerCase()+st.block.slice(1):"I get home tired and grab my phone");
 }
+document.getElementById("ownblock").addEventListener("input",e=>{st.block=e.target.value.trim();save();renderStart();});
 ["if","then"].forEach(id=>{const el=document.getElementById(id);el.addEventListener("input",()=>{st[id==="if"?"ifs":"thens"]=el.value;save();renderBoard();});});
 
 const SW=["#1f3a5f","#3b6db3","#1f9aa8","#2e9a6a","#6b8f2a","#e8a33d","#e07a2e","#c4423b","#d4568f","#8a5cc2","#5a6573","#1b2430"];
