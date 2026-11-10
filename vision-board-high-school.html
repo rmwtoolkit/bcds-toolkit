@@ -55,6 +55,14 @@ button{font:inherit;cursor:pointer}
 
 /* spoke chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px}
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.chip.pick{border-radius:12px;padding:10px 12px;text-align:left;display:flex;flex-direction:column;gap:3px;font-size:15px;line-height:1.3}
+.chip.pick .pk{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px;opacity:.85}
+.chip.pick .pk i{width:9px;height:9px;border-radius:50%;flex:none}
+.chip.pick .pt{font-family:var(--display);font-weight:600;overflow-wrap:anywhere}
+.goalcard{margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;border-left:4px solid var(--gold);background:var(--card);border-radius:8px;padding:10px 14px;font-size:15px}
+.goalcard b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.goalcard span{font-family:var(--display);font-weight:600;font-size:17px}
 .chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 13px;font-size:15px}
 .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
 :root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#12171e}
@@ -289,7 +297,7 @@ section.step[data-state="open"]{animation:unfold .4s ease both}
   <section class="step" aria-labelledby="start-h">
     <p class="n">One to start</p>
     <h2 id="start-h">Pick one spoke to start this month</h2>
-    <div class="chips" id="startchips"></div>
+    <div class="picks" id="startchips"></div>
   </section>
 
   <section class="step" aria-labelledby="way-h">
@@ -297,6 +305,7 @@ section.step[data-state="open"]{animation:unfold .4s ease both}
     <h2 id="way-h">What could get in the way?</h2>
     <p class="small" id="wayhint">Pick a spoke to start first.</p>
     <div id="startbox" hidden>
+      <div class="goalcard" id="goalcard"></div>
       <p class="small">Everyone has something. Naming it ahead of time makes it easier to get around.</p>
       <input type="text" id="ownblock" placeholder="What might get in the way" maxlength="60" aria-labelledby="way-h">
       <details class="stuck"><summary>Stuck? See a few ideas</summary><ul id="blocks"></ul><p class="small">Let one spark your own. Yours will fit you better.</p></details>
@@ -470,11 +479,12 @@ const IFS={"Not enough time":"my week fills up","Nerves":"I get nervous right be
 function renderStart(){
   const c=document.getElementById("startchips");
   const ks=st.on.filter(k=>(st.text[k]||"").trim());
-  c.innerHTML= ks.length? ks.map(k=>`<button type="button" class="chip" data-k="${k}" aria-pressed="${st.start===k}">${esc(meta(k).name)}</button>`).join("") : `<p class="small">Fill in a spoke first.</p>`;
+  c.innerHTML= ks.length? ks.map(k=>`<button type="button" class="chip pick" data-k="${k}" aria-pressed="${st.start===k}"><span class="pk"><i style="background:${meta(k).color||"#5a6573"}"></i>${esc(meta(k).name)}</span><span class="pt">${esc(st.text[k].trim())}</span></button>`).join("") : `<p class="small">Fill in a spoke first.</p>`;
   c.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{st.start=b.dataset.k;save();renderStart();renderBoard();}));
   const box=document.getElementById("startbox");
   box.hidden=!(st.start&&ks.includes(st.start));
   document.getElementById("wayhint").hidden=!box.hidden;
+  if(!box.hidden)document.getElementById("goalcard").innerHTML=`<div><b>You're starting with ${esc(meta(st.start).name)}</b><span>${esc(st.text[st.start].trim())}</span></div>`;
   document.getElementById("blocks").innerHTML=BLOCKS.map(x=>`<li>${esc(x)}</li>`).join("");
   const ob=document.getElementById("ownblock");if(document.activeElement!==ob)ob.value=st.block||"";
   document.getElementById("if").placeholder=IFS[st.block]||(st.block?st.block.charAt(0).toLowerCase()+st.block.slice(1):"I get home tired and grab my phone");
@@ -898,7 +908,7 @@ function stepSummary(i){
   const filled=st.on.filter(k=>(st.text[k]||"").trim());
   return [`${st.on.length} spokes: ${st.on.map(k=>meta(k).name).join(", ")}`,
     filled.length?`${filled.length} of ${st.on.length} spokes filled`:"Not filled yet",
-    st.start&&meta(st.start)?`Starting with ${meta(st.start).name}`:"Skipped for now",
+    st.start&&meta(st.start)?`${meta(st.start).name}: ${(st.text[st.start]||"").trim()}`:"Skipped for now",
     st.block?`${st.block}${st.ifs||st.thens?" · if-then planned":""}`:"Skipped for now",
     st.words.length?st.words.map(w=>w===st.star?"★ "+w:w).join(", "):"Skipped for now",""][i];
 }
