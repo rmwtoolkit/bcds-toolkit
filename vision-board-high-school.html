@@ -68,6 +68,7 @@ button{font:inherit;cursor:pointer}
 .card .dot{width:12px;height:12px;border-radius:50%}
 textarea,input[type=text]{font:inherit;width:100%;box-sizing:border-box;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg);color:var(--ink)}
 textarea{min-height:70px;resize:vertical}
+.stuck{margin-top:10px}.stuck summary{cursor:pointer;color:var(--soft);font-size:14px;text-decoration:underline;text-underline-offset:3px}.stuck ul{margin:8px 0 4px;padding-left:1.2em;color:var(--soft);font-size:14px}.stuck li{margin:2px 0}
 .borrow{display:flex;flex-wrap:wrap;gap:6px}
 .borrow button{border:1px solid var(--line);background:var(--wash);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:14px;text-align:left}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
@@ -394,11 +395,10 @@ function render(){
     sc.innerHTML=`<div class="card"><span class="tag"><i class="dot" style="background:${m.color}"></i>${esc(m.name)}</span>
       <h3>${esc(m.q||"What do you want from this spoke this year?")}</h3>
       <textarea id="spoketext" aria-label="${esc(m.name)}">${esc(st.text[k]||"")}</textarea>
-      ${m.ex&&m.ex.length?`<p class="small">Borrow one if it fits:</p><div class="borrow">${m.ex.map(x=>`<button type="button">${esc(x)}</button>`).join("")}</div>`:""}
+      ${m.ex&&m.ex.length?`<details class="stuck"><summary>Stuck? See a few ideas</summary><ul>${m.ex.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="small">Let one spark your own. Yours will fit you better.</p></details>`:""}
       <div class="row"><button class="btn" type="button" id="nextspoke">Next spoke</button><span class="small">Leaving it blank is fine.</span></div></div>`;
     const ta=sc.querySelector("textarea");
     ta.addEventListener("input",()=>{st.text[k]=ta.value;delete st._sample;save();drawWheel(document.getElementById("wheel"),st.on);bindLbl();renderBoard();renderStart();});
-    sc.querySelectorAll(".borrow button").forEach(b=>b.addEventListener("click",()=>{ta.value=b.textContent;ta.dispatchEvent(new Event("input"));}));
     sc.querySelector("#nextspoke").addEventListener("click",()=>{const i=st.on.indexOf(k);st.open=st.on[(i+1)%st.on.length];render();});
   } else sc.innerHTML="";
   renderChips();renderStart();renderBoard();
