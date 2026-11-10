@@ -413,7 +413,7 @@ function tileList(){
     const line=(st.ifs||st.thens)?`If ${st.ifs||"…"}, then ${st.thens||"…"}.`:`Starting with ${meta(st.start).name}.`;
     list.push({id:"start",kind:"start",k:"First move",t:line,color:"#1f3a5f",...(st.tiles.start||{})});
   }
-  if(st.star){const others=st.words.filter(w=>w!==st.star);list.push({id:"word",kind:"word",k:"Word for the year",t:st.star,others,color:"#e8a33d",big:true,...(st.tiles.word||{})});}
+  if(st.star){const others=st.words.filter(w=>w!==st.star);list.push({id:"word",kind:"word",k:"Word for the year",t:st.star,others,color:"#e8a33d",big:true,center:true,...(st.tiles.word||{})});}
   st.extras.forEach(x=>list.push({id:x.id,kind:x.type,k:EXTRA[x.type].k,t:x.text||"",color:x.type==="word"?"#e8a33d":"#5a6573",...x}));
   if(st.order){const pos=id=>{const i=st.order.indexOf(id);return i<0?999:i;};list.sort((a,b)=>pos(a.id)-pos(b.id));}
   return list;
@@ -434,9 +434,27 @@ function renderBoard(){
   });
   b.innerHTML=h+"</div>";
   b.querySelectorAll(".tile[data-id]").forEach(t=>t.addEventListener("click",()=>{st.sel=st.sel===t.dataset.id?null:t.dataset.id;renderBoard();}));
+  centerWord(list);
   renderEdit(list);
 }
 function tileState(id){const x=st.extras.find(e=>e.id===id);if(x)return x;return st.tiles[id]||(st.tiles[id]={});}
+// Word for the year in the middle of the board (on by default; a toggle in its tile editor).
+function centerWord(list){
+  const grid=document.querySelector("#vb .vbgrid");if(!grid)return;
+  const w=grid.querySelector('.tile[data-id="word"]');if(!w)return;
+  const o=list.find(x=>x.id==="word");
+  w.style.gridColumn="";w.style.gridRow="";
+  if(!o||!o.center)return;
+  const cols=getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length||1;
+  const span=o.big&&cols>=2?2:1;
+  const cells=list.reduce((n,x)=>n+(x.big&&cols>=2?4:1),0);
+  const rows=Math.max(span,Math.ceil(cells/cols));
+  const c=Math.floor((cols-span)/2)+1, r=Math.floor((rows-span)/2)+1;
+  w.style.gridColumn=`${c} / span ${span}`;w.style.gridRow=`${r} / span ${span}`;
+}
+addEventListener("resize",()=>centerWord(tileList()));
+try{matchMedia("print").addEventListener("change",()=>centerWord(tileList()));}catch(e){}
+addEventListener("beforeprint",()=>centerWord(tileList()));addEventListener("afterprint",()=>centerWord(tileList()));
 function renderEdit(list){
   const ed=document.getElementById("vbedit");const o=list.find(x=>x.id===st.sel);
   if(!o){ed.hidden=true;ed.innerHTML="";return;}
@@ -444,7 +462,7 @@ function renderEdit(list){
   ed.innerHTML=`<h3>${esc(o.k)}</h3>
    ${isX?`<input type="text" id="xtext" maxlength="90" value="${esc(o.t||"")}" placeholder="${esc(EXTRA[o.kind].ph)}">`:`<p class="small">${o.kind==="spoke"?"Change the words up in your wheel.":"This comes from your first move above."}</p>`}
    <div class="seg" role="group" aria-label="Look">${[["light","Soft"],["color","Bold"],["photo","Picture"]].map(([v,l])=>`<button type="button" data-look="${v}" aria-pressed="${L===v}">${l}</button>`).join("")}
-   <button type="button" data-big aria-pressed="${!!o.big}">Bigger</button></div>
+   <button type="button" data-big aria-pressed="${!!o.big}">Bigger</button>${o.kind==="word"?`<button type="button" data-center aria-pressed="${!!o.center}">In the center</button>`:""}</div>
    ${L!=="photo"?`<p class="lab">Color</p><div class="sw">${SW.map(c=>`<button type="button" data-sw="${c}" style="background:${c}" aria-label="Color ${c}" aria-pressed="${o.color===c}"></button>`).join("")}</div>
    <p class="lab">Graphic</p><div class="gp"><button type="button" data-g="" aria-pressed="${!o.gfx}" class="small">None</button>${Object.keys(G).map(k=>`<button type="button" data-g="${k}" aria-label="${k}" aria-pressed="${o.gfx===k}">${gsvg(k,"currentColor")}</button>`).join("")}</div>`:""}
    ${L==="photo"?`<div class="row"><button class="btn" type="button" id="pickimg">${o.img?"Change picture":"Choose a picture"}</button><span class="small">From your laptop. A photo you took, a drawing, a place.</span></div>`:""}
@@ -453,6 +471,7 @@ function renderEdit(list){
   ed.querySelectorAll("[data-sw]").forEach(btn=>btn.onclick=()=>{ts.color=btn.dataset.sw;save();renderBoard();});
   ed.querySelectorAll("[data-g]").forEach(btn=>btn.onclick=()=>{ts.gfx=btn.dataset.g||null;save();renderBoard();});
   ed.querySelector("[data-big]").onclick=()=>{ts.big=!ts.big;save();renderBoard();};
+  const ctr=ed.querySelector("[data-center]");if(ctr)ctr.onclick=()=>{ts.center=!(o.center);save();renderBoard();};
   const pi=ed.querySelector("#pickimg");if(pi)pi.onclick=()=>pickFor(o.id);
   const xt=ed.querySelector("#xtext");if(xt){xt.oninput=()=>{ts.text=xt.value;save();const t=document.querySelector(`.tile[data-id="${o.id}"] .t`);if(t){t.textContent=o.kind==="quote"&&xt.value?"“"+xt.value+"”":(xt.value||EXTRA[o.kind].ph);t.style.opacity=xt.value?1:.6;}};}
   ed.querySelector("#tdone").onclick=()=>{st.sel=null;renderBoard();};
