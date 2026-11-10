@@ -217,7 +217,28 @@ details[open] summary{margin-bottom:8px}
 .seg button[aria-pressed="true"]{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold);font-weight:700}
 @media (max-width:420px){.vbgrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:118px}}
 .note{background:var(--wash);border-radius:12px;padding:12px 14px;font-size:14px}
-@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+/* one step at a time */
+.stepbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:10px 0 8px;margin:0 -2px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--line)}
+.stepbar .segs{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.stepbar .segs button{height:22px;border:0;background:none;padding:0;position:relative;cursor:pointer}
+.stepbar .segs button::before{content:"";position:absolute;left:0;right:0;top:8px;height:6px;border-radius:3px;background:var(--line);transition:background .3s}
+.stepbar .segs button.done::before{background:var(--gold)}
+.stepbar .segs button.cur::before{background:var(--navy)}
+.stepbar .segs button:disabled{cursor:default}
+.stepbar .where{font-size:14px;color:var(--soft)}.stepbar .where b{color:var(--ink)}
+section.step[data-state="future"],.wheelbox.off{display:none}
+section.step[data-state="done"]{border:1.5px solid var(--line);border-radius:12px;background:var(--card);padding:10px 14px;gap:2px;cursor:pointer}
+section.step[data-state="done"]>:not(.n):not(.sum){display:none}
+section.step[data-state="done"] .n{color:var(--soft);font-size:12px}
+.step .sum{display:none}
+section.step[data-state="done"] .sum{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:15px}
+.sum span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.sum button{border:0;background:none;color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:3px;padding:4px 0;flex:none}
+.stepnav{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;padding-top:14px;border-top:1px dashed var(--line)}
+.stepnav .btn{font-size:16px}
+section.step[data-state="open"]{animation:unfold .4s ease both}
+@keyframes unfold{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 [hidden]{display:none!important}
 
 .top{display:flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);padding-block:16px 0}
@@ -241,8 +262,10 @@ details[open] summary{margin-bottom:8px}
   <header class="stack" style="gap:10px;margin-top:0">
     <h1>Vision Board</h1>
     <p class="lede">What do you want this year to hold? You're the hub. School is one spoke. Build a wheel that fits your life, then fill it in.</p>
-    <p class="lock"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>This stays on your laptop. Nobody sees it unless you show them.</p>
+    <p class="lock" id="lockline"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>This stays on your laptop. Nobody sees it unless you show them.</p>
   </header>
+
+  <nav class="stepbar" aria-label="Steps"><div class="where" id="stepwhere"></div><div class="segs" id="stepsegs"></div></nav>
 
   <section class="step" aria-labelledby="pick-h">
     <p class="n">First, build your wheel</p>
@@ -251,7 +274,7 @@ details[open] summary{margin-bottom:8px}
     <div class="chips" id="chips"></div>
   </section>
 
-  <div class="wheelbox">
+  <div class="wheelbox" id="wheelbox">
     <svg class="wheel" id="wheel" viewBox="-300 -300 600 600" role="group" aria-label="Your wheel"></svg>
     <p class="hint" id="hint">Your wheel changes as you pick spokes.</p>
   </div>
@@ -397,7 +420,7 @@ function render(){
   const svg=document.getElementById("wheel");
   drawWheel(svg,st.on);
   svg.querySelectorAll(".lbl").forEach(g=>{
-    const go=()=>{st.open=g.dataset.k;render();document.getElementById("spokecard").scrollIntoView({behavior:"smooth",block:"nearest"});setTimeout(()=>{const t=document.getElementById("spoketext");t&&t.focus({preventScroll:true});},250);};
+    const go=()=>{st.open=g.dataset.k;if((st.step||0)!==1){st.step=1;}render();document.getElementById("spokecard").scrollIntoView({behavior:"smooth",block:"nearest"});setTimeout(()=>{const t=document.getElementById("spoketext");t&&t.focus({preventScroll:true});},250);};
     g.addEventListener("click",go);
     g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});
   });
@@ -412,10 +435,10 @@ function render(){
       <h3>${esc(m.q||"What do you want from this spoke this year?")}</h3>
       <textarea id="spoketext" aria-label="${esc(m.name)}">${esc(st.text[k]||"")}</textarea>
       ${m.ex&&m.ex.length?`<details class="stuck"><summary>Stuck? See a few ideas</summary><ul>${m.ex.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="small">Let one spark your own. Yours will fit you better.</p></details>`:""}
-      <div class="row"><button class="btn" type="button" id="nextspoke">Next spoke</button><span class="small">Leaving it blank is fine.</span></div></div>`;
+      <div class="row"><button class="btn" type="button" id="nextspoke">${st.on.indexOf(k)===st.on.length-1?"Done with my wheel":"Next spoke"}</button><span class="small">Leaving it blank is fine.</span></div></div>`;
     const ta=sc.querySelector("textarea");
     ta.addEventListener("input",()=>{st.text[k]=ta.value;delete st._sample;save();drawWheel(document.getElementById("wheel"),st.on);bindLbl();renderBoard();renderStart();});
-    sc.querySelector("#nextspoke").addEventListener("click",()=>{const i=st.on.indexOf(k);st.open=st.on[(i+1)%st.on.length];render();});
+    sc.querySelector("#nextspoke").addEventListener("click",()=>{const i=st.on.indexOf(k);if(i===st.on.length-1){st.open=null;goStep(2);return;}st.open=st.on[(i+1)%st.on.length];render();});
   } else sc.innerHTML="";
   renderChips();renderStart();renderBoard();
 }
@@ -858,6 +881,40 @@ document.getElementById("if").value=st.ifs||"";document.getElementById("then").v
 
 function meta(k){return SPOKES[k]||st.custom[k]||({b1:{name:"________"},b2:{name:"________"}})[k];}
 
+// ---- one step at a time ----
+const STEPS=["Build your wheel","Fill it in","One to start","What's in the way","Word for the year","Make it a board"];
+const stepEls=[...document.querySelectorAll("#v-student section.step")];
+stepEls.forEach((sec,i)=>{
+  sec.dataset.step=i;
+  const sum=document.createElement("div");sum.className="sum";sum.innerHTML=`<span></span><button type="button">Change</button>`;sec.querySelector(".n").after(sum);
+  if(i<STEPS.length-1){const nav=document.createElement("div");nav.className="stepnav";
+    nav.innerHTML=`<button class="btn" type="button" data-next>Next: ${STEPS[i+1]}</button>${i?`<button class="btn ghost" type="button" data-back>Back</button>`:""}`;sec.append(nav);}
+  else{const nav=document.createElement("div");nav.className="stepnav";nav.innerHTML=`<button class="btn ghost" type="button" data-back>Back</button>`;sec.append(nav);}
+  sec.addEventListener("click",e=>{if(sec.dataset.state==="done"&&(e.target.closest(".sum")||!e.target.closest("button,input,textarea,a,label,svg")))goStep(i);});
+  sec.querySelector("[data-next]")?.addEventListener("click",()=>goStep(i+1));
+  sec.querySelector("[data-back]")?.addEventListener("click",()=>goStep(i-1));
+});
+function stepSummary(i){
+  const filled=st.on.filter(k=>(st.text[k]||"").trim());
+  return [`${st.on.length} spokes: ${st.on.map(k=>meta(k).name).join(", ")}`,
+    filled.length?`${filled.length} of ${st.on.length} spokes filled`:"Not filled yet",
+    st.start&&meta(st.start)?`Starting with ${meta(st.start).name}`:"Skipped for now",
+    st.block?`${st.block}${st.ifs||st.thens?" · if-then planned":""}`:"Skipped for now",
+    st.words.length?st.words.map(w=>w===st.star?"★ "+w:w).join(", "):"Skipped for now",""][i];
+}
+function goStep(i){st.step=Math.max(0,Math.min(STEPS.length-1,i));st.reach=Math.max(st.reach||0,st.step);save();applySteps();
+  const sec=stepEls[st.step];requestAnimationFrame(()=>{const bar=document.querySelector(".stepbar").offsetHeight;window.scrollTo({top:sec.getBoundingClientRect().top+scrollY-bar-12,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});const h=sec.querySelector("h2");if(h){h.tabIndex=-1;h.focus({preventScroll:true});}});
+  if(st.step===STEPS.length-1)renderBoard();}
+function applySteps(){
+  const cur=st.step||0,reach=Math.max(st.reach||0,cur);
+  stepEls.forEach((sec,i)=>{sec.dataset.state=i===cur?"open":i<cur||i<=reach?"done":"future";if(i!==cur&&i>cur&&i<=reach)sec.dataset.state="done";
+    sec.querySelector(".sum span").textContent=stepSummary(i);});
+  document.getElementById("wheelbox").classList.toggle("off",cur>1);
+  document.getElementById("stepwhere").innerHTML=`Step ${cur+1} of ${STEPS.length} · <b>${STEPS[cur]}</b>`;
+  document.getElementById("stepsegs").innerHTML=STEPS.map((n,i)=>`<button type="button" class="${i===cur?"cur":i<=reach?"done":""}" aria-label="Step ${i+1}: ${n}"${i===cur?' aria-current="step"':""}${i>reach?" disabled":""}></button>`).join("");
+  document.querySelectorAll("#stepsegs button").forEach((b,i)=>b.onclick=()=>goStep(i));
+}
+const _render=render;render=function(){_render();applySteps();};
 render();renderWords();
 </script>
 
