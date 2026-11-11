@@ -79,6 +79,11 @@ ol.parts li{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;
 .plan{display:grid;gap:8px;margin:0;padding:0;list-style:none}
 .plan li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px}
 .plan .n{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font:400 .85rem var(--mono);background:var(--hl);color:var(--hl-ink)}
+.plan.adj li{grid-template-columns:auto 1fr}
+.plan .tm{grid-column:2;display:flex;align-items:center;gap:10px;font-size:.92rem}
+.plan .tm b{min-width:5.5em;text-align:center}
+.pm{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);font:700 1.2rem/1 inherit;cursor:pointer;color:var(--ink)}
+.pm:disabled{opacity:.35;cursor:default}
 .plan .w{display:block;font:400 .8rem var(--mono);color:var(--muted)}
 .plan input[type=text]{padding:6px 8px;font-size:.98rem;border-width:1.5px;border-radius:9px}
 .mini{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:7px 10px;font-weight:700;cursor:pointer;font-size:.88rem;white-space:nowrap}
@@ -316,10 +321,14 @@ const S=[
    <span class="kicker">Here’s a plan</span>
    <h1>${isRead()?(t.steps.length>1?`About ${Math.round(readLeft()/t.steps.length)} ${t.unit==="pages"?"pages":(Math.round(readLeft()/t.steps.length)===1?"chapter":"chapters")} a day, ${t.steps.length} days.`:"One sitting should do it."):(t.steps.length>1?`${t.steps.length} short sittings instead of one big one.`:"One sitting should do it.")}</h1>
    <p class="say">${isRead()?`That finishes the day before it’s due, with a little room to spare. `:t.steps.length>1?"Short sittings are easier to start, and spreading them out helps it stick. The first one is tiny on purpose.":""}</p>
-   <p class="note">✏️ <b>Want different names?</b> Tap any step to rename it, like “Build the bridge model.”</p>
-   <ol class="plan t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><input type="text" data-i="${i}" value="${esc(s.title)}" aria-label="Step ${i+1}"><span class="w">${s.min}m${i===0&&TINY[t.kind]&&!t.byParts?'<span class="tiny">tiny</span>':""}</span></li>`).join("")}</ol>
+   <p class="note">✏️ <b>Want different names?</b> Tap any step to rename it, like “Build the bridge model.” <b>Time looks off?</b> Use − and + to change it.</p>
+   <ol class="plan adj t${t.color}">${t.steps.map((s,i)=>`<li><span class="n">${i+1}</span><input type="text" data-i="${i}" value="${esc(s.title)}" aria-label="Step ${i+1}">
+     <span class="tm"><button type="button" class="pm" data-i="${i}" data-d="-1" aria-label="Less time for step ${i+1}" ${s.min<=10?"disabled":""}>−</button><b>${fmtMin(s.min)}</b><button type="button" class="pm" data-i="${i}" data-d="1" aria-label="More time for step ${i+1}" ${s.min>=180?"disabled":""}>+</button>${i===0&&TINY[t.kind]&&!t.byParts?'<span class="tiny">tiny</span>':""}</span></li>`).join("")}</ol>
    <p class="note">About ${fmtMin(tot)} in all.</p>`},
-   after(){document.querySelectorAll(".plan input").forEach(n=>n.oninput=()=>t.steps[+n.dataset.i].title=n.value)}},
+   after(){document.querySelectorAll(".plan input").forEach(n=>n.oninput=()=>t.steps[+n.dataset.i].title=n.value);
+     // 5-minute steps up to half an hour, then 15
+     document.querySelectorAll(".pm").forEach(b=>b.onclick=()=>{const s=t.steps[+b.dataset.i],up=+b.dataset.d>0;
+       s.min=up?Math.min(180,s.min<30?s.min+5:s.min+15):Math.max(10,s.min<=30?s.min-5:s.min-15);render()})}},
  {id:"where",auto:()=>t.where!=="At school"&&t.where!=="Somewhere else",ready:()=>t.where&&(t.where!=="At school"||t.spot.trim())&&(t.where!=="Somewhere else"||t.other.trim()),draw(){const L=[["Kitchen table","Kitchen table"],["Library","Library"],["My desk","My desk"],["At school","At school"],["Somewhere else","Somewhere else"]];return `
    <span class="kicker">Question 4</span>
    <h1>Where will you do it?</h1>
